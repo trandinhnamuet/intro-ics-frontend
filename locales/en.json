@@ -1,1 +1,25 @@
-{}
+{
+  "articlesList": {
+    "title": "Articles List",
+    "description": "Discover the latest articles and news",
+    "searchPlaceholder": "Search articles...",
+    "loading": "Loading...",
+    "noResults": "No matching results found",
+    "noArticles": "No articles yet",
+    "author": "Author #{{id}}",
+    "status": {
+      "published": "Published",
+      "draft": "Draft",
+      "archived": "Archived"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "pageInfo": "Page {{current}} / {{total}}"
+    },
+    "errors": {
+      "errorTitle": "Error",
+      "fetchError": "Failed to load articles"
+    }
+  }
+}

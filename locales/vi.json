@@ -1,1 +1,25 @@
-{}
+{
+  "articlesList": {
+    "title": "Danh sách bài viết",
+    "description": "Khám phá các bài viết và tin tức mới nhất",
+    "searchPlaceholder": "Tìm kiếm bài viết...",
+    "loading": "Đang tải...",
+    "noResults": "Không tìm thấy kết quả phù hợp",
+    "noArticles": "Chưa có bài viết nào",
+    "author": "Tác giả #{{id}}",
+    "status": {
+      "published": "Đã xuất bản",
+      "draft": "Bản nháp",
+      "archived": "Lưu trữ"
+    },
+    "pagination": {
+      "previous": "Trang trước",
+      "next": "Trang sau",
+      "pageInfo": "Trang {{current}} / {{total}}"
+    },
+    "errors": {
+      "errorTitle": "Lỗi",
+      "fetchError": "Không thể tải danh sách bài viết"
+    }
+  }
+}

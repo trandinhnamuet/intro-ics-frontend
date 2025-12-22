@@ -1,0 +1,115 @@
+/* Custom styles for Quill editor */
+.ql-container {
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.ql-editor {
+  min-height: 200px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.ql-editor.ql-blank::before {
+  font-style: normal;
+  color: #9ca3af;
+}
+
+/* Custom toolbar styling */
+.ql-toolbar {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+
+.ql-container {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* Better focus state */
+.ql-container.ql-snow {
+  border-color: #e5e7eb;
+}
+
+.ql-editor:focus {
+  outline: none;
+}
+
+/* Improve readability */
+.ql-editor p {
+  margin-bottom: 1em;
+}
+
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3,
+.ql-editor h4,
+.ql-editor h5,
+.ql-editor h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.ql-editor blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ql-editor code {
+  background-color: #f3f4f6;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+.ql-editor pre {
+  background-color: #1f2937;
+  color: #f3f4f6;
+  padding: 1em;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.ql-editor img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1em 0;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .ql-toolbar {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .ql-container.ql-snow {
+    border-color: #374151;
+  }
+
+  .ql-editor {
+    background-color: #111827;
+    color: #f3f4f6;
+  }
+
+  .ql-editor.ql-blank::before {
+    color: #6b7280;
+  }
+
+  .ql-stroke {
+    stroke: #9ca3af;
+  }
+
+  .ql-fill {
+    fill: #9ca3af;
+  }
+
+  .ql-picker-label {
+    color: #9ca3af;
+  }
+}
