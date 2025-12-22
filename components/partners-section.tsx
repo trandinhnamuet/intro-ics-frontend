@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { useTranslation } from 'react-i18next'
 
 const partners = [
   { name: "Bộ Khoa học và Công nghệ", logo: "https://icss.com.vn/wp-content/uploads/2018/09/LOGO-BO-KHOA-HOC-VA-CONG-NGHE.jpg" },
@@ -13,10 +14,15 @@ const partners = [
 ]
 
 export function PartnersSection() {
+  const { t } = useTranslation()
+  
   return (
     <section className="py-20 lg:py-28 bg-muted/30">
       <div className="w-full px-16 lg:px-32">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-balance">Khách hàng của chúng tôi</h2>
+        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-balance">{t('home.partners.title')}</h2>
+        <p className="text-center text-muted-foreground text-lg mb-16 max-w-2xl mx-auto leading-relaxed">
+          {t('home.partners.subtitle')}
+        </p>
 
         <div className="relative overflow-hidden">
           <div className="flex gap-12 scroll-animation">

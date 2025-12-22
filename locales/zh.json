@@ -1,1 +1,99 @@
-{}
+{
+  "home": {
+    "hero": {
+      "title": "全面的网络安全解决方案",
+      "subtitle": "用最先进的网络安全技术保护您的企业",
+      "cta": "了解更多",
+      "contactBtn": "立即联系"
+    },
+    "products": {
+      "title": "产品与解决方案",
+      "subtitle": "探索我们领先的网络安全解决方案",
+      "aiSoc": "AI安全运营中心",
+      "aiSocDesc": "配备先进AI的网络安全运营中心",
+      "csa": "网络安全评估",
+      "csaDesc": "全面的网络安全评估和审计解决方案",
+      "pentestServices": "渗透测试服务",
+      "pentestServicesDesc": "专业渗透测试服务识别安全漏洞",
+      "vietguard": "Vietguard - 移动应用安全",
+      "vietguardDesc": "移动应用安全扫描和漏洞检测工具",
+      "oracleCloud": "Oracle云",
+      "oracleCloudDesc": "高性能高安全的领先云计算解决方案",
+      "smartDashboard": "智能仪表板",
+      "smartDashboardDesc": "企业集中监控和管理系统",
+      "viewMore": "了解更多",
+      "showMore": "查看更多",
+      "smartBuilding": {
+        "title": "智能建筑",
+        "description": "智能建筑自动化和管理解决方案"
+      },
+      "smartFactory": {
+        "title": "智能工厂", 
+        "description": "制造业物联网和自动化系统"
+      },
+      "aiSocDetail": {
+        "title": "AI安全运营中心",
+        "description": "人工智能驱动的安全运营中心"
+      },
+      "esgSolutions": {
+        "title": "ESG解决方案",
+        "description": "企业可持续发展解决方案"
+      }
+    },
+    "news": {
+      "title": "新闻与活动",
+      "subtitle": "及时了解最新的网络安全资讯",
+      "readMore": "阅读更多",
+      "viewAll": "查看所有文章"
+    },
+    "partners": {
+      "title": "可信赖的合作伙伴",
+      "subtitle": "与世界领先品牌合作"
+    }
+  },
+  "header": {
+    "aboutUs": "关于我们",
+    "generalIntro": "公司介绍",
+    "clients": "客户",
+    "partners": "合作伙伴",
+    "consulting": "咨询",
+    "smartBuilding": "智能建筑解决方案",
+    "smartFactory": "智能工厂解决方案",
+    "esgSolution": "ESG解决方案",
+    "aiSoc": "AI SOC",
+    "products": "产品",
+    "vietguard": "Vietguard",
+    "oracleCloud": "Oracle Cloud",
+    "smartDashboard": "智能仪表板",
+    "gurucul": "Gurucul AI SOC",
+    "csa": "CSA",
+    "news": "新闻",
+    "recruitment": "招聘",
+    "contact": "联系",
+    "searchPlaceholder": "搜索文章...",
+    "search": "搜索",
+    "contactUs": "联系我们"
+  },
+  "footer": {
+    "companyName": "国际网络安全股份有限公司 - ICS",
+    "headquarter": "总部：",
+    "office": "办公室：",
+    "phone": "电话：",
+    "hotline": "热线：",
+    "email": "邮箱：",
+    "website": "网站：",
+    "headquarterAddress": "越南兴安省美浩镇班燕仁坊武文赞路",
+    "officeAddress": "河内定公大金新城区TT3-5",
+    "products": "产品",
+    "consulting": "咨询",
+    "smartBuilding": "智能建筑解决方案",
+    "esgSolution": "ESG解决方案",
+    "aiSocSolution": "AI SOC解决方案",
+    "smartFactory": "智能工厂解决方案",
+    "copyright": "© 2025 ICS - 国际网络安全公司。版权所有。",
+    "aboutIcs": "关于ICS",
+    "news": "新闻",
+    "contact": "联系",
+    "recruitment": "招聘"
+  }
+}

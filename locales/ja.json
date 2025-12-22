@@ -1,1 +1,85 @@
-{}
+{
+  "home": {
+    "hero": {
+      "title": "包括的なサイバーセキュリティソリューション",
+      "subtitle": "最先端のサイバーセキュリティ技術でビジネスを保護",
+      "cta": "詳細を見る",
+      "contactBtn": "今すぐお問い合わせ"
+    },
+    "products": {
+      "title": "製品・ソリューション",
+      "subtitle": "業界をリードするサイバーセキュリティソリューションをご紹介",
+      "smartBuilding": {
+        "title": "スマートビル",
+        "description": "スマートビル自動化・管理ソリューション"
+      },
+      "smartFactory": {
+        "title": "スマートファクトリー",
+        "description": "製造業向けIoT・自動化システム"
+      },
+      "aiSoc": {
+        "title": "AI SOC",
+        "description": "AI搭載セキュリティ運用センター"
+      },
+      "esgSolutions": {
+        "title": "ESGソリューション",
+        "description": "企業向け持続可能な発展ソリューション"
+      }
+    },
+    "news": {
+      "title": "ニュース・イベント",
+      "subtitle": "最新のサイバーセキュリティニュースをお届け",
+      "readMore": "詳細を読む",
+      "viewAll": "全記事を見る"
+    },
+    "partners": {
+      "title": "信頼できるパートナー",
+      "subtitle": "世界トップブランドとの協力"
+    }
+  },
+  "header": {
+    "aboutUs": "私たちについて",
+    "generalIntro": "一般紹介",
+    "clients": "クライアント",
+    "partners": "パートナー",
+    "consulting": "コンサルティング",
+    "smartBuilding": "スマートビルディングソリューション",
+    "smartFactory": "スマートファクトリーソリューション",
+    "esgSolution": "ESGソリューション",
+    "aiSoc": "AI SOC",
+    "products": "製品",
+    "vietguard": "Vietguard",
+    "oracleCloud": "Oracle Cloud",
+    "smartDashboard": "スマートダッシュボード",
+    "gurucul": "Gurucul AI SOC",
+    "csa": "CSA",
+    "news": "ニュース",
+    "recruitment": "採用",
+    "contact": "お問い合わせ",
+    "searchPlaceholder": "記事を検索...",
+    "search": "検索",
+    "contactUs": "お問い合わせ"
+  },
+  "footer": {
+    "companyName": "国際サイバーセキュリティ株式会社 - ICS",
+    "headquarter": "本社:",
+    "office": "オフィス:",
+    "phone": "電話:",
+    "hotline": "ホットライン:",
+    "email": "メール:",
+    "website": "ウェブサイト:",
+    "headquarterAddress": "ベトナム フンイエン省 ミハオ市 バンイエンニャン坊 ヴバンカン通り",
+    "officeAddress": "ハノイ ディンコン区 ダイキム新都市区 TT3-5",
+    "products": "製品",
+    "consulting": "コンサルティング",
+    "smartBuilding": "スマートビルディングソリューション",
+    "esgSolution": "ESGソリューション",
+    "aiSocSolution": "AI SOCソリューション",
+    "smartFactory": "スマートファクトリーソリューション",
+    "copyright": "© 2025 ICS - 国際サイバーセキュリティ会社。全著作権所有。",
+    "aboutIcs": "ICSについて",
+    "news": "ニュース",
+    "contact": "お問い合わせ",
+    "recruitment": "採用"
+  }
+}

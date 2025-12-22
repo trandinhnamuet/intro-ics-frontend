@@ -1,17 +1,24 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Search as SearchIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { LanguageSelector } from "@/components/language-selector"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useTranslation } from 'react-i18next'
 
 export function Header() {
+  const router = useRouter()
+  const { t } = useTranslation()
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const [showSearch, setShowSearch] = useState(false)
+  const [searchTerm, setSearchTerm] = useState('')
 
   useEffect(() => {
     const controlHeader = () => {
@@ -37,6 +44,20 @@ export function Header() {
     return () => window.removeEventListener('scroll', controlHeader)
   }, [lastScrollY])
 
+  const handleSearch = () => {
+    if (searchTerm.trim()) {
+      router.push(`/articles/articles-list?search=${encodeURIComponent(searchTerm.trim())}`)
+      setShowSearch(false)
+      setSearchTerm('')
+    }
+  }
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSearch()
+    }
+  }
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border transition-transform duration-300 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
@@ -60,17 +81,17 @@ export function Header() {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button className="flex items-center gap-1 text-foreground hover:text-white hover:bg-black transition-all font-medium px-3 py-2 rounded-md">
-                Về chúng tôi
+                {t('header.aboutUs')}
                 <ChevronDown className="w-4 h-4" />
               </button>
               {activeDropdown === "about" && (
                 <div className="absolute top-full left-0 pt-2">
                   <div className="bg-card border border-border rounded-lg shadow-lg py-2 min-w-[200px] animate-dropdown">
                     <Link href="/gioi-thieu" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      Giới thiệu chung
+                      {t('header.generalIntro')}
                     </Link>
                     <Link href="/khach-hang" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      Khách hàng
+                      {t('header.clients')}
                     </Link>
                   </div>
                 </div>
@@ -78,7 +99,7 @@ export function Header() {
             </div>
 
             <Link href="/doi-tac" className="text-foreground hover:text-primary transition-colors font-medium">
-              Đối tác
+              {t('header.partners')}
             </Link>
 
             <div
@@ -87,23 +108,23 @@ export function Header() {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button className="flex items-center gap-1 text-foreground hover:text-white hover:bg-black transition-all font-medium px-3 py-2 rounded-md">
-                Tư vấn
+                {t('header.consulting')}
                 <ChevronDown className="w-4 h-4" />
               </button>
               {activeDropdown === "consulting" && (
                 <div className="absolute top-full left-0 pt-2">
                   <div className="bg-card border border-border rounded-lg shadow-lg py-2 min-w-[250px] animate-dropdown">
                     <Link href="/toa-nha-thong-minh" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      Giải pháp tòa nhà thông minh
+                      {t('header.smartBuilding')}
                     </Link>
                     <Link href="/nha-may-thong-minh" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      Giải pháp nhà máy thông minh
+                      {t('header.smartFactory')}
                     </Link>
                     <Link href="/giai-phap-esg" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      Giải pháp ESG
+                      {t('header.esgSolution')}
                     </Link>
                     <Link href="/ai-soc" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      AI SOC
+                      {t('header.aiSoc')}
                     </Link>
                   </div>
                 </div>
@@ -116,7 +137,7 @@ export function Header() {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button className="flex items-center gap-1 text-foreground hover:text-white hover:bg-black transition-all font-medium px-3 py-2 rounded-md">
-                Sản phẩm
+                {t('header.products')}
                 <ChevronDown className="w-4 h-4" />
               </button>
               {activeDropdown === "products" && (
@@ -127,45 +148,88 @@ export function Header() {
                       target="_blank"
                       className="block px-4 py-2 hover:bg-muted transition-colors"
                     >
-                      Vietguard
+                      {t('header.vietguard')}
                     </Link>
                     <Link
                       href="http://oraclecloud.vn/"
                       target="_blank"
                       className="block px-4 py-2 hover:bg-muted transition-colors"
                     >
-                      Oracle Cloud
+                      {t('header.oracleCloud')}
                     </Link>
                     <Link
                       href="http://smartdashboard.vn/"
                       target="_blank"
                       className="block px-4 py-2 hover:bg-muted transition-colors"
                     >
-                      Smart Dashboard
+                      {t('header.smartDashboard')}
                     </Link>
                     <Link href="#" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      Gurucul AI SOC
+                      {t('header.gurucul')}
                     </Link>
                     <Link href="#" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      CSA
+                      {t('header.csa')}
                     </Link>
                   </div>
                 </div>
               )}
             </div>
 
-            <Link href="/tin-tuc" className="text-foreground hover:text-primary transition-colors font-medium">
-              Tin tức
+            <Link href="/articles/articles-list" className="text-foreground hover:text-primary transition-colors font-medium">
+              {t('header.news')}
+            </Link>
+
+            <Link href="/tuyen-dung" className="text-foreground hover:text-primary transition-colors font-medium">
+              {t('header.recruitment')}
             </Link>
 
             <Link href="/lien-he" className="text-foreground hover:text-primary transition-colors font-medium">
-              Liên hệ
+              {t('header.contact')}
             </Link>
           </nav>
 
           <div className="flex items-center gap-3">
+            {/* Search Button with Expandable Input */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setShowSearch(true)}
+              onMouseLeave={() => {
+                if (!searchTerm) setShowSearch(false)
+              }}
+            >
+              {!showSearch ? (
+                <Button 
+                  variant="ghost" 
+                  size="icon"
+                  className="rounded-full"
+                >
+                  <SearchIcon className="h-5 w-5" />
+                </Button>
+              ) : (
+                <div className="flex items-center gap-2 bg-background border border-border rounded-lg shadow-lg px-3 py-2 animate-in fade-in zoom-in-95 duration-200">
+                  <SearchIcon className="h-4 w-4 text-muted-foreground" />
+                  <Input
+                    type="text"
+                    placeholder={t('header.searchPlaceholder')}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    className="w-64 border-0 focus-visible:ring-0 h-8 px-2"
+                    autoFocus
+                  />
+                  <Button
+                    size="sm"
+                    onClick={handleSearch}
+                    className="h-8"
+                  >
+                    {t('header.search')}
+                  </Button>
+                </div>
+              )}
+            </div>
+
             <Button asChild className="bg-foreground text-background hover:bg-foreground/90 font-medium px-6">
-              <Link href="/lien-he">Liên hệ chúng tôi</Link>
+              <Link href="/lien-he">{t('header.contactUs')}</Link>
             </Button>
             <LanguageSelector />
             <ThemeToggle />

@@ -1,4 +1,56 @@
 {
+  "home": {
+    "hero": {
+      "title": "Comprehensive Cybersecurity Solutions",
+      "subtitle": "Protect your business with the most advanced cybersecurity technology",
+      "cta": "Learn More",
+      "contactBtn": "Contact Now"
+    },
+    "products": {
+      "title": "Products & Solutions",
+      "subtitle": "Discover our leading cybersecurity solutions",
+      "aiSoc": "AI SOC", 
+      "aiSocDesc": "AI-powered Security Operations Center with advanced threat detection",
+      "csa": "CSA",
+      "csaDesc": "Comprehensive cybersecurity assessment and audit solutions",
+      "pentestServices": "Pentest Services",
+      "pentestServicesDesc": "Professional penetration testing services to identify vulnerabilities",
+      "vietguard": "Vietguard - Mobile App Security",
+      "vietguardDesc": "Mobile application security scanning and vulnerability detection tool",
+      "oracleCloud": "Oracle Cloud",
+      "oracleCloudDesc": "Leading cloud computing solution with high performance and security",
+      "smartDashboard": "Smart Dashboard",
+      "smartDashboardDesc": "Centralized monitoring and management system for enterprises",
+      "viewMore": "Learn More",
+      "showMore": "View More",
+      "smartBuilding": {
+        "title": "Smart Building",
+        "description": "Smart building automation and management solutions"
+      },
+      "smartFactory": {
+        "title": "Smart Factory",
+        "description": "IoT and automation systems for manufacturing"
+      },
+      "aiSocDetail": {
+        "title": "AI SOC",
+        "description": "AI-powered Security Operations Center"
+      },
+      "esgSolutions": {
+        "title": "ESG Solutions",
+        "description": "Sustainable development solutions for enterprises"
+      }
+    },
+    "news": {
+      "title": "News & Events",
+      "subtitle": "Stay updated with the latest cybersecurity news",
+      "readMore": "Read More",
+      "viewAll": "View All Articles"
+    },
+    "partners": {
+      "title": "Trusted Partners",
+      "subtitle": "Collaborating with world-leading brands"
+    }
+  },
   "articlesList": {
     "title": "Articles List",
     "description": "Discover the latest articles and news",
@@ -20,6 +72,49 @@
     "errors": {
       "errorTitle": "Error",
       "fetchError": "Failed to load articles"
-    }
-  }
+    }  },
+  "header": {
+    "aboutUs": "About Us",
+    "generalIntro": "General Introduction",
+    "clients": "Clients",
+    "partners": "Partners",
+    "consulting": "Consulting",
+    "smartBuilding": "Smart Building Solutions",
+    "smartFactory": "Smart Factory Solutions",
+    "esgSolution": "ESG Solutions",
+    "aiSoc": "AI SOC",
+    "products": "Products",
+    "vietguard": "Vietguard",
+    "oracleCloud": "Oracle Cloud",
+    "smartDashboard": "Smart Dashboard",
+    "gurucul": "Gurucul AI SOC",
+    "csa": "CSA",
+    "news": "News",
+    "recruitment": "Careers",
+    "contact": "Contact",
+    "searchPlaceholder": "Search articles...",
+    "search": "Search",
+    "contactUs": "Contact Us"
+  },
+  "footer": {
+    "companyName": "INTERNATIONAL CYBER SECURITY JOINT STOCK COMPANY - ICS",
+    "headquarter": "Headquarters:",
+    "office": "Office:",
+    "phone": "Phone:",
+    "hotline": "Hotline:",
+    "email": "Email:",
+    "website": "Website:",
+    "headquarterAddress": "Vu Van Can Street, Ban Yen Nhan Ward, My Hao Town, Hung Yen",
+    "officeAddress": "TT3-5 Dai Kim New Urban Area, Dinh Cong, Hanoi",
+    "products": "Products",
+    "consulting": "Consulting",
+    "smartBuilding": "Smart Building Solutions",
+    "esgSolution": "ESG Solutions",
+    "aiSocSolution": "AI SOC Solutions",
+    "smartFactory": "Smart Factory Solutions",
+    "copyright": "© 2025 ICS - International Cyber Security Company. All rights reserved.",
+    "aboutIcs": "About ICS",
+    "news": "News",
+    "contact": "Contact",
+    "recruitment": "Careers"  }
 }

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export function Sidebar() {
   return (
-    <aside className="w-[300px] flex-shrink-0 space-y-5">
+    <aside className="w-[300px] flex-shrink-0 space-y-5 sticky top-24 h-fit">
       {/* Navigation Links */}
       <Card className="overflow-hidden border-none shadow-md">
         <div className="bg-[#0984c7] text-white px-4 py-3 text-center font-semibold text-sm">

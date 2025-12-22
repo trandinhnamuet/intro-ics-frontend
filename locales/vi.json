@@ -1,4 +1,56 @@
 {
+  "home": {
+    "hero": {
+      "title": "Giải Pháp An Ninh Mạng Toàn Diện",
+      "subtitle": "Bảo vệ doanh nghiệp của bạn với công nghệ an ninh mạng tiên tiến nhất",
+      "cta": "Tìm Hiểu Thêm",
+      "contactBtn": "Liên Hệ Ngay"
+    },
+    "products": {
+      "title": "Sản Phẩm & Giải Pháp",
+      "subtitle": "Khám phá các giải pháp an ninh mạng hàng đầu của chúng tôi",
+      "aiSoc": "AI SOC",
+      "aiSocDesc": "Trung tâm điều hành an ninh mạng được trang bị AI tiên tiến",
+      "csa": "CSA",
+      "csaDesc": "Giải pháp đánh giá và kiểm toán an ninh mạng toàn diện",
+      "pentestServices": "Pentest Services",
+      "pentestServicesDesc": "Dịch vụ kiểm thử xâm nhập chuyên nghiệp",
+      "vietguard": "Vietguard - Mobile App Security",
+      "vietguardDesc": "Công cụ quét và phát hiện lỗ hổng bảo mật cho ứng dụng di động",
+      "oracleCloud": "Oracle Cloud",
+      "oracleCloudDesc": "Giải pháp điện toán đám mây hàng đầu với hiệu suất cao",
+      "smartDashboard": "Smart Dashboard",
+      "smartDashboardDesc": "Hệ thống giám sát và quản lý tập trung cho doanh nghiệp",
+      "viewMore": "Tìm hiểu thêm",
+      "showMore": "Xem thêm",
+      "smartBuilding": {
+        "title": "Tòa Nhà Thông Minh",
+        "description": "Giải pháp tự động hóa và quản lý tòa nhà thông minh"
+      },
+      "smartFactory": {
+        "title": "Nhà Máy Thông Minh",
+        "description": "Hệ thống IoT và tự động hóa cho sản xuất"
+      },
+      "aiSocDetail": {
+        "title": "AI SOC",
+        "description": "Trung tâm điều hành an ninh với AI"
+      },
+      "esgSolutions": {
+        "title": "Giải Pháp ESG",
+        "description": "Giải pháp phát triển bền vững cho doanh nghiệp"
+      }
+    },
+    "news": {
+      "title": "Tin Tức & Sự Kiện",
+      "subtitle": "Cập nhật những tin tức mới nhất về an ninh mạng",
+      "readMore": "Xem Thêm",
+      "viewAll": "Xem Tất Cả Bài Viết"
+    },
+    "partners": {
+      "title": "Đối Tác Tin Cậy",
+      "subtitle": "Hợp tác với những thương hiệu hàng đầu thế giới"
+    }
+  },
   "articlesList": {
     "title": "Danh sách bài viết",
     "description": "Khám phá các bài viết và tin tức mới nhất",
@@ -21,5 +73,50 @@
       "errorTitle": "Lỗi",
       "fetchError": "Không thể tải danh sách bài viết"
     }
+  },
+  "header": {
+    "aboutUs": "Về chúng tôi",
+    "generalIntro": "Giới thiệu chung",
+    "clients": "Khách hàng",
+    "partners": "Đối tác",
+    "consulting": "Tư vấn",
+    "smartBuilding": "Giải pháp tòa nhà thông minh",
+    "smartFactory": "Giải pháp nhà máy thông minh",
+    "esgSolution": "Giải pháp ESG",
+    "aiSoc": "AI SOC",
+    "products": "Sản phẩm",
+    "vietguard": "Vietguard",
+    "oracleCloud": "Oracle Cloud",
+    "smartDashboard": "Smart Dashboard",
+    "gurucul": "Gurucul AI SOC",
+    "csa": "CSA",
+    "news": "Tin tức",
+    "recruitment": "Tuyển dụng",
+    "contact": "Liên hệ",
+    "searchPlaceholder": "Tìm kiếm bài viết...",
+    "search": "Tìm",
+    "contactUs": "Liên hệ chúng tôi"
+  },
+  "footer": {
+    "companyName": "CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS",
+    "headquarter": "Trụ sở:",
+    "office": "Văn phòng:",
+    "phone": "Điện thoại:",
+    "hotline": "Hotline:",
+    "email": "E-mail:",
+    "website": "Website:",
+    "headquarterAddress": "Đường Vũ Văn Cẩn, Phường Bần Yên Nhân, Thị Xã Mỹ Hào, Hưng Yên",
+    "officeAddress": "TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội",
+    "products": "Sản phẩm",
+    "consulting": "Tư vấn",
+    "smartBuilding": "Giải pháp tòa nhà thông minh",
+    "esgSolution": "Giải pháp ESG",
+    "aiSocSolution": "Giải pháp AI SOC",
+    "smartFactory": "Giải pháp nhà máy thông minh",
+    "copyright": "© 2025 ICS - Công ty An Ninh Mạng Quốc Tế. All rights reserved.",
+    "aboutIcs": "Giới thiệu về ICS",
+    "news": "Tin tức",
+    "contact": "Liên hệ",
+    "recruitment": "Tuyển dụng"
   }
 }

@@ -5,27 +5,27 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useTranslation } from 'react-i18next'
 
 const slides = [
   {
     id: 1,
-    title: "Vietguard",
-    description: "Giải pháp bảo mật phần mềm mobile toàn diện và hiệu quả",
+    titleKey: "vietguard",
+    descriptionKey: "vietguardDesc",
     image: "https://icss.com.vn/wp-content/uploads/2025/05/Thiet-ke-chua-co-ten-8-1-1024x335.jpg",
     link: "http://vietguardscan.icss.com.vn/",
   },
   {
     id: 2,
-    title: "Oracle Cloud",
-    description:
-      "Chúng tôi tự hào là đối tác chính thức cung cấp Oracle Cloud tại Việt Nam, với mức giá tốt hơn và tối ưu hỗ trợ khách hàng Việt",
+    titleKey: "oracleCloud", 
+    descriptionKey: "oracleCloudDesc",
     image: "https://icss.com.vn/wp-content/uploads/2025/08/Gemini_Generated_Image_itzj9witzj9witzj-scaled.png",
     link: "http://oraclecloud.vn/",
   },
   {
     id: 3,
-    title: "Smart Building",
-    description: "Giải pháp quản lý toàn diện hệ sinh thái tòa nhà thông minh",
+    titleKey: "smartBuilding",
+    descriptionKey: "smartBuildingDesc",
     image: "https://icss.com.vn/wp-content/uploads/2025/05/Thiet-ke-chua-co-ten-22-1-1024x576.jpg",
     link: "/smart-building",
   },
@@ -34,6 +34,7 @@ const slides = [
 export function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [direction, setDirection] = useState<"next" | "prev">("next")
+  const { t } = useTranslation()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -71,7 +72,7 @@ export function HeroSlider() {
           <div className="absolute inset-0 bg-black/50 z-10" />
           <Image
             src={slide.image || "/placeholder.svg"}
-            alt={slide.title}
+            alt={slide.titleKey}
             fill
             className="object-cover"
             priority={index === 0}
@@ -79,11 +80,11 @@ export function HeroSlider() {
           <div className="absolute inset-0 z-20 flex items-center justify-center">
             <div className="w-full px-16 lg:px-32">
               <div className={`max-w-3xl ${index === currentSlide ? "slide-in" : ""}`}>
-                <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">{slide.title}</h1>
-                <p className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">{slide.description}</p>
+                <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">{t('home.hero.title')}</h1>
+                <p className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">{t('home.hero.subtitle')}</p>
                 <Button asChild size="lg" className="bg-transparent border border-white text-white hover:bg-white/10">
                   <Link href={slide.link} target={slide.link.startsWith("http") ? "_blank" : undefined}>
-                    Tìm hiểu thêm
+                    {t('home.hero.cta')}
                   </Link>
                 </Button>
               </div>

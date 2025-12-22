@@ -1,25 +1,30 @@
+"use client"
+
 import Link from "next/link"
 import { Facebook, Mail, Phone, Youtube } from "lucide-react"
+import { useTranslation } from 'react-i18next'
 
 export function Footer() {
+  const { t } = useTranslation()
+  
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="w-full px-16 lg:px-32 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-2">
-            <h3 className="text-xl font-bold mb-4">CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS</h3>
+            <h3 className="text-xl font-bold mb-4">{t('footer.companyName')}</h3>
             <div className="space-y-2 text-secondary-foreground/90 leading-relaxed">
               <p>
-                <strong>Trụ sở:</strong> Đường Vũ Văn Cẩn, Phường Bần Yên Nhân, Thị Xã Mỹ Hào, Hưng Yên
+                <strong>{t('footer.headquarter')}</strong> {t('footer.headquarterAddress')}
               </p>
               <p>
-                <strong>Văn phòng:</strong> TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội
+                <strong>{t('footer.office')}</strong> {t('footer.officeAddress')}
               </p>
               <p>
-                <strong>Điện thoại:</strong> 0931.487.231 - <strong>Hotline:</strong> 0931.487.231
+                <strong>{t('footer.phone')}</strong> 0931.487.231 - <strong>{t('footer.hotline')}</strong> 0931.487.231
               </p>
               <p>
-                <strong>E-mail:</strong> info@icss.com.vn - <strong>Website:</strong> www.icss.com.vn
+                <strong>{t('footer.email')}</strong> info@icss.com.vn - <strong>{t('footer.website')}</strong> www.icss.com.vn
               </p>
             </div>
 
@@ -68,7 +73,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4">Sản phẩm</h4>
+            <h4 className="text-lg font-bold mb-4">{t('footer.products')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="http://oraclecloud.vn/" target="_blank" className="hover:text-primary transition-colors">
@@ -93,26 +98,26 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4">Tư vấn</h4>
+            <h4 className="text-lg font-bold mb-4">{t('footer.consulting')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/toa-nha-thong-minh" className="hover:text-primary transition-colors">
-                  Giải pháp tòa nhà thông minh
+                  {t('footer.smartBuilding')}
                 </Link>
               </li>
               <li>
                 <Link href="/esg" className="hover:text-primary transition-colors">
-                  Giải pháp ESG
+                  {t('footer.esgSolution')}
                 </Link>
               </li>
               <li>
                 <Link href="/ai-soc" className="hover:text-primary transition-colors">
-                  Giải pháp AI SOC
+                  {t('footer.aiSocSolution')}
                 </Link>
               </li>
               <li>
                 <Link href="/nha-may-thong-minh" className="hover:text-primary transition-colors">
-                  Giải pháp nhà máy thông minh
+                  {t('footer.smartFactory')}
                 </Link>
               </li>
             </ul>
@@ -122,20 +127,20 @@ export function Footer() {
         <div className="border-t border-secondary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-secondary-foreground/70">
-              © 2025 ICS - Công ty An Ninh Mạng Quốc Tế. All rights reserved.
+              {t('footer.copyright')}
             </p>
             <div className="flex gap-6 text-sm">
               <Link href="/gioi-thieu" className="hover:text-primary transition-colors">
-                Giới thiệu về ICS
+                {t('footer.aboutIcs')}
               </Link>
               <Link href="/tin-tuc" className="hover:text-primary transition-colors">
-                Tin tức
+                {t('footer.news')}
               </Link>
               <Link href="/lien-he" className="hover:text-primary transition-colors">
-                Liên hệ
+                {t('footer.contact')}
               </Link>
               <Link href="/tuyen-dung" className="hover:text-primary transition-colors">
-                Tuyển dụng
+                {t('footer.recruitment')}
               </Link>
             </div>
           </div>

@@ -14,7 +14,9 @@ export function SidebarLayout({ children }: SidebarLayoutProps) {
       <main className="min-h-screen pt-24">
         <div className="w-full px-16 lg:px-32 py-12">
           <div className="flex gap-8">
-            <Sidebar />
+            <div className="w-[300px] flex-shrink-0">
+              <Sidebar />
+            </div>
             <div className="flex-1">{children}</div>
           </div>
         </div>
