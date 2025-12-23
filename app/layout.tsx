@@ -13,23 +13,23 @@ const inter = Inter({ subsets: ["latin", "vietnamese"] })
 export const metadata: Metadata = {
   title: "ICS - Công ty An Ninh Mạng Quốc Tế",
   description: "Giải pháp an ninh mạng toàn diện cho doanh nghiệp",
-  generator: "v0.app",
+  generator: "ICS",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png",
+        type: "image/png",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png",
   },
 }
 
