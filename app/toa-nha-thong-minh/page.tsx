@@ -11,16 +11,16 @@ export default function ToaNhaThongMinhPage() {
       {/* Banner Section */}
       <div className="relative h-[250px] bg-cover bg-center mt-24" style={{ backgroundImage: "url('https://icss.com.vn/wp-content/uploads/2018/09/bg-gioi-thieu.jpg')" }}>
         <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative container mx-auto px-16 lg:px-32 h-full flex items-center">
-          <h1 className="text-4xl lg:text-5xl font-normal text-white">
+        <div className="relative w-full container-responsive h-full flex items-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
             Giải pháp Tòa nhà thông minh
           </h1>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-16 lg:px-32 py-12">
-        <div className="flex flex-col lg:flex-row gap-8">
+      <div className="w-full container-responsive py-8 sm:py-12">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
           {/* Sidebar */}
           <aside className="lg:w-1/4">
             <Sidebar />

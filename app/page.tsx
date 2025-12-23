@@ -113,13 +113,13 @@ export default function Page() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
               {featuredStats.map((stat, idx) => (
                 <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                  <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30">
+                  <Card className="relative overflow-visible group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30">
                     <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-5 group-hover:opacity-10 transition-opacity`} />
-                    <div className="p-6 lg:p-8 text-center relative z-10">
+                    <div className="p-6 lg:p-8 pr-6 lg:pr-8 text-center relative z-10 overflow-visible">
                       <div className={`w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
                         <stat.icon className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                       </div>
-                      <div className={`text-3xl lg:text-5xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+                      <div className={`inline-block pr-2 lg:pr-4 text-3xl lg:text-5xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent relative z-20`}>
                         {stat.value}
                       </div>
                       <div className="text-sm lg:text-base font-medium text-foreground/80">{stat.label}</div>

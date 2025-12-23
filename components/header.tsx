@@ -75,10 +75,10 @@ export function Header() {
       isVisible ? 'translate-y-0' : '-translate-y-full'
     )}>
       <div className="container-responsive">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
+          <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
+            <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png"
                 alt="ICS Logo"
@@ -87,13 +87,13 @@ export function Header() {
               />
             </div>
             <div className="hidden lg:block">
-              <div className="text-lg font-bold gradient-text">ICS</div>
+              <div className="text-base font-bold gradient-text">ICS</div>
               <div className="text-xs text-muted-foreground">Bảo vệ không gian số</div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-0.5">
             {/* About Dropdown */}
             <div
               className="relative group"
@@ -101,29 +101,29 @@ export function Header() {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button className={cn(
-                "flex items-center gap-1 px-4 py-2 rounded-lg transition-all duration-200 font-medium",
+                "flex items-center gap-1 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium",
                 "hover:bg-primary/10 hover:text-primary",
                 activeDropdown === "about" && "bg-primary/10 text-primary"
               )}>
                 {t('header.aboutUs')}
                 <ChevronDown className={cn(
-                  "w-4 h-4 transition-transform duration-200",
+                  "w-3.5 h-3.5 transition-transform duration-200",
                   activeDropdown === "about" && "rotate-180"
                 )} />
               </button>
               {activeDropdown === "about" && (
                 <div className="absolute top-full left-0 pt-2 min-w-[220px]">
-                  <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-2 animate-fade-in-down">
+                  <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
                     <Link 
                       href="/gioi-thieu" 
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.generalIntro')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Về công ty ICS</div>
                     </Link>
                     <Link 
                       href="/khach-hang" 
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.clients')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Khách hàng của chúng tôi</div>
@@ -135,7 +135,7 @@ export function Header() {
 
             <Link 
               href="/doi-tac" 
-              className="px-4 py-2 rounded-lg transition-all duration-200 font-medium hover:bg-primary/10 hover:text-primary"
+              className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
             >
               {t('header.partners')}
             </Link>
@@ -147,43 +147,43 @@ export function Header() {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button className={cn(
-                "flex items-center gap-1 px-4 py-2 rounded-lg transition-all duration-200 font-medium",
+                "flex items-center gap-1 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium",
                 "hover:bg-primary/10 hover:text-primary",
                 activeDropdown === "consulting" && "bg-primary/10 text-primary"
               )}>
                 {t('header.consulting')}
                 <ChevronDown className={cn(
-                  "w-4 h-4 transition-transform duration-200",
+                  "w-3.5 h-3.5 transition-transform duration-200",
                   activeDropdown === "consulting" && "rotate-180"
                 )} />
               </button>
               {activeDropdown === "consulting" && (
-                <div className="absolute top-full left-0 pt-2 min-w-[280px]">
-                  <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-2 animate-fade-in-down">
+                <div className="absolute top-full left-0 pt-2 min-w-[250px]">
+                  <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
                     <Link 
                       href="/toa-nha-thong-minh" 
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.smartBuilding')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Giải pháp tòa nhà thông minh</div>
                     </Link>
                     <Link 
                       href="/nha-may-thong-minh" 
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.smartFactory')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Giải pháp nhà máy thông minh</div>
                     </Link>
                     <Link 
                       href="/giai-phap-esg" 
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.esgSolution')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Giải pháp ESG cho doanh nghiệp</div>
                     </Link>
                     <Link 
                       href="/ai-soc" 
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.aiSoc')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">AI Security Operations Center</div>
@@ -200,23 +200,23 @@ export function Header() {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button className={cn(
-                "flex items-center gap-1 px-4 py-2 rounded-lg transition-all duration-200 font-medium",
+                "flex items-center gap-1 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium",
                 "hover:bg-primary/10 hover:text-primary",
                 activeDropdown === "products" && "bg-primary/10 text-primary"
               )}>
                 {t('header.products')}
                 <ChevronDown className={cn(
-                  "w-4 h-4 transition-transform duration-200",
+                  "w-3.5 h-3.5 transition-transform duration-200",
                   activeDropdown === "products" && "rotate-180"
                 )} />
               </button>
               {activeDropdown === "products" && (
-                <div className="absolute top-full left-0 pt-2 min-w-[250px]">
-                  <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-2 animate-fade-in-down">
+                <div className="absolute top-full left-0 pt-2 min-w-[240px]">
+                  <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
                     <Link
                       href="http://vietguardscan.icss.com.vn/"
                       target="_blank"
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.vietguard')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Security scanning tool</div>
@@ -224,7 +224,7 @@ export function Header() {
                     <Link
                       href="http://oraclecloud.vn/"
                       target="_blank"
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.oracleCloud')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Cloud infrastructure</div>
@@ -232,21 +232,21 @@ export function Header() {
                     <Link
                       href="http://smartdashboard.vn/"
                       target="_blank"
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.smartDashboard')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Management dashboard</div>
                     </Link>
                     <Link 
                       href="#" 
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.gurucul')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Security analytics</div>
                     </Link>
                     <Link 
                       href="#" 
-                      className="block px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-2"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.csa')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">Security assessment</div>
@@ -258,21 +258,21 @@ export function Header() {
 
             <Link 
               href="/articles/articles-list" 
-              className="px-4 py-2 rounded-lg transition-all duration-200 font-medium hover:bg-primary/10 hover:text-primary"
+              className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
             >
               {t('header.news')}
             </Link>
 
             <Link 
               href="/tuyen-dung" 
-              className="px-4 py-2 rounded-lg transition-all duration-200 font-medium hover:bg-primary/10 hover:text-primary"
+              className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
             >
               {t('header.recruitment')}
             </Link>
 
             <Link 
               href="/lien-he" 
-              className="px-4 py-2 rounded-lg transition-all duration-200 font-medium hover:bg-primary/10 hover:text-primary"
+              className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
             >
               {t('header.contact')}
             </Link>
@@ -322,7 +322,7 @@ export function Header() {
             {/* CTA Button - Hidden on mobile */}
             <Button 
               asChild 
-              className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90 font-medium px-5 rounded-full shadow-lg"
+              className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90 font-medium px-4 py-1.5 text-sm rounded-full shadow-lg"
             >
               <Link href="/lien-he">{t('header.contactUs')}</Link>
             </Button>
