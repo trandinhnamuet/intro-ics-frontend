@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslation } from "react-i18next"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -12,29 +13,31 @@ import { Section } from "@/components/ui/section"
 import { Shield, Target, Zap, Users, Award, TrendingUp, Play, Calendar } from "lucide-react"
 
 export default function GioiThieuPage() {
+  const { t } = useTranslation()
+
   const timeline = [
-    { year: "2018", title: "Thành lập công ty", description: "ICS được thành lập với sứ mệnh bảo vệ không gian số Việt Nam" },
-    { year: "2019", title: "Ra mắt VietGuard", description: "Giải pháp bảo mật điểm cuối tiên phong với công nghệ Zero Trust" },
-    { year: "2020", title: "Mở rộng quốc tế", description: "Hợp tác với các đối tác công nghệ hàng đầu thế giới" },
-    { year: "2021", title: "AI SOC Platform", description: "Triển khai hệ thống điều hành trung tâm an ninh mạng AI" },
-    { year: "2022", title: "Smart Factory Security", description: "Cung cấp giải pháp bảo mật cho nhà máy thông minh 4.0" },
-    { year: "2023", title: "100+ Dự án", description: "Hoàn thành hơn 100 dự án lớn trong và ngoài nước" },
+    { year: "2018", titleKey: "about.timeline.2018.title", descriptionKey: "about.timeline.2018.description" },
+    { year: "2019", titleKey: "about.timeline.2019.title", descriptionKey: "about.timeline.2019.description" },
+    { year: "2020", titleKey: "about.timeline.2020.title", descriptionKey: "about.timeline.2020.description" },
+    { year: "2021", titleKey: "about.timeline.2021.title", descriptionKey: "about.timeline.2021.description" },
+    { year: "2022", titleKey: "about.timeline.2022.title", descriptionKey: "about.timeline.2022.description" },
+    { year: "2023", titleKey: "about.timeline.2023.title", descriptionKey: "about.timeline.2023.description" },
   ]
 
   const team = [
-    { name: "Nguyễn Văn A", role: "CEO & Founder", image: "/images/1.jpg" },
-    { name: "Trần Thị B", role: "CTO", image: "/images/2.jpg" },
-    { name: "Lê Văn C", role: "Security Lead", image: "/images/3.jpg" },
-    { name: "Phạm Thị D", role: "Head of Operations", image: "/images/1.jpg" },
+    { name: "Nguyễn Văn A", roleKey: "about.team.ceo", image: "/images/1.jpg" },
+    { name: "Trần Thị B", roleKey: "about.team.cto", image: "/images/2.jpg" },
+    { name: "Lê Văn C", roleKey: "about.team.securityLead", image: "/images/3.jpg" },
+    { name: "Phạm Thị D", roleKey: "about.team.operations", image: "/images/1.jpg" },
   ]
 
   const values = [
-    { icon: Shield, title: "Bảo mật tối đa", description: "Cam kết bảo vệ dữ liệu khách hàng ở mức cao nhất" },
-    { icon: Target, title: "Chính xác", description: "Giải pháp tùy chỉnh phù hợp với nhu cầu cụ thể" },
-    { icon: Zap, title: "Nhanh chóng", description: "Triển khai và phản ứng sự cố trong thời gian thực" },
-    { icon: Users, title: "Đội ngũ chuyên nghiệp", description: "Chuyên gia hàng đầu với kinh nghiệm quốc tế" },
-    { icon: Award, title: "Chất lượng đảm bảo", description: "Tuân thủ các tiêu chuẩn bảo mật quốc tế" },
-    { icon: TrendingUp, title: "Đổi mới liên tục", description: "Cập nhật công nghệ mới nhất trong ngành" },
+    { icon: Shield, titleKey: "about.values.security.title", descriptionKey: "about.values.security.description" },
+    { icon: Target, titleKey: "about.values.accuracy.title", descriptionKey: "about.values.accuracy.description" },
+    { icon: Zap, titleKey: "about.values.speed.title", descriptionKey: "about.values.speed.description" },
+    { icon: Users, titleKey: "about.values.team.title", descriptionKey: "about.values.team.description" },
+    { icon: Award, titleKey: "about.values.quality.title", descriptionKey: "about.values.quality.description" },
+    { icon: TrendingUp, titleKey: "about.values.innovation.title", descriptionKey: "about.values.innovation.description" },
   ]
 
   return (
@@ -56,26 +59,26 @@ export default function GioiThieuPage() {
             <ScrollReveal direction="right">
               <Badge className="mb-4 px-4 py-2 bg-white/20 backdrop-blur-sm border-white/30">
                 <Shield className="w-4 h-4 mr-2" />
-                Về chúng tôi
+                {t('about.badge')}
               </Badge>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={100}>
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 max-w-3xl">
-                Tiên phong trong An ninh Mạng
+                {t('about.hero.title')}
               </h1>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={200}>
               <p className="text-xl text-white/90 max-w-2xl mb-8">
-                Bảo vệ hệ sinh thái số một cách an toàn, hiệu quả và bền vững
+                {t('about.hero.subtitle')}
               </p>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={300}>
               <div className="flex gap-4">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold">
-                  Tìm hiểu thêm
+                  {t('common.learnMore')}
                 </Button>
                 <Button size="lg" className="bg-primary/90 text-white border-2 border-white hover:bg-primary font-semibold">
-                  Liên hệ ngay
+                  {t('common.contactUs')}
                 </Button>
               </div>
             </ScrollReveal>
@@ -93,12 +96,12 @@ export default function GioiThieuPage() {
               centered 
               className="mb-4"
             >
-              Khám phá ICS
+              {t('about.discoverICS')}
             </AnimatedHeading>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={100}>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
-              Xem video giới thiệu để hiểu rõ hơn về sứ mệnh, tầm nhìn và giải pháp của chúng tôi
+              {t('about.discoverSubtitle')}
             </p>
           </ScrollReveal>
           
@@ -114,7 +117,7 @@ export default function GioiThieuPage() {
                 className="w-full h-full relative z-10"
               >
                 <source src="/videos/Video_ICS.mp4" type="video/mp4" />
-                Trình duyệt của bạn không hỗ trợ video.
+                {t('about.videoNotSupported')}
               </video>
             </Card>
           </ScrollReveal>
@@ -128,33 +131,30 @@ export default function GioiThieuPage() {
             <ScrollReveal direction="left">
               <div className="space-y-6 text-lg leading-relaxed">
                 <h2 className="text-4xl font-bold mb-6">
-                  CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ – ICS
+                  {t('about.company.title')}
                 </h2>
                 <p>
-                  Là đơn vị tiên phong trong lĩnh vực an ninh mạng tại Việt Nam và khu vực, 
-                  chuyên cung cấp các giải pháp bảo mật toàn diện cho thời đại công nghệ số.
+                  {t('about.company.description1')}
                 </p>
                 <p>
-                  ICS tập trung vào các giải pháp bảo mật cho nhiều lĩnh vực trọng yếu, bao gồm: 
-                  bảo vệ ứng dụng, an ninh cho nhà máy thông minh, tòa nhà thông minh và đặc biệt 
-                  là hệ thống điều hành trung tâm AI SOC.
+                  {t('about.company.description2')}
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-6">
                   <Card className="p-6 text-center bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
                     <div className="text-4xl font-bold text-primary mb-2">100+</div>
-                    <div className="text-sm text-muted-foreground">Dự án hoàn thành</div>
+                    <div className="text-sm text-muted-foreground">{t('about.stats.projects')}</div>
                   </Card>
                   <Card className="p-6 text-center bg-gradient-to-br from-accent/10 to-secondary/10 border-accent/20">
                     <div className="text-4xl font-bold text-accent mb-2">50+</div>
-                    <div className="text-sm text-muted-foreground">Khách hàng doanh nghiệp</div>
+                    <div className="text-sm text-muted-foreground">{t('about.stats.clients')}</div>
                   </Card>
                   <Card className="p-6 text-center bg-gradient-to-br from-secondary/10 to-primary/10 border-secondary/20">
                     <div className="text-4xl font-bold text-secondary mb-2">24/7</div>
-                    <div className="text-sm text-muted-foreground">Hỗ trợ khách hàng</div>
+                    <div className="text-sm text-muted-foreground">{t('about.stats.support')}</div>
                   </Card>
                   <Card className="p-6 text-center bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20">
                     <div className="text-4xl font-bold text-primary mb-2">99.9%</div>
-                    <div className="text-sm text-muted-foreground">Uptime đảm bảo</div>
+                    <div className="text-sm text-muted-foreground">{t('about.stats.uptime')}</div>
                   </Card>
                 </div>
               </div>
@@ -170,9 +170,9 @@ export default function GioiThieuPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Đội ngũ chuyên nghiệp</h3>
+                  <h3 className="text-2xl font-bold mb-2">{t('about.team.title')}</h3>
                   <p className="text-white/90">
-                    Hơn 50 chuyên gia an ninh mạng với kinh nghiệm quốc tế
+                    {t('about.team.description')}
                   </p>
                 </div>
               </Card>
@@ -186,12 +186,12 @@ export default function GioiThieuPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="mb-4">
-              Giá trị cốt lõi
+              {t('about.values.heading')}
             </AnimatedHeading>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={100}>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
-              Những nguyên tắc định hướng mọi hành động của chúng tôi
+              {t('about.values.subtitle')}
             </p>
           </ScrollReveal>
           
@@ -202,8 +202,8 @@ export default function GioiThieuPage() {
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-bold mb-3">{t(value.titleKey)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(value.descriptionKey)}</p>
                 </Card>
               </ScrollReveal>
             ))}
@@ -216,12 +216,12 @@ export default function GioiThieuPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="mb-4">
-              Hành trình phát triển
+              {t('about.timeline.heading')}
             </AnimatedHeading>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={100}>
             <p className="text-center text-muted-foreground text-lg mb-16 max-w-3xl mx-auto">
-              Những mốc son đánh dấu sự trưởng thành của ICS
+              {t('about.timeline.subtitle')}
             </p>
           </ScrollReveal>
           
@@ -241,8 +241,8 @@ export default function GioiThieuPage() {
                         </div>
                         <div className="flex-1">
                           <div className="text-3xl font-bold text-primary mb-2">{item.year}</div>
-                          <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                          <p className="text-muted-foreground">{item.description}</p>
+                          <h3 className="text-xl font-bold mb-2">{t(item.titleKey)}</h3>
+                          <p className="text-muted-foreground">{t(item.descriptionKey)}</p>
                         </div>
                       </div>
                     </Card>
@@ -265,12 +265,12 @@ export default function GioiThieuPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="mb-4">
-              Đội ngũ lãnh đạo
+              {t('about.leadership.heading')}
             </AnimatedHeading>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={100}>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
-              Những chuyên gia hàng đầu dẫn dắt ICS phát triển
+              {t('about.leadership.subtitle')}
             </p>
           </ScrollReveal>
           
@@ -288,7 +288,7 @@ export default function GioiThieuPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                       <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                      <p className="text-white/90 text-sm">{member.role}</p>
+                      <p className="text-white/90 text-sm">{t(member.roleKey)}</p>
                     </div>
                   </div>
                 </Card>
@@ -303,12 +303,12 @@ export default function GioiThieuPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" centered className="mb-4 text-white">
-              Giải pháp của chúng tôi
+              {t('about.solutions.heading')}
             </AnimatedHeading>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={100}>
             <p className="text-center text-white/90 text-lg mb-12 max-w-3xl mx-auto">
-              Các sản phẩm và giải pháp bảo mật hàng đầu
+              {t('about.solutions.subtitle')}
             </p>
           </ScrollReveal>
           
@@ -325,13 +325,12 @@ export default function GioiThieuPage() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">VietGuard</h3>
+                  <h3 className="text-2xl font-bold mb-4">{t('about.solutions.vietguard.title')}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Giải pháp bảo mật tiên tiến với công nghệ Zero Trust ngay tại điểm cuối, 
-                    ngăn chặn mối đe dọa mà không cần nhận diện phần mềm độc hại.
+                    {t('about.solutions.vietguard.description')}
                   </p>
                   <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white">
-                    Tìm hiểu thêm
+                    {t('common.learnMore')}
                   </Button>
                 </div>
               </Card>
@@ -349,13 +348,12 @@ export default function GioiThieuPage() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">ESG Solutions</h3>
+                  <h3 className="text-2xl font-bold mb-4">{t('about.solutions.esg.title')}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Giúp doanh nghiệp phát triển bền vững với trách nhiệm môi trường, 
-                    xã hội và quản trị minh bạch trong kỷ nguyên số.
+                    {t('about.solutions.esg.description')}
                   </p>
                   <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white">
-                    Tìm hiểu thêm
+                    {t('common.learnMore')}
                   </Button>
                 </div>
               </Card>
@@ -373,13 +371,12 @@ export default function GioiThieuPage() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">IoT Security</h3>
+                  <h3 className="text-2xl font-bold mb-4">{t('about.solutions.iot.title')}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Bảo mật toàn diện cho mạng lưới IoT, bảo vệ dữ liệu từ cảm biến 
-                    đến cloud trong hệ sinh thái thiết bị kết nối.
+                    {t('about.solutions.iot.description')}
                   </p>
                   <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white">
-                    Tìm hiểu thêm
+                    {t('common.learnMore')}
                   </Button>
                 </div>
               </Card>
@@ -399,17 +396,17 @@ export default function GioiThieuPage() {
               </div>
               <div className="relative z-10">
                 <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                  Sẵn sàng bảo vệ doanh nghiệp của bạn?
+                  {t('about.cta.heading')}
                 </h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Liên hệ với chúng tôi ngay hôm nay để được tư vấn giải pháp an ninh mạng phù hợp nhất
+                  {t('about.cta.subtitle')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="text-lg px-8 bg-white text-primary hover:bg-white/90 font-semibold">
-                    Đặt lịch tư vấn
+                    {t('about.cta.schedule')}
                   </Button>
                   <Button size="lg" className="text-lg px-8 bg-white/20 text-white border-2 border-white hover:bg-white/30 font-semibold backdrop-blur-sm">
-                    Tải tài liệu
+                    {t('about.cta.download')}
                   </Button>
                 </div>
               </div>

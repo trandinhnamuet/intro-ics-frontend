@@ -25,11 +25,11 @@ export const metadata: Metadata = {
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png",
+        url: "/images/ics_logo.png",
         type: "image/png",
       },
     ],
-    apple: "https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png",
+    apple: "/images/ics_logo.png",
   },
 }
 

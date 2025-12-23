@@ -1,9 +1,13 @@
+"use client"
+
+import { useTranslation } from "react-i18next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Sidebar } from "@/components/sidebar"
 import Link from "next/link"
 
 export default function AiSocPage() {
+  const { t } = useTranslation()
   return (
     <>
       <Header />

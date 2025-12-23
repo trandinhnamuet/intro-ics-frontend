@@ -1,4 +1,31 @@
 {
+  "common": {
+    "learnMore": "了解更多",
+    "viewMore": "查看更多",
+    "readMore": "阅读更多",
+    "contactUs": "立即联系",
+    "contact": "联系",
+    "getStarted": "开始使用",
+    "backToList": "返回列表",
+    "backHome": "返回主页",
+    "home": "主页",
+    "about": "关于我们",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "search": "搜索",
+    "filter": "筛选",
+    "all": "全部",
+    "close": "关闭",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "update": "更新",
+    "submit": "提交",
+    "confirm": "确认"
+  },
   "home": {
     "hero": {
       "title": "全面的网络安全解决方案",
@@ -28,7 +55,7 @@
         "description": "智能建筑自动化和管理解决方案"
       },
       "smartFactory": {
-        "title": "智能工厂", 
+        "title": "智能工厂",
         "description": "制造业物联网和自动化系统"
       },
       "aiSocDetail": {
@@ -49,6 +76,94 @@
     "partners": {
       "title": "可信赖的合作伙伴",
       "subtitle": "与世界领先品牌合作"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "全面的网络安全解决方案",
+      "subtitle": "用最先进的网络安全技术保护您的企业",
+      "cta": "了解更多",
+      "contactBtn": "立即联系",
+      "featured": "推荐",
+      "learnMore": "了解更多",
+      "clients": "客户",
+      "years": "年",
+      "support": "支持",
+      "scrollDown": "向下滚动"
+    },
+    "stats": {
+      "projectsCompleted": "完成的项目",
+      "enterpriseClients": "企业客户",
+      "cybersecuritySupport": "网络安全支持",
+      "uptimeGuarantee": "正常运行时间保证",
+      "heading": "ICS的",
+      "inNumbers": "数字",
+      "badge": "显著成就"
+    },
+    "partners": {
+      "hyperg": "基于AI和云的网络安全解决方案",
+      "oracle": "领先的数据库管理系统",
+      "gamania": "数字娱乐和云安全"
+    },
+    "whyChooseUs": {
+      "title": "为什么选择ICS",
+      "subtitle": "我们致力于提供最好的网络安全解决方案",
+      "intro": "我们不仅提供解决方案,还与您合作构建安全的数字生态系统",
+      "pioneering": "先进技术",
+      "pioneeringDesc": "在所有安全解决方案中应用AI、机器学习和Zero Trust架构",
+      "quickResponse": "快速响应",
+      "quickResponseDesc": "通过AI SOC进行实时网络安全事件监控和处理",
+      "certified": "国际认证",
+      "certifiedDesc": "符合ISO 27001、SOC 2及国际安全标准",
+      "sustainable": "可持续增长",
+      "sustainableDesc": "根据业务规模和需求灵活扩展的解决方案"
+    },
+    "featuredSolutions": {
+      "title": "特色解决方案",
+      "subtitle": "领先的网络安全解决方案",
+      "heading": "全面的安全解决方案",
+      "description": "从端点到云,从工厂到建筑 - 我们保护每一个角度",
+      "csaTitle": "CSA - 端点安全",
+      "csaDesc": "通过AI检测4-in-1、病毒、勒索软件、木马来保护机器",
+      "smartFactoryTitle": "智能工厂安全",
+      "smartFactoryDesc": "具有集成OT/IT监控的智能工厂安全",
+      "smartBuildingTitle": "智能建筑安全",
+      "smartBuildingDesc": "适用于智能建筑、IoT和BMS系统的网络安全"
+    },
+    "products": {
+      "title": "产品和解决方案",
+      "subtitle": "探索我们领先的网络安全解决方案",
+      "aiSoc": "AI SOC",
+      "aiSocDesc": "配备先进AI的安全运营中心",
+      "csa": "CSA",
+      "csaDesc": "全面的安全评估和审计解决方案",
+      "pentestServices": "渗透测试服务",
+      "pentestServicesDesc": "专业渗透测试服务",
+      "vietguard": "Vietguard - 移动应用安全",
+      "vietguardDesc": "移动应用安全扫描和漏洞检测工具",
+      "oracleCloud": "Oracle云",
+      "oracleCloudDesc": "高性能的领先云计算解决方案",
+      "smartDashboard": "智能仪表板",
+      "smartDashboardDesc": "企业集中监控和管理系统",
+      "viewMore": "了解更多",
+      "showMore": "查看更多",
+      "explore": "探索",
+      "showAll": "查看全部"
+    },
+    "news": {
+      "title": "新闻和事件",
+      "subtitle": "获取最新网络安全新闻",
+      "readMore": "阅读更多",
+      "viewAll": "查看所有文章"
+    },
+    "cta": {
+      "heading": "立即保护您的业务",
+      "subtitle": "联系我们,获取适合您的最佳网络安全解决方案的免费咨询",
+      "learnMore": "深入了解ICS"
+    },
+    "partners_section": {
+      "title": "可信赖的合作伙伴",
+      "subtitle": "与全球领先品牌合作"
     }
   },
   "header": {
@@ -94,6 +209,261 @@
     "aboutIcs": "关于ICS",
     "news": "新闻",
     "contact": "联系",
-    "recruitment": "招聘"
+    "recruitment": "招聘",
+    "newsletter": "通讯订阅",
+    "newsletterDescription": "订阅以接收有关网络安全和技术解决方案的最新信息。",
+    "emailPlaceholder": "您的邮箱",
+    "certificates": "认证与合作伙伴"
+  },
+  "partners": {
+    "title": "我们的合作伙伴",
+    "subtitle": "共同构建强大的网络安全生态系统",
+    "badge": "合作伙伴",
+    "programTitle": "合作伙伴计划",
+    "programSubtitle": "不同合作级别提供各种福利和激励",
+    "platinum": "白金合作伙伴",
+    "gold": "黄金合作伙伴",
+    "partnersGrid": "我们的合作伙伴",
+    "partnersGridSubtitle": "与世界领先的科技企业合作",
+    "testimonials": "客户评价",
+    "testimonialsSubtitle": "来自ICS客户和合作伙伴的反馈",
+    "becomePartner": "成为ICS合作伙伴",
+    "becomePartnerDesc": "联系我们了解更多合作机会，共同成长",
+    "registerPartner": "注册成为合作伙伴",
+    "downloadDocs": "下载合作资料",
+    "hypergDesc": "HyperG Security提供基于AI和云的网络安全解决方案。保护企业免受所有数字风险。",
+    "oracleDesc": "Oracle是领先的技术公司，提供数据库管理系统、企业软件，同时开发云计算、AI和网络安全。",
+    "gamaniaDesc": "Gamania是领先的数字娱乐公司，专注于开发和发行在线游戏，并扩展到电子支付、云和网络安全领域。",
+    "microsoftDesc": "云和企业安全领域的全球技术合作伙伴。",
+    "awsDesc": "合作在AWS云平台上部署安全解决方案。",
+    "ciscoDesc": "网络基础设施和网络安全解决方案合作伙伴。",
+    "benefits": {
+      "support247": "优先24/7支持",
+      "training": "深度培训",
+      "comarketing": "联合营销活动",
+      "rebate": "最高返利",
+      "techSupport": "技术支持",
+      "productTraining": "产品培训",
+      "marketingSupport": "营销支持",
+      "competitiveRebate": "有竞争力的返利"
+    }
+  },
+  "about": {
+    "title": "关于ICS",
+    "subtitle": "国际网络安全公司 - 您值得信赖的合作伙伴",
+    "badge": "关于我们",
+    "hero": {
+      "title": "网络安全的先驱",
+      "subtitle": "以安全、高效和可持续的方式保护数字生态系统"
+    },
+    "discoverICS": "发现ICS",
+    "discoverSubtitle": "观看介绍视频，更好地了解我们的使命、愿景和解决方案",
+    "videoNotSupported": "您的浏览器不支持视频。",
+    "company": {
+      "title": "国际网络安全股份有限公司 – ICS",
+      "description1": "作为越南及地区网络安全领域的先驱，为数字技术时代提供全面的安全解决方案。",
+      "description2": "ICS专注于应用保护、智能工厂安全、智能建筑安全，特别是AI SOC运营系统等各种关键领域的安全解决方案。"
+    },
+    "stats": {
+      "projects": "完成的项目",
+      "clients": "企业客户",
+      "support": "客户支持",
+      "uptime": "正常运行时间保证"
+    },
+    "team": {
+      "title": "专业团队",
+      "description": "拥有国际经验的50多名网络安全专家",
+      "heading": "领导团队",
+      "subtitle": "推动ICS发展的行业专家",
+      "ceo": "CEO & Founder",
+      "cto": "CTO",
+      "securityLead": "Security Lead",
+      "operations": "Head of Operations"
+    },
+    "values": {
+      "heading": "核心价值观",
+      "subtitle": "指导我们所有行动的原则",
+      "security": {
+        "title": "最大安全",
+        "description": "在最高级别保证客户数据保护"
+      },
+      "accuracy": {
+        "title": "准确性",
+        "description": "根据特定需求定制的解决方案"
+      },
+      "speed": {
+        "title": "快速",
+        "description": "实时部署和事件响应"
+      },
+      "team": {
+        "title": "专业团队",
+        "description": "拥有国际经验的行业专家"
+      },
+      "quality": {
+        "title": "质量保证",
+        "description": "符合国际安全标准"
+      },
+      "innovation": {
+        "title": "持续创新",
+        "description": "始终更新行业最新技术"
+      }
+    },
+    "timeline": {
+      "heading": "发展历程",
+      "subtitle": "ICS成熟发展的重要里程碑",
+      "2018": {
+        "title": "公司成立",
+        "description": "以保护越南数字空间的使命创立ICS"
+      },
+      "2019": {
+        "title": "VietGuard推出",
+        "description": "具有Zero Trust技术的先进端点安全解决方案"
+      },
+      "2020": {
+        "title": "国际扩展",
+        "description": "与全球领先的技术合作伙伴合作"
+      },
+      "2021": {
+        "title": "AI SOC平台",
+        "description": "部署AI网络安全运营系统"
+      },
+      "2022": {
+        "title": "Smart Factory Security",
+        "description": "为智能工厂4.0提供安全解决方案"
+      },
+      "2023": {
+        "title": "100+项目",
+        "description": "完成国内外100多个大型项目"
+      }
+    },
+    "leadership": {
+      "heading": "领导团队",
+      "subtitle": "推动ICS发展的行业专家"
+    },
+    "solutions": {
+      "heading": "我们的解决方案",
+      "subtitle": "领先的安全产品和解决方案",
+      "vietguard": {
+        "title": "VietGuard",
+        "description": "具有Zero Trust技术的高级安全解决方案，在端点级别阻止威胁，无需识别恶意软件。"
+      },
+      "esg": {
+        "title": "ESG解决方案",
+        "description": "帮助企业可持续发展，加强环境、社会、透明治理在数字时代的实践。"
+      },
+      "iot": {
+        "title": "物联网安全",
+        "description": "物联网网络的全面安全，从连接设备生态系统的传感器到云端保护数据。"
+      }
+    },
+    "cta": {
+      "heading": "准备好保护您的业务了吗?",
+      "subtitle": "立即联系我们，获取适合您业务的最佳网络安全解决方案的咨询",
+      "schedule": "安排咨询",
+      "download": "下载文档"
+    }
+  },
+  "clients": {
+    "title": "客户行业",
+    "description": "为包括政府、金融、通信在内的各个行业提供可信赖的网络安全解决方案",
+    "badge": "客户",
+    "finance": {
+      "title": "金融业",
+      "description": "帮助金融机构保护数据和遵守规定"
+    },
+    "government": {
+      "title": "政府",
+      "description": "国家信息安全和关键基础设施保护"
+    },
+    "telecom": {
+      "title": "通信业",
+      "description": "通信网络和客户数据安全"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "让我们帮助您保护业务",
+    "badge": "联系",
+    "videoNotSupported": "您的浏览器不支持视频。"
+  },
+  "recruitment": {
+    "title": "招聘",
+    "subtitle": "加入ICS团队 - 共同成长",
+    "badge": "招聘",
+    "coming_soon": "内容即将推出",
+    "message": "我们正在准备招聘信息。请稍后查看最新的职位空缺。"
+  },
+  "smartBuilding": {
+    "title": "智能建筑解决方案",
+    "subtitle": "建筑的全面自动化和安全",
+    "badge": "智能建筑"
+  },
+  "smartFactory": {
+    "title": "智能工厂解决方案",
+    "subtitle": "制造自动化和工业安全",
+    "badge": "智能工厂"
+  },
+  "esg": {
+    "title": "ESG解决方案",
+    "subtitle": "企业可持续发展",
+    "badge": "ESG"
+  },
+  "aiSoc": {
+    "title": "AI SOC - 安全运营中心",
+    "subtitle": "AI自动监控和响应",
+    "badge": "AI SOC"
+  },
+  "sidebar": {
+    "aboutICS": "ICS介绍",
+    "generalIntro": "公司简介",
+    "partners": "合作伙伴",
+    "clients": "客户",
+    "socialActivities": "社会活动",
+    "newsRecruitment": "新闻 - 招聘",
+    "contactUs": "联系我们",
+    "form": {
+      "fullName": "姓名",
+      "fullNamePlaceholder": "请输入您的姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "请输入您的邮箱",
+      "phone": "电话号码",
+      "phonePlaceholder": "请输入您的电话号码",
+      "content": "留言",
+      "contentPlaceholder": "请输入您的留言",
+      "submit": "发送留言"
+    }
+  },
+  "articlesManagement": {
+    "title": "文章管理",
+    "description": "管理您的文章列表",
+    "loading": "加载中...",
+    "noArticles": "还没有文章",
+    "errors": {
+      "errorTitle": "错误",
+      "fetchError": "无法加载文章",
+      "deleteError": "无法删除文章"
+    },
+    "auth": {
+      "title": "需要身份验证",
+      "wrongPassword": "密码不正确",
+      "passwordError": "密码错误。无法{{action}}"
+    },
+    "password": "密码",
+    "deleteConfirm": "此操作无法撤消。"
+  },
+  "writeArticle": {
+    "title": "撰写文章",
+    "description": "创建新文章或编辑现有文章",
+    "loading": "加载编辑器中...",
+    "errors": {
+      "errorTitle": "身份验证错误",
+      "fetchError": "无法加载文章",
+      "passwordError": "请输入正确的密码以保存文章"
+    }
+  },
+  "articleDetail": {
+    "title": "文章详情",
+    "copied": "链接已复制！",
+    "relatedArticles": "相关文章"
   }
 }

@@ -78,9 +78,9 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
-            <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+            <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
               <Image
-                src="https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png"
+                src="/images/ics_logo.png"
                 alt="ICS Logo"
                 fill
                 className="object-contain"

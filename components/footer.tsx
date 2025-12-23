@@ -27,9 +27,9 @@ export function Footer() {
           {/* Company Info - Spans 4 columns */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
+              <div className="relative w-28 h-28">
                 <Image
-                  src="https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png"
+                  src="/images/ics_logo.png"
                   alt="ICS Logo"
                   fill
                   className="object-contain"
@@ -125,15 +125,15 @@ export function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
               <div className="w-1 h-6 bg-gradient-to-b from-primary to-accent rounded-full" />
-              Newsletter
+              {t('footer.newsletter')}
             </h4>
             <p className="text-sm text-secondary-foreground/70">
-              Đăng ký để nhận thông tin mới nhất về an ninh mạng và các giải pháp công nghệ.
+              {t('footer.newsletterDescription')}
             </p>
             <div className="flex gap-2">
               <Input
                 type="email"
-                placeholder="Email của bạn"
+                placeholder={t('footer.emailPlaceholder')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-secondary-foreground/5 border-secondary-foreground/20 focus:border-primary"
@@ -149,7 +149,7 @@ export function Footer() {
             {/* Trust Badges */}
             <div className="pt-4 space-y-2">
               <p className="text-xs text-secondary-foreground/60 uppercase font-semibold tracking-wide">
-                Chứng nhận & Đối tác
+                {t('footer.certificates')}
               </p>
               <div className="flex gap-4 flex-wrap">
                 <div className="px-3 py-1.5 bg-secondary-foreground/5 rounded text-xs font-medium">

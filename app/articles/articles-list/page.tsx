@@ -67,8 +67,8 @@ function ArticlesListContent() {
       setTotalPages(Math.ceil(data.total / data.limit))
     } catch (error) {
       toast({
-        title: 'Lỗi',
-        description: 'Không thể tải danh sách bài viết',
+        title: t('articlesList.errors.errorTitle'),
+        description: t('articlesList.errors.fetchError'),
         variant: 'destructive',
       })
     } finally {

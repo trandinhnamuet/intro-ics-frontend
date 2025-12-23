@@ -11,44 +11,46 @@ import { AnimatedHeading } from "@/components/ui/animated-heading"
 import { Section } from "@/components/ui/section"
 import { Handshake, Star, Award, ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { useState } from "react"
+import { useTranslation } from 'react-i18next'
 
 export default function PartnerPage() {
+  const { t } = useTranslation()
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
   const partners = [
     {
       name: "HyperG",
-      description: "HyperG Security cung cấp giải pháp an ninh mạng ứng dụng AI và Cloud. Bảo vệ doanh nghiệp trước mọi rủi ro số.",
+      description: t('partners.hypergDesc'),
       logo: "https://icss.com.vn/wp-content/uploads/2025/06/z6603220865281_a8751c9cd03f48ec5ef9b82d700917d8.jpg",
       tier: "platinum"
     },
     {
       name: "Oracle",
-      description: "Oracle là tập đoàn công nghệ hàng đầu, cung cấp hệ quản trị cơ sở dữ liệu, phần mềm doanh nghiệp, đồng thời phát triển điện toán đám mây, AI và an ninh mạng.",
+      description: t('partners.oracleDesc'),
       logo: "https://icss.com.vn/wp-content/uploads/2025/08/Webo.OracleProfile-696x696-1.png",
       tier: "platinum"
     },
     {
       name: "Gamania",
-      description: "Gamania là công ty giải trí số hàng đầu, chuyên phát triển và phát hành game trực tuyến, đồng thời mở rộng sang thanh toán điện tử, cloud và an ninh mạng.",
+      description: t('partners.gamaniaDesc'),
       logo: "https://icss.com.vn/wp-content/uploads/2025/06/z6603219309871_c0cf6fdc0c2ede77ee4a3920f5b54e4f.jpg",
       tier: "gold"
     },
     {
       name: "Microsoft",
-      description: "Đối tác công nghệ toàn cầu trong lĩnh vực cloud và bảo mật doanh nghiệp.",
+      description: t('partners.microsoftDesc'),
       logo: "/images/1.jpg",
       tier: "platinum"
     },
     {
       name: "AWS",
-      description: "Hợp tác triển khai giải pháp bảo mật trên nền tảng cloud AWS.",
+      description: t('partners.awsDesc'),
       logo: "/images/2.jpg",
       tier: "gold"
     },
     {
       name: "Cisco",
-      description: "Đối tác về hạ tầng mạng và giải pháp bảo mật network security.",
+      description: t('partners.ciscoDesc'),
       logo: "/images/3.jpg",
       tier: "gold"
     }
@@ -80,15 +82,25 @@ export default function PartnerPage() {
 
   const tiers = [
     {
-      name: "Platinum Partner",
+      name: t('partners.platinum'),
       color: "from-purple-500 to-pink-500",
-      benefits: ["Hỗ trợ ưu tiên 24/7", "Đào tạo chuyên sâu", "Co-marketing campaigns", "Rebate cao nhất"],
+      benefits: [
+        t('partners.benefits.support247'),
+        t('partners.benefits.training'),
+        t('partners.benefits.comarketing'),
+        t('partners.benefits.rebate')
+      ],
       icon: Star
     },
     {
-      name: "Gold Partner",
+      name: t('partners.gold'),
       color: "from-yellow-500 to-orange-500",
-      benefits: ["Hỗ trợ kỹ thuật", "Đào tạo sản phẩm", "Marketing support", "Competitive rebate"],
+      benefits: [
+        t('partners.benefits.techSupport'),
+        t('partners.benefits.productTraining'),
+        t('partners.benefits.marketingSupport'),
+        t('partners.benefits.competitiveRebate')
+      ],
       icon: Award
     }
   ]
@@ -122,17 +134,17 @@ export default function PartnerPage() {
             <ScrollReveal direction="right">
               <Badge className="mb-4 px-4 py-2 bg-white/20 backdrop-blur-sm border-white/30">
                 <Handshake className="w-4 h-4 mr-2" />
-                Đối tác
+                {t('partners.badge')}
               </Badge>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={100}>
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 max-w-3xl">
-                Đối tác của chúng tôi
+                {t('partners.title')}
               </h1>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={200}>
               <p className="text-xl text-white/90 max-w-2xl">
-                Cùng nhau xây dựng hệ sinh thái an ninh mạng vững mạnh
+                {t('partners.subtitle')}
               </p>
             </ScrollReveal>
           </div>
@@ -144,12 +156,12 @@ export default function PartnerPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="mb-4">
-              Chương trình đối tác
+              {t('partners.programTitle')}
             </AnimatedHeading>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={100}>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
-              Các cấp độ đối tác với quyền lợi và ưu đãi khác nhau
+              {t('partners.programSubtitle')}
             </p>
           </ScrollReveal>
 
@@ -186,12 +198,12 @@ export default function PartnerPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="mb-4">
-              Đối tác của chúng tôi
+              {t('partners.partnersGrid')}
             </AnimatedHeading>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={100}>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
-              Hợp tác với các tập đoàn công nghệ hàng đầu thế giới
+              {t('partners.partnersGridSubtitle')}
             </p>
           </ScrollReveal>
 
@@ -208,7 +220,7 @@ export default function PartnerPage() {
                           : 'bg-gradient-to-r from-yellow-500 to-orange-500'
                       } text-white border-none`}
                     >
-                      {partner.tier === 'platinum' ? 'Platinum' : 'Gold'}
+                      {partner.tier === 'platinum' ? t('partners.platinum') : t('partners.gold')}
                     </Badge>
                   </div>
 
@@ -243,13 +255,13 @@ export default function PartnerPage() {
           <ScrollReveal direction="up">
             <div className="mb-4">
               <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl py-2">
-                Khách hàng nói gì về chúng tôi
+                {t('partners.testimonials')}
               </AnimatedHeading>
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={100}>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
-              Những phản hồi từ các khách hàng và đối tác của ICS
+              {t('partners.testimonialsSubtitle')}
             </p>
           </ScrollReveal>
 
@@ -341,17 +353,17 @@ export default function PartnerPage() {
                   <Handshake className="w-10 h-10 text-white" />
                 </div>
                 <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                  Trở thành đối tác của ICS
+                  {t('partners.becomePartner')}
                 </h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Hãy liên hệ với chúng tôi để tìm hiểu thêm về các cơ hội hợp tác và phát triển cùng nhau
+                  {t('partners.becomePartnerDesc')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="text-lg px-8 bg-white text-primary hover:bg-white/90 font-semibold">
-                    Đăng ký đối tác
+                    {t('partners.registerPartner')}
                   </Button>
                   <Button size="lg" className="text-lg px-8 bg-white/20 text-white border-2 border-white hover:bg-white/30 font-semibold backdrop-blur-sm">
-                    Tải tài liệu hợp tác
+                    {t('partners.downloadDocs')}
                   </Button>
                 </div>
               </div>

@@ -1,11 +1,13 @@
 "use client"
 
+import { useTranslation } from "react-i18next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Sidebar } from "@/components/sidebar"
 import { Phone, Mail, Globe, MapPin, Building2 } from "lucide-react"
 
 export default function ContactPage() {
+  const { t } = useTranslation()
   return (
     <>
       <Header />
@@ -22,7 +24,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10">
           <h1 className="text-5xl font-bold text-white drop-shadow-lg">
-            LIÊN HỆ
+            {t('contact.title')}
           </h1>
         </div>
       </div>
@@ -44,15 +46,15 @@ export default function ContactPage() {
                 <Building2 className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg">Thông tin công ty</h3>
-                <p className="text-blue-100 text-sm">CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS</p>
+                <h3 className="text-white font-bold text-lg">{t('contact.companyInfo')}</h3>
+                <p className="text-blue-100 text-sm">{t('contact.companyName')}</p>
               </div>
             </div>
             <div className="p-6">
               <div className="bg-green-50 rounded-lg p-4 flex gap-3">
                 <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-gray-800">Văn phòng Hà Nội</p>
+                  <p className="font-semibold text-gray-800">{t('contact.hanoiOffice')}</p>
                   <a 
                     href="https://www.google.com/maps?ll=20.979021,105.816183&z=16&t=m&hl=vi&gl=US&mapclient=embed&cid=12624892976792149208"
                     target="_blank"
@@ -73,7 +75,7 @@ export default function ContactPage() {
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg">Thông tin liên hệ</h3>
+                <h3 className="text-white font-bold text-lg">{t('contact.contactInfo')}</h3>
               </div>
             </div>
             <div className="p-6 space-y-4">
@@ -81,7 +83,7 @@ export default function ContactPage() {
               <div className="bg-orange-50 rounded-lg p-4 flex gap-3">
                 <Phone className="w-5 h-5 text-orange-600 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-gray-800 text-sm">Điện thoại & Hotline</p>
+                  <p className="font-semibold text-gray-800 text-sm">{t('contact.phone')}</p>
                   <a 
                     href="tel:0707806860"
                     className="text-gray-700 font-bold text-lg hover:text-[#0984c7] transition-colors"
@@ -95,7 +97,7 @@ export default function ContactPage() {
               <div className="bg-purple-50 rounded-lg p-4 flex gap-3">
                 <Mail className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-gray-800 text-sm">Email</p>
+                  <p className="font-semibold text-gray-800 text-sm">{t('contact.email')}</p>
                   <a 
                     href="mailto:info@icss.com.vn"
                     className="text-gray-700 hover:text-[#0984c7] transition-colors break-all"
@@ -109,7 +111,7 @@ export default function ContactPage() {
               <div className="bg-blue-50 rounded-lg p-4 flex gap-3">
                 <Globe className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-gray-800 text-sm">Website</p>
+                  <p className="font-semibold text-gray-800 text-sm">{t('contact.website')}</p>
                   <a 
                     href="https://www.icss.com.vn"
                     target="_blank"
@@ -130,8 +132,8 @@ export default function ContactPage() {
                 <MapPin className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg">Vị trí trên bản đồ</h3>
-                <p className="text-red-100 text-sm">Tìm đường đến văn phòng của chúng tôi</p>
+                <h3 className="text-white font-bold text-lg">{t('contact.location')}</h3>
+                <p className="text-red-100 text-sm">{t('contact.locationSubtitle')}</p>
               </div>
             </div>
             <div className="p-0 h-64">

@@ -1,3 +1,6 @@
+"use client"
+
+import { useTranslation } from "react-i18next"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -5,6 +8,7 @@ import { Sidebar } from "@/components/sidebar"
 import Link from "next/link"
 
 export default function KhachHangPage() {
+  const { t } = useTranslation()
   return (
     <>
       <Header />
@@ -19,7 +23,7 @@ export default function KhachHangPage() {
           priority
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="text-5xl lg:text-6xl font-bold text-white">Khách hàng</h1>
+          <h1 className="text-5xl lg:text-6xl font-bold text-white">{t('clients.title')}</h1>
         </div>
       </div>
 
@@ -27,11 +31,11 @@ export default function KhachHangPage() {
       <div className="bg-muted/20 py-3">
         <div className="w-full px-16 lg:px-32">
           <div className="flex gap-2 text-sm text-muted-foreground">
-            <Link href="/" className="hover:text-primary">Trang chủ</Link>
+            <Link href="/" className="hover:text-primary">{t('common.home')}</Link>
             <span>›</span>
-            <Link href="/gioi-thieu" className="hover:text-primary">Về chúng tôi</Link>
+            <Link href="/gioi-thieu" className="hover:text-primary">{t('common.about')}</Link>
             <span>›</span>
-            <span>Khách hàng</span>
+            <span>{t('clients.title')}</span>
           </div>
         </div>
       </div>
@@ -46,7 +50,7 @@ export default function KhachHangPage() {
               <section className="py-6">
                 <div className="prose prose-sm max-w-none mb-12">
                   <p className="text-base leading-relaxed text-foreground">
-                    Khách hàng của chúng tôi trải rộng từ <strong>ngân hàng, chính phủ, các doanh nghiệp vừa và nhỏ đến các tập đoàn lớn,</strong> hoạt động trong nhiều ngành nghề khác nhau. Họ đang chuyển đổi số, coi an ninh mạng là nền tảng để phát triển bền vững và giữ vững lợi thế cạnh tranh trên thị trường.
+                    {t('clients.description')}
                   </p>
                 </div>
 
@@ -62,7 +66,7 @@ export default function KhachHangPage() {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <h5 className="font-bold text-lg uppercase text-foreground">Ngành tài chính</h5>
+                    <h5 className="font-bold text-lg uppercase text-foreground">{t('clients.finance')}</h5>
                   </div>
 
                   {/* Government */}
@@ -75,7 +79,7 @@ export default function KhachHangPage() {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <h5 className="font-bold text-lg uppercase text-foreground">Chính phủ</h5>
+                    <h5 className="font-bold text-lg uppercase text-foreground">{t('clients.government')}</h5>
                   </div>
 
                   {/* Telecom */}
@@ -88,7 +92,7 @@ export default function KhachHangPage() {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <h5 className="font-bold text-lg uppercase text-foreground">Ngành viễn thông</h5>
+                    <h5 className="font-bold text-lg uppercase text-foreground">{t('clients.telecom')}</h5>
                   </div>
                 </div>
               </section>

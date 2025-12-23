@@ -1,11 +1,13 @@
 "use client"
 
+import { useTranslation } from "react-i18next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Sidebar } from "@/components/sidebar"
 import { Briefcase, Clock } from "lucide-react"
 
 export default function RecruitmentPage() {
+  const { t } = useTranslation()
   return (
     <>
       <Header />
@@ -22,7 +24,7 @@ export default function RecruitmentPage() {
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10">
           <h1 className="text-5xl font-bold text-white drop-shadow-lg">
-            TUYỂN DỤNG
+            {t('recruitment.title')}
           </h1>
         </div>
       </div>
@@ -43,23 +45,23 @@ export default function RecruitmentPage() {
                   </div>
                 </div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                  Nội dung sẽ sớm được cập nhật
+                  {t('recruitment.coming_soon')}
                 </h2>
                 <p className="text-gray-600 text-lg mb-8">
-                  Chúng tôi đang chuẩn bị các thông tin tuyển dụng. Vui lòng quay lại sau để xem các vị trí tuyển dụng mới nhất.
+                  {t('recruitment.message')}
                 </p>
                 <div className="flex justify-center gap-4">
                   <a 
                     href="/"
                     className="inline-block bg-[#0984c7] hover:bg-[#0770a8] text-white font-bold py-3 px-8 rounded-lg transition-colors"
                   >
-                    Quay lại trang chủ
+                    {t('common.backHome')}
                   </a>
                   <a 
                     href="/lien-he"
                     className="inline-block bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
                   >
-                    Liên hệ với chúng tôi
+                    {t('common.contact')}
                   </a>
                 </div>
               </div>
