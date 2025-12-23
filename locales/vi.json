@@ -4,7 +4,13 @@
       "title": "Giải Pháp An Ninh Mạng Toàn Diện",
       "subtitle": "Bảo vệ doanh nghiệp của bạn với công nghệ an ninh mạng tiên tiến nhất",
       "cta": "Tìm Hiểu Thêm",
-      "contactBtn": "Liên Hệ Ngay"
+      "contactBtn": "Liên Hệ Ngay",
+      "featured": "Nổi bật",
+      "learnMore": "Tìm hiểu thêm",
+      "clients": "Khách hàng",
+      "years": "năm",
+      "support": "Hỗ trợ",
+      "scrollDown": "Cuộn xuống"
     },
     "products": {
       "title": "Sản Phẩm & Giải Pháp",
@@ -23,6 +29,8 @@
       "smartDashboardDesc": "Hệ thống giám sát và quản lý tập trung cho doanh nghiệp",
       "viewMore": "Tìm hiểu thêm",
       "showMore": "Xem thêm",
+      "explore": "Khám phá",
+      "showAll": "Xem tất cả",
       "smartBuilding": {
         "title": "Tòa Nhà Thông Minh",
         "description": "Giải pháp tự động hóa và quản lý tòa nhà thông minh"

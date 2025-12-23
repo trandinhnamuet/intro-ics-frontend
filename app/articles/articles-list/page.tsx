@@ -4,24 +4,24 @@ import { useState, useEffect, Suspense } from 'react'
 import React from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { useToast } from '@/hooks/use-toast'
-import { Search, Calendar, User, ArrowLeft } from 'lucide-react'
+import { Search, Calendar, User, ArrowRight, Clock, Eye, TrendingUp } from 'lucide-react'
 import { format } from 'date-fns'
-import { articlesService, type Article, type ArticlesResponse } from '@/services/articles.service'
+import { articlesService, type Article } from '@/services/articles.service'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import NewsSideBar from '@/components/news-sidebar'
+import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { AnimatedHeading } from '@/components/ui/animated-heading'
+import { Section } from '@/components/ui/section'
+import { ArticleListSkeleton } from '@/components/ui/loading-skeleton'
+import { cn } from '@/lib/utils'
 
 function ArticlesListContent() {
   const { t } = useTranslation()
@@ -36,6 +36,7 @@ function ArticlesListContent() {
   const [searchTerm, setSearchTerm] = useState('')
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
 
   const previewId = searchParams.get('preview')
   const urlSearchQuery = searchParams.get('search')
@@ -60,15 +61,14 @@ function ArticlesListContent() {
   const fetchArticles = async () => {
     try {
       setIsLoading(true)
-      // Only fetch published articles for public view
       const data = await articlesService.getAllArticles(page, 12, 'published')
       setArticles(data.data)
       setTotalItems(data.total)
       setTotalPages(Math.ceil(data.total / data.limit))
     } catch (error) {
       toast({
-        title: t('articlesList.errors.errorTitle'),
-        description: t('articlesList.errors.fetchError'),
+        title: 'Lỗi',
+        description: 'Không thể tải danh sách bài viết',
         variant: 'destructive',
       })
     } finally {
@@ -100,334 +100,265 @@ function ArticlesListContent() {
     article.excerpt?.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'published':
-        return 'bg-green-500 hover:bg-green-600'
-      case 'draft':
-        return 'bg-yellow-500 hover:bg-yellow-600'
-      case 'archived':
-        return 'bg-gray-500 hover:bg-gray-600'
-      default:
-        return 'bg-gray-500 hover:bg-gray-600'
-    }
-  }
-
-  const getStatusText = (status: string) => {
-    switch (status) {
-      case 'published':
-        return t('articlesList.status.published')
-      case 'draft':
-        return t('articlesList.status.draft')
-      case 'archived':
-        return t('articlesList.status.archived')
-      default:
-        return status
-    }
-  }
-
-  const getPaginationNumbers = () => {
-    const pages: (number | string)[] = []
-    const itemsPerPage = 12
-    const startItem = (page - 1) * itemsPerPage + 1
-    const endItem = Math.min(page * itemsPerPage, totalItems)
-    
-    // Show first page
-    pages.push(1)
-    
-    // Show 2 pages before current
-    if (page > 3) {
-      pages.push('...')
-    }
-    if (page - 2 > 1) {
-      pages.push(page - 2)
-    }
-    if (page - 1 > 1) {
-      pages.push(page - 1)
-    }
-    
-    // Show current page
-    if (page !== 1 && page !== totalPages) {
-      pages.push(page)
-    }
-    
-    // Show 2 pages after current
-    if (page + 1 < totalPages) {
-      pages.push(page + 1)
-    }
-    if (page + 2 < totalPages) {
-      pages.push(page + 2)
-    }
-    
-    // Show last page
-    if (totalPages > 1 && !pages.includes(totalPages)) {
-      if (pages[pages.length - 1] !== '...') {
-        pages.push('...')
-      }
-      pages.push(totalPages)
-    }
-    
-    return { pages, startItem, endItem }
-  }
+  const categories = ['all', 'security', 'cloud', 'ai', 'iot']
 
   return (
     <>
       <Header />
-      <main className="min-h-screen pt-24">
-        <div className="w-full px-16 lg:px-32 py-6">
-          <div className="flex gap-8">
-            {/* News Sidebar */}
-            <NewsSideBar />
-            
-            {/* Main Content */}
-            <div className="flex-1">
+      
+      {/* Hero Banner */}
+      <div className="relative h-[400px] bg-gradient-to-br from-primary via-accent to-secondary overflow-hidden mt-20">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-300" />
+        </div>
+        
+        <div className="relative container-responsive h-full flex flex-col justify-center">
+          <ScrollReveal direction="down">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-6 w-fit">
+              <TrendingUp className="w-4 h-4 text-white" />
+              <span className="text-sm font-medium text-white">Tin tức & Insights</span>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={100}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-3xl">
+              Khám Phá Thế Giới An Ninh Mạng
+            </h1>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={200}>
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl">
+              Cập nhật tin tức, xu hướng và giải pháp công nghệ mới nhất từ các chuyên gia hàng đầu
+            </p>
+          </ScrollReveal>
+
+          {/* Search Bar */}
+          <ScrollReveal direction="up" delay={300}>
+            <div className="flex gap-3 max-w-2xl">
+              <div className="relative flex-1">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="Tìm kiếm bài viết..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  className="pl-12 h-14 bg-white/95 backdrop-blur-sm border-white/20 rounded-full text-base"
+                />
+              </div>
               <Button
-                variant="ghost"
-                onClick={() => router.back()}
-                className="mb-4"
+                onClick={handleSearch}
+                size="lg"
+                className="h-14 px-8 rounded-full bg-secondary hover:bg-secondary/90 text-white font-semibold"
               >
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Quay lại
+                <Search className="h-5 w-5 mr-2" />
+                Tìm
               </Button>
-              <div className="mb-8">
-                <h1 className="text-4xl font-bold mb-4">{t('articlesList.title')}</h1>
-                <p className="text-muted-foreground text-lg">
-                  {t('articlesList.description')}
+            </div>
+          </ScrollReveal>
+        </div>
+      </div>
+
+      <Section spacing="xl" container={false}>
+        <div className="container-responsive">
+          {/* Category Filters */}
+          <ScrollReveal direction="up">
+            <div className="flex flex-wrap gap-3 mb-12 justify-center">
+              {categories.map((cat) => (
+                <Button
+                  key={cat}
+                  variant={selectedCategory === cat ? "default" : "outline"}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={cn(
+                    "rounded-full px-6 transition-all",
+                    selectedCategory === cat && "bg-gradient-to-r from-primary to-accent"
+                  )}
+                >
+                  {cat === 'all' ? 'Tất cả' : cat.charAt(0).toUpperCase() + cat.slice(1)}
+                </Button>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          {/* Search Results Info */}
+          {searchQuery && (
+            <ScrollReveal direction="up">
+              <div className="mb-8 p-4 bg-muted/30 rounded-lg border border-border">
+                <p className="text-sm">
+                  Tìm thấy <span className="font-bold text-primary">{filteredArticles.length}</span> kết quả cho 
+                  <span className="font-semibold"> "{searchQuery}"</span>
                 </p>
               </div>
+            </ScrollReveal>
+          )}
 
-              {/* Search */}
-              <div className="mb-6">
-                <div className="relative max-w-md flex gap-2">
-                  <div className="relative flex-1">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                    <Input
-                      type="text"
-                      placeholder={t('articlesList.searchPlaceholder')}
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      onKeyPress={handleKeyPress}
-                      className="pl-10"
-                    />
-                  </div>
-                  <Button
-                    onClick={handleSearch}
-                    className="px-6"
-                  >
-                    <Search className="h-4 w-4 mr-2" />
-                    Tìm kiếm
-                  </Button>
-                </div>
-                {searchQuery && (
-                  <div className="mt-3 text-sm text-muted-foreground">
-                    Kết quả tìm kiếm cho <span className="font-semibold text-foreground">"{searchQuery}"</span>: 
-                    <span className="font-semibold text-foreground ml-1">{filteredArticles.length}</span> bài viết
-                  </div>
-                )}
+          {/* Articles Grid */}
+          {isLoading ? (
+            <ArticleListSkeleton />
+          ) : filteredArticles.length === 0 ? (
+            <div className="text-center py-20">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-muted flex items-center justify-center">
+                <Search className="w-12 h-12 text-muted-foreground" />
               </div>
-
-              {isLoading ? (
-                <div className="flex justify-center py-12">
-                  <div className="text-muted-foreground">{t('articlesList.loading')}</div>
-                </div>
-              ) : filteredArticles.length === 0 ? (
-                <div className="text-center py-12">
-                  <div className="text-muted-foreground text-lg">
-                    {searchQuery ? t('articlesList.noResults') : t('articlesList.noArticles')}
-                  </div>
-                </div>
-              ) : (
-                <>
-                  {/* Articles Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                    {filteredArticles.map((article) => (
-                      <Link key={article.id} href={`/articles/${article.slug}`} className="block group">
-                        <Card className="overflow-hidden hover:shadow-lg transition-shadow group-hover:ring-2 group-hover:ring-primary cursor-pointer">
-                          {article.thumbnail_url && (
-                            <div className="aspect-video overflow-hidden">
-                              <img
-                                src={article.thumbnail_url}
-                                alt={article.title}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                              />
-                            </div>
-                          )}
-                          <CardHeader className="pb-2">
-                            <div className="flex items-center justify-between mb-2">
-                              <Badge className={getStatusColor(article.status)}>
-                                {getStatusText(article.status)}
+              <h3 className="text-2xl font-bold mb-2">Không tìm thấy bài viết</h3>
+              <p className="text-muted-foreground mb-6">
+                {searchQuery ? 'Thử tìm kiếm với từ khóa khác' : 'Chưa có bài viết nào'}
+              </p>
+              {searchQuery && (
+                <Button onClick={() => { setSearchQuery(''); setSearchTerm('') }} variant="outline">
+                  Xóa tìm kiếm
+                </Button>
+              )}
+            </div>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredArticles.map((article, index) => (
+                  <ScrollReveal key={article.id} direction="up" delay={index * 50}>
+                    <Link href={`/articles/${article.slug}`}>
+                      <Card className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col hover:-translate-y-2">
+                        {/* Image */}
+                        {article.thumbnail_url && (
+                          <div className="relative h-56 overflow-hidden bg-muted">
+                            <Image
+                              src={article.thumbnail_url}
+                              alt={article.title}
+                              fill
+                              className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            
+                            {/* Category Badge */}
+                            <div className="absolute top-4 left-4">
+                              <Badge className="bg-white/90 text-foreground backdrop-blur-sm hover:bg-white">
+                                Tin tức
                               </Badge>
-                              <div className="flex items-center text-sm text-muted-foreground">
-                                <Calendar className="h-3 w-3 mr-1" />
-                                {format(new Date(article.created_at), 'dd/MM/yyyy')}
-                              </div>
                             </div>
-                            <CardTitle className="line-clamp-2 text-lg group-hover:text-primary">
-                              {article.title}
-                            </CardTitle>
-                          </CardHeader>
-                          <CardContent>
-                            <div className="mb-4 min-h-[72px] flex items-start">
-                              <p className="text-muted-foreground line-clamp-3">
-                                {article.excerpt || '\u00A0'}
-                              </p>
+                          </div>
+                        )}
+
+                        {/* Content */}
+                        <div className="p-6 flex-1 flex flex-col">
+                          {/* Meta Info */}
+                          <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
+                            <div className="flex items-center gap-1">
+                              <Calendar className="w-3 h-3" />
+                              {format(new Date(article.created_at), 'dd/MM/yyyy')}
                             </div>
-                            <div className="flex items-center text-sm text-muted-foreground">
-                              <User className="h-3 w-3 mr-1" />
-                              {t('articlesList.author', { id: article.author_id })}
+                            <div className="flex items-center gap-1">
+                              <Clock className="w-3 h-3" />
+                              5 phút đọc
                             </div>
-                          </CardContent>
-                        </Card>
-                      </Link>
-                    ))}
+                          </div>
+
+                          {/* Title */}
+                          <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                            {article.title}
+                          </h3>
+
+                          {/* Excerpt */}
+                          <p className="text-sm text-muted-foreground line-clamp-3 mb-4 flex-1">
+                            {article.excerpt || 'Đọc để tìm hiểu thêm...'}
+                          </p>
+
+                          {/* Read More Link */}
+                          <div className="flex items-center justify-between pt-4 border-t border-border">
+                            <div className="flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-4 transition-all">
+                              Đọc thêm
+                              <ArrowRight className="w-4 h-4" />
+                            </div>
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                              <Eye className="w-3 h-3" />
+                              {Math.floor(Math.random() * 1000)}
+                            </div>
+                          </div>
+                        </div>
+                      </Card>
+                    </Link>
+                  </ScrollReveal>
+                ))}
+              </div>
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <ScrollReveal direction="up" delay={200}>
+                  <div className="flex justify-center gap-2 mt-16">
+                    <Button
+                      variant="outline"
+                      onClick={() => setPage(p => Math.max(1, p - 1))}
+                      disabled={page === 1}
+                      className="rounded-full"
+                    >
+                      ← Trước
+                    </Button>
+                    
+                    <div className="flex items-center gap-2">
+                      {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                        let pageNum;
+                        if (totalPages <= 5) {
+                          pageNum = i + 1;
+                        } else if (page <= 3) {
+                          pageNum = i + 1;
+                        } else if (page >= totalPages - 2) {
+                          pageNum = totalPages - 4 + i;
+                        } else {
+                          pageNum = page - 2 + i;
+                        }
+                        
+                        return (
+                          <Button
+                            key={pageNum}
+                            variant={page === pageNum ? "default" : "outline"}
+                            onClick={() => setPage(pageNum)}
+                            className={cn(
+                              "w-10 h-10 rounded-full",
+                              page === pageNum && "bg-gradient-to-r from-primary to-accent"
+                            )}
+                          >
+                            {pageNum}
+                          </Button>
+                        );
+                      })}
+                    </div>
+
+                    <Button
+                      variant="outline"
+                      onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                      disabled={page === totalPages}
+                      className="rounded-full"
+                    >
+                      Sau →
+                    </Button>
                   </div>
 
-                  {/* Pagination */}
-                  {totalPages > 1 && (() => {
-                    const { pages, startItem, endItem } = getPaginationNumbers()
-                    return (
-                      <div className="flex flex-col items-center gap-4 py-8">
-                        <div className="text-sm text-muted-foreground">
-                          {startItem} to {endItem} of {totalItems}
-                        </div>
-                        <div className="flex justify-center items-center gap-2 flex-wrap">
-                          <Button
-                            variant="outline"
-                            onClick={() => setPage(1)}
-                            disabled={page === 1}
-                            className="text-xs"
-                          >
-                            First
-                          </Button>
-                          <Button
-                            variant="outline"
-                            onClick={() => setPage(page - 1)}
-                            disabled={page === 1}
-                            className="text-xs"
-                          >
-                            {t('articlesList.pagination.previous')}
-                          </Button>
-                          
-                          {pages.map((p, idx) => (
-                            <React.Fragment key={idx}>
-                              {p === '...' ? (
-                                <span className="px-2 text-muted-foreground">...</span>
-                              ) : (
-                                <Button
-                                  variant={p === page ? 'default' : 'outline'}
-                                  onClick={() => typeof p === 'number' && setPage(p)}
-                                  className="h-9 w-9 p-0 text-xs"
-                                >
-                                  {p}
-                                </Button>
-                              )}
-                            </React.Fragment>
-                          ))}
-                          
-                          <Button
-                            variant="outline"
-                            onClick={() => setPage(page + 1)}
-                            disabled={page === totalPages}
-                            className="text-xs"
-                          >
-                            {t('articlesList.pagination.next')}
-                          </Button>
-                          <Button
-                            variant="outline"
-                            onClick={() => setPage(totalPages)}
-                            disabled={page === totalPages}
-                            className="text-xs"
-                          >
-                            Last
-                          </Button>
-                        </div>
-                      </div>
-                    )
-                  })()}
-                </>
+                  <p className="text-center text-sm text-muted-foreground mt-4">
+                    Trang {page} / {totalPages} • Tổng {totalItems} bài viết
+                  </p>
+                </ScrollReveal>
               )}
-            </div>
-          </div>
+            </>
+          )}
         </div>
-        </main>
-      <Footer />
+      </Section>
 
-      {/* Auto-open preview dialog if preview ID is provided */}
-      {previewId && selectedArticle && (
-        <Dialog open={true} onOpenChange={() => setSelectedArticle(null)}>
-          <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-            <DialogHeader>
-              <DialogTitle className="text-2xl mb-4">
-                {selectedArticle.title}
-              </DialogTitle>
-            </DialogHeader>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 text-sm text-muted-foreground border-b pb-4">
-                <div className="flex items-center">
-                  <Calendar className="h-4 w-4 mr-1" />
-                  {format(new Date(selectedArticle.created_at), 'dd/MM/yyyy HH:mm')}
-                </div>
-                <div className="flex items-center">
-                  <User className="h-4 w-4 mr-1" />
-                  {t('articlesList.author', { id: selectedArticle.author_id })}
-                </div>
-                <Badge className={getStatusColor(selectedArticle.status)}>
-                  {getStatusText(selectedArticle.status)}
-                </Badge>
-              </div>
-              
+      {/* Preview Dialog */}
+      <Dialog open={!!selectedArticle} onOpenChange={() => setSelectedArticle(null)}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>{selectedArticle?.title}</DialogTitle>
+          </DialogHeader>
+          {selectedArticle && (
+            <div className="prose prose-sm max-w-none">
               {selectedArticle.thumbnail_url && (
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
-                    src={selectedArticle.thumbnail_url}
-                    alt={selectedArticle.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <img src={selectedArticle.thumbnail_url} alt={selectedArticle.title} className="w-full rounded-lg mb-4" />
               )}
-              
-              {selectedArticle.excerpt && (
-                <div className="text-lg text-muted-foreground italic border-l-4 border-primary pl-4">
-                  {selectedArticle.excerpt}
-                </div>
-              )}
-              
-              <div 
-                className="prose prose-lg max-w-none"
-                dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
-              />
+              <div dangerouslySetInnerHTML={{ __html: selectedArticle.content }} />
             </div>
-          </DialogContent>
-        </Dialog>
-      )}
-    </>
-  )
-}
+          )}
+        </DialogContent>
+      </Dialog>
 
-function LoadingFallback() {
-  const { t } = useTranslation()
-  
-  return (
-    <>
-      <Header />
-      <main className="min-h-screen pt-24">
-        <div className="w-full px-16 lg:px-32 py-6">
-          <div className="flex gap-8">
-            <NewsSideBar />
-            <div className="flex-1">
-              <div className="mb-8">
-                <h1 className="text-4xl font-bold mb-4">{t('articlesList.title')}</h1>
-                <p className="text-muted-foreground text-lg">
-                  {t('articlesList.description')}
-                </p>
-              </div>
-              <div className="flex justify-center py-12">
-                <div className="text-muted-foreground">{t('articlesList.loading')}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
       <Footer />
     </>
   )
@@ -435,7 +366,15 @@ function LoadingFallback() {
 
 export default function ArticlesListPage() {
   return (
-    <Suspense fallback={<LoadingFallback />}>
+    <Suspense fallback={
+      <>
+        <Header />
+        <div className="min-h-screen pt-32 pb-20">
+          <ArticleListSkeleton />
+        </div>
+        <Footer />
+      </>
+    }>
       <ArticlesListContent />
     </Suspense>
   )

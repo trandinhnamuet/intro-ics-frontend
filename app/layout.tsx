@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { I18nProvider } from "@/components/providers/i18n-provider"
 import { Toaster } from "@/components/ui/toaster"
+import { FloatingActionButton } from "@/components/ui/floating-action-button"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin", "vietnamese"] })
@@ -48,6 +49,7 @@ export default function RootLayout({
         >
           <I18nProvider>
             {children}
+            <FloatingActionButton />
           </I18nProvider>
           <Toaster />
         </ThemeProvider>
