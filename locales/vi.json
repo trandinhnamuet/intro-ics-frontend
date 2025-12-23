@@ -1,10 +1,82 @@
 {
+  "common": {
+    "learnMore": "Tìm hiểu thêm",
+    "viewMore": "Xem thêm",
+    "readMore": "Đọc thêm",
+    "contactUs": "Liên hệ ngay",
+    "contact": "Liên hệ",
+    "getStarted": "Bắt đầu",
+    "backToList": "Quay lại danh sách",
+    "backHome": "Quay lại trang chủ",
+    "home": "Trang chủ",
+    "about": "Về chúng tôi",
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "success": "Thành công",
+    "search": "Tìm kiếm",
+    "filter": "Lọc",
+    "all": "Tất cả",
+    "close": "Đóng",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "create": "Tạo mới",
+    "update": "Cập nhật",
+    "submit": "Gửi",
+    "confirm": "Xác nhận"
+  },
   "home": {
     "hero": {
       "title": "Giải Pháp An Ninh Mạng Toàn Diện",
       "subtitle": "Bảo vệ doanh nghiệp của bạn với công nghệ an ninh mạng tiên tiến nhất",
       "cta": "Tìm Hiểu Thêm",
-      "contactBtn": "Liên Hệ Ngay"
+      "contactBtn": "Liên Hệ Ngay",
+      "featured": "Nổi bật",
+      "learnMore": "Tìm hiểu thêm",
+      "clients": "Khách hàng",
+      "years": "năm",
+      "support": "Hỗ trợ",
+      "scrollDown": "Cuộn xuống"
+    },
+    "stats": {
+      "projectsCompleted": "Dự án hoàn thành",
+      "enterpriseClients": "Khách hàng doanh nghiệp",
+      "cybersecuritySupport": "Hỗ trợ an ninh mạng",
+      "uptimeGuarantee": "Uptime đảm bảo",
+      "heading": "ICS trong",
+      "inNumbers": "con số",
+      "badge": "Thành tựu nổi bật"
+    },
+    "partners": {
+      "hyperg": "Giải pháp an ninh mạng ứng dụng AI và Cloud",
+      "oracle": "Hệ quản trị cơ sở dữ liệu hàng đầu",
+      "gamania": "Giải trí số và cloud security"
+    },
+    "whyChooseUs": {
+      "title": "Tại sao chọn ICS",
+      "subtitle": "Chúng tôi cam kết mang đến giải pháp an ninh mạng tốt nhất",
+      "intro": "Chúng tôi không chỉ cung cấp giải pháp, mà đồng hành cùng bạn xây dựng hệ sinh thái số an toàn",
+      "pioneering": "Công nghệ tiên phong",
+      "pioneeringDesc": "Áp dụng AI, Machine Learning và Zero Trust Architecture trong mọi giải pháp bảo mật",
+      "quickResponse": "Phản ứng nhanh",
+      "quickResponseDesc": "Giám sát và xử lý sự cố an ninh mạng trong thời gian thực với AI SOC",
+      "certified": "Chứng nhận quốc tế",
+      "certifiedDesc": "Tuân thủ các tiêu chuẩn bảo mật ISO 27001, SOC 2, và các chuẩn mực quốc tế",
+      "sustainable": "Tăng trưởng bền vững",
+      "sustainableDesc": "Giải pháp mở rộng linh hoạt theo quy mô và nhu cầu doanh nghiệp"
+    },
+    "featuredSolutions": {
+      "title": "Giải pháp nổi bật",
+      "subtitle": "Các giải pháp an ninh mạng hàng đầu",
+      "heading": "Giải pháp bảo mật toàn diện",
+      "description": "Từ endpoint đến cloud, từ nhà máy đến tòa nhà - chúng tôi bảo vệ mọi góc độ",
+      "csaTitle": "CSA - Endpoint Security",
+      "csaDesc": "Bảo vệ máy đọc 4-trong-1, phát hiện virus, ransomware, trojan với AI",
+      "smartFactoryTitle": "Smart Factory Security",
+      "smartFactoryDesc": "Bảo mật nhà máy thông minh với giám sát OT/IT tích hợp",
+      "smartBuildingTitle": "Smart Building Security",
+      "smartBuildingDesc": "An ninh mạng cho tòa nhà thông minh, IoT và hệ thống BMS"
     },
     "products": {
       "title": "Sản Phẩm & Giải Pháp",
@@ -23,22 +95,8 @@
       "smartDashboardDesc": "Hệ thống giám sát và quản lý tập trung cho doanh nghiệp",
       "viewMore": "Tìm hiểu thêm",
       "showMore": "Xem thêm",
-      "smartBuilding": {
-        "title": "Tòa Nhà Thông Minh",
-        "description": "Giải pháp tự động hóa và quản lý tòa nhà thông minh"
-      },
-      "smartFactory": {
-        "title": "Nhà Máy Thông Minh",
-        "description": "Hệ thống IoT và tự động hóa cho sản xuất"
-      },
-      "aiSocDetail": {
-        "title": "AI SOC",
-        "description": "Trung tâm điều hành an ninh với AI"
-      },
-      "esgSolutions": {
-        "title": "Giải Pháp ESG",
-        "description": "Giải pháp phát triển bền vững cho doanh nghiệp"
-      }
+      "explore": "Khám phá",
+      "showAll": "Xem tất cả"
     },
     "news": {
       "title": "Tin Tức & Sự Kiện",
@@ -46,7 +104,12 @@
       "readMore": "Xem Thêm",
       "viewAll": "Xem Tất Cả Bài Viết"
     },
-    "partners": {
+    "cta": {
+      "heading": "Bảo vệ doanh nghiệp của bạn ngay hôm nay",
+      "subtitle": "Liên hệ với chúng tôi để được tư vấn miễn phí về giải pháp an ninh mạng phù hợp nhất",
+      "learnMore": "Tìm hiểu thêm về ICS"
+    },
+    "partners_section": {
       "title": "Đối Tác Tin Cậy",
       "subtitle": "Hợp tác với những thương hiệu hàng đầu thế giới"
     }
@@ -73,6 +136,39 @@
       "errorTitle": "Lỗi",
       "fetchError": "Không thể tải danh sách bài viết"
     }
+  },
+  "articlesManagement": {
+    "title": "Quản lý bài viết",
+    "description": "Quản lý danh sách bài viết của bạn",
+    "loading": "Đang tải...",
+    "noArticles": "Chưa có bài viết nào",
+    "errors": {
+      "errorTitle": "Lỗi",
+      "fetchError": "Không thể tải danh sách bài viết",
+      "deleteError": "Không thể xóa bài viết"
+    },
+    "auth": {
+      "title": "Yêu cầu xác thực",
+      "wrongPassword": "Mật khẩu không đúng",
+      "passwordError": "Mật khẩu sai. Không thể {{action}}"
+    },
+    "password": "Mật khẩu",
+    "deleteConfirm": "Thao tác này không thể hoàn tác."
+  },
+  "writeArticle": {
+    "title": "Viết bài viết",
+    "description": "Tạo bài viết mới hoặc chỉnh sửa bài viết hiện có",
+    "loading": "Đang tải trình soạn thảo...",
+    "errors": {
+      "errorTitle": "Lỗi xác thực",
+      "fetchError": "Không thể tải bài viết",
+      "passwordError": "Hãy nhập mật khẩu đúng để lưu bài viết"
+    }
+  },
+  "articleDetail": {
+    "title": "Chi tiết bài viết",
+    "copied": "Đã sao chép liên kết!",
+    "relatedArticles": "Bài viết liên quan"
   },
   "header": {
     "aboutUs": "Về chúng tôi",
@@ -117,6 +213,351 @@
     "aboutIcs": "Giới thiệu về ICS",
     "news": "Tin tức",
     "contact": "Liên hệ",
-    "recruitment": "Tuyển dụng"
+    "recruitment": "Tuyển dụng",
+    "newsletter": "Newsletter",
+    "newsletterDescription": "Đăng ký để nhận thông tin mới nhất về an ninh mạng và các giải pháp công nghệ.",
+    "emailPlaceholder": "Email của bạn",
+    "certificates": "Chứng nhận & Đối tác"
+  },
+  "partners": {
+    "title": "Đối tác của chúng tôi",
+    "subtitle": "Cùng nhau xây dựng hệ sinh thái an ninh mạng vững mạnh",
+    "badge": "Đối tác",
+    "intro": "Đồng hành cùng những thương hiệu hàng đầu thế giới",
+    "programTitle": "Chương trình đối tác",
+    "programSubtitle": "Các cấp độ đối tác với quyền lợi và ưu đãi khác nhau",
+    "platinum": "Platinum Partner",
+    "gold": "Gold Partner",
+    "partnersGrid": "Đối tác của chúng tôi",
+    "partnersGridSubtitle": "Hợp tác với các tập đoàn công nghệ hàng đầu thế giới",
+    "testimonials": "Khách hàng nói gì về chúng tôi",
+    "testimonialsSubtitle": "Những phản hồi từ các khách hàng và đối tác của ICS",
+    "becomePartner": "Trở thành đối tác của ICS",
+    "becomePartnerDesc": "Hãy liên hệ với chúng tôi để tìm hiểu thêm về các cơ hội hợp tác và phát triển cùng nhau",
+    "registerPartner": "Đăng ký đối tác",
+    "downloadDocs": "Tải tài liệu hợp tác",
+    "hypergDesc": "HyperG Security cung cấp giải pháp an ninh mạng ứng dụng AI và Cloud. Bảo vệ doanh nghiệp trước mọi rủi ro số.",
+    "oracleDesc": "Oracle là tập đoàn công nghệ hàng đầu, cung cấp hệ quản trị cơ sở dữ liệu, phần mềm doanh nghiệp, đồng thời phát triển điện toán đám mây, AI và an ninh mạng.",
+    "gamaniaDesc": "Gamania là công ty giải trí số hàng đầu, chuyên phát triển và phát hành game trực tuyến, đồng thời mở rộng sang thanh toán điện tử, cloud và an ninh mạng.",
+    "microsoftDesc": "Đối tác công nghệ toàn cầu trong lĩnh vực cloud và bảo mật doanh nghiệp.",
+    "awsDesc": "Hợp tác triển khai giải pháp bảo mật trên nền tảng cloud AWS.",
+    "ciscoDesc": "Đối tác về hạ tầng mạng và giải pháp bảo mật network security.",
+    "benefits": {
+      "support247": "Hỗ trợ ưu tiên 24/7",
+      "training": "Đào tạo chuyên sâu",
+      "comarketing": "Co-marketing campaigns",
+      "rebate": "Rebate cao nhất",
+      "techSupport": "Hỗ trợ kỹ thuật",
+      "productTraining": "Đào tạo sản phẩm",
+      "marketingSupport": "Marketing support",
+      "competitiveRebate": "Competitive rebate"
+    }
+  },
+  "about": {
+    "title": "Giới thiệu về ICS",
+    "subtitle": "Công ty An Ninh Mạng Quốc Tế - Đối tác tin cậy của bạn",
+    "badge": "Giới thiệu",
+    "hero": {
+      "title": "Tiên phong trong An ninh Mạng",
+      "subtitle": "Bảo vệ hệ sinh thái số một cách an toàn, hiệu quả và bền vững"
+    },
+    "discoverICS": "Khám phá ICS",
+    "discoverSubtitle": "Xem video giới thiệu để hiểu rõ hơn về sứ mệnh, tầm nhìn và giải pháp của chúng tôi",
+    "videoNotSupported": "Trình duyệt của bạn không hỗ trợ video.",
+    "company": {
+      "title": "CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ – ICS",
+      "description1": "Là đơn vị tiên phong trong lĩnh vực an ninh mạng tại Việt Nam và khu vực, chuyên cung cấp các giải pháp bảo mật toàn diện cho thời đại công nghệ số.",
+      "description2": "ICS tập trung vào các giải pháp bảo mật cho nhiều lĩnh vực trọng yếu, bao gồm: bảo vệ ứng dụng, an ninh cho nhà máy thông minh, tòa nhà thông minh và đặc biệt là hệ thống điều hành trung tâm AI SOC."
+    },
+    "stats": {
+      "projects": "Dự án hoàn thành",
+      "clients": "Khách hàng doanh nghiệp",
+      "support": "Hỗ trợ khách hàng",
+      "uptime": "Uptime đảm bảo"
+    },
+    "team": {
+      "title": "Đội ngũ chuyên nghiệp",
+      "description": "Hơn 50 chuyên gia an ninh mạng với kinh nghiệm quốc tế",
+      "heading": "Đội ngũ lãnh đạo",
+      "subtitle": "Những chuyên gia hàng đầu dẫn dắt ICS phát triển",
+      "ceo": "CEO & Founder",
+      "cto": "CTO",
+      "securityLead": "Security Lead",
+      "operations": "Head of Operations"
+    },
+    "values": {
+      "heading": "Giá trị cốt lõi",
+      "subtitle": "Những nguyên tắc định hướng mọi hành động của chúng tôi",
+      "security": {
+        "title": "Bảo mật tối đa",
+        "description": "Cam kết bảo vệ dữ liệu khách hàng ở mức cao nhất"
+      },
+      "accuracy": {
+        "title": "Chính xác",
+        "description": "Giải pháp tùy chỉnh phù hợp với nhu cầu cụ thể"
+      },
+      "speed": {
+        "title": "Nhanh chóng",
+        "description": "Triển khai và phản ứng sự cố trong thời gian thực"
+      },
+      "team": {
+        "title": "Đội ngũ chuyên nghiệp",
+        "description": "Chuyên gia hàng đầu với kinh nghiệm quốc tế"
+      },
+      "quality": {
+        "title": "Chất lượng đảm bảo",
+        "description": "Tuân thủ các tiêu chuẩn bảo mật quốc tế"
+      },
+      "innovation": {
+        "title": "Đổi mới liên tục",
+        "description": "Cập nhật công nghệ mới nhất trong ngành"
+      }
+    },
+    "timeline": {
+      "heading": "Hành trình phát triển",
+      "subtitle": "Những mốc son đánh dấu sự trưởng thành của ICS",
+      "2018": {
+        "title": "Thành lập công ty",
+        "description": "ICS được thành lập với sứ mệnh bảo vệ không gian số Việt Nam"
+      },
+      "2019": {
+        "title": "Ra mắt VietGuard",
+        "description": "Giải pháp bảo mật điểm cuối tiên phong với công nghệ Zero Trust"
+      },
+      "2020": {
+        "title": "Mở rộng quốc tế",
+        "description": "Hợp tác với các đối tác công nghệ hàng đầu thế giới"
+      },
+      "2021": {
+        "title": "AI SOC Platform",
+        "description": "Triển khai hệ thống điều hành trung tâm an ninh mạng AI"
+      },
+      "2022": {
+        "title": "Smart Factory Security",
+        "description": "Cung cấp giải pháp bảo mật cho nhà máy thông minh 4.0"
+      },
+      "2023": {
+        "title": "100+ Dự án",
+        "description": "Hoàn thành hơn 100 dự án lớn trong và ngoài nước"
+      }
+    },
+    "leadership": {
+      "heading": "Đội ngũ lãnh đạo",
+      "subtitle": "Những chuyên gia hàng đầu dẫn dắt ICS phát triển"
+    },
+    "solutions": {
+      "heading": "Giải pháp của chúng tôi",
+      "subtitle": "Các sản phẩm và giải pháp bảo mật hàng đầu",
+      "vietguard": {
+        "title": "VietGuard",
+        "description": "Giải pháp bảo mật tiên tiến với công nghệ Zero Trust ngay tại điểm cuối, ngăn chặn mối đe dọa mà không cần nhận diện phần mềm độc hại."
+      },
+      "esg": {
+        "title": "ESG Solutions",
+        "description": "Giúp doanh nghiệp phát triển bền vững với trách nhiệm môi trường, xã hội và quản trị minh bạch trong kỷ nguyên số."
+      },
+      "iot": {
+        "title": "IoT Security",
+        "description": "Bảo mật toàn diện cho mạng lưới IoT, bảo vệ dữ liệu từ cảm biến đến cloud trong hệ sinh thái thiết bị kết nối."
+      }
+    },
+    "cta": {
+      "heading": "Sẵn sàng bảo vệ doanh nghiệp của bạn?",
+      "subtitle": "Liên hệ với chúng tôi ngay hôm nay để được tư vấn giải pháp an ninh mạng phù hợp nhất",
+      "schedule": "Đặt lịch tư vấn",
+      "download": "Tải tài liệu"
+    }
+  },
+  "clients": {
+    "title": "Khách hàng của chúng tôi",
+    "subtitle": "Được tin tưởng bởi các doanh nghiệp hàng đầu",
+    "badge": "Khách hàng",
+    "description": "Khách hàng của chúng tôi trải rộng từ ngân hàng, chính phủ, các doanh nghiệp vừa và nhỏ đến các tập đoàn lớn, hoạt động trong nhiều ngành nghề khác nhau. Họ đang chuyển đổi số, coi an ninh mạng là nền tảng để phát triển bền vững và giữ vững lợi thế cạnh tranh trên thị trường.",
+    "finance": "Ngành tài chính",
+    "government": "Chính phủ",
+    "telecom": "Ngành viễn thông"
+  },
+  "contact": {
+    "title": "Liên hệ với chúng tôi",
+    "subtitle": "Hãy để chúng tôi giúp bạn bảo vệ doanh nghiệp",
+    "badge": "Liên hệ",
+    "companyInfo": "Thông tin công ty",
+    "companyName": "CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS",
+    "contactInfo": "Thông tin liên hệ",
+    "hanoiOffice": "Văn phòng Hà Nội",
+    "phone": "Điện thoại & Hotline",
+    "email": "Email",
+    "website": "Website",
+    "location": "Vị trí trên bản đồ",
+    "locationSubtitle": "Tìm đường đến văn phòng của chúng tôi",
+    "videoNotSupported": "Trình duyệt của bạn không hỗ trợ video."
+  },
+  "recruitment": {
+    "title": "Tuyển dụng",
+    "subtitle": "Gia nhập đội ngũ ICS - Cùng nhau phát triển",
+    "badge": "Tuyển dụng",
+    "coming_soon": "Nội dung sẽ sớm được cập nhật",
+    "message": "Chúng tôi đang chuẩn bị các thông tin tuyển dụng. Vui lòng quay lại sau để xem các vị trí tuyển dụng mới nhất."
+  },
+  "smartBuilding": {
+    "title": "Giải pháp Tòa nhà Thông minh",
+    "subtitle": "Tự động hóa và an ninh toàn diện cho tòa nhà",
+    "badge": "Tòa nhà thông minh",
+    "banner": "Giải pháp Tòa nhà thông minh",
+    "mainHeading": "Giải pháp Tòa nhà thông minh thế hệ mới",
+    "mainDescription": "Hệ thống của chúng tôi sử dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) để thu thập dữ liệu vận hành theo thời gian thực, tự động phân tích và đưa ra các quyết định thông minh. Kết quả là một tòa nhà không chỉ biết \"phản ứng\" mà còn có khả năng \"thích ứng\" và \"dự báo\", mang lại hiệu quả vượt trội trên mọi phương diện.",
+    "featuresHeading": "Các Tính năng Cốt lõi và Lợi ích Vượt trội",
+    "featuresDesc": "Giải pháp Smart Building được xây dựng trên các trụ cột công nghệ vững chắc, mỗi trụ cột đều mang lại những giá trị kinh tế và trải nghiệm rõ rệt.",
+    "feature1": {
+      "title": "1. Hệ thống Quản lý Năng lượng Thông minh (EMS)",
+      "desc": "Hệ thống sử dụng các thuật toán AI để phân tích thói quen sử dụng, điều kiện thời tiết và sự hiện diện của con người. Từ đó, nó tự động tối ưu hóa hoạt động của hệ thống điều hòa và chiếu sáng – tắt các thiết bị ở khu vực không có người, điều chỉnh nhiệt độ theo lịch trình, và tận dụng tối đa ánh sáng tự nhiên.",
+      "benefit": "Đây là đòn bẩy tài chính mạnh mẽ nhất. Giải pháp của chúng tôi giúp tiết kiệm từ 30-40% chi phí điện năng hàng tháng, một con số khổng lồ đối với các tòa nhà quy mô lớn. Hơn nữa, việc tiết kiệm năng lượng cho tòa nhà còn giúp giảm dấu chân carbon, là một điểm cộng lớn cho các chứng chỉ công trình xanh và nâng cao hình ảnh thương hiệu bền vững."
+    },
+    "feature2": {
+      "title": "2. An ninh Tích hợp và Kiểm soát ra vào Thông minh",
+      "desc": "Chúng tôi hợp nhất hệ thống camera giám sát AI, kiểm soát cửa ra vào bằng nhận diện khuôn mặt, thẻ từ hoặc ứng dụng điện thoại. Hệ thống có thể tự động nhận diện các hành vi bất thường, cảnh báo ngay lập tức cho đội ngũ an ninh và lưu trữ dữ liệu để dễ dàng truy vết khi cần.",
+      "benefit": "Mang lại một môi trường an toàn tuyệt đối và an ninh thông minh 24/7. Việc quản lý truy cập trở nên liền mạch và dễ dàng, loại bỏ các quy trình thủ công phức tạp. Đối với ban quản lý, việc truy vết và xuất báo cáo an ninh chỉ mất vài cú nhấp chuột."
+    },
+    "feature3": {
+      "title": "3. Tự động hóa Tiện ích (Điều hòa, Chiếu sáng, Rèm cửa)",
+      "desc": "Người dùng có thể cá nhân hóa không gian làm việc hoặc sinh sống của mình chỉ bằng một vài thao tác trên ứng dụng di động. Hơn thế nữa, hệ thống có thể tự động điều chỉnh rèm cửa dựa trên hướng nắng, điều chỉnh ánh sáng và nhiệt độ dựa trên số lượng người trong phòng.",
+      "benefit": "Mang lại sự tiện nghi và thoải mái tối đa, trực tiếp nâng cao trải nghiệm và sự hài lòng của người sử dụng tòa nhà. Đối với các văn phòng cho thuê, đây là một yếu tố cạnh tranh đắt giá để thu hút các công ty hàng đầu."
+    },
+    "feature4": {
+      "title": "4. Nền tảng Quản lý Tòa nhà Tập trung (BMS)",
+      "desc": "Toàn bộ thông tin từ các hệ thống con (năng lượng, an ninh, PCCC, HVAC...) đều được hiển thị trực quan trên một dashboard duy nhất. Từ đây, đội ngũ vận hành có thể giám sát, điều khiển và nhận báo cáo về mọi hoạt động của tòa nhà.",
+      "benefit": "Giúp quản lý tòa nhà hiệu quả hơn bao giờ hết. Ban quản lý có thể giảm thiểu nhân sự vận hành, ra quyết định nhanh chóng và chính xác hơn. Đặc biệt, hệ thống có khả năng phát hiện sớm các dấu hiệu bất thường của thiết bị, giúp ngăn chặn sự cố trước khi chúng xảy ra."
+    },
+    "feature5": {
+      "title": "5. Phân tích Dữ liệu và Báo cáo Thông minh",
+      "desc": "Dữ liệu là vàng. Hệ thống của chúng tôi liên tục thu thập và phân tích dữ liệu vận hành, từ đó tạo ra các báo cáo thông minh và đưa ra những đề xuất cải tiến cụ thể (ví dụ: 'Khu vực tầng 5 có xu hướng tiêu thụ năng lượng cao bất thường vào cuối tuần').",
+      "benefit": "Giúp chủ đầu tư và ban quản lý ra quyết định dựa trên dữ liệu chứ không phải cảm tính. Đây là chìa khóa để liên tục tối ưu hóa hiệu quả vận hành và cắt giảm chi phí trong dài hạn."
+    },
+    "whyHeading": "Tại sao chọn Giải pháp từ ICS?",
+    "whyIntro": "Thị trường có nhiều lựa chọn, nhưng giải pháp của ICS tạo ra sự khác biệt nhờ:",
+    "why1": "Công nghệ AI độc quyền: Chúng tôi không chỉ tự động hóa theo kịch bản, mà còn sử dụng AI để hệ thống tự học hỏi và ngày càng thông minh hơn.",
+    "why2": "Đội ngũ chuyên gia giàu kinh nghiệm: Chúng tôi cung cấp một giải pháp toàn diện từ tư vấn, thiết kế, triển khai cho đến bảo trì.",
+    "why3": "Dịch vụ hỗ trợ 24/7: Đảm bảo hệ thống của bạn luôn hoạt động ổn định và được hỗ trợ kịp thời.",
+    "why4": "Khả năng tùy biến và mở rộng linh hoạt: Giải pháp của chúng tôi được thiết kế theo dạng module, dễ dàng tùy chỉnh và nâng cấp theo quy mô phát triển của tòa nhà.",
+    "futureHeading": "Kiến tạo Tương lai cho Tòa nhà của bạn",
+    "futureText": "Một tòa nhà thông minh không chỉ là một công trình xây dựng – đó là một môi trường sống và làm việc thông minh, bền vững và đầy cảm hứng. Nó giúp cắt giảm chi phí, tăng cường an ninh, nâng cao giá trị tài sản và thu hút những khách hàng tốt nhất. Đầu tư vào một giải pháp smart building hôm nay chính là đầu tư cho sự thành công của ngày mai."
+  },
+  "smartFactory": {
+    "title": "Giải pháp Nhà máy Thông minh",
+    "subtitle": "Tự động hóa sản xuất và bảo mật công nghiệp",
+    "badge": "Nhà máy thông minh",
+    "banner": "Giải pháp Nhà máy thông minh",
+    "mainHeading": "Giải pháp Nhà máy thông minh thế hệ mới",
+    "mainDescription": "Hệ thống của chúng tôi sử dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) để thu thập dữ liệu vận hành theo thời gian thực, tự động phân tích và đưa ra các quyết định thông minh. Kết quả là một nhà máy không chỉ biết \"phản ứng\" mà còn có khả năng \"thích ứng\" và \"dự báo\", mang lại hiệu quả vượt trội trên mọi phương diện.",
+    "featuresHeading": "Các Tính năng Cốt lõi và Lợi ích Vượt trội",
+    "featuresDesc": "Giải pháp Smart Factory được xây dựng trên các trụ cột công nghệ vững chắc, mỗi trụ cột đều mang lại những giá trị kinh tế và trải nghiệm rõ rệt.",
+    "feature1": {
+      "title": "1. Hệ thống Quản lý Năng lượng Thông minh (EMS)",
+      "desc": "Hệ thống sử dụng các thuật toán AI để phân tích thói quen sử dụng, điều kiện thời tiết và sự hiện diện của con người. Từ đó, nó tự động tối ưu hóa hoạt động của hệ thống điều hòa và chiếu sáng.",
+      "benefit": "Giúp tiết kiệm từ 30-40% chi phí điện năng hàng tháng, một con số khổng lồ đối với các nhà máy quy mô lớn."
+    },
+    "feature2": {
+      "title": "2. An ninh Tích hợp và Kiểm soát ra vào Thông minh",
+      "desc": "Chúng tôi hợp nhất hệ thống camera giám sát AI, kiểm soát cửa ra vào bằng nhận diện khuôn mặt, thẻ từ hoặc ứng dụng điện thoại.",
+      "benefit": "Mang lại một môi trường an toàn tuyệt đối và an ninh thông minh 24/7."
+    },
+    "feature3": {
+      "title": "3. Tự động hóa Tiện ích (Điều hòa, Chiếu sáng, Rèm cửa)",
+      "desc": "Người dùng có thể cá nhân hóa không gian làm việc của mình chỉ bằng một vài thao tác trên ứng dụng di động.",
+      "benefit": "Mang lại sự tiện nghi và thoải mái tối đa, trực tiếp nâng cao trải nghiệm và hiệu suất làm việc."
+    },
+    "feature4": {
+      "title": "4. Nền tảng Quản lý Nhà máy Tập trung (MES)",
+      "desc": "Toàn bộ thông tin từ các hệ thống con đều được hiển thị trực quan trên một dashboard duy nhất.",
+      "benefit": "Giúp quản lý nhà máy hiệu quả hơn bao giờ hết, ra quyết định nhanh chóng và chính xác hơn."
+    },
+    "feature5": {
+      "title": "5. Phân tích Dữ liệu và Báo cáo Thông minh",
+      "desc": "Hệ thống liên tục thu thập và phân tích dữ liệu vận hành, từ đó tạo ra các báo cáo thông minh.",
+      "benefit": "Giúp ban quản lý ra quyết định dựa trên dữ liệu, tối ưu hóa hiệu quả vận hành và cắt giảm chi phí."
+    },
+    "whyHeading": "Tại sao chọn Giải pháp từ ICS?",
+    "whyIntro": "Thị trường có nhiều lựa chọn, nhưng giải pháp của ICS tạo ra sự khác biệt nhờ:",
+    "why1": "Công nghệ AI độc quyền: Chúng tôi không chỉ tự động hóa theo kịch bản, mà còn sử dụng AI để hệ thống tự học hỏi.",
+    "why2": "Đội ngũ chuyên gia giàu kinh nghiệm: Chúng tôi cung cấp một giải pháp toàn diện từ tư vấn, thiết kế, triển khai cho đến bảo trì.",
+    "why3": "Dịch vụ hỗ trợ 24/7: Đảm bảo hệ thống của bạn luôn hoạt động ổn định.",
+    "why4": "Khả năng tùy biến và mở rộng linh hoạt: Giải pháp của chúng tôi được thiết kế theo dạng module.",
+    "futureHeading": "Kiến tạo Tương lai cho Nhà máy của bạn",
+    "futureText": "Một nhà máy thông minh không chỉ là một công trình sản xuất – đó là một môi trường làm việc thông minh, bền vững và đầy cảm hứng. Nó giúp cắt giảm chi phí, tăng cường an ninh, nâng cao năng suất và thu hút những nhân tài tốt nhất. Đầu tư vào một giải pháp smart factory hôm nay chính là đầu tư cho sự thành công của ngày mai."
+  },
+  "esg": {
+    "title": "Giải pháp ESG",
+    "subtitle": "Phát triển bền vững cho doanh nghiệp",
+    "badge": "Giải pháp ESG",
+    "mainTitle": "ESG: Từ Áp Lực Tuân Thủ Đến Lợi Thế Cạnh Tranh – Lộ Trình Chiến Lược Cho Doanh Nghiệp Việt",
+    "intro": "ESG: Từ Áp Lực Tuân Thủ Đến Lợi Thế Cạnh Tranh – Lộ Trình Chiến Lược Cho Doanh Nghiệp Việt",
+    "description": "Trong thế giới phẳng và một kỷ nguyên kinh doanh đầy biến động, thước đo thành công của một doanh nghiệp không chỉ còn nằm ở những con số lợi nhuận trên báo cáo tài chính. Một cuộc chuyển dịch mang tính toàn cầu đang diễn ra, nơi giá trị của doanh nghiệp được định hình bởi cả những yếu tố vô hình nhưng đầy sức mạnh: trách nhiệm với môi trường, cam kết với xã hội và sự minh bạch trong quản trị. Đó chính là ba trụ cột của ESG (Môi trường – Xã hội – Quản trị).",
+    "part1": "Phần 1: Tại sao ESG là \"ván cờ\" chiến lược mà bạn không thể đứng ngoài?",
+    "part2": "Phần 2: Những rào cản trên hành trình chinh phục ESG",
+    "part3": "Phần 3: Dịch vụ tư vấn chiến lược ESG của chúng tôi – lộ trình 4 bước đến bền vững",
+    "why": "Tại sao chọn chúng tôi làm Đối Tác Chiến Lược?"
+  },
+  "aiSoc": {
+    "title": "AI SOC - Trung tâm Điều hành An ninh",
+    "subtitle": "Giám sát và phản ứng tự động với AI",
+    "badge": "AI SOC",
+    "mainTitle": "AI SOC: Tái Định Nghĩa An Ninh Mạng – Từ Phản Ứng Bị Động Đến Phòng Thủ Tiên Đoán",
+    "intro": "AI SOC: Tái Định Nghĩa An Ninh Mạng – Từ Phản Ứng Bị Động Đến Phòng Thủ Tiên Đoán",
+    "problem": "Điểm Yếu Chết Người Của Trung tâm Điều hành An ninh (SOC) Truyền thống",
+    "solution": "AI SOC: Kỷ nguyên mới của Trung tâm Điều hành An ninh",
+    "features": "Sức mạnh vượt trội của AI SOC: Tính năng và Giá trị Kinh doanh",
+    "why": "Tại sao chọn giải pháp AI SOC của chúng tôi?"
+  },
+  
+  "contactForm": {
+    "name": "Họ và tên",
+    "namePlaceholder": "Nhập họ tên",
+    "email": "Email",
+    "emailPlaceholder": "Nhập email",
+    "phone": "Số điện thoại",
+    "phonePlaceholder": "Nhập số điện thoại",
+    "content": "Nội dung",
+    "contentPlaceholder": "Nhập nội dung liên hệ",
+    "send": "Gửi liên hệ"
+  },
+  "contactInfo": {
+    "title": "Thông tin công ty",
+    "companyName": "CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS",
+    "hanoiOffice": "Văn phòng Hà Nội",
+    "address": "TT3-5 Khu đô thị Đại Kim mới, Định Công, Hà Nội",
+    "contactDetails": "Thông tin liên hệ",
+    "phone": "Điện thoại & Hotline",
+    "phoneNumber": "0707.806.860",
+    "email": "Email",
+    "emailAddress": "info@icss.com.vn",
+    "website": "Website",
+    "websiteUrl": "www.icss.com.vn",
+    "map": "Vị trí trên bản đồ",
+    "directions": "Tìm đường đến văn phòng của chúng tôi"
+  },
+  "sidebar": {
+    "aboutICS": "GIỚI THIỆU ICS",
+    "generalIntro": "Giới thiệu chung",
+    "partners": "Đối tác",
+    "clients": "Khách hàng",
+    "socialActivities": "Hoạt động xã hội",
+    "newsRecruitment": "TIN TỨC - TUYỂN DỤNG",
+    "contactUs": "Liên hệ với chúng tôi",
+    "form": {
+      "fullName": "Họ và tên",
+      "fullNamePlaceholder": "Nhập họ tên",
+      "email": "Email",
+      "emailPlaceholder": "Nhập email",
+      "phone": "Số điện thoại",
+      "phonePlaceholder": "Nhập số điện thoại",
+      "content": "Nội dung",
+      "contentPlaceholder": "Nhập nội dung liên hệ",
+      "submit": "Gửi liên hệ"
+    }
+  },
+  "newsletter": {
+    "title": "Đăng ký để nhận thông tin mới nhất về an ninh mạng và các giải pháp công nghệ.",
+    "email": "Email của bạn",
+    "certifications": "Chứng nhận & Đối tác"
   }
 }

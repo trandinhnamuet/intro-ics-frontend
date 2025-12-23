@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslation } from 'react-i18next'
 import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import dynamic from 'next/dynamic'
@@ -76,8 +77,8 @@ function WriteArticleContent() {
       }
     } catch (error) {
       toast({
-        title: 'Lỗi',
-        description: 'Không thể tải bài viết',
+        title: t('writeArticle.errors.errorTitle'),
+        description: t('writeArticle.errors.fetchError'),
         variant: 'destructive',
       })
     } finally {
@@ -91,8 +92,8 @@ function WriteArticleContent() {
     // Kiểm tra password trước
     if (password !== 'ics@062025') {
       toast({
-        title: 'Lỗi xác thực',
-        description: 'Hãy nhập mật khẩu đúng để lưu bài viết',
+        title: t('writeArticle.errors.errorTitle'),
+        description: t('writeArticle.errors.passwordError'),
         variant: 'destructive',
       })
       return

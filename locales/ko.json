@@ -1,4 +1,31 @@
 {
+  "common": {
+    "learnMore": "자세히 알아보기",
+    "viewMore": "더 보기",
+    "readMore": "더 읽기",
+    "contactUs": "지금 연락하기",
+    "contact": "연락",
+    "getStarted": "시작하기",
+    "backToList": "목록으로 돌아가기",
+    "backHome": "홈으로 돌아가기",
+    "home": "홈",
+    "about": "회사 소개",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공",
+    "search": "검색",
+    "filter": "필터",
+    "all": "모두",
+    "close": "닫기",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "edit": "편집",
+    "create": "생성",
+    "update": "업데이트",
+    "submit": "제출",
+    "confirm": "확인"
+  },
   "home": {
     "hero": {
       "title": "포괄적인 사이버보안 솔루션",
@@ -35,6 +62,94 @@
     "partners": {
       "title": "신뢰할 수 있는 파트너",
       "subtitle": "세계 최고 브랜드와의 협력"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "포괄적인 사이버보안 솔루션",
+      "subtitle": "가장 첨단 사이버보안 기술로 비즈니스를 보호하세요",
+      "cta": "자세히 보기",
+      "contactBtn": "지금 연락하기",
+      "featured": "주목",
+      "learnMore": "자세히 알아보기",
+      "clients": "클라이언트",
+      "years": "년",
+      "support": "지원",
+      "scrollDown": "아래로 스크롤"
+    },
+    "stats": {
+      "projectsCompleted": "완료된 프로젝트",
+      "enterpriseClients": "엔터프라이즈 클라이언트",
+      "cybersecuritySupport": "사이버보안 지원",
+      "uptimeGuarantee": "가동시간 보장",
+      "heading": "ICS의",
+      "inNumbers": "숫자",
+      "badge": "주요 성과"
+    },
+    "partners": {
+      "hyperg": "AI 및 클라우드 기반 사이버보안 솔루션",
+      "oracle": "선도적인 데이터베이스 관리 시스템",
+      "gamania": "디지털 엔터테인먼트 및 클라우드 보안"
+    },
+    "whyChooseUs": {
+      "title": "ICS를 선택하는 이유",
+      "subtitle": "최고의 사이버보안 솔루션을 제공하기 위해 노력합니다",
+      "intro": "우리는 단지 솔루션을 제공하는 것이 아니라 안전한 디지털 생태계를 구축하기 위해 파트너입니다",
+      "pioneering": "첨단 기술",
+      "pioneeringDesc": "모든 보안 솔루션에 AI, 머신러닝 및 Zero Trust Architecture 적용",
+      "quickResponse": "빠른 대응",
+      "quickResponseDesc": "AI SOC를 통한 실시간 사이버보안 사건 모니터링 및 처리",
+      "certified": "국제 인증",
+      "certifiedDesc": "ISO 27001, SOC 2 및 국제 보안 기준 준수",
+      "sustainable": "지속 가능한 성장",
+      "sustainableDesc": "비즈니스 규모 및 요구에 따라 유연하게 확장 가능한 솔루션"
+    },
+    "featuredSolutions": {
+      "title": "주요 솔루션",
+      "subtitle": "업계 최고의 사이버보안 솔루션",
+      "heading": "포괄적인 보안 솔루션",
+      "description": "엔드포인트에서 클라우드까지, 공장에서 건물까지 - 우리는 모든 각도를 보호합니다",
+      "csaTitle": "CSA - 엔드포인트 보안",
+      "csaDesc": "AI를 활용한 4-in-1 감지, 바이러스, 랜섬웨어, 트로잔 탐지로 머신 보호",
+      "smartFactoryTitle": "스마트 팩토리 보안",
+      "smartFactoryDesc": "통합 OT/IT 모니터링이 포함된 스마트 팩토리 보안",
+      "smartBuildingTitle": "스마트 빌딩 보안",
+      "smartBuildingDesc": "스마트 건물, IoT 및 BMS 시스템을 위한 사이버보안"
+    },
+    "products": {
+      "title": "제품 및 솔루션",
+      "subtitle": "당사의 선도적인 사이버보안 솔루션을 발견하세요",
+      "aiSoc": "AI SOC",
+      "aiSocDesc": "첨단 AI로 구비된 보안 운영 센터",
+      "csa": "CSA",
+      "csaDesc": "포괄적인 보안 평가 및 감사 솔루션",
+      "pentestServices": "Pentest 서비스",
+      "pentestServicesDesc": "전문 침투 테스트 서비스",
+      "vietguard": "Vietguard - 모바일 앱 보안",
+      "vietguardDesc": "모바일 앱을 위한 보안 스캔 및 취약점 탐지 도구",
+      "oracleCloud": "Oracle 클라우드",
+      "oracleCloudDesc": "고성능의 선도적인 클라우드 컴퓨팅 솔루션",
+      "smartDashboard": "스마트 대시보드",
+      "smartDashboardDesc": "엔터프라이즈를 위한 중앙 집중식 모니터링 및 관리 시스템",
+      "viewMore": "자세히 알아보기",
+      "showMore": "더 보기",
+      "explore": "탐색",
+      "showAll": "모두 보기"
+    },
+    "news": {
+      "title": "뉴스 및 이벤트",
+      "subtitle": "최신 사이버보안 뉴스를 받아보세요",
+      "readMore": "더 읽기",
+      "viewAll": "모든 기사 보기"
+    },
+    "cta": {
+      "heading": "지금 비즈니스를 보호하세요",
+      "subtitle": "당신의 비즈니스에 가장 적합한 사이버보안 솔루션에 대해 무료 상담을 받으려면 우리에게 연락하세요",
+      "learnMore": "ICS에 대해 자세히 알아보기"
+    },
+    "partners_section": {
+      "title": "신뢰할 수 있는 파트너",
+      "subtitle": "세계 최고의 브랜드와 협력"
     }
   },
   "header": {
@@ -80,6 +195,261 @@
     "aboutIcs": "ICS 소개",
     "news": "뉴스",
     "contact": "연락처",
-    "recruitment": "채용"
+    "recruitment": "채용",
+    "newsletter": "뉴스레터",
+    "newsletterDescription": "사이버보안 및 기술 솔루션의 최신 정보를 받아보려면 구독하세요.",
+    "emailPlaceholder": "이메일 주소",
+    "certificates": "인증 및 파트너"
+  },
+  "partners": {
+    "title": "파트너",
+    "subtitle": "강력한 사이버보안 생태계 구축",
+    "badge": "파트너",
+    "programTitle": "파트너십 프로그램",
+    "programSubtitle": "다양한 혜택과 인센티브를 제공하는 파트너 레벨",
+    "platinum": "플래티넘 파트너",
+    "gold": "골드 파트너",
+    "partnersGrid": "파트너",
+    "partnersGridSubtitle": "세계 최고의 기술 기업과 협력",
+    "testimonials": "고객의 목소리",
+    "testimonialsSubtitle": "ICS 고객 및 파트너의 피드백",
+    "becomePartner": "ICS 파트너 되기",
+    "becomePartnerDesc": "파트너십 기회에 대해 자세히 알아보고 함께 성장하세요",
+    "registerPartner": "파트너 등록",
+    "downloadDocs": "파트너십 자료 다운로드",
+    "hypergDesc": "HyperG Security는 AI와 클라우드 기반 사이버보안 솔루션을 제공합니다. 모든 디지털 위험으로부터 비즈니스를 보호합니다.",
+    "oracleDesc": "Oracle은 데이터베이스 관리 시스템, 엔터프라이즈 소프트웨어를 제공하는 선도적인 기술 기업이며, 클라우드 컴퓨팅, AI 및 사이버보안을 개발하고 있습니다.",
+    "gamaniaDesc": "Gamania는 온라인 게임 개발 및 퍼블리싱을 전문으로 하는 선도적인 디지털 엔터테인먼트 회사이며, 전자 결제, 클라우드 및 사이버보안으로 확장하고 있습니다.",
+    "microsoftDesc": "클라우드 및 엔터프라이즈 보안 분야의 글로벌 기술 파트너.",
+    "awsDesc": "AWS 클라우드 플랫폼에서 보안 솔루션 배포 협력.",
+    "ciscoDesc": "네트워크 인프라 및 네트워크 보안 솔루션 파트너.",
+    "benefits": {
+      "support247": "우선 24/7 지원",
+      "training": "심화 교육",
+      "comarketing": "공동 마케팅 캠페인",
+      "rebate": "최고 리베이트",
+      "techSupport": "기술 지원",
+      "productTraining": "제품 교육",
+      "marketingSupport": "마케팅 지원",
+      "competitiveRebate": "경쟁력 있는 리베이트"
+    }
+  },
+  "about": {
+    "title": "ICS 소개",
+    "subtitle": "국제 사이버 보안 회사 - 신뢰할 수 있는 파트너",
+    "badge": "회사 소개",
+    "hero": {
+      "title": "사이버보안의 선구자",
+      "subtitle": "디지털 생태계를 안전하고 효율적이며 지속 가능하게 보호"
+    },
+    "discoverICS": "ICS 살펴보기",
+    "discoverSubtitle": "우리의 사명, 비전 및 솔루션을 더 잘 이해하기 위한 소개 영상을 보세요",
+    "videoNotSupported": "귀하의 브라우저는 비디오를 지원하지 않습니다.",
+    "company": {
+      "title": "국제 사이버 보안 주식회사 – ICS",
+      "description1": "베트남 및 지역 사이버보안 분야의 선구자로 디지털 기술 시대를 위한 포괄적인 보안 솔루션을 제공합니다.",
+      "description2": "ICS는 애플리케이션 보호, 스마트 팩토리 보안, 스마트 빌딩 보안 및 특히 AI SOC 운영 시스템을 포함한 다양한 중요 분야의 보안 솔루션에 중점을 두고 있습니다."
+    },
+    "stats": {
+      "projects": "완료된 프로젝트",
+      "clients": "엔터프라이즈 고객",
+      "support": "고객 지원",
+      "uptime": "가동시간 보장"
+    },
+    "team": {
+      "title": "전문 팀",
+      "description": "국제 경험을 가진 50명 이상의 사이버보안 전문가",
+      "heading": "리더십 팀",
+      "subtitle": "ICS의 발전을 주도하는 선도적인 전문가들",
+      "ceo": "CEO & Founder",
+      "cto": "CTO",
+      "securityLead": "Security Lead",
+      "operations": "Head of Operations"
+    },
+    "values": {
+      "heading": "핵심 가치",
+      "subtitle": "우리의 모든 행동을 안내하는 원칙",
+      "security": {
+        "title": "최대 보안",
+        "description": "고객 데이터 보호를 최고 수준에서 보장"
+      },
+      "accuracy": {
+        "title": "정확성",
+        "description": "특정 요구에 맞게 커스터마이징된 솔루션"
+      },
+      "speed": {
+        "title": "신속함",
+        "description": "실시간 배포 및 사고 대응"
+      },
+      "team": {
+        "title": "전문 팀",
+        "description": "국제 경험을 가진 선도적 전문가"
+      },
+      "quality": {
+        "title": "품질 보증",
+        "description": "국제 보안 기준 준수"
+      },
+      "innovation": {
+        "title": "지속적인 혁신",
+        "description": "업계의 최신 기술 업데이트"
+      }
+    },
+    "timeline": {
+      "heading": "발전 여정",
+      "subtitle": "ICS의 성숙을 나타내는 주요 이정표",
+      "2018": {
+        "title": "회사 설립",
+        "description": "베트남의 디지털 공간을 보호하기 위한 사명으로 ICS 설립"
+      },
+      "2019": {
+        "title": "VietGuard 출시",
+        "description": "Zero Trust 기술을 갖춘 선진 엔드포인트 보안 솔루션"
+      },
+      "2020": {
+        "title": "국제 확장",
+        "description": "세계 최고의 기술 파트너와 협력"
+      },
+      "2021": {
+        "title": "AI SOC Platform",
+        "description": "AI 사이버보안 운영 시스템 배포"
+      },
+      "2022": {
+        "title": "Smart Factory Security",
+        "description": "스마트 팩토리 4.0용 보안 솔루션 제공"
+      },
+      "2023": {
+        "title": "100+ 프로젝트",
+        "description": "국내외 100개 이상의 대규모 프로젝트 완료"
+      }
+    },
+    "leadership": {
+      "heading": "리더십 팀",
+      "subtitle": "ICS의 발전을 주도하는 선도적인 전문가들"
+    },
+    "solutions": {
+      "heading": "우리의 솔루션",
+      "subtitle": "선도적인 보안 제품 및 솔루션",
+      "vietguard": {
+        "title": "VietGuard",
+        "description": "엔드포인트에서 Zero Trust 기술을 갖춘 고급 보안 솔루션으로 악성 소프트웨어 식별 없이 위협을 차단합니다."
+      },
+      "esg": {
+        "title": "ESG 솔루션",
+        "description": "기업의 지속 가능한 발전을 돕고 디지털 시대에 환경, 사회, 투명한 거버넌스를 강화합니다."
+      },
+      "iot": {
+        "title": "IoT 보안",
+        "description": "IoT 네트워크의 포괄적인 보안으로 연결된 장치 생태계의 센서에서 클라우드까지 데이터를 보호합니다."
+      }
+    },
+    "cta": {
+      "heading": "비즈니스를 보호할 준비가 되셨습니까?",
+      "subtitle": "당신의 비즈니스에 가장 적합한 사이버보안 솔루션에 대한 상담을 위해 오늘 저희에게 연락하세요",
+      "schedule": "상담 일정 예약",
+      "download": "문서 다운로드"
+    }
+  },
+  "clients": {
+    "title": "고객 산업 분야",
+    "description": "정부, 금융, 통신을 포함한 다양한 산업에 신뢰할 수 있는 사이버보안 솔루션 제공",
+    "badge": "고객",
+    "finance": {
+      "title": "금융업",
+      "description": "금융 기관의 데이터 보호 및 규정 준수 지원"
+    },
+    "government": {
+      "title": "정부",
+      "description": "국가 정보 보안 및 중요 인프라 보호"
+    },
+    "telecom": {
+      "title": "통신업",
+      "description": "통신 네트워크 및 고객 데이터 보안"
+    }
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": "비즈니스 보호를 도와드립니다",
+    "badge": "연락처",
+    "videoNotSupported": "귀하의 브라우저는 비디오를 지원하지 않습니다."
+  },
+  "recruitment": {
+    "title": "채용",
+    "subtitle": "ICS 팀에 합류 - 함께 성장",
+    "badge": "채용",
+    "coming_soon": "콘텐츠가 곧 공개됩니다",
+    "message": "채용 정보를 준비 중입니다. 최신 채용 공고는 나중에 확인해 주세요."
+  },
+  "smartBuilding": {
+    "title": "스마트 빌딩 솔루션",
+    "subtitle": "건물을 위한 종합 자동화 및 보안",
+    "badge": "스마트 빌딩"
+  },
+  "smartFactory": {
+    "title": "스마트 팩토리 솔루션",
+    "subtitle": "제조 자동화 및 산업 보안",
+    "badge": "스마트 팩토리"
+  },
+  "esg": {
+    "title": "ESG 솔루션",
+    "subtitle": "기업의 지속가능한 발전",
+    "badge": "ESG"
+  },
+  "aiSoc": {
+    "title": "AI SOC - 보안 운영 센터",
+    "subtitle": "AI를 활용한 자동 모니터링 및 대응",
+    "badge": "AI SOC"
+  },
+  "sidebar": {
+    "aboutICS": "ICS 소개",
+    "generalIntro": "일반 소개",
+    "partners": "파트너",
+    "clients": "고객",
+    "socialActivities": "사회 활동",
+    "newsRecruitment": "뉴스 - 채용",
+    "contactUs": "문의하기",
+    "form": {
+      "fullName": "이름",
+      "fullNamePlaceholder": "이름을 입력하세요",
+      "email": "이메일",
+      "emailPlaceholder": "이메일을 입력하세요",
+      "phone": "전화번호",
+      "phonePlaceholder": "전화번호를 입력하세요",
+      "content": "메시지",
+      "contentPlaceholder": "메시지를 입력하세요",
+      "submit": "메시지 보내기"
+    }
+  },
+  "articlesManagement": {
+    "title": "기사 관리",
+    "description": "기사 목록 관리",
+    "loading": "로딩 중...",
+    "noArticles": "기사가 없습니다",
+    "errors": {
+      "errorTitle": "오류",
+      "fetchError": "기사를 로드할 수 없습니다",
+      "deleteError": "기사를 삭제할 수 없습니다"
+    },
+    "auth": {
+      "title": "인증 필수",
+      "wrongPassword": "잘못된 암호입니다",
+      "passwordError": "잘못된 암호입니다. {{action}}할 수 없습니다"
+    },
+    "password": "암호",
+    "deleteConfirm": "이 작업은 실행 취소할 수 없습니다."
+  },
+  "writeArticle": {
+    "title": "기사 작성",
+    "description": "새 기사를 작성하거나 기존 기사를 편집합니다",
+    "loading": "편집기를 로딩 중...",
+    "errors": {
+      "errorTitle": "인증 오류",
+      "fetchError": "기사를 로드할 수 없습니다",
+      "passwordError": "기사를 저장하려면 올바른 암호를 입력하세요"
+    }
+  },
+  "articleDetail": {
+    "title": "기사 세부정보",
+    "copied": "링크가 복사되었습니다!",
+    "relatedArticles": "관련 기사"
   }
 }

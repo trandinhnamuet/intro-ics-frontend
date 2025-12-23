@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { I18nProvider } from "@/components/providers/i18n-provider"
 import { Toaster } from "@/components/ui/toaster"
+import { FloatingActionButton } from "@/components/ui/floating-action-button"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin", "vietnamese"] })
@@ -12,23 +13,23 @@ const inter = Inter({ subsets: ["latin", "vietnamese"] })
 export const metadata: Metadata = {
   title: "ICS - Công ty An Ninh Mạng Quốc Tế",
   description: "Giải pháp an ninh mạng toàn diện cho doanh nghiệp",
-  generator: "v0.app",
+  generator: "ICS",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/images/ics_logo.png",
+        type: "image/png",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/images/ics_logo.png",
   },
 }
 
@@ -48,6 +49,7 @@ export default function RootLayout({
         >
           <I18nProvider>
             {children}
+            <FloatingActionButton />
           </I18nProvider>
           <Toaster />
         </ThemeProvider>

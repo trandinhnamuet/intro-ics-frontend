@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
 import React from 'react'
 import { useRouter } from 'next/navigation'
@@ -55,8 +56,8 @@ export default function ArticlesManagementPage() {
       console.log('Password is empty')
       
       toast({
-        title: 'Yêu cầu xác thực',
-        description: `Vui lòng nhập mật khẩu để ${actionText[action]}`,
+        title: t('articlesManagement.auth.title'),
+        description: t('articlesManagement.auth.title'),
         variant: 'destructive',
       })
       return false
@@ -72,8 +73,8 @@ export default function ArticlesManagementPage() {
       console.log('Password is wrong:', password.trim())
       
       toast({
-        title: 'Mật khẩu không đúng',
-        description: `Mật khẩu sai. Không thể ${actionText[action]}`,
+        title: t('articlesManagement.auth.wrongPassword'),
+        description: t('articlesManagement.auth.passwordError').replace('{{action}}', actionText[action]),
         variant: 'destructive',
       })
       return false
@@ -95,8 +96,8 @@ export default function ArticlesManagementPage() {
       setTotalPages(Math.ceil(data.total / data.limit))
     } catch (error) {
       toast({
-        title: 'Lỗi',
-        description: 'Không thể tải danh sách bài viết',
+        title: t('articlesManagement.errors.errorTitle'),
+        description: t('articlesManagement.errors.fetchError'),
         variant: 'destructive',
       })
     } finally {
@@ -108,14 +109,14 @@ export default function ArticlesManagementPage() {
     try {
       await articlesService.deleteArticle(id)
       toast({
-        title: 'Thành công',
+        title: t('common.success'),
         description: 'Xóa bài viết thành công',
       })
       fetchArticles() // Reload the list
     } catch (error) {
       toast({
-        title: 'Lỗi',
-        description: 'Không thể xóa bài viết',
+        title: t('articlesManagement.errors.errorTitle'),
+        description: t('articlesManagement.errors.deleteError'),
         variant: 'destructive',
       })
     }

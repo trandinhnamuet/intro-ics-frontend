@@ -4,12 +4,13 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronDown, Search as SearchIcon } from "lucide-react"
+import { ChevronDown, Search as SearchIcon, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { LanguageSelector } from "@/components/language-selector"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useTranslation } from 'react-i18next'
+import { cn } from "@/lib/utils"
 
 export function Header() {
   const router = useRouter()
@@ -19,10 +20,15 @@ export function Header() {
   const [lastScrollY, setLastScrollY] = useState(0)
   const [showSearch, setShowSearch] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const controlHeader = () => {
       const currentScrollY = window.scrollY
+      
+      // Check if scrolled
+      setIsScrolled(currentScrollY > 20)
       
       // Hiện header khi ở đầu trang
       if (currentScrollY < 10) {
@@ -31,6 +37,7 @@ export function Header() {
       // Ẩn header khi scroll xuống
       else if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false)
+        setShowSearch(false)
       } 
       // Hiện header khi scroll lên
       else if (currentScrollY < lastScrollY) {
@@ -49,6 +56,7 @@ export function Header() {
       router.push(`/articles/articles-list?search=${encodeURIComponent(searchTerm.trim())}`)
       setShowSearch(false)
       setSearchTerm('')
+      setMobileMenuOpen(false)
     }
   }
 
@@ -59,154 +67,394 @@ export function Header() {
   }
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border transition-transform duration-300 ${
+    <header className={cn(
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+      isScrolled 
+        ? "bg-background/80 backdrop-blur-lg shadow-md" 
+        : "bg-background/60 backdrop-blur-sm",
       isVisible ? 'translate-y-0' : '-translate-y-full'
-    }`}>
-      <div className="w-full px-16 lg:px-32">
-        <div className="flex items-center justify-between h-24">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="https://icss.com.vn/wp-content/uploads/2025/08/Thiet-ke-chua-co-ten-23-1024x1024.png"
-              alt="ICS Logo"
-              width={60}
-              height={60}
-              className="object-contain"
-            />
+    )}>
+      <div className="container-responsive">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
+            <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
+              <Image
+                src="/images/ics_logo.png"
+                alt="ICS Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="hidden lg:block">
+              <div className="text-base font-bold gradient-text">ICS</div>
+              <div className="text-xs text-muted-foreground">Bảo vệ không gian số</div>
+            </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          {/* Desktop Navigation */}
+          <nav className="hidden xl:flex items-center gap-0.5">
+            {/* About Dropdown */}
             <div
               className="relative group"
               onMouseEnter={() => setActiveDropdown("about")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center gap-1 text-foreground hover:text-white hover:bg-black transition-all font-medium px-3 py-2 rounded-md">
+              <button className={cn(
+                "flex items-center gap-1 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium",
+                "hover:bg-primary/10 hover:text-primary",
+                activeDropdown === "about" && "bg-primary/10 text-primary"
+              )}>
                 {t('header.aboutUs')}
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className={cn(
+                  "w-3.5 h-3.5 transition-transform duration-200",
+                  activeDropdown === "about" && "rotate-180"
+                )} />
               </button>
               {activeDropdown === "about" && (
-                <div className="absolute top-full left-0 pt-2">
-                  <div className="bg-card border border-border rounded-lg shadow-lg py-2 min-w-[200px] animate-dropdown">
-                    <Link href="/gioi-thieu" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      {t('header.generalIntro')}
+                <div className="absolute top-full left-0 pt-2 min-w-[220px]">
+                  <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
+                    <Link 
+                      href="/gioi-thieu" 
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">{t('header.generalIntro')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Về công ty ICS</div>
                     </Link>
-                    <Link href="/khach-hang" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      {t('header.clients')}
+                    <Link 
+                      href="/khach-hang" 
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">{t('header.clients')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Khách hàng của chúng tôi</div>
                     </Link>
                   </div>
                 </div>
               )}
             </div>
 
-            <Link href="/doi-tac" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link 
+              href="/doi-tac" 
+              className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
+            >
               {t('header.partners')}
             </Link>
 
+            {/* Consulting Dropdown */}
             <div
               className="relative group"
               onMouseEnter={() => setActiveDropdown("consulting")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center gap-1 text-foreground hover:text-white hover:bg-black transition-all font-medium px-3 py-2 rounded-md">
+              <button className={cn(
+                "flex items-center gap-1 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium",
+                "hover:bg-primary/10 hover:text-primary",
+                activeDropdown === "consulting" && "bg-primary/10 text-primary"
+              )}>
                 {t('header.consulting')}
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className={cn(
+                  "w-3.5 h-3.5 transition-transform duration-200",
+                  activeDropdown === "consulting" && "rotate-180"
+                )} />
               </button>
               {activeDropdown === "consulting" && (
-                <div className="absolute top-full left-0 pt-2">
-                  <div className="bg-card border border-border rounded-lg shadow-lg py-2 min-w-[250px] animate-dropdown">
-                    <Link href="/toa-nha-thong-minh" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      {t('header.smartBuilding')}
+                <div className="absolute top-full left-0 pt-2 min-w-[250px]">
+                  <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
+                    <Link 
+                      href="/toa-nha-thong-minh" 
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">{t('header.smartBuilding')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Giải pháp tòa nhà thông minh</div>
                     </Link>
-                    <Link href="/nha-may-thong-minh" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      {t('header.smartFactory')}
+                    <Link 
+                      href="/nha-may-thong-minh" 
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">{t('header.smartFactory')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Giải pháp nhà máy thông minh</div>
                     </Link>
-                    <Link href="/giai-phap-esg" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      {t('header.esgSolution')}
+                    <Link 
+                      href="/giai-phap-esg" 
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">{t('header.esgSolution')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Giải pháp ESG cho doanh nghiệp</div>
                     </Link>
-                    <Link href="/ai-soc" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      {t('header.aiSoc')}
+                    <Link 
+                      href="/ai-soc" 
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">{t('header.aiSoc')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">AI Security Operations Center</div>
                     </Link>
                   </div>
                 </div>
               )}
             </div>
 
+            {/* Products Dropdown */}
             <div
               className="relative group"
               onMouseEnter={() => setActiveDropdown("products")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center gap-1 text-foreground hover:text-white hover:bg-black transition-all font-medium px-3 py-2 rounded-md">
+              <button className={cn(
+                "flex items-center gap-1 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium",
+                "hover:bg-primary/10 hover:text-primary",
+                activeDropdown === "products" && "bg-primary/10 text-primary"
+              )}>
                 {t('header.products')}
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className={cn(
+                  "w-3.5 h-3.5 transition-transform duration-200",
+                  activeDropdown === "products" && "rotate-180"
+                )} />
               </button>
               {activeDropdown === "products" && (
-                <div className="absolute top-full left-0 pt-2">
-                  <div className="bg-card border border-border rounded-lg shadow-lg py-2 min-w-[200px] animate-dropdown">
+                <div className="absolute top-full left-0 pt-2 min-w-[240px]">
+                  <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
                     <Link
                       href="http://vietguardscan.icss.com.vn/"
                       target="_blank"
-                      className="block px-4 py-2 hover:bg-muted transition-colors"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
-                      {t('header.vietguard')}
+                      <div className="font-medium">{t('header.vietguard')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Security scanning tool</div>
                     </Link>
                     <Link
                       href="http://oraclecloud.vn/"
                       target="_blank"
-                      className="block px-4 py-2 hover:bg-muted transition-colors"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
-                      {t('header.oracleCloud')}
+                      <div className="font-medium">{t('header.oracleCloud')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Cloud infrastructure</div>
                     </Link>
                     <Link
                       href="http://smartdashboard.vn/"
                       target="_blank"
-                      className="block px-4 py-2 hover:bg-muted transition-colors"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
-                      {t('header.smartDashboard')}
+                      <div className="font-medium">{t('header.smartDashboard')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Management dashboard</div>
                     </Link>
-                    <Link href="#" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      {t('header.gurucul')}
+                    <Link 
+                      href="#" 
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">{t('header.gurucul')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Security analytics</div>
                     </Link>
-                    <Link href="#" className="block px-4 py-2 hover:bg-muted transition-colors">
-                      {t('header.csa')}
+                    <Link 
+                      href="#" 
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">{t('header.csa')}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">Security assessment</div>
                     </Link>
                   </div>
                 </div>
               )}
             </div>
 
-            <Link href="/articles/articles-list" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link 
+              href="/articles/articles-list" 
+              className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
+            >
               {t('header.news')}
             </Link>
 
-            <Link href="/tuyen-dung" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link 
+              href="/tuyen-dung" 
+              className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
+            >
               {t('header.recruitment')}
             </Link>
 
-            <Link href="/lien-he" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link 
+              href="/lien-he" 
+              className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
+            >
               {t('header.contact')}
             </Link>
           </nav>
 
-          <div className="flex items-center gap-3">
-            {/* Search Button with Expandable Input */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setShowSearch(true)}
-              onMouseLeave={() => {
-                if (!searchTerm) setShowSearch(false)
-              }}
-            >
+          {/* Right Side - Actions */}
+          <div className="flex items-center gap-2">
+            {/* Search - Desktop */}
+            <div className="hidden md:block relative">
               {!showSearch ? (
                 <Button 
                   variant="ghost" 
                   size="icon"
-                  className="rounded-full"
+                  className="rounded-full hover:bg-primary/10"
+                  onClick={() => setShowSearch(true)}
                 >
                   <SearchIcon className="h-5 w-5" />
                 </Button>
               ) : (
-                <div className="flex items-center gap-2 bg-background border border-border rounded-lg shadow-lg px-3 py-2 animate-in fade-in zoom-in-95 duration-200">
+                <div className="flex items-center gap-2 bg-card/95 backdrop-blur-lg border border-border rounded-full shadow-lg px-4 py-2 animate-scale-in">
+                  <SearchIcon className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                  <Input
+                    type="text"
+                    placeholder={t('header.searchPlaceholder')}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    onBlur={() => {
+                      if (!searchTerm) setShowSearch(false)
+                    }}
+                    className="w-48 lg:w-64 border-0 focus-visible:ring-0 h-7 px-0 bg-transparent"
+                    autoFocus
+                  />
+                  {searchTerm && (
+                    <Button
+                      size="sm"
+                      onClick={handleSearch}
+                      className="h-7 px-3 rounded-full"
+                    >
+                      {t('header.search')}
+                    </Button>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* CTA Button - Hidden on mobile */}
+            <Button 
+              asChild 
+              className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90 font-medium px-4 py-1.5 text-sm rounded-full shadow-lg"
+            >
+              <Link href="/lien-he">{t('header.contactUs')}</Link>
+            </Button>
+
+            {/* Language & Theme - Hidden on mobile */}
+            <div className="hidden md:flex items-center gap-2">
+              <LanguageSelector />
+              <ThemeToggle />
+            </div>
+
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="xl:hidden rounded-full"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="xl:hidden border-t border-border animate-fade-in-down">
+            <nav className="py-4 space-y-1">
+              {/* About Section */}
+              <div className="space-y-1">
+                <button 
+                  onClick={() => setActiveDropdown(activeDropdown === "about" ? null : "about")}
+                  className="w-full flex items-center justify-between px-4 py-3 hover:bg-primary/10 rounded-lg transition-all"
+                >
+                  <span className="font-medium">{t('header.aboutUs')}</span>
+                  <ChevronDown className={cn(
+                    "w-4 h-4 transition-transform",
+                    activeDropdown === "about" && "rotate-180"
+                  )} />
+                </button>
+                {activeDropdown === "about" && (
+                  <div className="pl-4 space-y-1 animate-fade-in">
+                    <Link href="/gioi-thieu" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.generalIntro')}
+                    </Link>
+                    <Link href="/khach-hang" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.clients')}
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link href="/doi-tac" className="block px-4 py-3 hover:bg-primary/10 rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+                {t('header.partners')}
+              </Link>
+
+              {/* Consulting Section */}
+              <div className="space-y-1">
+                <button 
+                  onClick={() => setActiveDropdown(activeDropdown === "consulting" ? null : "consulting")}
+                  className="w-full flex items-center justify-between px-4 py-3 hover:bg-primary/10 rounded-lg transition-all"
+                >
+                  <span className="font-medium">{t('header.consulting')}</span>
+                  <ChevronDown className={cn(
+                    "w-4 h-4 transition-transform",
+                    activeDropdown === "consulting" && "rotate-180"
+                  )} />
+                </button>
+                {activeDropdown === "consulting" && (
+                  <div className="pl-4 space-y-1 animate-fade-in">
+                    <Link href="/toa-nha-thong-minh" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.smartBuilding')}
+                    </Link>
+                    <Link href="/nha-may-thong-minh" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.smartFactory')}
+                    </Link>
+                    <Link href="/giai-phap-esg" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.esgSolution')}
+                    </Link>
+                    <Link href="/ai-soc" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.aiSoc')}
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Products Section */}
+              <div className="space-y-1">
+                <button 
+                  onClick={() => setActiveDropdown(activeDropdown === "products" ? null : "products")}
+                  className="w-full flex items-center justify-between px-4 py-3 hover:bg-primary/10 rounded-lg transition-all"
+                >
+                  <span className="font-medium">{t('header.products')}</span>
+                  <ChevronDown className={cn(
+                    "w-4 h-4 transition-transform",
+                    activeDropdown === "products" && "rotate-180"
+                  )} />
+                </button>
+                {activeDropdown === "products" && (
+                  <div className="pl-4 space-y-1 animate-fade-in">
+                    <Link href="http://vietguardscan.icss.com.vn/" target="_blank" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.vietguard')}
+                    </Link>
+                    <Link href="http://oraclecloud.vn/" target="_blank" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.oracleCloud')}
+                    </Link>
+                    <Link href="http://smartdashboard.vn/" target="_blank" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.smartDashboard')}
+                    </Link>
+                    <Link href="#" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.gurucul')}
+                    </Link>
+                    <Link href="#" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                      {t('header.csa')}
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link href="/articles/articles-list" className="block px-4 py-3 hover:bg-primary/10 rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+                {t('header.news')}
+              </Link>
+
+              <Link href="/tuyen-dung" className="block px-4 py-3 hover:bg-primary/10 rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+                {t('header.recruitment')}
+              </Link>
+
+              <Link href="/lien-he" className="block px-4 py-3 hover:bg-primary/10 rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+                {t('header.contact')}
+              </Link>
+
+              {/* Mobile Search */}
+              <div className="px-4 pt-3 pb-2 space-y-2">
+                <div className="flex items-center gap-2 bg-muted/50 rounded-lg px-3 py-2">
                   <SearchIcon className="h-4 w-4 text-muted-foreground" />
                   <Input
                     type="text"
@@ -214,27 +462,29 @@ export function Header() {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    className="w-64 border-0 focus-visible:ring-0 h-8 px-2"
-                    autoFocus
+                    className="border-0 focus-visible:ring-0 bg-transparent"
                   />
-                  <Button
-                    size="sm"
-                    onClick={handleSearch}
-                    className="h-8"
-                  >
-                    {t('header.search')}
-                  </Button>
+                  {searchTerm && (
+                    <Button size="sm" onClick={handleSearch} className="h-8 rounded-lg">
+                      {t('header.search')}
+                    </Button>
+                  )}
                 </div>
-              )}
-            </div>
+              </div>
 
-            <Button asChild className="bg-foreground text-background hover:bg-foreground/90 font-medium px-6">
-              <Link href="/lien-he">{t('header.contactUs')}</Link>
-            </Button>
-            <LanguageSelector />
-            <ThemeToggle />
+              {/* Mobile Actions */}
+              <div className="px-4 pt-2 space-y-2">
+                <Button asChild className="w-full bg-gradient-to-r from-primary to-accent">
+                  <Link href="/lien-he" onClick={() => setMobileMenuOpen(false)}>{t('header.contactUs')}</Link>
+                </Button>
+                <div className="flex items-center justify-center gap-2 pt-2">
+                  <LanguageSelector />
+                  <ThemeToggle />
+                </div>
+              </div>
+            </nav>
           </div>
-        </div>
+        )}
       </div>
     </header>
   )

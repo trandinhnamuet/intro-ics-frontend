@@ -1,147 +1,192 @@
 "use client"
 
 import Link from "next/link"
-import { Facebook, Mail, Phone, Youtube } from "lucide-react"
+import Image from "next/image"
+import { Facebook, Mail, Phone, Youtube, MapPin, Send, ArrowRight } from "lucide-react"
 import { useTranslation } from 'react-i18next'
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { useState } from "react"
+import { cn } from "@/lib/utils"
 
 export function Footer() {
   const { t } = useTranslation()
+  const [email, setEmail] = useState('')
   
   return (
-    <footer className="bg-secondary text-secondary-foreground">
-      <div className="w-full px-16 lg:px-32 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="relative bg-gradient-to-br from-secondary via-secondary to-secondary/90 text-secondary-foreground overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative container-responsive section-spacing">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+          {/* Company Info - Spans 4 columns */}
+          <div className="lg:col-span-4 space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="relative w-28 h-28">
+                <Image
+                  src="/images/ics_logo.png"
+                  alt="ICS Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">{t('footer.companyName')}</h3>
+                <p className="text-sm text-secondary-foreground/60">Cybersecurity Solutions</p>
+              </div>
+            </div>
+            {/* Social Links */}
+            <div className="flex gap-3">
+              {[
+                { href: "https://www.facebook.com/profile.php?id=61575247001986", icon: Facebook, label: "Facebook", color: "hover:bg-blue-600" },
+                { href: "https://www.youtube.com/channel/UCpOn4kxyTtzmUldsDZoxLHg", icon: Youtube, label: "YouTube", color: "hover:bg-red-600" },
+                { href: "mailto:info@icss.com.vn", icon: Mail, label: "Email", color: "hover:bg-green-600" },
+                { href: "tel:0931487231", icon: Phone, label: "Phone", color: "hover:bg-purple-600" },
+              ].map((social) => {
+                const Icon = social.icon
+                return (
+                  <Link
+                    key={social.label}
+                    href={social.href}
+                    target={social.href.startsWith('http') ? '_blank' : undefined}
+                    className={cn(
+                      "w-10 h-10 rounded-lg bg-secondary-foreground/10 backdrop-blur-sm flex items-center justify-center",
+                      "transition-all duration-300 hover:scale-110 hover:-translate-y-1",
+                      social.color
+                    )}
+                    aria-label={social.label}
+                  >
+                    <Icon className="w-4 h-4" />
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Quick Links - 2 columns */}
           <div className="lg:col-span-2">
-            <h3 className="text-xl font-bold mb-4">{t('footer.companyName')}</h3>
-            <div className="space-y-2 text-secondary-foreground/90 leading-relaxed">
-              <p>
-                <strong>{t('footer.headquarter')}</strong> {t('footer.headquarterAddress')}
-              </p>
-              <p>
-                <strong>{t('footer.office')}</strong> {t('footer.officeAddress')}
-              </p>
-              <p>
-                <strong>{t('footer.phone')}</strong> 0931.487.231 - <strong>{t('footer.hotline')}</strong> 0931.487.231
-              </p>
-              <p>
-                <strong>{t('footer.email')}</strong> info@icss.com.vn - <strong>{t('footer.website')}</strong> www.icss.com.vn
-              </p>
-            </div>
-
-            <div className="flex gap-4 mt-6">
-              <Link
-                href="https://www.facebook.com/profile.php?id=61575247001986"
-                target="_blank"
-                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-primary/80 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </Link>
-              <Link
-                href="https://www.tiktok.com/@ics_anm"
-                target="_blank"
-                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-primary/80 transition-colors"
-                aria-label="TikTok"
-              >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-                </svg>
-              </Link>
-              <Link
-                href="mailto:info@icss.com.vn"
-                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-primary/80 transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
-              </Link>
-              <Link
-                href="tel:0931487231"
-                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-primary/80 transition-colors"
-                aria-label="Phone"
-              >
-                <Phone className="w-5 h-5" />
-              </Link>
-              <Link
-                href="https://www.youtube.com/channel/UCpOn4kxyTtzmUldsDZoxLHg"
-                target="_blank"
-                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-primary/80 transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-bold mb-4">{t('footer.products')}</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="http://oraclecloud.vn/" target="_blank" className="hover:text-primary transition-colors">
-                  Oracle
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="http://vietguardscan.icss.com.vn/"
-                  target="_blank"
-                  className="hover:text-primary transition-colors"
-                >
-                  VietGuard
-                </Link>
-              </li>
-              <li>
-                <Link href="http://smartdashboard.vn/" target="_blank" className="hover:text-primary transition-colors">
-                  Dashboard
-                </Link>
-              </li>
+            <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
+              <div className="w-1 h-6 bg-gradient-to-b from-primary to-accent rounded-full" />
+              {t('footer.products')}
+            </h4>
+            <ul className="space-y-3">
+              {[
+                { href: "http://oraclecloud.vn/", label: "Oracle Cloud", external: true },
+                { href: "http://vietguardscan.icss.com.vn/", label: "VietGuard Scan", external: true },
+                { href: "http://smartdashboard.vn/", label: "Smart Dashboard", external: true },
+                { href: "#", label: "AI SOC Platform", external: false },
+                { href: "#", label: "CSA Endpoint", external: false },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link 
+                    href={link.href} 
+                    target={link.external ? "_blank" : undefined}
+                    className="group flex items-center gap-2 text-sm hover:text-primary transition-all"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-lg font-bold mb-4">{t('footer.consulting')}</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/toa-nha-thong-minh" className="hover:text-primary transition-colors">
-                  {t('footer.smartBuilding')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/esg" className="hover:text-primary transition-colors">
-                  {t('footer.esgSolution')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-soc" className="hover:text-primary transition-colors">
-                  {t('footer.aiSocSolution')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/nha-may-thong-minh" className="hover:text-primary transition-colors">
-                  {t('footer.smartFactory')}
-                </Link>
-              </li>
+          <div className="lg:col-span-2">
+            <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
+              <div className="w-1 h-6 bg-gradient-to-b from-primary to-accent rounded-full" />
+              {t('footer.consulting')}
+            </h4>
+            <ul className="space-y-3">
+              {[
+                { href: "/toa-nha-thong-minh", label: t('footer.smartBuilding') },
+                { href: "/nha-may-thong-minh", label: t('footer.smartFactory') },
+                { href: "/esg", label: t('footer.esgSolution') },
+                { href: "/ai-soc", label: t('footer.aiSocSolution') },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    href={link.href}
+                    className="group flex items-center gap-2 text-sm hover:text-primary transition-all"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
+          </div>
+
+          {/* Newsletter - Spans 4 columns */}
+          <div className="lg:col-span-4 space-y-4">
+            <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
+              <div className="w-1 h-6 bg-gradient-to-b from-primary to-accent rounded-full" />
+              {t('footer.newsletter')}
+            </h4>
+            <p className="text-sm text-secondary-foreground/70">
+              {t('footer.newsletterDescription')}
+            </p>
+            <div className="flex gap-2">
+              <Input
+                type="email"
+                placeholder={t('footer.emailPlaceholder')}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-secondary-foreground/5 border-secondary-foreground/20 focus:border-primary"
+              />
+              <Button 
+                size="icon"
+                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 flex-shrink-0"
+              >
+                <Send className="w-4 h-4" />
+              </Button>
+            </div>
+            
+            {/* Trust Badges */}
+            <div className="pt-4 space-y-2">
+              <p className="text-xs text-secondary-foreground/60 uppercase font-semibold tracking-wide">
+                {t('footer.certificates')}
+              </p>
+              <div className="flex gap-4 flex-wrap">
+                <div className="px-3 py-1.5 bg-secondary-foreground/5 rounded text-xs font-medium">
+                  ISO 27001
+                </div>
+                <div className="px-3 py-1.5 bg-secondary-foreground/5 rounded text-xs font-medium">
+                  Oracle Partner
+                </div>
+                <div className="px-3 py-1.5 bg-secondary-foreground/5 rounded text-xs font-medium">
+                  Verified
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-secondary-foreground/20 pt-8">
+        {/* Bottom Bar */}
+        <div className="border-t border-secondary-foreground/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-secondary-foreground/70">
-              {t('footer.copyright')}
+            <p className="text-sm text-secondary-foreground/60">
+              © {new Date().getFullYear()} {t('footer.companyName')}. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm">
-              <Link href="/gioi-thieu" className="hover:text-primary transition-colors">
-                {t('footer.aboutIcs')}
-              </Link>
-              <Link href="/tin-tuc" className="hover:text-primary transition-colors">
-                {t('footer.news')}
-              </Link>
-              <Link href="/lien-he" className="hover:text-primary transition-colors">
-                {t('footer.contact')}
-              </Link>
-              <Link href="/tuyen-dung" className="hover:text-primary transition-colors">
-                {t('footer.recruitment')}
-              </Link>
+            <div className="flex flex-wrap gap-6 text-sm">
+              {[
+                { href: "/gioi-thieu", label: t('footer.aboutIcs') },
+                { href: "/articles/articles-list", label: t('footer.news') },
+                { href: "/lien-he", label: t('footer.contact') },
+                { href: "/tuyen-dung", label: t('footer.recruitment') },
+              ].map((link) => (
+                <Link 
+                  key={link.href}
+                  href={link.href} 
+                  className="hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
