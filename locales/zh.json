@@ -75,7 +75,8 @@
     },
     "partners": {
       "title": "可信赖的合作伙伴",
-      "subtitle": "与世界领先品牌合作"
+      "subtitle": "与世界领先品牌合作",
+      "intro": "与世界领先品牌合作"
     }
   },
   "home": {
@@ -149,6 +150,7 @@
       "smartDashboardDesc": "企业集中监控和管理系统",
       "viewMore": "了解更多",
       "showMore": "查看更多",
+      "showLess": "收起",
       "explore": "探索",
       "showAll": "查看全部"
     },

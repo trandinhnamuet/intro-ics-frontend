@@ -61,7 +61,8 @@
     },
     "partners": {
       "title": "信頼できるパートナー",
-      "subtitle": "世界トップブランドとの協力"
+      "subtitle": "世界トップブランドとの協力",
+      "intro": "世界をリードするブランドと提携"
     }
   },
   "home": {
@@ -133,6 +134,7 @@
       "smartDashboardDesc": "エンタープライズ向けの集中監視・管理システム",
       "viewMore": "詳細を見る",
       "showMore": "さらに表示",
+      "showLess": "表示を減らす",
       "explore": "探索",
       "showAll": "すべて表示"
     },

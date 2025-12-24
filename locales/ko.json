@@ -61,7 +61,8 @@
     },
     "partners": {
       "title": "신뢰할 수 있는 파트너",
-      "subtitle": "세계 최고 브랜드와의 협력"
+      "subtitle": "세계 최고 브랜드와의 협력",
+      "intro": "세계 유수의 브랜드들과 협력"
     }
   },
   "home": {
@@ -133,6 +134,7 @@
       "smartDashboardDesc": "엔터프라이즈를 위한 중앙 집중식 모니터링 및 관리 시스템",
       "viewMore": "자세히 알아보기",
       "showMore": "더 보기",
+      "showLess": "간략히 보기",
       "explore": "탐색",
       "showAll": "모두 보기"
     },

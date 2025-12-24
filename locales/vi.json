@@ -49,6 +49,7 @@
       "badge": "Thành tựu nổi bật"
     },
     "partners": {
+      "intro": "Đồng hành cùng những thương hiệu hàng đầu thế giới",
       "gurucul": "Giải pháp UEBA và SIEM thế hệ mới",
       "hyperg": "Giải pháp an ninh mạng ứng dụng AI và Cloud",
       "oracle": "Hệ quản trị cơ sở dữ liệu hàng đầu"
@@ -81,6 +82,7 @@
     "products": {
       "title": "Sản Phẩm & Giải Pháp",
       "subtitle": "Khám phá các giải pháp an ninh mạng hàng đầu của chúng tôi",
+      "showLess": "Thu gọn",
       "aiSoc": "AI SOC",
       "aiSocDesc": "Trung tâm điều hành an ninh mạng được trang bị AI tiên tiến",
       "csaDlp": "CSA-DLP",
