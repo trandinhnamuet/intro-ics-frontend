@@ -144,11 +144,13 @@
   
   /* Enhanced Typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    @apply tracking-tight;
+    @apply my-4;
   }
   
   h1 {
     @apply text-2xl sm:text-2xl lg:text-2xl;
+    
   }
   
   h2 {
