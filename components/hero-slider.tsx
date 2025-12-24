@@ -121,16 +121,7 @@ export function HeroSlider() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button 
-                    asChild 
-                    size="lg" 
-                    className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white font-semibold px-8 py-6 text-lg rounded-full shadow-2xl"
-                  >
-                    <Link href={slide.link} target={slide.link.startsWith("http") ? "_blank" : undefined}>
-                      <Play className="w-5 h-5 mr-2" />
-                      {t('home.hero.cta')}
-                    </Link>
-                  </Button>
+                  {/* Primary CTA removed as requested */}
                   
                   <Button 
                     asChild 
@@ -147,11 +138,7 @@ export function HeroSlider() {
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 pt-6">
                   <div className="glass px-6 py-3 rounded-xl">
-                    <div className="text-3xl font-bold text-white">100+</div>
-                    <div className="text-sm text-white/80">{t('home.hero.clients')}</div>
-                  </div>
-                  <div className="glass px-6 py-3 rounded-xl">
-                    <div className="text-3xl font-bold text-white">10+</div>
+                    <div className="text-3xl font-bold text-white">4+</div>
                     <div className="text-sm text-white/80">{t('home.hero.years')}</div>
                   </div>
                   <div className="glass px-6 py-3 rounded-xl">

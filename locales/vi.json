@@ -40,18 +40,18 @@
       "scrollDown": "Cuộn xuống"
     },
     "stats": {
-      "projectsCompleted": "Dự án hoàn thành",
       "enterpriseClients": "Khách hàng doanh nghiệp",
       "cybersecuritySupport": "Hỗ trợ an ninh mạng",
       "uptimeGuarantee": "Uptime đảm bảo",
+      "yearsExperience": "Năm kinh nghiệm",
       "heading": "ICS trong",
       "inNumbers": "con số",
       "badge": "Thành tựu nổi bật"
     },
     "partners": {
+      "gurucul": "Giải pháp UEBA và SIEM thế hệ mới",
       "hyperg": "Giải pháp an ninh mạng ứng dụng AI và Cloud",
-      "oracle": "Hệ quản trị cơ sở dữ liệu hàng đầu",
-      "gamania": "Giải trí số và cloud security"
+      "oracle": "Hệ quản trị cơ sở dữ liệu hàng đầu"
     },
     "whyChooseUs": {
       "title": "Tại sao chọn ICS",
@@ -83,8 +83,8 @@
       "subtitle": "Khám phá các giải pháp an ninh mạng hàng đầu của chúng tôi",
       "aiSoc": "AI SOC",
       "aiSocDesc": "Trung tâm điều hành an ninh mạng được trang bị AI tiên tiến",
-      "csa": "CSA",
-      "csaDesc": "Giải pháp đánh giá và kiểm toán an ninh mạng toàn diện",
+      "csaDlp": "CSA-DLP",
+      "csaDlpDesc": "Giải pháp bảo mật điểm cuối và ngăn chặn mất mát dữ liệu",
       "pentestServices": "Pentest Services",
       "pentestServicesDesc": "Dịch vụ kiểm thử xâm nhập chuyên nghiệp",
       "vietguard": "Vietguard - Mobile App Security",
@@ -191,7 +191,23 @@
     "contact": "Liên hệ",
     "searchPlaceholder": "Tìm kiếm bài viết...",
     "search": "Tìm",
-    "contactUs": "Liên hệ chúng tôi"
+    "contactUs": "Liên hệ chúng tôi",
+    "menu": {
+      "aboutCompany": "Về công ty ICS",
+      "ourClients": "Khách hàng của chúng tôi",
+      "smartBuildingDesc": "Giải pháp tòa nhà thông minh",
+      "smartFactoryDesc": "Giải pháp nhà máy thông minh",
+      "esgDesc": "Giải pháp ESG cho doanh nghiệp",
+      "aiSocDesc": "Trung tâm điều hành an ninh mạng AI",
+      "productDescriptions": {
+        "vietguard": "Công cụ quét và phát hiện lỗ hổng bảo mật",
+        "aiSoc": "Giải pháp phân tích và giám sát an ninh mạng",
+        "csaDlp": "Bảo mật điểm cuối & Ngăn ngừa mất mát dữ liệu",
+        "pentest": "Dịch vụ kiểm thử xâm nhập (Pentest)",
+        "oracleCloud": "Hạ tầng điện toán đám mây",
+        "smartDashboard": "Bảng điều khiển quản lý"
+      }
+    }
   },
   "footer": {
     "companyName": "CÔNG TY CỔ PHẦN AN NINH MẠNG QUỐC TẾ - ICS",
@@ -228,6 +244,22 @@
     "programSubtitle": "Các cấp độ đối tác với quyền lợi và ưu đãi khác nhau",
     "platinum": "Platinum Partner",
     "gold": "Gold Partner",
+    "technologyPartners": "Đối tác Công nghệ",
+    "technologyPartnersSubtitle": "Các đơn vị cung cấp nền tảng phần mềm, giải pháp bảo mật và hạ tầng dữ liệu",
+    "businessPartners": "Đối tác Kinh doanh",
+    "businessPartnersSubtitle": "Các đơn vị tập trung vào thương mại, đào tạo và cung cấp nhân lực",
+    "guruculDesc": "Chuyên về giải pháp bảo mật dữ liệu, phân tích hành vi (UEBA) và SIEM thế hệ mới",
+    "hypergOracleDesc": "Liên minh giữa giải pháp bảo mật Cloud (HyperG) và hạ tầng dữ liệu/quản trị doanh nghiệp hàng đầu thế giới (Oracle)",
+    "cystackDesc": "Công ty an ninh mạng chuyên về giải pháp rà soát lỗ hổng và bảo mật ứng dụng",
+    "viesecurityDesc": "Đơn vị chuyên sâu về các dịch vụ và giải pháp an toàn thông tin",
+    "locaAiDesc": "Tập trung vào các giải pháp ứng dụng Trí tuệ nhân tạo (AI) vào thực tế",
+    "irtechDesc": "Công ty chuyên về outsourcing và phát triển các giải pháp phần mềm, chuyển đổi số",
+    "bluenetDesc": "Nhà phân phối hoặc đại lý cung cấp các dịch vụ viễn thông/mạng",
+    "bitcareDesc": "Đơn vị dịch vụ tập trung vào hỗ trợ, bảo trì và chăm sóc khách hàng trong lĩnh vực CNTT",
+    "bigbenDesc": "Hoạt động trong mảng phân phối sản phẩm hoặc dịch vụ giáo dục/đào tạo",
+    "tluDesc": "Đối tác cung cấp nguồn nhân lực, nghiên cứu và đào tạo",
+    "aiAcademyDesc": "Đơn vị tập trung vào giáo dục, đào tạo và cung ứng nhân sự chuyên về AI",
+    "cathayDesc": "Tập đoàn tài chính/bảo hiểm đóng vai trò khách hàng chiến lược hoặc đối tác cung cấp dịch vụ tài chính",
     "partnersGrid": "Đối tác của chúng tôi",
     "partnersGridSubtitle": "Hợp tác với các tập đoàn công nghệ hàng đầu thế giới",
     "testimonials": "Khách hàng nói gì về chúng tôi",
@@ -238,7 +270,6 @@
     "downloadDocs": "Tải tài liệu hợp tác",
     "hypergDesc": "HyperG Security cung cấp giải pháp an ninh mạng ứng dụng AI và Cloud. Bảo vệ doanh nghiệp trước mọi rủi ro số.",
     "oracleDesc": "Oracle là tập đoàn công nghệ hàng đầu, cung cấp hệ quản trị cơ sở dữ liệu, phần mềm doanh nghiệp, đồng thời phát triển điện toán đám mây, AI và an ninh mạng.",
-    "gamaniaDesc": "Gamania là công ty giải trí số hàng đầu, chuyên phát triển và phát hành game trực tuyến, đồng thời mở rộng sang thanh toán điện tử, cloud và an ninh mạng.",
     "microsoftDesc": "Đối tác công nghệ toàn cầu trong lĩnh vực cloud và bảo mật doanh nghiệp.",
     "awsDesc": "Hợp tác triển khai giải pháp bảo mật trên nền tảng cloud AWS.",
     "ciscoDesc": "Đối tác về hạ tầng mạng và giải pháp bảo mật network security.",
@@ -270,10 +301,10 @@
       "description2": "ICS tập trung vào các giải pháp bảo mật cho nhiều lĩnh vực trọng yếu, bao gồm: bảo vệ ứng dụng, an ninh cho nhà máy thông minh, tòa nhà thông minh và đặc biệt là hệ thống điều hành trung tâm AI SOC."
     },
     "stats": {
-      "projects": "Dự án hoàn thành",
       "clients": "Khách hàng doanh nghiệp",
       "support": "Hỗ trợ khách hàng",
-      "uptime": "Uptime đảm bảo"
+      "uptime": "Uptime đảm bảo",
+      "years": "Năm kinh nghiệm"
     },
     "team": {
       "title": "Đội ngũ chuyên nghiệp",
@@ -559,5 +590,268 @@
     "title": "Đăng ký để nhận thông tin mới nhất về an ninh mạng và các giải pháp công nghệ.",
     "email": "Email của bạn",
     "certifications": "Chứng nhận & Đối tác"
+  },
+  "products": {
+    "vietguard": {
+      "badge": "Bảo mật ứng dụng di động",
+      "subtitle": "Công cụ quét và phát hiện lỗ hổng bảo mật cho ứng dụng di động",
+      "visitWebsite": "Truy cập website",
+      "features": {
+        "title": "Tính năng",
+        "heading": "Tính năng nổi bật của Vietguard",
+        "description": "Giải pháp toàn diện để bảo mật ứng dụng di động của bạn",
+        "scanning": {
+          "title": "Quét tự động",
+          "description": "Tự động quét và phát hiện lỗ hổng bảo mật trong ứng dụng di động"
+        },
+        "vulnerability": {
+          "title": "Phát hiện lỗ hổng",
+          "description": "Phát hiện và cảnh báo các lỗ hổng bảo mật nghiêm trọng"
+        },
+        "protection": {
+          "title": "Bảo vệ toàn diện",
+          "description": "Bảo vệ ứng dụng khỏi các mối đe dọa và tấn công"
+        },
+        "compliance": {
+          "title": "Tuân thủ tiêu chuẩn",
+          "description": "Đảm bảo tuân thủ các tiêu chuẩn bảo mật quốc tế"
+        }
+      },
+      "benefits": {
+        "title": "Lợi ích",
+        "heading": "Tại sao chọn Vietguard?",
+        "description": "Vietguard mang lại những lợi ích vượt trội cho ứng dụng di động của bạn",
+        "item1": "Quét và phát hiện lỗ hổng tự động, nhanh chóng",
+        "item2": "Báo cáo chi tiết và dễ hiểu về các vấn đề bảo mật",
+        "item3": "Hỗ trợ đa nền tảng: iOS, Android",
+        "item4": "Cập nhật liên tục cơ sở dữ liệu lỗ hổng mới nhất"
+      },
+      "stats": {
+        "scanned": "Ứng dụng đã quét",
+        "vulnerabilities": "Lỗ hổng phát hiện",
+        "accuracy": "Độ chính xác"
+      },
+      "cta": {
+        "heading": "Bảo vệ ứng dụng di động của bạn ngay hôm nay",
+        "description": "Liên hệ với chúng tôi để được tư vấn và trải nghiệm Vietguard miễn phí"
+      }
+    },
+    "aiSoc": {
+      "badge": "Trung tâm điều hành an ninh AI",
+      "subtitle": "Giải pháp trung tâm điều hành an ninh mạng được trang bị AI tiên tiến, tự động phát hiện và phản ứng với các mối đe dọa",
+      "features": {
+        "title": "Tính năng",
+        "heading": "Tính năng nổi bật của AI SOC",
+        "description": "Giải pháp toàn diện để bảo vệ hệ thống mạng của bạn",
+        "ueba": {
+          "title": "UEBA - Phân tích hành vi",
+          "description": "Phát hiện các hành vi bất thường của người dùng và thực thể bằng AI"
+        },
+        "threatDetection": {
+          "title": "Phát hiện mối đe dọa",
+          "description": "Tự động phát hiện và cảnh báo các mối đe dọa an ninh mạng"
+        },
+        "automation": {
+          "title": "Tự động hóa phản ứng",
+          "description": "Tự động phản ứng và xử lý các sự cố an ninh trong thời gian thực"
+        },
+        "monitoring": {
+          "title": "Giám sát 24/7",
+          "description": "Giám sát liên tục hệ thống mạng và phát hiện sự cố kịp thời"
+        }
+      },
+      "benefits": {
+        "title": "Lợi ích",
+        "heading": "Tại sao chọn AI SOC?",
+        "description": "AI SOC mang lại những lợi ích vượt trội cho doanh nghiệp của bạn",
+        "item1": "Phát hiện mối đe dọa nhanh chóng với độ chính xác cao",
+        "item2": "Giảm thời gian phản ứng từ giờ xuống còn phút",
+        "item3": "Tự động hóa quy trình phân tích và xử lý sự cố",
+        "item4": "Giảm tải công việc cho đội ngũ an ninh mạng"
+      },
+      "stats": {
+        "threats": "Mối đe dọa phát hiện/tháng",
+        "responseTime": "Thời gian phản ứng",
+        "accuracy": "Độ chính xác"
+      },
+      "cta": {
+        "heading": "Bảo vệ doanh nghiệp với AI SOC",
+        "description": "Liên hệ với chúng tôi để được tư vấn về giải pháp AI SOC phù hợp nhất"
+      }
+    },
+    "csaDlp": {
+      "badge": "Bảo mật điểm cuối & DLP",
+      "subtitle": "Giải pháp bảo mật điểm cuối toàn diện kết hợp ngăn chặn mất mát dữ liệu, bảo vệ thiết bị và dữ liệu doanh nghiệp",
+      "features": {
+        "title": "Tính năng",
+        "heading": "Tính năng nổi bật của CSA-DLP",
+        "description": "Giải pháp toàn diện để bảo vệ điểm cuối và dữ liệu doanh nghiệp",
+        "endpoint": {
+          "title": "Bảo mật điểm cuối",
+          "description": "Bảo vệ toàn diện cho máy tính, laptop và thiết bị di động"
+        },
+        "dlp": {
+          "title": "Ngăn chặn mất mát dữ liệu",
+          "description": "Ngăn chặn rò rỉ dữ liệu nhạy cảm ra bên ngoài tổ chức"
+        },
+        "monitoring": {
+          "title": "Giám sát và kiểm soát",
+          "description": "Giám sát hoạt động và kiểm soát truy cập dữ liệu"
+        },
+        "compliance": {
+          "title": "Tuân thủ quy định",
+          "description": "Đảm bảo tuân thủ các quy định về bảo vệ dữ liệu"
+        }
+      },
+      "benefits": {
+        "title": "Lợi ích",
+        "heading": "Tại sao chọn CSA-DLP?",
+        "description": "CSA-DLP mang lại sự bảo vệ toàn diện cho dữ liệu doanh nghiệp",
+        "item1": "Ngăn chặn rò rỉ dữ liệu nhạy cảm hiệu quả",
+        "item2": "Bảo vệ thiết bị khỏi malware và ransomware",
+        "item3": "Kiểm soát truy cập và sử dụng dữ liệu",
+        "item4": "Báo cáo chi tiết và tuân thủ quy định"
+      },
+      "stats": {
+        "endpoints": "Điểm cuối được bảo vệ",
+        "incidents": "Sự cố ngăn chặn",
+        "compliance": "Tuân thủ quy định"
+      },
+      "cta": {
+        "heading": "Bảo vệ dữ liệu doanh nghiệp với CSA-DLP",
+        "description": "Liên hệ với chúng tôi để được tư vấn về giải pháp CSA-DLP"
+      }
+    },
+    "pentestServices": {
+      "badge": "Dịch vụ kiểm thử xâm nhập",
+      "subtitle": "Dịch vụ kiểm thử xâm nhập chuyên nghiệp, phát hiện và khắc phục lỗ hổng bảo mật trước khi hacker khai thác",
+      "features": {
+        "title": "Tính năng",
+        "heading": "Dịch vụ Pentest chuyên nghiệp",
+        "description": "Phát hiện và khắc phục lỗ hổng bảo mật một cách toàn diện",
+        "assessment": {
+          "title": "Đánh giá lỗ hổng",
+          "description": "Rà soát và đánh giá toàn diện các lỗ hổng bảo mật"
+        },
+        "exploitation": {
+          "title": "Khai thác thử nghiệm",
+          "description": "Mô phỏng tấn công thực tế để kiểm tra độ bảo mật"
+        },
+        "reporting": {
+          "title": "Báo cáo chi tiết",
+          "description": "Báo cáo đầy đủ về lỗ hổng và hướng khắc phục"
+        },
+        "remediation": {
+          "title": "Hỗ trợ khắc phục",
+          "description": "Tư vấn và hỗ trợ khắc phục các lỗ hổng được phát hiện"
+        }
+      },
+      "benefits": {
+        "title": "Lợi ích",
+        "heading": "Tại sao chọn dịch vụ Pentest?",
+        "description": "Pentest giúp bạn chủ động phát hiện và khắc phục lỗ hổng",
+        "item1": "Phát hiện lỗ hổng trước khi bị tấn công thực tế",
+        "item2": "Đánh giá toàn diện về tình trạng bảo mật",
+        "item3": "Báo cáo chi tiết với hướng dẫn khắc phục cụ thể",
+        "item4": "Tuân thủ các tiêu chuẩn bảo mật quốc tế"
+      },
+      "stats": {
+        "tests": "Dự án Pentest hoàn thành",
+        "vulnerabilities": "Lỗ hổng phát hiện",
+        "success": "Tỷ lệ thành công"
+      },
+      "cta": {
+        "heading": "Đánh giá an ninh mạng với Pentest",
+        "description": "Liên hệ với chúng tôi để được tư vấn về dịch vụ Pentest phù hợp"
+      }
+    },
+    "oracleCloud": {
+      "badge": "Điện toán đám mây",
+      "subtitle": "Giải pháp điện toán đám mây hàng đầu từ Oracle với hiệu suất cao, bảo mật vượt trội và chi phí tối ưu",
+      "visitWebsite": "Truy cập website",
+      "features": {
+        "title": "Tính năng",
+        "heading": "Tính năng nổi bật của Oracle Cloud",
+        "description": "Giải pháp cloud toàn diện cho doanh nghiệp hiện đại",
+        "compute": {
+          "title": "Compute & VM",
+          "description": "Máy chủ ảo mạnh mẽ với hiệu năng cao và khả năng mở rộng linh hoạt"
+        },
+        "database": {
+          "title": "Database Cloud",
+          "description": "Hệ quản trị cơ sở dữ liệu hàng đầu thế giới trên nền tảng cloud"
+        },
+        "security": {
+          "title": "Bảo mật vượt trội",
+          "description": "Bảo mật đa lớp với mã hóa và kiểm soát truy cập tiên tiến"
+        },
+        "network": {
+          "title": "Mạng toàn cầu",
+          "description": "Hạ tầng mạng toàn cầu với độ trễ thấp và băng thông cao"
+        }
+      },
+      "benefits": {
+        "title": "Lợi ích",
+        "heading": "Tại sao chọn Oracle Cloud?",
+        "description": "Oracle Cloud mang lại hiệu suất và bảo mật tối ưu",
+        "item1": "Hiệu năng vượt trội với chi phí cạnh tranh",
+        "item2": "Bảo mật đa lớp với các tính năng tiên tiến",
+        "item3": "Hỗ trợ đa nền tảng và tích hợp dễ dàng",
+        "item4": "Đội ngũ hỗ trợ chuyên nghiệp 24/7"
+      },
+      "stats": {
+        "regions": "Khu vực trên toàn cầu",
+        "uptime": "Thời gian hoạt động",
+        "customers": "Khách hàng toàn cầu"
+      },
+      "cta": {
+        "heading": "Chuyển đổi số với Oracle Cloud",
+        "description": "Liên hệ với chúng tôi để được tư vấn về giải pháp Oracle Cloud"
+      }
+    },
+    "smartDashboard": {
+      "badge": "Giám sát thông minh",
+      "subtitle": "Hệ thống dashboard thông minh với phân tích dữ liệu theo thời gian thực, giúp quản lý và giám sát doanh nghiệp hiệu quả",
+      "visitWebsite": "Truy cập website",
+      "features": {
+        "title": "Tính năng",
+        "heading": "Tính năng nổi bật của Smart Dashboard",
+        "description": "Giải pháp giám sát và phân tích dữ liệu thông minh",
+        "realtime": {
+          "title": "Theo dõi thời gian thực",
+          "description": "Giám sát dữ liệu và hoạt động theo thời gian thực"
+        },
+        "analytics": {
+          "title": "Phân tích nâng cao",
+          "description": "Phân tích dữ liệu với AI và machine learning"
+        },
+        "reporting": {
+          "title": "Báo cáo tự động",
+          "description": "Tạo báo cáo tự động với biểu đồ trực quan"
+        },
+        "visualization": {
+          "title": "Trực quan hóa dữ liệu",
+          "description": "Hiển thị dữ liệu trực quan với các biểu đồ đa dạng"
+        }
+      },
+      "benefits": {
+        "title": "Lợi ích",
+        "heading": "Tại sao chọn Smart Dashboard?",
+        "description": "Smart Dashboard giúp quản lý doanh nghiệp hiệu quả hơn",
+        "item1": "Giám sát tập trung mọi hoạt động doanh nghiệp",
+        "item2": "Ra quyết định nhanh chóng dựa trên dữ liệu thực",
+        "item3": "Tùy biến dashboard theo nhu cầu riêng",
+        "item4": "Tích hợp dễ dàng với các hệ thống hiện có"
+      },
+      "stats": {
+        "dashboards": "Dashboard triển khai",
+        "dataPoints": "Điểm dữ liệu xử lý",
+        "realtime": "Giám sát thời gian thực"
+      },
+      "cta": {
+        "heading": "Quản lý doanh nghiệp với Smart Dashboard",
+        "description": "Liên hệ với chúng tôi để được demo và tư vấn về Smart Dashboard"
+      }
+    }
   }
 }

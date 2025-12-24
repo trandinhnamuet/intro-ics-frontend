@@ -1,6 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -11,56 +13,58 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { AnimatedHeading } from '@/components/ui/animated-heading'
 import { Section } from '@/components/ui/section'
 import { 
-  Leaf, 
+  Shield, 
   Check, 
   ArrowRight, 
   Star, 
   Zap, 
-  Users,
-  Globe,
-  TrendingUp,
+  Lock,
+  Smartphone,
+  Search,
+  AlertTriangle,
   Award,
-  Target,
-  BarChart3
+  ExternalLink
 } from 'lucide-react'
 
-export default function GiaiPhapESGPage() {
+export default function VietguardPage() {
   const { t } = useTranslation()
+  const [activeTab, setActiveTab] = useState('overview')
 
   const features = [
     {
-      icon: Leaf,
-      title: "Môi trường (Environmental)",
-      description: "Đánh giá và tối ưu hóa quản lý tác động môi trường, giảm phát thải carbon, sử dụng tài nguyên bền vững"
+      icon: Search,
+      title: t('products.vietguard.features.scanning.title'),
+      description: t('products.vietguard.features.scanning.description')
     },
     {
-      icon: Users,
-      title: "Xã hội (Social)",
-      description: "Xây dựng văn hóa doanh nghiệp, đảm bảo quyền lợi người lao động, trách nhiệm với cộng đồng"
+      icon: AlertTriangle,
+      title: t('products.vietguard.features.vulnerability.title'),
+      description: t('products.vietguard.features.vulnerability.description')
+    },
+    {
+      icon: Shield,
+      title: t('products.vietguard.features.protection.title'),
+      description: t('products.vietguard.features.protection.description')
     },
     {
       icon: Award,
-      title: "Quản trị (Governance)",
-      description: "Minh bạch hóa quy trình quản lý, tuân thủ pháp luật, xây dựng hệ thống quản trị hiệu quả"
-    },
-    {
-      icon: BarChart3,
-      title: "Báo cáo & Đo lường",
-      description: "Thiết lập KPIs, thu thập dữ liệu, báo cáo ESG theo chuẩn quốc tế (GRI, SASB, TCFD)"
+      title: t('products.vietguard.features.compliance.title'),
+      description: t('products.vietguard.features.compliance.description')
     }
   ]
 
   const benefits = [
-    "Tư vấn chiến lược ESG phù hợp với đặc thù doanh nghiệp",
-    "Xây dựng lộ trình triển khai từng bước cụ thể",
-    "Hỗ trợ đo lường và báo cáo theo chuẩn quốc tế",
-    "Đào tạo đội ngũ nội bộ về ESG"
+    t('products.vietguard.benefits.item1'),
+    t('products.vietguard.benefits.item2'),
+    t('products.vietguard.benefits.item3'),
+    t('products.vietguard.benefits.item4')
   ]
 
   return (
     <>
       <Header />
       
+      {/* Hero Section */}
       <div className="relative h-[600px] overflow-hidden mt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600" />
         <div className="absolute inset-0 opacity-20">
@@ -73,25 +77,28 @@ export default function GiaiPhapESGPage() {
             <ScrollReveal direction="left">
               <div>
                 <Badge className="mb-6 px-4 py-2 bg-white/20 backdrop-blur-sm border-white/30 text-white">
-                  <Leaf className="w-4 h-4 mr-2" />
-                  {t('esg.badge')}
+                  <Smartphone className="w-4 h-4 mr-2" />
+                  {t('products.vietguard.badge')}
                 </Badge>
                 
                 <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-                  {t('esg.title')}
+                  Vietguard
                 </h1>
                 
                 <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                  {t('esg.description')}
+                  {t('products.vietguard.subtitle')}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     size="lg" 
                     className="bg-white text-green-600 hover:bg-white/90 font-semibold text-lg"
+                    asChild
                   >
-                    {t('common.learnMore')}
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <Link href="http://vietguardscan.icss.com.vn/" target="_blank">
+                      {t('products.vietguard.visitWebsite')}
+                      <ExternalLink className="w-5 h-5 ml-2" />
+                    </Link>
                   </Button>
                   <Button 
                     size="lg" 
@@ -109,8 +116,8 @@ export default function GiaiPhapESGPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-3xl transform rotate-6" />
                 <Card className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                   <Image
-                    src="esp.png"
-                    alt="ESG Solutions"
+                    src="https://icss.com.vn/wp-content/uploads/2025/08/Screenshot-2025-08-07-174127-300x167.png"
+                    alt="Vietguard Dashboard"
                     width={600}
                     height={400}
                     className="w-full h-auto"
@@ -122,19 +129,20 @@ export default function GiaiPhapESGPage() {
         </div>
       </div>
 
+      {/* Features Section */}
       <Section spacing="xl" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
               <Badge className="mb-4 px-4 py-2">
                 <Star className="w-4 h-4 mr-2" />
-                Ba trụ cột ESG
+                {t('products.vietguard.features.title')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="mb-6">
-                Giải pháp ESG toàn diện
+                {t('products.vietguard.features.heading')}
               </AnimatedHeading>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Từ áp lực tuân thủ đến lợi thế cạnh tranh - Lộ trình chiến lược cho doanh nghiệp Việt
+                {t('products.vietguard.features.description')}
               </p>
             </div>
           </ScrollReveal>
@@ -143,7 +151,7 @@ export default function GiaiPhapESGPage() {
             {features.map((feature, idx) => (
               <ScrollReveal key={idx} direction="up" delay={idx * 100}>
                 <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-6 shrink-0">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
@@ -155,6 +163,7 @@ export default function GiaiPhapESGPage() {
         </div>
       </Section>
 
+      {/* Benefits Section */}
       <Section spacing="xl" background="muted">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -162,13 +171,13 @@ export default function GiaiPhapESGPage() {
               <div>
                 <Badge className="mb-4 px-4 py-2">
                   <Zap className="w-4 h-4 mr-2" />
-                  {t('esg.why')}
+                  {t('products.vietguard.benefits.title')}
                 </Badge>
                 <AnimatedHeading as="h2" gradient className="mb-6">
-                  {t('esg.why')}
+                  {t('products.vietguard.benefits.heading')}
                 </AnimatedHeading>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Chúng tôi cung cấp giải pháp ESG toàn diện, từ chiến lược đến triển khai
+                  {t('products.vietguard.benefits.description')}
                 </p>
                 
                 <div className="space-y-4">
@@ -189,24 +198,24 @@ export default function GiaiPhapESGPage() {
                 <div className="space-y-6">
                   <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
                     <div>
-                      <div className="text-sm text-muted-foreground">Tiết kiệm chi phí</div>
-                      <div className="text-3xl font-bold text-green-600">20-30%</div>
+                      <div className="text-sm text-muted-foreground">{t('products.vietguard.stats.scanned')}</div>
+                      <div className="text-3xl font-bold text-green-600">10,000+</div>
                     </div>
-                    <TrendingUp className="w-12 h-12 text-green-500" />
+                    <Smartphone className="w-12 h-12 text-green-500" />
                   </div>
                   <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
                     <div>
-                      <div className="text-sm text-muted-foreground">Tăng giá trị thương hiệu</div>
-                      <div className="text-3xl font-bold text-emerald-600">+40%</div>
+                      <div className="text-sm text-muted-foreground">{t('products.vietguard.stats.vulnerabilities')}</div>
+                      <div className="text-3xl font-bold text-orange-600">50,000+</div>
                     </div>
-                    <Globe className="w-12 h-12 text-emerald-500" />
+                    <AlertTriangle className="w-12 h-12 text-orange-500" />
                   </div>
                   <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
                     <div>
-                      <div className="text-sm text-muted-foreground">Đáp ứng chuẩn quốc tế</div>
-                      <div className="text-3xl font-bold text-green-600">100%</div>
+                      <div className="text-sm text-muted-foreground">{t('products.vietguard.stats.accuracy')}</div>
+                      <div className="text-3xl font-bold text-green-600">99%</div>
                     </div>
-                    <Target className="w-12 h-12 text-green-500" />
+                    <Award className="w-12 h-12 text-green-500" />
                   </div>
                 </div>
               </Card>
@@ -215,6 +224,7 @@ export default function GiaiPhapESGPage() {
         </div>
       </Section>
 
+      {/* CTA Section */}
       <Section spacing="xl" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
@@ -225,21 +235,24 @@ export default function GiaiPhapESGPage() {
               </div>
               <div className="relative z-10">
                 <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
-                  <Leaf className="w-10 h-10 text-white" />
+                  <Lock className="w-10 h-10 text-white" />
                 </div>
                 <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                  Bắt đầu hành trình ESG của bạn
+                  {t('products.vietguard.cta.heading')}
                 </h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Liên hệ với chúng tôi để được tư vấn lộ trình ESG phù hợp với doanh nghiệp
+                  {t('products.vietguard.cta.description')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
                     size="lg" 
                     className="text-lg px-8 bg-white text-green-600 hover:bg-white/90 font-semibold"
+                    asChild
                   >
-                    {t('common.learnMore')}
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <Link href="http://vietguardscan.icss.com.vn/" target="_blank">
+                      {t('products.vietguard.visitWebsite')}
+                      <ExternalLink className="w-5 h-5 ml-2" />
+                    </Link>
                   </Button>
                   <Button 
                     size="lg" 

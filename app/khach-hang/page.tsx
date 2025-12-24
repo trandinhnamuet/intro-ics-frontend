@@ -54,42 +54,42 @@ export default function KhachHangPage() {
                   </p>
                 </div>
 
-                {/* Three Columns Section */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {/* Finance */}
-                  <div className="group text-center">
-                    <div className="relative w-full h-[180px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white">
+                {/* Three Columns Section - Staggered Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-max">
+                  {/* Finance - Offset down */}
+                  <div className="group text-center md:mt-12">
+                    <div className="relative w-full h-[200px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white transition-transform duration-300 hover:scale-105">
                       <Image
                         src="https://icss.com.vn/wp-content/uploads/2025/08/cong-nghe-tai-chinh-la-nganh-gi-hinh-anh1-300x180.jpg"
                         alt="Ngành tài chính"
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
                     <h5 className="font-bold text-lg uppercase text-foreground">{t('clients.finance')}</h5>
                   </div>
 
-                  {/* Government */}
+                  {/* Government - Normal position */}
                   <div className="group text-center">
-                    <div className="relative w-full h-[180px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white">
+                    <div className="relative w-full h-[200px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white transition-transform duration-300 hover:scale-105">
                       <Image
                         src="https://icss.com.vn/wp-content/uploads/2025/08/pngtree-government-building-with-columns-icon-png-image_1806612-e1754988700564-300x180.jpg"
                         alt="Chính phủ"
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
                     <h5 className="font-bold text-lg uppercase text-foreground">{t('clients.government')}</h5>
                   </div>
 
-                  {/* Telecom */}
-                  <div className="group text-center">
-                    <div className="relative w-full h-[180px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white">
+                  {/* Telecom - Offset down */}
+                  <div className="group text-center md:mt-12">
+                    <div className="relative w-full h-[200px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white transition-transform duration-300 hover:scale-105">
                       <Image
                         src="https://icss.com.vn/wp-content/uploads/2025/08/cong-nghe-vien-thong-e1754988927184-300x190.jpg"
                         alt="Ngành viễn thông"
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
                     <h5 className="font-bold text-lg uppercase text-foreground">{t('clients.telecom')}</h5>

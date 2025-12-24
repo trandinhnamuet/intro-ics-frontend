@@ -86,10 +86,6 @@ export function Header() {
                 className="object-contain"
               />
             </div>
-            <div className="hidden lg:block">
-              <div className="text-base font-bold gradient-text">ICS</div>
-              <div className="text-xs text-muted-foreground">Bảo vệ không gian số</div>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -119,14 +115,14 @@ export function Header() {
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.generalIntro')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Về công ty ICS</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.aboutCompany')}</div>
                     </Link>
                     <Link 
                       href="/khach-hang" 
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.clients')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Khách hàng của chúng tôi</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.ourClients')}</div>
                     </Link>
                   </div>
                 </div>
@@ -165,28 +161,28 @@ export function Header() {
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.smartBuilding')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Giải pháp tòa nhà thông minh</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.smartBuildingDesc')}</div>
                     </Link>
                     <Link 
                       href="/nha-may-thong-minh" 
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.smartFactory')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Giải pháp nhà máy thông minh</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.smartFactoryDesc')}</div>
                     </Link>
                     <Link 
                       href="/giai-phap-esg" 
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.esgSolution')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Giải pháp ESG cho doanh nghiệp</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.esgDesc')}</div>
                     </Link>
                     <Link 
                       href="/ai-soc" 
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.aiSoc')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">AI Security Operations Center</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.aiSocDesc')}</div>
                     </Link>
                   </div>
                 </div>
@@ -214,42 +210,46 @@ export function Header() {
                 <div className="absolute top-full left-0 pt-2 min-w-[240px]">
                   <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
                     <Link
-                      href="http://vietguardscan.icss.com.vn/"
-                      target="_blank"
+                      href="/products/vietguard"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.vietguard')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Security scanning tool</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.vietguard')}</div>
                     </Link>
                     <Link
-                      href="http://oraclecloud.vn/"
-                      target="_blank"
+                      href="/products/ai-soc"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">AI SOC</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.aiSoc')}</div>
+                    </Link>
+                    <Link
+                      href="/products/csa-dlp"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">CSA-DLP</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.csaDlp')}</div>
+                    </Link>
+                    <Link
+                      href="/products/pentest-services"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">Pentest Services</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.pentest')}</div>
+                    </Link>
+                    <Link
+                      href="/products/oracle-cloud"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.oracleCloud')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Cloud infrastructure</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.oracleCloud')}</div>
                     </Link>
                     <Link
-                      href="http://smartdashboard.vn/"
-                      target="_blank"
+                      href="/products/smart-dashboard"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.smartDashboard')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Management dashboard</div>
-                    </Link>
-                    <Link 
-                      href="#" 
-                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
-                    >
-                      <div className="font-medium">{t('header.gurucul')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Security analytics</div>
-                    </Link>
-                    <Link 
-                      href="#" 
-                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
-                    >
-                      <div className="font-medium">{t('header.csa')}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">Security assessment</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.smartDashboard')}</div>
                     </Link>
                   </div>
                 </div>

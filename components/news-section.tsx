@@ -42,10 +42,10 @@ export function NewsSection() {
     if (carouselRef.current) carouselRef.current.next()
   }
 
-  // Nhóm mỗi 4 bài viết thành 1 slide
+  // Nhóm mỗi 3 bài viết thành 1 slide
   const groups = []
-  for (let i = 0; i < articles.length; i += 4) {
-    groups.push(articles.slice(i, i + 4))
+  for (let i = 0; i < articles.length; i += 3) {
+    groups.push(articles.slice(i, i + 3))
   }
 
   if (isLoading) {
@@ -114,33 +114,33 @@ export function NewsSection() {
             >
               {groups.map((group, groupIndex) => (
                 <div key={groupIndex}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-4 py-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-8 auto-rows-max">
                     {group.map((article) => (
                       <Card
                         key={article.id}
-                        className="group relative hover:z-10 hover:scale-105 hover:shadow-2xl transition-transform duration-300 overflow-hidden bg-background border-border shadow-lg rounded-lg p-0"
+                        className="group relative hover:z-10 hover:scale-105 hover:shadow-2xl transition-all duration-300 overflow-hidden bg-background border-border shadow-lg rounded-lg flex flex-col h-full"
                       >
-                        <div className="relative h-64 overflow-hidden rounded-t-lg">
+                        <div className="relative h-56 overflow-hidden rounded-t-lg flex-shrink-0">
                           <Image
                             src={article.thumbnail_url || "/placeholder.svg"}
                             alt={article.title}
                             fill
-                            className="object-cover transition-transform duration-500"
+                            className="object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                           <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-md text-sm font-medium">
                             {new Date(article.created_at).toLocaleDateString('vi-VN')}
                           </div>
                         </div>
-                        <div className="pt-6 pb-6 px-6">
-                          <CardTitle className="text-2xl mb-3 group-hover:text-primary transition-colors line-clamp-2 min-h-[4rem] font-bold">
+                        <div className="pt-6 pb-6 px-6 flex flex-col flex-grow">
+                          <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors line-clamp-2 min-h-[3.5rem] font-bold">
                             <Link href={`/articles/${article.slug}`}>{article.title}</Link>
                           </CardTitle>
-                          <CardDescription className="text-base leading-relaxed line-clamp-3 mb-4">
+                          <CardDescription className="text-sm leading-relaxed line-clamp-3 mb-4 flex-grow">
                             {article.excerpt || 'Không có mô tả'}
                           </CardDescription>
                           <Link
                             href={`/articles/${article.slug}`}
-                            className="text-primary font-medium hover:underline inline-flex items-center gap-1"
+                            className="text-primary font-medium hover:underline inline-flex items-center gap-1 mt-auto"
                           >
                             {t('home.news.readMore')}
                             <span className="text-lg">›</span>

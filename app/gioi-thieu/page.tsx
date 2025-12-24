@@ -139,22 +139,22 @@ export default function GioiThieuPage() {
                 <p>
                   {t('about.company.description2')}
                 </p>
-                <div className="grid grid-cols-2 gap-4 pt-6">
-                  <Card className="p-6 text-center bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
-                    <div className="text-4xl font-bold text-primary mb-2">100+</div>
-                    <div className="text-sm text-muted-foreground">{t('about.stats.projects')}</div>
-                  </Card>
-                  <Card className="p-6 text-center bg-gradient-to-br from-accent/10 to-secondary/10 border-accent/20">
-                    <div className="text-4xl font-bold text-accent mb-2">50+</div>
+                <div className="grid grid-cols-2 gap-4 pt-6 auto-rows-max">
+                  <Card className="p-6 text-center bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20 h-full">
+                    <div className="text-4xl font-bold text-primary mb-2">50+</div>
                     <div className="text-sm text-muted-foreground">{t('about.stats.clients')}</div>
                   </Card>
-                  <Card className="p-6 text-center bg-gradient-to-br from-secondary/10 to-primary/10 border-secondary/20">
+                  <Card className="p-6 text-center bg-gradient-to-br from-secondary/10 to-primary/10 border-secondary/20 h-full">
                     <div className="text-4xl font-bold text-secondary mb-2">24/7</div>
                     <div className="text-sm text-muted-foreground">{t('about.stats.support')}</div>
                   </Card>
-                  <Card className="p-6 text-center bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20">
+                  <Card className="p-6 text-center bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20 h-full">
                     <div className="text-4xl font-bold text-primary mb-2">99.9%</div>
                     <div className="text-sm text-muted-foreground">{t('about.stats.uptime')}</div>
+                  </Card>
+                  <Card className="p-6 text-center bg-gradient-to-br from-accent/10 to-secondary/10 border-accent/20 h-full">
+                    <div className="text-4xl font-bold text-accent mb-2">4+</div>
+                    <div className="text-sm text-muted-foreground">{t('about.stats.years')}</div>
                   </Card>
                 </div>
               </div>
@@ -195,15 +195,15 @@ export default function GioiThieuPage() {
             </p>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-max">
             {values.map((value, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 100}>
-                <Card className="p-8 h-full hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Card className="p-8 h-full hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group flex flex-col">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shrink-0">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{t(value.titleKey)}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{t(value.descriptionKey)}</p>
+                  <p className="text-muted-foreground leading-relaxed flex-grow">{t(value.descriptionKey)}</p>
                 </Card>
               </ScrollReveal>
             ))}
@@ -274,10 +274,10 @@ export default function GioiThieuPage() {
             </p>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-max">
             {team.map((member, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 100}>
-                <Card className="overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group">
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col">
                   <div className="relative h-80">
                     <Image
                       src={member.image}
@@ -312,10 +312,10 @@ export default function GioiThieuPage() {
             </p>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-max">
             {/* VietGuard */}
             <ScrollReveal direction="up" delay={0}>
-              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col">
                 <div className="relative h-48 bg-white flex items-center justify-center">
                   <Image
                     src="/images/1.jpg"
@@ -324,12 +324,12 @@ export default function GioiThieuPage() {
                     className="object-contain p-8 transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold mb-4">{t('about.solutions.vietguard.title')}</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                     {t('about.solutions.vietguard.description')}
                   </p>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white">
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white mt-auto">
                     {t('common.learnMore')}
                   </Button>
                 </div>
@@ -338,8 +338,8 @@ export default function GioiThieuPage() {
 
             {/* ESG */}
             <ScrollReveal direction="up" delay={100}>
-              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
-                <div className="relative h-48 bg-white flex items-center justify-center">
+              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col">
+                <div className="relative h-48 bg-white flex items-center justify-center flex-shrink-0">
                   <Image
                     src="/images/2.jpg"
                     alt="ESG"
@@ -347,12 +347,12 @@ export default function GioiThieuPage() {
                     className="object-contain p-8 transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold mb-4">{t('about.solutions.esg.title')}</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                     {t('about.solutions.esg.description')}
                   </p>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white">
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white mt-auto">
                     {t('common.learnMore')}
                   </Button>
                 </div>
@@ -361,8 +361,8 @@ export default function GioiThieuPage() {
 
             {/* IoT */}
             <ScrollReveal direction="up" delay={200}>
-              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
-                <div className="relative h-48 bg-white flex items-center justify-center">
+              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col">
+                <div className="relative h-48 bg-white flex items-center justify-center flex-shrink-0">
                   <Image
                     src="/images/3.jpg"
                     alt="IoT Security"
@@ -370,12 +370,12 @@ export default function GioiThieuPage() {
                     className="object-contain p-8 transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold mb-4">{t('about.solutions.iot.title')}</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                     {t('about.solutions.iot.description')}
                   </p>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white">
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white mt-auto">
                     {t('common.learnMore')}
                   </Button>
                 </div>

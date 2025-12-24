@@ -1,214 +1,260 @@
-"use client"
+'use client'
 
-import { useTranslation } from "react-i18next"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Sidebar } from "@/components/sidebar"
-import Link from "next/link"
+import Image from 'next/image'
+import { useTranslation } from 'react-i18next'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { AnimatedHeading } from '@/components/ui/animated-heading'
+import { Section } from '@/components/ui/section'
+import { 
+  Shield, 
+  Check, 
+  ArrowRight, 
+  Star, 
+  Zap, 
+  Brain,
+  Eye,
+  Activity,
+  AlertTriangle,
+  TrendingUp,
+  Target
+} from 'lucide-react'
 
-export default function AiSocPage() {
+export default function AiSocConsultingPage() {
   const { t } = useTranslation()
+
+  const features = [
+    {
+      icon: Brain,
+      title: "AI Phân tích Hành vi (UEBA)",
+      description: "Sử dụng machine learning để phát hiện các hành vi bất thường của người dùng và thực thể trong hệ thống"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Phát hiện Mối đe dọa Tiên tiến",
+      description: "Tự động nhận diện và cảnh báo các mối đe dọa APT, zero-day attacks và ransomware"
+    },
+    {
+      icon: Activity,
+      title: "Giám sát Thời gian Thực",
+      description: "Theo dõi liên tục 24/7 với dashboard tập trung, cảnh báo tức thì khi phát hiện sự cố"
+    },
+    {
+      icon: Eye,
+      title: "Tự động hóa Phản ứng",
+      description: "SOAR tự động xử lý các sự cố theo playbook được định nghĩa trước, giảm thời gian phản ứng"
+    }
+  ]
+
+  const benefits = [
+    "Giảm 80% thời gian phản ứng với sự cố an ninh mạng",
+    "Phát hiện mối đe dọa với độ chính xác 99.5%",
+    "Giảm tải 70% công việc cho đội ngũ SOC",
+    "Tuân thủ các chuẩn bảo mật quốc tế"
+  ]
+
   return (
     <>
       <Header />
       
-      {/* Banner Section */}
-      <div className="relative h-[250px] bg-cover bg-center mt-24" style={{ backgroundImage: "url('https://icss.com.vn/wp-content/uploads/2018/09/bg-gioi-thieu.jpg')" }}>
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative w-full container-responsive h-full flex items-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            AI SOC
-          </h1>
+      <div className="relative h-[600px] overflow-hidden mt-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600" />
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-300" />
+        </div>
+        
+        <div className="relative container-responsive h-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full py-20">
+            <ScrollReveal direction="left">
+              <div>
+                <Badge className="mb-6 px-4 py-2 bg-white/20 backdrop-blur-sm border-white/30 text-white">
+                  <Shield className="w-4 h-4 mr-2" />
+                  {t('aiSoc.badge')}
+                </Badge>
+                
+                <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+                  {t('aiSoc.title')}
+                </h1>
+                
+                <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                  {t('aiSoc.intro')}
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-indigo-600 hover:bg-white/90 font-semibold text-lg"
+                  >
+                    {t('common.learnMore')}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold text-lg"
+                  >
+                    {t('common.contactUs')}
+                  </Button>
+                </div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal direction="right">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-3xl transform rotate-6" />
+                <Card className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
+                  <Image
+                    src="/aisoc.png"
+                    alt="AI SOC"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto"
+                  />
+                </Card>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="w-full container-responsive py-8 sm:py-12">
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
-          {/* Sidebar */}
-          <aside className="lg:w-1/4">
-            <Sidebar />
-          </aside>
+      <Section spacing="xl" background="default">
+        <div className="container-responsive">
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 px-4 py-2">
+                <Star className="w-4 h-4 mr-2" />
+                {t('aiSoc.features')}
+              </Badge>
+              <AnimatedHeading as="h2" gradient centered className="mb-6">
+                {t('aiSoc.features')}
+              </AnimatedHeading>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Tái định nghĩa an ninh mạng – Từ phản ứng bị động đến phòng thủ tiên đoán
+              </p>
+            </div>
+          </ScrollReveal>
 
-          {/* Content */}
-          <main className="lg:w-3/4">
-            <h2 className="text-2xl font-bold mb-4">
-              AI SOC: Tái Định Nghĩa An Ninh Mạng – Từ Phản Ứng Bị Động Đến Phòng Thủ Tiên Đoán
-            </h2>
-            
-            <p className="mb-4 text-justify">
-              Một thống kê đáng báo động từ IBM cho thấy một chuyên gia an ninh mạng phải xử lý trung bình hơn 11,000 cảnh báo bảo mật mỗi ngày. Giữa "cơn bão" thông tin đó, liệu đội ngũ an ninh của bạn có đang kiệt sức vì những cảnh báo sai (false positives)? Và quan trọng hơn, bạn có tự tin rằng mình không bỏ lọt các mối đe dọa tinh vi đang âm thầm ẩn mình trong hệ thống?
-            </p>
-
-            <p className="mb-4 text-justify">
-              Nếu những câu hỏi này khiến bạn phải suy ngẫm, bạn không hề đơn độc. Đây chính là thực tế phũ phàng mà các Trung tâm Điều hành An ninh (SOC) truyền thống đang phải đối mặt. Trong cuộc chiến không cân sức với các mối đe dọa mạng ngày càng tinh vi và tự động hóa, việc dựa vào sức người đơn thuần cũng giống như dùng một chiếc khiên gỗ để chống lại tên lửa. Đã đến lúc chúng ta cần một cuộc cách mạng.
-            </p>
-
-            <h3 className="text-xl font-bold mb-3 mt-6">
-              Điểm Yếu Chết Người Của Trung tâm Điều hành An ninh (SOC) Truyền thống
-            </h3>
-            
-            <p className="mb-4 text-justify">
-              SOC truyền thống, dù đã và đang là nền tảng của an ninh doanh nghiệp, đang dần bộc lộ những giới hạn không thể vượt qua trong bối cảnh mới:
-            </p>
-
-            <ul className="list-disc ml-6 mb-6">
-              <li className="mb-3 text-justify">
-                <strong>Dựa trên Quy tắc (Rule-based):</strong> Hoạt động chủ yếu dựa trên các quy tắc và chữ ký đã được định sẵn. Điều này khiến chúng gần như "bó tay" trước các cuộc tấn công zero-day hoặc các kỹ thuật tấn công mới lạ chưa từng có trong cơ sở dữ liệu.
-              </li>
-              <li className="mb-3 text-justify">
-                <strong>Quá tải Cảnh báo (Alert Fatigue):</strong> Hàng ngàn cảnh báo được tạo ra mỗi ngày, nhưng phần lớn là nhiễu hoặc cảnh báo sai. Điều này làm các nhà phân tích kiệt sức, mất tập trung và dễ dàng bỏ qua những dấu hiệu quan trọng của một cuộc tấn công thực sự.
-              </li>
-              <li className="mb-3 text-justify">
-                <strong>Phản ứng Chậm:</strong> Quá trình điều tra một sự cố đòi hỏi nhiều bước thủ công, từ thu thập log, phân tích, đối chiếu… khiến thời gian phản ứng (Mean Time To Respond – MTTR) kéo dài hàng giờ, thậm chí hàng ngày. Đây là "thời gian vàng" để hacker leo thang đặc quyền và gây thiệt hại.
-              </li>
-              <li className="text-justify">
-                <strong>Chi phí Nhân sự Cao:</strong> Vận hành một SOC 24/7 đòi hỏi một đội ngũ chuyên gia an ninh mạng đông đảo và có tay nghề cao – một nguồn nhân lực vừa đắt đỏ vừa khan hiếm trên thị trường.
-              </li>
-            </ul>
-
-            <h3 className="text-xl font-bold mb-3 mt-6">
-              AI SOC: Kỷ nguyên mới của Trung tâm Điều hành An ninh
-            </h3>
-            
-            <p className="mb-4 text-justify">
-              Trước những thách thức đó, AI SOC ra đời không phải để thay thế SOC truyền thống, mà là một bước tiến hóa tất yếu. Đây là sự cộng hưởng sức mạnh giữa con người và máy móc, nơi Trí tuệ nhân tạo (AI) đóng vai trò một nhà phân tích an ninh siêu việt, không biết mệt mỏi, làm việc 24/7 để khuếch đại năng lực của các chuyên gia.
-            </p>
-
-            <p className="mb-6 text-justify">
-              Nền tảng an ninh mạng AI này sử dụng các thuật toán Machine Learning và Deep Learning để tự động phân tích một lượng dữ liệu khổng lồ, học hỏi các hành vi thông thường, và từ đó phát hiện những bất thường dù là nhỏ nhất. Nó biến SOC từ một trung tâm phản ứng bị động thành một bộ não phòng thủ chủ động và thông minh.
-            </p>
-
-            <h3 className="text-xl font-bold mb-3 mt-6">
-              Sức mạnh vượt trội của AI SOC: Tính năng và Giá trị Kinh doanh
-            </h3>
-            
-            <p className="mb-4 text-justify">
-              Giải pháp của chúng tôi mang lại sức mạnh vượt trội thông qua các công nghệ cốt lõi, giải quyết triệt để các vấn đề của SOC truyền thống.
-            </p>
-
-            <h4 className="text-lg font-bold mb-2">
-              1. Phân tích Hành vi Người dùng và Thực thể (UEBA)
-            </h4>
-            
-            <p className="mb-3 text-justify">
-              AI xây dựng một "đường cơ sở" (baseline) về hành vi bình thường cho mọi người dùng và thiết bị trong hệ thống: ai thường truy cập vào đâu, vào lúc nào, từ thiết bị nào. Bất kỳ sai lệch nào so với hành vi này, ví dụ một nhân viên kế toán đột nhiên truy cập vào máy chủ mã nguồn vào lúc 3 giờ sáng, sẽ ngay lập tức bị gắn cờ.
-            </p>
-
-            <ul className="list-disc ml-6 mb-4">
-              <li className="text-justify">
-                <strong>Lợi ích:</strong> Đây là vũ khí tối thượng để phát hiện mối đe dọa từ bên trong (insider threats) và các cuộc tấn công có chủ đích tinh vi (APTs) mà các hệ thống dựa trên quy tắc thường bỏ lọt.
-              </li>
-            </ul>
-
-            <h4 className="text-lg font-bold mb-2">
-              2. Tự động hóa Điều tra và Phản ứng (SOAR)
-            </h4>
-            
-            <p className="mb-3 text-justify">
-              Khi một mối đe dọa được xác thực, nền tảng SOAR sẽ tự động thực thi các kịch bản ứng phó (playbook) đã được định sẵn: tự động cô lập máy tính bị nhiễm mã độc khỏi mạng, vô hiệu hóa tài khoản bị xâm phạm, chặn địa chỉ IP của kẻ tấn công…
-            </p>
-
-            <ul className="list-disc ml-6 mb-4">
-              <li className="text-justify">
-                <strong>Lợi ích:</strong> Tự động hóa an ninh giúp giảm thời gian phản ứng sự cố (MTTR) từ hàng giờ xuống chỉ còn vài phút. Điều này giải phóng các chuyên gia khỏi các tác vụ lặp đi lặp lại, cho phép họ tập trung vào các nhiệm vụ chiến lược hơn như phân tích các mối đe dọa phức tạp.
-              </li>
-            </ul>
-
-            <h4 className="text-lg font-bold mb-2">
-              3. Săn lùng Mối đe dọa Chủ động (Proactive Threat Hunting)
-            </h4>
-            
-            <p className="mb-3 text-justify">
-              Thay vì chờ cảnh báo xuất hiện, AI liên tục "quét" qua toàn bộ dữ liệu mạng và hệ thống để tìm kiếm các dấu hiệu tấn công tiềm ẩn (Indicators of Compromise – IOCs) mà có thể đã vượt qua các lớp phòng thủ ban đầu.
-            </p>
-
-            <ul className="list-disc ml-6 mb-4">
-              <li className="text-justify">
-                <strong>Lợi ích:</strong> Giúp đội ngũ an ninh chuyển từ thế bị động sang chủ động, chặn đứng hacker trước khi chúng kịp gây ra thiệt hại đáng kể, giảm thiểu rủi ro cho toàn bộ doanh nghiệp.
-              </li>
-            </ul>
-
-            <h4 className="text-lg font-bold mb-2">
-              4. Giảm thiểu Cảnh báo sai (False Positive Reduction)
-            </h4>
-            
-            <p className="mb-3 text-justify">
-              Với khả năng học hỏi và phân tích ngữ cảnh, các mô hình AI/Machine Learning giúp sàng lọc và xếp hạng mức độ ưu tiên của các cảnh báo. Nó có thể phân biệt một cảnh báo nguy hiểm thực sự với một hoạt động bất thường nhưng vô hại.
-            </p>
-
-            <ul className="list-disc ml-6 mb-6">
-              <li className="text-justify">
-                <strong>Lợi ích:</strong> Giải quyết triệt để tình trạng "mệt mỏi vì cảnh báo". Đội ngũ an ninh có thể tập trung nguồn lực vào những gì quan trọng nhất, tăng hiệu suất làm việc và không bỏ lọt các mối nguy thực sự.
-              </li>
-            </ul>
-
-            <h3 className="text-xl font-bold mb-3 mt-6">
-              Kịch bản thực tế: AI SOC ngăn chặn một cuộc tấn công Ransomware
-            </h3>
-            
-            <p className="mb-3 text-justify">
-              Hãy tưởng tượng một nhân viên vô tình nhấp vào một email lừa đảo, mã độc bắt đầu âm thầm mã hóa dữ liệu.
-            </p>
-
-            <p className="mb-3 text-justify">
-              <strong>SOC truyền thống:</strong> Có thể sẽ chỉ nhận thấy khi đã quá muộn, lúc các cảnh báo về file bị thay đổi hàng loạt xuất hiện, hoặc khi người dùng báo cáo không thể truy cập dữ liệu.
-            </p>
-
-            <p className="mb-3 text-justify">
-              <strong>AI SOC hành động:</strong>
-            </p>
-
-            <ul className="list-disc ml-6 mb-6">
-              <li className="mb-2 text-justify">
-                UEBA phát hiện hành vi truy cập và ghi file bất thường từ tài khoản của nhân viên.
-              </li>
-              <li className="mb-2 text-justify">
-                Hệ thống AI ngay lập tức đối chiếu hành vi này với các mẫu tấn công ransomware đã biết.
-              </li>
-              <li className="text-justify">
-                SOAR tự động kích hoạt kịch bản ứng phó: ngắt kết nối máy tính đó khỏi mạng, vô hiệu hóa tài khoản người dùng để ngăn lây lan, và gửi cảnh báo ưu tiên cao nhất đến chuyên gia an ninh với đầy đủ thông tin phân tích. Cuộc tấn công bị vô hiệu hóa trong vài phút, trước khi có bất kỳ thiệt hại lớn nào xảy ra.
-              </li>
-            </ul>
-
-            <h3 className="text-xl font-bold mb-3 mt-6">
-              Tại sao chọn giải pháp AI SOC của chúng tôi?
-            </h3>
-            
-            <p className="mb-4 text-justify">
-              Chúng tôi không chỉ cung cấp một công cụ, chúng tôi mang đến một giải pháp toàn diện:
-            </p>
-
-            <ul className="list-disc ml-6 mb-6">
-              <li className="mb-3 text-justify">
-                <strong>Mô hình AI độc quyền:</strong> Được huấn luyện trên tập dữ liệu khổng lồ về các mối đe dọa toàn cầu, đảm bảo khả năng phát hiện chính xác và liên tục được cập nhật.
-              </li>
-              <li className="mb-3 text-justify">
-                <strong>Đội ngũ chuyên gia 24/7:</strong> Các chuyên gia an ninh mạng của chúng tôi luôn sẵn sàng hỗ trợ, phân tích và tư vấn cho đội ngũ của bạn.
-              </li>
-              <li className="mb-3 text-justify">
-                <strong>Nền tảng dễ dàng tích hợp:</strong> Giải pháp của chúng tôi có thể tích hợp mượt mà với các công cụ an ninh hiện có của bạn, tạo thành một hệ sinh thái phòng thủ hợp nhất.
-              </li>
-              <li className="text-justify">
-                <strong>Báo cáo trực quan cho ban lãnh đạo:</strong> Cung cấp các báo cáo và dashboard dễ hiểu, giúp các cấp lãnh đạo nắm bắt được tình hình an ninh của toàn doanh nghiệp.
-              </li>
-            </ul>
-
-            <h3 className="text-xl font-bold mb-3 mt-6">
-              Nâng cấp sức mạnh cho đội ngũ an ninh của bạn
-            </h3>
-            
-            <p className="mb-4 text-justify">
-              AI SOC không phải là sự thay thế, mà là sự nâng cấp sức mạnh tối thượng cho đội ngũ an ninh của bạn. Nó loại bỏ sự mệt mỏi, tăng cường sự tập trung và trao cho các chuyên gia khả năng nhìn thấu những gì mắt thường không thể thấy.
-            </p>
-
-            <p className="mb-4 text-justify">
-              Đừng để doanh nghiệp của bạn trở thành nạn nhân tiếp theo. Liên hệ với chúng tôi ngay hôm nay để yêu cầu một buổi Demo miễn phí giải pháp AI SOC và trực tiếp thấy sự khác biệt mà nó mang lại!
-            </p>
-          </main>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 auto-rows-max">
+            {features.map((feature, idx) => (
+              <ScrollReveal key={idx} direction="up" delay={idx * 100}>
+                <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center mb-6 shrink-0">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed flex-grow">{feature.description}</p>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
-      </div>
+      </Section>
 
+      <Section spacing="xl" background="muted">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="left">
+              <div>
+                <Badge className="mb-4 px-4 py-2">
+                  <Zap className="w-4 h-4 mr-2" />
+                  {t('aiSoc.why')}
+                </Badge>
+                <AnimatedHeading as="h2" gradient className="mb-6">
+                  {t('aiSoc.why')}
+                </AnimatedHeading>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Giải pháp AI SOC mang lại hiệu quả vượt trội so với SOC truyền thống
+                </p>
+                
+                <div className="space-y-4">
+                  {benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center shrink-0 mt-1">
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
+                      <p className="text-foreground">{benefit}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal direction="right">
+              <Card className="p-8 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 border-2 border-indigo-200 dark:border-indigo-800">
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
+                    <div>
+                      <div className="text-sm text-muted-foreground">Mối đe dọa phát hiện/tháng</div>
+                      <div className="text-3xl font-bold text-indigo-600">50K+</div>
+                    </div>
+                    <AlertTriangle className="w-12 h-12 text-indigo-500" />
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
+                    <div>
+                      <div className="text-sm text-muted-foreground">Thời gian phản ứng</div>
+                      <div className="text-3xl font-bold text-green-600">&lt;5min</div>
+                    </div>
+                    <Activity className="w-12 h-12 text-green-500" />
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
+                    <div>
+                      <div className="text-sm text-muted-foreground">Độ chính xác</div>
+                      <div className="text-3xl font-bold text-indigo-600">99.5%</div>
+                    </div>
+                    <Target className="w-12 h-12 text-indigo-500" />
+                  </div>
+                </div>
+              </Card>
+            </ScrollReveal>
+          </div>
+        </div>
+      </Section>
+
+      <Section spacing="xl" background="gradient">
+        <div className="container-responsive">
+          <ScrollReveal direction="up">
+            <Card className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 p-12 lg:p-20 text-center border-none">
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-300" />
+              </div>
+              <div className="relative z-10">
+                <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-10 h-10 text-white" />
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                  Bảo vệ doanh nghiệp với AI SOC
+                </h2>
+                <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                  Liên hệ với chúng tôi để được tư vấn giải pháp AI SOC phù hợp nhất
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    className="text-lg px-8 bg-white text-indigo-600 hover:bg-white/90 font-semibold"
+                  >
+                    {t('common.learnMore')}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    className="text-lg px-8 bg-white/20 text-white border-2 border-white hover:bg-white/30 font-semibold backdrop-blur-sm"
+                  >
+                    {t('common.contactUs')}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          </ScrollReveal>
+        </div>
+      </Section>
+      
       <Footer />
     </>
   )

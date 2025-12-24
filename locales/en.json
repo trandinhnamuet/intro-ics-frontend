@@ -93,18 +93,18 @@
       "scrollDown": "Scroll down"
     },
     "stats": {
-      "projectsCompleted": "Projects Completed",
       "enterpriseClients": "Enterprise Clients",
       "cybersecuritySupport": "Cybersecurity Support",
       "uptimeGuarantee": "Uptime Guarantee",
+      "yearsExperience": "Years Experience",
       "heading": "ICS in",
       "inNumbers": "numbers",
       "badge": "Featured Achievements"
     },
     "partners": {
+      "gurucul": "UEBA and next-generation SIEM solutions",
       "hyperg": "AI and Cloud-based cybersecurity solutions",
-      "oracle": "Leading database management systems",
-      "gamania": "Digital entertainment and cloud security"
+      "oracle": "Leading database management systems"
     },
     "whyChooseUs": {
       "title": "Why Choose ICS",
@@ -136,8 +136,8 @@
       "subtitle": "Discover our leading cybersecurity solutions",
       "aiSoc": "AI SOC",
       "aiSocDesc": "Security operations center equipped with advanced AI",
-      "csa": "CSA",
-      "csaDesc": "Comprehensive security assessment and audit solution",
+      "csaDlp": "CSA-DLP",
+      "csaDlpDesc": "Endpoint security and data loss prevention solution",
       "pentestServices": "Pentest Services",
       "pentestServicesDesc": "Professional penetration testing services",
       "vietguard": "Vietguard - Mobile App Security",
@@ -198,6 +198,22 @@
     "consulting": "Consulting",
     "smartBuilding": "Smart Building Solutions",
     "smartFactory": "Smart Factory Solutions",
+    "menu": {
+      "aboutCompany": "About ICS company",
+      "ourClients": "Our clients",
+      "smartBuildingDesc": "Smart building solutions",
+      "smartFactoryDesc": "Smart factory solutions",
+      "esgDesc": "ESG solutions for enterprises",
+      "aiSocDesc": "AI Security Operations Center",
+      "productDescriptions": {
+        "vietguard": "Security scanning tool",
+        "aiSoc": "Security analytics",
+        "csaDlp": "Endpoint security & DLP",
+        "pentest": "Security assessment",
+        "oracleCloud": "Cloud infrastructure",
+        "smartDashboard": "Management dashboard"
+      }
+    },
     "esgSolution": "ESG Solutions",
     "aiSoc": "AI SOC",
     "products": "Products",
@@ -247,6 +263,22 @@
     "programSubtitle": "Different partnership levels with various benefits and incentives",
     "platinum": "Platinum Partner",
     "gold": "Gold Partner",
+    "technologyPartners": "Technology Partners",
+    "technologyPartnersSubtitle": "Providers of software platforms, security solutions and data infrastructure",
+    "businessPartners": "Business Partners",
+    "businessPartnersSubtitle": "Organizations focused on commerce, training and human resources",
+    "guruculDesc": "Specializes in data security solutions, behavioral analytics (UEBA) and next-generation SIEM",
+    "hypergOracleDesc": "Alliance between Cloud security solutions (HyperG) and world-leading data infrastructure/enterprise management (Oracle)",
+    "cystackDesc": "Cybersecurity company specializing in vulnerability scanning and application security solutions",
+    "viesecurityDesc": "Organization specializing in information security services and solutions",
+    "locaAiDesc": "Focuses on practical Artificial Intelligence (AI) application solutions",
+    "irtechDesc": "Company specializing in outsourcing and developing software solutions, digital transformation",
+    "bluenetDesc": "Distributor or agent providing telecommunications/network services",
+    "bitcareDesc": "Service organization focused on support, maintenance and customer care in IT field",
+    "bigbenDesc": "Operating in product distribution or education/training services",
+    "tluDesc": "Partner providing human resources, research and training",
+    "aiAcademyDesc": "Organization focused on education, training and AI personnel supply",
+    "cathayDesc": "Financial/insurance group serving as strategic customer or financial services partner",
     "partnersGrid": "Our Partners",
     "partnersGridSubtitle": "Collaborating with world-leading technology corporations",
     "testimonials": "What our clients say about us",
@@ -257,7 +289,6 @@
     "downloadDocs": "Download Partnership Materials",
     "hypergDesc": "HyperG Security provides AI and Cloud-based cybersecurity solutions. Protecting businesses from all digital risks.",
     "oracleDesc": "Oracle is a leading technology corporation, providing database management systems, enterprise software, while developing cloud computing, AI and cybersecurity.",
-    "gamaniaDesc": "Gamania is a leading digital entertainment company, specializing in developing and publishing online games, expanding to electronic payment, cloud and cybersecurity.",
     "microsoftDesc": "Global technology partner in cloud and enterprise security.",
     "awsDesc": "Collaborating to deploy security solutions on AWS cloud platform.",
     "ciscoDesc": "Partner in network infrastructure and network security solutions.",
@@ -289,10 +320,10 @@
       "description2": "ICS focuses on security solutions for critical sectors, including: application protection, security for smart factories, smart buildings and particularly AI SOC management systems."
     },
     "stats": {
-      "projects": "Projects Completed",
       "clients": "Enterprise Customers",
       "support": "Customer Support",
-      "uptime": "Uptime Guarantee"
+      "uptime": "Uptime Guarantee",
+      "years": "Years Experience"
     },
     "team": {
       "title": "Professional Team",
@@ -445,6 +476,269 @@
     "title": "AI SOC - Security Operations Center",
     "subtitle": "Automated monitoring and response with AI",
     "badge": "AI SOC"
+  },
+  "products": {
+    "vietguard": {
+      "badge": "Mobile App Security",
+      "subtitle": "Security scanning and vulnerability detection tool for mobile applications",
+      "visitWebsite": "Visit Website",
+      "features": {
+        "title": "Features",
+        "heading": "Key Features of Vietguard",
+        "description": "Comprehensive solution to secure your mobile applications",
+        "scanning": {
+          "title": "Automated Scanning",
+          "description": "Automatically scan and detect security vulnerabilities in mobile apps"
+        },
+        "vulnerability": {
+          "title": "Vulnerability Detection",
+          "description": "Detect and alert critical security vulnerabilities"
+        },
+        "protection": {
+          "title": "Comprehensive Protection",
+          "description": "Protect applications from threats and attacks"
+        },
+        "compliance": {
+          "title": "Compliance Standards",
+          "description": "Ensure compliance with international security standards"
+        }
+      },
+      "benefits": {
+        "title": "Benefits",
+        "heading": "Why Choose Vietguard?",
+        "description": "Vietguard provides superior benefits for your mobile applications",
+        "item1": "Fast and automated vulnerability scanning and detection",
+        "item2": "Detailed and easy-to-understand security reports",
+        "item3": "Multi-platform support: iOS, Android",
+        "item4": "Continuously updated vulnerability database"
+      },
+      "stats": {
+        "scanned": "Apps Scanned",
+        "vulnerabilities": "Vulnerabilities Found",
+        "accuracy": "Accuracy"
+      },
+      "cta": {
+        "heading": "Protect Your Mobile Apps Today",
+        "description": "Contact us for consultation and free Vietguard trial"
+      }
+    },
+    "aiSoc": {
+      "badge": "AI Security Operations Center",
+      "subtitle": "AI-powered security operations center solution for automatic threat detection and response",
+      "features": {
+        "title": "Features",
+        "heading": "Key Features of AI SOC",
+        "description": "Comprehensive solution to protect your network systems",
+        "ueba": {
+          "title": "UEBA - Behavior Analytics",
+          "description": "Detect anomalous user and entity behavior using AI"
+        },
+        "threatDetection": {
+          "title": "Threat Detection",
+          "description": "Automatically detect and alert cybersecurity threats"
+        },
+        "automation": {
+          "title": "Response Automation",
+          "description": "Automatically respond and handle security incidents in real-time"
+        },
+        "monitoring": {
+          "title": "24/7 Monitoring",
+          "description": "Continuously monitor network systems and detect incidents promptly"
+        }
+      },
+      "benefits": {
+        "title": "Benefits",
+        "heading": "Why Choose AI SOC?",
+        "description": "AI SOC brings superior benefits to your enterprise",
+        "item1": "Fast threat detection with high accuracy",
+        "item2": "Reduce response time from hours to minutes",
+        "item3": "Automate incident analysis and response processes",
+        "item4": "Reduce workload for cybersecurity teams"
+      },
+      "stats": {
+        "threats": "Threats Detected/Month",
+        "responseTime": "Response Time",
+        "accuracy": "Accuracy"
+      },
+      "cta": {
+        "heading": "Protect Your Enterprise with AI SOC",
+        "description": "Contact us for consultation on the most suitable AI SOC solution"
+      }
+    },
+    "csaDlp": {
+      "badge": "Endpoint Security & DLP",
+      "subtitle": "Comprehensive endpoint security solution combined with data loss prevention, protecting devices and enterprise data",
+      "features": {
+        "title": "Features",
+        "heading": "Key Features of CSA-DLP",
+        "description": "Comprehensive solution to protect endpoints and enterprise data",
+        "endpoint": {
+          "title": "Endpoint Security",
+          "description": "Comprehensive protection for computers, laptops and mobile devices"
+        },
+        "dlp": {
+          "title": "Data Loss Prevention",
+          "description": "Prevent sensitive data leakage outside the organization"
+        },
+        "monitoring": {
+          "title": "Monitoring & Control",
+          "description": "Monitor activities and control data access"
+        },
+        "compliance": {
+          "title": "Regulatory Compliance",
+          "description": "Ensure compliance with data protection regulations"
+        }
+      },
+      "benefits": {
+        "title": "Benefits",
+        "heading": "Why Choose CSA-DLP?",
+        "description": "CSA-DLP provides comprehensive protection for enterprise data",
+        "item1": "Effectively prevent sensitive data leakage",
+        "item2": "Protect devices from malware and ransomware",
+        "item3": "Control data access and usage",
+        "item4": "Detailed reporting and regulatory compliance"
+      },
+      "stats": {
+        "endpoints": "Protected Endpoints",
+        "incidents": "Incidents Prevented",
+        "compliance": "Regulatory Compliance"
+      },
+      "cta": {
+        "heading": "Protect Enterprise Data with CSA-DLP",
+        "description": "Contact us for consultation on CSA-DLP solutions"
+      }
+    },
+    "pentestServices": {
+      "badge": "Penetration Testing Services",
+      "subtitle": "Professional penetration testing services to detect and fix security vulnerabilities before hackers exploit them",
+      "features": {
+        "title": "Features",
+        "heading": "Professional Pentest Services",
+        "description": "Comprehensive detection and remediation of security vulnerabilities",
+        "assessment": {
+          "title": "Vulnerability Assessment",
+          "description": "Comprehensive review and assessment of security vulnerabilities"
+        },
+        "exploitation": {
+          "title": "Exploitation Testing",
+          "description": "Simulate real attacks to test security levels"
+        },
+        "reporting": {
+          "title": "Detailed Reporting",
+          "description": "Complete reports on vulnerabilities and remediation guidelines"
+        },
+        "remediation": {
+          "title": "Remediation Support",
+          "description": "Consulting and support to fix discovered vulnerabilities"
+        }
+      },
+      "benefits": {
+        "title": "Benefits",
+        "heading": "Why Choose Pentest Services?",
+        "description": "Pentest helps you proactively detect and fix vulnerabilities",
+        "item1": "Detect vulnerabilities before real attacks occur",
+        "item2": "Comprehensive security status assessment",
+        "item3": "Detailed reports with specific remediation guidelines",
+        "item4": "Comply with international security standards"
+      },
+      "stats": {
+        "tests": "Pentest Projects Completed",
+        "vulnerabilities": "Vulnerabilities Found",
+        "success": "Success Rate"
+      },
+      "cta": {
+        "heading": "Assess Cybersecurity with Pentest",
+        "description": "Contact us for consultation on suitable Pentest services"
+      }
+    },
+    "oracleCloud": {
+      "badge": "Cloud Computing",
+      "subtitle": "Leading cloud computing solution from Oracle with high performance, superior security and optimized costs",
+      "visitWebsite": "Visit Website",
+      "features": {
+        "title": "Features",
+        "heading": "Key Features of Oracle Cloud",
+        "description": "Comprehensive cloud solution for modern enterprises",
+        "compute": {
+          "title": "Compute & VM",
+          "description": "Powerful virtual servers with high performance and flexible scalability"
+        },
+        "database": {
+          "title": "Database Cloud",
+          "description": "World's leading database management system on cloud platform"
+        },
+        "security": {
+          "title": "Superior Security",
+          "description": "Multi-layer security with advanced encryption and access control"
+        },
+        "network": {
+          "title": "Global Network",
+          "description": "Global network infrastructure with low latency and high bandwidth"
+        }
+      },
+      "benefits": {
+        "title": "Benefits",
+        "heading": "Why Choose Oracle Cloud?",
+        "description": "Oracle Cloud delivers optimal performance and security",
+        "item1": "Superior performance with competitive costs",
+        "item2": "Multi-layer security with advanced features",
+        "item3": "Multi-platform support and easy integration",
+        "item4": "Professional 24/7 support team"
+      },
+      "stats": {
+        "regions": "Global Regions",
+        "uptime": "Uptime",
+        "customers": "Global Customers"
+      },
+      "cta": {
+        "heading": "Digital Transformation with Oracle Cloud",
+        "description": "Contact us for consultation on Oracle Cloud solutions"
+      }
+    },
+    "smartDashboard": {
+      "badge": "Smart Monitoring",
+      "subtitle": "Smart dashboard system with real-time data analytics for efficient business management and monitoring",
+      "visitWebsite": "Visit Website",
+      "features": {
+        "title": "Features",
+        "heading": "Key Features of Smart Dashboard",
+        "description": "Smart monitoring and data analytics solution",
+        "realtime": {
+          "title": "Real-time Tracking",
+          "description": "Monitor data and activities in real-time"
+        },
+        "analytics": {
+          "title": "Advanced Analytics",
+          "description": "Data analytics with AI and machine learning"
+        },
+        "reporting": {
+          "title": "Automated Reporting",
+          "description": "Generate automated reports with visual charts"
+        },
+        "visualization": {
+          "title": "Data Visualization",
+          "description": "Display data visually with diverse charts"
+        }
+      },
+      "benefits": {
+        "title": "Benefits",
+        "heading": "Why Choose Smart Dashboard?",
+        "description": "Smart Dashboard helps manage business more efficiently",
+        "item1": "Centralized monitoring of all business activities",
+        "item2": "Make quick decisions based on real data",
+        "item3": "Customize dashboard to specific needs",
+        "item4": "Easy integration with existing systems"
+      },
+      "stats": {
+        "dashboards": "Dashboards Deployed",
+        "dataPoints": "Data Points Processed",
+        "realtime": "Real-time Monitoring"
+      },
+      "cta": {
+        "heading": "Manage Business with Smart Dashboard",
+        "description": "Contact us for demo and consultation on Smart Dashboard"
+      }
+    }
   },
   "sidebar": {
     "aboutICS": "ABOUT ICS",

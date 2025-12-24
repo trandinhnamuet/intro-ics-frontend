@@ -38,7 +38,7 @@ export default function ContactPage() {
             {/* Main Content */}
             <div className="flex-1">
               {/* Three Column Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 auto-rows-max">
           {/* Company Info Card */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 flex items-center gap-4">

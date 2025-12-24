@@ -92,12 +92,14 @@
       "scrollDown": "向下滚动"
     },
     "stats": {
-      "projectsCompleted": "完成的项目",
       "enterpriseClients": "企业客户",
       "cybersecuritySupport": "网络安全支持",
       "uptimeGuarantee": "正常运行时间保证",
+      "yearsExperience": "年经验",
       "heading": "ICS的",
       "inNumbers": "数字",
+      "badge": "突出成就"
+    },
       "badge": "显著成就"
     },
     "partners": {
@@ -187,7 +189,23 @@
     "contact": "联系",
     "searchPlaceholder": "搜索文章...",
     "search": "搜索",
-    "contactUs": "联系我们"
+    "contactUs": "联系我们",
+    "menu": {
+      "aboutCompany": "关于公司ICS",
+      "ourClients": "我们的客户",
+      "smartBuildingDesc": "智能建筑解决方案",
+      "smartFactoryDesc": "智能工厂解决方案",
+      "esgDesc": "企业ESG解决方案",
+      "aiSocDesc": "AI安全运营中心",
+      "productDescriptions": {
+        "vietguard": "安全扫描工具",
+        "aiSoc": "安全分析",
+        "csaDlp": "端点安全和DLP",
+        "pentest": "安全评估",
+        "oracleCloud": "云基础设施",
+        "smartDashboard": "管理仪表板"
+      }
+    }
   },
   "footer": {
     "companyName": "国际网络安全股份有限公司 - ICS",
@@ -219,10 +237,27 @@
     "title": "我们的合作伙伴",
     "subtitle": "共同构建强大的网络安全生态系统",
     "badge": "合作伙伴",
+    "intro": "与世界领先品牌合作",
     "programTitle": "合作伙伴计划",
     "programSubtitle": "不同合作级别提供各种福利和激励",
     "platinum": "白金合作伙伴",
     "gold": "黄金合作伙伴",
+    "technologyPartners": "技术合作伙伴",
+    "technologyPartnersSubtitle": "软件平台、安全解决方案和数据基础设施提供商",
+    "businessPartners": "业务合作伙伴",
+    "businessPartnersSubtitle": "专注于商业、培训和人力资源供应的组织",
+    "guruculDesc": "专注于数据安全解决方案、行为分析(UEBA)和下一代SIEM",
+    "hypergOracleDesc": "云安全解决方案(HyperG)与世界领先的数据基础设施/企业管理(Oracle)的联盟",
+    "cystackDesc": "专门从事漏洞扫描和应用安全解决方案的网络安全公司",
+    "viesecurityDesc": "专门从事信息安全服务和解决方案的组织",
+    "locaAiDesc": "专注于将人工智能(AI)应用于实践的解决方案",
+    "irtechDesc": "专门从事外包和开发软件解决方案、数字化转型的公司",
+    "bluenetDesc": "提供电信/网络服务的分销商或代理",
+    "bitcareDesc": "专注于IT领域的支持、维护和客户关怀的服务组织",
+    "bigbenDesc": "从事产品分销或教育/培训服务",
+    "tluDesc": "提供人力资源、研究和培训的合作伙伴",
+    "aiAcademyDesc": "专注于教育、培训和AI人才供应的组织",
+    "cathayDesc": "作为战略客户或金融服务合作伙伴的金融/保险集团",
     "partnersGrid": "我们的合作伙伴",
     "partnersGridSubtitle": "与世界领先的科技企业合作",
     "testimonials": "客户评价",
@@ -233,7 +268,6 @@
     "downloadDocs": "下载合作资料",
     "hypergDesc": "HyperG Security提供基于AI和云的网络安全解决方案。保护企业免受所有数字风险。",
     "oracleDesc": "Oracle是领先的技术公司，提供数据库管理系统、企业软件，同时开发云计算、AI和网络安全。",
-    "gamaniaDesc": "Gamania是领先的数字娱乐公司，专注于开发和发行在线游戏，并扩展到电子支付、云和网络安全领域。",
     "microsoftDesc": "云和企业安全领域的全球技术合作伙伴。",
     "awsDesc": "合作在AWS云平台上部署安全解决方案。",
     "ciscoDesc": "网络基础设施和网络安全解决方案合作伙伴。",
@@ -247,6 +281,11 @@
       "marketingSupport": "营销支持",
       "competitiveRebate": "有竞争力的返利"
     }
+  },
+  "newsletter": {
+    "title": "订阅以接收有关网络安全和技术解决方案的最新信息。",
+    "email": "您的邮箱",
+    "certifications": "认证与合作伙伴"
   },
   "about": {
     "title": "关于ICS",
@@ -384,6 +423,15 @@
     "title": "联系我们",
     "subtitle": "让我们帮助您保护业务",
     "badge": "联系",
+    "companyInfo": "公司信息",
+    "companyName": "国际网络安全股份有限公司 - ICS",
+    "contactInfo": "联系信息",
+    "hanoiOffice": "河内办公室",
+    "phone": "电话和热线",
+    "email": "电子邮件",
+    "website": "网站",
+    "location": "地图位置",
+    "locationSubtitle": "查找到我们办公室的路线",
     "videoNotSupported": "您的浏览器不支持视频。"
   },
   "recruitment": {
@@ -396,22 +444,400 @@
   "smartBuilding": {
     "title": "智能建筑解决方案",
     "subtitle": "建筑的全面自动化和安全",
-    "badge": "智能建筑"
+    "badge": "智能建筑",
+    "banner": "智能建筑解决方案",
+    "mainHeading": "新一代智能建筑解决方案",
+    "mainDescription": "我们的系统使用人工智能(AI)和物联网(IoT)实时收集运营数据,自动分析并做出智能决策。结果是一个不仅能够"反应"，还能够"适应"和"预测"的建筑，在各个方面实现卓越的效率。",
+    "featuresHeading": "核心功能和卓越优势",
+    "featuresDesc": "智能建筑解决方案建立在坚实的技术支柱之上，每个支柱都能带来明确的经济价值和体验。",
+    "feature1": {
+      "title": "1. 智能能源管理系统(EMS)",
+      "desc": "系统使用AI算法分析使用习惯、天气条件和人员存在。从而自动优化空调和照明系统的运行 - 在无人区域关闭设备，根据时间表调整温度，并最大限度地利用自然光。",
+      "benefit": "这是最强大的财务杠杆。我们的解决方案帮助每月节省30-40%的电力成本，对于大型建筑来说这是一个巨大的数字。此外，为建筑节约能源还有助于减少碳足迹，这对绿色建筑认证是一个重要加分项，提升品牌的可持续形象。"
+    },
+    "feature2": {
+      "title": "2. 集成安全和智能门禁控制",
+      "desc": "我们整合AI监控摄像系统、通过面部识别、卡片或手机应用的门禁控制。系统能够自动识别异常行为，立即向安全团队发出警报，并存储数据以便需要时轻松追溯。",
+      "benefit": "提供绝对安全的环境和24/7智能安全。访问管理变得无缝和轻松，消除了复杂的手动流程。对于管理层来说，追溯和导出安全报告只需几次点击。"
+    },
+    "feature3": {
+      "title": "3. 设施自动化(空调、照明、窗帘)",
+      "desc": "用户只需在移动应用上进行几次操作就能个性化他们的工作或生活空间。此外，系统可以根据阳光方向自动调整窗帘，根据房间内的人数调整灯光和温度。",
+      "benefit": "提供最大的便利和舒适，直接提升建筑使用者的体验和满意度。对于出租办公室，这是吸引顶级公司的宝贵竞争因素。"
+    },
+    "feature4": {
+      "title": "4. 集中建筑管理平台(BMS)",
+      "desc": "来自子系统(能源、安全、消防、暖通空调等)的所有信息都直观地显示在单个仪表板上。从这里，运营团队可以监控、控制并接收有关建筑所有活动的报告。",
+      "benefit": "使建筑管理比以往更加高效。管理层可以减少运营人员，更快速、更准确地做出决策。特别是，系统能够及早发现设备异常迹象，帮助在故障发生前预防。"
+    },
+    "feature5": {
+      "title": "5. 数据分析和智能报告",
+      "desc": "数据就是黄金。我们的系统不断收集和分析运营数据，从而生成智能报告并提供具体的改进建议(例如："5楼区域周末能耗异常偏高")。",
+      "benefit": "帮助业主和管理层基于数据而非感觉做出决策。这是长期持续优化运营效率和降低成本的关键。"
+    },
+    "whyHeading": "为什么选择ICS的解决方案?",
+    "whyIntro": "市场上有很多选择，但ICS的解决方案通过以下方面创造差异化:",
+    "why1": "专有AI技术:我们不仅按照脚本自动化，还使用AI让系统自我学习并变得越来越智能。",
+    "why2": "经验丰富的专家团队:我们提供从咨询、设计、实施到维护的全面解决方案。",
+    "why3": "24/7支持服务:确保您的系统始终稳定运行并及时获得支持。",
+    "why4": "灵活的定制和扩展能力:我们的解决方案采用模块化设计，易于根据建筑发展规模进行定制和升级。",
+    "futureHeading": "为您的建筑创造未来",
+    "futureText": "智能建筑不仅仅是一座建筑 - 它是一个智能、可持续且充满灵感的生活和工作环境。它有助于降低成本、增强安全性、提高资产价值并吸引最好的客户。今天投资智能建筑解决方案就是投资明天的成功。"
   },
   "smartFactory": {
     "title": "智能工厂解决方案",
     "subtitle": "制造自动化和工业安全",
-    "badge": "智能工厂"
+    "badge": "智能工厂",
+    "banner": "智能工厂解决方案",
+    "mainHeading": "新一代智能工厂解决方案",
+    "mainDescription": "我们的系统使用人工智能(AI)和物联网(IoT)实时收集运营数据，自动分析并做出智能决策。结果是一个不仅能够"反应"，还能够"适应"和"预测"的工厂，在各个方面实现卓越的效率。",
+    "featuresHeading": "核心功能和卓越优势",
+    "featuresDesc": "智能工厂解决方案建立在坚实的技术支柱之上，每个支柱都能带来明确的经济价值和体验。",
+    "feature1": {
+      "title": "1. 智能能源管理系统(EMS)",
+      "desc": "系统使用AI算法分析使用习惯、天气条件和人员存在。从而自动优化空调和照明系统的运行。",
+      "benefit": "帮助每月节省30-40%的电力成本，对于大型工厂来说这是一个巨大的数字。"
+    },
+    "feature2": {
+      "title": "2. 集成安全和智能门禁控制",
+      "desc": "我们整合AI监控摄像系统、通过面部识别、卡片或手机应用的门禁控制。",
+      "benefit": "提供绝对安全的环境和24/7智能安全。"
+    },
+    "feature3": {
+      "title": "3. 设施自动化(空调、照明、窗帘)",
+      "desc": "用户只需在移动应用上进行几次操作就能个性化他们的工作空间。",
+      "benefit": "提供最大的便利和舒适，直接提升体验和工作效率。"
+    },
+    "feature4": {
+      "title": "4. 集中工厂管理平台(MES)",
+      "desc": "来自子系统的所有信息都直观地显示在单个仪表板上。",
+      "benefit": "使工厂管理比以往更加高效，更快速、更准确地做出决策。"
+    },
+    "feature5": {
+      "title": "5. 数据分析和智能报告",
+      "desc": "系统不断收集和分析运营数据，从而生成智能报告。",
+      "benefit": "帮助管理层基于数据做出决策，优化运营效率并降低成本。"
+    },
+    "whyHeading": "为什么选择ICS的解决方案?",
+    "whyIntro": "市场上有很多选择，但ICS的解决方案通过以下方面创造差异化:",
+    "why1": "专有AI技术:我们不仅按照脚本自动化，还使用AI让系统自我学习。",
+    "why2": "经验丰富的专家团队:我们提供从咨询、设计、实施到维护的全面解决方案。",
+    "why3": "24/7支持服务:确保您的系统始终稳定运行。",
+    "why4": "灵活的定制和扩展能力:我们的解决方案采用模块化设计。",
+    "futureHeading": "为您的工厂创造未来",
+    "futureText": "智能工厂不仅仅是一个生产设施 - 它是一个智能、可持续且充满灵感的工作环境。它有助于降低成本、增强安全性、提高生产力并吸引最优秀的人才。今天投资智能工厂解决方案就是投资明天的成功。"
   },
   "esg": {
     "title": "ESG解决方案",
     "subtitle": "企业可持续发展",
-    "badge": "ESG"
+    "badge": "ESG",
+    "mainTitle": "ESG:从合规压力到竞争优势 - 越南企业的战略路线图",
+    "intro": "ESG:从合规压力到竞争优势 - 越南企业的战略路线图",
+    "description": "在扁平化世界和充满变数的商业时代，企业的成功衡量标准不再仅仅是财务报表上的利润数字。一场全球性的转变正在发生，企业的价值由那些无形但强大的因素塑造：对环境的责任、对社会的承诺以及治理的透明度。这就是ESG(环境-社会-治理)的三大支柱。",
+    "part1": "第一部分:为什么ESG是您不能置身事外的"战略棋局"?",
+    "part2": "第二部分:征服ESG之路上的障碍",
+    "part3": "第三部分:我们的ESG战略咨询服务 - 通往可持续发展的四步路线图",
+    "why": "为什么选择我们作为战略合作伙伴?"
   },
   "aiSoc": {
     "title": "AI SOC - 安全运营中心",
     "subtitle": "AI自动监控和响应",
-    "badge": "AI SOC"
+    "badge": "AI SOC",
+    "mainTitle": "AI SOC:重新定义网络安全 - 从被动反应到预测防御",
+    "intro": "AI SOC:重新定义网络安全 - 从被动反应到预测防御",
+    "problem": "传统安全运营中心(SOC)的致命弱点",
+    "solution": "AI SOC:安全运营中心的新时代",
+    "features": "AI SOC的卓越实力:功能和商业价值",
+    "why": "为什么选择我们的AI SOC解决方案?"
+  },
+  "contactForm": {
+    "name": "姓名",
+    "namePlaceholder": "输入姓名",
+    "email": "电子邮件",
+    "emailPlaceholder": "输入电子邮件",
+    "phone": "电话号码",
+    "phonePlaceholder": "输入电话号码",
+    "content": "内容",
+    "contentPlaceholder": "输入联系内容",
+    "send": "发送联系"
+  },
+  "contactInfo": {
+    "title": "公司信息",
+    "companyName": "国际网络安全股份有限公司 - ICS",
+    "hanoiOffice": "河内办公室",
+    "address": "河内定公大金新城区TT3-5",
+    "contactDetails": "联系信息",
+    "phone": "电话和热线",
+    "phoneNumber": "0707.806.860",
+    "email": "电子邮件",
+    "emailAddress": "info@icss.com.vn",
+    "website": "网站",
+    "websiteUrl": "www.icss.com.vn",
+    "map": "地图位置",
+    "directions": "查找到我们办公室的路线"
+  },
+  "products": {
+    "vietguard": {
+      "badge": "移动应用安全",
+      "subtitle": "移动应用程序安全扫描和漏洞检测工具",
+      "visitWebsite": "访问网站",
+      "features": {
+        "title": "功能",
+        "heading": "Vietguard的主要功能",
+        "description": "全面保护您的移动应用的解决方案",
+        "scanning": {
+          "title": "自动扫描",
+          "description": "自动扫描和检测移动应用中的安全漏洞"
+        },
+        "vulnerability": {
+          "title": "漏洞检测",
+          "description": "检测并警告严重的安全漏洞"
+        },
+        "protection": {
+          "title": "全面保护",
+          "description": "保护应用免受威胁和攻击"
+        },
+        "compliance": {
+          "title": "标准合规",
+          "description": "确保符合国际安全标准"
+        }
+      },
+      "benefits": {
+        "title": "优势",
+        "heading": "为什么选择Vietguard?",
+        "description": "Vietguard为您的移动应用带来卓越优势",
+        "item1": "自动、快速扫描和检测漏洞",
+        "item2": "详细且易懂的安全问题报告",
+        "item3": "多平台支持:iOS、Android",
+        "item4": "持续更新最新漏洞数据库"
+      },
+      "stats": {
+        "scanned": "已扫描应用",
+        "vulnerabilities": "发现的漏洞",
+        "accuracy": "准确率"
+      },
+      "cta": {
+        "heading": "今天就保护您的移动应用",
+        "description": "联系我们获取咨询并免费试用Vietguard"
+      }
+    },
+    "aiSoc": {
+      "badge": "AI安全运营中心",
+      "subtitle": "配备先进AI的安全运营中心解决方案，自动检测和响应威胁",
+      "features": {
+        "title": "功能",
+        "heading": "AI SOC的主要功能",
+        "description": "全面保护您的网络系统的解决方案",
+        "ueba": {
+          "title": "UEBA - 行为分析",
+          "description": "使用AI检测用户和实体的异常行为"
+        },
+        "threatDetection": {
+          "title": "威胁检测",
+          "description": "自动检测和警告网络安全威胁"
+        },
+        "automation": {
+          "title": "响应自动化",
+          "description": "实时自动响应和处理安全事件"
+        },
+        "monitoring": {
+          "title": "24/7监控",
+          "description": "持续监控网络系统并及时检测事件"
+        }
+      },
+      "benefits": {
+        "title": "优势",
+        "heading": "为什么选择AI SOC?",
+        "description": "AI SOC为您的企业带来卓越优势",
+        "item1": "高准确度快速检测威胁",
+        "item2": "将响应时间从小时减少到分钟",
+        "item3": "自动化分析和事件处理流程",
+        "item4": "减轻网络安全团队的工作负担"
+      },
+      "stats": {
+        "threats": "检测到的威胁/月",
+        "responseTime": "响应时间",
+        "accuracy": "准确率"
+      },
+      "cta": {
+        "heading": "使用AI SOC保护企业",
+        "description": "联系我们获取最合适的AI SOC解决方案咨询"
+      }
+    },
+    "csaDlp": {
+      "badge": "端点安全和DLP",
+      "subtitle": "端点安全与数据防泄漏综合解决方案，保护设备和企业数据",
+      "features": {
+        "title": "功能",
+        "heading": "CSA-DLP的主要功能",
+        "description": "全面保护端点和企业数据的解决方案",
+        "endpoint": {
+          "title": "端点安全",
+          "description": "全面保护计算机、笔记本电脑和移动设备"
+        },
+        "dlp": {
+          "title": "数据防泄漏",
+          "description": "防止敏感数据泄露到组织外部"
+        },
+        "monitoring": {
+          "title": "监控和控制",
+          "description": "监控活动并控制数据访问"
+        },
+        "compliance": {
+          "title": "法规合规",
+          "description": "确保符合数据保护法规"
+        }
+      },
+      "benefits": {
+        "title": "优势",
+        "heading": "为什么选择CSA-DLP?",
+        "description": "CSA-DLP为企业数据提供全面保护",
+        "item1": "有效防止敏感数据泄露",
+        "item2": "保护设备免受恶意软件和勒索软件攻击",
+        "item3": "控制数据访问和使用",
+        "item4": "详细报告和法规合规"
+      },
+      "stats": {
+        "endpoints": "受保护的端点",
+        "incidents": "阻止的事件",
+        "compliance": "合规性"
+      },
+      "cta": {
+        "heading": "使用CSA-DLP保护企业数据",
+        "description": "联系我们获取CSA-DLP解决方案咨询"
+      }
+    },
+    "pentestServices": {
+      "badge": "渗透测试服务",
+      "subtitle": "专业渗透测试服务，在黑客利用之前发现并修复安全漏洞",
+      "features": {
+        "title": "功能",
+        "heading": "专业渗透测试服务",
+        "description": "全面发现和修复安全漏洞",
+        "assessment": {
+          "title": "漏洞评估",
+          "description": "全面审查和评估安全漏洞"
+        },
+        "exploitation": {
+          "title": "利用测试",
+          "description": "模拟实际攻击以测试安全级别"
+        },
+        "reporting": {
+          "title": "详细报告",
+          "description": "完整的漏洞报告和修复指南"
+        },
+        "remediation": {
+          "title": "修复支持",
+          "description": "咨询并支持修复发现的漏洞"
+        }
+      },
+      "benefits": {
+        "title": "优势",
+        "heading": "为什么选择渗透测试服务?",
+        "description": "渗透测试帮助您主动发现和修复漏洞",
+        "item1": "在实际攻击发生前发现漏洞",
+        "item2": "全面评估安全状况",
+        "item3": "详细报告和具体修复指南",
+        "item4": "符合国际安全标准"
+      },
+      "stats": {
+        "tests": "完成的渗透测试项目",
+        "vulnerabilities": "发现的漏洞",
+        "success": "成功率"
+      },
+      "cta": {
+        "heading": "使用渗透测试评估网络安全",
+        "description": "联系我们获取合适的渗透测试服务咨询"
+      }
+    },
+    "oracleCloud": {
+      "badge": "云计算",
+      "subtitle": "Oracle领先的云计算解决方案，具有高性能、卓越安全性和优化成本",
+      "visitWebsite": "访问网站",
+      "features": {
+        "title": "功能",
+        "heading": "Oracle Cloud的主要功能",
+        "description": "面向现代企业的全面云解决方案",
+        "compute": {
+          "title": "计算和虚拟机",
+          "description": "具有高性能和灵活可扩展性的强大虚拟服务器"
+        },
+        "database": {
+          "title": "数据库云",
+          "description": "云平台上世界领先的数据库管理系统"
+        },
+        "security": {
+          "title": "卓越安全",
+          "description": "具有先进加密和访问控制的多层安全"
+        },
+        "network": {
+          "title": "全球网络",
+          "description": "具有低延迟和高带宽的全球网络基础设施"
+        }
+      },
+      "benefits": {
+        "title": "优势",
+        "heading": "为什么选择Oracle Cloud?",
+        "description": "Oracle Cloud提供最佳性能和安全性",
+        "item1": "具有竞争力成本的卓越性能",
+        "item2": "具有先进功能的多层安全",
+        "item3": "多平台支持和易于集成",
+        "item4": "专业的24/7支持团队"
+      },
+      "stats": {
+        "regions": "全球区域",
+        "uptime": "正常运行时间",
+        "customers": "全球客户"
+      },
+      "cta": {
+        "heading": "使用Oracle Cloud进行数字化转型",
+        "description": "联系我们获取Oracle Cloud解决方案咨询"
+      }
+    },
+    "smartDashboard": {
+      "badge": "智能监控",
+      "subtitle": "具有实时数据分析的智能仪表板系统，用于高效的业务管理和监控",
+      "visitWebsite": "访问网站",
+      "features": {
+        "title": "功能",
+        "heading": "Smart Dashboard的主要功能",
+        "description": "智能监控和数据分析解决方案",
+        "realtime": {
+          "title": "实时跟踪",
+          "description": "实时监控数据和活动"
+        },
+        "analytics": {
+          "title": "高级分析",
+          "description": "使用AI和机器学习进行数据分析"
+        },
+        "reporting": {
+          "title": "自动报告",
+          "description": "使用可视化图表生成自动报告"
+        },
+        "visualization": {
+          "title": "数据可视化",
+          "description": "使用各种图表可视化显示数据"
+        }
+      },
+      "benefits": {
+        "title": "优势",
+        "heading": "为什么选择Smart Dashboard?",
+        "description": "Smart Dashboard帮助更有效地管理业务",
+        "item1": "集中监控所有业务活动",
+        "item2": "基于实际数据快速做出决策",
+        "item3": "根据特定需求定制仪表板",
+        "item4": "与现有系统轻松集成"
+      },
+      "stats": {
+        "dashboards": "已部署的仪表板",
+        "dataPoints": "处理的数据点",
+        "realtime": "实时监控"
+      },
+      "cta": {
+        "heading": "使用Smart Dashboard管理业务",
+        "description": "联系我们获取Smart Dashboard的演示和咨询"
+      }
+    }
   },
   "sidebar": {
     "aboutICS": "ICS介绍",

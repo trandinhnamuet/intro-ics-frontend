@@ -17,39 +17,39 @@ const products = [
     nameKey: "aiSoc",
     descriptionKey: "aiSocDesc", 
     image: "https://www.cisco.com/content/dam/cisco-cdc/site/images/photography/homepage/nexus-dashboard-800x600.jpg",
-    link: "#",
+    link: "/products/ai-soc",
     icon: Activity,
     color: "from-blue-500 to-cyan-500",
   },
   {
-    nameKey: "csa",
-    descriptionKey: "csaDesc",
+    nameKey: "csaDlp",
+    descriptionKey: "csaDlpDesc",
     image: "https://www.cisco.com/content/dam/cisco-cdc/site/images/photography/homepage/2025/cisco-unified-edge-hardware-768x576.jpg",
-    link: "#",
+    link: "/products/csa-dlp",
     icon: Shield,
     color: "from-purple-500 to-pink-500",
-  },
-  {
-    nameKey: "pentestServices", 
-    descriptionKey: "pentestServicesDesc",
-    image: "https://www.cisco.com/content/dam/cisco-cdc/site/images/photography/homepage/splunk-enterprise-security-800x600.jpg",
-    link: "https://vietguardscan.icss.com.vn/",
-    icon: Lock,
-    color: "from-orange-500 to-red-500",
   },
   {
     nameKey: "vietguard",
     descriptionKey: "vietguardDesc",
     image: "https://icss.com.vn/wp-content/uploads/2025/08/Screenshot-2025-08-07-174127-300x167.png",
-    link: "http://vietguardscan.icss.com.vn/",
+    link: "/products/vietguard",
     icon: Shield,
     color: "from-green-500 to-emerald-500",
+  },
+  {
+    nameKey: "pentestServices", 
+    descriptionKey: "pentestServicesDesc",
+    image: "https://www.cisco.com/content/dam/cisco-cdc/site/images/photography/homepage/splunk-enterprise-security-800x600.jpg",
+    link: "/products/pentest-services",
+    icon: Lock,
+    color: "from-orange-500 to-red-500",
   },
   {
     nameKey: "oracleCloud",
     descriptionKey: "oracleCloudDesc",
     image: "https://icss.com.vn/wp-content/uploads/2025/06/oracle_2_ac4dac9f3d.jpg",
-    link: "http://oraclecloud.vn/",
+    link: "/products/oracle-cloud",
     icon: Cloud,
     color: "from-red-500 to-orange-500",
   },
@@ -57,7 +57,7 @@ const products = [
     nameKey: "smartDashboard",
     descriptionKey: "smartDashboardDesc", 
     image: "https://icss.com.vn/wp-content/uploads/2025/06/Thiet-ke-chua-co-ten-39.jpg",
-    link: "http://smartdashboard.vn/",
+    link: "/products/smart-dashboard",
     icon: BarChart3,
     color: "from-indigo-500 to-blue-500",
   },
@@ -79,7 +79,7 @@ export function ProductsSection() {
         {t('home.products.subtitle')}
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-max">
         {displayedProducts.map((product, index) => {
           const Icon = product.icon
           
@@ -91,7 +91,7 @@ export function ProductsSection() {
             >
               <Card 
                 className={cn(
-                  "group relative overflow-hidden bg-card border-none shadow-lg hover:shadow-2xl transition-all duration-500",
+                  "group relative overflow-hidden bg-card border-none shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col",
                   "transform hover:-translate-y-3"
                 )}
                 onMouseEnter={() => setHoveredIndex(index)}
@@ -137,7 +137,7 @@ export function ProductsSection() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-4">
+                <div className="p-6 space-y-4 flex flex-col flex-grow">
                   <h3 className={cn(
                     "text-2xl font-bold transition-all duration-300",
                     hoveredIndex === index && "gradient-text"
@@ -145,7 +145,7 @@ export function ProductsSection() {
                     {t(`home.products.${product.nameKey}`)}
                   </h3>
                   
-                  <p className="text-muted-foreground leading-relaxed line-clamp-3">
+                  <p className="text-muted-foreground leading-relaxed line-clamp-3 flex-grow">
                     {t(`home.products.${product.descriptionKey}`)}
                   </p>
                   
@@ -154,12 +154,12 @@ export function ProductsSection() {
                     asChild
                     variant="ghost"
                     className={cn(
-                      "w-full group/btn transition-all duration-300 rounded-full font-semibold",
+                      "w-full group/btn transition-all duration-300 rounded-full font-semibold mt-auto",
                       "hover:bg-gradient-to-r hover:text-white border-2",
                       `hover:${product.color}`
                     )}
                   >
-                    <Link href={product.link} target={product.link.startsWith("http") ? "_blank" : undefined}>
+                    <Link href={product.link}>
                       <span className="flex items-center justify-center gap-2">
                         {t('home.products.explore')}
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />

@@ -8,6 +8,17 @@ import ko from '../locales/ko.json'
 
 const isClient = typeof window !== 'undefined'
 
+const supportedLngs = ['vi', 'en', 'zh', 'ja', 'ko']
+
+// Determine initial language (prefer saved on client)
+let initialLng = 'vi'
+if (isClient) {
+  const saved = localStorage.getItem('preferred-language')
+  if (saved && supportedLngs.includes(saved)) {
+    initialLng = saved
+  }
+}
+
 i18n
   .use(initReactI18next)
   .init({
@@ -18,26 +29,32 @@ i18n
       ko: { translation: ko },
       ja: { translation: ja },
     },
-    lng: 'vi', // Ngôn ngữ mặc định
+    lng: initialLng,
     fallbackLng: 'vi',
+    supportedLngs,
+    load: 'languageOnly',
     interpolation: {
       escapeValue: false
     },
     debug: process.env.NODE_ENV === 'development'
   })
 
-// Tải ngôn ngữ đã lưu từ localStorage khi client mount
+// If client and saved language differs from current, ensure change
 if (isClient) {
   const savedLang = localStorage.getItem('preferred-language')
-  if (savedLang && ['vi', 'en', 'zh', 'ja', 'ko'].includes(savedLang) && savedLang !== i18n.language) {
+  if (savedLang && supportedLngs.includes(savedLang) && savedLang !== i18n.language) {
     i18n.changeLanguage(savedLang)
   }
 }
 
-// Lưu ngôn ngữ vào localStorage khi thay đổi
+// Persist language changes
 i18n.on('languageChanged', (lng: string) => {
   if (isClient) {
-    localStorage.setItem('preferred-language', lng)
+    try {
+      localStorage.setItem('preferred-language', lng)
+    } catch (e) {
+      // ignore storage errors
+    }
   }
 })
 

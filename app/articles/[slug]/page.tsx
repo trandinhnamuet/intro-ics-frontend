@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
-import { Calendar, User, ArrowLeft, Clock, Eye, Share2, Facebook, Twitter, Linkedin, Link as LinkIcon, ChevronRight, BookOpen } from 'lucide-react'
+import { Calendar, User, ArrowLeft, Clock, Eye, Share2, Facebook, Twitter, Linkedin, Link as LinkIcon, ChevronRight, TrendingUp, ArrowRight } from 'lucide-react'
 import { format } from 'date-fns'
 import { articlesService, type Article } from '@/services/articles.service'
 import { Header } from '@/components/header'
@@ -22,6 +22,7 @@ export default function ArticleDetailPage() {
   const router = useRouter()
   const [article, setArticle] = useState<Article | null>(null)
   const [relatedArticles, setRelatedArticles] = useState<Article[]>([])
+  const [trendingArticles, setTrendingArticles] = useState<Article[]>([])
   const [loading, setLoading] = useState(true)
   const [activeSection, setActiveSection] = useState('')
   const [tocHeadings, setTocHeadings] = useState<{id: string, text: string, level: number}[]>([])
@@ -37,6 +38,10 @@ export default function ArticleDetailPage() {
         // Fetch related articles
         const allArticles = await articlesService.getAllArticles(1, 4, 'published')
         setRelatedArticles(allArticles.data.filter(a => a.id !== data.id).slice(0, 3))
+        
+        // Fetch trending articles for sidebar
+        const trendingData = await articlesService.getAllArticles(1, 6, 'published')
+        setTrendingArticles(trendingData.data.filter(a => a.id !== data.id).slice(0, 6))
       } catch (error) {
         setArticle(null)
       } finally {
@@ -180,43 +185,9 @@ export default function ArticleDetailPage() {
 
       {/* Main Content */}
       <div className="container-responsive py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Table of Contents - Sticky Sidebar */}
-          {tocHeadings.length > 0 && (
-            <aside className="hidden lg:block lg:col-span-3">
-              <div className="sticky top-32">
-                <ScrollReveal direction="right">
-                  <Card className="p-6">
-                    <h3 className="font-bold mb-4 flex items-center gap-2">
-                      <BookOpen className="w-4 h-4" />
-                      Nội dung bài viết
-                    </h3>
-                    <nav className="space-y-2">
-                      {tocHeadings.map((heading, index) => (
-                        <a
-                          key={index}
-                          href={`#${heading.id}`}
-                          className={cn(
-                            "block text-sm hover:text-primary transition-colors",
-                            heading.level === 1 ? "font-semibold" : "",
-                            heading.level === 2 ? "ml-3" : "",
-                            heading.level === 3 ? "ml-6 text-muted-foreground" : ""
-                          )}
-                        >
-                          {heading.text}
-                        </a>
-                      ))}
-                    </nav>
-                  </Card>
-                </ScrollReveal>
-              </div>
-            </aside>
-          )}
-
-          {/* Article Content */}
-          <article className={cn(
-            tocHeadings.length > 0 ? "lg:col-span-9" : "lg:col-span-12 max-w-5xl mx-auto"
-          )}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Article Content - 2/3 */}
+          <article className="lg:col-span-2">
             {/* Featured Image */}
             {article.thumbnail_url && (
               <ScrollReveal direction="up">
@@ -298,94 +269,158 @@ export default function ArticleDetailPage() {
                   prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-muted/30 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
                   prose-code:bg-muted prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
                   prose-pre:bg-muted prose-pre:border prose-pre:border-border
-                "
+                  dark:prose-invert"
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
             </ScrollReveal>
-
-            {/* Author Info */}
-            <ScrollReveal direction="up">
-              <Separator className="my-12" />
-              <Card className="p-8 bg-gradient-to-br from-muted/30 to-muted/50">
-                <div className="flex items-start gap-6">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-2xl font-bold shrink-0">
-                    ICS
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold mb-2">ICS Team</h4>
-                    <p className="text-muted-foreground mb-4">
-                      Đội ngũ chuyên gia về an ninh mạng và công nghệ thông tin, 
-                      luôn cập nhật những xu hướng mới nhất trong ngành.
-                    </p>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        Xuất bản: {format(new Date(article.created_at), 'dd/MM/yyyy')}
-                      </div>
-                      {article.updated_at && article.updated_at !== article.created_at && (
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          Cập nhật: {format(new Date(article.updated_at), 'dd/MM/yyyy')}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </ScrollReveal>
           </article>
-        </div>
 
-        {/* Related Articles */}
-        {relatedArticles.length > 0 && (
-          <ScrollReveal direction="up">
-            <Separator className="my-16" />
-            <div className="mt-16">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-1 h-8 bg-gradient-to-b from-primary to-accent rounded-full"></div>
-                <h2 className="text-3xl font-bold">Bài viết liên quan</h2>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {relatedArticles.map((related, index) => (
-                  <ScrollReveal key={related.id} direction="up" delay={index * 100}>
-                    <Link href={`/articles/${related.slug}`}>
-                      <Card className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col hover:-translate-y-2">
-                        {related.thumbnail_url && (
-                          <div className="relative h-48 overflow-hidden bg-muted">
-                            <Image
-                              src={related.thumbnail_url}
-                              alt={related.title}
-                              fill
-                              className="object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
+          {/* Trending Articles Sidebar - 1/3 */}
+          <aside className="lg:col-span-1">
+            <div className="sticky top-32">
+              <ScrollReveal direction="left">
+                <Card className="p-6">
+                  <div className="flex items-center gap-2 mb-6">
+                    <TrendingUp className="w-5 h-5 text-primary" />
+                    <h3 className="font-bold text-xl">Tin nổi bật</h3>
+                  </div>
+                  <div className="space-y-6">
+                    {trendingArticles.map((trending, index) => (
+                      <Link 
+                        key={trending.id} 
+                        href={`/articles/${trending.slug}`}
+                        className="group block"
+                      >
+                        <div className="flex gap-4">
+                          {/* Number Badge */}
+                          <div className="flex-shrink-0">
+                            <div className={cn(
+                              "w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg",
+                              index === 0 && "bg-gradient-to-br from-red-500 to-orange-500 text-white",
+                              index === 1 && "bg-gradient-to-br from-orange-500 to-yellow-500 text-white",
+                              index === 2 && "bg-gradient-to-br from-yellow-500 to-green-500 text-white",
+                              index > 2 && "bg-muted text-muted-foreground"
+                            )}>
+                              {index + 1}
+                            </div>
                           </div>
-                        )}
-                        <div className="p-6 flex-1 flex flex-col">
-                          <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
-                            <Calendar className="w-3 h-3" />
-                            {format(new Date(related.created_at), 'dd/MM/yyyy')}
-                          </div>
-                          <h3 className="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
-                            {related.title}
-                          </h3>
-                          <p className="text-sm text-muted-foreground line-clamp-3 mb-4 flex-1">
-                            {related.excerpt || 'Đọc để tìm hiểu thêm...'}
-                          </p>
-                          <div className="flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-4 transition-all">
-                            Đọc thêm
-                            <ChevronRight className="w-4 h-4" />
+
+                          {/* Content */}
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold text-sm line-clamp-2 group-hover:text-primary transition-colors mb-2">
+                              {trending.title}
+                            </h4>
+                            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                              <Calendar className="w-3 h-3" />
+                              {format(new Date(trending.created_at), 'dd/MM/yyyy')}
+                            </div>
                           </div>
                         </div>
-                      </Card>
-                    </Link>
-                  </ScrollReveal>
-                ))}
+
+                        {index < trendingArticles.length - 1 && (
+                          <Separator className="mt-6" />
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+
+                  <Button 
+                    className="w-full mt-6" 
+                    variant="outline"
+                    onClick={() => router.push('/articles/articles-list')}
+                  >
+                    Xem tất cả tin tức
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Card>
+              </ScrollReveal>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      {/* Author Info */}
+      <div className="container-responsive pb-12">
+        <ScrollReveal direction="up">
+          <Separator className="mb-12" />
+          <Card className="p-8 bg-gradient-to-br from-muted/30 to-muted/50">
+            <div className="flex items-start gap-6">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-2xl font-bold shrink-0">
+                ICS
+              </div>
+              <div className="flex-1">
+                <h4 className="text-xl font-bold mb-2">ICS Team</h4>
+                <p className="text-muted-foreground mb-4">
+                  Đội ngũ chuyên gia về an ninh mạng và công nghệ thông tin, 
+                  luôn cập nhật những xu hướng mới nhất trong ngành.
+                </p>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    Xuất bản: {format(new Date(article.created_at), 'dd/MM/yyyy')}
+                  </div>
+                  {article.updated_at && article.updated_at !== article.created_at && (
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      Cập nhật: {format(new Date(article.updated_at), 'dd/MM/yyyy')}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </ScrollReveal>
-        )}
+          </Card>
+        </ScrollReveal>
       </div>
+
+      {/* Related Articles */}
+      {relatedArticles.length > 0 && (
+        <div className="container-responsive pb-16">
+          <ScrollReveal direction="up">
+            <Separator className="mb-12" />
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-1 h-8 bg-gradient-to-b from-primary to-accent rounded-full"></div>
+              <h2 className="text-3xl font-bold">Bài viết liên quan</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-max">
+              {relatedArticles.map((related, index) => (
+                <ScrollReveal key={related.id} direction="up" delay={index * 100}>
+                  <Link href={`/articles/${related.slug}`}>
+                    <Card className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col hover:-translate-y-2">
+                      {related.thumbnail_url && (
+                        <div className="relative h-48 overflow-hidden bg-muted">
+                          <Image
+                            src={related.thumbnail_url}
+                            alt={related.title}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
+                        </div>
+                      )}
+                      <div className="p-6 flex-1 flex flex-col">
+                        <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                          <Calendar className="w-3 h-3" />
+                          {format(new Date(related.created_at), 'dd/MM/yyyy')}
+                        </div>
+                        <h3 className="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                          {related.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground line-clamp-3 mb-4 flex-1">
+                          {related.excerpt || 'Đọc để tìm hiểu thêm...'}
+                        </p>
+                        <div className="flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-4 transition-all">
+                          Đọc thêm
+                          <ChevronRight className="w-4 h-4" />
+                        </div>
+                      </div>
+                    </Card>
+                  </Link>
+                </ScrollReveal>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      )}
 
       <Footer />
     </>

@@ -17,43 +17,70 @@ export default function PartnerPage() {
   const { t } = useTranslation()
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
-  const partners = [
+  const technologyPartners = [
     {
-      name: "HyperG",
-      description: t('partners.hypergDesc'),
+      name: "Gurucul",
+      description: t('partners.guruculDesc'),
+      logo: "/doitac/Gurucul.jpg",
+    },
+    {
+      name: "HyperG & Oracle",
+      description: t('partners.hypergOracleDesc'),
       logo: "https://icss.com.vn/wp-content/uploads/2025/06/z6603220865281_a8751c9cd03f48ec5ef9b82d700917d8.jpg",
-      tier: "platinum"
     },
     {
-      name: "Oracle",
-      description: t('partners.oracleDesc'),
-      logo: "https://icss.com.vn/wp-content/uploads/2025/08/Webo.OracleProfile-696x696-1.png",
-      tier: "platinum"
+      name: "CyStack",
+      description: t('partners.cystackDesc'),
+      logo: "/doitac/CyStack.png",
     },
     {
-      name: "Gamania",
-      description: t('partners.gamaniaDesc'),
-      logo: "https://icss.com.vn/wp-content/uploads/2025/06/z6603219309871_c0cf6fdc0c2ede77ee4a3920f5b54e4f.jpg",
-      tier: "gold"
+      name: "VieSecurity",
+      description: t('partners.viesecurityDesc'),
+      logo: "/doitac/VieSecurity.jpg",
     },
     {
-      name: "Microsoft",
-      description: t('partners.microsoftDesc'),
-      logo: "/images/1.jpg",
-      tier: "platinum"
+      name: "Loca AI",
+      description: t('partners.locaAiDesc'),
+      logo: "/doitac/Loca%20AI.jfif",
     },
     {
-      name: "AWS",
-      description: t('partners.awsDesc'),
-      logo: "/images/2.jpg",
-      tier: "gold"
+      name: "IRTech",
+      description: t('partners.irtechDesc'),
+      logo: "/doitac/IRTech.png",
+    },
+  ]
+
+  const businessPartners = [
+    {
+      name: "BlueNet",
+      description: t('partners.bluenetDesc'),
+      logo: "/doitac/BlueNet.jpg",
     },
     {
-      name: "Cisco",
-      description: t('partners.ciscoDesc'),
-      logo: "/images/3.jpg",
-      tier: "gold"
-    }
+      name: "BitCare",
+      description: t('partners.bitcareDesc'),
+      logo: "/doitac/BitCare.jpg",
+    },
+    {
+      name: "BigBen",
+      description: t('partners.bigbenDesc'),
+      logo: "/doitac/BigBen.png",
+    },
+    {
+      name: "TLU (Đại học Thủy Lợi)",
+      description: t('partners.tluDesc'),
+      logo: "/doitac/TLU (Đại học Thủy Lợi).png",
+    },
+    {
+      name: "CTCP Học viện Công nghệ AI Việt Nam",
+      description: t('partners.aiAcademyDesc'),
+      logo: "/doitac/AI UNI.png",
+    },
+    {
+      name: "Cathay",
+      description: t('partners.cathayDesc'),
+      logo: "/doitac/Cathay.png",
+    },
   ]
 
   const testimonials = [
@@ -165,18 +192,18 @@ export default function PartnerPage() {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto auto-rows-max">
             {tiers.map((tier, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 100}>
-                <Card className={`relative overflow-hidden p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2`}>
+                <Card className={`relative overflow-hidden p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col`}>
                   <div className={`absolute top-0 left-0 right-0 h-2 bg-gradient-to-r ${tier.color}`} />
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${tier.color} flex items-center justify-center`}>
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${tier.color} flex items-center justify-center shrink-0`}>
                       <tier.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold">{tier.name}</h3>
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 flex-grow">
                     {tier.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${tier.color} flex items-center justify-center shrink-0 mt-0.5`}>
@@ -193,39 +220,26 @@ export default function PartnerPage() {
         </div>
       </Section>
 
-      {/* Partners Grid */}
+      {/* Technology Partners Section */}
       <Section spacing="xl" background="muted">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="mb-4">
-              {t('partners.partnersGrid')}
+              {t('partners.technologyPartners')}
             </AnimatedHeading>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={100}>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
-              {t('partners.partnersGridSubtitle')}
+              {t('partners.technologyPartnersSubtitle')}
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {partners.map((partner, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-max">
+            {technologyPartners.map((partner, idx) => (
               <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                  {/* Tier Badge */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <Badge 
-                      className={`${
-                        partner.tier === 'platinum' 
-                          ? 'bg-gradient-to-r from-purple-500 to-pink-500' 
-                          : 'bg-gradient-to-r from-yellow-500 to-orange-500'
-                      } text-white border-none`}
-                    >
-                      {partner.tier === 'platinum' ? t('partners.platinum') : t('partners.gold')}
-                    </Badge>
-                  </div>
-
+                <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
                   {/* Logo */}
-                  <div className="relative h-64 bg-white flex items-center justify-center p-8">
+                  <div className="relative h-64 bg-white flex items-center justify-center p-8 flex-shrink-0">
                     <img
                       src={partner.logo}
                       alt={partner.name}
@@ -234,11 +248,54 @@ export default function PartnerPage() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                       {partner.name}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                      {partner.description}
+                    </p>
+                  </div>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Business Partners Section */}
+      <Section spacing="xl" background="default">
+        <div className="container-responsive">
+          <ScrollReveal direction="up">
+            <AnimatedHeading as="h2" gradient centered className="mb-4">
+              {t('partners.businessPartners')}
+            </AnimatedHeading>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={100}>
+            <p className="text-center text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
+              {t('partners.businessPartnersSubtitle')}
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-max">
+            {businessPartners.map((partner, idx) => (
+              <ScrollReveal key={idx} direction="up" delay={idx * 100}>
+                <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+                  {/* Logo */}
+                  <div className="relative h-64 bg-white flex items-center justify-center p-8 flex-shrink-0">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                      {partner.name}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
                       {partner.description}
                     </p>
                   </div>
