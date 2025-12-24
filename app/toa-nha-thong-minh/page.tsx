@@ -1,157 +1,272 @@
-"use client"
+'use client'
 
-import { useTranslation } from "react-i18next"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Sidebar } from "@/components/sidebar"
-import Link from "next/link"
+import Image from 'next/image'
+import { useTranslation } from 'react-i18next'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { AnimatedHeading } from '@/components/ui/animated-heading'
+import { Section } from '@/components/ui/section'
+import { 
+  Building2, 
+  Check, 
+  ArrowRight, 
+  Star, 
+  Zap, 
+  Lightbulb,
+  Wind,
+  ShieldCheck,
+  BarChart3,
+  Award,
+  TrendingUp,
+  Leaf
+} from 'lucide-react'
 
 export default function ToaNhaThongMinhPage() {
   const { t } = useTranslation()
+
+  const features = [
+    {
+      icon: Lightbulb,
+      title: t('smartBuilding.feature1.title'),
+      description: t('smartBuilding.feature1.desc'),
+      benefit: t('smartBuilding.feature1.benefit')
+    },
+    {
+      icon: ShieldCheck,
+      title: t('smartBuilding.feature2.title'),
+      description: t('smartBuilding.feature2.desc'),
+      benefit: t('smartBuilding.feature2.benefit')
+    },
+    {
+      icon: Wind,
+      title: t('smartBuilding.feature3.title'),
+      description: t('smartBuilding.feature3.desc'),
+      benefit: t('smartBuilding.feature3.benefit')
+    },
+    {
+      icon: BarChart3,
+      title: t('smartBuilding.feature4.title'),
+      description: t('smartBuilding.feature4.desc'),
+      benefit: t('smartBuilding.feature4.benefit')
+    }
+  ]
+
+  const benefits = [
+    t('smartBuilding.why1'),
+    t('smartBuilding.why2'),
+    t('smartBuilding.why3'),
+    t('smartBuilding.why4')
+  ]
+
   return (
     <>
       <Header />
       
-      {/* Banner Section */}
-      <div className="relative h-[250px] bg-cover bg-center mt-24" style={{ backgroundImage: "url('https://icss.com.vn/wp-content/uploads/2018/09/bg-gioi-thieu.jpg')" }}>
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative w-full container-responsive h-full flex items-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            Giải pháp Tòa nhà thông minh
-          </h1>
+      {/* Hero Section */}
+      <div className="relative h-[600px] overflow-hidden mt-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600" />
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-300" />
+        </div>
+        
+        <div className="relative container-responsive h-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full py-20">
+            <ScrollReveal direction="left">
+              <div>
+                <Badge className="mb-6 px-4 py-2 bg-white/20 backdrop-blur-sm border-white/30 text-white">
+                  <Building2 className="w-4 h-4 mr-2" />
+                  {t('smartBuilding.badge')}
+                </Badge>
+                
+                <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+                  {t('smartBuilding.title')}
+                </h1>
+                
+                <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                  {t('smartBuilding.mainDescription')}
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-emerald-600 hover:bg-white/90 font-semibold text-lg"
+                  >
+                    {t('common.learnMore')}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold text-lg"
+                  >
+                    {t('common.contactUs')}
+                  </Button>
+                </div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal direction="right">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-3xl transform rotate-6" />
+                <Card className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
+                  <Image
+                    src="tntm.jpg"
+                    alt="Smart Building"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto"
+                  />
+                </Card>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="w-full container-responsive py-8 sm:py-12">
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
-          {/* Sidebar */}
-          <aside className="lg:w-1/4">
-            <Sidebar />
-          </aside>
+      {/* Features Section */}
+      <Section spacing="xl" background="default">
+        <div className="container-responsive">
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 px-4 py-2">
+                <Star className="w-4 h-4 mr-2" />
+                {t('smartBuilding.featuresHeading')}
+              </Badge>
+              <AnimatedHeading as="h2" gradient centered className="mb-6">
+                {t('smartBuilding.featuresHeading')}
+              </AnimatedHeading>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                {t('smartBuilding.featuresDesc')}
+              </p>
+            </div>
+          </ScrollReveal>
 
-          {/* Content */}
-          <main className="lg:w-3/4">
-            <h2 className="text-2xl font-bold mb-4">
-              Giải pháp Tòa nhà thông minh thế hệ mới
-            </h2>
-            
-            <p className="mb-4 text-justify">
-              Hệ thống của chúng tôi sử dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) để thu thập dữ liệu vận hành theo thời gian thực, tự động phân tích và đưa ra các quyết định thông minh. Kết quả là một tòa nhà không chỉ biết "phản ứng" mà còn có khả năng "thích ứng" và "dự báo", mang lại hiệu quả vượt trội trên mọi phương diện.
-            </p>
-
-            <h3 className="text-xl font-bold mb-3 mt-6">
-              Các Tính năng Cốt lõi và Lợi ích Vượt trội
-            </h3>
-            
-            <p className="mb-4 text-justify">
-              Giải pháp Smart Building được xây dựng trên các trụ cột công nghệ vững chắc, mỗi trụ cột đều mang lại những giá trị kinh tế và trải nghiệm rõ rệt.
-            </p>
-
-            <h4 className="text-lg font-bold mb-2 mt-5">
-              1. Hệ thống Quản lý Năng lượng Thông minh (EMS)
-            </h4>
-            
-            <p className="mb-3 text-justify">
-              Hệ thống sử dụng các thuật toán AI để phân tích thói quen sử dụng, điều kiện thời tiết và sự hiện diện của con người. Từ đó, nó tự động tối ưu hóa hoạt động của hệ thống điều hòa và chiếu sáng – tắt các thiết bị ở khu vực không có người, điều chỉnh nhiệt độ theo lịch trình, và tận dụng tối đa ánh sáng tự nhiên.
-            </p>
-
-            <ul className="list-disc ml-6 mb-4">
-              <li className="text-justify">
-                <strong>Lợi ích:</strong> Đây là đòn bẩy tài chính mạnh mẽ nhất. Giải pháp của chúng tôi giúp <strong>tiết kiệm từ 30-40% chi phí điện năng</strong> hàng tháng, một con số khổng lồ đối với các tòa nhà quy mô lớn. Hơn nữa, việc <strong>tiết kiệm năng lượng cho tòa nhà</strong> còn giúp giảm dấu chân carbon, là một điểm cộng lớn cho các chứng chỉ công trình xanh và nâng cao hình ảnh thương hiệu bền vững.
-              </li>
-            </ul>
-
-            <h4 className="text-lg font-bold mb-2 mt-5">
-              2. An ninh Tích hợp và Kiểm soát ra vào Thông minh
-            </h4>
-            
-            <p className="mb-3 text-justify">
-              Chúng tôi hợp nhất hệ thống camera giám sát AI, kiểm soát cửa ra vào bằng nhận diện khuôn mặt, thẻ từ hoặc ứng dụng điện thoại. Hệ thống có thể tự động nhận diện các hành vi bất thường, cảnh báo ngay lập tức cho đội ngũ an ninh và lưu trữ dữ liệu để dễ dàng truy vết khi cần.
-            </p>
-
-            <ul className="list-disc ml-6 mb-4">
-              <li className="text-justify">
-                <strong>Lợi ích:</strong> Mang lại một môi trường <strong>an toàn tuyệt đối</strong> và <strong>an ninh thông minh</strong> 24/7. Việc quản lý truy cập trở nên liền mạch và dễ dàng, loại bỏ các quy trình thủ công phức tạp. Đối với ban quản lý, việc truy vết và xuất báo cáo an ninh chỉ mất vài cú nhấp chuột.
-              </li>
-            </ul>
-
-            <h4 className="text-lg font-bold mb-2 mt-5">
-              3. Tự động hóa Tiện ích (Điều hòa, Chiếu sáng, Rèm cửa)
-            </h4>
-            
-            <p className="mb-3 text-justify">
-              Người dùng có thể cá nhân hóa không gian làm việc hoặc sinh sống của mình chỉ bằng một vài thao tác trên ứng dụng di động. Hơn thế nữa, hệ thống có thể tự động điều chỉnh rèm cửa dựa trên hướng nắng, điều chỉnh ánh sáng và nhiệt độ dựa trên số lượng người trong phòng.
-            </p>
-
-            <ul className="list-disc ml-6 mb-4">
-              <li className="text-justify">
-                <strong>Lợi ích:</strong> Mang lại <strong>sự tiện nghi và thoải mái tối đa</strong>, trực tiếp nâng cao trải nghiệm và sự hài lòng của người sử dụng tòa nhà. Đối với các văn phòng cho thuê, đây là một yếu tố cạnh tranh đắt giá để thu hút các công ty hàng đầu.
-              </li>
-            </ul>
-
-            <h4 className="text-lg font-bold mb-2 mt-5">
-              4. Nền tảng Quản lý Tòa nhà Tập trung (BMS)
-            </h4>
-            
-            <p className="mb-3 text-justify">
-              Toàn bộ thông tin từ các hệ thống con (năng lượng, an ninh, PCCC, HVAC...) đều được hiển thị trực quan trên một dashboard duy nhất. Từ đây, đội ngũ vận hành có thể giám sát, điều khiển và nhận báo cáo về mọi hoạt động của tòa nhà.
-            </p>
-
-            <ul className="list-disc ml-6 mb-4">
-              <li className="text-justify">
-                <strong>Lợi ích:</strong> Giúp <strong>quản lý tòa nhà hiệu quả</strong> hơn bao giờ hết. Ban quản lý có thể giảm thiểu nhân sự vận hành, ra quyết định nhanh chóng và chính xác hơn. Đặc biệt, hệ thống có khả năng phát hiện sớm các dấu hiệu bất thường của thiết bị, giúp ngăn chặn sự cố trước khi chúng xảy ra.
-              </li>
-            </ul>
-
-            <h4 className="text-lg font-bold mb-2 mt-5">
-              5. Phân tích Dữ liệu và Báo cáo Thông minh
-            </h4>
-            
-            <p className="mb-3 text-justify">
-              Dữ liệu là vàng. Hệ thống của chúng tôi liên tục thu thập và phân tích dữ liệu vận hành, từ đó tạo ra các báo cáo thông minh và đưa ra những đề xuất cải tiến cụ thể (ví dụ: "Khu vực tầng 5 có xu hướng tiêu thụ năng lượng cao bất thường vào cuối tuần").
-            </p>
-
-            <ul className="list-disc ml-6 mb-4">
-              <li className="text-justify">
-                <strong>Lợi ích:</strong> Giúp chủ đầu tư và ban quản lý <strong>ra quyết định dựa trên dữ liệu</strong> chứ không phải cảm tính. Đây là chìa khóa để liên tục tối ưu hóa hiệu quả vận hành và cắt giảm chi phí trong dài hạn.
-              </li>
-            </ul>
-
-            <h3 className="text-xl font-bold mb-3 mt-6">
-              Tại sao chọn Giải pháp từ ICS?
-            </h3>
-            
-            <p className="mb-3 text-justify">
-              Thị trường có nhiều lựa chọn, nhưng giải pháp của ICS tạo ra sự khác biệt nhờ:
-            </p>
-
-            <ul className="list-disc ml-6 mb-4">
-              <li className="text-justify">
-                <strong>Công nghệ AI độc quyền:</strong> Chúng tôi không chỉ tự động hóa theo kịch bản, mà còn sử dụng AI để hệ thống tự học hỏi và ngày càng thông minh hơn.
-              </li>
-              <li className="text-justify">
-                <strong>Đội ngũ chuyên gia giàu kinh nghiệm:</strong> Chúng tôi cung cấp một giải pháp toàn diện từ tư vấn, thiết kế, triển khai cho đến bảo trì.
-              </li>
-              <li className="text-justify">
-                <strong>Dịch vụ hỗ trợ 24/7:</strong> Đảm bảo hệ thống của bạn luôn hoạt động ổn định và được hỗ trợ kịp thời.
-              </li>
-              <li className="text-justify">
-                <strong>Khả năng tùy biến và mở rộng linh hoạt:</strong> Giải pháp của chúng tôi được thiết kế theo dạng module, dễ dàng tùy chỉnh và nâng cấp theo quy mô phát triển của tòa nhà.
-              </li>
-            </ul>
-
-            <h3 className="text-xl font-bold mb-3 mt-6">
-              Kiến tạo Tương lai cho Tòa nhà của bạn
-            </h3>
-            
-            <p className="mb-4 text-justify">
-              Một tòa nhà thông minh không chỉ là một công trình xây dựng – đó là một môi trường sống và làm việc thông minh, bền vững và đầy cảm hứng. Nó giúp cắt giảm chi phí, tăng cường an ninh, nâng cao giá trị tài sản và thu hút những khách hàng tốt nhất. Đầu tư vào một <strong>giải pháp smart building</strong> hôm nay chính là đầu tư cho sự thành công của ngày mai.
-            </p>
-          </main>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {features.map((feature, idx) => (
+              <ScrollReveal key={idx} direction="up" delay={idx * 100}>
+                <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-6">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{feature.description}</p>
+                  <div className="pt-4 border-t">
+                    <p className="text-sm font-semibold text-emerald-600 mb-2">Lợi ích:</p>
+                    <p className="text-sm text-muted-foreground">{feature.benefit}</p>
+                  </div>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
-      </div>
+      </Section>
 
+      {/* Benefits Section */}
+      <Section spacing="xl" background="muted">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="left">
+              <div>
+                <Badge className="mb-4 px-4 py-2">
+                  <Zap className="w-4 h-4 mr-2" />
+                  {t('smartBuilding.whyHeading')}
+                </Badge>
+                <AnimatedHeading as="h2" gradient className="mb-6">
+                  {t('smartBuilding.whyHeading')}
+                </AnimatedHeading>
+                <p className="text-lg text-muted-foreground mb-8">
+                  {t('smartBuilding.whyIntro')}
+                </p>
+                
+                <div className="space-y-4">
+                  {benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center shrink-0 mt-1">
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
+                      <p className="text-foreground">{benefit}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal direction="right">
+              <Card className="p-8 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 border-2 border-emerald-200 dark:border-emerald-800">
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
+                    <div>
+                      <div className="text-sm text-muted-foreground">Tiết kiệm năng lượng</div>
+                      <div className="text-3xl font-bold text-emerald-600">30-40%</div>
+                    </div>
+                    <Leaf className="w-12 h-12 text-emerald-500" />
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
+                    <div>
+                      <div className="text-sm text-muted-foreground">Giám sát an ninh</div>
+                      <div className="text-3xl font-bold text-cyan-600">24/7</div>
+                    </div>
+                    <ShieldCheck className="w-12 h-12 text-cyan-500" />
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
+                    <div>
+                      <div className="text-sm text-muted-foreground">Tăng giá trị tài sản</div>
+                      <div className="text-3xl font-bold text-emerald-600">+25%</div>
+                    </div>
+                    <TrendingUp className="w-12 h-12 text-emerald-500" />
+                  </div>
+                </div>
+              </Card>
+            </ScrollReveal>
+          </div>
+        </div>
+      </Section>
+
+      {/* CTA Section */}
+      <Section spacing="xl" background="gradient">
+        <div className="container-responsive">
+          <ScrollReveal direction="up">
+            <Card className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 p-12 lg:p-20 text-center border-none">
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-300" />
+              </div>
+              <div className="relative z-10">
+                <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
+                  <Building2 className="w-10 h-10 text-white" />
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                  {t('smartBuilding.futureHeading')}
+                </h2>
+                <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                  {t('smartBuilding.futureText')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    className="text-lg px-8 bg-white text-emerald-600 hover:bg-white/90 font-semibold"
+                  >
+                    {t('common.learnMore')}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    className="text-lg px-8 bg-white/20 text-white border-2 border-white hover:bg-white/30 font-semibold backdrop-blur-sm"
+                  >
+                    {t('common.contactUs')}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          </ScrollReveal>
+        </div>
+      </Section>
       <Footer />
     </>
   )

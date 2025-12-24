@@ -25,7 +25,8 @@ export function LanguageSelector() {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0]
+  const currentLangCode = (i18n.language || '').split('-')[0]
+  const currentLanguage = languages.find(lang => lang.code === currentLangCode) || languages[0]
 
   const handleLanguageChange = (languageCode: string) => {
     i18n.changeLanguage(languageCode)
@@ -35,7 +36,9 @@ export function LanguageSelector() {
   // Tải ngôn ngữ đã lưu khi component mount
   useEffect(() => {
     const savedLanguage = localStorage.getItem('preferred-language')
-    if (savedLanguage && savedLanguage !== i18n.language) {
+    const currentBase = (i18n.language || '').split('-')[0]
+    const savedBase = savedLanguage ? savedLanguage.split('-')[0] : null
+    if (savedLanguage && savedBase !== currentBase) {
       i18n.changeLanguage(savedLanguage)
     }
   }, [i18n])
@@ -85,7 +88,7 @@ export function LanguageSelector() {
             >
               <span className="text-xl mr-2">{language.flag}</span>
               <span className="text-sm">{language.name}</span>
-              {language.code === i18n.language && (
+              {language.code === currentLangCode && (
                 <span className="ml-auto text-xs text-primary">✓</span>
               )}
             </button>

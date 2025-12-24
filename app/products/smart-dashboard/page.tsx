@@ -1,6 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -11,58 +13,60 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { AnimatedHeading } from '@/components/ui/animated-heading'
 import { Section } from '@/components/ui/section'
 import { 
-  Leaf, 
+  BarChart3, 
   Check, 
   ArrowRight, 
   Star, 
   Zap, 
-  Users,
-  Globe,
+  Activity,
+  PieChart,
+  LineChart,
   TrendingUp,
   Award,
-  Target,
-  BarChart3
+  ExternalLink,
+  Eye
 } from 'lucide-react'
 
-export default function GiaiPhapESGPage() {
+export default function SmartDashboardPage() {
   const { t } = useTranslation()
 
   const features = [
     {
-      icon: Leaf,
-      title: "Môi trường (Environmental)",
-      description: "Đánh giá và tối ưu hóa quản lý tác động môi trường, giảm phát thải carbon, sử dụng tài nguyên bền vững"
+      icon: Activity,
+      title: t('products.smartDashboard.features.realtime.title'),
+      description: t('products.smartDashboard.features.realtime.description')
     },
     {
-      icon: Users,
-      title: "Xã hội (Social)",
-      description: "Xây dựng văn hóa doanh nghiệp, đảm bảo quyền lợi người lao động, trách nhiệm với cộng đồng"
+      icon: PieChart,
+      title: t('products.smartDashboard.features.analytics.title'),
+      description: t('products.smartDashboard.features.analytics.description')
     },
     {
-      icon: Award,
-      title: "Quản trị (Governance)",
-      description: "Minh bạch hóa quy trình quản lý, tuân thủ pháp luật, xây dựng hệ thống quản trị hiệu quả"
+      icon: LineChart,
+      title: t('products.smartDashboard.features.reporting.title'),
+      description: t('products.smartDashboard.features.reporting.description')
     },
     {
-      icon: BarChart3,
-      title: "Báo cáo & Đo lường",
-      description: "Thiết lập KPIs, thu thập dữ liệu, báo cáo ESG theo chuẩn quốc tế (GRI, SASB, TCFD)"
+      icon: Eye,
+      title: t('products.smartDashboard.features.visualization.title'),
+      description: t('products.smartDashboard.features.visualization.description')
     }
   ]
 
   const benefits = [
-    "Tư vấn chiến lược ESG phù hợp với đặc thù doanh nghiệp",
-    "Xây dựng lộ trình triển khai từng bước cụ thể",
-    "Hỗ trợ đo lường và báo cáo theo chuẩn quốc tế",
-    "Đào tạo đội ngũ nội bộ về ESG"
+    t('products.smartDashboard.benefits.item1'),
+    t('products.smartDashboard.benefits.item2'),
+    t('products.smartDashboard.benefits.item3'),
+    t('products.smartDashboard.benefits.item4')
   ]
 
   return (
     <>
       <Header />
       
+      {/* Hero Section */}
       <div className="relative h-[600px] overflow-hidden mt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600" />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-blue-600 to-purple-600" />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-300" />
@@ -73,25 +77,28 @@ export default function GiaiPhapESGPage() {
             <ScrollReveal direction="left">
               <div>
                 <Badge className="mb-6 px-4 py-2 bg-white/20 backdrop-blur-sm border-white/30 text-white">
-                  <Leaf className="w-4 h-4 mr-2" />
-                  {t('esg.badge')}
+                  <BarChart3 className="w-4 h-4 mr-2" />
+                  {t('products.smartDashboard.badge')}
                 </Badge>
                 
                 <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-                  {t('esg.title')}
+                  Smart Dashboard
                 </h1>
                 
                 <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                  {t('esg.description')}
+                  {t('products.smartDashboard.subtitle')}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     size="lg" 
-                    className="bg-white text-green-600 hover:bg-white/90 font-semibold text-lg"
+                    className="bg-white text-indigo-600 hover:bg-white/90 font-semibold text-lg"
+                    asChild
                   >
-                    {t('common.learnMore')}
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <Link href="http://smartdashboard.vn/" target="_blank">
+                      {t('products.smartDashboard.visitWebsite')}
+                      <ExternalLink className="w-5 h-5 ml-2" />
+                    </Link>
                   </Button>
                   <Button 
                     size="lg" 
@@ -109,8 +116,8 @@ export default function GiaiPhapESGPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-3xl transform rotate-6" />
                 <Card className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                   <Image
-                    src="esp.png"
-                    alt="ESG Solutions"
+                    src="https://icss.com.vn/wp-content/uploads/2025/06/Thiet-ke-chua-co-ten-39.jpg"
+                    alt="Smart Dashboard"
                     width={600}
                     height={400}
                     className="w-full h-auto"
@@ -122,19 +129,20 @@ export default function GiaiPhapESGPage() {
         </div>
       </div>
 
+      {/* Features Section */}
       <Section spacing="xl" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
               <Badge className="mb-4 px-4 py-2">
                 <Star className="w-4 h-4 mr-2" />
-                Ba trụ cột ESG
+                {t('products.smartDashboard.features.title')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="mb-6">
-                Giải pháp ESG toàn diện
+                {t('products.smartDashboard.features.heading')}
               </AnimatedHeading>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Từ áp lực tuân thủ đến lợi thế cạnh tranh - Lộ trình chiến lược cho doanh nghiệp Việt
+                {t('products.smartDashboard.features.description')}
               </p>
             </div>
           </ScrollReveal>
@@ -143,7 +151,7 @@ export default function GiaiPhapESGPage() {
             {features.map((feature, idx) => (
               <ScrollReveal key={idx} direction="up" delay={idx * 100}>
                 <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-6 shrink-0">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
@@ -155,6 +163,7 @@ export default function GiaiPhapESGPage() {
         </div>
       </Section>
 
+      {/* Benefits Section */}
       <Section spacing="xl" background="muted">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -162,19 +171,19 @@ export default function GiaiPhapESGPage() {
               <div>
                 <Badge className="mb-4 px-4 py-2">
                   <Zap className="w-4 h-4 mr-2" />
-                  {t('esg.why')}
+                  {t('products.smartDashboard.benefits.title')}
                 </Badge>
                 <AnimatedHeading as="h2" gradient className="mb-6">
-                  {t('esg.why')}
+                  {t('products.smartDashboard.benefits.heading')}
                 </AnimatedHeading>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Chúng tôi cung cấp giải pháp ESG toàn diện, từ chiến lược đến triển khai
+                  {t('products.smartDashboard.benefits.description')}
                 </p>
                 
                 <div className="space-y-4">
                   {benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center shrink-0 mt-1">
                         <Check className="w-4 h-4 text-white" />
                       </div>
                       <p className="text-foreground">{benefit}</p>
@@ -185,28 +194,28 @@ export default function GiaiPhapESGPage() {
             </ScrollReveal>
             
             <ScrollReveal direction="right">
-              <Card className="p-8 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 border-2 border-green-200 dark:border-green-800">
+              <Card className="p-8 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-950/20 dark:to-blue-950/20 border-2 border-indigo-200 dark:border-indigo-800">
                 <div className="space-y-6">
                   <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
                     <div>
-                      <div className="text-sm text-muted-foreground">Tiết kiệm chi phí</div>
-                      <div className="text-3xl font-bold text-green-600">20-30%</div>
+                      <div className="text-sm text-muted-foreground">{t('products.smartDashboard.stats.dashboards')}</div>
+                      <div className="text-3xl font-bold text-indigo-600">500+</div>
+                    </div>
+                    <BarChart3 className="w-12 h-12 text-indigo-500" />
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
+                    <div>
+                      <div className="text-sm text-muted-foreground">{t('products.smartDashboard.stats.dataPoints')}</div>
+                      <div className="text-3xl font-bold text-blue-600">10M+</div>
+                    </div>
+                    <Activity className="w-12 h-12 text-blue-500" />
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
+                    <div>
+                      <div className="text-sm text-muted-foreground">{t('products.smartDashboard.stats.realtime')}</div>
+                      <div className="text-3xl font-bold text-green-600">24/7</div>
                     </div>
                     <TrendingUp className="w-12 h-12 text-green-500" />
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
-                    <div>
-                      <div className="text-sm text-muted-foreground">Tăng giá trị thương hiệu</div>
-                      <div className="text-3xl font-bold text-emerald-600">+40%</div>
-                    </div>
-                    <Globe className="w-12 h-12 text-emerald-500" />
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
-                    <div>
-                      <div className="text-sm text-muted-foreground">Đáp ứng chuẩn quốc tế</div>
-                      <div className="text-3xl font-bold text-green-600">100%</div>
-                    </div>
-                    <Target className="w-12 h-12 text-green-500" />
                   </div>
                 </div>
               </Card>
@@ -215,31 +224,35 @@ export default function GiaiPhapESGPage() {
         </div>
       </Section>
 
+      {/* CTA Section */}
       <Section spacing="xl" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <Card className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 p-12 lg:p-20 text-center border-none">
+            <Card className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-blue-600 to-purple-600 p-12 lg:p-20 text-center border-none">
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
                 <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-300" />
               </div>
               <div className="relative z-10">
                 <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
-                  <Leaf className="w-10 h-10 text-white" />
+                  <BarChart3 className="w-10 h-10 text-white" />
                 </div>
                 <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                  Bắt đầu hành trình ESG của bạn
+                  {t('products.smartDashboard.cta.heading')}
                 </h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Liên hệ với chúng tôi để được tư vấn lộ trình ESG phù hợp với doanh nghiệp
+                  {t('products.smartDashboard.cta.description')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
                     size="lg" 
-                    className="text-lg px-8 bg-white text-green-600 hover:bg-white/90 font-semibold"
+                    className="text-lg px-8 bg-white text-indigo-600 hover:bg-white/90 font-semibold"
+                    asChild
                   >
-                    {t('common.learnMore')}
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <Link href="http://smartdashboard.vn/" target="_blank">
+                      {t('products.smartDashboard.visitWebsite')}
+                      <ExternalLink className="w-5 h-5 ml-2" />
+                    </Link>
                   </Button>
                   <Button 
                     size="lg" 

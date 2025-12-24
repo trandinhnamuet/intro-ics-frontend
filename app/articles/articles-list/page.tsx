@@ -37,13 +37,39 @@ function ArticlesListContent() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [featuredArticle, setFeaturedArticle] = useState<Article | null>(null)
 
   const previewId = searchParams.get('preview')
   const urlSearchQuery = searchParams.get('search')
 
   useEffect(() => {
     fetchArticles()
+    fetchFeaturedArticle()
   }, [page])
+
+  useEffect(() => {
+    if (urlSearchQuery) {
+      setSearchTerm(urlSearchQuery)
+      setSearchQuery(urlSearchQuery)
+    }
+  }, [urlSearchQuery])
+
+  useEffect(() => {
+    if (previewId) {
+      openPreview(previewId)
+    }
+  }, [previewId])
+
+  const fetchFeaturedArticle = async () => {
+    try {
+      const result = await articlesService.getAllArticles(1, 1, 'published')
+      if (result.data.length > 0) {
+        setFeaturedArticle(result.data[0])
+      }
+    } catch (error) {
+      console.error('Failed to fetch featured article:', error)
+    }
+  }
 
   useEffect(() => {
     if (urlSearchQuery) {
@@ -162,6 +188,69 @@ function ArticlesListContent() {
 
       <Section spacing="xl" container={false}>
         <div className="container-responsive">
+          {/* Featured Article */}
+          {featuredArticle && (
+            <ScrollReveal direction="up">
+              <div className="mb-16">
+                <div className="flex items-center gap-2 mb-6">
+                  <TrendingUp className="w-5 h-5 text-primary" />
+                  <h2 className="text-2xl font-bold">Bài viết nổi bật</h2>
+                </div>
+                <Link href={`/articles/${featuredArticle.slug}`}>
+                  <Card className="group overflow-hidden border-none shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                      {/* Image */}
+                      <div className="relative h-[400px] lg:h-[500px] overflow-hidden bg-muted">
+                        <Image
+                          src={featuredArticle.thumbnail_url || '/images/placeholder.jpg'}
+                          alt={featuredArticle.title}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                        <div className="absolute top-6 left-6">
+                          <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm px-4 py-1.5 border-none">
+                            🔥 MỚI NHẤT
+                          </Badge>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-8 lg:p-12 flex flex-col justify-center">
+                        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                          <div className="flex items-center gap-1.5">
+                            <Calendar className="w-4 h-4" />
+                            {format(new Date(featuredArticle.created_at), 'dd/MM/yyyy')}
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <Clock className="w-4 h-4" />
+                            8 phút đọc
+                          </div>
+                        </div>
+
+                        <h2 className="text-3xl lg:text-4xl font-bold mb-4 group-hover:text-primary transition-colors">
+                          {featuredArticle.title}
+                        </h2>
+
+                        <p className="text-lg text-muted-foreground mb-6 line-clamp-3">
+                          {featuredArticle.excerpt}
+                        </p>
+
+                        <Button 
+                          size="lg" 
+                          className="w-fit bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                        >
+                          Đọc ngay
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </div>
+                    </div>
+                  </Card>
+                </Link>
+              </div>
+            </ScrollReveal>
+          )}
+
           {/* Category Filters */}
           <ScrollReveal direction="up">
             <div className="flex flex-wrap gap-3 mb-12 justify-center">
@@ -213,7 +302,7 @@ function ArticlesListContent() {
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-max">
                 {filteredArticles.map((article, index) => (
                   <ScrollReveal key={article.id} direction="up" delay={index * 50}>
                     <Link href={`/articles/${article.slug}`}>

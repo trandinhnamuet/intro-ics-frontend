@@ -20,13 +20,18 @@ import { useTranslation } from 'react-i18next'
 export default function Page() {
   const { t } = useTranslation()
   const featuredStats = [
-    { icon: Users, value: "100+", label: t('home.stats.projectsCompleted'), color: "from-blue-500 to-cyan-500" },
     { icon: Building2, value: "50+", label: t('home.stats.enterpriseClients'), color: "from-purple-500 to-pink-500" },
     { icon: Shield, value: "24/7", label: t('home.stats.cybersecuritySupport'), color: "from-orange-500 to-red-500" },
     { icon: Award, value: "99.9%", label: t('home.stats.uptimeGuarantee'), color: "from-green-500 to-emerald-500" },
+    { icon: TrendingUp, value: "4+", label: t('home.stats.yearsExperience'), color: "from-blue-500 to-cyan-500" },
   ]
 
   const featuredPartners = [
+    {
+      name: "Gurucul",
+      logo: "/doitac/Gurucul.jpg",
+      description: t('home.partners.gurucul')
+    },
     {
       name: "HyperG",
       logo: "https://icss.com.vn/wp-content/uploads/2025/06/z6603220865281_a8751c9cd03f48ec5ef9b82d700917d8.jpg",
@@ -36,11 +41,6 @@ export default function Page() {
       name: "Oracle",
       logo: "https://icss.com.vn/wp-content/uploads/2025/08/Webo.OracleProfile-696x696-1.png",
       description: t('home.partners.oracle')
-    },
-    {
-      name: "Gamania",
-      logo: "https://icss.com.vn/wp-content/uploads/2025/06/z6603219309871_c0cf6fdc0c2ede77ee4a3920f5b54e4f.jpg",
-      description: t('home.partners.gamania')
     },
   ]
 
@@ -112,10 +112,10 @@ export default function Page() {
               </div>
             </ScrollReveal>
             
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 auto-rows-max">
               {featuredStats.map((stat, idx) => (
                 <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                  <Card className="relative overflow-visible group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30">
+                  <Card className="relative overflow-visible group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 h-full">
                     <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-5 group-hover:opacity-10 transition-opacity`} />
                     <div className="p-6 lg:p-8 pr-6 lg:pr-8 text-center relative z-10 overflow-visible">
                       <div className={`w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
@@ -153,10 +153,10 @@ export default function Page() {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 auto-rows-max">
               {featuredSolutions.map((solution, idx) => (
                 <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                  <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30">
+                  <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 h-full flex flex-col">
                     <div className="relative h-48 overflow-hidden">
                       <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient}`} />
                       <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
@@ -164,11 +164,11 @@ export default function Page() {
                         <h3 className="text-lg font-bold text-center">{solution.title}</h3>
                       </div>
                     </div>
-                    <div className="p-6 bg-background">
-                      <p className="text-foreground/70 mb-4 leading-relaxed">
+                    <div className="p-6 bg-background flex flex-col flex-grow">
+                      <p className="text-foreground/70 mb-4 leading-relaxed flex-grow">
                         {solution.description}
                       </p>
-                      <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:text-primary">
+                      <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:text-primary mt-auto">
                         {t('common.learnMore')}
                         <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
@@ -198,10 +198,10 @@ export default function Page() {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 auto-rows-max">
               {whyChooseUs.map((item, idx) => (
                 <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                  <Card className="group p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/50 bg-gradient-to-br from-background to-muted/30">
+                  <Card className="group p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/50 bg-gradient-to-br from-background to-muted/30 h-full flex flex-col">
                     <div className="flex gap-4">
                       <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
                         <item.icon className="w-7 h-7 text-white" />
@@ -240,10 +240,10 @@ export default function Page() {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-max">
               {featuredPartners.map((partner, idx) => (
                 <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                  <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white border-2 hover:border-white/50">
+                  <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white border-2 hover:border-white/50 h-full flex flex-col">
                     <div className="relative h-48 bg-white flex items-center justify-center p-8">
                       <img
                         src={partner.logo}
@@ -251,11 +251,11 @@ export default function Page() {
                         className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
-                    <div className="p-6 bg-white">
+                    <div className="p-6 bg-white flex flex-col flex-grow">
                       <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-primary transition-colors">
                         {partner.name}
                       </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                         {partner.description}
                       </p>
                     </div>
