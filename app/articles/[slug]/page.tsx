@@ -188,20 +188,6 @@ export default function ArticleDetailPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Article Content - 2/3 */}
           <article className="lg:col-span-2">
-            {/* Featured Image */}
-            {article.thumbnail_url && (
-              <ScrollReveal direction="up">
-                <div className="relative aspect-video overflow-hidden rounded-2xl mb-12 shadow-2xl">
-                  <Image
-                    src={article.thumbnail_url}
-                    alt={article.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </ScrollReveal>
-            )}
-
             {/* Share Buttons */}
             <ScrollReveal direction="up">
               <Card className="p-6 mb-8 bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">

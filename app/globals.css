@@ -144,19 +144,21 @@
   
   /* Enhanced Typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    @apply tracking-tight;
+    @apply my-4;
   }
   
   h1 {
-    @apply text-4xl sm:text-5xl lg:text-6xl;
+    @apply text-2xl sm:text-2xl lg:text-2xl;
+    
   }
   
   h2 {
-    @apply text-3xl sm:text-4xl lg:text-5xl;
+    @apply text-2xl sm:text-2xl lg:text-2xl;
   }
   
   h3 {
-    @apply text-2xl sm:text-3xl lg:text-4xl;
+    @apply text-2xl sm:text-2xl lg:text-2xl;
   }
   
   /* Smooth Scrolling */
