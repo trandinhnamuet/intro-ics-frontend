@@ -136,7 +136,7 @@
       "subtitle": "Discover our leading cybersecurity solutions",
       "aiSoc": "AI SOC",
       "aiSocDesc": "Security operations center equipped with advanced AI",
-      "csaDlp": "CSA-DLP",
+      "csaDlp": "CSA-Endpoint",
       "csaDlpDesc": "Endpoint security and data loss prevention solution",
       "pentestServices": "Pentest Services",
       "pentestServicesDesc": "Professional penetration testing services",
@@ -571,7 +571,7 @@
       "subtitle": "Comprehensive endpoint security solution combined with data loss prevention, protecting devices and enterprise data",
       "features": {
         "title": "Features",
-        "heading": "Key Features of CSA-DLP",
+        "heading": "Key Features of CSA-Endpoint",
         "description": "Comprehensive solution to protect endpoints and enterprise data",
         "endpoint": {
           "title": "Endpoint Security",
@@ -592,8 +592,8 @@
       },
       "benefits": {
         "title": "Benefits",
-        "heading": "Why Choose CSA-DLP?",
-        "description": "CSA-DLP provides comprehensive protection for enterprise data",
+        "heading": "Why Choose CSA-Endpoint?",
+        "description": "CSA-Endpoint provides comprehensive protection for enterprise data",
         "item1": "Effectively prevent sensitive data leakage",
         "item2": "Protect devices from malware and ransomware",
         "item3": "Control data access and usage",
@@ -605,8 +605,8 @@
         "compliance": "Regulatory Compliance"
       },
       "cta": {
-        "heading": "Protect Enterprise Data with CSA-DLP",
-        "description": "Contact us for consultation on CSA-DLP solutions"
+        "heading": "Protect Enterprise Data with CSA-Endpoint",
+        "description": "Contact us for consultation on CSA-Endpoint solutions"
       }
     },
     "pentestServices": {

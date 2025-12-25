@@ -640,7 +640,7 @@
       "subtitle": "엔드포인트 보안과 데이터 손실 방지의 통합 솔루션, 기기와 기업 데이터를 보호",
       "features": {
         "title": "기능",
-        "heading": "CSA-DLP의 주요 기능",
+        "heading": "CSA-Endpoint의 주요 기능",
         "description": "엔드포인트와 기업 데이터를 포괄적으로 보호하는 솔루션",
         "endpoint": {
           "title": "엔드포인트 보안",
@@ -661,8 +661,8 @@
       },
       "benefits": {
         "title": "이점",
-        "heading": "CSA-DLP를 선택하는 이유는?",
-        "description": "CSA-DLP가 기업 데이터에 포괄적인 보호를 제공합니다",
+        "heading": "CSA-Endpoint를 선택하는 이유는?",
+        "description": "CSA-Endpoint가 기업 데이터에 포괄적인 보호를 제공합니다",
         "item1": "민감한 데이터 유출을 효과적으로 방지",
         "item2": "맬웨어와 랜섬웨어 공격으로부터 기기 보호",
         "item3": "데이터 액세스 및 사용 제어",
@@ -674,8 +674,8 @@
         "compliance": "규정 준수"
       },
       "cta": {
-        "heading": "CSA-DLP로 기업 데이터 보호",
-        "description": "CSA-DLP 솔루션 컨설팅을 위해 문의하세요"
+        "heading": "CSA-Endpoint로 기업 데이터 보호",
+        "description": "CSA-Endpoint 솔루션 컨설팅을 위해 문의하세요"
       }
     },
     "pentestServices": {

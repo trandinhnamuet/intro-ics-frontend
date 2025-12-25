@@ -85,7 +85,7 @@
       "showLess": "Thu gọn",
       "aiSoc": "AI SOC",
       "aiSocDesc": "Trung tâm điều hành an ninh mạng được trang bị AI tiên tiến",
-      "csaDlp": "CSA-DLP",
+      "csaDlp": "CSA-Endpoint",
       "csaDlpDesc": "Giải pháp bảo mật điểm cuối và ngăn chặn mất mát dữ liệu",
       "pentestServices": "Pentest Services",
       "pentestServicesDesc": "Dịch vụ kiểm thử xâm nhập chuyên nghiệp",
@@ -354,7 +354,7 @@
         "description": "ICS được thành lập với sứ mệnh bảo vệ không gian số Việt Nam"
       },
       "2019": {
-        "title": "Ra mắt VietGuard",
+        "title": "Ra mắt Vietguard - Mobile App Security",
         "description": "Giải pháp bảo mật điểm cuối tiên phong với công nghệ Zero Trust"
       },
       "2020": {
@@ -382,7 +382,7 @@
       "heading": "Giải pháp của chúng tôi",
       "subtitle": "Các sản phẩm và giải pháp bảo mật hàng đầu",
       "vietguard": {
-        "title": "VietGuard",
+        "title": "Vietguard - Mobile App Security",
         "description": "Giải pháp bảo mật tiên tiến với công nghệ Zero Trust ngay tại điểm cuối, ngăn chặn mối đe dọa mà không cần nhận diện phần mềm độc hại."
       },
       "esg": {
@@ -600,7 +600,7 @@
       "visitWebsite": "Truy cập website",
       "features": {
         "title": "Tính năng",
-        "heading": "Tính năng nổi bật của Vietguard",
+        "heading": "Tính năng nổi bật của Vietguard - Mobile App Security",
         "description": "Giải pháp toàn diện để bảo mật ứng dụng di động của bạn",
         "scanning": {
           "title": "Quét tự động",
@@ -621,8 +621,8 @@
       },
       "benefits": {
         "title": "Lợi ích",
-        "heading": "Tại sao chọn Vietguard?",
-        "description": "Vietguard mang lại những lợi ích vượt trội cho ứng dụng di động của bạn",
+        "heading": "Tại sao chọn Vietguard - Mobile App Security?",
+        "description": "Vietguard - Mobile App Security mang lại những lợi ích vượt trội cho ứng dụng di động của bạn",
         "item1": "Quét và phát hiện lỗ hổng tự động, nhanh chóng",
         "item2": "Báo cáo chi tiết và dễ hiểu về các vấn đề bảo mật",
         "item3": "Hỗ trợ đa nền tảng: iOS, Android",
@@ -635,7 +635,7 @@
       },
       "cta": {
         "heading": "Bảo vệ ứng dụng di động của bạn ngay hôm nay",
-        "description": "Liên hệ với chúng tôi để được tư vấn và trải nghiệm Vietguard miễn phí"
+        "description": "Liên hệ với chúng tôi để được tư vấn và trải nghiệm Vietguard - Mobile App Security miễn phí"
       }
     },
     "aiSoc": {
@@ -686,7 +686,7 @@
       "subtitle": "Giải pháp bảo mật điểm cuối toàn diện kết hợp ngăn chặn mất mát dữ liệu, bảo vệ thiết bị và dữ liệu doanh nghiệp",
       "features": {
         "title": "Tính năng",
-        "heading": "Tính năng nổi bật của CSA-DLP",
+        "heading": "Tính năng nổi bật của CSA-Endpoint",
         "description": "Giải pháp toàn diện để bảo vệ điểm cuối và dữ liệu doanh nghiệp",
         "endpoint": {
           "title": "Bảo mật điểm cuối",
@@ -707,8 +707,8 @@
       },
       "benefits": {
         "title": "Lợi ích",
-        "heading": "Tại sao chọn CSA-DLP?",
-        "description": "CSA-DLP mang lại sự bảo vệ toàn diện cho dữ liệu doanh nghiệp",
+        "heading": "Tại sao chọn CSA-Endpoint?",
+        "description": "CSA-Endpoint mang lại sự bảo vệ toàn diện cho dữ liệu doanh nghiệp",
         "item1": "Ngăn chặn rò rỉ dữ liệu nhạy cảm hiệu quả",
         "item2": "Bảo vệ thiết bị khỏi malware và ransomware",
         "item3": "Kiểm soát truy cập và sử dụng dữ liệu",
@@ -720,8 +720,8 @@
         "compliance": "Tuân thủ quy định"
       },
       "cta": {
-        "heading": "Bảo vệ dữ liệu doanh nghiệp với CSA-DLP",
-        "description": "Liên hệ với chúng tôi để được tư vấn về giải pháp CSA-DLP"
+        "heading": "Bảo vệ dữ liệu doanh nghiệp với CSA-Endpoint",
+        "description": "Liên hệ với chúng tôi để được tư vấn về giải pháp CSA-Endpoint"
       }
     },
     "pentestServices": {

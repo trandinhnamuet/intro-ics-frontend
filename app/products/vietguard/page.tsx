@@ -82,7 +82,7 @@ export default function VietguardPage() {
                 </Badge>
                 
                 <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-                  Vietguard
+                  Vietguard - Mobile App Security
                 </h1>
                 
                 <p className="text-xl text-white/90 mb-8 leading-relaxed">

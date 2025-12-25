@@ -357,7 +357,7 @@
         "description": "以保护越南数字空间的使命创立ICS"
       },
       "2019": {
-        "title": "VietGuard推出",
+        "title": "推出Vietguard - 移动应用安全",
         "description": "具有Zero Trust技术的先进端点安全解决方案"
       },
       "2020": {
@@ -385,7 +385,7 @@
       "heading": "我们的解决方案",
       "subtitle": "领先的安全产品和解决方案",
       "vietguard": {
-        "title": "VietGuard",
+        "title": "Vietguard - 移动应用安全",
         "description": "具有Zero Trust技术的高级安全解决方案，在端点级别阻止威胁，无需识别恶意软件。"
       },
       "esg": {
@@ -671,7 +671,7 @@
       "subtitle": "端点安全与数据防泄漏综合解决方案，保护设备和企业数据",
       "features": {
         "title": "功能",
-        "heading": "CSA-DLP的主要功能",
+        "heading": "CSA-Endpoint的主要功能",
         "description": "全面保护端点和企业数据的解决方案",
         "endpoint": {
           "title": "端点安全",
@@ -692,8 +692,8 @@
       },
       "benefits": {
         "title": "优势",
-        "heading": "为什么选择CSA-DLP?",
-        "description": "CSA-DLP为企业数据提供全面保护",
+        "heading": "为什么选择CSA-Endpoint?",
+        "description": "CSA-Endpoint为企业数据提供全面保护",
         "item1": "有效防止敏感数据泄露",
         "item2": "保护设备免受恶意软件和勒索软件攻击",
         "item3": "控制数据访问和使用",
@@ -705,8 +705,8 @@
         "compliance": "合规性"
       },
       "cta": {
-        "heading": "使用CSA-DLP保护企业数据",
-        "description": "联系我们获取CSA-DLP解决方案咨询"
+        "heading": "使用CSA-Endpoint保护企业数据",
+        "description": "联系我们获取CSA-Endpoint解决方案咨询"
       }
     },
     "pentestServices": {

@@ -656,7 +656,7 @@
       "subtitle": "エンドポイントセキュリティとデータ漏洩防止の統合ソリューション、デバイスと企業データを保護",
       "features": {
         "title": "機能",
-        "heading": "CSA-DLPの主な機能",
+        "heading": "CSA-Endpointの主な機能",
         "description": "エンドポイントと企業データを包括的に保護するソリューション",
         "endpoint": {
           "title": "エンドポイントセキュリティ",
@@ -677,8 +677,8 @@
       },
       "benefits": {
         "title": "利点",
-        "heading": "CSA-DLPを選ぶ理由は?",
-        "description": "CSA-DLPが企業データに包括的な保護を提供",
+        "heading": "CSA-Endpointを選ぶ理由は?",
+        "description": "CSA-Endpointが企業データに包括的な保護を提供",
         "item1": "機密データの漏洩を効果的に防止",
         "item2": "マルウェアやランサムウェア攻撃からデバイスを保護",
         "item3": "データアクセスと使用を制御",
@@ -690,8 +690,8 @@
         "compliance": "コンプライアンス"
       },
       "cta": {
-        "heading": "CSA-DLPで企業データを保護",
-        "description": "CSA-DLPソリューションのコンサルティングについてお問い合わせください"
+        "heading": "CSA-Endpointで企業データを保護",
+        "description": "CSA-Endpointソリューションのコンサルティングについてお問い合わせください"
       }
     },
     "pentestServices": {

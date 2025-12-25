@@ -21,7 +21,7 @@ export default function GioiThieuPage() {
     { year: "7/2022", title: "Tham gia các dự án công nghệ y tế", description: "Mở rộng lĩnh vực hoạt động sang công nghệ healthcare" },
     { year: "6/2023", title: "Mở rộng trụ sở tại Hà Nội", description: "Khai trương văn phòng đại diện tại thủ đô Hà Nội" },
     { year: "2/2024", title: "Hợp tác đối tác quốc tế", description: "Liên kết với các đối tác toàn cầu: HyperG, Oracle, Gamania" },
-    { year: "3/2024", title: "Ra mắt Vietguard", description: "Giới thiệu sản phẩm Vietguard - giải pháp bảo vệ tài sản số" },
+    { year: "3/2024", title: "Ra mắt Vietguard - Mobile App Security", description: "Giới thiệu sản phẩm Vietguard - Mobile App Security - giải pháp bảo vệ tài sản số" },
     { year: "7/2024", title: "Ra mắt Smartdashboard", description: "Công bố sản phẩm Smartdashboard - nền tảng quản lý tập trung" },
     { year: "10/2025", title: "Ra mắt AI SOC", description: "Khởi động nền tảng AI SOC - trung tâm giám sát an ninh thông minh" },
   ]

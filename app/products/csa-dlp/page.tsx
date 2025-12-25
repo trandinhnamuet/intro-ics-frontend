@@ -82,7 +82,7 @@ export default function CsaDlpPage() {
                 </Badge>
                 
                 <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-                  CSA-DLP
+                  CSA-Endpoint
                 </h1>
                 
                 <p className="text-xl text-white/90 mb-8 leading-relaxed">
@@ -114,7 +114,7 @@ export default function CsaDlpPage() {
                 <Card className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                   <Image
                     src="/csa.jpg"
-                    alt="CSA-DLP"
+                    alt="CSA-Endpoint"
                     width={600}
                     height={400}
                     className="w-full h-auto"
