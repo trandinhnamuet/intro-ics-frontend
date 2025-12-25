@@ -16,19 +16,21 @@ export default function GioiThieuPage() {
   const { t } = useTranslation()
 
   const timeline = [
-    { year: "2018", titleKey: "about.timeline.2018.title", descriptionKey: "about.timeline.2018.description" },
-    { year: "2019", titleKey: "about.timeline.2019.title", descriptionKey: "about.timeline.2019.description" },
-    { year: "2020", titleKey: "about.timeline.2020.title", descriptionKey: "about.timeline.2020.description" },
-    { year: "2021", titleKey: "about.timeline.2021.title", descriptionKey: "about.timeline.2021.description" },
-    { year: "2022", titleKey: "about.timeline.2022.title", descriptionKey: "about.timeline.2022.description" },
-    { year: "2023", titleKey: "about.timeline.2023.title", descriptionKey: "about.timeline.2023.description" },
+    { year: "3/2020", title: "Thành lập công ty", description: "ICS được thành lập với tầm nhìn cung cấp giải pháp an ninh mạng hàng đầu" },
+    { year: "9/2021", title: "Ra mắt nền tảng đào tạo", description: "Khởi động nền tảng đào tạo an ninh mạng chuyên nghiệp" },
+    { year: "7/2022", title: "Tham gia các dự án công nghệ y tế", description: "Mở rộng lĩnh vực hoạt động sang công nghệ healthcare" },
+    { year: "6/2023", title: "Mở rộng trụ sở tại Hà Nội", description: "Khai trương văn phòng đại diện tại thủ đô Hà Nội" },
+    { year: "2/2024", title: "Hợp tác đối tác quốc tế", description: "Liên kết với các đối tác toàn cầu: HyperG, Oracle, Gamania" },
+    { year: "3/2024", title: "Ra mắt Vietguard", description: "Giới thiệu sản phẩm Vietguard - giải pháp bảo vệ tài sản số" },
+    { year: "7/2024", title: "Ra mắt Smartdashboard", description: "Công bố sản phẩm Smartdashboard - nền tảng quản lý tập trung" },
+    { year: "10/2025", title: "Ra mắt AI SOC", description: "Khởi động nền tảng AI SOC - trung tâm giám sát an ninh thông minh" },
   ]
 
   const team = [
-    { name: "Nguyễn Văn A", roleKey: "about.team.ceo", image: "/images/1.jpg" },
-    { name: "Trần Thị B", roleKey: "about.team.cto", image: "/images/2.jpg" },
-    { name: "Lê Văn C", roleKey: "about.team.securityLead", image: "/images/3.jpg" },
-    { name: "Phạm Thị D", roleKey: "about.team.operations", image: "/images/1.jpg" },
+    { name: "TS. Võ Trung Âu", role: "CEO", image: "/votrungau.jpg" },
+    { name: "Ths. Vũ Tam Hanh", role: "CTO", image: "/vutamhanh.jpg" },
+    { name: "Ths. Đặng Lê Trung", role: "CMO", image: "/trung.png" },
+    { name: "Ls. Nguyễn Đức Dương", role: "CLO", image: "/duong.jpg" },
   ]
 
   const values = [
@@ -241,8 +243,8 @@ export default function GioiThieuPage() {
                         </div>
                         <div className="flex-1">
                           <div className="text-3xl font-bold text-primary mb-2">{item.year}</div>
-                          <h3 className="text-xl font-bold mb-2">{t(item.titleKey)}</h3>
-                          <p className="text-muted-foreground">{t(item.descriptionKey)}</p>
+                          <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                          <p className="text-muted-foreground">{item.description}</p>
                         </div>
                       </div>
                     </Card>
@@ -288,7 +290,7 @@ export default function GioiThieuPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                       <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                      <p className="text-white/90 text-sm">{t(member.roleKey)}</p>
+                      <p className="text-white/90 text-sm">{member.role}</p>
                     </div>
                   </div>
                 </Card>

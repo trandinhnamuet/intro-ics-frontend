@@ -116,7 +116,7 @@ export default function SmartDashboardPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-3xl transform rotate-6" />
                 <Card className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                   <Image
-                    src="https://icss.com.vn/wp-content/uploads/2025/06/Thiet-ke-chua-co-ten-39.jpg"
+                    src="/smdb.png"
                     alt="Smart Dashboard"
                     width={600}
                     height={400}

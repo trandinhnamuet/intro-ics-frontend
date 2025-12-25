@@ -48,7 +48,7 @@ const products = [
   {
     nameKey: "oracleCloud",
     descriptionKey: "oracleCloudDesc",
-    image: "https://icss.com.vn/wp-content/uploads/2025/06/oracle_2_ac4dac9f3d.jpg",
+    image: "/doitac/Oracle.jpg",
     link: "/products/oracle-cloud",
     icon: Cloud,
     color: "from-red-500 to-orange-500",
@@ -56,7 +56,7 @@ const products = [
   {
     nameKey: "smartDashboard",
     descriptionKey: "smartDashboardDesc", 
-    image: "https://icss.com.vn/wp-content/uploads/2025/06/Thiet-ke-chua-co-ten-39.jpg",
+    image: "/smdb.png",
     link: "/products/smart-dashboard",
     icon: BarChart3,
     color: "from-indigo-500 to-blue-500",

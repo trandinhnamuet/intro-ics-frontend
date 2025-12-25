@@ -34,12 +34,12 @@ export default function Page() {
     },
     {
       name: "HyperG",
-      logo: "https://icss.com.vn/wp-content/uploads/2025/06/z6603220865281_a8751c9cd03f48ec5ef9b82d700917d8.jpg",
+      logo: "/doitac/HyperG.jpg",
       description: t('home.partners.hyperg')
     },
     {
       name: "Oracle",
-      logo: "https://icss.com.vn/wp-content/uploads/2025/08/Webo.OracleProfile-696x696-1.png",
+      logo: "/doitac/Oracle.jpg",
       description: t('home.partners.oracle')
     },
   ]

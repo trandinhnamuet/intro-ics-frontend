@@ -60,7 +60,7 @@ export default function KhachHangPage() {
                   <div className="group text-center md:mt-12">
                     <div className="relative w-full h-[200px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white transition-transform duration-300 hover:scale-105">
                       <Image
-                        src="https://icss.com.vn/wp-content/uploads/2025/08/cong-nghe-tai-chinh-la-nganh-gi-hinh-anh1-300x180.jpg"
+                        src="/taichinh.jpg"
                         alt="Ngành tài chính"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -73,7 +73,7 @@ export default function KhachHangPage() {
                   <div className="group text-center">
                     <div className="relative w-full h-[200px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white transition-transform duration-300 hover:scale-105">
                       <Image
-                        src="https://icss.com.vn/wp-content/uploads/2025/08/pngtree-government-building-with-columns-icon-png-image_1806612-e1754988700564-300x180.jpg"
+                        src="/chinhphu.webp"
                         alt="Chính phủ"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -86,7 +86,7 @@ export default function KhachHangPage() {
                   <div className="group text-center md:mt-12">
                     <div className="relative w-full h-[200px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white transition-transform duration-300 hover:scale-105">
                       <Image
-                        src="https://icss.com.vn/wp-content/uploads/2025/08/cong-nghe-vien-thong-e1754988927184-300x190.jpg"
+                        src="/vienthong.jpg"
                         alt="Ngành viễn thông"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"

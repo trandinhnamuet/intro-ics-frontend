@@ -26,7 +26,7 @@ export default function PartnerPage() {
     {
       name: "HyperG & Oracle",
       description: t('partners.hypergOracleDesc'),
-      logo: "https://icss.com.vn/wp-content/uploads/2025/06/z6603220865281_a8751c9cd03f48ec5ef9b82d700917d8.jpg",
+      logo: "/doitac/Oracle.jpg",
     },
     {
       name: "CyStack",
@@ -149,7 +149,7 @@ export default function PartnerPage() {
         className="relative w-full h-[500px] mt-20 overflow-hidden"
       >
         <Image
-          src="https://icss.com.vn/wp-content/uploads/2018/09/bg-gioi-thieu.jpg"
+          src="/bgdoitac.jpg"
           alt="Đối tác"
           fill
           className="object-cover"
