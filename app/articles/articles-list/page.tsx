@@ -228,7 +228,7 @@ function ArticlesListContent() {
                           </div>
                         </div>
 
-                        <h2 className="text-3xl lg:text-4xl font-bold mb-4 group-hover:text-primary transition-colors">
+                        <h2 className="text-3xl lg:text-4xl font-bold mb-4 group-hover:text-primary transition-colors leading-12">
                           {featuredArticle.title}
                         </h2>
 
