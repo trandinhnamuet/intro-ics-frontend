@@ -16,7 +16,7 @@ export default function RecruitmentPage() {
       <div 
         className="relative overflow-hidden text-white text-center py-20 w-full mt-24"
         style={{
-          backgroundImage: "url('https://icss.com.vn/wp-content/uploads/2018/09/bg-gioi-thieu.jpg')",
+          backgroundImage: "url('/bgtuyendung.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
