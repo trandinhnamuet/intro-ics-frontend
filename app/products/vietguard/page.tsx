@@ -116,7 +116,7 @@ export default function VietguardPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-3xl transform rotate-6" />
                 <Card className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                   <Image
-                    src="https://icss.com.vn/wp-content/uploads/2025/08/Screenshot-2025-08-07-174127-300x167.png"
+                    src="/vietguard.webp"
                     alt="Vietguard Dashboard"
                     width={600}
                     height={400}

@@ -32,7 +32,7 @@ const products = [
   {
     nameKey: "vietguard",
     descriptionKey: "vietguardDesc",
-    image: "https://icss.com.vn/wp-content/uploads/2025/08/Screenshot-2025-08-07-174127-300x167.png",
+    image: "/vietguard.webp",
     link: "/products/vietguard",
     icon: Shield,
     color: "from-green-500 to-emerald-500",
