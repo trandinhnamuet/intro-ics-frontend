@@ -27,9 +27,9 @@ export default function GioiThieuPage() {
   ]
 
   const team = [
-    { name: "TS. Võ Trung Âu", role: "CEO", image: "/votrungau.jpg" },
+    { name: "TS. Võ Trung Âu", role: "CEO", image: "/anhau.jpg" },
     { name: "Ths. Vũ Tam Hanh", role: "CTO", image: "/anhhanh.jpg" },
-    { name: "Ths. Đặng Lê Trung", role: "CMO", image: "/trung.png" },
+    { name: "Ths. Đặng Lê Trung", role: "CMO", image: "/anhtrung.jpg" },
     { name: "Ls. Nguyễn Đức Dương", role: "CLO", image: "/duong.jpg" },
   ]
 
