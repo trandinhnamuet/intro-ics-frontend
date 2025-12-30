@@ -483,10 +483,109 @@
       "badge": "Mobile App Security",
       "subtitle": "Security scanning and vulnerability detection tool for mobile applications",
       "visitWebsite": "Visit Website",
+      "hero": {
+        "badge": "Vietnamese standard mobile security, global quality",
+        "title": "Vietguard",
+        "subtitle": "Leading mobile app security solution in Vietnam with advanced AI technology",
+        "accessWebsite": "Access Now",
+        "contactAdvice": "Contact for Consultation",
+        "stats": {
+          "customers": "Trusted Customers",
+          "usersProtected": "Users Protected",
+          "accuracy": "Accuracy"
+        }
+      },
+      "trust": {
+        "badge": "Comprehensive Solution",
+        "heading": "Why Customers Trust Vietguard Solutions from ICS?",
+        "description": "Customers choose Vietguard because of the combination of advanced technology and credibility from leading experts",
+        "points": [
+          {
+            "title": "AI Pioneer",
+            "desc": "Pioneer in applying AI to cybersecurity in Vietnam"
+          },
+          {
+            "title": "Battle-Hardened Experts",
+            "desc": "Team with extensive experience and prestigious international certifications"
+          },
+          {
+            "title": "International Quality",
+            "desc": "Meets strict standards, protects 1 billion users"
+          },
+          {
+            "title": "Strategic Partners",
+            "desc": "Trusted by OCBC Bank, Gamevil, XLGAMES..."
+          }
+        ]
+      },
+      "applications": {
+        "heading": "Vietguard Application for Protecting Against Common Attacks",
+        "description": "Vietguard builds a solid shield against the most common threats today"
+      },
       "features": {
         "title": "Features",
         "heading": "Key Features of Vietguard",
         "description": "Comprehensive solution to secure your mobile applications",
+        "topFeatures": [
+          {
+            "title": "Attack Surface Management",
+            "description": "Manage and monitor application attack surface, early detection of potential weaknesses"
+          },
+          {
+            "title": "Vulnerability Management",
+            "description": "Comprehensive vulnerability management, prioritization and remediation of critical risks"
+          },
+          {
+            "title": "Audit Project Management",
+            "description": "Manage security audit projects, assess and analyze detailed application source code"
+          },
+          {
+            "title": "Bug Bounty Program",
+            "description": "Security bug reward program, encouraging community to find and report vulnerabilities"
+          },
+          {
+            "title": "Vulnerability Scan",
+            "description": "Automatic scanning to detect security vulnerabilities in applications and infrastructure"
+          },
+          {
+            "title": "Data Leak Detection",
+            "description": "Detect and prevent sensitive data leakage outside the organization"
+          },
+          {
+            "title": "Password & Secret Manager",
+            "description": "Secure password and secret management with enterprise-level encryption"
+          },
+          {
+            "title": "Trust Center",
+            "description": "Trust center providing overview of security and compliance status"
+          }
+        ],
+        "bottomFeatures": [
+          {
+            "title": "Endpoints",
+            "description": "Protect endpoints from malware, ransomware and threats"
+          },
+          {
+            "title": "Threat Intelligence",
+            "description": "Collect and analyze information about emerging threats"
+          },
+          {
+            "title": "WhiteHub Security Community",
+            "description": "Security expert community sharing knowledge and experience"
+          },
+          {
+            "title": "Vulnerability Research",
+            "description": "In-depth research on security vulnerabilities and exploitation methods"
+          },
+          {
+            "title": "Automation Engines",
+            "description": "Automate security processes, minimize manual intervention"
+          },
+          {
+            "title": "Data Lake",
+            "description": "Store and analyze large-scale security data for pattern detection"
+          }
+        ],
         "scanning": {
           "title": "Automated Scanning",
           "description": "Automatically scan and detect security vulnerabilities in mobile apps"
@@ -503,6 +602,67 @@
           "title": "Compliance Standards",
           "description": "Ensure compliance with international security standards"
         }
+      },
+      "activation": {
+        "badge": "Quick Deployment",
+        "heading": "Activate Comprehensive Solution for Enterprise App Protection",
+        "description": "Enterprises can quickly deploy Vietguard through flexible and efficient collaboration models",
+        "items": [
+          {
+            "title": "Quick Deployment",
+            "desc": "Protect applications directly without source code access or complex SDK integration"
+          },
+          {
+            "title": "Professional Roadmap",
+            "desc": "From needs analysis, live demo to building services according to enterprise scale"
+          },
+          {
+            "title": "CI/CD Integration",
+            "desc": "Automate security processes, reduce burden and accelerate time to market"
+          },
+          {
+            "title": "Dedicated Support",
+            "desc": "Commitment to accompany and provide continuous technical support during operations"
+          }
+        ]
+      },
+      "multiPlatform": {
+        "badge": "Multi-Platform",
+        "heading": "Multi-Platform Application Solutions",
+        "description": "Vietguard provides active protection platforms for all types of mobile applications today",
+        "items": [
+          {
+            "title": "Multi-OS Support",
+            "desc": "Comprehensive analysis and protection for both APK (Android) and IPA (iOS) files"
+          },
+          {
+            "title": "Diverse Encryption Technology",
+            "desc": "Strong protection for HTML5, CSS and JavaScript applications"
+          },
+          {
+            "title": "Multi-Layer Defense",
+            "desc": "Safe even on rooted or jailbroken devices"
+          }
+        ]
+      },
+      "whyChoose": {
+        "badge": "Superior Benefits",
+        "heading": "Choose Vietguard for Enterprise App Safety",
+        "description": "Vietguard is a smart investment to protect digital assets and enhance competitive advantage",
+        "benefits": [
+          {
+            "title": "Cost Optimization",
+            "desc": "Early vulnerability detection helps reduce up to 60% of bug fixes and incident recovery costs"
+          },
+          {
+            "title": "Ensure Legal Compliance",
+            "desc": "Fully meets Circular 50/2024, Cybersecurity Law, Decree 13, ISO 27001, PCI-DSS"
+          },
+          {
+            "title": "Smart Management",
+            "desc": "Automatic security dashboard detects, defends and reports detailed security status"
+          }
+        ]
       },
       "benefits": {
         "title": "Benefits",

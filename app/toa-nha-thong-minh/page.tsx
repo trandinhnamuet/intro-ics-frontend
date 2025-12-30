@@ -137,7 +137,7 @@ export default function ToaNhaThongMinhPage() {
                 <Star className="w-4 h-4 mr-2" />
                 {t('smartBuilding.featuresHeading')}
               </Badge>
-              <AnimatedHeading as="h2" gradient centered className="mb-6">
+              <AnimatedHeading as="h2" gradient centered className="p-3 mb-6">
                 {t('smartBuilding.featuresHeading')}
               </AnimatedHeading>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -176,7 +176,7 @@ export default function ToaNhaThongMinhPage() {
                   <Zap className="w-4 h-4 mr-2" />
                   {t('smartBuilding.whyHeading')}
                 </Badge>
-                <AnimatedHeading as="h2" gradient className="mb-6">
+                <AnimatedHeading as="h2" gradient className="p-3 mb-6">
                   {t('smartBuilding.whyHeading')}
                 </AnimatedHeading>
                 <p className="text-lg text-muted-foreground mb-8">

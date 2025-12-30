@@ -134,7 +134,7 @@ export default function NhaMayThongMinhPage() {
                 <Star className="w-4 h-4 mr-2" />
                 {t('smartFactory.featuresHeading')}
               </Badge>
-              <AnimatedHeading as="h2" gradient centered className="mb-6">
+              <AnimatedHeading as="h2" gradient centered className="p-3 mb-6">
                 {t('smartFactory.featuresHeading')}
               </AnimatedHeading>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -172,7 +172,7 @@ export default function NhaMayThongMinhPage() {
                   <Zap className="w-4 h-4 mr-2" />
                   {t('smartFactory.whyHeading')}
                 </Badge>
-                <AnimatedHeading as="h2" gradient className="mb-6">
+                <AnimatedHeading as="h2" gradient className="p-3 mb-6">
                   {t('smartFactory.whyHeading')}
                 </AnimatedHeading>
                 <p className="text-lg text-muted-foreground mb-8">

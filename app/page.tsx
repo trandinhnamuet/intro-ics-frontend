@@ -144,7 +144,7 @@ export default function Page() {
                   <Sparkles className="w-4 h-4 mr-2" />
                   {t('home.featuredSolutions.title')}
                 </Badge>
-                <AnimatedHeading as="h2" gradient centered className="mb-4">
+                <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
                   {t('home.featuredSolutions.heading')}
                 </AnimatedHeading>
                 <p className="text-foreground/70 text-lg max-w-3xl mx-auto font-medium">
@@ -189,7 +189,7 @@ export default function Page() {
                   <Star className="w-4 h-4 mr-2" />
                   {t('home.whyChooseUs.title')}
                 </Badge>
-                <AnimatedHeading as="h2" gradient centered className="mb-4">
+                <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
                   {t('home.whyChooseUs.subtitle')}
                 </AnimatedHeading>
                 <p className="text-foreground/70 text-lg max-w-3xl mx-auto font-medium">

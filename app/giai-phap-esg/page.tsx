@@ -130,7 +130,7 @@ export default function GiaiPhapESGPage() {
                 <Star className="w-4 h-4 mr-2" />
                 Ba trụ cột ESG
               </Badge>
-              <AnimatedHeading as="h2" gradient centered className="mb-6">
+              <AnimatedHeading as="h2" gradient centered className="p-3 mb-6">
                 Giải pháp ESG toàn diện
               </AnimatedHeading>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -164,7 +164,7 @@ export default function GiaiPhapESGPage() {
                   <Zap className="w-4 h-4 mr-2" />
                   {t('esg.why')}
                 </Badge>
-                <AnimatedHeading as="h2" gradient className="mb-6">
+                <AnimatedHeading as="h2" gradient className="p-3 mb-6">
                   {t('esg.why')}
                 </AnimatedHeading>
                 <p className="text-lg text-muted-foreground mb-8">

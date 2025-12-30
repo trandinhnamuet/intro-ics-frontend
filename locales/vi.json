@@ -598,10 +598,109 @@
       "badge": "Bảo mật ứng dụng di động",
       "subtitle": "Công cụ quét và phát hiện lỗ hổng bảo mật cho ứng dụng di động",
       "visitWebsite": "Truy cập website",
+      "hero": {
+        "badge": "An ninh di động chuẩn Việt, chất lượng toàn cầu",
+        "title": "Vietguard",
+        "subtitle": "Giải pháp bảo mật ứng dụng di động hàng đầu Việt Nam với công nghệ AI tiên tiến",
+        "accessWebsite": "Truy cập ngay",
+        "contactAdvice": "Liên hệ tư vấn",
+        "stats": {
+          "customers": "Khách hàng tin dùng",
+          "usersProtected": "Người dùng bảo vệ",
+          "accuracy": "Độ chính xác"
+        }
+      },
+      "trust": {
+        "badge": "Giải pháp toàn diện",
+        "heading": "Vì sao khách hàng tin tưởng giải pháp Vietguard của ICS?",
+        "description": "Khách hàng tin chọn VietGuard bởi sự kết hợp giữa công nghệ tiên tiến và uy tín từ đội ngũ chuyên gia hàng đầu",
+        "points": [
+          {
+            "title": "Tiên phong AI",
+            "desc": "Đơn vị tiên phong ứng dụng AI vào an ninh mạng tại Việt Nam"
+          },
+          {
+            "title": "Chuyên gia thực chiến",
+            "desc": "Đội ngũ dày dạn kinh nghiệm với chứng chỉ quốc tế uy tín"
+          },
+          {
+            "title": "Chất lượng quốc tế",
+            "desc": "Đáp ứng tiêu chuẩn khắt khe, bảo vệ 1 tỷ người dùng"
+          },
+          {
+            "title": "Đối tác chiến lược",
+            "desc": "Tin dùng bởi OCBC Bank, Gamevil, XLGAMES..."
+          }
+        ]
+      },
+      "applications": {
+        "heading": "Ứng dụng Vietguard cho việc bảo vệ các cuộc tấn công phổ biến",
+        "description": "VietGuard xây dựng lá chắn vững chắc chống lại các mối đe dọa phổ biến nhất hiện nay"
+      },
       "features": {
         "title": "Tính năng",
         "heading": "Tính năng nổi bật của Vietguard - Mobile App Security",
         "description": "Giải pháp toàn diện để bảo mật ứng dụng di động của bạn",
+        "topFeatures": [
+          {
+            "title": "Quản lý bề mặt tấn công",
+            "description": "Quản lý và giám sát bề mặt tấn công của ứng dụng, phát hiện sớm các điểm yếu"
+          },
+          {
+            "title": "Quản lý lỗ hổng",
+            "description": "Quản lý lỗ hổng bảo mật toàn diện, ưu tiên và khắc phục các rủi ro nghiêm trọng"
+          },
+          {
+            "title": "Quản lý dự án kiểm toán",
+            "description": "Quản lý dự án kiểm toán bảo mật, đánh giá chi tiết mã nguồn ứng dụng"
+          },
+          {
+            "title": "Chương trình Bug Bounty",
+            "description": "Chương trình thưởng lỗi bảo mật, khuyến khích cộng đồng tìm và báo cáo lỗ hổng"
+          },
+          {
+            "title": "Quét lỗ hổng",
+            "description": "Quét tự động phát hiện lỗ hổng bảo mật trong ứng dụng và hạ tầng"
+          },
+          {
+            "title": "Phát hiện rò rỉ dữ liệu",
+            "description": "Phát hiện và ngăn chặn rò rỉ dữ liệu nhạy cảm ra bên ngoài tổ chức"
+          },
+          {
+            "title": "Quản lý mật khẩu & bí mật",
+            "description": "Quản lý mật khẩu và bí mật an toàn với mã hóa cấp độ enterprise"
+          },
+          {
+            "title": "Trung tâm tin cậy",
+            "description": "Trung tâm tin cậy cung cấp tổng quan về tình trạng bảo mật và tuân thủ"
+          }
+        ],
+        "bottomFeatures": [
+          {
+            "title": "Thiết bị đầu cuối",
+            "description": "Bảo vệ các thiết bị đầu cuối khỏi malware, ransomware và các mối đe dọa"
+          },
+          {
+            "title": "Thông tin mối đe dọa",
+            "description": "Thu thập và phân tích thông tin về các mối đe dọa mới nổi"
+          },
+          {
+            "title": "Cộng đồng bảo mật WhiteHub",
+            "description": "Cộng đồng chuyên gia bảo mật chia sẻ kiến thức và kinh nghiệm"
+          },
+          {
+            "title": "Nghiên cứu lỗ hổng",
+            "description": "Nghiên cứu chuyên sâu về lỗ hổng bảo mật và phương pháp khai thác"
+          },
+          {
+            "title": "Công cụ tự động hóa",
+            "description": "Tự động hóa quy trình bảo mật, giảm thiểu can thiệp thủ công"
+          },
+          {
+            "title": "Kho dữ liệu",
+            "description": "Lưu trữ và phân tích dữ liệu bảo mật quy mô lớn để phát hiện mẫu hình"
+          }
+        ],
         "scanning": {
           "title": "Quét tự động",
           "description": "Tự động quét và phát hiện lỗ hổng bảo mật trong ứng dụng di động"
@@ -618,6 +717,67 @@
           "title": "Tuân thủ tiêu chuẩn",
           "description": "Đảm bảo tuân thủ các tiêu chuẩn bảo mật quốc tế"
         }
+      },
+      "activation": {
+        "badge": "Triển khai nhanh chóng",
+        "heading": "Kích hoạt giải pháp toàn diện bảo vệ ứng dụng doanh nghiệp",
+        "description": "Doanh nghiệp có thể nhanh chóng triển khai VietGuard thông qua mô hình hợp tác linh hoạt và hiệu quả",
+        "items": [
+          {
+            "title": "Triển khai nhanh chóng",
+            "desc": "Bảo vệ ứng dụng trực tiếp mà không cần tiếp cận mã nguồn hay tích hợp SDK phức tạp"
+          },
+          {
+            "title": "Lộ trình chuyên nghiệp",
+            "desc": "Từ phân tích nhu cầu, demo thực tế đến xây dựng gói dịch vụ theo quy mô doanh nghiệp"
+          },
+          {
+            "title": "Tích hợp CI/CD",
+            "desc": "Tự động hóa quy trình bảo mật, giảm gánh nặng và tăng tốc thời gian ra thị trường"
+          },
+          {
+            "title": "Hỗ trợ tận tâm",
+            "desc": "Cam kết đồng hành và hỗ trợ kỹ thuật liên tục trong suốt quá trình vận hành"
+          }
+        ]
+      },
+      "multiPlatform": {
+        "badge": "Đa nền tảng",
+        "heading": "Giải pháp đa nền tảng ứng dụng",
+        "description": "VietGuard mang đến nền tảng bảo vệ chủ động cho mọi loại hình ứng dụng di động hiện nay",
+        "items": [
+          {
+            "title": "Hỗ trợ đa hệ điều hành",
+            "desc": "Phân tích và bảo vệ toàn diện cho cả tệp APK (Android) và IPA (iOS)"
+          },
+          {
+            "title": "Công nghệ mã hóa đa dạng",
+            "desc": "Bảo vệ mạnh mẽ cho các ứng dụng HTML5, CSS và Javascript"
+          },
+          {
+            "title": "Phòng thủ đa lớp",
+            "desc": "An toàn ngay cả trên thiết bị đã Root hoặc Jailbreak"
+          }
+        ]
+      },
+      "whyChoose": {
+        "badge": "Lợi ích vượt trội",
+        "heading": "Lựa chọn Vietguard cho sự an toàn của ứng dụng doanh nghiệp",
+        "description": "VietGuard là khoản đầu tư thông minh để bảo vệ tài sản số và nâng cao vị thế cạnh tranh",
+        "benefits": [
+          {
+            "title": "Tối ưu chi phí",
+            "desc": "Phát hiện sớm lỗ hổng giúp giảm tới 60% chi phí sửa lỗi và khắc phục sự cố"
+          },
+          {
+            "title": "Đảm bảo tuân thủ pháp luật",
+            "desc": "Đáp ứng đầy đủ Thông tư 50/2024, Luật An ninh mạng, Nghị định 13, ISO 27001, PCI-DSS"
+          },
+          {
+            "title": "Quản trị thông minh",
+            "desc": "Dashboard an ninh tự động phát hiện, phòng thủ và báo cáo chi tiết tình trạng bảo mật"
+          }
+        ]
       },
       "benefits": {
         "title": "Lợi ích",

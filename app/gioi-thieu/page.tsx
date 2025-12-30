@@ -2,6 +2,7 @@
 
 import { useTranslation } from "react-i18next"
 import Image from "next/image"
+import { useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
@@ -10,10 +11,11 @@ import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { AnimatedHeading } from "@/components/ui/animated-heading"
 import { Section } from "@/components/ui/section"
-import { Shield, Target, Zap, Users, Award, TrendingUp, Play, Calendar } from "lucide-react"
+import { Shield, Target, Zap, Users, Award, TrendingUp, Play, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function GioiThieuPage() {
   const { t } = useTranslation()
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const timeline = [
     { year: "3/2020", title: "Thành lập công ty", description: "ICS được thành lập với tầm nhìn cung cấp giải pháp an ninh mạng hàng đầu" },
@@ -30,8 +32,25 @@ export default function GioiThieuPage() {
     { name: "TS. Võ Trung Âu", role: "CEO", image: "/anhau.jpg" },
     { name: "Ths. Vũ Tam Hanh", role: "CTO", image: "/anhhanh.jpg" },
     { name: "Ths. Đặng Lê Trung", role: "CMO", image: "/anhtrung.jpg" },
-    { name: "Ls. Nguyễn Đức Dương", role: "CLO", image: "/duong.jpg" },
+    { name: "Ths. Vũ Thị Hải Yến", role: "CHRO", image: "/chiyen.jpeg" },
+    { name: "Nguyễn Đức Dương", role: "CLO", image: "/duong.jpg" },
   ]
+
+  const visibleTeam = team.slice(currentIndex, currentIndex + 4)
+  const canGoPrev = currentIndex > 0
+  const canGoNext = currentIndex + 4 < team.length
+
+  const handlePrev = () => {
+    if (canGoPrev) {
+      setCurrentIndex(currentIndex - 1)
+    }
+  }
+
+  const handleNext = () => {
+    if (canGoNext) {
+      setCurrentIndex(currentIndex + 1)
+    }
+  }
 
   const values = [
     { icon: Shield, titleKey: "about.values.security.title", descriptionKey: "about.values.security.description" },
@@ -96,7 +115,7 @@ export default function GioiThieuPage() {
               as="h2" 
               gradient 
               centered 
-              className="mb-4"
+              className="p-3 mb-4"
             >
               {t('about.discoverICS')}
             </AnimatedHeading>
@@ -187,7 +206,7 @@ export default function GioiThieuPage() {
       <Section spacing="xl" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <AnimatedHeading as="h2" gradient centered className="mb-4">
+            <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
               {t('about.values.heading')}
             </AnimatedHeading>
           </ScrollReveal>
@@ -217,7 +236,7 @@ export default function GioiThieuPage() {
       <Section spacing="xl" background="muted">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <AnimatedHeading as="h2" gradient centered className="mb-4">
+            <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
               {t('about.timeline.heading')}
             </AnimatedHeading>
           </ScrollReveal>
@@ -266,7 +285,7 @@ export default function GioiThieuPage() {
       <Section spacing="xl" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <AnimatedHeading as="h2" gradient centered className="mb-4">
+            <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
               {t('about.leadership.heading')}
             </AnimatedHeading>
           </ScrollReveal>
@@ -276,26 +295,72 @@ export default function GioiThieuPage() {
             </p>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-max">
-            {team.map((member, index) => (
-              <ScrollReveal key={index} direction="up" delay={index * 100}>
-                <Card className="overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col">
-                  <div className="relative h-80">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                      <p className="text-white/90 text-sm">{member.role}</p>
+          <div className="relative">
+            {/* Navigation Buttons */}
+            <button
+              onClick={handlePrev}
+              disabled={!canGoPrev}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 -translate-x-4 lg:-translate-x-12 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center transition-all duration-300 ${
+                canGoPrev 
+                  ? 'hover:bg-primary hover:text-white cursor-pointer' 
+                  : 'opacity-30 cursor-not-allowed'
+              }`}
+              aria-label="Previous team members"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={handleNext}
+              disabled={!canGoNext}
+              className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 translate-x-4 lg:translate-x-12 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center transition-all duration-300 ${
+                canGoNext 
+                  ? 'hover:bg-primary hover:text-white cursor-pointer' 
+                  : 'opacity-30 cursor-not-allowed'
+              }`}
+              aria-label="Next team members"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Team Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-max transition-all duration-500">
+              {visibleTeam.map((member, index) => (
+                <ScrollReveal key={`${currentIndex}-${index}`} direction="up" delay={index * 100}>
+                  <Card className="overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col">
+                    <div className="relative h-80">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                        <p className="text-white/90 text-sm">{member.role}</p>
+                      </div>
                     </div>
-                  </div>
-                </Card>
-              </ScrollReveal>
-            ))}
+                  </Card>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            {/* Pagination Dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              {Array.from({ length: team.length - 3 }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    currentIndex === index 
+                      ? 'bg-primary w-8' 
+                      : 'bg-gray-300 dark:bg-gray-600 hover:bg-primary/50'
+                  }`}
+                  aria-label={`Go to page ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </Section>
@@ -304,7 +369,7 @@ export default function GioiThieuPage() {
       <Section spacing="xl" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <AnimatedHeading as="h2" centered className="mb-4 text-white">
+            <AnimatedHeading as="h2" centered className="p-3 mb-4 text-white">
               {t('about.solutions.heading')}
             </AnimatedHeading>
           </ScrollReveal>

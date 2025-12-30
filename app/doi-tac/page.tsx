@@ -182,7 +182,7 @@ export default function PartnerPage() {
       <Section spacing="xl" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <AnimatedHeading as="h2" gradient centered className="mb-4">
+            <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
               {t('partners.programTitle')}
             </AnimatedHeading>
           </ScrollReveal>
@@ -224,7 +224,7 @@ export default function PartnerPage() {
       <Section spacing="xl" background="muted">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <AnimatedHeading as="h2" gradient centered className="mb-4">
+            <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
               {t('partners.technologyPartners')}
             </AnimatedHeading>
           </ScrollReveal>
@@ -267,7 +267,7 @@ export default function PartnerPage() {
       <Section spacing="xl" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <AnimatedHeading as="h2" gradient centered className="mb-4">
+            <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
               {t('partners.businessPartners')}
             </AnimatedHeading>
           </ScrollReveal>
@@ -311,7 +311,7 @@ export default function PartnerPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="mb-4">
-              <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl py-2">
+              <AnimatedHeading as="h2" gradient centered className="p-3 text-4xl lg:text-5xl py-2">
                 {t('partners.testimonials')}
               </AnimatedHeading>
             </div>
