@@ -300,7 +300,7 @@ export default function ChatbotPage() {
             <ScrollReveal direction="up" delay={200}>
               <Card className="relative h-96 lg:h-[500px] overflow-hidden border-2 border-cyan-200 dark:border-cyan-800 rounded-3xl shadow-2xl">
                 <Image
-                  src="https://bluedata.vn/wp-content/uploads/2024/11/ai-cham-soc-khach-hang.webp"
+                  src="https://lh7-us.googleusercontent.com/F7OUk_L3MIrf13rhUYn3-O4lQkfEbiC5Blju5S0OEuJLrZN7qX1OgIJSbdVNCOz89hKa564ZuKtp2KYbZqioKs5UZQoNncD9r9XihZE0DFhnhVjC64hI_i1gyIkO9uP_iOCiK3S82MQ9TtThKXjb5lI"
                   alt="V AIChat Communication Platform"
                   fill
                   className="object-cover"
@@ -352,7 +352,7 @@ export default function ChatbotPage() {
             <ScrollReveal direction="up">
               <Card className="relative h-96 overflow-hidden border-2 border-red-200 dark:border-red-800 rounded-2xl shadow-xl">
                 <Image
-                  src="https://lh7-us.googleusercontent.com/F7OUk_L3MIrf13rhUYn3-O4lQkfEbiC5Blju5S0OEuJLrZN7qX1OgIJSbdVNCOz89hKa564ZuKtp2KYbZqioKs5UZQoNncD9r9XihZE0DFhnhVjC64hI_i1gyIkO9uP_iOCiK3S82MQ9TtThKXjb5lI"
+                  src="https://bluedata.vn/wp-content/uploads/2024/11/ai-cham-soc-khach-hang.webp"
                   alt="Chat Development Challenges"
                   fill
                   className="object-cover"
