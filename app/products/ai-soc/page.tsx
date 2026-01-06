@@ -225,7 +225,7 @@ export default function AiSocPage() {
                 <div className="space-y-4">
                   <Badge className="inline-flex px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all">
                     <Shield className="w-4 h-4 mr-2" />
-                    Mạnh mẽ. Thông minh. Tự động.
+                    Mạnh mẽ. Thông minh. Tự động
                   </Badge>
 
                   <div className="space-y-3">
@@ -287,7 +287,7 @@ export default function AiSocPage() {
               <div className="relative h-[500px] flex items-center justify-center">
                 <Card className="relative z-10 w-full h-full bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden group hover:shadow-4xl transition-all duration-500">
                   <Image
-                    src="https://vietnetco.vn/wp-content/uploads/2022/03/soc-and-noc.jpeg"
+                    src="https://cmcts.com.vn/media/data/news/2022/Th%C3%A1ng_2/CMC_SOC_HN.jpeg"
                     alt="AI SOC Dashboard"
                     fill
                     className="object-cover"
@@ -376,7 +376,7 @@ export default function AiSocPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <Card className="relative h-80 overflow-hidden border border-red-200 dark:border-red-800 rounded-2xl shadow-lg">
                 <Image
-                  src="https://cmcts.com.vn/media/data/news/2022/Th%C3%A1ng_2/CMC_SOC_HN.jpeg"
+                  src="https://vietnetco.vn/wp-content/uploads/2022/03/soc-and-noc.jpeg"
                   alt="Network Security Threats"
                   fill
                   className="object-cover"
