@@ -9,10 +9,18 @@ import { useTranslation } from 'react-i18next'
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { AnimatedHeading } from "@/components/ui/animated-heading"
 import { Section } from "@/components/ui/section"
-import { ArrowRight, Shield, Cloud, BarChart3, Lock, Activity } from "lucide-react"
+import { ArrowRight, Shield, Cloud, BarChart3, Lock, Activity, MessageCircle } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const products = [
+  {
+    nameKey: "chatbot",
+    descriptionKey: "chatbotDesc", 
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
+    link: "/products/chatbot",
+    icon: MessageCircle,
+    color: "from-blue-600 to-cyan-500",
+  },
   {
     nameKey: "aiSoc",
     descriptionKey: "aiSocDesc", 

@@ -134,6 +134,8 @@
     "products": {
       "title": "Products & Solutions",
       "subtitle": "Discover our leading cybersecurity solutions",
+      "chatbot": "V AIChat - Chatbot",
+      "chatbotDesc": "Comprehensive in-app communication platform with AI Chatbot, increase user retention by 40%",
       "aiSoc": "AI SOC",
       "aiSocDesc": "Security operations center equipped with advanced AI",
       "csaDlp": "CSA-Endpoint",
@@ -207,6 +209,7 @@
       "esgDesc": "ESG solutions for enterprises",
       "aiSocDesc": "AI Security Operations Center",
       "productDescriptions": {
+        "chatbot": "In-app communication platform with AI",
         "vietguard": "Security scanning tool",
         "aiSoc": "Security analytics",
         "csaDlp": "Endpoint security & DLP",

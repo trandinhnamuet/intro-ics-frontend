@@ -210,6 +210,13 @@ export function Header() {
                 <div className="absolute top-full left-0 pt-2 min-w-[240px]">
                   <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
                     <Link
+                      href="/products/chatbot"
+                      className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
+                    >
+                      <div className="font-medium">V AIChat - Chatbot</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.chatbot')}</div>
+                    </Link>
+                    <Link
                       href="/products/vietguard"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
@@ -224,7 +231,7 @@ export function Header() {
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.aiSoc')}</div>
                     </Link>
                     <Link
-                      href="/products/csa-dlp"
+                      href="https://landing-csa.vercel.app/"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">CSA-Endpoint</div>
@@ -238,14 +245,18 @@ export function Header() {
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.pentest')}</div>
                     </Link>
                     <Link
-                      href="/products/oracle-cloud"
+                      href="https://oraclecloud.vn/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.oracleCloud')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.oracleCloud')}</div>
                     </Link>
                     <Link
-                      href="/products/smart-dashboard"
+                      href="https://smartdashboard.vn/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.smartDashboard')}</div>
@@ -424,10 +435,10 @@ export function Header() {
                     <Link href="http://vietguardscan.icss.com.vn/" target="_blank" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       {t('header.vietguard')}
                     </Link>
-                    <Link href="http://oraclecloud.vn/" target="_blank" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="https://oraclecloud.vn/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       {t('header.oracleCloud')}
                     </Link>
-                    <Link href="http://smartdashboard.vn/" target="_blank" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="https://smartdashboard.vn/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       {t('header.smartDashboard')}
                     </Link>
                     <Link href="#" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>

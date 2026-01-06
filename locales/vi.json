@@ -83,6 +83,8 @@
       "title": "Sản Phẩm & Giải Pháp",
       "subtitle": "Khám phá các giải pháp an ninh mạng hàng đầu của chúng tôi",
       "showLess": "Thu gọn",
+      "chatbot": "V AIChat - Chatbot",
+      "chatbotDesc": "Nền tảng giao tiếp in-app toàn diện với AI Chatbot, tăng 40% tỷ lệ giữ chân người dùng",
       "aiSoc": "AI SOC",
       "aiSocDesc": "Trung tâm điều hành an ninh mạng được trang bị AI tiên tiến",
       "csaDlp": "CSA-Endpoint",
@@ -202,6 +204,7 @@
       "esgDesc": "Giải pháp ESG cho doanh nghiệp",
       "aiSocDesc": "Trung tâm điều hành an ninh mạng AI",
       "productDescriptions": {
+        "chatbot": "Nền tảng giao tiếp in-app toàn diện với AI Chatbot",
         "vietguard": "Công cụ quét và phát hiện lỗ hổng bảo mật",
         "aiSoc": "Giải pháp phân tích và giám sát an ninh mạng",
         "csaDlp": "Bảo mật điểm cuối & Ngăn ngừa mất mát dữ liệu",
@@ -594,6 +597,196 @@
     "certifications": "Chứng nhận & Đối tác"
   },
   "products": {
+    "aiSoc": {
+      "hero": {
+        "badge": "Mạnh mẽ. Thông minh. Tự động.",
+        "title": "AI SOC",
+        "titleMain": "Cách mạng hóa vận hành An ninh mạng bằng Trí tuệ Nhân tạo",
+        "subtitle": "SOC truyền thống đã lỗi thời. AI SOC là tiêu chuẩn mới.",
+        "description": "Giải pháp AI SOC của ICS kết hợp nền tảng phân tích dữ liệu quy mô toàn cầu của Google với công nghệ phân tích hành vi tiên tiến từ Gurucul, giúp doanh nghiệp:",
+        "points": [
+          "Phát hiện APT, tấn công nội gián, mã độc thế hệ mới trong vài giây",
+          "Tự động hóa đến 90% quy trình phản ứng sự cố",
+          "Giảm thiểu cảnh báo giả, tập trung vào nguy cơ thực sự"
+        ],
+        "ctaSubtitle": "Không chỉ là phát hiện – mà là hành động ngay lập tức.",
+        "cta1": "Nhận tư vấn giải pháp AI SOC",
+        "cta2": "Xem tài liệu Workshop Walkthrough"
+      },
+      "painPoints": {
+        "badge": "Nỗi đau thị trường",
+        "title": "Tại sao SOC truyền thống không còn đủ sức bảo vệ bạn?",
+        "subtitle": "Doanh nghiệp đang đối mặt với một thực tế khắc nghiệt:",
+        "points": [
+          {
+            "title": "Quá tải cảnh báo",
+            "items": [
+              "Hệ thống phát sinh hàng triệu alert mỗi ngày",
+              "Riêng tại Việt Nam: 12.300+ cuộc tấn công mạng/ngày",
+              "SOC truyền thống không thể xử lý thủ công với độ chính xác cao"
+            ]
+          },
+          {
+            "title": "Tấn công ngày càng tinh vi",
+            "items": [
+              "83+ chiến dịch APT mỗi năm nhắm vào:",
+              "Ngân hàng – Tài chính, Năng lượng – Viễn thông, Cơ quan nhà nước – Doanh nghiệp lớn",
+              "Hacker không còn \"đánh nhanh rút gọn\" mà ẩn mình nhiều tuần/tháng"
+            ]
+          },
+          {
+            "title": "Khủng hoảng nhân sự SOC",
+            "items": [
+              "Thiếu trầm trọng SOC Analyst cấp cao",
+              "Chi phí duy trì SOC 24/7 cực lớn",
+              "Burnout – sai sót – phản ứng chậm"
+            ]
+          },
+          {
+            "title": "Thời gian phản ứng không chấp nhận được",
+            "items": [
+              "SOC truyền thống: vài ngày → vài tuần",
+              "AI SOC: vài giây → vài phút"
+            ]
+          }
+        ],
+        "conclusion": "SOC truyền thống chỉ \"nhìn thấy\", nhưng không kịp hành động."
+      },
+      "solution": {
+        "badge": "Hệ sinh thái AI SOC",
+        "title": "Giải pháp AI SOC của ICS",
+        "subtitle": "Hệ sinh thái AI SOC toàn diện",
+        "description": "ICS triển khai AI SOC thế hệ mới dựa trên sự kết hợp giữa Google Chronicle / Google Security Operations và Gurucul REVEAL Platform",
+        "pillars": [
+          {
+            "icon": "Database",
+            "number": "1",
+            "title": "Dữ liệu khổng lồ – Google Scale",
+            "items": [
+              "Phân tích 50 tỷ tệp/ngày",
+              "Bảo vệ 5 tỷ thiết bị toàn cầu",
+              "Khả năng lưu trữ – truy vấn log không giới hạn"
+            ]
+          },
+          {
+            "icon": "Brain",
+            "number": "2",
+            "title": "Phân tích hành vi – UEBA",
+            "items": [
+              "Machine Learning học hành vi người dùng & hệ thống",
+              "Phát hiện: Tài khoản bị chiếm quyền, Nội gián, Lateral Movement, Privilege Escalation",
+              "Không phụ thuộc chữ ký (signature-less)"
+            ]
+          },
+          {
+            "icon": "Zap",
+            "number": "3",
+            "title": "Tự động hóa phản ứng – SOAR",
+            "items": [
+              "Playbook phản ứng tự động: Cô lập endpoint, Ngắt kết nối tài khoản, Chặn IP / Domain độc hại",
+              "Giảm MTTR > 70%"
+            ]
+          }
+        ]
+      },
+      "features": {
+        "badge": "Công nghệ đột phá",
+        "title": "Tính năng nổi bật",
+        "subtitle": "Công nghệ đột phá trong tầm tay bạn",
+        "items": [
+          {
+            "icon": "Target",
+            "title": "Risk Scoring Dashboard",
+            "description": "Chấm điểm rủi ro theo ngữ cảnh thực, ưu tiên xử lý mối đe dọa nguy hiểm nhất. Không còn \"alert noise\""
+          },
+          {
+            "icon": "Search",
+            "title": "Investigate Studio",
+            "description": "Truy vết sâu toàn bộ pipeline dữ liệu, drill-down từ alert → log → hành vi. Hỗ trợ forensic & threat hunting"
+          },
+          {
+            "icon": "Map",
+            "title": "MITRE ATT&CK Mapping",
+            "description": "Tự động ánh xạ kỹ thuật tấn công, hiểu rõ hacker đang ở giai đoạn nào của kill chain. Hỗ trợ báo cáo lãnh đạo & kiểm toán"
+          },
+          {
+            "icon": "FileText",
+            "title": "Custom Reporting",
+            "description": "Báo cáo Compliance (ISO 27001, NIST, PCI-DSS…), báo cáo Executive cho Ban điều hành. Xuất báo cáo tự động theo lịch"
+          },
+          {
+            "icon": "CheckCircle",
+            "title": "Case Management",
+            "description": "Quản lý toàn bộ vòng đời sự cố, gán nhiệm vụ – theo dõi SLA – đóng case khoa học. Phù hợp SOC nội bộ & SOC thuê ngoài (MSSP)"
+          }
+        ]
+      },
+      "process": {
+        "badge": "Quy trình hoạt động",
+        "title": "Chu trình khép kín",
+        "subtitle": "Xác định – Bảo vệ – Phát hiện – Phản ứng – Phục hồi",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Ingestion – Thu thập",
+            "description": "Cloud, Endpoint, Network, IAM, SaaS. Log tập trung, chuẩn hóa tức thời"
+          },
+          {
+            "number": "2",
+            "title": "Detection – Phát hiện",
+            "description": "AI/ML đối soát với threat intelligence toàn cầu. Phát hiện bất thường chưa từng biết (Zero-day)"
+          },
+          {
+            "number": "3",
+            "title": "Analysis – Phân tích",
+            "description": "AI + Chuyên gia ICS phân tích ngữ cảnh. Loại bỏ false positive"
+          },
+          {
+            "number": "4",
+            "title": "Response – Phản ứng",
+            "description": "Kích hoạt playbook tự động. Hạn chế lan rộng trong vài giây"
+          },
+          {
+            "number": "5",
+            "title": "Recovery – Phục hồi",
+            "description": "Hỗ trợ khôi phục. Đề xuất vá lỗ hổng – cải thiện posture an ninh"
+          }
+        ]
+      },
+      "whyIcs": {
+        "badge": "Lý do chọn ICS",
+        "title": "Tại sao chọn ICS?",
+        "subtitle": "Chuyên gia an ninh mạng đồng hành cùng doanh nghiệp Việt",
+        "points": [
+          {
+            "icon": "DollarSign",
+            "title": "Tối ưu chi phí",
+            "description": "Không cần đầu tư SOC vật lý đắt đỏ. Mô hình linh hoạt theo quy mô doanh nghiệp"
+          },
+          {
+            "icon": "Zap",
+            "title": "Công nghệ hàng đầu thế giới",
+            "description": "Đối tác triển khai Gurucul AI SOC. Tiếp cận nền tảng AI SOC tiên tiến nhất hiện nay"
+          },
+          {
+            "icon": "Users",
+            "title": "Đội ngũ tại Việt Nam",
+            "description": "Hỗ trợ 24/7 – tiếng Việt. Hiểu rõ đặc thù hạ tầng & mối đe dọa trong nước. Đồng hành lâu dài, không chỉ bán giải pháp"
+          }
+        ]
+      },
+      "resources": {
+        "badge": "Tài liệu & Case Study",
+        "title": "Khám phá chi tiết cách AI SOC vận hành trong thực tế",
+        "description": "Tải ngay tài liệu \"Gurucul Workshop Walkthrough\" để:",
+        "points": [
+          "Hiểu rõ kiến trúc AI SOC",
+          "Xem demo quy trình xử lý sự cố thực tế",
+          "Đánh giá mức độ phù hợp với doanh nghiệp của bạn"
+        ],
+        "cta": "Tải tài liệu hướng dẫn vận hành SOC"
+      }
+    },
     "vietguard": {
       "badge": "Bảo mật ứng dụng di động",
       "subtitle": "Công cụ quét và phát hiện lỗ hổng bảo mật cho ứng dụng di động",
