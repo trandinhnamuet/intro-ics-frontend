@@ -243,7 +243,7 @@ export default function ChatbotPage() {
                       V AIChat
                     </span>
                   </h1>
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  <h2 className="text-3xl md:text-5xl font-bold text-foreground">
                     Đừng để người dùng rời bỏ ứng dụng
                   </h2>
                 </div>
