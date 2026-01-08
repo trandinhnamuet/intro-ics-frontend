@@ -30,6 +30,7 @@ export default function GioiThieuPage() {
 
   const team = [
     { name: "TS. Võ Trung Âu", role: "CEO", image: "/anhau.jpg" },
+    { name: "Đỗ Thanh Toàn", role: "COO", image: "/anhtoan.jpg" },
     { name: "Ths. Vũ Tam Hanh", role: "CTO", image: "/anhhanh.jpg" },
     { name: "Ths. Đặng Lê Trung", role: "CMO", image: "/anhtrung.jpg" },
     { name: "Ths. Vũ Thị Hải Yến", role: "CHRO", image: "/chiyen.jpeg" },
@@ -77,12 +78,7 @@ export default function GioiThieuPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="container-responsive">
-            <ScrollReveal direction="right">
-              <Badge className="mb-4 px-4 py-2 bg-white/20 backdrop-blur-sm border-white/30">
-                <Shield className="w-4 h-4 mr-2" />
-                {t('about.badge')}
-              </Badge>
-            </ScrollReveal>
+            
             <ScrollReveal direction="right" delay={100}>
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 max-w-3xl">
                 {t('about.hero.title')}
@@ -108,7 +104,7 @@ export default function GioiThieuPage() {
       </div>
 
       {/* Video Section */}
-      <Section spacing="xl" background="default">
+      <Section spacing="md" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading 
@@ -146,7 +142,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Company Description */}
-      <Section spacing="xl" background="muted">
+      <Section spacing="md" background="muted">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
@@ -203,7 +199,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Core Values */}
-      <Section spacing="xl" background="default">
+      <Section spacing="md" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
@@ -233,7 +229,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Timeline */}
-      <Section spacing="xl" background="muted">
+      <Section spacing="md" background="muted">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
@@ -282,7 +278,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Team Section */}
-      <Section spacing="xl" background="default">
+      <Section spacing="md" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
@@ -366,7 +362,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Solutions Preview */}
-      <Section spacing="xl" background="gradient">
+      <Section spacing="md" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" centered className="p-3 mb-4 text-white">
@@ -453,7 +449,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* CTA Section */}
-      <Section spacing="xl" background="default">
+      <Section spacing="md" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <Card className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-secondary p-12 lg:p-20 text-center">

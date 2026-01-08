@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Header } from '@/components/header'
@@ -33,188 +33,216 @@ import {
   Rocket,
   Eye,
   Activity,
-  Award
+  Award,
+  Sparkles,
+  Cpu,
+  Network,
+  GitBranch,
+  Workflow,
+  Bot,
+  Gauge
 } from 'lucide-react'
 
-export default function AiSocPage() {
-  const [activeStep, setActiveStep] = useState(0)
+interface OrbConfig {
+  id: number
+  top: string
+  left: string
+  duration: number
+  delay: number
+}
 
-  const painPoints = [
+export default function AiSocPage() {
+  const [activeTab, setActiveTab] = useState(0)
+  const [hoveredFeature, setHoveredFeature] = useState<number | null>(null)
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const [isClient, setIsClient] = useState(false)
+  const [orbs, setOrbs] = useState<OrbConfig[]>([])
+
+  useEffect(() => {
+    setIsClient(true)
+    
+    // Generate orb positions only on client
+    const generatedOrbs = [...Array(6)].map((_, i) => ({
+      id: i,
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      duration: 8 + Math.random() * 4,
+      delay: i * 0.5
+    }))
+    setOrbs(generatedOrbs)
+    
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+      const progress = (window.scrollY / totalHeight) * 100
+      setScrollProgress(progress)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const challenges = [
     {
       icon: AlertTriangle,
-      title: "Quá tải cảnh báo",
-      items: [
-        "Hệ thống phát sinh hàng triệu alert mỗi ngày",
-        "Riêng tại Việt Nam: 12.300+ cuộc tấn công mạng/ngày",
-        "SOC truyền thống không thể xử lý thủ công với độ chính xác cao"
-      ],
-      color: 'from-red-500 to-orange-500'
+      title: "Quá tải cảnh báo bảo mật",
+      description: "SOC truyền thống nhận hàng triệu cảnh báo/ngày, 95% là false positive, khiến đội ngũ kiệt sức và bỏ lỡ mối đe dọa thực sự",
+      stat: "12,300+",
+      statLabel: "tấn công/ngày tại VN"
     },
     {
       icon: Target,
-      title: "Tấn công ngày càng tinh vi",
-      items: [
-        "83+ chiến dịch APT mỗi năm nhắm vào doanh nghiệp",
-        "Ngân hàng – Tài chính, Năng lượng – Viễn thông, Cơ quan nhà nước",
-        "Hacker ẩn mình nhiều tuần/tháng thay vì tấn công nhanh"
-      ],
-      color: 'from-orange-500 to-red-500'
+      title: "APT & Zero-Day Attacks",
+      description: "Các cuộc tấn công APT tinh vi ẩn mình hàng tháng, khai thác zero-day mà signature-based detection không thể phát hiện",
+      stat: "83+",
+      statLabel: "chiến dịch APT/năm"
     },
     {
       icon: Users,
-      title: "Khủng hoảng nhân sự SOC",
-      items: [
-        "Thiếu trầm trọng SOC Analyst cấp cao",
-        "Chi phí duy trì SOC 24/7 cực lớn",
-        "Burnout – sai sót – phản ứng chậm"
-      ],
-      color: 'from-red-600 to-pink-500'
+      title: "Thiếu hụt chuyên gia",
+      description: "Khủng hoảng nhân lực SOC toàn cầu với 3.5 triệu vị trí trống, chi phí vận hành 24/7 cực cao",
+      stat: "3.5M",
+      statLabel: "vị trí còn trống"
     },
     {
       icon: Activity,
-      title: "Thời gian phản ứng không chấp nhận được",
-      items: [
-        "SOC truyền thống: vài ngày → vài tuần",
-        "AI SOC: vài giây → vài phút",
-        "Khác biệt rõ rệt về khả năng phản ứng sự cố"
+      title: "Phản ứng chậm = Thiệt hại lớn",
+      description: "Thời gian trung bình phát hiện breach là 277 ngày, mỗi ngày trễ tốn thêm $4.24 triệu",
+      stat: "277",
+      statLabel: "ngày phát hiện breach"
+    }
+  ]
+
+  const coreComponents = [
+    {
+      title: "Next-Gen SIEM",
+      icon: Database,
+      description: "Google Chronicle - Nền tảng SIEM siêu quy mô với khả năng lưu trữ và phân tích không giới hạn",
+      features: [
+        "Lưu trữ log không giới hạn thời gian",
+        "Truy vấn siêu nhanh trên petabyte dữ liệu",
+        "Giảm 70% false positive nhờ AI correlation",
+        "Tích hợp 450+ data source ready"
       ],
-      color: 'from-pink-500 to-rose-500'
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "UEBA Platform",
+      icon: Brain,
+      description: "Gurucul UEBA - 4000+ ML models phân tích hành vi người dùng và thiết bị 24/7",
+      features: [
+        "Phát hiện insider threat & compromised account",
+        "Behavioral analytics cho user & entity",
+        "ML models tự học và tiến hóa liên tục",
+        "Risk scoring context-aware realtime"
+      ],
+      gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "AI SOC Analyst",
+      icon: Bot,
+      description: "Agentic AI - Thay thế 90% công việc của L1 Analyst, vận hành 24/7 không nghỉ",
+      features: [
+        "Tự động triage, investigate và correlate alert",
+        "Tạo incident report đầy đủ trong vài giây",
+        "Đề xuất remediation action cụ thể",
+        "Học từ feedback và cải thiện liên tục"
+      ],
+      gradient: "from-emerald-500 to-teal-500"
+    },
+    {
+      title: "SOAR Automation",
+      icon: Workflow,
+      description: "Orchestration & Response - Playbook tự động hóa phản ứng sự cố, từ containment đến recovery",
+      features: [
+        "1000+ pre-built playbook cho mọi scenario",
+        "Tự động isolate endpoint, block IP, revoke token",
+        "Tích hợp EDR, Firewall, IAM, Cloud Security",
+        "Giảm MTTR từ giờ xuống còn phút"
+      ],
+      gradient: "from-orange-500 to-red-500"
     }
   ]
 
-  const pillars = [
+  const processSteps = [
     {
-      icon: "Database",
-      number: "1",
-      title: "Dữ liệu khổng lồ – Google Scale",
-      items: [
-        "Phân tích 50 tỷ tệp/ngày",
-        "Bảo vệ 5 tỷ thiết bị toàn cầu",
-        "Khả năng lưu trữ – truy vấn log không giới hạn"
-      ]
+      number: "01",
+      title: "Data Ingestion",
+      description: "Thu thập log từ mọi nguồn: Cloud, Network, Endpoint, Identity, SaaS applications",
+      icon: Database,
+      color: "blue"
     },
     {
-      icon: "Brain",
-      number: "2",
-      title: "Phân tích hành vi – UEBA",
-      items: [
-        "Machine Learning học hành vi người dùng & hệ thống",
-        "Phát hiện: Tài khoản bị chiếm quyền, Nội gián, Lateral Movement",
-        "Không phụ thuộc chữ ký (signature-less)"
-      ]
+      number: "02",
+      title: "AI Detection",
+      description: "4000+ ML models phân tích realtime, phát hiện anomaly và threat chưa từng biết",
+      icon: Brain,
+      color: "purple"
     },
     {
-      icon: "Zap",
-      number: "3",
-      title: "Tự động hóa phản ứng – SOAR",
-      items: [
-        "Playbook phản ứng tự động: Cô lập endpoint, Ngắt kết nối tài khoản",
-        "Chặn IP / Domain độc hại tự động",
-        "Giảm MTTR > 70%"
-      ]
+      number: "03",
+      title: "Auto Investigation",
+      description: "AI Analyst tự động investigate, correlate với threat intel và tạo incident report",
+      icon: Search,
+      color: "emerald"
+    },
+    {
+      number: "04",
+      title: "Orchestrated Response",
+      description: "SOAR trigger playbook tự động: contain, eradicate, recover trong vài phút",
+      icon: Zap,
+      color: "orange"
     }
   ]
 
-  const features = [
-    {
-      icon: "Target",
-      title: "Risk Scoring Dashboard",
-      description: "Chấm điểm rủi ro theo ngữ cảnh thực, ưu tiên xử lý mối đe dọa nguy hiểm nhất. Không còn \"alert noise\""
-    },
-    {
-      icon: "Search",
-      title: "Investigate Studio",
-      description: "Truy vết sâu toàn bộ pipeline dữ liệu, drill-down từ alert → log → hành vi. Hỗ trợ forensic & threat hunting"
-    },
-    {
-      icon: "Map",
-      title: "MITRE ATT&CK Mapping",
-      description: "Tự động ánh xạ kỹ thuật tấn công, hiểu rõ hacker đang ở giai đoạn nào của kill chain"
-    },
-    {
-      icon: "FileText",
-      title: "Custom Reporting",
-      description: "Báo cáo Compliance (ISO 27001, NIST, PCI-DSS…), báo cáo Executive cho Ban điều hành"
-    },
-    {
-      icon: "CheckCircle",
-      title: "Case Management",
-      description: "Quản lý toàn bộ vòng đời sự cố, gán nhiệm vụ – theo dõi SLA – đóng case khoa học"
-    }
+  const roiMetrics = [
+    { metric: "90%", label: "Giảm workload cho SOC team", icon: TrendingUp },
+    { metric: "70%", label: "Giảm false positive alerts", icon: Target },
+    { metric: "95%", label: "Faster incident response", icon: Zap },
+    { metric: "$2.4M", label: "Tiết kiệm chi phí/năm (trung bình)", icon: DollarSign }
   ]
 
-  const steps = [
-    {
-      number: "1",
-      title: "Ingestion – Thu thập",
-      description: "Cloud, Endpoint, Network, IAM, SaaS. Log tập trung, chuẩn hóa tức thời"
-    },
-    {
-      number: "2",
-      title: "Detection – Phát hiện",
-      description: "AI/ML đối soát với threat intelligence toàn cầu. Phát hiện bất thường chưa từng biết (Zero-day)"
-    },
-    {
-      number: "3",
-      title: "Analysis – Phân tích",
-      description: "AI + Chuyên gia ICS phân tích ngữ cảnh. Loại bỏ false positive"
-    },
-    {
-      number: "4",
-      title: "Response – Phản ứng",
-      description: "Kích hoạt playbook tự động. Hạn chế lan rộng trong vài giây"
-    },
-    {
-      number: "5",
-      title: "Recovery – Phục hồi",
-      description: "Hỗ trợ khôi phục. Đề xuất vá lỗ hổng – cải thiện posture an ninh"
-    }
-  ]
 
-  const whyIcsPoints = [
-    {
-      icon: "DollarSign",
-      title: "Tối ưu chi phí",
-      description: "Không cần đầu tư SOC vật lý đắt đỏ. Mô hình linh hoạt theo quy mô doanh nghiệp"
-    },
-    {
-      icon: "Zap",
-      title: "Công nghệ hàng đầu thế giới",
-      description: "Đối tác triển khai Gurucul AI SOC. Tiếp cận nền tảng AI SOC tiên tiến nhất hiện nay"
-    },
-    {
-      icon: "Users",
-      title: "Đội ngũ tại Việt Nam",
-      description: "Hỗ trợ 24/7 – tiếng Việt. Hiểu rõ đặc thù hạ tầng & mối đe dọa trong nước"
-    }
-  ]
-
-  const featureIcons: Record<string, any> = {
-    Target, Search, Map, FileText, CheckCircle
-  }
-
-  const pillarIcons: Record<string, any> = {
-    Database, Brain, Zap
-  }
-
-  const whyIcsIcons: Record<string, any> = {
-    DollarSign, Zap, Users
-  }
 
   return (
     <>
       <Header />
 
-      {/* SECTION 1 - HERO SECTION */}
-      <section className="relative min-h-screen overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32">
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-600 to-blue-700" />
-        
-        {/* Animated blobs */}
+      {/* Scroll Progress Bar */}
+      {isClient && (
+        <div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 z-50 origin-left" style={{ transform: `scaleX(${scrollProgress / 100})` }} />
+      )}
+
+      {/* Hero Section with Parallax Effect */}
+      <section className="relative min-h-screen overflow-hidden pt-32 pb-20">
+        {/* Animated Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20" />
+        </div>
+
+        {/* Animated Particles */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob" />
-          <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-300 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
-          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-blue-300 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-4000" />
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl animate-pulse animation-delay-2000" />
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse animation-delay-4000" />
+        </div>
+
+        {/* Floating Orbs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {isClient && orbs.map((orb) => (
+            <div
+              key={orb.id}
+              className="absolute w-32 h-32 rounded-full bg-gradient-to-r from-blue-400/10 to-purple-400/10 backdrop-blur-sm"
+              style={{
+                top: orb.top,
+                left: orb.left,
+                animationName: 'float',
+                animationDuration: `${orb.duration}s`,
+                animationTimingFunction: 'ease-in-out',
+                animationIterationCount: 'infinite',
+                animationDelay: `${orb.delay}s`
+              } as React.CSSProperties}
+            />
+          ))}
         </div>
 
         <div className="relative container-responsive">
@@ -223,147 +251,130 @@ export default function AiSocPage() {
             <ScrollReveal direction="left" duration={0.8}>
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <Badge className="inline-flex px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all">
-                    <Shield className="w-4 h-4 mr-2" />
-                    Mạnh mẽ. Thông minh. Tự động
-                  </Badge>
-
-                  <div className="space-y-3">
-                    <h1 className="text-6xl lg:text-7xl font-black text-white leading-tight">
-                      AI SOC
-                    </h1>
-                    <h2 className="text-3xl lg:text-4xl font-bold text-white/90">
-                      Cách mạng hóa vận hành An ninh mạng bằng Trí tuệ Nhân tạo
-                    </h2>
-                  </div>
-
-                  <p className="text-xl text-white/80 max-w-xl leading-relaxed pt-4">
-                    SOC truyền thống đã lỗi thời. AI SOC là tiêu chuẩn mới.
+                  <h1 className="text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 leading-tight">
+                    AI SOC
+                  </h1>
+                  <h2 className="text-3xl lg:text-4xl font-bold text-white/90">
+                    Cách mạng An ninh mạng
+                    <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+                      bằng Trí tuệ Nhân tạo
+                    </span>
+                  </h2>
+                  <p className="text-xl text-white/70 max-w-xl leading-relaxed pt-4">
+                    Kết hợp Google Chronicle SIEM với Gurucul UEBA & Agentic AI - 
+                    Phát hiện & Phản ứng mối đe dọa trong <span className="text-cyan-400 font-bold">vài giây</span>, 
+                    không phải vài ngày.
                   </p>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 space-y-4">
-                  <p className="text-white font-semibold text-lg">
-                    Giải pháp AI SOC của ICS kết hợp nền tảng phân tích dữ liệu quy mô toàn cầu của Google với công nghệ phân tích hành vi tiên tiến từ Gurucul, giúp doanh nghiệp:
-                  </p>
-                  <div className="space-y-3">
-                    {[
-                      "Phát hiện APT, tấn công nội gián, mã độc thế hệ mới trong vài giây",
-                      "Tự động hóa đến 90% quy trình phản ứng sự cố",
-                      "Giảm thiểu cảnh báo giả, tập trung vào nguy cơ thực sự"
-                    ].map((point, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <Rocket className="w-5 h-5 text-yellow-300 mt-1 flex-shrink-0" />
-                        <span className="text-white/90">{point}</span>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { value: "70%", label: "Giảm False Positive" },
+                    { value: "90%", label: "Tự động hóa L1" },
+                    { value: "95%", label: "Faster Response" },
+                    { value: "24/7", label: "AI Monitoring" }
+                  ].map((stat, idx) => (
+                    <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">
+                      <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+                        {stat.value}
                       </div>
-                    ))}
-                  </div>
-                  <p className="text-yellow-200 font-semibold pt-2 italic">
-                    Không chỉ là phát hiện – mà là hành động ngay lập tức.
-                  </p>
+                      <div className="text-sm text-white/60">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button
-                    size="lg"
-                    className="bg-white text-blue-600 hover:bg-white/90 font-bold text-lg h-14 group"
-                  >
-                    Nhận tư vấn giải pháp AI SOC
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white/30 font-bold text-lg h-14"
-                  >
-                    Xem tài liệu Workshop Walkthrough
+                  <Link href="/lien-he">
+                    <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg h-14 group shadow-lg shadow-blue-500/50">
+                      Nhận tư vấn miễn phí
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white hover:bg-white/20 font-bold text-lg h-14">
+                    Xem Demo
                   </Button>
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* Right Visual */}
+            {/* Right Visual - Hero Image */}
             <ScrollReveal direction="right" duration={0.8} delay={200}>
-              <div className="relative h-[500px] flex items-center justify-center">
-                <Card className="relative z-10 w-full h-full bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden group hover:shadow-4xl transition-all duration-500">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur-2xl opacity-20 animate-pulse" />
+                <Card className="relative overflow-hidden border-2 border-white/10 rounded-2xl shadow-2xl backdrop-blur-sm bg-white/5">
                   <Image
-                    src="https://cmcts.com.vn/media/data/news/2022/Th%C3%A1ng_2/CMC_SOC_HN.jpeg"
+                    src="/AI SOC/anh1.jpg"
                     alt="AI SOC Dashboard"
-                    fill
-                    className="object-cover"
+                    width={700}
+                    height={500}
+                    className="w-full h-auto rounded-xl"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-600/40 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                  
+                  {/* Floating Stats Overlay */}
+                  <div className="absolute bottom-6 left-6 right-6 grid grid-cols-3 gap-3">
+                    {[
+                      { icon: Shield, label: "Protected", value: "5B+ Devices" },
+                      { icon: Zap, label: "Detection", value: "< 1 sec" },
+                      { icon: Bot, label: "AI Models", value: "4000+" }
+                    ].map((item, idx) => (
+                      <div key={idx} className="bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-lg p-3">
+                        <item.icon className="w-5 h-5 text-cyan-400 mb-1" />
+                        <div className="text-xs text-white/60">{item.label}</div>
+                        <div className="text-sm font-bold text-white">{item.value}</div>
+                      </div>
+                    ))}
+                  </div>
                 </Card>
               </div>
             </ScrollReveal>
           </div>
         </div>
-
-        <style jsx>{`
-          @keyframes blob {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-          }
-          @keyframes float {
-            0%, 100% { transform: translateY(0px) translateX(0px); }
-            50% { transform: translateY(20px) translateX(-10px); }
-          }
-          .animate-blob {
-            animation: blob 7s infinite;
-          }
-          .animate-float {
-            animation: float 6s ease-in-out infinite;
-          }
-          .animation-delay-2000 {
-            animation-delay: 2s;
-          }
-          .animation-delay-4000 {
-            animation-delay: 4s;
-          }
-        `}</style>
       </section>
 
-      {/* SECTION 2 - PAIN POINTS */}
-      <Section spacing="xl" background="muted">
+      {/* Why AI SOC Section */}
+      <Section spacing="md" background="default">
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex px-4 py-2 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 text-red-700 dark:text-red-300">
-                <AlertTriangle className="w-4 h-4 mr-2" />
-                Nỗi đau thị trường
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 text-red-700 dark:text-red-300">
+                <AlertTriangle className="w-4 h-4" />
+                SOC truyền thống đã lỗi thời
               </Badge>
-              <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl">
-                Tại sao SOC truyền thống không còn đủ sức bảo vệ bạn?
+              <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-4xl">
+                Tại sao doanh nghiệp cần AI SOC?
               </AnimatedHeading>
               <p className="text-xl text-muted-foreground">
-                Doanh nghiệp đang đối mặt với một thực tế khắc nghiệt:
+                Bối cảnh an ninh mạng hiện đại đòi hỏi khả năng phản ứng nhanh hơn, thông minh hơn
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {painPoints.map((point, idx) => {
-              const IconComponent = point.icon
+            {challenges.map((challenge, idx) => {
+              const IconComponent = challenge.icon
               return (
                 <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
-                  <Card className="p-6 hover:shadow-xl transition-all duration-300 group overflow-hidden relative h-full">
-                    <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${point.color} opacity-10 group-hover:opacity-20 transition-opacity`} />
+                  <Card className="p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden border-2">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
                     
-                    <div className="relative z-10 space-y-4">
-                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${point.color} flex items-center justify-center`}>
-                        <IconComponent className="w-7 h-7 text-white" />
-                      </div>
-                      
-                      <h3 className="text-2xl font-bold">{point.title}</h3>
-                      
-                      <div className="space-y-2">
-                        {(point.items as string[]).map((item, i) => (
-                          <div key={i} className="flex items-start gap-2 text-muted-foreground">
-                            <ChevronRight className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                            <span>{item}</span>
+                    <div className="relative space-y-6">
+                      <div className="flex items-start justify-between">
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center shadow-lg shadow-red-500/30">
+                          <IconComponent className="w-8 h-8 text-white" />
+                        </div>
+                        <div className="text-right">
+                          <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
+                            {challenge.stat}
                           </div>
-                        ))}
+                          <div className="text-sm text-muted-foreground">{challenge.statLabel}</div>
+                        </div>
+                      </div>
+
+                      <div className="space-y-3">
+                        <h3 className="text-2xl font-bold">{challenge.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{challenge.description}</p>
                       </div>
                     </div>
                   </Card>
@@ -372,73 +383,193 @@ export default function AiSocPage() {
             })}
           </div>
 
-          <ScrollReveal direction="up">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <Card className="relative h-80 overflow-hidden border border-red-200 dark:border-red-800 rounded-2xl shadow-lg">
-                <Image
-                  src="https://vietnetco.vn/wp-content/uploads/2022/03/soc-and-noc.jpeg"
-                  alt="Network Security Threats"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-red-900/40 to-transparent" />
-              </Card>
-              <Card className="p-8 bg-gradient-to-r from-red-50 to-rose-50 dark:from-red-950/20 dark:to-rose-950/20 border-2 border-red-200 dark:border-red-800">
-                <p className="text-2xl font-bold text-red-700 dark:text-red-300 mb-4">
-                  👉 SOC truyền thống chỉ "nhìn thấy", nhưng không kịp hành động.
-                </p>
-                <p className="text-muted-foreground">Giải pháp AI SOC của ICS giúp bạn không chỉ phát hiện mà còn phản ứng ngay lập tức, giảm thiểu thiệt hại từ các cuộc tấn công mạng.</p>
-              </Card>
+          <ScrollReveal direction="up" delay={400}>
+            <div className="relative overflow-hidden rounded-3xl border-2 border-red-500/20">
+              <Image
+                src="/AI SOC/anh2.jpg"
+                alt="Traditional SOC vs AI SOC"
+                width={1200}
+                height={400}
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-red-950/90 via-orange-950/80 to-transparent" />
+              <div className="absolute inset-0 flex items-center px-12">
+                <div className="max-w-2xl space-y-4">
+                  <h3 className="text-3xl font-bold text-white">
+                    SOC truyền thống ≠ Đủ bảo vệ
+                  </h3>
+                  <p className="text-xl text-white/80">
+                    Với <span className="text-yellow-400 font-bold">12,300+ tấn công/ngày</span> chỉ riêng tại Việt Nam, 
+                    manual SOC không thể theo kịp tốc độ và độ phức tạp của threat landscape hiện đại.
+                  </p>
+                  <p className="text-lg text-white/70">
+                    <strong className="text-cyan-400">AI SOC</strong> phát hiện & phản ứng trong <strong>vài giây</strong>, 
+                    không phải vài ngày.
+                  </p>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </Section>
 
-      {/* SECTION 3 - SOLUTION */}
-      <Section spacing="xl" background="default">
+      {/* Architecture Section */}
+      <Section spacing="md" background="muted">
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300">
-                <Lightbulb className="w-4 h-4 mr-2" />
-                Hệ sinh thái AI SOC
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300">
+                <Network className="w-4 h-4" />
+                Kiến trúc AI SOC
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl">
-                Giải pháp AI SOC của ICS
+                Hyperscale Architecture
+                <br />
+                <span className="text-2xl lg:text-3xl text-muted-foreground">
+                  Nền tảng Google + Trí tuệ Gurucul
+                </span>
               </AnimatedHeading>
               <p className="text-xl text-muted-foreground">
-                Hệ sinh thái AI SOC toàn diện
-              </p>
-              <p className="text-lg text-muted-foreground font-medium">
-                ICS triển khai AI SOC thế hệ mới dựa trên sự kết hợp giữa Google Chronicle / Google Security Operations và Gurucul REVEAL Platform
+                AI SOC không chỉ là công cụ - đó là hệ sinh thái toàn diện với khả năng xử lý dữ liệu 
+                ở quy mô <span className="text-blue-600 dark:text-blue-400 font-bold">Google Scale</span>
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {(pillars as any[]).map((pillar, idx) => {
-              const IconComponent = pillarIcons[pillar.icon]
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <ScrollReveal direction="left">
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold">Open, Cloud-Native & Hyperscale</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Kiến trúc mở với khả năng:
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    { icon: Database, title: "Unlimited Storage", desc: "Lưu trữ log không giới hạn thời gian, query trên petabyte data trong giây" },
+                    { icon: Zap, title: "Real-time Processing", desc: "Xử lý 50+ tỷ sự kiện/ngày với latency < 1 giây" },
+                    { icon: GitBranch, title: "450+ Integrations", desc: "Kết nối mọi data source: Cloud, On-prem, SaaS, Network, Endpoint" },
+                    { icon: Cpu, title: "Auto-scaling", desc: "Tự động scale theo nhu cầu, không giới hạn tăng trưởng" }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 border border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur-2xl opacity-20 animate-pulse" />
+                <Card className="relative overflow-hidden border-2 border-blue-500/20 rounded-2xl shadow-2xl">
+                  <Image
+                    src="/AI SOC/anh3.jpg"
+                    alt="AI SOC Architecture"
+                    width={600}
+                    height={500}
+                    className="w-full h-auto"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <div className="bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-xl p-4">
+                      <div className="text-xs text-white/60 mb-1">Nền tảng</div>
+                      <div className="text-lg font-bold text-white">Google Chronicle SIEM + Gurucul UEBA</div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal direction="up">
+            <Card className="p-8 bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 border-none text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse animation-delay-2000" />
+              </div>
+              <div className="relative z-10 text-center space-y-4">
+                <Lightbulb className="w-12 h-12 mx-auto text-yellow-300" />
+                <p className="text-2xl font-bold">
+                  5 tỷ thiết bị được bảo vệ toàn cầu - Công nghệ đã được chứng minh
+                </p>
+                <p className="text-lg text-white/80 max-w-3xl mx-auto">
+                  Nền tảng AI SOC của ICS dựa trên công nghệ bảo vệ Google, Microsoft, các Fortune 500, 
+                  và hàng nghìn doanh nghiệp trên toàn thế giới.
+                </p>
+              </div>
+            </Card>
+          </ScrollReveal>
+        </div>
+      </Section>
+
+      {/* Core Components Section */}
+      <Section spacing="md" background="default">
+        <div className="container-responsive space-y-16">
+          <ScrollReveal direction="up">
+            <div className="text-center space-y-6 max-w-3xl mx-auto">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/30 border border-purple-300 dark:border-purple-700 text-purple-700 dark:text-purple-300">
+                <Cpu className="w-4 h-4" />
+                Core Components
+              </Badge>
+              <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-5xl">
+                4 trụ cột của AI SOC
+              </AnimatedHeading>
+              <p className="text-xl text-muted-foreground">
+                Mỗi component đóng vai trò then chốt, hoạt động liên kết tạo nên hệ sinh thái bảo mật toàn diện
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Interactive Component Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {coreComponents.map((component, idx) => {
+              const IconComponent = component.icon
+              const isHovered = hoveredFeature === idx
               return (
-                <ScrollReveal key={idx} direction="up" delay={idx * 150}>
-                  <Card className="p-8 bg-gradient-to-br from-white to-blue-50 dark:from-slate-900 dark:to-blue-950/30 border-2 border-blue-200 dark:border-blue-800 hover:shadow-2xl transition-all duration-300 group overflow-hidden relative">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-300 to-cyan-300 rounded-full opacity-0 group-hover:opacity-10 transition-opacity blur-2xl" />
-                    <div className="relative space-y-6">
+                <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
+                  <Card
+                    className="p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden cursor-pointer border-2"
+                    onMouseEnter={() => setHoveredFeature(idx)}
+                    onMouseLeave={() => setHoveredFeature(null)}
+                  >
+                    {/* Animated Background */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${component.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                    
+                    {/* Glow Effect */}
+                    <div className={`absolute -inset-1 bg-gradient-to-r ${component.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
+
+                    <div className="relative z-10 space-y-6">
+                      {/* Header */}
                       <div className="flex items-start justify-between">
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
-                          {IconComponent && <IconComponent className="w-8 h-8 text-white" />}
+                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${component.gradient} flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                          <IconComponent className="w-8 h-8 text-white" />
                         </div>
-                        <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-2xl font-bold text-blue-600 dark:text-blue-300">
-                          {pillar.number}
+                        <div className={`text-6xl font-black opacity-10 group-hover:opacity-20 transition-opacity ${isHovered ? 'scale-110' : ''} transition-transform duration-300`}>
+                          {(idx + 1).toString().padStart(2, '0')}
                         </div>
                       </div>
 
-                      <h3 className="text-2xl font-bold leading-tight">{pillar.title}</h3>
-
+                      {/* Title & Description */}
                       <div className="space-y-3">
-                        {(pillar.items as string[]).map((item, i) => (
-                          <div key={i} className="flex items-start gap-3 text-muted-foreground">
-                            <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
-                            <span>{item}</span>
+                        <h3 className="text-2xl font-bold">{component.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{component.description}</p>
+                      </div>
+
+                      {/* Features List */}
+                      <div className="space-y-2 pt-2">
+                        {component.features.map((feature, featureIdx) => (
+                          <div key={featureIdx} className="flex items-start gap-3 text-sm">
+                            <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${component.gradient} mt-2 flex-shrink-0`} />
+                            <span className="text-muted-foreground">{feature}</span>
                           </div>
                         ))}
                       </div>
@@ -449,19 +580,216 @@ export default function AiSocPage() {
             })}
           </div>
 
+          {/* Visual Showcase */}
           <ScrollReveal direction="up">
-            <Card className="relative h-96 overflow-hidden border-2 border-blue-200 dark:border-blue-800 rounded-2xl shadow-xl">
+            <div className="relative overflow-hidden rounded-3xl border-2 border-purple-500/20">
               <Image
-                src="https://cdn.nhandan.vn/images/22f099ca8bc7ae81aa2a8d3416a84bf8364c2dc7cb172c184e762ebbc2cb754b5d204972cbd19cea1a3cad94c163e7949be16c9ab954f20205dbb9b0c96bf803fedef1245da14724585117e3d663c8a060f756bb67b9d48b3e8ee90339ffde13/tri-tue-nhan-tao-ai-2-3436.jpg.webp"
-                alt="AI Technology Infrastructure"
-                fill
-                className="object-cover"
+                src="/AI SOC/anh4.jpeg"
+                alt="AI SOC Core Components"
+                width={1200}
+                height={500}
+                className="w-full h-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 via-blue-900/40 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <h3 className="text-3xl font-bold mb-2">Công nghệ AI tiên tiến</h3>
-                  <p className="text-lg text-blue-100">Google Scale + Gurucul Intelligence</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent" />
+              <div className="absolute inset-0 flex flex-col justify-end p-12">
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-bold text-white">
+                    Tích hợp liền mạch - Vận hành tự động
+                  </h3>
+                  <p className="text-lg text-white/80 max-w-3xl">
+                    4 component hoạt động đồng bộ 24/7, từ data ingestion đến auto-response, 
+                    giảm 90% workload cho SOC team và tăng 95% tốc độ phản ứng
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </Section>
+
+      {/* Process Workflow Section */}
+      <Section spacing="md" background="muted">
+        <div className="container-responsive space-y-16">
+          <ScrollReveal direction="up">
+            <div className="text-center space-y-6 max-w-3xl mx-auto">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300">
+                <Workflow className="w-4 h-4" />
+                Quy trình vận hành
+              </Badge>
+              <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-5xl">
+                Workflow tự động end-to-end
+              </AnimatedHeading>
+              <p className="text-xl text-muted-foreground">
+                Từ thu thập log đến phản ứng tự động - tất cả diễn ra trong vài giây
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Process Steps Flow */}
+          <div className="relative">
+            {/* Connection Line */}
+            <div className="absolute left-8 top-12 bottom-12 w-1 bg-gradient-to-b from-emerald-500 via-teal-500 to-cyan-500 hidden lg:block" />
+
+            <div className="space-y-8">
+              {processSteps.map((step, idx) => {
+                const IconComponent = step.icon
+                const colorMap = {
+                  blue: { bg: 'from-blue-500 to-cyan-500', border: 'border-blue-500/30', text: 'text-blue-600 dark:text-blue-400' },
+                  purple: { bg: 'from-purple-500 to-pink-500', border: 'border-purple-500/30', text: 'text-purple-600 dark:text-purple-400' },
+                  emerald: { bg: 'from-emerald-500 to-teal-500', border: 'border-emerald-500/30', text: 'text-emerald-600 dark:text-emerald-400' },
+                  orange: { bg: 'from-orange-500 to-red-500', border: 'border-orange-500/30', text: 'text-orange-600 dark:text-orange-400' }
+                }
+                const colorClasses = colorMap[step.color as keyof typeof colorMap] || colorMap.blue
+
+                return (
+                  <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
+                    <div className="relative">
+                      <Card className={`p-8 hover:shadow-2xl transition-all duration-300 border-2 ${colorClasses.border} group`}>
+                        <div className="flex items-start gap-6">
+                          {/* Step Number & Icon */}
+                          <div className="flex-shrink-0 space-y-3 relative z-10">
+                            <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colorClasses.bg} flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                              <IconComponent className="w-8 h-8 text-white" />
+                            </div>
+                            <div className={`text-6xl font-black opacity-10 ${colorClasses.text}`}>
+                              {step.number}
+                            </div>
+                          </div>
+
+                          {/* Content */}
+                          <div className="flex-1 space-y-3">
+                            <h3 className="text-2xl font-bold">{step.title}</h3>
+                            <p className="text-lg text-muted-foreground leading-relaxed">{step.description}</p>
+                            
+                            {/* Time Badge */}
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 border border-emerald-300 dark:border-emerald-700">
+                              <Zap className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                              <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">
+                                {idx === 0 ? 'Real-time' : idx === 3 ? '< 5 giây' : '< 1 giây'}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </Card>
+                    </div>
+                  </ScrollReveal>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* ROI & Benefits Section */}
+      <Section spacing="md" background="default">
+        <div className="container-responsive space-y-16">
+          <ScrollReveal direction="up">
+            <div className="text-center space-y-6 max-w-3xl mx-auto">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 text-green-700 dark:text-green-300">
+                <Gauge className="w-4 h-4" />
+                ROI & Impact
+              </Badge>
+              <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-5xl">
+                Lợi ích đo được cụ thể
+              </AnimatedHeading>
+              <p className="text-xl text-muted-foreground">
+                AI SOC mang lại giá trị rõ ràng cho doanh nghiệp
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* ROI Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {roiMetrics.map((roi, idx) => {
+              const IconComponent = roi.icon
+              return (
+                <ScrollReveal key={idx} direction="up" delay={idx * 100}>
+                  <Card className="p-6 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden border-2 border-green-500/20">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 group-hover:from-green-500/10 group-hover:to-emerald-500/10 transition-colors" />
+                    
+                    <div className="relative z-10 space-y-4">
+                      <div className="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                        <IconComponent className="w-7 h-7 text-white" />
+                      </div>
+
+                      <div className="space-y-2">
+                        <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-400">
+                          {roi.metric}
+                        </div>
+                        <p className="text-sm text-muted-foreground font-medium leading-snug">{roi.label}</p>
+                      </div>
+                    </div>
+                  </Card>
+                </ScrollReveal>
+              )
+            })}
+          </div>
+
+          {/* Detailed Benefits */}
+          <ScrollReveal direction="up">
+            <Card className="p-12 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 dark:from-green-950/20 dark:via-emerald-950/20 dark:to-teal-950/20 border-2 border-green-200 dark:border-green-800">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                    <DollarSign className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold">Tiết kiệm chi phí</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>Giảm 60-70% chi phí vận hành SOC truyền thống</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>Không cần thuê thêm L1 Analyst (AI thay thế)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>Giảm thiệt hại từ data breach trung bình $2.4M/năm</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold">Hiệu suất vượt trội</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                      <span>Phản ứng nhanh hơn 95% so với manual SOC</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                      <span>Phát hiện APT và insider threat không bỏ sót</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                      <span>Coverage 24/7 với AI không ngừng nghỉ</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold">Nâng cao năng lực team</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                      <span>Giải phóng SOC team khỏi L1 repetitive tasks</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                      <span>Tập trung vào threat hunting & strategy</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                      <span>Giảm burnout và tăng job satisfaction</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </Card>
@@ -469,263 +797,59 @@ export default function AiSocPage() {
         </div>
       </Section>
 
-      {/* SECTION 4 - FEATURES */}
-      <Section spacing="xl" background="muted">
-        <div className="container-responsive space-y-16">
-          <ScrollReveal direction="up">
-            <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex px-4 py-2 bg-purple-100 dark:bg-purple-900/30 border border-purple-300 dark:border-purple-700 text-purple-700 dark:text-purple-300">
-                <Zap className="w-4 h-4 mr-2" />
-                Công nghệ đột phá
-              </Badge>
-              <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl">
-                Công nghệ đột phá trong tầm tay bạn
-              </AnimatedHeading>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {(features as any[]).map((feature, idx) => {
-              const IconComponent = featureIcons[feature.icon]
-              return (
-                <ScrollReveal key={idx} direction="up" delay={idx * 80}>
-                  <Card className="p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden h-full flex flex-col">
-                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-purple-300 to-pink-300 opacity-0 group-hover:opacity-20 rounded-full transition-opacity blur-2xl" />
-                    
-                    <div className="relative z-10 space-y-4 flex-1">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                        {IconComponent && <IconComponent className="w-7 h-7 text-white" />}
-                      </div>
-
-                      <h3 className="text-xl font-bold">{feature.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                    </div>
-                  </Card>
-                </ScrollReveal>
-              )
-            })}
-          </div>
-
-          <ScrollReveal direction="up">
-            <Card className="relative h-80 overflow-hidden border-2 border-purple-200 dark:border-purple-800 rounded-2xl shadow-xl">
-              <Image
-                src="https://media.geeksforgeeks.org/wp-content/uploads/20240705124654/Real-time-analllytics.webp"
-                alt="Real-time Monitoring & Analytics"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-900/60 via-pink-900/40 to-transparent" />
-            </Card>
-          </ScrollReveal>
-        </div>
-      </Section>
-
-      {/* SECTION 5 - PROCESS */}
-      <Section spacing="xl" background="default">
-        <div className="container-responsive space-y-16">
-          <ScrollReveal direction="up">
-            <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex px-4 py-2 bg-amber-100 dark:bg-amber-900/30 border border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300">
-                <TrendingUp className="w-4 h-4 mr-2" />
-                Quy trình hoạt động
-              </Badge>
-              <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl">
-                Chu trình khép kín
-              </AnimatedHeading>
-              <p className="text-xl text-muted-foreground">
-                Xác định – Bảo vệ – Phát hiện – Phản ứng – Phục hồi
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Process Steps */}
-          <div className="space-y-6">
-            {(steps as any[]).map((step, idx) => (
-              <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
-                <div
-                  className="cursor-pointer transition-all duration-300"
-                  onClick={() => setActiveStep(activeStep === idx ? -1 : idx)}
-                >
-                  <Card
-                    className={`p-6 transition-all duration-300 relative overflow-hidden ${
-                      activeStep === idx
-                        ? 'bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border-amber-300 dark:border-amber-700 shadow-lg'
-                        : 'hover:shadow-md'
-                    }`}
-                  >
-                    <div className={`absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-amber-300 to-orange-300 opacity-${activeStep === idx ? '10' : '0'} rounded-full transition-opacity blur-3xl`} />
-                    
-                    <div className="relative z-10">
-                      <div className="flex items-start gap-6">
-                        <div className={`flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white font-bold text-2xl transform group-hover:scale-110 transition-transform`}>
-                          {step.number}
-                        </div>
-
-                        <div className="flex-1 space-y-2">
-                          <h3 className="text-2xl font-bold">{step.title}</h3>
-                          <p className="text-muted-foreground text-lg">{step.description}</p>
-                        </div>
-
-                        <ChevronRight
-                          className={`w-6 h-6 text-amber-500 flex-shrink-0 mt-1 transition-transform ${activeStep === idx ? 'rotate-90' : ''}`}
-                        />
-                      </div>
-
-                      {activeStep === idx && (
-                        <div className="mt-6 pt-6 border-t border-amber-200 dark:border-amber-800 animate-in fade-in">
-                          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            {['Nhanh chóng', 'Hiệu quả', 'Tự động', 'Chi tiết', 'Bảo mật', 'Tối ưu'].map((item, i) => (
-                              <div key={i} className="flex items-center gap-2 text-sm">
-                                <div className="w-2 h-2 rounded-full bg-amber-500" />
-                                <span className="text-muted-foreground">{item}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </Card>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Process Flow Visualization */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <ScrollReveal direction="up">
-              <Card className="p-8 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20 border-2 border-amber-200 dark:border-amber-800">
-                <div className="flex items-center justify-between overflow-x-auto pb-4 md:pb-0">
-                  {['Thu thập', 'Phát hiện', 'Phân tích', 'Phản ứng', 'Phục hồi'].map((phase, idx) => (
-                    <div key={idx} className="flex items-center">
-                      <div className="text-center min-w-[120px]">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white font-bold mx-auto mb-2">
-                          {idx + 1}
-                        </div>
-                        <p className="text-sm font-semibold text-foreground">{phase}</p>
-                      </div>
-                      {idx < 4 && <ArrowRight className="w-6 h-6 text-amber-500 mx-2 flex-shrink-0 hidden md:block" />}
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal direction="up">
-              <Card className="relative h-72 overflow-hidden border-2 border-amber-200 dark:border-amber-800 rounded-2xl shadow-xl">
-                <Image
-                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeQsyuyYxxOLBhyphenhyphenPUOI-UHGn8mxloyzn4GBFnuh7p3h7XUB7Z2K2kWdI2A-k0v5GKJqRANeUQ8NZknDo1M5zTdqyYyTC3vAKThq201gtemBUHiFq1GjWc1VrfMPKS7knIFoV7mO-l20SaKKVbHs-t86wVFDEqjUz-VQkVXOiB6hD5QlzLVWdQYml3tPww/s790-rw-e365/sans.jpg"
-                  alt="AI Security Operations Workflow"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-amber-900/60 via-amber-900/40 to-transparent" />
-              </Card>
-            </ScrollReveal>
-          </div>
-        </div>
-      </Section>
-
-      {/* SECTION 6 - WHY ICS */}
-      <Section spacing="xl" background="muted">
-        <div className="container-responsive space-y-16">
-          <ScrollReveal direction="up">
-            <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex px-4 py-2 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 text-green-700 dark:text-green-300">
-                <Award className="w-4 h-4 mr-2" />
-                Lý do chọn ICS
-              </Badge>
-              <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl">
-                Tại sao chọn ICS?
-              </AnimatedHeading>
-              <p className="text-xl text-muted-foreground">
-                Chuyên gia an ninh mạng đồng hành cùng doanh nghiệp Việt
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {(whyIcsPoints as any[]).map((point, idx) => {
-              const IconComponent = whyIcsIcons[point.icon]
-              return (
-                <ScrollReveal key={idx} direction="up" delay={idx * 150}>
-                  <Card className="p-8 bg-gradient-to-br from-white to-green-50 dark:from-slate-900 dark:to-green-950/30 border-2 border-green-200 dark:border-green-800 hover:shadow-2xl transition-all duration-300 group">
-                    <div className="space-y-6">
-                      <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center transform group-hover:scale-110 transition-transform">
-                        {IconComponent && <IconComponent className="w-10 h-10 text-white" />}
-                      </div>
-
-                      <h3 className="text-2xl font-bold leading-tight">{point.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed text-lg">{point.description}</p>
-
-                      <Link href="/contact" className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 font-semibold hover:gap-3 transition-all">
-                        Tìm hiểu thêm <ArrowUpRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </Card>
-                </ScrollReveal>
-              )
-            })}
-          </div>
-        </div>
-      </Section>
-
-      {/* SECTION 7 - RESOURCES & DOCUMENTS */}
-      <Section spacing="xl" background="gradient">
+      {/* Resources & Documents Section */}
+      <Section spacing="md" background="gradient">
         <div className="container-responsive space-y-12">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex px-4 py-2 bg-indigo-100 dark:bg-indigo-900/30 border border-indigo-300 dark:border-indigo-700 text-indigo-700 dark:text-indigo-300">
-                <FileText className="w-4 h-4 mr-2" />
-                Tài liệu & Case Study
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 border border-white/30 text-white backdrop-blur-sm">
+                <FileText className="w-4 h-4" />
+                Tài liệu & Workshop
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl text-white">
-                Khám phá chi tiết cách AI SOC vận hành trong thực tế
+                Khám phá chi tiết AI SOC
               </AnimatedHeading>
             </div>
           </ScrollReveal>
 
           <ScrollReveal direction="up">
-            <Card className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-600 border-none p-12 lg:p-20">
+            <Card className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-600 border-none p-12 lg:p-16">
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
                 <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse animation-delay-2000" />
               </div>
 
-              <div className="relative z-10 space-y-8">
-                <div className="text-center space-y-6">
-                  <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto">
-                    <FileText className="w-10 h-10 text-white" />
-                  </div>
+              <div className="relative z-10 text-center space-y-8">
+                <Rocket className="w-16 h-16 mx-auto text-white" />
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-bold text-white">
+                    Gurucul Workshop Walkthrough
+                  </h3>
+                  <p className="text-xl text-white/90 max-w-2xl mx-auto">
+                    Tài liệu chi tiết về cách AI SOC hoạt động trong thực tế - từ ingestion đến response
+                  </p>
 
-                  <div className="space-y-4">
-                    <p className="text-xl text-white/90 max-w-2xl mx-auto">
-                      Tải ngay tài liệu "Gurucul Workshop Walkthrough" để:
-                    </p>
-
-                    <div className="space-y-2">
-                      {[
-                        "Hiểu rõ kiến trúc AI SOC",
-                        "Xem demo quy trình xử lý sự cố thực tế",
-                        "Đánh giá mức độ phù hợp với doanh nghiệp của bạn"
-                      ].map((point, idx) => (
-                        <div key={idx} className="flex items-start gap-3 justify-center">
-                          <CheckCircle className="w-5 h-5 text-yellow-300 mt-1 flex-shrink-0" />
-                          <span className="text-white/90">{point}</span>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap justify-center gap-4 pt-4">
+                    {[
+                      "Kiến trúc hệ thống",
+                      "Demo thực tế",
+                      "Use cases cụ thể",
+                      "ROI calculator"
+                    ].map((feature, idx) => (
+                      <div key={idx} className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                        <CheckCircle className="w-4 h-4 text-cyan-300" />
+                        <span className="text-white text-sm font-medium">{feature}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <div className="flex justify-center">
-                  <Button
-                    size="lg"
-                    className="bg-white text-indigo-600 hover:bg-white/90 font-bold text-lg h-14 px-8 group"
-                  >
-                    Tải tài liệu hướng dẫn vận hành SOC
+                <Link href="/lien-he">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-white/90 font-bold text-lg h-14 px-8 group shadow-xl">
+                    Tải tài liệu miễn phí
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                </div>
+                </Link>
               </div>
             </Card>
           </ScrollReveal>
@@ -733,45 +857,88 @@ export default function AiSocPage() {
       </Section>
 
       {/* Final CTA */}
-      <Section spacing="xl" background="default">
+      <Section spacing="md" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <Card className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700 border-none p-12 lg:p-16 text-center group">
-              <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 p-16 lg:p-20 text-center border-2 border-white/10">
+              {/* Background Effects */}
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl animate-pulse animation-delay-2000" />
               </div>
 
-              <div className="relative z-10 space-y-6">
-                <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-                  Sẵn sàng chuyển đổi SOC của bạn?
-                </h2>
-                <p className="text-xl text-white/90 max-w-2xl mx-auto">
-                  Liên hệ với ICS ngay hôm nay để được tư vấn miễn phí về giải pháp AI SOC phù hợp với doanh nghiệp của bạn.
-                </p>
+              <div className="relative z-10 space-y-8">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm">
+                  <Sparkles className="w-4 h-4 text-blue-400" />
+                  <span className="text-sm font-semibold text-blue-300">Bắt đầu hành trình chuyển đổi</span>
+                </div>
+
+                <div className="space-y-4">
+                  <h2 className="text-5xl p-1 lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                    Sẵn sàng nâng tầm<br />An ninh mạng?
+                  </h2>
+                  <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                    Đội ngũ chuyên gia ICS sẽ tư vấn miễn phí, đánh giá hiện trạng và đề xuất roadmap triển khai AI SOC phù hợp với doanh nghiệp bạn
+                  </p>
+                </div>
+
+                {/* Benefits */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  {[
+                    { icon: Rocket, title: "Tư vấn miễn phí", desc: "Workshop 2-4 giờ với experts" },
+                    { icon: Target, title: "Assessment nhanh", desc: "Đánh giá security posture" },
+                    { icon: Award, title: "Roadmap cụ thể", desc: "Lộ trình triển khai chi tiết" }
+                  ].map((item, idx) => (
+                    <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                      <item.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                      <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
+                      <p className="text-sm text-white/60">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                  <Button
-                    size="lg"
-                    className="bg-white text-blue-600 hover:bg-white/90 font-bold text-lg h-14 group"
-                  >
-                    Liên hệ ngay
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white/30 font-bold text-lg h-14"
-                  >
-                    Tải tài liệu
+                  <Link href="/lien-he">
+                    <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg h-16 px-8 group shadow-lg shadow-blue-500/50">
+                      Đặt lịch tư vấn ngay
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white hover:bg-white/20 font-bold text-lg h-16 px-8">
+                    <Eye className="w-5 h-5 mr-2" />
+                    Xem Demo trực tuyến
                   </Button>
                 </div>
               </div>
-            </Card>
+            </div>
           </ScrollReveal>
         </div>
       </Section>
 
       <Footer />
+
+      {/* Animations CSS */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px) translateX(0px);
+          }
+          33% {
+            transform: translateY(-20px) translateX(10px);
+          }
+          66% {
+            transform: translateY(10px) translateX(-10px);
+          }
+        }
+
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+      `}</style>
     </>
   )
 }

@@ -98,7 +98,7 @@ export default function Page() {
         <HeroSlider />
 
         {/* Featured Stats Section */}
-        <Section spacing="lg" background="default">
+        <Section spacing="md" background="default">
           <div className="container-responsive">
             <ScrollReveal direction="up">
               <div className="text-center mb-8">
@@ -136,7 +136,7 @@ export default function Page() {
         <ProductsSection />
 
         {/* Featured Solutions Section */}
-        <Section spacing="xl" background="muted">
+        <Section spacing="md" background="muted">
           <div className="container-responsive">
             <ScrollReveal direction="up">
               <div className="text-center mb-12">
@@ -181,7 +181,7 @@ export default function Page() {
         </Section>
 
         {/* Why Choose Us Section */}
-        <Section spacing="xl" background="default">
+        <Section spacing="md" background="default">
           <div className="container-responsive">
             <ScrollReveal direction="up">
               <div className="text-center mb-12">
@@ -223,7 +223,7 @@ export default function Page() {
         </Section>
 
         {/* Featured Partners Section */}
-        <Section spacing="xl" background="gradient">
+        <Section spacing="md" background="gradient">
           <div className="container-responsive">
             <ScrollReveal direction="up">
               <div className="text-center mb-12">
@@ -280,7 +280,7 @@ export default function Page() {
         <NewsSection />
         
         {/* CTA Section */}
-        <Section spacing="xl" background="default">
+        <Section spacing="md" background="default">
           <div className="container-responsive">
             <ScrollReveal direction="up">
               <Card className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-secondary p-12 lg:p-20 text-center border-none">

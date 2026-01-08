@@ -295,13 +295,6 @@ export default function VietguardPage() {
         
         <div className="relative container-responsive h-full flex items-center">
           <div className="max-w-4xl">
-            <ScrollReveal direction="up">
-              <Badge className="mb-4 px-5 py-2 bg-white/20 backdrop-blur-md border-white/30 text-white text-sm">
-                <Shield className="w-4 h-4 mr-2" />
-                {t('products.vietguard.hero.badge')}
-              </Badge>
-            </ScrollReveal>
-            
             <ScrollReveal direction="up" delay={100}>
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 {t('products.vietguard.hero.title')}
@@ -727,8 +720,8 @@ export default function VietguardPage() {
       {/* Activation & Deployment Section */}
       <Section spacing="md" background="default">
         <div className="container-responsive">
-          <div className="text-center max-w-3xl mx-auto mb-8">
-            <ScrollReveal direction="up">
+          <ScrollReveal direction="up">
+            <div className="text-center mb-8">
               <Badge className="mb-4 px-5 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 inline-flex items-center">
                 <Zap className="w-4 h-4 mr-2" />
                 {t('products.vietguard.activation.badge')}
@@ -736,12 +729,13 @@ export default function VietguardPage() {
               <AnimatedHeading as="h2" gradient className="p-2 mt-3 mb-3 text-2xl lg:text-3xl">
                 {t('products.vietguard.activation.heading')}
               </AnimatedHeading>
-              <p className="text-base text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-base text-muted-foreground mb-4 leading-relaxed max-w-3xl mx-auto">
                 {t('products.vietguard.activation.description')}
               </p>
-            </ScrollReveal>
+            </div>
+          </ScrollReveal>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <div>
                   <div className="space-y-6">
@@ -764,24 +758,23 @@ export default function VietguardPage() {
               </ScrollReveal>
 
               <ScrollReveal direction="right">
-                <Card className="relative overflow-hidden border-2 border-blue-200 dark:border-blue-800">
-                  <div className="aspect-[4/3] relative">
+                <Card className="relative overflow-hidden border-2 border-blue-200 dark:border-blue-800 h-64 md:h-96 lg:h-[520px] w-full">
+                  <div className="relative w-full h-full">
                     <Image
-                      src="/vietguard/anh2.jpg"
+                      src="https://sonic.com.vn/wp-content/uploads/2024/06/569abb72-6952-4c8e-a915-5e9ed2de7639.png"
                       alt="Deployment Process"
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                    <h3 className="text-2xl font-bold mb-3">Quy trình triển khai chuyên nghiệp</h3>
-                    <p className="text-white/90">Từ A-Z với sự hỗ trợ tận tình của đội ngũ chuyên gia ICS</p>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10 text-white">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2">Quy trình triển khai chuyên nghiệp</h3>
+                    <p className="text-white/90 text-sm md:text-base">Từ A-Z với sự hỗ trợ tận tình của đội ngũ chuyên gia ICS</p>
                   </div>
                 </Card>
               </ScrollReveal>
             </div>
-          </div>
         </div>
       </Section>
 
@@ -880,7 +873,7 @@ export default function VietguardPage() {
       </Section>
 
       {/* Final CTA Section */}
-      <Section spacing="lg" background="gradient">
+      <Section spacing="md" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <Card className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 p-10 lg:p-16 text-center border-none">

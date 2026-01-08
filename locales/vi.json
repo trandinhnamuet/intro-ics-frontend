@@ -83,7 +83,7 @@
       "title": "Sản Phẩm & Giải Pháp",
       "subtitle": "Khám phá các giải pháp an ninh mạng hàng đầu của chúng tôi",
       "showLess": "Thu gọn",
-      "chatbot": "V AIChat - Chatbot",
+      "chatbot": "V AI - Agent",
       "chatbotDesc": "Nền tảng giao tiếp in-app toàn diện với AI Chatbot, tăng 40% tỷ lệ giữ chân người dùng",
       "aiSoc": "AI SOC",
       "aiSocDesc": "Trung tâm điều hành an ninh mạng được trang bị AI tiên tiến",
@@ -794,7 +794,7 @@
       "hero": {
         "badge": "An ninh di động chuẩn Việt, chất lượng toàn cầu",
         "title": "Vietguard",
-        "subtitle": "Giải pháp bảo mật ứng dụng di động hàng đầu Việt Nam với công nghệ AI tiên tiến",
+        "subtitle": "Giải pháp bảo mật ứng dụng di động hàng đầu Việt Nam với công nghệ quét và phân tích tiên tiến",
         "accessWebsite": "Truy cập ngay",
         "contactAdvice": "Liên hệ tư vấn",
         "stats": {
@@ -809,8 +809,8 @@
         "description": "Khách hàng tin chọn VietGuard bởi sự kết hợp giữa công nghệ tiên tiến và uy tín từ đội ngũ chuyên gia hàng đầu",
         "points": [
           {
-            "title": "Tiên phong AI",
-            "desc": "Đơn vị tiên phong ứng dụng AI vào an ninh mạng tại Việt Nam"
+            "title": "Công nghệ tiên tiến",
+            "desc": "Đơn vị tiên phong công nghệ quét và phân tích bảo mật ứng dụng di động tại Việt Nam"
           },
           {
             "title": "Chuyên gia thực chiến",
@@ -822,7 +822,7 @@
           },
           {
             "title": "Đối tác chiến lược",
-            "desc": "Tin dùng bởi OCBC Bank, Gamevil, XLGAMES..."
+            "desc": "Tin dùng bởi các doanh nghiệp và tổ chức hàng đầu Việt Nam"
           }
         ]
       },

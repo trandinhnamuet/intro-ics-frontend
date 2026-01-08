@@ -153,7 +153,7 @@ export default function ChatbotPage() {
     {
       number: '01',
       title: 'Đăng ký & Nhận API Key',
-      description: 'Truy cập Console V AIChat và tạo tài khoản developer'
+      description: 'Truy cập Console V AI - Agent và tạo tài khoản developer'
     },
     {
       number: '02',
@@ -174,12 +174,12 @@ export default function ChatbotPage() {
 
   const faqs = [
     {
-      question: 'V AIChat có hỗ trợ chuyển đổi dữ liệu từ nền tảng cũ sang không?',
+      question: 'V AI - Agent có hỗ trợ chuyển đổi dữ liệu từ nền tảng cũ sang không?',
       answer: 'Có, chúng tôi cung cấp công cụ và hỗ trợ kỹ thuật để bạn di chuyển dữ liệu mượt mà nhất. Đội ngũ migration specialist sẽ hỗ trợ 24/7.'
     },
     {
       question: 'Nếu ứng dụng của tôi có hàng triệu người dùng, hệ thống có tải nổi không?',
-      answer: 'Hệ thống được xây dựng trên hạ tầng Auto-scaling của AWS/GCP, đã kiểm chứng qua các tựa game hàng triệu người chơi của Gamania. Bạn có thể yên tâm.'
+      answer: 'Hệ thống được xây dựng trên hạ tầng Auto-scaling của AWS/GCP, đã được kiểm chứng với các ứng dụng và game có hàng triệu người dùng. Bạn có thể yên tâm về khả năng mở rộng.'
     },
     {
       question: 'Chi phí được tính như thế nào?',
@@ -198,7 +198,7 @@ export default function ChatbotPage() {
   const trustBadges = [
     {
       icon: Award,
-      text: 'Top 1 Công ty Giải trí Số Đài Loan'
+      text: 'Giải pháp hàng đầu cho doanh nghiệp'
     },
     {
       icon: Users,
@@ -228,19 +228,11 @@ export default function ChatbotPage() {
             {/* Left Content */}
             <ScrollReveal direction="up">
               <div className="space-y-8">
-                {/* Super Headline */}
-                <div className="inline-block">
-                  <Badge className="px-6 py-3 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm border border-blue-500/50 text-white-300">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Nền tảng Giao tiếp In-App
-                  </Badge>
-                </div>
-
                 {/* Main Headline */}
                 <div>
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight">
                     <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-400 bg-clip-text text-transparent">
-                      V AIChat
+                      V AI - Agent
                     </span>
                   </h1>
                   <h2 className="text-3xl md:text-5xl font-bold text-foreground">
@@ -250,7 +242,7 @@ export default function ChatbotPage() {
 
                 {/* Detailed Description */}
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                  Tăng 40% tỷ lệ giữ chân người dùng với Communication Hub mạnh mẽ từ Gamania Group. Tích hợp Nhắn tin, Gọi điện và AI Bot chỉ trong 48 giờ. Không phải lo code, không phải lo infrastructure.
+                  Tăng 40% tỷ lệ giữ chân người dùng với Communication Hub mạnh mẽ từ ICS. Tích hợp Nhắn tin, Gọi điện và AI Bot chỉ trong 48 giờ. Không phải lo code, không phải lo infrastructure.
                 </p>
 
                 {/* Trust Badges */}
@@ -258,7 +250,7 @@ export default function ChatbotPage() {
                   <ScrollReveal direction="up" delay={100}>
                     <div className="flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2">
                       <Award className="w-5 h-5 text-cyan-400" />
-                      <span className="text-sm text-foreground/90">Top 1 Công ty Giải trí Đài Loan</span>
+                      <span className="text-sm text-foreground/90">Giải pháp hàng đầu cho doanh nghiệp</span>
                     </div>
                   </ScrollReveal>
                   <ScrollReveal direction="up" delay={150}>
@@ -300,12 +292,12 @@ export default function ChatbotPage() {
             <ScrollReveal direction="up" delay={200}>
               <Card className="relative h-96 lg:h-[500px] overflow-hidden border-2 border-cyan-200 dark:border-cyan-800 rounded-3xl shadow-2xl">
                 <Image
-                  src="https://lh7-us.googleusercontent.com/F7OUk_L3MIrf13rhUYn3-O4lQkfEbiC5Blju5S0OEuJLrZN7qX1OgIJSbdVNCOz89hKa564ZuKtp2KYbZqioKs5UZQoNncD9r9XihZE0DFhnhVjC64hI_i1gyIkO9uP_iOCiK3S82MQ9TtThKXjb5lI"
-                  alt="V AIChat Communication Platform"
+                  src="/chatbot/anh1.png"
+                  alt="V AI - Agent Interface - Giao diện Chat"
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-cyan-900/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-cyan-900/10 to-transparent" />
               </Card>
             </ScrollReveal>
           </div>
@@ -321,7 +313,7 @@ export default function ChatbotPage() {
                 <AlertCircle className="w-4 h-4 mr-2" />
                 Nỗi Đau Thực Tế
               </Badge>
-              <h2 className="text-5xl font-bold mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
                 Tại sao tự xây dựng chat là một <span className="text-red-500">sai lầm</span> đắt giá?
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -330,8 +322,8 @@ export default function ChatbotPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="grid md:grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 gap-6">
               {painPoints.map((point, idx) => (
                 <ScrollReveal key={idx} direction="up" delay={idx * 100}>
                   <Card className="p-6 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-200/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
@@ -350,14 +342,16 @@ export default function ChatbotPage() {
             </div>
 
             <ScrollReveal direction="up">
-              <Card className="relative h-96 overflow-hidden border-2 border-red-200 dark:border-red-800 rounded-2xl shadow-xl">
+              <Card className="relative h-[540px] w-full overflow-hidden border-2 border-red-200 dark:border-red-800 rounded-2xl shadow-xl">
                 <Image
-                  src="https://bluedata.vn/wp-content/uploads/2024/11/ai-cham-soc-khach-hang.webp"
-                  alt="Chat Development Challenges"
+                  src="/chatbot/giaodienboxchat.png"
+                  alt="Tự động hóa - Công nghệ mới của V AI - Agent"
                   fill
+                  sizes="(min-width: 1024px) 800px, 100vw"
                   className="object-cover"
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-red-900/60 via-red-900/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-red-900/40 via-red-900/20 to-transparent" />
               </Card>
             </ScrollReveal>
           </div>
@@ -367,7 +361,7 @@ export default function ChatbotPage() {
               <div className="flex items-start gap-4">
                 <Check className="w-8 h-8 text-green-500 shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Giải pháp: V AIChat</h3>
+                  <h3 className="text-2xl font-bold mb-2">Giải pháp: V AI - Agent</h3>
                   <p className="text-lg text-foreground/90">
                     Chúng tôi gánh vác mọi rủi ro kỹ thuật để bạn tập trung 100% vào kinh doanh. Không phải lo code, không phải lo infrastructure, chỉ cần tích hợp API và bắt đầu kiếm tiền.
                   </p>
@@ -394,7 +388,7 @@ export default function ChatbotPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {features.map((feature, idx) => {
               const Icon = feature.icon
               return (
@@ -445,6 +439,96 @@ export default function ChatbotPage() {
         </div>
       </Section>
 
+      {/* Section 3.5: Featured - Automation Technology */}
+      <Section background="gradient" spacing="md">
+        <div className="container-responsive">
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 px-4 py-2 mx-auto w-fit inline-flex items-center justify-center">
+                <Gauge className="w-4 h-4 mr-2" />
+                Công Nghệ Tự Động Hóa
+              </Badge>
+
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                Tự động hóa tất cả quy trình tương tác
+              </h2>
+
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                Không cần can thiệp thủ công. Hệ thống AI của V AI - Agent tự động xử lý
+                những tương tác phức tạp, giải quyết vấn đề nhanh chóng và cải thiện trải nghiệm khách hàng.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left: Image */}
+            <ScrollReveal direction="left">
+              <Card className="relative h-96 lg:h-[480px] overflow-hidden border-3 border-green-400 dark:border-green-600 rounded-3xl shadow-2xl">
+                <Image
+                  src="/chatbot/anh3.png"
+                  alt="Công nghệ Tự động hóa AI"
+                  fill
+                  className="object-contain"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                <div className="absolute top-6 right-6 px-6 py-3 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-full font-bold shadow-lg">
+                  <span className="flex items-center gap-2">
+                    <Zap className="w-5 h-5" />
+                    Công nghệ mới
+                  </span>
+                </div>
+              </Card>
+            </ScrollReveal>
+
+            {/* Right: Content */}
+            <ScrollReveal direction="left">
+              <div className="space-y-6 text-center">
+                <div className="space-y-4 pt-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Check className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">Xử lý tin nhắn tự động</h3>
+                      <p className="text-muted-foreground">Phân loại, ưu tiên và trả lời tin nhắn mà không cần nhân viên</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Check className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">Phân luồng & định tuyến hội thoại thông minh</h3>
+                      <p className="text-muted-foreground">Tự động nhận diện nhu cầu, chuyển tiếp đúng kịch bản hoặc bộ phận xử lý phù hợp</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Check className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">Tối ưu hóa quy trình</h3>
+                      <p className="text-muted-foreground">Học từ mọi tương tác để cải thiện liên tục độ chính xác</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Check className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">Giảm chi phí nhân sự</h3>
+                      <p className="text-muted-foreground">Tự động hóa 70% công việc hỗ trợ khách hàng</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </Section>
+
       {/* Section 4: Comparison Table */}
       <Section background="default" spacing="md">
         <div className="container-responsive">
@@ -454,9 +538,9 @@ export default function ChatbotPage() {
                 <Gauge className="w-4 h-4 mr-2" />
                 So Sánh Trực Quan
               </Badge>
-              <h2 className="text-5xl font-bold mb-6">Tự xây dựng vs V AIChat</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Tự xây dựng vs V AI - Agent</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Dữ liệu thực tế từ 50+ doanh nghiệp đã sử dụng V AIChat
+                Dữ liệu thực tế từ 50+ doanh nghiệp đã sử dụng V AI - Agent
               </p>
             </div>
           </ScrollReveal>
@@ -468,7 +552,7 @@ export default function ChatbotPage() {
                   <tr className="border-b-2 border-border">
                     <th className="text-left py-4 px-6 font-bold text-lg">Tiêu chí</th>
                     <th className="text-left py-4 px-6 font-bold text-lg text-red-500">Tự xây dựng</th>
-                    <th className="text-left py-4 px-6 font-bold text-lg text-green-500">V AIChat</th>
+                    <th className="text-left py-4 px-6 font-bold text-lg text-green-500">V AI - Agent</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -506,14 +590,14 @@ export default function ChatbotPage() {
                 <Target className="w-4 h-4 mr-2" />
                 Kịch Bản Ứng Dụng
               </Badge>
-              <h2 className="text-5xl font-bold mb-6">Các Ngành Đã Thành Công</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Các Ngành Đã Thành Công</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Từ Game đến Healthcare, V AIChat đều chứng minh hiệu quả
+                Từ Game đến Healthcare, V AI - Agent đều chứng minh hiệu quả
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {useCases.map((useCase, idx) => {
               const Icon = useCase.icon
               return (
@@ -572,14 +656,14 @@ export default function ChatbotPage() {
                 <Lock className="w-4 h-4 mr-2" />
                 Bảo Mật & Tin Cậy
               </Badge>
-              <h2 className="text-5xl font-bold mb-6">Dữ Liệu Của Bạn Luôn An Toàn</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Dữ Liệu Của Bạn Luôn An Toàn</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Tuân thủ tiêu chuẩn bảo mật quốc tế, giám sát 24/7
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
             <ScrollReveal direction="left">
               <Card className="p-8 border-2 border-green-200/50 dark:border-green-800/50 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30">
                 <div className="space-y-6">
@@ -640,6 +724,54 @@ export default function ChatbotPage() {
               </Card>
             </ScrollReveal>
           </div>
+
+          {/* Image Showcase */}
+          <ScrollReveal direction="up" delay={200}>
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <Card className="relative h-64 overflow-hidden border-2 border-blue-200/50 dark:border-blue-800/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+                <Image
+                  src="/chatbot/anh2.png"
+                  alt="Giao diện hiện đại"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <h4 className="text-lg font-bold mb-1">Giao diện tương tác</h4>
+                  <p className="text-sm text-white/90">Thiết kế hiện đại, dễ sử dụng</p>
+                </div>
+              </Card>
+
+              <Card className="relative h-64 overflow-hidden border-2 border-green-200/50 dark:border-green-800/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+                <Image
+                  src="/chatbot/anh3.png"
+                  alt="Tự động hóa - Công nghệ mới"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <div className="inline-block px-2 py-1 bg-green-500 rounded text-xs font-bold mb-2">MỚI</div>
+                  <h4 className="text-lg font-bold mb-1">Tự động hóa thông minh</h4>
+                  <p className="text-sm text-white/90">Công nghệ AI tự động xử lý</p>
+                </div>
+              </Card>
+
+              <Card className="relative h-64 overflow-hidden border-2 border-purple-200/50 dark:border-purple-800/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+                <Image
+                  src="/chatbot/thongke.png"
+                  alt="Dashboard phân tích"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <h4 className="text-lg font-bold mb-1">Dashboard thông minh</h4>
+                  <p className="text-sm text-white/90">Phân tích dữ liệu real-time</p>
+                </div>
+              </Card>
+            </div>
+          </ScrollReveal>
         </div>
       </Section>
 
@@ -662,9 +794,9 @@ export default function ChatbotPage() {
           <div ref={deploymentRef} className="grid md:grid-cols-4 gap-6 mb-12">
             {deploymentSteps.map((step, idx) => (
               <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                <Card className="p-8 relative hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                  {/* Step Number */}
-                  <div className="absolute top-4 right-4">
+                <Card className="p-8 relative hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center">
+                  {/* Step Number - Centered */}
+                  <div className="flex justify-center mb-4">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-2xl">
                       {step.number}
                     </div>
@@ -672,10 +804,11 @@ export default function ChatbotPage() {
 
                   {/* Connection Line */}
                   {idx < deploymentSteps.length - 1 && (
-                    <div className="hidden md:block absolute top-24 left-full w-6 h-1 bg-gradient-to-r from-cyan-500 to-transparent" />
+                    <div className="hidden md:block absolute top-12 left-full w-6 h-1 bg-gradient-to-r from-cyan-500 to-transparent" />
                   )}
 
-                  <div className="pr-20">
+                  {/* Horizontal Text */}
+                  <div>
                     <h3 className="text-xl font-bold mb-3">{step.title}</h3>
                     <p className="text-muted-foreground">{step.description}</p>
                   </div>
@@ -693,12 +826,12 @@ export default function ChatbotPage() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold"
-                onClick={() => {
-                  window.location.href = 'https://v-aichat.com/signup';
-                }}
+                asChild
               >
-                Đăng Ký Miễn Phí Ngay
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Link href="/lien-he">
+                  Đăng Ký Miễn Phí Ngay
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
               </Button>
             </Card>
           </ScrollReveal>
@@ -774,34 +907,40 @@ export default function ChatbotPage() {
       <Section background="gradient" spacing="md">
         <div className="container-responsive text-center">
           <ScrollReveal direction="up">
-            <h2 className="text-6xl font-bold mb-6">Lợi ích Tương Đương $40,000 - Giá Chỉ 48 Giờ</h2>
+            <h2 className="text-5xl font-bold mb-6 leading-tight">
+              Tiết kiệm ngân sách lên đến{" "}
+              <span className="text-red-500 font-extrabold">60%</span>
+              <br />
+              Tiết kiệm thời gian quản lý đến{" "}
+              <span className="text-red-500 font-extrabold">40%</span>
+            </h2>
             <p className="text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
-              Bạn không chỉ tiết kiệm chi phí. Bạn còn nhận được sự hỗ trợ 24/7 từ team Gamania với 20+ năm kinh nghiệm xây dựng app quy mô lớn.
+              Bạn không chỉ tiết kiệm chi phí. Bạn còn nhận được sự hỗ trợ 24/7 từ đội ngũ ICS với nhiều năm kinh nghiệm xây dựng ứng dụng quy mô lớn.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold text-lg px-8 py-7"
-                onClick={() => {
-                  window.location.href = 'https://v-aichat.com/signup';
-                }}
+                asChild
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Bắt Đầu Thử Nghiệm Ngay
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Link href="/lien-he">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Bắt Đầu Thử Nghiệm Ngay
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
               </Button>
 
               <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-cyan-500/50 hover:bg-cyan-500/10 font-bold text-lg px-8 py-7"
-                onClick={() => {
-                  window.location.href = 'https://v-aichat.com/schedule-demo';
-                }}
+                asChild
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Lên Lịch Demo
+                <Link href="/lien-he">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Lên Lịch Demo
+                </Link>
               </Button>
             </div>
           </ScrollReveal>

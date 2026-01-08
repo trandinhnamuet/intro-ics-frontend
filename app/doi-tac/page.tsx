@@ -179,7 +179,7 @@ export default function PartnerPage() {
       </div>
 
       {/* Partnership Tiers */}
-      <Section spacing="xl" background="default">
+      <Section spacing="md" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
@@ -221,7 +221,7 @@ export default function PartnerPage() {
       </Section>
 
       {/* Technology Partners Section */}
-      <Section spacing="xl" background="muted">
+      <Section spacing="md" background="muted">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
@@ -264,7 +264,7 @@ export default function PartnerPage() {
       </Section>
 
       {/* Business Partners Section */}
-      <Section spacing="xl" background="default">
+      <Section spacing="md" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
@@ -307,7 +307,7 @@ export default function PartnerPage() {
       </Section>
 
       {/* Testimonials Carousel */}
-      <Section spacing="xl" background="default">
+      <Section spacing="md" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="mb-4">
@@ -397,7 +397,7 @@ export default function PartnerPage() {
       </Section>
 
       {/* CTA Section */}
-      <Section spacing="xl" background="gradient">
+      <Section spacing="md" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <Card className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-secondary p-12 lg:p-20 text-center border-none">

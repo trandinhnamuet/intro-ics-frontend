@@ -126,7 +126,7 @@ export default function NhaMayThongMinhPage() {
         </div>
       </div>
 
-      <Section spacing="xl" background="default">
+      <Section spacing="md" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -163,7 +163,7 @@ export default function NhaMayThongMinhPage() {
         </div>
       </Section>
 
-      <Section spacing="xl" background="muted">
+      <Section spacing="md" background="muted">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
@@ -223,7 +223,7 @@ export default function NhaMayThongMinhPage() {
         </div>
       </Section>
 
-      <Section spacing="xl" background="gradient">
+      <Section spacing="md" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <Card className="relative overflow-hidden bg-gradient-to-br from-amber-600 via-orange-600 to-red-600 p-12 lg:p-20 text-center border-none">

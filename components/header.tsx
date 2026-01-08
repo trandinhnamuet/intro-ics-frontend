@@ -213,7 +213,7 @@ export function Header() {
                       href="/products/chatbot"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
-                      <div className="font-medium">V AIChat - Chatbot</div>
+                      <div className="font-medium">V AI - Agent</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.chatbot')}</div>
                     </Link>
                     <Link
