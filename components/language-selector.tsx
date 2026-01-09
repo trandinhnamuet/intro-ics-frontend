@@ -56,6 +56,27 @@ export function LanguageSelector() {
     }, 150)
   }
 
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen)
+  }
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isOpen])
+
   useEffect(() => {
     return () => {
       if (timeoutRef.current) {
@@ -75,6 +96,7 @@ export function LanguageSelector() {
         variant="outline" 
         size="icon"
         className="w-10 h-10 rounded-full"
+        onClick={toggleDropdown}
       >
         <Globe className="w-5 h-5" />
       </Button>

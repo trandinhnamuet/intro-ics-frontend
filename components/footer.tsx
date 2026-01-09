@@ -76,16 +76,19 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { href: "http://oraclecloud.vn/", label: "Oracle Cloud", external: true },
-                { href: "http://vietguardscan.icss.com.vn/", label: "VietGuard Scan", external: true },
-                { href: "http://smartdashboard.vn/", label: "Smart Dashboard", external: true },
-                { href: "#", label: "AI SOC Platform", external: false },
-                { href: "#", label: "CSA Endpoint", external: false },
+                { href: "/products/chatbot", label: "V AI - Agent", external: false },
+                { href: "/products/vietguard", label: "VietGuard", external: false },
+                { href: "/products/ai-soc", label: "AI SOC", external: false },
+                { href: "https://landing-csa.vercel.app/", label: "CSA-Endpoint", external: true },
+                { href: "/products/pentest-services", label: "Pentest Services", external: false },
+                { href: "https://oraclecloud.vn/", label: "Oracle Cloud", external: true },
+                { href: "https://smartdashboard.vn/", label: "Smart Dashboard", external: true },
               ].map((link) => (
                 <li key={link.label}>
                   <Link 
                     href={link.href} 
                     target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
                     className="group flex items-center gap-2 text-sm hover:text-primary transition-all"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
