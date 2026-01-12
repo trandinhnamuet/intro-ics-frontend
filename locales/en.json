@@ -31,59 +31,6 @@
       "title": "Comprehensive Cybersecurity Solutions",
       "subtitle": "Protect your business with the most advanced cybersecurity technology",
       "cta": "Learn More",
-      "contactBtn": "Contact Now"
-    },
-    "products": {
-      "title": "Products & Solutions",
-      "subtitle": "Discover our leading cybersecurity solutions",
-      "aiSoc": "AI SOC",
-      "aiSocDesc": "AI-powered Security Operations Center with advanced threat detection",
-      "csa": "CSA",
-      "csaDesc": "Comprehensive cybersecurity assessment and audit solutions",
-      "pentestServices": "Pentest Services",
-      "pentestServicesDesc": "Professional penetration testing services to identify vulnerabilities",
-      "vietguard": "Vietguard - Mobile App Security",
-      "vietguardDesc": "Mobile application security scanning and vulnerability detection tool",
-      "oracleCloud": "Oracle Cloud",
-      "oracleCloudDesc": "Leading cloud computing solution with high performance and security",
-      "smartDashboard": "Smart Dashboard",
-      "smartDashboardDesc": "Centralized monitoring and management system for enterprises",
-      "viewMore": "Learn More",
-      "showMore": "View More",
-      "smartBuilding": {
-        "title": "Smart Building",
-        "description": "Smart building automation and management solutions"
-      },
-      "smartFactory": {
-        "title": "Smart Factory",
-        "description": "IoT and automation systems for manufacturing"
-      },
-      "aiSocDetail": {
-        "title": "AI SOC",
-        "description": "AI-powered Security Operations Center"
-      },
-      "esgSolutions": {
-        "title": "ESG Solutions",
-        "description": "Sustainable development solutions for enterprises"
-      }
-    },
-    "news": {
-      "title": "News & Events",
-      "subtitle": "Stay updated with the latest cybersecurity news",
-      "readMore": "Read More",
-      "viewAll": "View All Articles"
-    },
-    "partners": {
-      "title": "Trusted Partners",
-      "subtitle": "Collaborating with world-leading brands",
-      "intro": "Partnering with leading global brands"
-    }
-  },
-  "home": {
-    "hero": {
-      "title": "Comprehensive Cybersecurity Solutions",
-      "subtitle": "Protect your business with the most advanced cybersecurity technology",
-      "cta": "Learn More",
       "contactBtn": "Contact Now",
       "featured": "Featured",
       "learnMore": "Learn more",
@@ -193,6 +140,39 @@
       "fetchError": "Failed to load articles"
     }
   },
+  "articlesManagement": {
+    "title": "Articles Management",
+    "description": "Manage your articles list",
+    "loading": "Loading...",
+    "noArticles": "No articles yet",
+    "errors": {
+      "errorTitle": "Error",
+      "fetchError": "Failed to load articles list",
+      "deleteError": "Failed to delete article"
+    },
+    "auth": {
+      "title": "Authentication Required",
+      "wrongPassword": "Password is incorrect",
+      "passwordError": "Wrong password. Cannot {{action}}"
+    },
+    "password": "Password",
+    "deleteConfirm": "This action cannot be undone."
+  },
+  "writeArticle": {
+    "title": "Write Article",
+    "description": "Create a new article or edit existing article",
+    "loading": "Loading editor...",
+    "errors": {
+      "errorTitle": "Authentication Error",
+      "fetchError": "Failed to load article",
+      "passwordError": "Please enter the correct password to save the article"
+    }
+  },
+  "articleDetail": {
+    "title": "Article Details",
+    "copied": "Link copied!",
+    "relatedArticles": "Related Articles"
+  },
   "header": {
     "aboutUs": "About Us",
     "generalIntro": "General Introduction",
@@ -263,6 +243,16 @@
     "title": "Our Partners",
     "subtitle": "Building a strong cybersecurity ecosystem together",
     "badge": "Partners",
+    "intro": "Partnering with world-leading brands",
+    "carousel": {
+      "scienceMinistry": "Ministry of Science and Technology",
+      "environmentMinistry": "Ministry of Natural Resources and Environment",
+      "evn": "EVN",
+      "hmm": "HMM",
+      "ademax": "Ademax",
+      "healthMinistry": "Ministry of Health",
+      "logo1": "Logo 1"
+    },
     "programTitle": "Partnership Program",
     "programSubtitle": "Different partnership levels with various benefits and incentives",
     "platinum": "Platinum Partner",
@@ -455,11 +445,206 @@
     "videoNotSupported": "Your browser does not support video."
   },
   "recruitment": {
-    "title": "Careers",
-    "subtitle": "Join the ICS team - Grow together",
-    "badge": "Careers",
-    "coming_soon": "Content coming soon",
-    "message": "We are preparing recruitment information. Please check back later for the latest job openings."
+    "title": "Recruitment",
+    "subtitle": "Join ICS Team - Growing Together",
+    "badge": "Recruitment",
+    "coming_soon": "Content will be updated soon",
+    "message": "We are preparing recruitment information. Please come back later to see the latest job openings.",
+    "hero": {
+      "badge": "Now hiring 5 positions",
+      "title": "Join the ICS Team",
+      "subtitle": "Together we build a safe future for Vietnamese enterprises",
+      "viewPositions": "View job positions"
+    },
+    "whyJoin": "Why join ICS?",
+    "benefit1Title": "Advanced Technology",
+    "benefit1Desc": "Work with AI SOC, Smart Building, Mobile Security and breakthrough technology solutions",
+    "benefit2Title": "Career Development",
+    "benefit2Desc": "Clear promotion path, specialized training and opportunities to become an industry expert",
+    "benefit3Title": "Young Culture",
+    "benefit3Desc": "Dynamic Gen-Z environment, psychological boss, diverse sports activities",
+    "location": "Location",
+    "salary": "Salary",
+    "mission": "Your Mission",
+    "responsibilities": "Job Description",
+    "requirements": "Candidate Requirements",
+    "benefits": "Attractive Benefits",
+    "applicationMethod": "How to Apply",
+    "emailLabel": "Send CV via Email",
+    "subject": "Subject",
+    "yourName": "Full Name",
+    "directContact": "Direct Contact",
+    "contactPerson": "Ms. Diem Quynh (HCVP)",
+    "portfolioLabel": "Portfolio includes",
+    "portfolioItem1": "Complete and detailed CV information",
+    "portfolioItem2": "Related certificates (if any)",
+    "applyNow": "Apply Now",
+    "jobsTitle": "Open Positions",
+    "jobsSubtitle": "Explore career opportunities that match your profile",
+    "marketing": "Marketing",
+    "sales": "Business",
+    "tech": "Technology",
+    "viewDetails": "View Details",
+    "ctaTitle": "Ready to join ICS?",
+    "ctaSubtitle": "Send your CV today and become part of the ICS team!",
+    "sendCVNow": "Send CV Now",
+    "contactPhone": "Contact: 0972.363.821",
+    "jobs": {
+      "marketingStaff": {
+        "title": "Marketing Staff - Technology Solutions",
+        "department": "Marketing",
+        "type": "Full-time",
+        "level": "Staff",
+        "salary": "15-20 million++ VND/month",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Create content and manage communication channels for technology solutions",
+        "mission": "Become the 'content wizard' to spread the power of technology solutions in our product ecosystem.",
+        "responsibilities": [
+          "Manage and create daily content on Social Media",
+          "Write blogs, news about cybersecurity, AI SOC",
+          "Create ideas and write scripts for short videos, introduction clips",
+          "Cooperate with design/video teams to produce communication materials",
+          "Support organizing technology seminars, webinars and events"
+        ],
+        "requirements": [
+          "Age: 24-27 years old",
+          "Minimum 1 year experience in Marketing, Content or Social Media",
+          "Good writing skills, flexible language thinking",
+          "Can use Canva, Photoshop or video editing",
+          "Can read basic English documents"
+        ],
+        "benefits": [
+          "Income: 15-20 million++ VND/month",
+          "Performance-based bonus",
+          "Salary adjustment review twice a year",
+          "Young working environment, psychological boss",
+          "Participate in sports: football, badminton"
+        ]
+      },
+      "salesStaff": {
+        "title": "Sales Staff - Technology Solutions",
+        "department": "Business",
+        "type": "Full-time",
+        "level": "Staff",
+        "salary": "15-20 million++ VND/month",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Consult and develop business customers for technology solutions",
+        "mission": "Become a digital transformation expert, a bridge between ICS and business customers.",
+        "responsibilities": [
+          "Explore and develop potential customer database",
+          "Reach customers through direct meetings, phone calls, emails",
+          "Demo and advise appropriate technology solutions",
+          "Negotiate and successfully sign contracts"
+        ],
+        "requirements": [
+          "Age: 21-45 years, with 1-2 years of sales experience",
+          "Graduated from Associate Degree or higher: IT, AI, Mechanical Engineering, Business",
+          "Passion for business, enthusiasm and drive",
+          "Good communication skills, flexible problem handling",
+          "Preferably have experience in selling technology products"
+        ],
+        "benefits": [
+          "Income: 15-20 million++ VND/month",
+          "Performance-based commission",
+          "Training by experienced Board of Directors",
+          "Clear development path",
+          "Complete equipment provision, phone allowance"
+        ]
+      },
+      "securityEngineer": {
+        "title": "Security Engineer",
+        "department": "Technology",
+        "type": "Full-time",
+        "level": "Expert",
+        "salary": "Negotiable based on competence",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Operate AI SOC and ensure safety for critical mobile systems",
+        "mission": "Join the core team, operate modern AI SOC systems and protect critical mobile platforms.",
+        "responsibilities": [
+          "Monitor and analyze security events on AI SOC",
+          "Use AI to detect sophisticated attacks (APT)",
+          "Penetration Testing for iOS & Android applications",
+          "Vulnerability assessment according to OWASP Mobile Top 10",
+          "Deploy and manage security devices (Firewall, IDS/IPS, WAF, SIEM)"
+        ],
+        "requirements": [
+          "Minimum 2-3 years of Information Security experience",
+          "Solid understanding of network protocols (TCP/IP), operating systems (Linux, Windows)",
+          "Proficient in Burp Suite, MobSF, Frida, Wireshark, Nessus, SIEM/SOAR",
+          "Preferably certified: Security+, CEH, OSCP",
+          "Malware analysis thinking is a big advantage"
+        ],
+        "benefits": [
+          "Salary commensurate with competence (2-3 years experience)",
+          "Work with industry experts",
+          "Create conditions for international certifications (OSCP, CISSP)",
+          "Career path to Senior/Lead",
+          "Off-campus activities: Badminton, football weekly"
+        ]
+      },
+      "marketingDirector": {
+        "title": "Marketing Director",
+        "department": "Marketing",
+        "type": "Full-time",
+        "level": "Senior Management",
+        "salary": "Negotiable + High Commission",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Build overall Marketing strategy and automated Lead Generation system",
+        "mission": "Become the 'brilliant architect' for ICS brand and growth strategy.",
+        "responsibilities": [
+          "Build Go-to-market strategy for product lines",
+          "Market research and USP identification",
+          "Implement Account-Based Marketing (ABM) campaigns",
+          "Build and protect ICS brand reputation",
+          "Manage Marketing team and optimize budget"
+        ],
+        "requirements": [
+          "Minimum 5 years Marketing experience",
+          "Management experience (Manager/Head/Director) in B2B, SaaS, IT sector",
+          "Sharp strategic thinking, understanding of B2B Customer Journey",
+          "Sensitivity to new technology trends (AI, Blockchain, IoT)",
+          "Fluent English"
+        ],
+        "benefits": [
+          "Unlimited income (Base salary + % Commission + Bonus)",
+          "Full authority in strategy and personnel decisions",
+          "Career advancement to CMO, Deputy CEO",
+          "Premium health insurance",
+          "Regular travel, sports club"
+        ]
+      },
+      "salesDirector": {
+        "title": "Sales Director",
+        "department": "Business",
+        "type": "Full-time",
+        "level": "Senior Management",
+        "salary": "Negotiable + High Commission",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Lead the sales team and be responsible for revenue strategy",
+        "mission": "Become the 'capable captain', fully responsible for revenue strategy and market expansion.",
+        "responsibilities": [
+          "Build short-term and long-term business strategy",
+          "Recruit, train and build competent Sales team",
+          "Establish KPI system and standardized sales process",
+          "Exploit strategic customers (Key Accounts)",
+          "Negotiate and close large-scale contracts"
+        ],
+        "requirements": [
+          "Minimum 5 years IT business experience",
+          "At least 2 years in equivalent management position",
+          "Deep understanding of B2B market, Cybersecurity, Digital Transformation",
+          "Network with Finance, Banking, Real Estate sectors",
+          "Good English communication"
+        ],
+        "benefits": [
+          "Unlimited income (Base salary + % Commission + Bonus)",
+          "Decision authority in personnel and strategy",
+          "Opportunity to become shareholder or Key Person",
+          "Premium health insurance",
+          "Regular travel, full business allowance"
+        ]
+      }
+    }
   },
   "smartBuilding": {
     "title": "Smart Building Solutions",
@@ -492,6 +677,8 @@
         "subtitle": "Leading mobile app security solution in Vietnam with advanced AI technology",
         "accessWebsite": "Access Now",
         "contactAdvice": "Contact for Consultation",
+        "experienceNow": "Experience Now",
+        "scheduleConsultation": "Schedule Consultation",
         "stats": {
           "customers": "Trusted Customers",
           "usersProtected": "Users Protected",
@@ -687,46 +874,289 @@
       }
     },
     "aiSoc": {
-      "badge": "AI Security Operations Center",
-      "subtitle": "AI-powered security operations center solution for automatic threat detection and response",
+      "hero": {
+        "badge": "Powerful. Intelligent. Automated.",
+        "title": "AI SOC",
+        "titleMain": "Revolutionize Cybersecurity Operations",
+        "titleSpan": "with Artificial Intelligence",
+        "subtitle": "Traditional SOC is obsolete. AI SOC is the new standard.",
+        "description": "ICS's AI SOC solution combines Google's global-scale data analytics platform with Gurucul's advanced behavioral analytics technology, helping enterprises:",
+        "points": [
+          "70% reduction in incident response time",
+          "90% automation of detection processes",
+          "95% accuracy in threat detection"
+        ],
+        "ctaSubtitle": "Not just detection – immediate action.",
+        "cta1": "Get AI SOC Solution Consultation",
+        "cta2": "View Workshop Walkthrough Documentation"
+      },
+      "painPoints": {
+        "badge": "Market Pain Points",
+        "title": "Why Traditional SOC Can No Longer Protect You?",
+        "subtitle": "Enterprises face a harsh reality:",
+        "points": [
+          {
+            "title": "Alert Overload",
+            "items": [
+              "Systems generate millions of alerts daily",
+              "Vietnam alone: 12,300+ cyber attacks/day",
+              "Traditional SOC cannot handle manual processing with high accuracy"
+            ]
+          },
+          {
+            "title": "Increasingly Sophisticated Attacks",
+            "items": [
+              "83+ APT campaigns annually targeting:",
+              "Banking – Finance, Energy – Telecommunications, Government – Large enterprises",
+              "Hackers no longer strike fast; they hide for weeks/months"
+            ]
+          },
+          {
+            "title": "SOC Staffing Crisis",
+            "items": [
+              "Critical shortage of senior SOC analysts",
+              "Massive cost to maintain 24/7 SOC",
+              "Burnout – errors – slow response"
+            ]
+          },
+          {
+            "title": "Unacceptable Response Time",
+            "items": [
+              "Traditional SOC: days to weeks",
+              "AI SOC: seconds to minutes"
+            ]
+          }
+        ],
+        "conclusion": "Traditional SOC only \"sees\" – but cannot act in time."
+      },
+      "solution": {
+        "badge": "AI SOC Ecosystem",
+        "title": "ICS AI SOC Solution",
+        "subtitle": "Comprehensive AI SOC Ecosystem",
+        "description": "ICS deploys next-generation AI SOC based on the combination of Google Chronicle / Google Security Operations and Gurucul REVEAL Platform",
+        "pillars": [
+          {
+            "icon": "Database",
+            "number": "1",
+            "title": "Massive Data – Google Scale",
+            "items": [
+              "Analyze 50 billion files/day",
+              "Protect 5 billion devices globally",
+              "Unlimited log storage and query capability"
+            ]
+          },
+          {
+            "icon": "Brain",
+            "number": "2",
+            "title": "Behavioral Analytics – UEBA",
+            "items": [
+              "Machine Learning learns user & system behavior",
+              "Detect: Account Compromise, Insider threats, Lateral Movement, Privilege Escalation",
+              "Signature-less detection"
+            ]
+          },
+          {
+            "icon": "Zap",
+            "number": "3",
+            "title": "Response Automation – SOAR",
+            "items": [
+              "Automatic response playbooks: Isolate endpoints, Disconnect accounts, Block malicious IPs/Domains",
+              "Reduce MTTR > 70%"
+            ]
+          }
+        ]
+      },
       "features": {
-        "title": "Features",
-        "heading": "Key Features of AI SOC",
-        "description": "Comprehensive solution to protect your network systems",
-        "ueba": {
-          "title": "UEBA - Behavior Analytics",
-          "description": "Detect anomalous user and entity behavior using AI"
+        "badge": "Breakthrough Technology",
+        "title": "Key Features",
+        "subtitle": "Advanced technology at your fingertips",
+        "items": [
+          {
+            "icon": "Target",
+            "title": "Risk Scoring Dashboard",
+            "description": "Context-aware risk scoring, prioritize the most dangerous threats. No more alert noise"
+          },
+          {
+            "icon": "Search",
+            "title": "Investigate Studio",
+            "description": "Deep trace entire data pipeline, drill-down from alert → log → behavior. Support forensics & threat hunting"
+          },
+          {
+            "icon": "Map",
+            "title": "MITRE ATT&CK Mapping",
+            "description": "Automatically map attack techniques, understand hacker's position in kill chain. Support leadership & audit reports"
+          },
+          {
+            "icon": "FileText",
+            "title": "Custom Reporting",
+            "description": "Compliance reports (ISO 27001, NIST, PCI-DSS…), Executive reports for leadership. Auto-export on schedule"
+          },
+          {
+            "icon": "CheckCircle",
+            "title": "Case Management",
+            "description": "Manage entire incident lifecycle, assign tasks – track SLA – close cases systematically. Fit for internal SOC & MSSP"
+          }
+        ]
+      },
+      "process": {
+        "badge": "Operating Process",
+        "title": "Closed Loop Cycle",
+        "subtitle": "Identify – Protect – Detect – Respond – Recover",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Ingestion – Collect",
+            "description": "Cloud, Endpoint, Network, IAM, SaaS. Centralize logs, normalize in real-time"
+          },
+          {
+            "number": "2",
+            "title": "Detection – Detect",
+            "description": "AI/ML correlation with global threat intelligence. Detect unknown anomalies (Zero-day)"
+          },
+          {
+            "number": "3",
+            "title": "Analysis – Analyze",
+            "description": "AI + ICS expert context analysis. Eliminate false positives"
+          },
+          {
+            "number": "4",
+            "title": "Response – Respond",
+            "description": "Trigger automatic playbooks. Contain spread in seconds"
+          },
+          {
+            "number": "5",
+            "title": "Recovery – Recover",
+            "description": "Support recovery. Propose patches – improve security posture"
+          }
+        ]
+      },
+      "whyIcs": {
+        "badge": "Why Choose ICS",
+        "title": "Why Choose ICS?",
+        "subtitle": "Cybersecurity experts partnering with enterprises",
+        "points": [
+          {
+            "icon": "DollarSign",
+            "title": "Cost Optimization",
+            "description": "No need for expensive physical SOC investment. Flexible model based on enterprise size"
+          },
+          {
+            "icon": "Zap",
+            "title": "World-Leading Technology",
+            "description": "Gurucul AI SOC deployment partner. Access the most advanced AI SOC platform today"
+          },
+          {
+            "icon": "Users",
+            "title": "Vietnam-based Team",
+            "description": "24/7 support in Vietnamese. Deep understanding of local infrastructure & threats. Long-term partnership, not just solution sales"
+          }
+        ]
+      },
+      "resources": {
+        "badge": "Documentation & Case Studies",
+        "title": "Discover how AI SOC works in practice",
+        "description": "Download the 'Gurucul Workshop Walkthrough' document to:",
+        "points": [
+          "Understand AI SOC architecture",
+          "See real-world incident handling process demo",
+          "Assess fit with your enterprise"
+        ],
+        "cta": "Download SOC Operations Guide"
+      },
+      "traditionalVsAI": {
+        "badge": "Traditional SOC vs AI SOC",
+        "title": "Why Traditional SOC ≠ Sufficient Protection",
+        "subtitle": "12,300+ attacks/day in Vietnam. Manual SOC cannot keep up. AI SOC responds in seconds.",
+        "comparison": {
+          "title": "Traditional Manual SOC vs AI-Powered SOC",
+          "traditional": "Traditional SOC",
+          "ai": "AI-Powered SOC",
+          "items": [
+            {"metric": "Response Time", "traditional": "Days to weeks", "ai": "Seconds to minutes"},
+            {"metric": "Alert Processing", "traditional": "Manual, error-prone", "ai": "90%+ automated"},
+            {"metric": "Threat Detection", "traditional": "Signature-based only", "ai": "Signature + behavior + zero-day"},
+            {"metric": "Cost", "traditional": "Expensive L1-L3 team", "ai": "60-70% cost reduction"},
+            {"metric": "False Positives", "traditional": "50-80% noise", "ai": "95% accuracy"}
+          ]
         },
-        "threatDetection": {
-          "title": "Threat Detection",
-          "description": "Automatically detect and alert cybersecurity threats"
+        "speed": {
+          "title": "Response Speed Comparison",
+          "subtitle": "Time is everything in cybersecurity",
+          "items": [
+            {"type": "Traditional SOC", "response": "Days - Weeks", "impact": "Hackers have time to move, hide, exfiltrate data"},
+            {"type": "AI SOC", "response": "Seconds - Minutes", "impact": "Contain threats before lateral movement occurs"}
+          ]
         },
-        "automation": {
-          "title": "Response Automation",
-          "description": "Automatically respond and handle security incidents in real-time"
+        "architecture": {
+          "title": "AI SOC Open Architecture",
+          "subtitle": "Built for scale, flexibility and continuous improvement",
+          "capabilities": [
+            {"name": "Unlimited Storage", "description": "Store all logs forever without cost constraints"},
+            {"name": "Real-time Processing", "description": "Analyze billions of events per day instantly"},
+            {"name": "450+ Integrations", "description": "Connect any tool: Firewall, IDS, Cloud, SaaS, etc."},
+            {"name": "Auto-scaling", "description": "Scale up/down automatically based on demand"}
+          ]
         },
-        "monitoring": {
-          "title": "24/7 Monitoring",
-          "description": "Continuously monitor network systems and detect incidents promptly"
+        "proven": {
+          "title": "Proven Technology",
+          "subtitle": "Trusted by leading enterprises worldwide",
+          "stats": [
+            {"metric": "5 Billion", "description": "Devices protected globally"},
+            {"metric": "50+ Billion", "description": "Files analyzed daily"},
+            {"metric": "99.99%", "description": "Uptime guarantee"},
+            {"metric": "50,000+", "description": "Enterprise customers"}
+          ]
+        },
+        "seamless": {
+          "title": "Seamless Integration - 4 Operating Components",
+          "subtitle": "Closed-loop cycle operating 24/7 without human intervention",
+          "components": [
+            {"number": "1", "name": "Ingestion", "description": "Collect logs from all sources in real-time"},
+            {"number": "2", "name": "Detection", "description": "AI/ML detects anomalies and unknown threats"},
+            {"number": "3", "name": "Analysis", "description": "Expert context analysis eliminates false positives"},
+            {"number": "4", "name": "Response", "description": "Automatic playbooks contain threats in seconds"}
+          ]
+        },
+        "savings": {
+          "title": "Cost Savings",
+          "subtitle": "Dramatic reduction in security operations expenses",
+          "items": [
+            {"metric": "60-70%", "description": "Cost reduction compared to traditional SOC"},
+            {"metric": "Zero", "description": "No need to hire and train expensive L1 analysts"},
+            {"metric": "Pay-as-you-grow", "description": "Scale costs based on your actual security needs"},
+            {"metric": "3 engineers", "description": "Instead of 10+ for equivalent capability"}
+          ]
+        },
+        "performance": {
+          "title": "Superior Performance Metrics",
+          "subtitle": "Numbers that prove AI SOC effectiveness",
+          "metrics": [
+            {"value": "95%", "label": "Faster Response"},
+            {"value": "100%", "label": "APT Detection Rate"},
+            {"value": "24/7", "label": "Always-on Protection"},
+            {"value": "+70%", "label": "MTTR Reduction"}
+          ]
+        },
+        "teamCapability": {
+          "title": "Empower Your Security Team",
+          "subtitle": "Free analysts from manual work to focus on strategy",
+          "benefits": ["Eliminate repetitive L1 work", "Enable threat hunting instead of alert triage", "Reduce analyst burnout and turnover", "Improve incident response quality"]
+        },
+        "documentation": {
+          "title": "Detailed Implementation Guide",
+          "subtitle": "Everything you need to understand and deploy AI SOC",
+          "includes": ["Complete AI SOC architecture documentation", "Gurucul platform demo and walkthrough", "Real incident handling use cases", "ROI calculator and cost analysis"]
+        },
+        "getStarted": {
+          "title": "Ready to Transform Your Security Operations?",
+          "subtitle": "Let our experts guide you through AI SOC implementation",
+          "options": [
+            {"title": "Free Consultation", "description": "1-hour session with ICS security experts"},
+            {"title": "2-4 Hour Workshop", "description": "Live demo of AI SOC with your enterprise data"},
+            {"title": "Quick Security Assessment", "description": "Analyze your current security posture"},
+            {"title": "Detailed Implementation Roadmap", "description": "Custom deployment plan for your enterprise"}
+          ]
         }
-      },
-      "benefits": {
-        "title": "Benefits",
-        "heading": "Why Choose AI SOC?",
-        "description": "AI SOC brings superior benefits to your enterprise",
-        "item1": "Fast threat detection with high accuracy",
-        "item2": "Reduce response time from hours to minutes",
-        "item3": "Automate incident analysis and response processes",
-        "item4": "Reduce workload for cybersecurity teams"
-      },
-      "stats": {
-        "threats": "Threats Detected/Month",
-        "responseTime": "Response Time",
-        "accuracy": "Accuracy"
-      },
-      "cta": {
-        "heading": "Protect Your Enterprise with AI SOC",
-        "description": "Contact us for consultation on the most suitable AI SOC solution"
       }
     },
     "csaDlp": {
@@ -922,6 +1352,469 @@
       "content": "Message",
       "contentPlaceholder": "Enter your message",
       "submit": "Send Message"
+    },
+    "chatbot": {
+      "badge": "Smart Communication Platform",
+      "subtitle": "Comprehensive in-app communication platform with AI Chatbot, increase user retention by 40%",
+      "hero": {
+        "badge": "Don't let users abandon your app",
+        "title": "V AI - Agent",
+        "subtitle": "Increase user retention by 40% with powerful Communication Hub",
+        "description": "Integrate Messaging, Calling and AI Bot in just 48 hours. No need to worry about code or infrastructure.",
+        "cta1": "Start free trial",
+        "cta2": "View case study",
+        "features": {
+          "badge1": "Leading solution for enterprises",
+          "badge2": "220K+ Active users",
+          "badge3": "AWS & Google Cloud partners"
+        }
+      },
+      "painPoints": {
+        "badge": "Real problems",
+        "title": "Why building chat yourself is an expensive mistake",
+        "subtitle": "Many companies underestimate the complexity of building real-time messaging",
+        "points": [
+          {
+            "title": "Hidden costs",
+            "description": "10+ engineers, 6+ months, $40,000+ before launch"
+          },
+          {
+            "title": "Infrastructure risks",
+            "description": "Message delays, data loss, crashes during live streams/events"
+          },
+          {
+            "title": "Complex security",
+            "description": "Spam filtering, harmful content, international compliance"
+          }
+        ]
+      },
+      "solution": {
+        "badge": "Solution",
+        "title": "Solution: V AI - Agent",
+        "description": "We handle all technical risks so you can focus 100% on business. No code worries, no infrastructure worries."
+      },
+      "features": {
+        "badge": "Features",
+        "title": "4 Powerful features",
+        "subtitle": "Each feature designed to solve specific business problems",
+        "items": [
+          {
+            "title": "Messaging API & SDK",
+            "subtitle": "1-1 chat, groups, open channels",
+            "description": "Simple integration, full support for real-time chat like iMessage/Zalo",
+            "benefits": ["Thread replies", "Rich media", "Message editing", "Real-time sync"]
+          },
+          {
+            "title": "Voice & Video Call",
+            "subtitle": "HD quality calling",
+            "description": "High-quality voice/video calling with end-to-end security encryption",
+            "benefits": ["HD quality", "Auto adaptation", "End-to-end encryption", "Group calls"]
+          },
+          {
+            "title": "AI Chatbot & Assistant",
+            "subtitle": "24/7 customer service automation",
+            "description": "AI automation, content summarization and multi-language translation",
+            "benefits": ["24/7 automation", "Real-time translation", "Conversation summary", "Smart routing"]
+          },
+          {
+            "title": "Console & BI Analytics",
+            "subtitle": "Real-time dashboard",
+            "description": "Monitor all metrics, auto filter content with AI",
+            "benefits": ["Real-time monitoring", "AI-powered filtering", "User insights", "Custom reports"]
+          }
+        ]
+      },
+      "useCases": {
+        "badge": "Use cases",
+        "title": "Successful industries",
+        "subtitle": "From gaming to healthcare, V AI - Agent proves effective",
+        "items": [
+          {
+            "title": "Gaming & Entertainment",
+            "description": "In-game chat, team formation, item exchange without leaving app",
+            "stat": "220K+ users"
+          },
+          {
+            "title": "Social & Idol",
+            "description": "Fans message celebrities directly through VIP tickets or subscriptions",
+            "stat": "Direct messaging"
+          },
+          {
+            "title": "E-commerce & Retail",
+            "description": "Direct product consultation, increase closing rate 3x",
+            "stat": "+300% conversion"
+          },
+          {
+            "title": "Healthcare & Eldercare",
+            "description": "Remote health monitoring video calls, robot care integration",
+            "stat": "Remote monitoring"
+          }
+        ]
+      },
+      "comparison": {
+        "badge": "Comparison",
+        "title": "Build yourself vs V AI - Agent",
+        "subtitle": "Real data from 50+ companies",
+        "items": [
+          {
+            "feature": "Time to launch",
+            "inHouse": "6 - 9 months",
+            "vAIChat": "1 - 2 weeks"
+          },
+          {
+            "feature": "Initial cost",
+            "inHouse": "> $40,000",
+            "vAIChat": "Pay as you grow"
+          },
+          {
+            "feature": "Reliability",
+            "inHouse": "Depends on IT",
+            "vAIChat": "99.9% (AWS/GCP)"
+          },
+          {
+            "feature": "Maintenance & updates",
+            "inHouse": "Labor intensive",
+            "vAIChat": "Automatic & free"
+          },
+          {
+            "feature": "AI features",
+            "inHouse": "Hard to integrate",
+            "vAIChat": "Built-in & integrated"
+          }
+        ]
+      },
+      "deployment": {
+        "badge": "Deployment",
+        "title": "4 steps to success",
+        "subtitle": "From signup to go-live in just days",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Sign up & get API key",
+            "description": "Access V AI - Agent console and create developer account"
+          },
+          {
+            "number": "02",
+            "title": "Integrate SDK",
+            "description": "Few lines of code to embed chat framework in iOS/Android/Web"
+          },
+          {
+            "number": "03",
+            "title": "Customize UI",
+            "description": "Use UI Kit that matches your brand colors"
+          },
+          {
+            "number": "04",
+            "title": "Go-live",
+            "description": "Start connecting users and track growth"
+          }
+        ]
+      },
+      "faqs": {
+        "badge": "FAQ",
+        "title": "Questions from CTOs/CEOs",
+        "subtitle": "Detailed answers from our engineering team",
+        "items": [
+          {
+            "question": "Does V AI - Agent support data migration from legacy platforms?",
+            "answer": "Yes, we provide tools and technical support for smooth data migration. Migration specialists available 24/7."
+          },
+          {
+            "question": "What if my app has millions of users? Can the system handle it?",
+            "answer": "Built on AWS/GCP auto-scaling infrastructure, proven with millions-user apps and games. You can rest assured about scalability."
+          },
+          {
+            "question": "How is pricing calculated?",
+            "answer": "We offer flexible plans based on MAU (Monthly Active Users) or message volume, optimizing costs for startups and large enterprises."
+          },
+          {
+            "question": "How do you provide technical support?",
+            "answer": "24/7 support via email, chat, and dedicated account managers for enterprise plans. SLA: 30 minutes response for critical issues."
+          },
+          {
+            "question": "Can I customize the chat interface?",
+            "answer": "Fully customizable. White-label solution lets you control 100% of UI/UX as you want."
+          }
+        ]
+      },
+      "security": {
+        "badge": "Security",
+        "title": "Your data is always safe",
+        "subtitle": "Compliance with international security standards, 24/7 monitoring",
+        "items": [
+          {
+            "title": "ISO Certification",
+            "description": "Compliance with ISO 27001, SOC 2 and strict international standards"
+          },
+          {
+            "title": "24/7 monitoring",
+            "description": "Detect and fix issues before users notice"
+          },
+          {
+            "title": "Data sovereignty",
+            "description": "You own 100% of user data and conversation content"
+          },
+          {
+            "title": "White-label solution",
+            "description": "We stay behind the scenes, your brand is shown"
+          },
+          {
+            "title": "Auto-scaling infrastructure",
+            "description": "Based on AWS/GCP, proven with millions of users"
+          },
+          {
+            "title": "99.9% uptime guarantee",
+            "description": "SLA guaranteed, or get refunded"
+          }
+        ]
+      },
+      "cta": {
+        "heading": "Ready to start?",
+        "description": "No credit card required, no long contracts. Just 5 minutes to setup developer account.",
+        "ctaButton": "Sign up for free",
+        "savings": "Save up to 60% on budget",
+        "savingsDesc": "Save up to 40% on management time",
+        "benefits": "You don't just save costs. You get 24/7 support from ICS team with years of experience",
+        "tryButton": "Start trial now",
+        "demoButton": "Schedule demo"
+      }
+    },
+    "vietguard": {
+      "badge": "Mobile app security",
+      "subtitle": "Security scanning and vulnerability detection tool for mobile apps",
+      "visitWebsite": "Visit website",
+      "hero": {
+        "badge": "Vietnamese mobile security, global quality",
+        "title": "Vietguard",
+        "subtitle": "Leading mobile app security solution in Vietnam with advanced scanning and analysis",
+        "accessWebsite": "Visit now",
+        "contactAdvice": "Contact us",
+        "experienceNow": "Try now",
+        "scheduleConsultation": "Schedule consultation",
+        "stats": {
+          "customers": "Trusted customers",
+          "usersProtected": "Users protected",
+          "accuracy": "Accuracy"
+        }
+      },
+      "trust": {
+        "badge": "Comprehensive solution",
+        "heading": "Why customers trust Vietguard?",
+        "description": "Customers choose VietGuard for the combination of advanced technology and reputation from leading experts",
+        "points": [
+          {
+            "title": "Advanced technology",
+            "desc": "Pioneer in mobile app security scanning and analysis technology in Vietnam"
+          },
+          {
+            "title": "Battle-tested experts",
+            "desc": "Team with extensive experience and reputable international certifications"
+          },
+          {
+            "title": "International quality",
+            "desc": "Meets strict standards, protects 1 billion users"
+          },
+          {
+            "title": "Strategic partner",
+            "desc": "Trusted by leading enterprises and organizations in Vietnam"
+          }
+        ]
+      },
+      "applications": {
+        "heading": "Vietguard application for protection against common attacks",
+        "description": "VietGuard builds a strong shield against the most common threats today"
+      },
+      "features": {
+        "title": "Features",
+        "heading": "Key features of Vietguard - Mobile App Security",
+        "description": "Comprehensive solution to secure your mobile applications",
+        "topFeatures": [
+          {
+            "title": "Attack surface management",
+            "description": "Manage and monitor application attack surface, detect weaknesses early"
+          },
+          {
+            "title": "Vulnerability management",
+            "description": "Comprehensive security vulnerability management, prioritize and fix critical risks"
+          },
+          {
+            "title": "Audit project management",
+            "description": "Manage security audit projects, detailed application source code evaluation"
+          },
+          {
+            "title": "Bug Bounty Program",
+            "description": "Bug reward program, encourage community to find and report vulnerabilities"
+          },
+          {
+            "title": "Vulnerability scanning",
+            "description": "Automatic scanning detects security vulnerabilities in applications and infrastructure"
+          },
+          {
+            "title": "Data leak detection",
+            "description": "Detect and prevent sensitive data leaks outside the organization"
+          },
+          {
+            "title": "Password & secret management",
+            "description": "Secure password and secret management with enterprise-grade encryption"
+          },
+          {
+            "title": "Trust center",
+            "description": "Trust center provides overview of security status and compliance"
+          }
+        ],
+        "bottomFeatures": [
+          {
+            "title": "Endpoints",
+            "description": "Protect endpoints from malware, ransomware and threats"
+          },
+          {
+            "title": "Threat intelligence",
+            "description": "Collect and analyze information about emerging threats"
+          },
+          {
+            "title": "WhiteHub security community",
+            "description": "Security expert community sharing knowledge and experience"
+          },
+          {
+            "title": "Vulnerability research",
+            "description": "In-depth research on security vulnerabilities and exploitation methods"
+          },
+          {
+            "title": "Automation tools",
+            "description": "Automate security processes, minimize manual intervention"
+          },
+          {
+            "title": "Data lake",
+            "description": "Store and analyze large-scale security data to detect patterns"
+          }
+        ],
+        "scanning": {
+          "title": "Automatic scanning",
+          "description": "Automatically scan and detect security vulnerabilities in mobile apps"
+        },
+        "vulnerability": {
+          "title": "Vulnerability detection",
+          "description": "Detect and alert on critical security vulnerabilities"
+        },
+        "protection": {
+          "title": "Comprehensive protection",
+          "description": "Protect applications from threats and attacks"
+        },
+        "compliance": {
+          "title": "Standard compliance",
+          "description": "Ensure compliance with international security standards"
+        }
+      },
+      "activation": {
+        "badge": "Quick deployment",
+        "heading": "Activate comprehensive solution for enterprise app protection",
+        "description": "Enterprises can quickly deploy VietGuard through flexible and efficient collaboration model",
+        "items": [
+          {
+            "title": "Quick deployment",
+            "desc": "Protect applications directly without needing source code access or complex SDK integration"
+          },
+          {
+            "title": "Professional roadmap",
+            "desc": "From needs analysis, real demo to building service packages for enterprise scale"
+          },
+          {
+            "title": "CI/CD integration",
+            "desc": "Automate security processes, reduce burden and accelerate time to market"
+          },
+          {
+            "title": "Dedicated support",
+            "desc": "Committed partnership and continuous technical support throughout operations"
+          }
+        ]
+      },
+      "multiPlatform": {
+        "badge": "Multi-platform",
+        "heading": "Multi-platform application solution",
+        "description": "VietGuard provides proactive protection platform for all types of mobile apps today",
+        "items": [
+          {
+            "title": "Multi-OS support",
+            "desc": "Comprehensive analysis and protection for both APK (Android) and IPA (iOS) files"
+          },
+          {
+            "title": "Diverse encryption technology",
+            "desc": "Strong protection for HTML5, CSS and Javascript applications"
+          },
+          {
+            "title": "Multi-layer defense",
+            "desc": "Safe even on rooted or jailbroken devices"
+          }
+        ]
+      },
+      "whyChoose": {
+        "badge": "Superior benefits",
+        "heading": "Choose Vietguard for enterprise app security",
+        "description": "VietGuard is a smart investment to protect digital assets and enhance competitive advantage",
+        "benefits": [
+          {
+            "title": "Cost optimization",
+            "desc": "Early vulnerability detection helps reduce up to 60% of bug fixes and remediation costs"
+          },
+          {
+            "title": "Regulatory compliance",
+            "desc": "Fully compliant with Circular 50/2024, Cybersecurity Law, Decree 13, ISO 27001, PCI-DSS"
+          },
+          {
+            "title": "Smart management",
+            "desc": "Automated security dashboard detects, defends and provides detailed security status reports"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "heading": "Why choose Vietguard - Mobile App Security?",
+        "description": "Vietguard brings superior benefits to your mobile applications",
+        "item1": "Automatic and fast vulnerability scanning and detection",
+        "item2": "Detailed and easy-to-understand security issue reports",
+        "item3": "Multi-platform support: iOS, Android",
+        "item4": "Continuous updates of latest vulnerability database"
+      },
+      "stats": {
+        "scanned": "Apps scanned",
+        "vulnerabilities": "Vulnerabilities detected",
+        "accuracy": "Accuracy"
+      },
+      "cta": {
+        "heading": "Protect your mobile app today",
+        "description": "Contact us for consultation and free trial of Vietguard - Mobile App Security"
+      },
+      "deployment": {
+        "badge": "Professional Deployment Process",
+        "title": "Complete Solution with Dedicated ICS Expert Support",
+        "description": "From A-Z with dedicated support from ICS expert team",
+        "standards": {
+          "heading": "Compliance with Leading Standards",
+          "subtitle": "Meet international and Vietnamese regulatory requirements",
+          "items": [
+            {"name": "ISO 27001", "description": "International information security standard"},
+            {"name": "PCI-DSS", "description": "Payment Card Industry Data Security Standard"},
+            {"name": "Decree 13", "description": "Vietnam Cybersecurity Law"},
+            {"name": "ANTT Law", "description": "Vietnam Information Security Law"},
+            {"name": "Circular 50/2024", "description": "Latest Vietnam Regulatory Requirements"}
+          ]
+        },
+        "ready": {
+          "title": "Ready to Protect Your Application?",
+          "subtitle": "Start your journey to complete app security",
+          "cta1": "Experience Now",
+          "cta2": "Schedule Consultation"
+        },
+        "qualities": {
+          "title": "Why Enterprises Choose ICS for Vietguard Deployment",
+          "items": [
+            {"title": "24/7 Security Coverage", "description": "Round-the-clock monitoring and support"},
+            {"title": "Dedicated Support Team", "description": "Vietnamese-speaking experts available 24/7"},
+            {"title": "International Quality", "description": "Global standard compliance and proven track record"}
+          ]
+        }
+      }
     }
   }
 }
+

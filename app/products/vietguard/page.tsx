@@ -905,7 +905,7 @@ export default function VietguardPage() {
                     asChild
                   >
                     <Link href="http://vietguardscan.icss.com.vn/" target="_blank">
-                      Trải nghiệm ngay
+                      {t('products.vietguard.hero.experienceNow')}
                       <ExternalLink className="w-5 h-5 ml-3" />
                     </Link>
                   </Button>
@@ -913,7 +913,7 @@ export default function VietguardPage() {
                     size="lg" 
                     className="text-lg px-10 py-6 bg-white/10 text-white border-3 border-white hover:bg-white/20 font-bold rounded-2xl backdrop-blur-md hover:scale-105 transition-transform"
                   >
-                    Đặt lịch tư vấn
+                    {t('products.vietguard.hero.scheduleConsultation')}
                     <ArrowRight className="w-5 h-5 ml-3" />
                   </Button>
                 </div>

@@ -245,6 +245,15 @@
     "subtitle": "Cùng nhau xây dựng hệ sinh thái an ninh mạng vững mạnh",
     "badge": "Đối tác",
     "intro": "Đồng hành cùng những thương hiệu hàng đầu thế giới",
+    "carousel": {
+      "scienceMinistry": "Bộ Khoa học và Công nghệ",
+      "environmentMinistry": "Bộ Tài nguyên Môi trường",
+      "evn": "EVN",
+      "hmm": "HMM",
+      "ademax": "Ademax",
+      "healthMinistry": "Bộ Y tế",
+      "logo1": "Logo 1"
+    },
     "programTitle": "Chương trình đối tác",
     "programSubtitle": "Các cấp độ đối tác với quyền lợi và ưu đãi khác nhau",
     "platinum": "Platinum Partner",
@@ -433,7 +442,202 @@
     "subtitle": "Gia nhập đội ngũ ICS - Cùng nhau phát triển",
     "badge": "Tuyển dụng",
     "coming_soon": "Nội dung sẽ sớm được cập nhật",
-    "message": "Chúng tôi đang chuẩn bị các thông tin tuyển dụng. Vui lòng quay lại sau để xem các vị trí tuyển dụng mới nhất."
+    "message": "Chúng tôi đang chuẩn bị các thông tin tuyển dụng. Vui lòng quay lại sau để xem các vị trí tuyển dụng mới nhất.",
+    "hero": {
+      "badge": "Đang tuyển dụng 5 vị trí",
+      "title": "Gia nhập đội ngũ ICS",
+      "subtitle": "Cùng chúng tôi xây dựng tương lai an toàn cho các doanh nghiệp Việt Nam",
+      "viewPositions": "Xem vị trí tuyển dụng"
+    },
+    "whyJoin": "Tại sao nên gia nhập ICS?",
+    "benefit1Title": "Công nghệ tiên tiến",
+    "benefit1Desc": "Làm việc với AI SOC, Smart Building, Mobile Security và các giải pháp công nghệ đột phá",
+    "benefit2Title": "Phát triển nghề nghiệp",
+    "benefit2Desc": "Lộ trình thăng tiến rõ ràng, đào tạo chuyên sâu và cơ hội trở thành chuyên gia hàng đầu",
+    "benefit3Title": "Văn hóa trẻ trung",
+    "benefit3Desc": "Môi trường GenZ năng động, sếp tâm lý, hoạt động thể thao đa dạng",
+    "location": "Địa điểm",
+    "salary": "Mức lương",
+    "mission": "Sứ mệnh của bạn",
+    "responsibilities": "Mô tả công việc",
+    "requirements": "Yêu cầu ứng viên",
+    "benefits": "Quyền lợi hấp dẫn",
+    "applicationMethod": "Cách thức ứng tuyển",
+    "emailLabel": "Gửi CV qua Email",
+    "subject": "Tiêu đề",
+    "yourName": "Họ và Tên",
+    "directContact": "Liên hệ trực tiếp",
+    "contactPerson": "Ms. Diễm Quỳnh (HCVP)",
+    "portfolioLabel": "Hồ sơ bao gồm",
+    "portfolioItem1": "CV thông tin đầy đủ và chi tiết",
+    "portfolioItem2": "Các chứng chỉ liên quan (nếu có)",
+    "applyNow": "Ứng tuyển ngay",
+    "jobsTitle": "Vị trí đang tuyển dụng",
+    "jobsSubtitle": "Khám phá các cơ hội nghề nghiệp phù hợp với bạn",
+    "marketing": "Marketing",
+    "sales": "Kinh doanh",
+    "tech": "Kỹ thuật",
+    "viewDetails": "Xem chi tiết",
+    "ctaTitle": "Sẵn sàng gia nhập ICS?",
+    "ctaSubtitle": "Hãy gửi CV của bạn ngay hôm nay và trở thành một phần của đội ngũ ICS!",
+    "sendCVNow": "Gửi CV ngay",
+    "contactPhone": "Liên hệ: 0972.363.821",
+    "jobs": {
+      "marketingStaff": {
+        "title": "Nhân viên Marketing Giải pháp Công nghệ",
+        "department": "Marketing",
+        "type": "Toàn thời gian",
+        "level": "Nhân viên",
+        "salary": "15-20 triệu++ VNĐ/tháng",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Sáng tạo nội dung và quản trị các kênh truyền thông cho các giải pháp công nghệ",
+        "mission": "Trở thành 'phù thủy nội dung' để lan tỏa sức mạnh của các giải pháp công nghệ trong hệ sinh thái sản phẩm của chúng tôi.",
+        "responsibilities": [
+          "Quản trị và sáng tạo nội dung hàng ngày trên Social Media",
+          "Viết bài blog, tin tức chuyên ngành về an ninh mạng, AI SOC",
+          "Lên ý tưởng và viết kịch bản cho video ngắn, clip giới thiệu",
+          "Phối hợp với team thiết kế/video sản xuất ấn phẩm truyền thông",
+          "Hỗ trợ tổ chức hội thảo công nghệ, webinar và sự kiện"
+        ],
+        "requirements": [
+          "Độ tuổi: 24-27 tuổi",
+          "Tối thiểu 1 năm kinh nghiệm Marketing, Content hoặc Social Media",
+          "Khả năng viết lách tốt, tư duy ngôn ngữ linh hoạt",
+          "Biết sử dụng Canva, Photoshop hoặc edit video",
+          "Có khả năng đọc hiểu tài liệu tiếng Anh cơ bản"
+        ],
+        "benefits": [
+          "Thu nhập: 15-20 triệu++ VNĐ/tháng",
+          "Thưởng hoa hồng theo hiệu suất",
+          "Xét duyệt điều chỉnh lương 2 lần/năm",
+          "Môi trường làm việc trẻ trung, sếp tâm lý",
+          "Tham gia hoạt động thể thao: bóng đá, cầu lông"
+        ]
+      },
+      "salesStaff": {
+        "title": "Nhân viên Kinh doanh Giải pháp Công nghệ",
+        "department": "Kinh doanh",
+        "type": "Toàn thời gian",
+        "level": "Nhân viên",
+        "salary": "15-20 triệu++ VNĐ/tháng",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Tư vấn và phát triển khách hàng doanh nghiệp cho các giải pháp công nghệ",
+        "mission": "Trở thành chuyên gia tư vấn về chuyển đổi số, là cầu nối giữa ICS và khách hàng doanh nghiệp.",
+        "responsibilities": [
+          "Khai thác và phát triển tệp khách hàng tiềm năng",
+          "Tiếp cận khách hàng qua gặp gỡ trực tiếp, điện thoại, email",
+          "Demo và tư vấn giải pháp công nghệ phù hợp",
+          "Đàm phán và ký kết hợp đồng thành công"
+        ],
+        "requirements": [
+          "Độ tuổi: 21-45 tuổi, có 1-2 năm kinh nghiệm bán hàng",
+          "Tốt nghiệp Cao đẳng trở lên: CNTT, AI, Cơ điện tử, Kinh doanh",
+          "Đam mê kinh doanh, nhiệt huyết và 'máu lửa'",
+          "Kỹ năng giao tiếp tốt, xử lý tình huống linh hoạt",
+          "Ưu tiên có kinh nghiệm Sales sản phẩm công nghệ"
+        ],
+        "benefits": [
+          "Thu nhập: 15-20 triệu++ VNĐ/tháng",
+          "Thưởng hoa hồng theo hiệu quả kinh doanh",
+          "Đào tạo bởi Ban Giám đốc giàu kinh nghiệm",
+          "Lộ trình phát triển rõ ràng",
+          "Trang bị đầy đủ thiết bị, phụ cấp điện thoại"
+        ]
+      },
+      "securityEngineer": {
+        "title": "Kỹ sư Bảo mật (Security Engineer)",
+        "department": "Kỹ thuật",
+        "type": "Toàn thời gian",
+        "level": "Chuyên gia",
+        "salary": "Thỏa thuận theo năng lực",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Vận hành AI SOC và đảm bảo an toàn cho các hệ thống di động trọng yếu",
+        "mission": "Tham gia đội ngũ nòng cốt, vận hành hệ thống AI SOC hiện đại và bảo vệ các nền tảng di động trọng yếu.",
+        "responsibilities": [
+          "Giám sát và phân tích sự kiện an toàn thông tin trên AI SOC",
+          "Sử dụng AI để phát hiện cuộc tấn công tinh vi (APT)",
+          "Penetration Testing cho ứng dụng iOS & Android",
+          "Đánh giá lỗ hổng theo OWASP Mobile Top 10",
+          "Triển khai và quản trị các thiết bị bảo mật (Firewall, IDS/IPS, WAF, SIEM)"
+        ],
+        "requirements": [
+          "Tối thiểu 2-3 năm kinh nghiệm An toàn thông tin",
+          "Nắm vững giao thức mạng (TCP/IP), hệ điều hành (Linux, Windows)",
+          "Thành thạo Burp Suite, MobSF, Frida, Wireshark, Nessus, SIEM/SOAR",
+          "Ưu tiên có chứng chỉ: Security+, CEH, OSCP",
+          "Có tư duy phân tích mã độc là lợi thế lớn"
+        ],
+        "benefits": [
+          "Mức lương xứng đáng với năng lực (2-3 năm kinh nghiệm)",
+          "Làm việc với chuyên gia đầu ngành",
+          "Tạo điều kiện thi chứng chỉ quốc tế (OSCP, CISSP)",
+          "Lộ trình thăng tiến lên Senior/Lead",
+          "Hoạt động ngoại khóa: Cầu lông, bóng đá hàng tuần"
+        ]
+      },
+      "marketingDirector": {
+        "title": "Giám đốc Marketing",
+        "department": "Marketing",
+        "type": "Toàn thời gian",
+        "level": "Quản lý cấp cao",
+        "salary": "Thỏa thuận + Hoa hồng cao",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Xây dựng chiến lược Marketing tổng thể và hệ thống Lead Generation tự động hóa",
+        "mission": "Trở thành 'Nhà thiết kế tài ba' cho thương hiệu và chiến lược tăng trưởng của ICS.",
+        "responsibilities": [
+          "Xây dựng chiến lược Go-to-market cho các dòng sản phẩm",
+          "Nghiên cứu thị trường và xác định USP",
+          "Triển khai chiến dịch Account-Based Marketing (ABM)",
+          "Xây dựng và bảo vệ uy tín thương hiệu ICS",
+          "Quản lý đội ngũ Marketing và tối ưu hóa ngân sách"
+        ],
+        "requirements": [
+          "Tối thiểu 5 năm kinh nghiệm Marketing",
+          "Có kinh nghiệm quản lý (Manager/Head/Director) trong lĩnh vực B2B, SaaS, IT",
+          "Tư duy chiến lược sắc bén, am hiểu B2B Customer Journey",
+          "Nhạy bén với xu hướng công nghệ mới (AI, Blockchain, IoT)",
+          "Tiếng Anh lưu loát"
+        ],
+        "benefits": [
+          "Thu nhập không giới hạn (Lương cứng + % Hoa hồng + Thưởng)",
+          "Toàn quyền quyết định chiến lược và nhân sự",
+          "Cơ hội thăng tiến lên CMO, Phó Tổng Giám đốc",
+          "Bảo hiểm sức khỏe cao cấp",
+          "Du lịch định kỳ, CLB thể thao"
+        ]
+      },
+      "salesDirector": {
+        "title": "Giám đốc Kinh doanh",
+        "department": "Kinh doanh",
+        "type": "Toàn thời gian",
+        "level": "Quản lý cấp cao",
+        "salary": "Thỏa thuận + Hoa hồng cao",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Dẫn dắt đội ngũ kinh doanh và chịu trách nhiệm chiến lược doanh thu",
+        "mission": "Trở thành 'Thuyền trưởng' bản lĩnh, chịu trách nhiệm toàn diện về chiến lược doanh thu và mở rộng thị phần.",
+        "responsibilities": [
+          "Xây dựng chiến lược kinh doanh ngắn hạn và dài hạn",
+          "Tuyển dụng, đào tạo và xây dựng đội ngũ Sales thiện chiến",
+          "Thiết lập hệ thống KPI và quy trình bán hàng chuẩn mực",
+          "Khai thác khách hàng chiến lược (Key Accounts)",
+          "Đàm phán và chốt hợp đồng dự án quy mô lớn"
+        ],
+        "requirements": [
+          "Tối thiểu 5 năm kinh nghiệm kinh doanh CNTT",
+          "Có ít nhất 2 năm ở vị trí quản lý tương đương",
+          "Am hiểu sâu thị trường B2B, An ninh mạng, Chuyển đổi số",
+          "Có mạng lưới quan hệ với khối Tài chính, Ngân hàng, Bất động sản",
+          "Tiếng Anh giao tiếp tốt"
+        ],
+        "benefits": [
+          "Thu nhập không giới hạn (Lương cứng + % Hoa hồng + Thưởng)",
+          "Quyền quyết định về nhân sự và chiến lược",
+          "Cơ hội trở thành cổ đông hoặc Key Person",
+          "Bảo hiểm sức khỏe cao cấp",
+          "Du lịch định kỳ, phụ cấp công tác phí đầy đủ"
+        ]
+      }
+    }
   },
   "smartBuilding": {
     "title": "Giải pháp Tòa nhà Thông minh",
@@ -601,13 +805,14 @@
       "hero": {
         "badge": "Mạnh mẽ. Thông minh. Tự động.",
         "title": "AI SOC",
-        "titleMain": "Cách mạng hóa vận hành An ninh mạng bằng Trí tuệ Nhân tạo",
+        "titleMain": "Cách mạng hóa vận hành An ninh mạng",
+        "titleSpan": "bằng Trí tuệ Nhân tạo",
         "subtitle": "SOC truyền thống đã lỗi thời. AI SOC là tiêu chuẩn mới.",
         "description": "Giải pháp AI SOC của ICS kết hợp nền tảng phân tích dữ liệu quy mô toàn cầu của Google với công nghệ phân tích hành vi tiên tiến từ Gurucul, giúp doanh nghiệp:",
         "points": [
-          "Phát hiện APT, tấn công nội gián, mã độc thế hệ mới trong vài giây",
-          "Tự động hóa đến 90% quy trình phản ứng sự cố",
-          "Giảm thiểu cảnh báo giả, tập trung vào nguy cơ thực sự"
+          "Giảm 70% thời gian phản ứng sự cố",
+          "Tự động hóa 90% quy trình phát hiện",
+          "Độ chính xác 95% trong phát hiện mối đe dọa"
         ],
         "ctaSubtitle": "Không chỉ là phát hiện – mà là hành động ngay lập tức.",
         "cta1": "Nhận tư vấn giải pháp AI SOC",
@@ -785,6 +990,101 @@
           "Đánh giá mức độ phù hợp với doanh nghiệp của bạn"
         ],
         "cta": "Tải tài liệu hướng dẫn vận hành SOC"
+      },
+      "traditionalVsAI": {
+        "badge": "SOC Truyền thống vs AI SOC",
+        "title": "Tại sao SOC truyền thống không đủ để bảo vệ",
+        "subtitle": "12.300+ cuộc tấn công/ngày tại Việt Nam. SOC thủ công không theo kịp. AI SOC phản ứng trong giây lát.",
+        "comparison": {
+          "title": "SOC thủ công truyền thống so với AI-Powered SOC",
+          "traditional": "SOC Truyền thống",
+          "ai": "AI SOC",
+          "items": [
+            {"metric": "Thời gian phản ứng", "traditional": "Ngày đến tuần", "ai": "Giây đến phút"},
+            {"metric": "Xử lý cảnh báo", "traditional": "Thủ công, dễ sai", "ai": "90%+ tự động"},
+            {"metric": "Phát hiện mối đe dọa", "traditional": "Chỉ dựa trên chữ ký", "ai": "Chữ ký + hành vi + zero-day"},
+            {"metric": "Chi phí", "traditional": "Đội ngũ L1-L3 đắt", "ai": "Giảm 60-70%"},
+            {"metric": "Cảnh báo giả", "traditional": "50-80% nhiều", "ai": "95% chính xác"}
+          ]
+        },
+        "speed": {
+          "title": "So sánh tốc độ phản ứng",
+          "subtitle": "Thời gian là tất cả trong an ninh mạng",
+          "items": [
+            {"type": "SOC Truyền thống", "response": "Ngày - Tuần", "impact": "Hacker có thời gian để di chuyển, trốn, ăn cắp dữ liệu"},
+            {"type": "AI SOC", "response": "Giây - Phút", "impact": "Khóa mối đe dọa trước khi xảy ra di chuyển ngang hàng"}
+          ]
+        },
+        "architecture": {
+          "title": "Kiến trúc mở của AI SOC",
+          "subtitle": "Được thiết kế để mở rộng quy mô, linh hoạt và cải tiến liên tục",
+          "capabilities": [
+            {"name": "Lưu trữ Không giới hạn", "description": "Lưu trữ tất cả nhật ký mãi mãi mà không có giới hạn chi phí"},
+            {"name": "Xử lý Thời gian thực", "description": "Phân tích hàng tỷ sự kiện mỗi ngày ngay lập tức"},
+            {"name": "450+ Tích hợp", "description": "Kết nối bất kỳ công cụ nào: Firewall, IDS, Cloud, SaaS, v.v."},
+            {"name": "Tự động mở rộng", "description": "Tự động mở rộng/thu nhỏ dựa trên nhu cầu"}
+          ]
+        },
+        "proven": {
+          "title": "Công nghệ đã được chứng minh",
+          "subtitle": "Được các doanh nghiệp hàng đầu trên thế giới tin tưởng",
+          "stats": [
+            {"metric": "5 Tỷ", "description": "Thiết bị được bảo vệ trên toàn cầu"},
+            {"metric": "50+ Tỷ", "description": "Tệp được phân tích mỗi ngày"},
+            {"metric": "99.99%", "description": "Đảm bảo thời gian hoạt động"},
+            {"metric": "50.000+", "description": "Khách hàng doanh nghiệp"}
+          ]
+        },
+        "seamless": {
+          "title": "Tích hợp liên mạch - 4 Thành phần vận hành",
+          "subtitle": "Chu kỳ khép kín vận hành 24/7 mà không cần can thiệp của con người",
+          "components": [
+            {"number": "1", "name": "Tiếp nhận", "description": "Thu thập nhật ký từ tất cả các nguồn theo thời gian thực"},
+            {"number": "2", "name": "Phát hiện", "description": "AI/ML phát hiện bất thường và mối đe dọa không xác định"},
+            {"number": "3", "name": "Phân tích", "description": "Phân tích ngữ cảnh của chuyên gia loại bỏ cảnh báo giả"},
+            {"number": "4", "name": "Phản ứng", "description": "Playbook tự động khóa mối đe dọa trong giây lát"}
+          ]
+        },
+        "savings": {
+          "title": "Tiết kiệm Chi phí",
+          "subtitle": "Giảm đáng kể chi phí hoạt động bảo mật",
+          "items": [
+            {"metric": "60-70%", "description": "Giảm chi phí so với SOC truyền thống"},
+            {"metric": "Không", "description": "Không cần thuê và đào tạo nhân viên L1 đắt"},
+            {"metric": "Thanh toán theo mức độ sử dụng", "description": "Mở rộng chi phí dựa trên nhu cầu bảo mật thực tế"},
+            {"metric": "3 kỹ sư", "description": "Thay vì 10+ cho khả năng tương đương"}
+          ]
+        },
+        "performance": {
+          "title": "Chỉ số hiệu suất vượt trội",
+          "subtitle": "Các con số chứng minh hiệu quả của AI SOC",
+          "metrics": [
+            {"value": "95%", "label": "Phản ứng nhanh hơn"},
+            {"value": "100%", "label": "Tỷ lệ phát hiện APT"},
+            {"value": "24/7", "label": "Bảo vệ luôn bật"},
+            {"value": "+70%", "label": "Giảm MTTR"}
+          ]
+        },
+        "teamCapability": {
+          "title": "Trao quyền cho Đội ngũ Bảo mật của Bạn",
+          "subtitle": "Giải phóng nhân viên phân tích từ công việc thủ công để tập trung vào chiến lược",
+          "benefits": ["Loại bỏ công việc L1 lặp đi lặp lại", "Cho phép đi săn mối đe dọa thay vì phân loại cảnh báo", "Giảm kiệt sức và tỷ lệ rời bỏ của nhân viên phân tích", "Cải thiện chất lượng phản ứng sự cố"]
+        },
+        "documentation": {
+          "title": "Hướng dẫn Triển khai Chi tiết",
+          "subtitle": "Mọi thứ bạn cần để hiểu và triển khai AI SOC",
+          "includes": ["Tài liệu kiến trúc AI SOC hoàn chỉnh", "Demo và hướng dẫn nền tảng Gurucul", "Các trường hợp sử dụng xử lý sự cố thực tế", "Máy tính ROI và phân tích chi phí"]
+        },
+        "getStarted": {
+          "title": "Sẵn sàng chuyển đổi Hoạt động Bảo mật của Bạn?",
+          "subtitle": "Hãy để các chuyên gia của chúng tôi hướng dẫn bạn qua việc triển khai AI SOC",
+          "options": [
+            {"title": "Tư vấn Miễn phí", "description": "Phiên 1 giờ với các chuyên gia bảo mật ICS"},
+            {"title": "Workshop 2-4 Giờ", "description": "Demo trực tiếp của AI SOC với dữ liệu doanh nghiệp của bạn"},
+            {"title": "Đánh giá Bảo mật Nhanh", "description": "Phân tích tình trạng bảo mật hiện tại của bạn"},
+            {"title": "Lộ trình Triển khai Chi tiết", "description": "Kế hoạch triển khai tùy chỉnh cho doanh nghiệp của bạn"}
+          ]
+        }
       }
     },
     "vietguard": {
@@ -797,6 +1097,8 @@
         "subtitle": "Giải pháp bảo mật ứng dụng di động hàng đầu Việt Nam với công nghệ quét và phân tích tiên tiến",
         "accessWebsite": "Truy cập ngay",
         "contactAdvice": "Liên hệ tư vấn",
+        "experienceNow": "Trải nghiệm ngay",
+        "scheduleConsultation": "Đặt lịch tư vấn",
         "stats": {
           "customers": "Khách hàng tin dùng",
           "usersProtected": "Người dùng bảo vệ",
@@ -991,49 +1293,6 @@
         "description": "Liên hệ với chúng tôi để được tư vấn và trải nghiệm Vietguard - Mobile App Security miễn phí"
       }
     },
-    "aiSoc": {
-      "badge": "Trung tâm điều hành an ninh AI",
-      "subtitle": "Giải pháp trung tâm điều hành an ninh mạng được trang bị AI tiên tiến, tự động phát hiện và phản ứng với các mối đe dọa",
-      "features": {
-        "title": "Tính năng",
-        "heading": "Tính năng nổi bật của AI SOC",
-        "description": "Giải pháp toàn diện để bảo vệ hệ thống mạng của bạn",
-        "ueba": {
-          "title": "UEBA - Phân tích hành vi",
-          "description": "Phát hiện các hành vi bất thường của người dùng và thực thể bằng AI"
-        },
-        "threatDetection": {
-          "title": "Phát hiện mối đe dọa",
-          "description": "Tự động phát hiện và cảnh báo các mối đe dọa an ninh mạng"
-        },
-        "automation": {
-          "title": "Tự động hóa phản ứng",
-          "description": "Tự động phản ứng và xử lý các sự cố an ninh trong thời gian thực"
-        },
-        "monitoring": {
-          "title": "Giám sát 24/7",
-          "description": "Giám sát liên tục hệ thống mạng và phát hiện sự cố kịp thời"
-        }
-      },
-      "benefits": {
-        "title": "Lợi ích",
-        "heading": "Tại sao chọn AI SOC?",
-        "description": "AI SOC mang lại những lợi ích vượt trội cho doanh nghiệp của bạn",
-        "item1": "Phát hiện mối đe dọa nhanh chóng với độ chính xác cao",
-        "item2": "Giảm thời gian phản ứng từ giờ xuống còn phút",
-        "item3": "Tự động hóa quy trình phân tích và xử lý sự cố",
-        "item4": "Giảm tải công việc cho đội ngũ an ninh mạng"
-      },
-      "stats": {
-        "threats": "Mối đe dọa phát hiện/tháng",
-        "responseTime": "Thời gian phản ứng",
-        "accuracy": "Độ chính xác"
-      },
-      "cta": {
-        "heading": "Bảo vệ doanh nghiệp với AI SOC",
-        "description": "Liên hệ với chúng tôi để được tư vấn về giải pháp AI SOC phù hợp nhất"
-      }
-    },
     "csaDlp": {
       "badge": "Bảo mật điểm cuối & DLP",
       "subtitle": "Giải pháp bảo mật điểm cuối toàn diện kết hợp ngăn chặn mất mát dữ liệu, bảo vệ thiết bị và dữ liệu doanh nghiệp",
@@ -1206,6 +1465,232 @@
       "cta": {
         "heading": "Quản lý doanh nghiệp với Smart Dashboard",
         "description": "Liên hệ với chúng tôi để được demo và tư vấn về Smart Dashboard"
+      }
+    },
+    "chatbot": {
+      "badge": "Nền tảng giao tiếp thông minh",
+      "subtitle": "Nền tảng giao tiếp in-app toàn diện với AI Chatbot, tăng 40% tỷ lệ giữ chân người dùng",
+      "hero": {
+        "badge": "Đừng để người dùng rời bỏ ứng dụng",
+        "title": "V AI - Agent",
+        "subtitle": "Tăng 40% tỷ lệ giữ chân người dùng với Communication Hub mạnh mẽ",
+        "description": "Tích hợp Nhắn tin, Gọi điện và AI Bot chỉ trong 48 giờ. Không phải lo code, không phải lo infrastructure.",
+        "cta1": "Bắt đầu dùng thử miễn phí",
+        "cta2": "Xem Case Study",
+        "features": {
+          "badge1": "Giải pháp hàng đầu cho doanh nghiệp",
+          "badge2": "220K+ Người dùng hoạt động",
+          "badge3": "Đối tác AWS & Google Cloud"
+        }
+      },
+      "painPoints": {
+        "badge": "Nỗi đau thực tế",
+        "title": "Tại sao tự xây dựng chat là một sai lầm đắt giá?",
+        "subtitle": "Nhiều doanh nghiệp đánh giá thấp sự phức tạp của việc xây dựng tính năng nhắn tin",
+        "points": [
+          {
+            "title": "Chi phí ẩn khổng lồ",
+            "description": "10+ kỹ sư, 6+ tháng, $40,000+ trước khi ra mắt"
+          },
+          {
+            "title": "Rủi ro hạ tầng",
+            "description": "Tin nhắn trễ, mất dữ liệu, sập hệ thống khi livestream/sự kiện"
+          },
+          {
+            "title": "Bảo mật phức tạp",
+            "description": "Ngăn rác, nội dung độc hại, tuân thủ tiêu chuẩn quốc tế"
+          }
+        ]
+      },
+      "solution": {
+        "badge": "Giải pháp",
+        "title": "Giải pháp: V AI - Agent",
+        "description": "Chúng tôi gánh vác mọi rủi ro kỹ thuật để bạn tập trung 100% vào kinh doanh. Không phải lo code, không phải lo infrastructure."
+      },
+      "features": {
+        "badge": "Tính năng",
+        "title": "4 Tính Năng Mạnh Mẽ",
+        "subtitle": "Mỗi tính năng được thiết kế để giải quyết một bài toán cụ thể",
+        "items": [
+          {
+            "title": "Messaging API & SDK",
+            "subtitle": "Chat 1-1, nhóm, kênh mở",
+            "description": "Tích hợp đơn giản, hỗ trợ đầy đủ cho chat thời gian thực như iMessage/Zalo",
+            "benefits": ["Thread replies", "Rich media", "Message editing", "Real-time sync"]
+          },
+          {
+            "title": "Voice & Video Call",
+            "subtitle": "Cuộc gọi HD chuẩn",
+            "description": "Gọi thoại/video chất lượng cao với mã hóa bảo mật đầu cuối",
+            "benefits": ["HD quality", "Auto adaptation", "End-to-end encryption", "Group calls"]
+          },
+          {
+            "title": "AI Chatbot & Trợ lý",
+            "subtitle": "Tự động CSKH 24/7",
+            "description": "Tự động hóa với AI, tóm tắt nội dung và dịch thuật đa ngôn ngữ",
+            "benefits": ["24/7 automation", "Real-time translation", "Conversation summary", "Smart routing"]
+          },
+          {
+            "title": "Console & BI Analytics",
+            "subtitle": "Dashboard theo thời gian thực",
+            "description": "Giám sát mọi metric, lọc nội dung tự động bằng AI",
+            "benefits": ["Real-time monitoring", "AI-powered filtering", "User insights", "Custom reports"]
+          }
+        ]
+      },
+      "useCases": {
+        "badge": "Kịch bản ứng dụng",
+        "title": "Các ngành đã thành công",
+        "subtitle": "Từ Game đến Healthcare, V AI - Agent đều chứng minh hiệu quả",
+        "items": [
+          {
+            "title": "Game & Entertainment",
+            "description": "Chat trong game, lập đội, trao đổi vật phẩm mà không thoát app",
+            "stat": "220K+ users"
+          },
+          {
+            "title": "Social & Hidol",
+            "description": "Fan nhắn trực tiếp với thần tượng qua VIP ticket hoặc subscription",
+            "stat": "Direct messaging"
+          },
+          {
+            "title": "E-commerce & Retail",
+            "description": "Chat tư vấn sản phẩm trực tiếp, tăng tỷ lệ chốt đơn 3x",
+            "stat": "+300% conversion"
+          },
+          {
+            "title": "Healthcare & Eldercare",
+            "description": "Gọi video giám sát sức khỏe từ xa, tích hợp robot chăm sóc",
+            "stat": "Remote monitoring"
+          }
+        ]
+      },
+      "comparison": {
+        "badge": "So sánh",
+        "title": "Tự xây dựng vs V AI - Agent",
+        "subtitle": "Dữ liệu thực tế từ 50+ doanh nghiệp",
+        "items": [
+          {
+            "feature": "Thời gian ra mắt",
+            "inHouse": "6 - 9 tháng",
+            "vAIChat": "1 - 2 tuần"
+          },
+          {
+            "feature": "Chi phí ban đầu",
+            "inHouse": "> $40,000",
+            "vAIChat": "Dùng bao nhiêu trả bấy nhiêu"
+          },
+          {
+            "feature": "Độ ổn định",
+            "inHouse": "Phụ thuộc IT",
+            "vAIChat": "99.9% (AWS/GCP)"
+          },
+          {
+            "feature": "Bảo trì & Cập nhật",
+            "inHouse": "Tốn nhân lực",
+            "vAIChat": "Tự động & Miễn phí"
+          },
+          {
+            "feature": "Tính năng AI",
+            "inHouse": "Khó tích hợp",
+            "vAIChat": "Có sẵn & tích hợp"
+          }
+        ]
+      },
+      "deployment": {
+        "badge": "Quy trình triển khai",
+        "title": "4 bước đến thành công",
+        "subtitle": "Từ đăng ký đến go-live chỉ trong vài ngày",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Đăng ký & Nhận API Key",
+            "description": "Truy cập Console V AI - Agent và tạo tài khoản developer"
+          },
+          {
+            "number": "02",
+            "title": "Tích hợp SDK",
+            "description": "Vài dòng code nhúng khung chat vào iOS/Android/Web"
+          },
+          {
+            "number": "03",
+            "title": "Tùy chỉnh UI",
+            "description": "Dùng UI Kit đồng bộ với màu sắc thương hiệu của bạn"
+          },
+          {
+            "number": "04",
+            "title": "Go-Live",
+            "description": "Bắt đầu kết nối người dùng và theo dõi tăng trưởng"
+          }
+        ]
+      },
+      "faqs": {
+        "badge": "Câu hỏi thường gặp",
+        "title": "Những câu hỏi từ CTO/CEO",
+        "subtitle": "Câu trả lời chi tiết từ engineering team của chúng tôi",
+        "items": [
+          {
+            "question": "V AI - Agent có hỗ trợ chuyển đổi dữ liệu từ nền tảng cũ sang không?",
+            "answer": "Có, chúng tôi cung cấp công cụ và hỗ trợ kỹ thuật để bạn di chuyển dữ liệu mượt mà nhất. Đội ngũ migration specialist sẽ hỗ trợ 24/7."
+          },
+          {
+            "question": "Nếu ứng dụng của tôi có hàng triệu người dùng, hệ thống có tải nổi không?",
+            "answer": "Hệ thống được xây dựng trên hạ tầng Auto-scaling của AWS/GCP, đã được kiểm chứng với các ứng dụng và game có hàng triệu người dùng."
+          },
+          {
+            "question": "Chi phí được tính như thế nào?",
+            "answer": "Chúng tôi có gói linh hoạt dựa trên MAU (Monthly Active Users) hoặc số lượng tin nhắn, tối ưu chi phí cho cả Startup lẫn doanh nghiệp lớn."
+          },
+          {
+            "question": "Bạn cung cấp hỗ trợ kỹ thuật như thế nào?",
+            "answer": "Hỗ trợ 24/7 qua email, chat, và dedicated account manager cho các gói enterprise. SLA response time: 30 phút cho critical issues."
+          },
+          {
+            "question": "Có thể tùy chỉnh giao diện chat không?",
+            "answer": "Có, hoàn toàn tùy chỉnh được. White-label solution cho phép bạn kiểm soát 100% UI/UX theo ý muốn."
+          }
+        ]
+      },
+      "security": {
+        "badge": "Bảo mật",
+        "title": "Dữ liệu của bạn luôn an toàn",
+        "subtitle": "Tuân thủ tiêu chuẩn bảo mật quốc tế, giám sát 24/7",
+        "items": [
+          {
+            "title": "Chứng chỉ ISO",
+            "description": "Tuân thủ ISO 27001, SOC 2 và tiêu chuẩn bảo mật quốc tế"
+          },
+          {
+            "title": "Giám sát 24/7",
+            "description": "Phát hiện và xử lý sự cố ngay lập tức trước khi người dùng nhận ra"
+          },
+          {
+            "title": "Chủ quyền dữ liệu",
+            "description": "Bạn sở hữu 100% dữ liệu người dùng và nội dung hội thoại"
+          },
+          {
+            "title": "White-label solution",
+            "description": "Chúng tôi đứng sau, nhưng thương hiệu hiển thị là của bạn"
+          },
+          {
+            "title": "Auto-scaling hạ tầng",
+            "description": "Dựa trên AWS/GCP, đã kiểm chứng qua hàng triệu người dùng"
+          },
+          {
+            "title": "99.9% Uptime guarantee",
+            "description": "SLA cam kết, hoặc bạn được tiền hoàn lại"
+          }
+        ]
+      },
+      "cta": {
+        "heading": "Sẵn sàng bắt đầu?",
+        "description": "Không cần credit card, không cần contract dài. Chỉ cần 5 phút để setup tài khoản developer.",
+        "ctaButton": "Đăng ký miễn phí ngay",
+        "savings": "Tiết kiệm ngân sách lên đến 60%",
+        "savingsDesc": "Tiết kiệm thời gian quản lý đến 40%",
+        "benefits": "Bạn không chỉ tiết kiệm chi phí. Bạn còn nhận được sự hỗ trợ 24/7 từ đội ngũ ICS",
+        "tryButton": "Bắt đầu thử nghiệm ngay",
+        "demoButton": "Lên lịch demo"
       }
     }
   }

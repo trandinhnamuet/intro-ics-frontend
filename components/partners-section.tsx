@@ -3,14 +3,19 @@
 import Image from "next/image"
 import { useTranslation } from 'react-i18next'
 
-const partners = [
-  { name: "Bộ Khoa học và Công nghệ", logo: "https://icss.com.vn/wp-content/uploads/2018/09/LOGO-BO-KHOA-HOC-VA-CONG-NGHE.jpg" },
-  { name: "Bộ Tài nguyên Môi trường", logo: "https://icss.com.vn/wp-content/uploads/2018/09/logo-bo-tai-nguyen-moi-turong.jpg" },
-  { name: "EVN", logo: "https://icss.com.vn/wp-content/uploads/2018/09/LOGO-EVN.jpg" },
-  { name: "HMM", logo: "https://icss.com.vn/wp-content/uploads/2018/09/logo-hmm.jpg" },
-  { name: "Ademax", logo: "https://icss.com.vn/wp-content/uploads/2018/09/logo-ademax.jpg" },
-  { name: "Bộ Y tế", logo: "https://icss.com.vn/wp-content/uploads/2018/09/logo-bo-y-te-1.jpg" },
-  { name: "Logo 1", logo: "https://icss.com.vn/wp-content/uploads/2018/09/LOGO1.jpg" },
+interface Partner {
+  nameKey: string
+  logo: string
+}
+
+const partnerConfigs: Partner[] = [
+  { nameKey: "partners.carousel.scienceMinistry", logo: "https://icss.com.vn/wp-content/uploads/2018/09/LOGO-BO-KHOA-HOC-VA-CONG-NGHE.jpg" },
+  { nameKey: "partners.carousel.environmentMinistry", logo: "https://icss.com.vn/wp-content/uploads/2018/09/logo-bo-tai-nguyen-moi-turong.jpg" },
+  { nameKey: "partners.carousel.evn", logo: "https://icss.com.vn/wp-content/uploads/2018/09/LOGO-EVN.jpg" },
+  { nameKey: "partners.carousel.hmm", logo: "https://icss.com.vn/wp-content/uploads/2018/09/logo-hmm.jpg" },
+  { nameKey: "partners.carousel.ademax", logo: "https://icss.com.vn/wp-content/uploads/2018/09/logo-ademax.jpg" },
+  { nameKey: "partners.carousel.healthMinistry", logo: "https://icss.com.vn/wp-content/uploads/2018/09/logo-bo-y-te-1.jpg" },
+  { nameKey: "partners.carousel.logo1", logo: "https://icss.com.vn/wp-content/uploads/2018/09/LOGO1.jpg" },
 ]
 
 export function PartnersSection() {
@@ -26,14 +31,14 @@ export function PartnersSection() {
 
         <div className="relative overflow-hidden">
           <div className="flex gap-12 scroll-animation">
-            {[...partners, ...partners, ...partners].map((partner, index) => (
+            {[...partnerConfigs, ...partnerConfigs, ...partnerConfigs].map((partner, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 flex items-center justify-center w-[160px] h-[90px] bg-card rounded-lg border border-border hover:shadow-lg transition-all grayscale hover:grayscale-0 hover:scale-105 p-4"
               >
                 <Image
                   src={partner.logo}
-                  alt={partner.name}
+                  alt={t(partner.nameKey)}
                   width={120}
                   height={60}
                   className="object-contain max-h-[60px]"
@@ -46,3 +51,4 @@ export function PartnersSection() {
     </section>
   )
 }
+

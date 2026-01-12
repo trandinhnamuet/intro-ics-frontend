@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
@@ -36,6 +37,7 @@ import {
 import { cn } from '@/lib/utils'
 
 export default function ChatbotPage() {
+  const { t } = useTranslation()
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
   const [hoveredUseCase, setHoveredUseCase] = useState<number | null>(null)
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null)

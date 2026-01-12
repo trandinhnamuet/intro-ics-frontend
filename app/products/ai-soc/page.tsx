@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Header } from '@/components/header'
@@ -52,6 +53,7 @@ interface OrbConfig {
 }
 
 export default function AiSocPage() {
+  const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState(0)
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null)
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -81,124 +83,109 @@ export default function AiSocPage() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const painPointsData = t('products.aiSoc.painPoints.points', { returnObjects: true }) as Array<{title: string; items: string[]}>
+  const solutionData = t('products.aiSoc.solution.pillars', { returnObjects: true }) as Array<{title: string; items: string[]}>
+  const processData = t('products.aiSoc.process.steps', { returnObjects: true }) as Array<{title: string; description: string}>
+
   const challenges = [
     {
       icon: AlertTriangle,
-      title: "Quá tải cảnh báo bảo mật",
-      description: "SOC truyền thống nhận hàng triệu cảnh báo/ngày, 95% là false positive, khiến đội ngũ kiệt sức và bỏ lỡ mối đe dọa thực sự",
+      title: painPointsData?.[0]?.title || t('products.aiSoc.painPoints.points.0.title'),
+      description: painPointsData?.[0]?.items?.[0] || t('products.aiSoc.painPoints.points.0.items.0'),
       stat: "12,300+",
-      statLabel: "tấn công/ngày tại VN"
+      statLabel: painPointsData?.[0]?.items?.[1] || t('products.aiSoc.painPoints.points.0.items.1')
     },
     {
       icon: Target,
-      title: "APT & Zero-Day Attacks",
-      description: "Các cuộc tấn công APT tinh vi ẩn mình hàng tháng, khai thác zero-day mà signature-based detection không thể phát hiện",
+      title: painPointsData?.[1]?.title || t('products.aiSoc.painPoints.points.1.title'),
+      description: painPointsData?.[1]?.items?.[0] || t('products.aiSoc.painPoints.points.1.items.0'),
       stat: "83+",
-      statLabel: "chiến dịch APT/năm"
+      statLabel: painPointsData?.[1]?.items?.[1] || t('products.aiSoc.painPoints.points.1.items.1')
     },
     {
       icon: Users,
-      title: "Thiếu hụt chuyên gia",
-      description: "Khủng hoảng nhân lực SOC toàn cầu với 3.5 triệu vị trí trống, chi phí vận hành 24/7 cực cao",
+      title: painPointsData?.[2]?.title || t('products.aiSoc.painPoints.points.2.title'),
+      description: painPointsData?.[2]?.items?.[0] || t('products.aiSoc.painPoints.points.2.items.0'),
       stat: "3.5M",
-      statLabel: "vị trí còn trống"
+      statLabel: painPointsData?.[2]?.items?.[1] || t('products.aiSoc.painPoints.points.2.items.1')
     },
     {
       icon: Activity,
-      title: "Phản ứng chậm = Thiệt hại lớn",
-      description: "Thời gian trung bình phát hiện breach là 277 ngày, mỗi ngày trễ tốn thêm $4.24 triệu",
+      title: painPointsData?.[3]?.title || t('products.aiSoc.painPoints.points.3.title'),
+      description: painPointsData?.[3]?.items?.[0] || t('products.aiSoc.painPoints.points.3.items.0'),
       stat: "277",
-      statLabel: "ngày phát hiện breach"
+      statLabel: painPointsData?.[3]?.items?.[1] || t('products.aiSoc.painPoints.points.3.items.1')
     }
   ]
 
   const coreComponents = [
     {
-      title: "Next-Gen SIEM",
+      title: solutionData?.[0]?.title || t('products.aiSoc.solution.pillars.0.title'),
       icon: Database,
-      description: "Google Chronicle - Nền tảng SIEM siêu quy mô với khả năng lưu trữ và phân tích không giới hạn",
+      description: solutionData?.[0]?.items?.[0] || t('products.aiSoc.solution.pillars.0.items.0'),
       features: [
-        "Lưu trữ log không giới hạn thời gian",
-        "Truy vấn siêu nhanh trên petabyte dữ liệu",
-        "Giảm 70% false positive nhờ AI correlation",
-        "Tích hợp 450+ data source ready"
+        solutionData?.[0]?.items?.[1] || t('products.aiSoc.solution.pillars.0.items.1'),
+        solutionData?.[0]?.items?.[2] || t('products.aiSoc.solution.pillars.0.items.2')
       ],
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      title: "UEBA Platform",
+      title: solutionData?.[1]?.title || t('products.aiSoc.solution.pillars.1.title'),
       icon: Brain,
-      description: "Gurucul UEBA - 4000+ ML models phân tích hành vi người dùng và thiết bị 24/7",
+      description: solutionData?.[1]?.items?.[0] || t('products.aiSoc.solution.pillars.1.items.0'),
       features: [
-        "Phát hiện insider threat & compromised account",
-        "Behavioral analytics cho user & entity",
-        "ML models tự học và tiến hóa liên tục",
-        "Risk scoring context-aware realtime"
+        solutionData?.[1]?.items?.[1] || t('products.aiSoc.solution.pillars.1.items.1'),
+        solutionData?.[1]?.items?.[2] || t('products.aiSoc.solution.pillars.1.items.2')
       ],
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "AI SOC Analyst",
-      icon: Bot,
-      description: "Agentic AI - Thay thế 90% công việc của L1 Analyst, vận hành 24/7 không nghỉ",
+      title: solutionData?.[2]?.title || t('products.aiSoc.solution.pillars.2.title'),
+      icon: Zap,
+      description: solutionData?.[2]?.items?.[0] || t('products.aiSoc.solution.pillars.2.items.0'),
       features: [
-        "Tự động triage, investigate và correlate alert",
-        "Tạo incident report đầy đủ trong vài giây",
-        "Đề xuất remediation action cụ thể",
-        "Học từ feedback và cải thiện liên tục"
+        solutionData?.[2]?.items?.[1] || t('products.aiSoc.solution.pillars.2.items.1')
       ],
       gradient: "from-emerald-500 to-teal-500"
-    },
-    {
-      title: "SOAR Automation",
-      icon: Workflow,
-      description: "Orchestration & Response - Playbook tự động hóa phản ứng sự cố, từ containment đến recovery",
-      features: [
-        "1000+ pre-built playbook cho mọi scenario",
-        "Tự động isolate endpoint, block IP, revoke token",
-        "Tích hợp EDR, Firewall, IAM, Cloud Security",
-        "Giảm MTTR từ giờ xuống còn phút"
-      ],
-      gradient: "from-orange-500 to-red-500"
     }
   ]
 
   const processSteps = [
     {
       number: "01",
-      title: "Data Ingestion",
-      description: "Thu thập log từ mọi nguồn: Cloud, Network, Endpoint, Identity, SaaS applications",
+      title: processData?.[0]?.title || t('products.aiSoc.process.steps.0.title'),
+      description: processData?.[0]?.description || t('products.aiSoc.process.steps.0.description'),
       icon: Database,
       color: "blue"
     },
     {
       number: "02",
-      title: "AI Detection",
-      description: "4000+ ML models phân tích realtime, phát hiện anomaly và threat chưa từng biết",
+      title: processData?.[1]?.title || t('products.aiSoc.process.steps.1.title'),
+      description: processData?.[1]?.description || t('products.aiSoc.process.steps.1.description'),
       icon: Brain,
       color: "purple"
     },
     {
       number: "03",
-      title: "Auto Investigation",
-      description: "AI Analyst tự động investigate, correlate với threat intel và tạo incident report",
+      title: processData?.[2]?.title || t('products.aiSoc.process.steps.2.title'),
+      description: processData?.[2]?.description || t('products.aiSoc.process.steps.2.description'),
       icon: Search,
       color: "emerald"
     },
     {
       number: "04",
-      title: "Orchestrated Response",
-      description: "SOAR trigger playbook tự động: contain, eradicate, recover trong vài phút",
+      title: processData?.[3]?.title || t('products.aiSoc.process.steps.3.title'),
+      description: processData?.[3]?.description || t('products.aiSoc.process.steps.3.description'),
       icon: Zap,
       color: "orange"
     }
   ]
 
   const roiMetrics = [
-    { metric: "90%", label: "Giảm workload cho SOC team", icon: TrendingUp },
-    { metric: "70%", label: "Giảm false positive alerts", icon: Target },
+    { metric: "90%", label: t('products.aiSoc.whyIcs.points.0.title'), icon: TrendingUp },
+    { metric: "70%", label: t('products.aiSoc.whyIcs.points.1.title'), icon: Target },
     { metric: "95%", label: "Faster incident response", icon: Zap },
-    { metric: "$2.4M", label: "Tiết kiệm chi phí/năm (trung bình)", icon: DollarSign }
+    { metric: "$2.4M", label: t('products.aiSoc.whyIcs.points.2.description'), icon: DollarSign }
   ]
 
 
@@ -255,24 +242,22 @@ export default function AiSocPage() {
                     AI SOC
                   </h1>
                   <h2 className="text-3xl lg:text-4xl font-bold text-white/90">
-                    Cách mạng An ninh mạng
+                    {t('products.aiSoc.hero.titleMain')}
                     <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                      bằng Trí tuệ Nhân tạo
+                      {t('products.aiSoc.hero.titleSpan')}
                     </span>
                   </h2>
                   <p className="text-xl text-white/70 max-w-xl leading-relaxed pt-4">
-                    Kết hợp Google Chronicle SIEM với Gurucul UEBA & Agentic AI - 
-                    Phát hiện & Phản ứng mối đe dọa trong <span className="text-cyan-400 font-bold">vài giây</span>, 
-                    không phải vài ngày.
+                    {t('products.aiSoc.hero.description')}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { value: "70%", label: "Giảm False Positive" },
-                    { value: "90%", label: "Tự động hóa L1" },
-                    { value: "95%", label: "Faster Response" },
+                    { value: "70%", label: t('products.aiSoc.hero.points.0') },
+                    { value: "90%", label: t('products.aiSoc.hero.points.1') },
+                    { value: "95%", label: t('products.aiSoc.hero.points.2') },
                     { value: "24/7", label: "AI Monitoring" }
                   ].map((stat, idx) => (
                     <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">
@@ -287,12 +272,12 @@ export default function AiSocPage() {
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Link href="/lien-he">
                     <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg h-14 group shadow-lg shadow-blue-500/50">
-                      Nhận tư vấn miễn phí
+                      {t('products.aiSoc.hero.cta1')}
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                   <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white hover:bg-white/20 font-bold text-lg h-14">
-                    Xem Demo
+                    {t('products.aiSoc.hero.cta2')}
                   </Button>
                 </div>
               </div>
@@ -340,13 +325,13 @@ export default function AiSocPage() {
             <div className="text-center space-y-6 max-w-3xl mx-auto">
               <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 text-red-700 dark:text-red-300">
                 <AlertTriangle className="w-4 h-4" />
-                SOC truyền thống đã lỗi thời
+                {t('products.aiSoc.painPoints.badge')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-4xl">
-                Tại sao doanh nghiệp cần AI SOC?
+                {t('products.aiSoc.painPoints.title')}
               </AnimatedHeading>
               <p className="text-xl text-muted-foreground">
-                Bối cảnh an ninh mạng hiện đại đòi hỏi khả năng phản ứng nhanh hơn, thông minh hơn
+                {t('products.aiSoc.painPoints.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -420,18 +405,17 @@ export default function AiSocPage() {
             <div className="text-center space-y-6 max-w-3xl mx-auto">
               <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300">
                 <Network className="w-4 h-4" />
-                Kiến trúc AI SOC
+                {t('products.aiSoc.solution.badge')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl">
-                Hyperscale Architecture
+                {t('products.aiSoc.solution.title')}
                 <br />
                 <span className="text-2xl lg:text-3xl text-muted-foreground">
-                  Nền tảng Google + Trí tuệ Gurucul
+                  {t('products.aiSoc.solution.subtitle')}
                 </span>
               </AnimatedHeading>
               <p className="text-xl text-muted-foreground">
-                AI SOC không chỉ là công cụ - đó là hệ sinh thái toàn diện với khả năng xử lý dữ liệu 
-                ở quy mô <span className="text-blue-600 dark:text-blue-400 font-bold">Google Scale</span>
+                {t('products.aiSoc.solution.description')}
               </p>
             </div>
           </ScrollReveal>
@@ -518,13 +502,13 @@ export default function AiSocPage() {
             <div className="text-center space-y-6 max-w-3xl mx-auto">
               <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/30 border border-purple-300 dark:border-purple-700 text-purple-700 dark:text-purple-300">
                 <Cpu className="w-4 h-4" />
-                Core Components
+                {t('products.aiSoc.features.badge')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-5xl">
-                4 trụ cột của AI SOC
+                {t('products.aiSoc.features.title')}
               </AnimatedHeading>
               <p className="text-xl text-muted-foreground">
-                Mỗi component đóng vai trò then chốt, hoạt động liên kết tạo nên hệ sinh thái bảo mật toàn diện
+                {t('products.aiSoc.features.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -614,13 +598,13 @@ export default function AiSocPage() {
             <div className="text-center space-y-6 max-w-3xl mx-auto">
               <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300">
                 <Workflow className="w-4 h-4" />
-                Quy trình vận hành
+                {t('products.aiSoc.process.badge')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-5xl">
-                Workflow tự động end-to-end
+                {t('products.aiSoc.process.title')}
               </AnimatedHeading>
               <p className="text-xl text-muted-foreground">
-                Từ thu thập log đến phản ứng tự động - tất cả diễn ra trong vài giây
+                {t('products.aiSoc.process.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -690,10 +674,10 @@ export default function AiSocPage() {
                 ROI & Impact
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-5xl">
-                Lợi ích đo được cụ thể
+                {t('products.aiSoc.whyIcs.title')}
               </AnimatedHeading>
               <p className="text-xl text-muted-foreground">
-                AI SOC mang lại giá trị rõ ràng cho doanh nghiệp
+                {t('products.aiSoc.whyIcs.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -804,10 +788,10 @@ export default function AiSocPage() {
             <div className="text-center space-y-6 max-w-3xl mx-auto">
               <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 border border-white/30 text-white backdrop-blur-sm">
                 <FileText className="w-4 h-4" />
-                Tài liệu & Workshop
+                {t('products.aiSoc.resources.badge')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl text-white">
-                Khám phá chi tiết AI SOC
+                {t('products.aiSoc.resources.title')}
               </AnimatedHeading>
             </div>
           </ScrollReveal>

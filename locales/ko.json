@@ -3,8 +3,8 @@
     "learnMore": "자세히 알아보기",
     "viewMore": "더 보기",
     "readMore": "더 읽기",
-    "contactUs": "지금 연락하기",
-    "contact": "연락",
+    "contactUs": "지금 문의하기",
+    "contact": "문의",
     "getStarted": "시작하기",
     "backToList": "목록으로 돌아가기",
     "backHome": "홈으로 돌아가기",
@@ -15,144 +15,164 @@
     "success": "성공",
     "search": "검색",
     "filter": "필터",
-    "all": "모두",
+    "all": "전체",
     "close": "닫기",
     "save": "저장",
     "cancel": "취소",
     "delete": "삭제",
-    "edit": "편집",
-    "create": "생성",
+    "edit": "수정",
+    "create": "새로 만들기",
     "update": "업데이트",
     "submit": "제출",
     "confirm": "확인"
   },
   "home": {
     "hero": {
-      "title": "포괄적인 사이버보안 솔루션",
-      "subtitle": "가장 첨단 사이버보안 기술로 비즈니스를 보호하세요",
-      "cta": "자세히 보기",
-      "contactBtn": "지금 연락하기"
-    },
-    "products": {
-      "title": "제품 및 솔루션",
-      "subtitle": "선도적인 사이버보안 솔루션을 만나보세요",
-      "smartBuilding": {
-        "title": "스마트 빌딩",
-        "description": "스마트 빌딩 자동화 및 관리 솔루션"
-      },
-      "smartFactory": {
-        "title": "스마트 팩토리",
-        "description": "제조업을 위한 IoT 및 자동화 시스템"
-      },
-      "aiSoc": {
-        "title": "AI SOC",
-        "description": "AI 기반 보안 운영 센터"
-      },
-      "esgSolutions": {
-        "title": "ESG 솔루션",
-        "description": "기업을 위한 지속가능한 발전 솔루션"
-      }
-    },
-    "news": {
-      "title": "뉴스 & 이벤트",
-      "subtitle": "최신 사이버보안 뉴스를 확인하세요",
-      "readMore": "더 보기",
-      "viewAll": "모든 기사 보기"
-    },
-    "partners": {
-      "title": "신뢰할 수 있는 파트너",
-      "subtitle": "세계 최고 브랜드와의 협력",
-      "intro": "세계 유수의 브랜드들과 협력"
-    }
-  },
-  "home": {
-    "hero": {
-      "title": "포괄적인 사이버보안 솔루션",
-      "subtitle": "가장 첨단 사이버보안 기술로 비즈니스를 보호하세요",
-      "cta": "자세히 보기",
-      "contactBtn": "지금 연락하기",
-      "featured": "주목",
+      "title": "통합 사이버 보안 솔루션",
+      "subtitle": "최첨단 사이버 보안 기술로 귀사의 비즈니스를 보호하세요",
+      "cta": "자세히 알아보기",
+      "contactBtn": "지금 문의하기",
+      "featured": "주요 서비스",
       "learnMore": "자세히 알아보기",
-      "clients": "클라이언트",
+      "clients": "고객",
       "years": "년",
       "support": "지원",
       "scrollDown": "아래로 스크롤"
     },
     "stats": {
-      "enterpriseClients": "엔터프라이즈 클라이언트",
-      "cybersecuritySupport": "사이버보안 지원",
-      "uptimeGuarantee": "가동시간 보장",
-      "yearsExperience": "년간의 경험",
+      "enterpriseClients": "기업 고객",
+      "cybersecuritySupport": "사이버 보안 지원",
+      "uptimeGuarantee": "가동률 보장",
+      "yearsExperience": "경력 연수",
       "heading": "ICS의",
-      "inNumbers": "숫자",
+      "inNumbers": "숫자로 보는 성과",
       "badge": "주요 성과"
     },
     "partners": {
-      "hyperg": "AI 및 클라우드 기반 사이버보안 솔루션",
-      "oracle": "선도적인 데이터베이스 관리 시스템",
-      "gamania": "디지털 엔터테인먼트 및 클라우드 보안"
+      "intro": "세계 최고의 브랜드와 함께합니다",
+      "gurucul": "차세대 UEBA 및 SIEM 솔루션",
+      "hyperg": "AI 및 클라우드 기반 사이버 보안 솔루션",
+      "oracle": "선도적인 데이터베이스 관리 시스템"
     },
     "whyChooseUs": {
-      "title": "ICS를 선택하는 이유",
-      "subtitle": "최고의 사이버보안 솔루션을 제공하기 위해 노력합니다",
-      "intro": "우리는 단지 솔루션을 제공하는 것이 아니라 안전한 디지털 생태계를 구축하기 위해 파트너입니다",
-      "pioneering": "첨단 기술",
-      "pioneeringDesc": "모든 보안 솔루션에 AI, 머신러닝 및 Zero Trust Architecture 적용",
-      "quickResponse": "빠른 대응",
-      "quickResponseDesc": "AI SOC를 통한 실시간 사이버보안 사건 모니터링 및 처리",
+      "title": "왜 ICS를 선택해야 할까요?",
+      "subtitle": "최고의 사이버 보안 솔루션을 제공합니다",
+      "intro": "우리는 단순한 솔루션 제공자가 아닌, 안전한 디지털 생태계를 함께 구축하는 파트너입니다",
+      "pioneering": "선도적인 기술",
+      "pioneeringDesc": "모든 보안 솔루션에 AI, 머신러닝, 제로 트러스트 아키텍처 적용",
+      "quickResponse": "신속한 대응",
+      "quickResponseDesc": "AI SOC를 통한 실시간 사이버 보안 모니터링 및 대응",
       "certified": "국제 인증",
-      "certifiedDesc": "ISO 27001, SOC 2 및 국제 보안 기준 준수",
+      "certifiedDesc": "ISO 27001, SOC 2 등 국제 보안 표준 준수",
       "sustainable": "지속 가능한 성장",
-      "sustainableDesc": "비즈니스 규모 및 요구에 따라 유연하게 확장 가능한 솔루션"
+      "sustainableDesc": "기업 규모와 요구에 맞춰 유연하게 확장 가능한 솔루션"
     },
     "featuredSolutions": {
       "title": "주요 솔루션",
-      "subtitle": "업계 최고의 사이버보안 솔루션",
-      "heading": "포괄적인 보안 솔루션",
-      "description": "엔드포인트에서 클라우드까지, 공장에서 건물까지 - 우리는 모든 각도를 보호합니다",
+      "subtitle": "최고 수준의 사이버 보안 솔루션",
+      "heading": "통합 보안 솔루션",
+      "description": "엔드포인트부터 클라우드, 공장부터 빌딩까지 모든 영역을 보호합니다",
       "csaTitle": "CSA - 엔드포인트 보안",
-      "csaDesc": "AI를 활용한 4-in-1 감지, 바이러스, 랜섬웨어, 트로잔 탐지로 머신 보호",
+      "csaDesc": "AI 기반으로 바이러스, 랜섬웨어, 트로이 목마를 탐지하는 4-in-1 보안",
       "smartFactoryTitle": "스마트 팩토리 보안",
-      "smartFactoryDesc": "통합 OT/IT 모니터링이 포함된 스마트 팩토리 보안",
+      "smartFactoryDesc": "OT/IT 통합 모니터링을 통한 스마트 공장 보안",
       "smartBuildingTitle": "스마트 빌딩 보안",
-      "smartBuildingDesc": "스마트 건물, IoT 및 BMS 시스템을 위한 사이버보안"
+      "smartBuildingDesc": "IoT 및 BMS를 포함한 스마트 빌딩 사이버 보안"
     },
     "products": {
       "title": "제품 및 솔루션",
-      "subtitle": "당사의 선도적인 사이버보안 솔루션을 발견하세요",
+      "subtitle": "최고의 사이버 보안 솔루션을 만나보세요",
+      "showLess": "접기",
+      "chatbot": "V AI - 에이전트",
+      "chatbotDesc": "AI 챗봇 기반 인앱 커뮤니케이션 플랫폼, 사용자 유지율 40% 향상",
       "aiSoc": "AI SOC",
-      "aiSocDesc": "첨단 AI로 구비된 보안 운영 센터",
-      "csa": "CSA",
-      "csaDesc": "포괄적인 보안 평가 및 감사 솔루션",
-      "pentestServices": "Pentest 서비스",
-      "pentestServicesDesc": "전문 침투 테스트 서비스",
+      "aiSocDesc": "첨단 AI가 적용된 사이버 보안 운영 센터",
+      "csaDlp": "CSA-엔드포인트",
+      "csaDlpDesc": "엔드포인트 보안 및 데이터 유출 방지 솔루션",
+      "pentestServices": "침투 테스트 서비스",
+      "pentestServicesDesc": "전문적인 침투 테스트(Pentest) 서비스",
       "vietguard": "Vietguard - 모바일 앱 보안",
-      "vietguardDesc": "모바일 앱을 위한 보안 스캔 및 취약점 탐지 도구",
-      "oracleCloud": "Oracle 클라우드",
-      "oracleCloudDesc": "고성능의 선도적인 클라우드 컴퓨팅 솔루션",
+      "vietguardDesc": "모바일 애플리케이션 보안 취약점 탐지 도구",
+      "oracleCloud": "Oracle Cloud",
+      "oracleCloudDesc": "고성능 클라우드 컴퓨팅 솔루션",
       "smartDashboard": "스마트 대시보드",
-      "smartDashboardDesc": "엔터프라이즈를 위한 중앙 집중식 모니터링 및 관리 시스템",
+      "smartDashboardDesc": "기업을 위한 통합 모니터링 및 관리 시스템",
       "viewMore": "자세히 알아보기",
       "showMore": "더 보기",
-      "showLess": "간략히 보기",
-      "explore": "탐색",
-      "showAll": "모두 보기"
+      "explore": "탐색하기",
+      "showAll": "전체 보기"
     },
     "news": {
-      "title": "뉴스 및 이벤트",
-      "subtitle": "최신 사이버보안 뉴스를 받아보세요",
-      "readMore": "더 읽기",
-      "viewAll": "모든 기사 보기"
+      "title": "뉴스 & 이벤트",
+      "subtitle": "최신 사이버 보안 소식을 확인하세요",
+      "readMore": "더 보기",
+      "viewAll": "전체 기사 보기"
     },
     "cta": {
-      "heading": "지금 비즈니스를 보호하세요",
-      "subtitle": "당신의 비즈니스에 가장 적합한 사이버보안 솔루션에 대해 무료 상담을 받으려면 우리에게 연락하세요",
-      "learnMore": "ICS에 대해 자세히 알아보기"
+      "heading": "지금 바로 비즈니스를 보호하세요",
+      "subtitle": "가장 적합한 사이버 보안 솔루션에 대해 무료 상담을 받아보세요",
+      "learnMore": "ICS에 대해 더 알아보기"
     },
     "partners_section": {
-      "title": "신뢰할 수 있는 파트너",
-      "subtitle": "세계 최고의 브랜드와 협력"
+      "title": "신뢰받는 파트너",
+      "subtitle": "세계 최고의 브랜드와 협력합니다"
     }
+  },
+  "articlesList": {
+    "title": "기사 목록",
+    "description": "최신 기사와 뉴스를 확인하세요",
+    "searchPlaceholder": "기사 검색...",
+    "loading": "로딩 중...",
+    "noResults": "일치하는 결과가 없습니다",
+    "noArticles": "등록된 기사가 없습니다",
+    "author": "작성자 #{{id}}",
+    "status": {
+      "published": "게시됨",
+      "draft": "초안",
+      "archived": "보관됨"
+    },
+    "pagination": {
+      "previous": "이전 페이지",
+      "next": "다음 페이지",
+      "pageInfo": "{{current}} / {{total}} 페이지"
+    },
+    "errors": {
+      "errorTitle": "오류",
+      "fetchError": "기사 목록을 불러올 수 없습니다"
+    }
+  },
+  "articlesManagement": {
+    "title": "기사 관리",
+    "description": "기사 목록을 관리하세요",
+    "loading": "로딩 중...",
+    "noArticles": "등록된 기사가 없습니다",
+    "errors": {
+      "errorTitle": "오류",
+      "fetchError": "기사 목록을 불러올 수 없습니다",
+      "deleteError": "기사를 삭제할 수 없습니다"
+    },
+    "auth": {
+      "title": "인증 필요",
+      "wrongPassword": "비밀번호가 올바르지 않습니다",
+      "passwordError": "비밀번호가 틀렸습니다. {{action}}할 수 없습니다"
+    },
+    "password": "비밀번호",
+    "deleteConfirm": "이 작업은 되돌릴 수 없습니다."
+  },
+  "writeArticle": {
+    "title": "기사 작성",
+    "description": "새 기사를 작성하거나 기존 기사를 수정하세요",
+    "loading": "편집기 로딩 중...",
+    "errors": {
+      "errorTitle": "인증 오류",
+      "fetchError": "기사를 불러올 수 없습니다",
+      "passwordError": "기사를 저장하려면 올바른 비밀번호를 입력하세요"
+    }
+  },
+  "articleDetail": {
+    "title": "기사 상세",
+    "copied": "링크가 복사되었습니다!",
+    "relatedArticles": "관련 기사"
   },
   "header": {
     "aboutUs": "회사 소개",
@@ -172,81 +192,106 @@
     "csa": "CSA",
     "news": "뉴스",
     "recruitment": "채용",
-    "contact": "연락처",
+    "contact": "문의",
     "searchPlaceholder": "기사 검색...",
     "search": "검색",
-    "contactUs": "문의하기"
+    "contactUs": "문의하기",
+    "menu": {
+      "aboutCompany": "ICS 회사 소개",
+      "ourClients": "고객사",
+      "smartBuildingDesc": "스마트 빌딩 솔루션",
+      "smartFactoryDesc": "스마트 팩토리 솔루션",
+      "esgDesc": "기업을 위한 ESG 솔루션",
+      "aiSocDesc": "AI 기반 사이버 보안 운영 센터",
+      "productDescriptions": {
+        "chatbot": "AI 챗봇 기반 인앱 커뮤니케이션 플랫폼",
+        "vietguard": "보안 취약점 탐지 도구",
+        "aiSoc": "사이버 보안 분석 및 모니터링 솔루션",
+        "csaDlp": "엔드포인트 보안 및 데이터 유출 방지",
+        "pentest": "침투 테스트(Pentest) 서비스",
+        "oracleCloud": "클라우드 컴퓨팅 인프라",
+        "smartDashboard": "관리 대시보드"
+      }
+    }
   },
   "footer": {
     "companyName": "국제 사이버 보안 주식회사 - ICS",
     "headquarter": "본사:",
-    "office": "사무소:",
+    "office": "사무실:",
     "phone": "전화:",
     "hotline": "핫라인:",
     "email": "이메일:",
     "website": "웹사이트:",
-    "headquarterAddress": "베트남 흥옌성 미하오시 반옌냄동 부반찬길",
-    "officeAddress": "하노이 딘콩구 다이킴 신도시 TT3-5",
+    "headquarterAddress": "흥옌성 미하오시 반옌년구 부반깐 거리",
+    "officeAddress": "하노이 딘꽁, 다이낌 신도시 TT3-5",
     "products": "제품",
     "consulting": "컨설팅",
     "smartBuilding": "스마트 빌딩 솔루션",
     "esgSolution": "ESG 솔루션",
     "aiSocSolution": "AI SOC 솔루션",
     "smartFactory": "스마트 팩토리 솔루션",
-    "copyright": "© 2025 ICS - 국제 사이버 보안 회사. 모든 권리 보유.",
+    "copyright": "© 2025 ICS - 국제 사이버 보안 회사. All rights reserved.",
     "aboutIcs": "ICS 소개",
     "news": "뉴스",
-    "contact": "연락처",
+    "contact": "문의",
     "recruitment": "채용",
     "newsletter": "뉴스레터",
-    "newsletterDescription": "사이버보안 및 기술 솔루션의 최신 정보를 받아보려면 구독하세요.",
+    "newsletterDescription": "사이버 보안 및 최신 기술 솔루션에 대한 소식을 받아보세요.",
     "emailPlaceholder": "이메일 주소",
     "certificates": "인증 및 파트너"
   },
   "partners": {
-    "title": "파트너",
-    "subtitle": "강력한 사이버보안 생태계 구축",
+    "title": "우리의 파트너",
+    "subtitle": "함께 강력한 사이버 보안 생태계를 구축합니다",
     "badge": "파트너",
-    "intro": "세계를 선도하는 브랜드와 협력",
-    "programTitle": "파트너십 프로그램",
-    "programSubtitle": "다양한 혜택과 인센티브를 제공하는 파트너 레벨",
+    "intro": "세계 최고의 브랜드와 함께합니다",
+    "carousel": {
+      "scienceMinistry": "과학기술부",
+      "environmentMinistry": "환경자원부",
+      "evn": "EVN",
+      "hmm": "HMM",
+      "ademax": "Ademax",
+      "healthMinistry": "보건부",
+      "logo1": "로고 1"
+    },
+    "programTitle": "파트너 프로그램",
+    "programSubtitle": "혜택과 권한이 다른 다양한 파트너 등급",
     "platinum": "플래티넘 파트너",
     "gold": "골드 파트너",
     "technologyPartners": "기술 파트너",
-    "technologyPartnersSubtitle": "소프트웨어 플랫폼, 보안 솔루션 및 데이터 인프라 제공업체",
+    "technologyPartnersSubtitle": "소프트웨어 플랫폼, 보안 솔루션 및 데이터 인프라 제공 업체",
     "businessPartners": "비즈니스 파트너",
-    "businessPartnersSubtitle": "비즈니스, 교육 및 인력 공급에 중점을 둔 조직",
-    "guruculDesc": "데이터 보안 솔루션, 행동 분석(UEBA) 및 차세대 SIEM에 특화",
-    "hypergOracleDesc": "클라우드 보안 솔루션(HyperG)과 세계를 선도하는 데이터 인프라/엔터프라이즈 관리(Oracle)의 제휴",
-    "cystackDesc": "취약점 스캔 및 애플리케이션 보안 솔루션을 전문으로 하는 사이버보안 기업",
-    "viesecurityDesc": "정보 보안 서비스 및 솔루션을 전문으로 하는 조직",
-    "locaAiDesc": "인공지능(AI)의 실용적인 응용에 중점을 둔 솔루션",
-    "irtechDesc": "아웃소싱 및 소프트웨어 솔루션 개발, 디지털 혁신을 전문으로 하는 회사",
-    "bluenetDesc": "통신/네트워크 서비스를 제공하는 유통업체 또는 대리점",
-    "bitcareDesc": "IT 분야의 지원, 유지보수, 고객 관리에 중점을 둔 서비스 조직",
-    "bigbenDesc": "제품 유통 또는 교육/교육 서비스에 종사",
-    "tluDesc": "인력, 연구 및 교육을 제공하는 파트너",
-    "aiAcademyDesc": "교육, 교육 및 AI 인재 공급에 중점을 둔 조직",
-    "cathayDesc": "전략적 고객 또는 금융 서비스 파트너로서의 금융/보험 그룹",
-    "partnersGrid": "파트너",
-    "partnersGridSubtitle": "세계 최고의 기술 기업과 협력",
-    "testimonials": "고객의 목소리",
-    "testimonialsSubtitle": "ICS 고객 및 파트너의 피드백",
-    "becomePartner": "ICS 파트너 되기",
-    "becomePartnerDesc": "파트너십 기회에 대해 자세히 알아보고 함께 성장하세요",
+    "businessPartnersSubtitle": "상업, 교육 및 인력 공급에 집중하는 파트너",
+    "guruculDesc": "데이터 보안, 사용자 행동 분석(UEBA) 및 차세대 SIEM 솔루션 전문",
+    "hypergOracleDesc": "클라우드 보안 솔루션(HyperG)과 세계적인 데이터/엔터프라이즈 인프라(Oracle)의 전략적 연합",
+    "cystackDesc": "취약점 점검 및 애플리케이션 보안 솔루션 전문 사이버 보안 기업",
+    "viesecurityDesc": "정보보안 서비스 및 솔루션에 특화된 전문 기업",
+    "locaAiDesc": "AI 기술을 실제 비즈니스에 적용하는 솔루션 전문",
+    "irtechDesc": "아웃소싱 및 소프트웨어 개발, 디지털 전환 솔루션 전문 기업",
+    "bluenetDesc": "통신 및 네트워크 서비스 유통·대리 업체",
+    "bitcareDesc": "IT 분야의 기술 지원, 유지보수 및 고객 지원 서비스 제공",
+    "bigbenDesc": "교육 및 훈련 제품/서비스 유통 분야에서 활동",
+    "tluDesc": "인재 공급, 연구 및 교육을 제공하는 파트너",
+    "aiAcademyDesc": "AI 전문 교육, 인재 양성 및 인력 공급 기관",
+    "cathayDesc": "전략적 고객 또는 금융 서비스를 제공하는 금융/보험 그룹",
+    "partnersGrid": "우리의 파트너",
+    "partnersGridSubtitle": "세계적인 기술 기업과의 협력",
+    "testimonials": "고객 후기",
+    "testimonialsSubtitle": "ICS 고객 및 파트너의 실제 평가",
+    "becomePartner": "ICS 파트너가 되세요",
+    "becomePartnerDesc": "협력 및 공동 성장을 위한 기회를 지금 확인해 보세요",
     "registerPartner": "파트너 등록",
-    "downloadDocs": "파트너십 자료 다운로드",
-    "hypergDesc": "HyperG Security는 AI와 클라우드 기반 사이버보안 솔루션을 제공합니다. 모든 디지털 위험으로부터 비즈니스를 보호합니다.",
-    "oracleDesc": "Oracle은 데이터베이스 관리 시스템, 엔터프라이즈 소프트웨어를 제공하는 선도적인 기술 기업이며, 클라우드 컴퓨팅, AI 및 사이버보안을 개발하고 있습니다.",
-    "gamaniaDesc": "Gamania는 온라인 게임 개발 및 퍼블리싱을 전문으로 하는 선도적인 디지털 엔터테인먼트 회사이며, 전자 결제, 클라우드 및 사이버보안으로 확장하고 있습니다.",
-    "microsoftDesc": "클라우드 및 엔터프라이즈 보안 분야의 글로벌 기술 파트너.",
-    "awsDesc": "AWS 클라우드 플랫폼에서 보안 솔루션 배포 협력.",
-    "ciscoDesc": "네트워크 인프라 및 네트워크 보안 솔루션 파트너.",
+    "downloadDocs": "협력 자료 다운로드",
+    "hypergDesc": "HyperG Security는 AI 및 클라우드 기반 사이버 보안 솔루션을 제공하여 모든 디지털 위협으로부터 기업을 보호합니다.",
+    "oracleDesc": "Oracle은 데이터베이스, 엔터프라이즈 소프트웨어, 클라우드, AI 및 사이버 보안 분야를 선도하는 글로벌 기술 기업입니다.",
+    "microsoftDesc": "엔터프라이즈 클라우드 및 보안 분야의 글로벌 기술 파트너",
+    "awsDesc": "AWS 클라우드 기반 보안 솔루션 구축 파트너",
+    "ciscoDesc": "네트워크 인프라 및 네트워크 보안 솔루션 파트너",
     "benefits": {
-      "support247": "우선 24/7 지원",
-      "training": "심화 교육",
+      "support247": "24/7 우선 지원",
+      "training": "전문 교육",
       "comarketing": "공동 마케팅 캠페인",
-      "rebate": "최고 리베이트",
+      "rebate": "최대 리베이트",
       "techSupport": "기술 지원",
       "productTraining": "제품 교육",
       "marketingSupport": "마케팅 지원",
@@ -256,149 +301,484 @@
   "about": {
     "title": "ICS 소개",
     "subtitle": "국제 사이버 보안 회사 - 신뢰할 수 있는 파트너",
-    "badge": "회사 소개",
+    "badge": "소개",
     "hero": {
-      "title": "사이버보안의 선구자",
-      "subtitle": "디지털 생태계를 안전하고 효율적이며 지속 가능하게 보호"
+      "title": "사이버 보안의 선도 기업",
+      "subtitle": "안전하고 효율적이며 지속 가능한 디지털 생태계 보호"
     },
-    "discoverICS": "ICS 살펴보기",
-    "discoverSubtitle": "우리의 사명, 비전 및 솔루션을 더 잘 이해하기 위한 소개 영상을 보세요",
-    "videoNotSupported": "귀하의 브라우저는 비디오를 지원하지 않습니다.",
+    "discoverICS": "ICS 알아보기",
+    "discoverSubtitle": "영상으로 우리의 미션, 비전, 솔루션을 확인하세요",
+    "videoNotSupported": "이 브라우저는 비디오를 지원하지 않습니다.",
     "company": {
       "title": "국제 사이버 보안 주식회사 – ICS",
-      "description1": "베트남 및 지역 사이버보안 분야의 선구자로 디지털 기술 시대를 위한 포괄적인 보안 솔루션을 제공합니다.",
-      "description2": "ICS는 애플리케이션 보호, 스마트 팩토리 보안, 스마트 빌딩 보안 및 특히 AI SOC 운영 시스템을 포함한 다양한 중요 분야의 보안 솔루션에 중점을 두고 있습니다."
+      "description1": "ICS는 베트남 및 아시아 지역에서 사이버 보안 분야를 선도하는 기업으로, 디지털 시대에 필요한 통합 보안 솔루션을 제공합니다.",
+      "description2": "애플리케이션 보안, 스마트 팩토리, 스마트 빌딩 및 AI SOC 중앙 운영 시스템을 포함한 핵심 산업 보안에 집중하고 있습니다."
     },
     "stats": {
-      "projects": "완료된 프로젝트",
-      "clients": "엔터프라이즈 고객",
+      "clients": "기업 고객",
       "support": "고객 지원",
-      "uptime": "가동시간 보장"
+      "uptime": "가동률 보장",
+      "years": "경력 연수"
     },
     "team": {
-      "title": "전문 팀",
-      "description": "국제 경험을 가진 50명 이상의 사이버보안 전문가",
+      "title": "전문 인력",
+      "description": "국제 경험을 갖춘 50명 이상의 사이버 보안 전문가",
       "heading": "리더십 팀",
-      "subtitle": "ICS의 발전을 주도하는 선도적인 전문가들",
-      "ceo": "CEO & Founder",
+      "subtitle": "ICS를 이끄는 최고 수준의 전문가",
+      "ceo": "CEO & 창립자",
       "cto": "CTO",
-      "securityLead": "Security Lead",
-      "operations": "Head of Operations"
+      "securityLead": "보안 책임자",
+      "operations": "운영 총괄"
     },
     "values": {
       "heading": "핵심 가치",
-      "subtitle": "우리의 모든 행동을 안내하는 원칙",
+      "subtitle": "모든 활동을 이끄는 원칙",
       "security": {
-        "title": "최대 보안",
-        "description": "고객 데이터 보호를 최고 수준에서 보장"
+        "title": "최고 수준의 보안",
+        "description": "고객 데이터 보호를 최우선으로 합니다"
       },
       "accuracy": {
         "title": "정확성",
-        "description": "특정 요구에 맞게 커스터마이징된 솔루션"
+        "description": "고객 요구에 맞춘 맞춤형 솔루션"
       },
       "speed": {
         "title": "신속함",
-        "description": "실시간 배포 및 사고 대응"
+        "description": "실시간 대응 및 빠른 구축"
       },
       "team": {
         "title": "전문 팀",
-        "description": "국제 경험을 가진 선도적 전문가"
+        "description": "국제 경험을 갖춘 전문가"
       },
       "quality": {
-        "title": "품질 보증",
-        "description": "국제 보안 기준 준수"
+        "title": "품질 보장",
+        "description": "국제 보안 표준 준수"
       },
       "innovation": {
         "title": "지속적인 혁신",
-        "description": "업계의 최신 기술 업데이트"
+        "description": "최신 기술을 지속적으로 적용"
       }
     },
     "timeline": {
-      "heading": "발전 여정",
-      "subtitle": "ICS의 성숙을 나타내는 주요 이정표",
       "2018": {
         "title": "회사 설립",
-        "description": "베트남의 디지털 공간을 보호하기 위한 사명으로 ICS 설립"
+        "description": "베트남 디지털 공간 보호를 목표로 ICS 설립"
       },
       "2019": {
-        "title": "VietGuard 출시",
-        "description": "Zero Trust 기술을 갖춘 선진 엔드포인트 보안 솔루션"
+        "title": "Vietguard - 모바일 앱 보안 출시",
+        "description": "제로 트러스트 기반 선도적인 엔드포인트 보안 솔루션"
       },
       "2020": {
-        "title": "국제 확장",
-        "description": "세계 최고의 기술 파트너와 협력"
+        "title": "글로벌 확장",
+        "description": "세계적인 기술 파트너와 협력"
       },
       "2021": {
-        "title": "AI SOC Platform",
-        "description": "AI 사이버보안 운영 시스템 배포"
+        "title": "AI SOC 플랫폼",
+        "description": "AI 기반 사이버 보안 운영 센터 구축"
       },
       "2022": {
-        "title": "Smart Factory Security",
-        "description": "스마트 팩토리 4.0용 보안 솔루션 제공"
+        "title": "스마트 팩토리 보안",
+        "description": "4.0 스마트 팩토리 보안 솔루션 제공"
       },
       "2023": {
         "title": "100+ 프로젝트",
-        "description": "국내외 100개 이상의 대규모 프로젝트 완료"
-      }
+        "description": "국내외 100개 이상의 대형 프로젝트 완료"
+      },
+      "heading": "성장 여정",
+      "subtitle": "ICS의 주요 이정표"
     },
     "leadership": {
-      "heading": "리더십 팀",
-      "subtitle": "ICS의 발전을 주도하는 선도적인 전문가들"
+      "heading": "리더십",
+      "subtitle": "ICS를 이끄는 핵심 인재"
     },
     "solutions": {
       "heading": "우리의 솔루션",
-      "subtitle": "선도적인 보안 제품 및 솔루션",
+      "subtitle": "최고 수준의 보안 제품 및 솔루션",
       "vietguard": {
-        "title": "VietGuard",
-        "description": "엔드포인트에서 Zero Trust 기술을 갖춘 고급 보안 솔루션으로 악성 소프트웨어 식별 없이 위협을 차단합니다."
+        "title": "Vietguard - 모바일 앱 보안",
+        "description": "엔드포인트에서 제로 트러스트 기술을 적용하여 악성코드 식별 없이 위협을 차단하는 첨단 보안 솔루션"
       },
       "esg": {
         "title": "ESG 솔루션",
-        "description": "기업의 지속 가능한 발전을 돕고 디지털 시대에 환경, 사회, 투명한 거버넌스를 강화합니다."
+        "description": "디지털 시대에 환경·사회·지배구조 책임을 기반으로 한 지속 가능한 성장 지원"
       },
       "iot": {
         "title": "IoT 보안",
-        "description": "IoT 네트워크의 포괄적인 보안으로 연결된 장치 생태계의 센서에서 클라우드까지 데이터를 보호합니다."
+        "description": "센서부터 클라우드까지 연결된 IoT 생태계를 위한 통합 보안"
       }
     },
     "cta": {
-      "heading": "비즈니스를 보호할 준비가 되셨습니까?",
-      "subtitle": "당신의 비즈니스에 가장 적합한 사이버보안 솔루션에 대한 상담을 위해 오늘 저희에게 연락하세요",
+      "heading": "비즈니스를 보호할 준비가 되셨나요?",
+      "subtitle": "최적의 사이버 보안 솔루션을 위해 지금 문의하세요",
       "schedule": "상담 일정 예약",
-      "download": "문서 다운로드"
+      "download": "자료 다운로드"
     }
   },
   "clients": {
-    "title": "고객 산업 분야",
-    "description": "정부, 금융, 통신을 포함한 다양한 산업에 신뢰할 수 있는 사이버보안 솔루션 제공",
+    "title": "우리의 고객",
+    "subtitle": "선도 기업이 신뢰하는 파트너",
     "badge": "고객",
-    "finance": {
-      "title": "금융업",
-      "description": "금융 기관의 데이터 보호 및 규정 준수 지원"
-    },
-    "government": {
-      "title": "정부",
-      "description": "국가 정보 보안 및 중요 인프라 보호"
-    },
-    "telecom": {
-      "title": "통신업",
-      "description": "통신 네트워크 및 고객 데이터 보안"
-    }
+    "description": "은행, 정부 기관, 중소기업부터 대기업에 이르기까지 다양한 산업 분야의 고객이 ICS와 함께 디지털 전환을 진행하며, 사이버 보안을 지속 가능한 성장과 경쟁력의 핵심 기반으로 삼고 있습니다.",
+    "finance": "금융 산업",
+    "government": "정부",
+    "telecom": "통신 산업"
   },
   "contact": {
     "title": "문의하기",
-    "subtitle": "비즈니스 보호를 도와드립니다",
-    "badge": "연락처",
+    "subtitle": "귀사의 비즈니스를 보호하는 데 도움을 드립니다",
+    "badge": "문의",
     "companyInfo": "회사 정보",
     "companyName": "국제 사이버 보안 주식회사 - ICS",
     "contactInfo": "연락처 정보",
     "hanoiOffice": "하노이 사무소",
-    "phone": "전화 및 핫라인",
+    "phone": "전화 & 핫라인",
     "email": "이메일",
     "website": "웹사이트",
     "location": "지도 위치",
-    "locationSubtitle": "당사 사무소로 가는 길 찾기",
-    "videoNotSupported": "귀하의 브라우저는 비디오를 지원하지 않습니다."
+    "locationSubtitle": "사무실 위치 안내",
+    "videoNotSupported": "이 브라우저는 비디오를 지원하지 않습니다."
+  },
+  "recruitment": {
+    "title": "채용",
+    "subtitle": "ICS 팀에 합류하여 함께 성장하세요",
+    "badge": "채용",
+    "coming_soon": "콘텐츠가 곧 업데이트됩니다",
+    "message": "현재 채용 정보를 준비 중입니다. 최신 채용 공고를 확인하시려면 잠시 후 다시 방문해 주세요.",
+    "hero": {
+      "badge": "현재 5개 포지션 채용 중",
+      "title": "ICS 팀에 합류하세요",
+      "subtitle": "베트남 기업의 안전한 미래를 함께 만들어 갑니다",
+      "viewPositions": "채용 포지션 보기"
+    },
+    "whyJoin": "왜 ICS에 합류해야 할까요?",
+    "benefit1Title": "첨단 기술",
+    "benefit1Desc": "AI SOC, 스마트 빌딩, 모바일 보안 등 혁신적인 기술 솔루션과 함께 일합니다",
+    "benefit2Title": "커리어 성장",
+    "benefit2Desc": "명확한 성장 로드맵, 전문 교육 및 업계 최고 전문가로 성장할 기회",
+    "benefit3Title": "젊고 역동적인 문화",
+    "benefit3Desc": "Gen Z 중심의 활기찬 환경, 소통이 원활한 리더십, 다양한 스포츠 활동",
+    "location": "근무지",
+    "salary": "급여",
+    "mission": "미션",
+    "responsibilities": "주요 업무",
+    "requirements": "자격 요건",
+    "benefits": "복지 및 혜택",
+    "applicationMethod": "지원 방법",
+    "emailLabel": "이메일로 CV 제출",
+    "subject": "제목",
+    "yourName": "이름",
+    "directContact": "직접 문의",
+    "contactPerson": "Ms. Diễm Quỳnh (행정 책임자)",
+    "portfolioLabel": "제출 서류",
+    "portfolioItem1": "상세한 이력서(CV)",
+    "portfolioItem2": "관련 자격증(보유 시)",
+    "applyNow": "지금 지원하기",
+    "jobsTitle": "채용 중인 포지션",
+    "jobsSubtitle": "나에게 맞는 커리어 기회를 찾아보세요",
+    "marketing": "마케팅",
+    "sales": "영업",
+    "tech": "기술",
+    "viewDetails": "상세 보기",
+    "ctaTitle": "ICS에 합류할 준비가 되셨나요?",
+    "ctaSubtitle": "지금 CV를 제출하고 ICS 팀의 일원이 되세요!",
+    "sendCVNow": "CV 제출하기",
+    "contactPhone": "문의: 0972.363.821",
+    "jobs": {
+      "marketingStaff": {
+        "title": "기술 솔루션 마케팅 담당자",
+        "department": "마케팅",
+        "type": "정규직",
+        "level": "사원",
+        "salary": "월 1,500만~2,000만++ VND",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "기술 솔루션 관련 콘텐츠 제작 및 미디어 채널 운영",
+        "mission": "기술 솔루션의 가치를 전파하는 ‘콘텐츠 마법사’가 되는 것",
+        "responsibilities": [
+          "소셜 미디어 채널의 일상적인 콘텐츠 기획 및 운영",
+          "사이버 보안, AI SOC 관련 블로그 및 전문 기사 작성",
+          "숏폼 영상 및 홍보 영상 기획·스크립트 작성",
+          "디자인/영상 팀과 협업하여 콘텐츠 제작",
+          "기술 세미나, 웨비나 및 이벤트 운영 지원"
+        ],
+        "requirements": [
+          "연령: 24~27세",
+          "마케팅, 콘텐츠 또는 소셜 미디어 경력 1년 이상",
+          "우수한 글쓰기 능력 및 언어 감각",
+          "Canva, Photoshop 또는 영상 편집 툴 활용 가능",
+          "기본적인 영어 문서 독해 가능"
+        ],
+        "benefits": [
+          "급여: 월 1,500만~2,000만++ VND",
+          "성과 기반 인센티브",
+          "연 2회 급여 인상 검토",
+          "젊고 자유로운 근무 환경",
+          "축구, 배드민턴 등 스포츠 활동"
+        ]
+      },
+      "salesStaff": {
+        "title": "기술 솔루션 영업 담당자",
+        "department": "영업",
+        "type": "정규직",
+        "level": "사원",
+        "salary": "월 1,500만~2,000만++ VND",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "기업 고객 대상 기술 솔루션 컨설팅 및 영업",
+        "mission": "디지털 전환 전문가로서 ICS와 기업 고객을 연결하는 역할",
+        "responsibilities": [
+          "잠재 고객 발굴 및 고객 포트폴리오 확장",
+          "대면 미팅, 전화, 이메일을 통한 고객 접점",
+          "기술 솔루션 데모 및 컨설팅",
+          "계약 협상 및 체결"
+        ],
+        "requirements": [
+          "연령: 21~45세, 영업 경력 1~2년",
+          "전문대 이상 졸업 (IT, AI, 메카트로닉스, 경영 등)",
+          "영업에 대한 열정과 도전 정신",
+          "우수한 커뮤니케이션 및 문제 해결 능력",
+          "기술 제품 영업 경험 우대"
+        ],
+        "benefits": [
+          "급여: 월 1,500만~2,000만++ VND",
+          "성과 기반 커미션",
+          "경영진 직접 교육 및 멘토링",
+          "명확한 커리어 성장 경로",
+          "업무 장비 및 통신비 지원"
+        ]
+      },
+      "securityEngineer": {
+        "title": "보안 엔지니어 (Security Engineer)",
+        "department": "기술",
+        "type": "정규직",
+        "level": "전문가",
+        "salary": "경력에 따라 협의",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "AI SOC 운영 및 핵심 모바일 시스템 보안 담당",
+        "mission": "AI SOC 핵심 멤버로서 첨단 보안 시스템을 운영하고 주요 모바일 플랫폼을 보호",
+        "responsibilities": [
+          "AI SOC에서 보안 이벤트 모니터링 및 분석",
+          "AI 기반 APT 공격 탐지",
+          "iOS 및 Android 애플리케이션 침투 테스트",
+          "OWASP Mobile Top 10 기준 취약점 평가",
+          "보안 장비(Firewall, IDS/IPS, WAF, SIEM) 구축 및 운영"
+        ],
+        "requirements": [
+          "정보보안 경력 2~3년 이상",
+          "네트워크 프로토콜(TCP/IP), OS(Linux, Windows) 이해",
+          "Burp Suite, MobSF, Frida, Wireshark, Nessus, SIEM/SOAR 활용 능력",
+          "Security+, CEH, OSCP 자격증 보유자 우대",
+          "악성코드 분석 경험 보유 시 큰 장점"
+        ],
+        "benefits": [
+          "경력에 상응하는 급여",
+          "업계 최고 수준의 전문가와 협업",
+          "국제 보안 자격증(OSCP, CISSP) 취득 지원",
+          "Senior/Lead로의 성장 기회",
+          "주간 스포츠 활동(배드민턴, 축구)"
+        ]
+      },
+      "marketingDirector": {
+        "title": "마케팅 이사",
+        "department": "마케팅",
+        "type": "정규직",
+        "level": "고위 관리자",
+        "salary": "협의 + 높은 성과급",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "전사 마케팅 전략 및 자동화된 리드 생성 시스템 구축",
+        "mission": "ICS 브랜드와 성장 전략을 설계하는 ‘마케팅 아키텍트’ 역할",
+        "responsibilities": [
+          "제품별 Go-to-Market 전략 수립",
+          "시장 조사 및 USP 정의",
+          "Account-Based Marketing(ABM) 캠페인 운영",
+          "ICS 브랜드 가치 구축 및 보호",
+          "마케팅 조직 운영 및 예산 최적화"
+        ],
+        "requirements": [
+          "마케팅 경력 5년 이상",
+          "B2B, SaaS, IT 분야 관리직(Manager/Head/Director) 경험",
+          "B2B 고객 여정에 대한 깊은 이해와 전략적 사고",
+          "AI, 블록체인, IoT 등 최신 기술 트렌드 이해",
+          "유창한 영어 능력"
+        ],
+        "benefits": [
+          "무제한 수입 구조 (기본급 + 성과급 + 보너스)",
+          "전략 및 인사 전권",
+          "CMO 또는 부사장으로 성장 기회",
+          "프리미엄 건강 보험",
+          "정기 여행 및 스포츠 클럽"
+        ]
+      },
+      "salesDirector": {
+        "title": "영업 이사",
+        "department": "영업",
+        "type": "정규직",
+        "level": "고위 관리자",
+        "salary": "협의 + 높은 성과급",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "영업 조직을 이끌고 매출 전략 총괄",
+        "mission": "매출 성장과 시장 확장을 책임지는 ‘리더’ 역할",
+        "responsibilities": [
+          "단기 및 장기 영업 전략 수립",
+          "영업 인력 채용, 교육 및 조직 구축",
+          "KPI 및 표준 영업 프로세스 구축",
+          "전략 고객(Key Account) 관리",
+          "대형 프로젝트 계약 협상 및 체결"
+        ],
+        "requirements": [
+          "IT 영업 경력 5년 이상",
+          "동급 관리직 경력 2년 이상",
+          "B2B, 사이버 보안, 디지털 전환 시장에 대한 깊은 이해",
+          "금융, 은행, 부동산 분야 네트워크 보유",
+          "비즈니스 영어 가능"
+        ],
+        "benefits": [
+          "무제한 수입 구조 (기본급 + 성과급 + 보너스)",
+          "조직 및 전략 결정 권한",
+          "주주 또는 핵심 인재(Key Person)로 성장 기회",
+          "프리미엄 건강 보험",
+          "정기 출장 및 출장비 지원"
+        ]
+      }
+    }
+  },
+  "smartBuilding": {
+    "title": "스마트 빌딩 솔루션",
+    "subtitle": "빌딩을 위한 통합 자동화 및 보안",
+    "badge": "스마트 빌딩",
+    "banner": "스마트 빌딩 솔루션",
+    "mainHeading": "차세대 스마트 빌딩 솔루션",
+    "mainDescription": "당사의 시스템은 인공지능(AI)과 사물인터넷(IoT)을 활용하여 운영 데이터를 실시간으로 수집하고 자동 분석하여 지능적인 의사결정을 수행합니다. 단순히 ‘반응하는’ 빌딩을 넘어 ‘적응하고 예측하는’ 빌딩을 구현함으로써 전반적인 운영 효율을 극대화합니다.",
+    "featuresHeading": "핵심 기능 및 차별화된 가치",
+    "featuresDesc": "스마트 빌딩 솔루션은 견고한 기술적 기반 위에 구축되었으며, 각 요소는 명확한 경제적 가치와 사용자 경험을 제공합니다.",
+    "feature1": {
+      "title": "1. 지능형 에너지 관리 시스템(EMS)",
+      "desc": "AI 알고리즘을 활용하여 사용 패턴, 기상 조건, 인원 존재 여부를 분석하고 냉난방 및 조명 시스템을 자동으로 최적화합니다. 사람이 없는 공간의 전원 차단, 일정 기반 온도 조절, 자연광의 최대 활용이 가능합니다.",
+      "benefit": "월 전력 비용을 30~40% 절감할 수 있는 가장 강력한 재무적 효과를 제공합니다. 대규모 빌딩에서 특히 큰 비용 절감 효과를 기대할 수 있으며, 탄소 배출 감소를 통해 친환경 건축 인증 및 지속가능한 브랜드 이미지 제고에도 기여합니다."
+    },
+    "feature2": {
+      "title": "2. 통합 보안 및 지능형 출입 통제",
+      "desc": "AI 영상 감시 시스템과 얼굴 인식, 카드, 모바일 앱 기반 출입 통제를 통합합니다. 이상 행동을 자동으로 감지하여 즉시 경고하고, 추후 감사 및 추적을 위한 데이터도 안전하게 저장합니다.",
+      "benefit": "24/7 지능형 보안을 통해 절대적인 안전 환경을 제공합니다. 복잡한 수동 절차 없이 출입 관리가 가능하며, 보안 보고서 역시 몇 번의 클릭만으로 확인할 수 있습니다."
+    },
+    "feature3": {
+      "title": "3. 설비 자동화(냉난방, 조명, 블라인드)",
+      "desc": "모바일 앱을 통해 개인 맞춤형 업무 및 생활 공간을 설정할 수 있으며, 태양광 방향, 실내 인원 수에 따라 조명과 온도를 자동으로 조정합니다.",
+      "benefit": "최상의 편의성과 쾌적함을 제공하여 입주자 만족도를 높이고, 임대 오피스의 경우 우수 기업을 유치할 수 있는 핵심 경쟁 요소가 됩니다."
+    },
+    "feature4": {
+      "title": "4. 통합 빌딩 관리 플랫폼(BMS)",
+      "desc": "에너지, 보안, 소방, HVAC 등 모든 하위 시스템의 정보를 하나의 대시보드에서 시각적으로 관리할 수 있습니다.",
+      "benefit": "운영 효율을 획기적으로 향상시키고 인력 부담을 줄이며, 설비 이상을 사전에 감지하여 사고를 예방합니다."
+    },
+    "feature5": {
+      "title": "5. 데이터 분석 및 지능형 리포팅",
+      "desc": "운영 데이터를 지속적으로 수집·분석하여 인사이트 기반의 리포트와 개선 제안을 제공합니다.",
+      "benefit": "직관이 아닌 데이터 기반 의사결정을 가능하게 하여 장기적인 비용 절감과 운영 최적화를 실현합니다."
+    },
+    "whyHeading": "왜 ICS 솔루션인가?",
+    "whyIntro": "다양한 선택지 속에서 ICS가 차별화되는 이유:",
+    "why1": "독자적인 AI 기술: 단순 자동화가 아닌, 스스로 학습하고 고도화되는 지능형 시스템",
+    "why2": "풍부한 경험의 전문가 팀: 컨설팅부터 설계, 구축, 유지보수까지 원스톱 제공",
+    "why3": "24/7 기술 지원: 안정적인 시스템 운영 보장",
+    "why4": "유연한 확장성과 커스터마이징: 모듈형 구조로 빌딩 규모에 맞춰 손쉽게 확장",
+    "futureHeading": "빌딩의 미래를 설계하다",
+    "futureText": "스마트 빌딩은 단순한 건축물이 아니라 지속 가능하고 영감을 주는 업무·생활 공간입니다. 비용 절감, 보안 강화, 자산 가치 상승, 우수 고객 유치를 동시에 실현합니다. 오늘의 스마트 빌딩 투자는 내일의 성공을 위한 투자입니다."
+  },
+  "smartFactory": {
+    "title": "스마트 팩토리 솔루션",
+    "subtitle": "생산 자동화 및 산업 보안",
+    "badge": "스마트 팩토리",
+    "banner": "스마트 팩토리 솔루션",
+    "mainHeading": "차세대 스마트 팩토리 솔루션",
+    "mainDescription": "AI와 IoT 기반으로 실시간 운영 데이터를 수집·분석하여 지능적인 의사결정을 수행합니다. 반응형을 넘어 적응형·예측형 공장을 구현합니다.",
+    "featuresHeading": "핵심 기능 및 차별화된 가치",
+    "featuresDesc": "스마트 팩토리 솔루션은 견고한 기술 기반 위에 설계되었습니다.",
+    "feature1": {
+      "title": "1. 지능형 에너지 관리 시스템(EMS)",
+      "desc": "AI를 활용해 사용 패턴과 환경 조건을 분석하고 설비 운영을 최적화합니다.",
+      "benefit": "월 전력 비용 30~40% 절감 효과"
+    },
+    "feature2": {
+      "title": "2. 통합 보안 및 출입 통제",
+      "desc": "AI CCTV와 얼굴 인식, 카드, 모바일 기반 출입 관리 통합",
+      "benefit": "24/7 지능형 산업 보안 환경 제공"
+    },
+    "feature3": {
+      "title": "3. 설비 자동화",
+      "desc": "모바일 앱을 통한 작업 환경 개인화",
+      "benefit": "작업 효율 및 근무 만족도 향상"
+    },
+    "feature4": {
+      "title": "4. 중앙 공장 관리 플랫폼(MES)",
+      "desc": "모든 하위 시스템을 단일 대시보드에서 관리",
+      "benefit": "신속하고 정확한 의사결정 지원"
+    },
+    "feature5": {
+      "title": "5. 데이터 분석 및 리포팅",
+      "desc": "운영 데이터 기반의 지능형 보고서 제공",
+      "benefit": "운영 효율 최적화 및 비용 절감"
+    },
+    "whyHeading": "왜 ICS 솔루션인가?",
+    "whyIntro": "ICS 스마트 팩토리의 차별화 요소:",
+    "why1": "독자적인 AI 기술",
+    "why2": "경험 많은 전문가 팀",
+    "why3": "24/7 안정적 지원",
+    "why4": "모듈형 확장 구조",
+    "futureHeading": "공장의 미래를 설계하다",
+    "futureText": "스마트 팩토리는 생산 시설을 넘어 지속 가능하고 효율적인 업무 환경입니다. 오늘의 투자가 내일의 경쟁력이 됩니다."
+  },
+  "esg": {
+    "title": "ESG 솔루션",
+    "subtitle": "기업을 위한 지속 가능한 성장",
+    "badge": "ESG 솔루션",
+    "mainTitle": "ESG: 규제 대응을 넘어 경쟁 우위로",
+    "intro": "ESG: 규제 대응을 넘어 경쟁 우위로",
+    "description": "기업의 성공은 이제 재무 성과뿐 아니라 환경, 사회적 책임, 투명한 거버넌스에 의해 평가됩니다. ESG는 지속 가능한 기업 가치를 정의하는 핵심 요소입니다.",
+    "part1": "파트 1: 왜 ESG는 피할 수 없는 전략인가?",
+    "part2": "파트 2: ESG 도입의 주요 과제",
+    "part3": "파트 3: ICS의 ESG 전략 컨설팅 – 4단계 로드맵",
+    "why": "왜 ICS를 전략 파트너로 선택해야 할까요?"
+  },
+  "aiSoc": {
+    "badge": "AI 보안 운영 센터",
+    "subtitle": "첨단 AI 기반 사이버 보안 운영 센터로 위협을 자동 탐지 및 대응",
+    "features": {
+      "title": "기능",
+      "heading": "AI SOC 주요 기능",
+      "description": "네트워크 시스템을 보호하기 위한 통합 보안 솔루션",
+      "ueba": {
+        "title": "UEBA – 행위 분석",
+        "description": "AI 기반 사용자 및 엔터티의 이상 행위 탐지"
+      },
+      "threatDetection": {
+        "title": "위협 탐지",
+        "description": "사이버 보안 위협을 자동으로 탐지하고 경고"
+      },
+      "automation": {
+        "title": "자동 대응",
+        "description": "보안 사고에 대해 실시간 자동 대응 및 처리"
+      },
+      "monitoring": {
+        "title": "24/7 모니터링",
+        "description": "시스템을 상시 감시하여 사고를 신속히 탐지"
+      }
+    },
+    "benefits": {
+      "title": "혜택",
+      "heading": "왜 AI SOC인가?",
+      "description": "AI SOC는 기업 보안을 한 단계 끌어올립니다",
+      "item1": "높은 정확도의 신속한 위협 탐지",
+      "item2": "대응 시간을 수 시간에서 수 분으로 단축",
+      "item3": "분석 및 사고 대응 프로세스 자동화",
+      "item4": "보안 인력의 업무 부담 감소"
+    },
+    "stats": {
+      "threats": "월별 탐지 위협 수",
+      "responseTime": "대응 시간",
+      "accuracy": "탐지 정확도"
+    },
+    "cta": {
+      "heading": "AI SOC로 기업을 보호하세요",
+      "description": "귀사에 가장 적합한 AI SOC 솔루션을 상담해 드립니다"
+    }
   },
   "contactForm": {
     "name": "이름",
@@ -407,7 +787,7 @@
     "emailPlaceholder": "이메일을 입력하세요",
     "phone": "전화번호",
     "phonePlaceholder": "전화번호를 입력하세요",
-    "content": "내용",
+    "content": "문의 내용",
     "contentPlaceholder": "문의 내용을 입력하세요",
     "send": "문의 보내기"
   },
@@ -415,400 +795,16 @@
     "title": "회사 정보",
     "companyName": "국제 사이버 보안 주식회사 - ICS",
     "hanoiOffice": "하노이 사무소",
-    "address": "하노이 딘콩구 다이킴 신도시 TT3-5",
+    "address": "하노이 딘꽁, 다이낌 신도시 TT3-5",
     "contactDetails": "연락처 정보",
-    "phone": "전화 및 핫라인",
+    "phone": "전화 & 핫라인",
     "phoneNumber": "0707.806.860",
     "email": "이메일",
     "emailAddress": "info@icss.com.vn",
     "website": "웹사이트",
     "websiteUrl": "www.icss.com.vn",
     "map": "지도 위치",
-    "directions": "당사 사무소로 가는 길 찾기"
-  },
-  "newsletter": {
-    "title": "사이버보안 및 기술 솔루션의 최신 정보를 받으려면 구독하세요.",
-    "email": "이메일 주소",
-    "certifications": "인증 및 파트너"
-  },
-  "recruitment": {
-    "title": "채용",
-    "subtitle": "ICS 팀에 합류 - 함께 성장",
-    "badge": "채용",
-    "coming_soon": "콘텐츠가 곧 공개됩니다",
-    "message": "채용 정보를 준비 중입니다. 최신 채용 공고는 나중에 확인해 주세요."
-  },
-  "smartBuilding": {
-    "title": "스마트 빌딩 솔루션",
-    "subtitle": "건물을 위한 종합 자동화 및 보안",
-    "badge": "스마트 빌딩",
-    "banner": "스마트 빌딩 솔루션",
-    "mainHeading": "차세대 스마트 빌딩 솔루션",
-    "mainDescription": "당사 시스템은 인공지능(AI)과 사물인터넷(IoT)을 사용하여 실시간으로 운영 데이터를 수집하고 자동으로 분석하여 지능적인 의사결정을 수행합니다. 그 결과 '반응'할 뿐만 아니라 '적응'하고 '예측'할 수 있는 건물이 되어 모든 측면에서 탁월한 효율성을 실현합니다.",
-    "featuresHeading": "핵심 기능 및 탁월한 이점",
-    "featuresDesc": "스마트 빌딩 솔루션은 견고한 기술 기둥 위에 구축되어 있으며, 각 기둥은 명확한 경제적 가치와 경험을 제공합니다.",
-    "feature1": {
-      "title": "1. 스마트 에너지 관리 시스템(EMS)",
-      "desc": "시스템은 AI 알고리즘을 사용하여 사용 습관, 기상 조건, 사람의 존재를 분석합니다. 이를 통해 에어컨 및 조명 시스템의 작동을 자동으로 최적화합니다 - 무인 구역에서는 장비를 끄고, 일정에 따라 온도를 조정하며, 자연광을 최대한 활용합니다.",
-      "benefit": "이것은 가장 강력한 재무 레버리지입니다. 당사 솔루션은 월별 전력 비용을 30~40% 절감하는 데 도움이 되며, 대형 건물에게는 큰 숫자입니다. 또한, 건물의 에너지 절약은 탄소 배출량 감소에도 기여하며, 이는 녹색 건물 인증에 중요한 가산점이 되고 브랜드의 지속 가능한 이미지를 향상시킵니다."
-    },
-    "feature2": {
-      "title": "2. 통합 보안 및 스마트 출입 통제",
-      "desc": "AI 감시 카메라 시스템, 얼굴 인식, 카드 또는 모바일 앱을 통한 출입 통제를 통합합니다. 시스템은 비정상적인 행동을 자동으로 인식하여 즉시 보안 팀에 경고하고, 필요시 쉽게 추적할 수 있도록 데이터를 저장합니다.",
-      "benefit": "절대적으로 안전한 환경과 24시간 365일 스마트 보안을 제공합니다. 출입 관리가 원활하고 간단해지며 복잡한 수동 프로세스가 없어집니다. 관리자에게 추적 및 보안 보고서 작성은 몇 번의 클릭만으로 가능합니다."
-    },
-    "feature3": {
-      "title": "3. 시설 자동화(에어컨, 조명, 커튼)",
-      "desc": "사용자는 모바일 앱에서 몇 번의 조작만으로 작업 공간이나 생활 공간을 개인화할 수 있습니다. 또한 시스템은 태양 방향에 따라 자동으로 커튼을 조정하고, 실내 인원 수에 따라 조명과 온도를 조정할 수 있습니다.",
-      "benefit": "최대한의 편리함과 편안함을 제공하여 건물 사용자의 경험과 만족도를 직접적으로 향상시킵니다. 사무실 임대의 경우, 이는 최고의 기업을 유치하기 위한 귀중한 경쟁 요인입니다."
-    },
-    "feature4": {
-      "title": "4. 중앙 빌딩 관리 플랫폼(BMS)",
-      "desc": "하위 시스템(에너지, 보안, 소방, HVAC 등)의 모든 정보가 단일 대시보드에 직관적으로 표시됩니다. 여기에서 운영 팀은 건물의 모든 활동을 모니터링하고 제어하며 보고서를 받을 수 있습니다.",
-      "benefit": "건물 관리를 그 어느 때보다 효율적으로 만듭니다. 관리자는 운영 인력을 줄일 수 있으며, 더 빠르고 정확하게 의사결정을 내릴 수 있습니다. 특히, 시스템은 장비 이상 징후를 조기에 발견하여 고장이 발생하기 전에 예방하는 데 도움이 됩니다."
-    },
-    "feature5": {
-      "title": "5. 데이터 분석 및 인텔리전트 리포트",
-      "desc": "데이터는 금입니다. 당사 시스템은 지속적으로 운영 데이터를 수집 및 분석하여 인텔리전트 리포트를 생성하고 구체적인 개선 제안을 제공합니다(예: '5층 구역은 주말 에너지 소비가 비정상적으로 높음').",
-      "benefit": "소유자와 관리자가 감각이 아닌 데이터를 기반으로 의사결정을 내리는 데 도움이 됩니다. 이는 운영 효율성을 장기적으로 지속적으로 최적화하고 비용을 절감하는 열쇠입니다."
-    },
-    "whyHeading": "ICS 솔루션을 선택하는 이유는?",
-    "whyIntro": "시장에는 많은 선택지가 있지만, ICS 솔루션은 다음 점에서 차별화를 이룹니다:",
-    "why1": "독자적인 AI 기술: 스크립트에 따라 자동화할 뿐만 아니라 AI를 사용하여 시스템이 자가 학습하고 점점 더 똑똑해집니다.",
-    "why2": "경험이 풍부한 전문가 팀: 컨설팅, 설계, 구현부터 유지보수까지 포괄적인 솔루션을 제공합니다.",
-    "why3": "24시간 365일 지원 서비스: 시스템이 항상 안정적으로 작동하고 적시에 지원을 받을 수 있도록 보장합니다.",
-    "why4": "유연한 커스터마이징 및 확장 능력: 당사 솔루션은 모듈식 설계로 건물 발전 규모에 따라 쉽게 커스터마이징 및 업그레이드할 수 있습니다.",
-    "futureHeading": "건물의 미래를 창조하세요",
-    "futureText": "스마트 빌딩은 단순한 건물이 아닙니다 - 그것은 지능적이고 지속 가능하며 영감으로 가득 찬 생활과 업무 환경입니다. 비용을 절감하고 보안을 강화하며 자산 가치를 높이고 최고의 고객을 유치하는 데 도움이 됩니다. 오늘 스마트 빌딩 솔루션에 투자하는 것은 내일의 성공에 투자하는 것입니다."
-  },
-  "smartFactory": {
-    "title": "스마트 팩토리 솔루션",
-    "subtitle": "제조 자동화 및 산업 보안",
-    "badge": "스마트 팩토리",
-    "banner": "스마트 팩토리 솔루션",
-    "mainHeading": "차세대 스마트 팩토리 솔루션",
-    "mainDescription": "당사 시스템은 인공지능(AI)과 사물인터넷(IoT)을 사용하여 실시간으로 운영 데이터를 수집하고 자동으로 분석하여 지능적인 의사결정을 수행합니다. 그 결과 '반응'할 뿐만 아니라 '적응'하고 '예측'할 수 있는 공장이 되어 모든 측면에서 탁월한 효율성을 실현합니다.",
-    "featuresHeading": "핵심 기능 및 탁월한 이점",
-    "featuresDesc": "스마트 팩토리 솔루션은 견고한 기술 기둥 위에 구축되어 있으며, 각 기둥은 명확한 경제적 가치와 경험을 제공합니다.",
-    "feature1": {
-      "title": "1. 스마트 에너지 관리 시스템(EMS)",
-      "desc": "시스템은 AI 알고리즘을 사용하여 사용 습관, 기상 조건, 사람의 존재를 분석합니다. 이를 통해 에어컨 및 조명 시스템의 작동을 자동으로 최적화합니다.",
-      "benefit": "월별 전력 비용을 30~40% 절감하는 데 도움이 되며, 대형 공장에게는 큰 숫자입니다."
-    },
-    "feature2": {
-      "title": "2. 통합 보안 및 스마트 출입 통제",
-      "desc": "AI 감시 카메라 시스템, 얼굴 인식, 카드 또는 모바일 앱을 통한 출입 통제를 통합합니다.",
-      "benefit": "절대적으로 안전한 환경과 24시간 365일 스마트 보안을 제공합니다."
-    },
-    "feature3": {
-      "title": "3. 시설 자동화(에어컨, 조명, 커튼)",
-      "desc": "사용자는 모바일 앱에서 몇 번의 조작만으로 작업 공간을 개인화할 수 있습니다.",
-      "benefit": "최대한의 편리함과 편안함을 제공하여 경험과 작업 효율성을 직접적으로 향상시킵니다."
-    },
-    "feature4": {
-      "title": "4. 중앙 공장 관리 플랫폼(MES)",
-      "desc": "하위 시스템의 모든 정보가 단일 대시보드에 직관적으로 표시됩니다.",
-      "benefit": "공장 관리를 그 어느 때보다 효율적으로 만들고, 더 빠르고 정확하게 의사결정을 내릴 수 있습니다."
-    },
-    "feature5": {
-      "title": "5. 데이터 분석 및 인텔리전트 리포트",
-      "desc": "시스템은 지속적으로 운영 데이터를 수집 및 분석하여 인텔리전트 리포트를 생성합니다.",
-      "benefit": "관리자가 데이터를 기반으로 의사결정을 내리고 운영 효율성을 최적화하여 비용을 절감하는 데 도움이 됩니다."
-    },
-    "whyHeading": "ICS 솔루션을 선택하는 이유는?",
-    "whyIntro": "시장에는 많은 선택지가 있지만, ICS 솔루션은 다음 점에서 차별화를 이룹니다:",
-    "why1": "독자적인 AI 기술: 스크립트에 따라 자동화할 뿐만 아니라 AI를 사용하여 시스템이 자가 학습합니다.",
-    "why2": "경험이 풍부한 전문가 팀: 컨설팅, 설계, 구현부터 유지보수까지 포괄적인 솔루션을 제공합니다.",
-    "why3": "24시간 365일 지원 서비스: 시스템이 항상 안정적으로 작동하도록 보장합니다.",
-    "why4": "유연한 커스터마이징 및 확장 능력: 당사 솔루션은 모듈식 설계입니다.",
-    "futureHeading": "공장의 미래를 창조하세요",
-    "futureText": "스마트 팩토리는 단순한 생산 시설이 아닙니다 - 그것은 지능적이고 지속 가능하며 영감으로 가득 찬 작업 환경입니다. 비용을 절감하고 보안을 강화하며 생산성을 높이고 최고의 인재를 유치하는 데 도움이 됩니다. 오늘 스마트 팩토리 솔루션에 투자하는 것은 내일의 성공에 투자하는 것입니다."
-  },
-  "esg": {
-    "title": "ESG 솔루션",
-    "subtitle": "기업의 지속가능한 발전",
-    "badge": "ESG",
-    "mainTitle": "ESG: 규정 준수의 압력에서 경쟁 우위로 - 베트남 기업을 위한 전략적 로드맵",
-    "intro": "ESG: 규정 준수의 압력에서 경쟁 우위로 - 베트남 기업을 위한 전략적 로드맵",
-    "description": "평평한 세계와 변수가 가득한 비즈니스 시대에서 기업의 성공을 측정하는 척도는 더 이상 재무제표의 이익 숫자만이 아닙니다. 글로벌 변혁이 일어나고 있으며, 기업의 가치는 눈에 보이지 않지만 강력한 요인에 의해 형성되고 있습니다: 환경에 대한 책임, 사회에 대한 약속, 그리고 거버넌스의 투명성. 이것이 ESG(환경-사회-거버넌스)의 3대 기둥입니다.",
-    "part1": "제1부: 왜 ESG는 피할 수 없는 '전략 게임'인가?",
-    "part2": "제2부: ESG로 가는 길의 장애물",
-    "part3": "제3부: 당사의 ESG 전략 컨설팅 서비스 - 지속가능성을 향한 4단계 로드맵",
-    "why": "왜 우리를 전략적 파트너로 선택하는가?"
-  },
-  "aiSoc": {
-    "title": "AI SOC - 보안 운영 센터",
-    "subtitle": "AI를 활용한 자동 모니터링 및 대응",
-    "badge": "AI SOC",
-    "mainTitle": "AI SOC: 사이버보안의 재정의 - 수동적 반응에서 예측 방어로",
-    "intro": "AI SOC: 사이버보안의 재정의 - 수동적 반응에서 예측 방어로",
-    "problem": "전통적인 보안 운영 센터(SOC)의 치명적인 약점",
-    "solution": "AI SOC: 보안 운영 센터의 새로운 시대",
-    "features": "AI SOC의 탁월한 힘: 기능 및 비즈니스 가치",
-    "why": "왜 당사의 AI SOC 솔루션을 선택하는가?"
-  },
-  "products": {
-    "vietguard": {
-      "badge": "모바일 앱 보안",
-      "subtitle": "모바일 애플리케이션 보안 스캔 및 취약점 탐지 도구",
-      "visitWebsite": "웹사이트 방문",
-      "features": {
-        "title": "기능",
-        "heading": "Vietguard의 주요 기능",
-        "description": "모바일 앱을 포괄적으로 보호하는 솔루션",
-        "scanning": {
-          "title": "자동 스캔",
-          "description": "모바일 앱의 보안 취약점을 자동으로 스캔 및 탐지"
-        },
-        "vulnerability": {
-          "title": "취약점 탐지",
-          "description": "중대한 보안 취약점을 탐지하고 경고"
-        },
-        "protection": {
-          "title": "포괄적인 보호",
-          "description": "위협과 공격으로부터 앱 보호"
-        },
-        "compliance": {
-          "title": "표준 준수",
-          "description": "국제 보안 기준 준수 보장"
-        }
-      },
-      "benefits": {
-        "title": "이점",
-        "heading": "Vietguard를 선택하는 이유는?",
-        "description": "Vietguard가 모바일 앱에 탁월한 이점을 제공합니다",
-        "item1": "자동, 빠른 스캔 및 취약점 탐지",
-        "item2": "상세하고 이해하기 쉬운 보안 문제 보고서",
-        "item3": "멀티 플랫폼 지원: iOS, Android",
-        "item4": "최신 취약점 데이터베이스의 지속적인 업데이트"
-      },
-      "stats": {
-        "scanned": "스캔된 앱",
-        "vulnerabilities": "발견된 취약점",
-        "accuracy": "정확도"
-      },
-      "cta": {
-        "heading": "오늘 모바일 앱을 보호하세요",
-        "description": "문의하시고 Vietguard의 무료 평가판을 사용하세요"
-      }
-    },
-    "aiSoc": {
-      "badge": "AI 보안 운영 센터",
-      "subtitle": "첨단 AI를 갖춘 보안 운영 센터 솔루션, 위협의 자동 탐지 및 대응",
-      "features": {
-        "title": "기능",
-        "heading": "AI SOC의 주요 기능",
-        "description": "네트워크 시스템을 포괄적으로 보호하는 솔루션",
-        "ueba": {
-          "title": "UEBA - 행동 분석",
-          "description": "AI를 사용하여 사용자 및 엔티티의 비정상적인 행동 탐지"
-        },
-        "threatDetection": {
-          "title": "위협 탐지",
-          "description": "사이버보안 위협을 자동으로 탐지하고 경고"
-        },
-        "automation": {
-          "title": "대응 자동화",
-          "description": "보안 이벤트에 실시간으로 자동 대응 및 처리"
-        },
-        "monitoring": {
-          "title": "24/7 모니터링",
-          "description": "네트워크 시스템을 지속적으로 모니터링하고 이벤트를 적시에 탐지"
-        }
-      },
-      "benefits": {
-        "title": "이점",
-        "heading": "AI SOC를 선택하는 이유는?",
-        "description": "AI SOC가 기업에 탁월한 이점을 제공합니다",
-        "item1": "높은 정확도로 위협을 빠르게 탐지",
-        "item2": "대응 시간을 몇 시간에서 몇 분으로 단축",
-        "item3": "분석 및 이벤트 처리 프로세스 자동화",
-        "item4": "사이버보안 팀의 작업 부담 감소"
-      },
-      "stats": {
-        "threats": "탐지된 위협/월",
-        "responseTime": "응답 시간",
-        "accuracy": "정확도"
-      },
-      "cta": {
-        "heading": "AI SOC로 기업 보호",
-        "description": "가장 적합한 AI SOC 솔루션 컨설팅을 위해 문의하세요"
-      }
-    },
-    "csaDlp": {
-      "badge": "엔드포인트 보안 & DLP",
-      "subtitle": "엔드포인트 보안과 데이터 손실 방지의 통합 솔루션, 기기와 기업 데이터를 보호",
-      "features": {
-        "title": "기능",
-        "heading": "CSA-Endpoint의 주요 기능",
-        "description": "엔드포인트와 기업 데이터를 포괄적으로 보호하는 솔루션",
-        "endpoint": {
-          "title": "엔드포인트 보안",
-          "description": "컴퓨터, 노트북 및 모바일 기기를 포괄적으로 보호"
-        },
-        "dlp": {
-          "title": "데이터 손실 방지",
-          "description": "민감한 데이터가 조직 외부로 유출되는 것을 방지"
-        },
-        "monitoring": {
-          "title": "모니터링 및 제어",
-          "description": "활동을 모니터링하고 데이터 액세스를 제어"
-        },
-        "compliance": {
-          "title": "규정 준수",
-          "description": "데이터 보호 규정 준수 보장"
-        }
-      },
-      "benefits": {
-        "title": "이점",
-        "heading": "CSA-Endpoint를 선택하는 이유는?",
-        "description": "CSA-Endpoint가 기업 데이터에 포괄적인 보호를 제공합니다",
-        "item1": "민감한 데이터 유출을 효과적으로 방지",
-        "item2": "맬웨어와 랜섬웨어 공격으로부터 기기 보호",
-        "item3": "데이터 액세스 및 사용 제어",
-        "item4": "상세한 보고서 및 규정 준수"
-      },
-      "stats": {
-        "endpoints": "보호된 엔드포인트",
-        "incidents": "차단된 사고",
-        "compliance": "규정 준수"
-      },
-      "cta": {
-        "heading": "CSA-Endpoint로 기업 데이터 보호",
-        "description": "CSA-Endpoint 솔루션 컨설팅을 위해 문의하세요"
-      }
-    },
-    "pentestServices": {
-      "badge": "침투 테스트 서비스",
-      "subtitle": "전문 침투 테스트 서비스, 해커가 악용하기 전에 보안 취약점을 발견하고 수정",
-      "features": {
-        "title": "기능",
-        "heading": "전문 침투 테스트 서비스",
-        "description": "보안 취약점을 포괄적으로 발견하고 수정",
-        "assessment": {
-          "title": "취약점 평가",
-          "description": "보안 취약점에 대한 포괄적인 검토 및 평가"
-        },
-        "exploitation": {
-          "title": "익스플로잇 테스트",
-          "description": "실제 공격을 시뮬레이션하여 보안 수준 테스트"
-        },
-        "reporting": {
-          "title": "상세 보고서",
-          "description": "완전한 취약점 보고서 및 수정 가이드"
-        },
-        "remediation": {
-          "title": "수정 지원",
-          "description": "발견된 취약점의 수정을 컨설팅 및 지원"
-        }
-      },
-      "benefits": {
-        "title": "이점",
-        "heading": "침투 테스트 서비스를 선택하는 이유는?",
-        "description": "침투 테스트를 통해 취약점을 적극적으로 발견하고 수정할 수 있습니다",
-        "item1": "실제 공격이 발생하기 전에 취약점 발견",
-        "item2": "보안 상태에 대한 포괄적인 평가",
-        "item3": "상세한 보고서 및 구체적인 수정 가이드",
-        "item4": "국제 보안 기준 준수"
-      },
-      "stats": {
-        "tests": "완료된 침투 테스트 프로젝트",
-        "vulnerabilities": "발견된 취약점",
-        "success": "성공률"
-      },
-      "cta": {
-        "heading": "침투 테스트로 사이버보안 평가",
-        "description": "적합한 침투 테스트 서비스 컨설팅을 위해 문의하세요"
-      }
-    },
-    "oracleCloud": {
-      "badge": "클라우드 컴퓨팅",
-      "subtitle": "Oracle의 선도적인 클라우드 컴퓨팅 솔루션, 고성능, 뛰어난 보안, 최적화된 비용",
-      "visitWebsite": "웹사이트 방문",
-      "features": {
-        "title": "기능",
-        "heading": "Oracle Cloud의 주요 기능",
-        "description": "현대 기업을 위한 포괄적인 클라우드 솔루션",
-        "compute": {
-          "title": "컴퓨팅 및 가상 머신",
-          "description": "고성능과 유연한 확장성을 갖춘 강력한 가상 서버"
-        },
-        "database": {
-          "title": "데이터베이스 클라우드",
-          "description": "클라우드 플랫폼에서 세계를 선도하는 데이터베이스 관리 시스템"
-        },
-        "security": {
-          "title": "뛰어난 보안",
-          "description": "고급 암호화 및 액세스 제어를 갖춘 다층 보안"
-        },
-        "network": {
-          "title": "글로벌 네트워크",
-          "description": "낮은 지연 시간과 높은 대역폭을 갖춘 글로벌 네트워크 인프라"
-        }
-      },
-      "benefits": {
-        "title": "이점",
-        "heading": "Oracle Cloud를 선택하는 이유는?",
-        "description": "Oracle Cloud는 최고의 성능과 보안을 제공합니다",
-        "item1": "경쟁력 있는 비용으로 뛰어난 성능",
-        "item2": "고급 기능을 갖춘 다층 보안",
-        "item3": "멀티 플랫폼 지원 및 쉬운 통합",
-        "item4": "전문적인 24/7 지원 팀"
-      },
-      "stats": {
-        "regions": "글로벌 지역",
-        "uptime": "가동 시간",
-        "customers": "글로벌 고객"
-      },
-      "cta": {
-        "heading": "Oracle Cloud로 디지털 혁신",
-        "description": "Oracle Cloud 솔루션 컨설팅을 위해 문의하세요"
-      }
-    },
-    "smartDashboard": {
-      "badge": "스마트 모니터링",
-      "subtitle": "실시간 데이터 분석을 갖춘 스마트 대시보드 시스템, 효율적인 비즈니스 관리 및 모니터링",
-      "visitWebsite": "웹사이트 방문",
-      "features": {
-        "title": "기능",
-        "heading": "Smart Dashboard의 주요 기능",
-        "description": "인텔리전트 모니터링 및 데이터 분석 솔루션",
-        "realtime": {
-          "title": "실시간 추적",
-          "description": "데이터와 활동을 실시간으로 모니터링"
-        },
-        "analytics": {
-          "title": "고급 분석",
-          "description": "AI와 머신러닝을 사용한 데이터 분석"
-        },
-        "reporting": {
-          "title": "자동 보고서",
-          "description": "시각화 차트를 사용한 자동 보고서 생성"
-        },
-        "visualization": {
-          "title": "데이터 시각화",
-          "description": "다양한 차트를 사용하여 데이터를 시각적으로 표시"
-        }
-      },
-      "benefits": {
-        "title": "이점",
-        "heading": "Smart Dashboard를 선택하는 이유는?",
-        "description": "Smart Dashboard가 비즈니스를 더 효과적으로 관리하도록 지원합니다",
-        "item1": "모든 비즈니스 활동을 중앙에서 모니터링",
-        "item2": "실제 데이터를 기반으로 신속한 의사결정",
-        "item3": "특정 요구에 따라 대시보드 커스터마이징",
-        "item4": "기존 시스템과 쉽게 통합"
-      },
-      "stats": {
-        "dashboards": "배포된 대시보드",
-        "dataPoints": "처리된 데이터 포인트",
-        "realtime": "실시간 모니터링"
-      },
-      "cta": {
-        "heading": "Smart Dashboard로 비즈니스 관리",
-        "description": "Smart Dashboard의 데모 및 컨설팅을 위해 문의하세요"
-      }
-    }
+    "directions": "사무실 찾아오는 길"
   },
   "sidebar": {
     "aboutICS": "ICS 소개",
@@ -816,7 +812,7 @@
     "partners": "파트너",
     "clients": "고객",
     "socialActivities": "사회 활동",
-    "newsRecruitment": "뉴스 - 채용",
+    "newsRecruitment": "뉴스 · 채용",
     "contactUs": "문의하기",
     "form": {
       "fullName": "이름",
@@ -825,42 +821,962 @@
       "emailPlaceholder": "이메일을 입력하세요",
       "phone": "전화번호",
       "phonePlaceholder": "전화번호를 입력하세요",
-      "content": "메시지",
-      "contentPlaceholder": "메시지를 입력하세요",
-      "submit": "메시지 보내기"
+      "content": "문의 내용",
+      "contentPlaceholder": "문의 내용을 입력하세요",
+      "submit": "문의 보내기"
     }
   },
-  "articlesManagement": {
-    "title": "기사 관리",
-    "description": "기사 목록 관리",
-    "loading": "로딩 중...",
-    "noArticles": "기사가 없습니다",
-    "errors": {
-      "errorTitle": "오류",
-      "fetchError": "기사를 로드할 수 없습니다",
-      "deleteError": "기사를 삭제할 수 없습니다"
-    },
-    "auth": {
-      "title": "인증 필수",
-      "wrongPassword": "잘못된 암호입니다",
-      "passwordError": "잘못된 암호입니다. {{action}}할 수 없습니다"
-    },
-    "password": "암호",
-    "deleteConfirm": "이 작업은 실행 취소할 수 없습니다."
+  "newsletter": {
+    "title": "사이버 보안 및 최신 기술 솔루션 소식을 받아보세요.",
+    "email": "이메일 주소",
+    "certifications": "인증 및 파트너"
   },
-  "writeArticle": {
-    "title": "기사 작성",
-    "description": "새 기사를 작성하거나 기존 기사를 편집합니다",
-    "loading": "편집기를 로딩 중...",
-    "errors": {
-      "errorTitle": "인증 오류",
-      "fetchError": "기사를 로드할 수 없습니다",
-      "passwordError": "기사를 저장하려면 올바른 암호를 입력하세요"
+  "products": {
+    "aiSoc": {
+      "hero": {
+        "badge": "강력함. 지능적. 자동화.",
+        "title": "AI SOC",
+        "titleMain": "인공지능으로 사이버 보안 운영 혁신",
+        "titleSpan": "혁신",
+        "subtitle": "전통적인 SOC는 구식입니다. AI SOC가 새로운 표준입니다.",
+        "description": "ICS의 AI SOC 솔루션은 Google의 글로벌 규모 데이터 분석 플랫폼과 Gurucul의 고급 행동 분석 기술을 결합하여 기업을 지원합니다:",
+        "points": [
+          "사고 대응 시간 70% 단축",
+          "탐지 프로세스 90% 자동화",
+          "위협 탐지 정확도 95%"
+        ],
+        "ctaSubtitle": "단순한 탐지가 아닌 즉각적인 조치.",
+        "cta1": "AI SOC 솔루션 상담 받기",
+        "cta2": "워크숍 워크스루 문서 보기"
+      },
+      "painPoints": {
+        "badge": "시장 문제점",
+        "title": "왜 전통적인 SOC는 더 이상 보호할 수 없나요?",
+        "subtitle": "기업들은 가혹한 현실에 직면하고 있습니다:",
+        "points": [
+          {
+            "title": "경보 과부하",
+            "items": [
+              "시스템은 매일 수백만 개의 경보를 생성합니다",
+              "베트남만 해도: 하루 12,300+ 사이버 공격",
+              "전통적인 SOC는 높은 정확도로 수동 처리할 수 없습니다"
+            ]
+          },
+          {
+            "title": "점점 더 정교해지는 공격",
+            "items": [
+              "매년 83+ APT 캠페인이 다음을 표적으로 합니다:",
+              "은행-금융, 에너지-통신, 정부-대기업",
+              "해커들은 더 이상 빠르게 공격하지 않고 몇 주/몇 달 동안 숨습니다"
+            ]
+          },
+          {
+            "title": "SOC 인력 위기",
+            "items": [
+              "고급 SOC 분석가의 심각한 부족",
+              "24/7 SOC 유지 비용 막대",
+              "번아웃-오류-느린 대응"
+            ]
+          },
+          {
+            "title": "받아들일 수 없는 대응 시간",
+            "items": [
+              "전통적인 SOC: 며칠에서 몇 주",
+              "AI SOC: 몇 초에서 몇 분"
+            ]
+          }
+        ],
+        "conclusion": "전통적인 SOC는 단지 \"볼\" 수만 있지만 시간 내에 행동할 수 없습니다."
+      },
+      "solution": {
+        "badge": "AI SOC 생태계",
+        "title": "ICS AI SOC 솔루션",
+        "subtitle": "포괄적인 AI SOC 생태계",
+        "description": "ICS는 Google Chronicle/Google Security Operations와 Gurucul REVEAL 플랫폼의 결합을 기반으로 차세대 AI SOC를 배포합니다",
+        "pillars": [
+          {
+            "icon": "Database",
+            "number": "1",
+            "title": "대규모 데이터 - Google 규모",
+            "items": [
+              "하루 500억 개의 파일 분석",
+              "전 세계 50억 대의 장치 보호",
+              "무제한 로그 저장 및 쿼리 기능"
+            ]
+          },
+          {
+            "icon": "Brain",
+            "number": "2",
+            "title": "행동 분석 - UEBA",
+            "items": [
+              "머신 러닝이 사용자 및 시스템 행동 학습",
+              "탐지: 계정 침해, 내부자 위협, 측면 이동, 권한 상승",
+              "서명 없는 탐지"
+            ]
+          },
+          {
+            "icon": "Zap",
+            "number": "3",
+            "title": "대응 자동화 - SOAR",
+            "items": [
+              "자동 대응 플레이북: 엔드포인트 격리, 계정 연결 해제, 악성 IP/도메인 차단",
+              "MTTR 70% 이상 감소"
+            ]
+          }
+        ]
+      },
+      "features": {
+        "badge": "획기적인 기술",
+        "title": "주요 기능",
+        "subtitle": "손끝에 있는 고급 기술",
+        "items": [
+          {
+            "icon": "Target",
+            "title": "위험 점수 대시보드",
+            "description": "상황 인식 위험 점수, 가장 위험한 위협 우선순위 지정. 더 이상 경보 소음 없음"
+          },
+          {
+            "icon": "Search",
+            "title": "조사 스튜디오",
+            "description": "전체 데이터 파이프라인 심층 추적, 경보→로그→행동 드릴다운. 포렌식 및 위협 헌팅 지원"
+          },
+          {
+            "icon": "Map",
+            "title": "MITRE ATT&CK 매핑",
+            "description": "공격 기술 자동 매핑, kill chain에서 해커의 위치 이해. 리더십 및 감사 보고서 지원"
+          },
+          {
+            "icon": "FileText",
+            "title": "맞춤 보고",
+            "description": "규정 준수 보고서(ISO 27001, NIST, PCI-DSS 등), 경영진을 위한 임원 보고서. 일정에 따라 자동 내보내기"
+          },
+          {
+            "icon": "CheckCircle",
+            "title": "사례 관리",
+            "description": "전체 사고 수명 주기 관리, 작업 할당-SLA 추적-체계적으로 사례 종료. 내부 SOC 및 MSSP에 적합"
+          }
+        ]
+      },
+      "process": {
+        "badge": "운영 프로세스",
+        "title": "폐쇄 루프 사이클",
+        "subtitle": "식별-보호-탐지-대응-복구",
+        "steps": [
+          {
+            "number": "1",
+            "title": "수집 - 수집",
+            "description": "클라우드, 엔드포인트, 네트워크, IAM, SaaS. 로그 중앙 집중화, 실시간 정규화"
+          },
+          {
+            "number": "2",
+            "title": "탐지 - 탐지",
+            "description": "글로벌 위협 인텔리전스와 AI/ML 상관 관계. 알려지지 않은 이상 징후 탐지(제로데이)"
+          },
+          {
+            "number": "3",
+            "title": "분석 - 분석",
+            "description": "AI + ICS 전문가 컨텍스트 분석. 오탐 제거"
+          },
+          {
+            "number": "4",
+            "title": "대응 - 대응",
+            "description": "자동 플레이북 트리거. 몇 초 안에 확산 억제"
+          },
+          {
+            "number": "5",
+            "title": "복구 - 복구",
+            "description": "복구 지원. 패치 제안-보안 태세 개선"
+          }
+        ]
+      },
+      "whyIcs": {
+        "badge": "ICS를 선택하는 이유",
+        "title": "왜 ICS를 선택하나요?",
+        "subtitle": "기업과 파트너십을 맺는 사이버 보안 전문가",
+        "points": [
+          {
+            "icon": "DollarSign",
+            "title": "비용 최적화",
+            "description": "비싼 물리적 SOC 투자 불필요. 기업 규모에 따른 유연한 모델"
+          },
+          {
+            "icon": "Zap",
+            "title": "세계 최고의 기술",
+            "description": "Gurucul AI SOC 배포 파트너. 오늘날 가장 진보된 AI SOC 플랫폼 액세스"
+          },
+          {
+            "icon": "Users",
+            "title": "베트남 기반 팀",
+            "description": "24/7 베트남어 지원. 현지 인프라 및 위협에 대한 깊은 이해. 단순한 솔루션 판매가 아닌 장기 파트너십"
+          }
+        ]
+      },
+      "resources": {
+        "badge": "문서 및 사례 연구",
+        "title": "AI SOC가 실제로 어떻게 작동하는지 알아보기",
+        "description": "'Gurucul Workshop Walkthrough' 문서를 다운로드하여:",
+        "points": [
+          "AI SOC 아키텍처 이해",
+          "실제 사고 처리 프로세스 데모 보기",
+          "귀사 기업과의 적합성 평가"
+        ],
+        "cta": "SOC 운영 가이드 다운로드"
+      },
+      "traditionalVsAI": {
+        "badge": "전통적 SOC vs AI SOC",
+        "title": "전통적 SOC ≠ 충분한 보호인 이유",
+        "subtitle": "베트남에서 하루에 12,300+건의 공격. 수동 SOC는 따라갈 수 없음. AI SOC는 초 단위로 대응.",
+        "comparison": {
+          "title": "전통적 수동 SOC vs AI 기반 SOC",
+          "traditional": "전통적 SOC",
+          "ai": "AI SOC",
+          "items": [
+            {"metric": "대응 시간", "traditional": "며칠~주", "ai": "초~분"},
+            {"metric": "경보 처리", "traditional": "수동, 오류 발생", "ai": "90%+ 자동화"},
+            {"metric": "위협 감지", "traditional": "시그니처 기반만", "ai": "시그니처 + 행동 + 제로데이"},
+            {"metric": "비용", "traditional": "비싼 L1-L3 팀", "ai": "60-70% 감소"},
+            {"metric": "오탐", "traditional": "50-80% 노이즈", "ai": "95% 정확도"}
+          ]
+        },
+        "speed": {
+          "title": "대응 속도 비교",
+          "subtitle": "사이버 보안에서는 시간이 전부",
+          "items": [
+            {"type": "전통적 SOC", "response": "며칠 - 주", "impact": "해커가 이동, 숨기, 데이터 탈취할 시간이 있음"},
+            {"type": "AI SOC", "response": "초 - 분", "impact": "횡적 이동 전에 위협 봉쇄"}
+          ]
+        },
+        "architecture": {
+          "title": "AI SOC 개방형 아키텍처",
+          "subtitle": "규모, 유연성, 지속적 개선을 위해 구축",
+          "capabilities": [
+            {"name": "무제한 저장소", "description": "비용 제약 없이 모든 로그를 영구 저장"},
+            {"name": "실시간 처리", "description": "매일 수십억 이벤트를 즉시 분석"},
+            {"name": "450+ 통합", "description": "모든 도구 연결: 방화벽, IDS, 클라우드, SaaS 등"},
+            {"name": "자동 확장", "description": "요구에 따라 자동으로 확장/축소"}
+          ]
+        },
+        "proven": {
+          "title": "검증된 기술",
+          "subtitle": "전 세계 선도 기업이 신뢰",
+          "stats": [
+            {"metric": "50억", "description": "전 세계 보호되는 기기"},
+            {"metric": "500억+", "description": "매일 분석되는 파일"},
+            {"metric": "99.99%", "description": "가동 시간 보장"},
+            {"metric": "50,000+", "description": "엔터프라이즈 고객"}
+          ]
+        },
+        "seamless": {
+          "title": "완벽한 통합 - 4가지 운영 구성 요소",
+          "subtitle": "인간 개입 없이 24/7 운영되는 폐쇄 루프 사이클",
+          "components": [
+            {"number": "1", "name": "수집", "description": "실시간으로 모든 소스에서 로그 수집"},
+            {"number": "2", "name": "감지", "description": "AI/ML이 이상 및 미지의 위협 감지"},
+            {"number": "3", "name": "분석", "description": "전문가 문맥 분석으로 오탐 제거"},
+            {"number": "4", "name": "대응", "description": "자동 플레이북이 초 단위로 위협 봉쇄"}
+          ]
+        },
+        "savings": {
+          "title": "비용 절감",
+          "subtitle": "보안 운영 비용 대폭 감소",
+          "items": [
+            {"metric": "60-70%", "description": "전통적 SOC 대비 비용 감소"},
+            {"metric": "영", "description": "비싼 L1 분석가 채용 및 교육 불필요"},
+            {"metric": "사용량 기반 결제", "description": "실제 보안 필요에 따라 비용 확장"},
+            {"metric": "3명의 엔지니어", "description": "동등 역량의 10명 이상 대신"}
+          ]
+        },
+        "performance": {
+          "title": "우수한 성능 지표",
+          "subtitle": "AI SOC 효과를 증명하는 수치",
+          "metrics": [
+            {"value": "95%", "label": "더 빠른 대응"},
+            {"value": "100%", "label": "APT 탐지율"},
+            {"value": "24/7", "label": "항상 켜진 보호"},
+            {"value": "+70%", "label": "MTTR 감소"}
+          ]
+        },
+        "teamCapability": {
+          "title": "보안 팀 역량 강화",
+          "subtitle": "분석가를 수동 작업에서 해방하여 전략에 집중",
+          "benefits": ["반복적 L1 작업 제거", "경보 분류 대신 위협 사냥 가능", "분석가 소진 및 이직 감소", "사고 대응 품질 개선"]
+        },
+        "documentation": {
+          "title": "상세 구현 가이드",
+          "subtitle": "AI SOC를 이해하고 배포하는 데 필요한 모든 것",
+          "includes": ["완전한 AI SOC 아키텍처 문서", "Gurucul 플랫폼 데모 및 연습", "실제 사고 처리 사용 사례", "ROI 계산기 및 비용 분석"]
+        },
+        "getStarted": {
+          "title": "보안 운영을 변환할 준비가 되셨나요?",
+          "subtitle": "당사 전문가가 AI SOC 구현을 안내해드립니다",
+          "options": [
+            {"title": "무료 상담", "description": "ICS 보안 전문가와의 1시간 세션"},
+            {"title": "2-4시간 워크숍", "description": "귀사 기업 데이터를 사용한 AI SOC 라이브 데모"},
+            {"title": "빠른 보안 평가", "description": "현재 보안 태세 분석"},
+            {"title": "상세 구현 로드맵", "description": "귀사 기업을 위한 맞춤형 배포 계획"}
+          ]
+        }
+      }
+    },
+    "chatbot": {
+      "badge": "지능형 통신 플랫폼",
+      "subtitle": "AI 챗봇을 갖춘 포괄적인 인앱 통신 플랫폼으로 사용자 유지율 40% 향상",
+      "hero": {
+        "badge": "사용자가 앱을 떠나지 않도록 하세요",
+        "title": "V AI - Agent",
+        "subtitle": "강력한 Communication Hub로 사용자 유지율 40% 향상",
+        "description": "48시간 내에 메시징, 통화 및 AI 봇을 통합하세요. 코딩 불필요, 인프라 걱정 없음.",
+        "cta1": "무료 체험 시작",
+        "cta2": "사례 연구 보기",
+        "features": {
+          "badge1": "기업을 위한 최고의 솔루션",
+          "badge2": "220K+ 활성 사용자",
+          "badge3": "AWS 및 Google Cloud 파트너"
+        }
+      },
+      "painPoints": {
+        "badge": "실제 문제점",
+        "title": "왜 자체 구축 채팅이 비용이 많이 드는 실수인가?",
+        "subtitle": "많은 기업들이 메시징 기능 구축의 복잡성을 과소평가합니다",
+        "points": [
+          {
+            "title": "막대한 숨겨진 비용",
+            "description": "10+명의 엔지니어, 6+개월, $40,000+ 출시 전"
+          },
+          {
+            "title": "인프라 위험",
+            "description": "메시지 지연, 데이터 손실, 라이브 스트림/이벤트 중 시스템 다운"
+          },
+          {
+            "title": "복잡한 보안",
+            "description": "스팸 방지, 악성 콘텐츠, 국제 표준 준수"
+          }
+        ]
+      },
+      "solution": {
+        "badge": "솔루션",
+        "title": "솔루션: V AI - Agent",
+        "description": "우리는 모든 기술적 위험을 감수하여 귀하가 비즈니스에 100% 집중할 수 있도록 합니다. 코딩 불필요, 인프라 걱정 없음."
+      },
+      "features": {
+        "badge": "기능",
+        "title": "4가지 강력한 기능",
+        "subtitle": "각 기능은 특정 문제를 해결하도록 설계되었습니다",
+        "items": [
+          {
+            "title": "메시징 API 및 SDK",
+            "subtitle": "1:1, 그룹, 오픈 채널 채팅",
+            "description": "간단한 통합, iMessage/Zalo와 같은 실시간 채팅 완전 지원",
+            "benefits": [
+              "스레드 답글",
+              "리치 미디어",
+              "메시지 편집",
+              "실시간 동기화"
+            ]
+          },
+          {
+            "title": "음성 및 영상 통화",
+            "subtitle": "표준 HD 통화",
+            "description": "종단 간 암호화를 사용한 고품질 음성/영상 통화",
+            "benefits": [
+              "HD 품질",
+              "자동 적응",
+              "종단 간 암호화",
+              "그룹 통화"
+            ]
+          },
+          {
+            "title": "AI 챗봇 및 어시스턴트",
+            "subtitle": "24/7 자동 고객 서비스",
+            "description": "AI 자동화, 콘텐츠 요약 및 다국어 번역",
+            "benefits": [
+              "24/7 자동화",
+              "실시간 번역",
+              "대화 요약",
+              "스마트 라우팅"
+            ]
+          },
+          {
+            "title": "콘솔 및 BI 분석",
+            "subtitle": "실시간 대시보드",
+            "description": "모든 지표 모니터링, AI로 콘텐츠 자동 필터링",
+            "benefits": [
+              "실시간 모니터링",
+              "AI 기반 필터링",
+              "사용자 인사이트",
+              "맞춤 보고서"
+            ]
+          }
+        ]
+      },
+      "useCases": {
+        "badge": "응용 시나리오",
+        "title": "성공한 산업",
+        "subtitle": "게임부터 의료까지, V AI - Agent가 효과를 입증합니다",
+        "items": [
+          {
+            "title": "게임 및 엔터테인먼트",
+            "description": "게임 내 채팅, 팀 구성, 아이템 거래, 앱을 종료할 필요 없음",
+            "stat": "220K+ 사용자"
+          },
+          {
+            "title": "소셜 및 아이돌",
+            "description": "팬들이 VIP 티켓 또는 구독을 통해 아이돌과 직접 메시지",
+            "stat": "직접 메시징"
+          },
+          {
+            "title": "전자상거래 및 소매",
+            "description": "제품 상담 채팅 직접, 전환율 3배 증가",
+            "stat": "+300% 전환율"
+          },
+          {
+            "title": "의료 및 노인 돌봄",
+            "description": "원격 건강 모니터링 영상 통화, 돌봄 로봇 통합",
+            "stat": "원격 모니터링"
+          }
+        ]
+      },
+      "comparison": {
+        "badge": "비교",
+        "title": "자체 구축 vs V AI - Agent",
+        "subtitle": "50+ 기업의 실제 데이터",
+        "items": [
+          {
+            "feature": "출시 시간",
+            "inHouse": "6-9개월",
+            "vAIChat": "1-2주"
+          },
+          {
+            "feature": "초기 비용",
+            "inHouse": ">$40,000",
+            "vAIChat": "사용한 만큼 지불"
+          },
+          {
+            "feature": "안정성",
+            "inHouse": "IT 의존",
+            "vAIChat": "99.9%(AWS/GCP)"
+          },
+          {
+            "feature": "유지보수 및 업데이트",
+            "inHouse": "인력 비용",
+            "vAIChat": "자동 및 무료"
+          },
+          {
+            "feature": "AI 기능",
+            "inHouse": "통합 어려움",
+            "vAIChat": "기본 제공 및 통합"
+          }
+        ]
+      },
+      "deployment": {
+        "badge": "배포 프로세스",
+        "title": "성공으로 가는 4단계",
+        "subtitle": "등록부터 출시까지 며칠만에",
+        "steps": [
+          {
+            "number": "01",
+            "title": "등록 및 API 키 받기",
+            "description": "V AI - Agent 콘솔에 접속하여 개발자 계정 생성"
+          },
+          {
+            "number": "02",
+            "title": "SDK 통합",
+            "description": "몇 줄의 코드로 iOS/Android/Web에 채팅 프레임 삽입"
+          },
+          {
+            "number": "03",
+            "title": "UI 커스터마이징",
+            "description": "UI Kit을 사용하여 브랜드 색상과 일치시키기"
+          },
+          {
+            "number": "04",
+            "title": "출시",
+            "description": "사용자 연결 시작 및 성장 추적"
+          }
+        ]
+      },
+      "faqs": {
+        "badge": "자주 묻는 질문",
+        "title": "CTO/CEO의 질문",
+        "subtitle": "엔지니어링 팀의 상세한 답변",
+        "items": [
+          {
+            "question": "V AI - Agent는 기존 플랫폼에서 데이터 마이그레이션을 지원하나요?",
+            "answer": "예, 데이터를 원활하게 마이그레이션할 수 있도록 도구와 기술 지원을 제공합니다. 마이그레이션 전문가 팀이 24/7 지원합니다."
+          },
+          {
+            "question": "내 앱에 수백만 명의 사용자가 있다면 시스템이 처리할 수 있나요?",
+            "answer": "시스템은 AWS/GCP의 자동 확장 인프라를 기반으로 구축되어 수백만 명의 사용자가 있는 앱 및 게임에서 검증되었습니다."
+          },
+          {
+            "question": "비용은 어떻게 계산되나요?",
+            "answer": "MAU(월간 활성 사용자) 또는 메시지 수를 기반으로 한 유연한 플랜을 제공하며, 스타트업과 대기업 모두에 비용을 최적화합니다."
+          },
+          {
+            "question": "어떤 기술 지원을 제공하나요?",
+            "answer": "이메일, 채팅을 통한 24/7 지원 및 엔터프라이즈 플랜을 위한 전담 계정 관리자. SLA 응답 시간: 중요 문제 30분."
+          },
+          {
+            "question": "채팅 인터페이스를 커스터마이징할 수 있나요?",
+            "answer": "예, 완전히 커스터마이징 가능합니다. 화이트 라벨 솔루션을 통해 UI/UX를 100% 제어할 수 있습니다."
+          }
+        ]
+      },
+      "security": {
+        "badge": "보안",
+        "title": "귀하의 데이터는 항상 안전합니다",
+        "subtitle": "국제 보안 표준 준수, 24/7 모니터링",
+        "items": [
+          {
+            "title": "ISO 인증",
+            "description": "ISO 27001, SOC 2 및 국제 보안 표준 준수"
+          },
+          {
+            "title": "24/7 모니터링",
+            "description": "사용자가 알아차리기 전에 즉시 문제 감지 및 처리"
+          },
+          {
+            "title": "데이터 주권",
+            "description": "사용자 데이터 및 대화 내용을 100% 소유"
+          },
+          {
+            "title": "화이트 라벨 솔루션",
+            "description": "우리는 뒤에 있지만 브랜드는 귀하의 것"
+          },
+          {
+            "title": "인프라 자동 확장",
+            "description": "AWS/GCP 기반, 수백만 명의 사용자를 통해 검증됨"
+          },
+          {
+            "title": "99.9% 가동 시간 보장",
+            "description": "SLA 약속 또는 환불"
+          }
+        ]
+      },
+      "cta": {
+        "heading": "시작할 준비가 되셨나요?",
+        "description": "신용 카드 불필요, 긴 계약 불필요. 개발자 계정 설정에 5분만 소요됩니다.",
+        "ctaButton": "지금 무료 등록",
+        "savings": "예산 최대 60% 절감",
+        "savingsDesc": "관리 시간 최대 40% 절감",
+        "benefits": "비용만 절약하는 것이 아닙니다. ICS 팀의 24/7 지원도 받으실 수 있습니다",
+        "tryButton": "지금 체험 시작",
+        "demoButton": "데모 예약"
+      }
     }
   },
-  "articleDetail": {
-    "title": "기사 세부정보",
-    "copied": "링크가 복사되었습니다!",
-    "relatedArticles": "관련 기사"
+  "vietguard": {
+    "badge": "모바일 애플리케이션 보안",
+    "subtitle": "모바일 애플리케이션을 위한 취약점 스캔 및 보안 탐지 도구",
+    "visitWebsite": "웹사이트 방문",
+    "hero": {
+      "badge": "베트남 표준 모바일 보안, 글로벌 품질",
+      "title": "Vietguard",
+      "subtitle": "첨단 스캔 및 분석 기술을 적용한 베트남 대표 모바일 애플리케이션 보안 솔루션",
+      "accessWebsite": "지금 방문하기",
+      "contactAdvice": "상담 문의",
+      "experienceNow": "지금 체험하기",
+      "scheduleConsultation": "상담 일정 예약",
+      "stats": {
+        "customers": "신뢰하는 고객사",
+        "usersProtected": "보호된 사용자",
+        "accuracy": "탐지 정확도"
+      }
+    },
+    "trust": {
+      "badge": "통합 보안 솔루션",
+      "heading": "왜 고객들은 ICS의 Vietguard 솔루션을 신뢰할까요?",
+      "description": "Vietguard는 첨단 기술과 최고 수준의 보안 전문가 팀의 신뢰성을 결합한 솔루션입니다",
+      "points": [
+        {
+          "title": "첨단 기술",
+          "desc": "베트남에서 모바일 애플리케이션 보안 스캔 및 분석 기술을 선도하는 기업"
+        },
+        {
+          "title": "실전 경험이 풍부한 전문가",
+          "desc": "국제적으로 공인된 자격증을 보유한 숙련된 보안 전문가 팀"
+        },
+        {
+          "title": "글로벌 수준의 품질",
+          "desc": "엄격한 보안 기준을 충족하며 10억 명 이상의 사용자를 보호"
+        },
+        {
+          "title": "전략적 파트너",
+          "desc": "베트남 주요 기업 및 기관이 신뢰하는 보안 파트너"
+        }
+      ]
+    },
+    "applications": {
+      "heading": "주요 공격 유형에 대응하는 Vietguard 활용 사례",
+      "description": "Vietguard는 현재 가장 일반적인 보안 위협에 대응하는 강력한 방어 체계를 구축합니다"
+    },
+    "features": {
+      "title": "기능",
+      "heading": "Vietguard - Mobile App Security 핵심 기능",
+      "description": "모바일 애플리케이션 보안을 위한 통합 솔루션",
+      "topFeatures": [
+        {
+          "title": "공격 표면 관리",
+          "description": "애플리케이션의 공격 표면을 관리 및 모니터링하여 취약 지점을 조기에 탐지"
+        },
+        {
+          "title": "취약점 관리",
+          "description": "치명적인 보안 리스크를 우선순위화하고 대응하는 통합 취약점 관리"
+        },
+        {
+          "title": "보안 감사 프로젝트 관리",
+          "description": "애플리케이션 소스 코드에 대한 상세 보안 감사를 위한 프로젝트 관리"
+        },
+        {
+          "title": "버그 바운티 프로그램",
+          "description": "보안 취약점 제보를 장려하는 보상 기반 버그 바운티 운영"
+        },
+        {
+          "title": "취약점 스캔",
+          "description": "애플리케이션 및 인프라 전반의 보안 취약점을 자동으로 탐지"
+        },
+        {
+          "title": "데이터 유출 탐지",
+          "description": "조직 외부로의 민감 데이터 유출을 탐지하고 차단"
+        },
+        {
+          "title": "비밀번호 및 시크릿 관리",
+          "description": "엔터프라이즈급 암호화를 통한 비밀번호 및 시크릿의 안전한 관리"
+        },
+        {
+          "title": "신뢰 센터",
+          "description": "보안 상태 및 컴플라이언스 현황을 한눈에 확인할 수 있는 신뢰 센터"
+        }
+      ],
+      "bottomFeatures": [
+        {
+          "title": "엔드포인트 보안",
+          "description": "악성코드, 랜섬웨어 등 다양한 위협으로부터 단말 보호"
+        },
+        {
+          "title": "위협 인텔리전스",
+          "description": "새롭게 등장하는 보안 위협에 대한 정보 수집 및 분석"
+        },
+        {
+          "title": "WhiteHub 보안 커뮤니티",
+          "description": "보안 전문가들이 지식과 경험을 공유하는 커뮤니티"
+        },
+        {
+          "title": "취약점 연구",
+          "description": "보안 취약점 및 공격 기법에 대한 심층 연구"
+        },
+        {
+          "title": "자동화 도구",
+          "description": "보안 프로세스를 자동화하여 수작업 최소화"
+        },
+        {
+          "title": "데이터 저장소",
+          "description": "대규모 보안 데이터 저장 및 분석을 통한 위협 패턴 탐지"
+        }
+      ],
+      "scanning": {
+        "title": "자동 취약점 스캔",
+        "description": "모바일 애플리케이션의 보안 취약점을 자동으로 스캔하고 탐지"
+      },
+      "vulnerability": {
+        "title": "취약점 탐지",
+        "description": "치명적인 보안 취약점을 식별하고 즉시 경고"
+      },
+      "protection": {
+        "title": "종합 보호",
+        "description": "다양한 위협과 공격으로부터 애플리케이션을 전방위적으로 보호"
+      },
+      "compliance": {
+        "title": "보안 표준 준수",
+        "description": "국제 보안 표준 및 규제 요구사항 준수 보장"
+      }
+    }
+  },
+  "activation": {
+    "badge": "신속한 구축",
+    "heading": "엔터프라이즈 애플리케이션 보호를 위한 통합 솔루션 활성화",
+    "description": "기업은 유연하고 효율적인 협업 모델을 통해 VietGuard를 빠르게 도입할 수 있습니다",
+    "items": [
+      {
+        "title": "신속한 구축",
+        "desc": "소스 코드 접근이나 복잡한 SDK 통합 없이 애플리케이션을 즉시 보호"
+      },
+      {
+        "title": "전문적인 도입 로드맵",
+        "desc": "요구사항 분석, 실사용 데모부터 기업 규모에 맞춘 서비스 패키지 설계까지"
+      },
+      {
+        "title": "CI/CD 통합",
+        "desc": "보안 프로세스 자동화를 통해 운영 부담을 줄이고 출시 속도 향상"
+      },
+      {
+        "title": "전담 지원",
+        "desc": "운영 전 과정에서 지속적인 기술 지원과 파트너십 제공"
+      }
+    ]
+  },
+  "multiPlatform": {
+    "badge": "멀티 플랫폼",
+    "heading": "멀티 플랫폼 애플리케이션 보안 솔루션",
+    "description": "VietGuard는 모든 유형의 모바일 애플리케이션을 위한 능동적인 보호 플랫폼을 제공합니다",
+    "items": [
+      {
+        "title": "다양한 운영체제 지원",
+        "desc": "APK(Android) 및 IPA(iOS) 파일에 대한 통합 분석 및 보호"
+      },
+      {
+        "title": "다양한 암호화 기술",
+        "desc": "HTML5, CSS, JavaScript 기반 애플리케이션에 대한 강력한 보호"
+      },
+      {
+        "title": "다중 계층 방어",
+        "desc": "루팅(Root) 또는 탈옥(Jailbreak)된 기기에서도 안전한 보호"
+      }
+    ]
+  },
+  "whyChoose": {
+    "badge": "차별화된 가치",
+    "heading": "엔터프라이즈 애플리케이션 보안을 위한 Vietguard 선택",
+    "description": "VietGuard는 디지털 자산을 보호하고 경쟁력을 강화하기 위한 현명한 투자입니다",
+    "benefits": [
+      {
+        "title": "비용 최적화",
+        "desc": "취약점을 조기에 발견하여 수정 및 사고 대응 비용을 최대 60% 절감"
+      },
+      {
+        "title": "법규 및 규정 준수 보장",
+        "desc": "시행규칙 50/2024, 사이버 보안법, 시행령 13, ISO 27001, PCI-DSS 완벽 준수"
+      },
+      {
+        "title": "지능형 보안 관리",
+        "desc": "보안 대시보드를 통해 자동 탐지, 방어 및 상세 리포트 제공"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "혜택",
+    "heading": "왜 Vietguard - Mobile App Security인가?",
+    "description": "Vietguard - Mobile App Security는 모바일 애플리케이션을 위한 차별화된 가치를 제공합니다",
+    "item1": "자동화된 취약점 스캔 및 신속한 탐지",
+    "item2": "보안 이슈에 대한 상세하고 직관적인 리포트",
+    "item3": "멀티 플랫폼 지원: iOS, Android",
+    "item4": "최신 취약점 데이터베이스 지속 업데이트"
+  },
+  "stats": {
+    "scanned": "스캔된 애플리케이션",
+    "vulnerabilities": "탐지된 취약점",
+    "accuracy": "탐지 정확도"
+  },
+  "cta": {
+    "heading": "지금 바로 모바일 애플리케이션을 보호하세요",
+    "description": "Vietguard - Mobile App Security를 무료로 상담하고 체험해 보세요"
+  },
+  "csaDlp": {
+    "badge": "엔드포인트 보안 & DLP",
+    "subtitle": "엔드포인트 보호와 데이터 유출 방지를 결합한 통합 보안 솔루션",
+    "features": {
+      "title": "기능",
+      "heading": "CSA-Endpoint 주요 기능",
+      "description": "엔드포인트와 기업 데이터를 위한 종합 보안 솔루션",
+      "endpoint": {
+        "title": "엔드포인트 보안",
+        "description": "PC, 노트북 및 모바일 디바이스에 대한 통합 보호"
+      },
+      "dlp": {
+        "title": "데이터 유출 방지",
+        "description": "조직 외부로의 민감 데이터 유출 차단"
+      },
+      "monitoring": {
+        "title": "모니터링 및 제어",
+        "description": "데이터 접근 및 사용 활동 감시·제어"
+      },
+      "compliance": {
+        "title": "규정 준수",
+        "description": "데이터 보호 관련 법규 및 규정 준수 보장"
+      }
+    },
+    "benefits": {
+      "title": "혜택",
+      "heading": "왜 CSA-Endpoint인가?",
+      "description": "CSA-Endpoint는 기업 데이터를 위한 전방위 보호를 제공합니다",
+      "item1": "민감 데이터 유출 효과적 차단",
+      "item2": "악성코드 및 랜섬웨어로부터 장비 보호",
+      "item3": "데이터 접근 및 사용 통제",
+      "item4": "상세 리포트 및 규정 준수 지원"
+    },
+    "stats": {
+      "endpoints": "보호된 엔드포인트",
+      "incidents": "차단된 보안 사고",
+      "compliance": "규정 준수"
+    },
+    "cta": {
+      "heading": "CSA-Endpoint로 기업 데이터를 보호하세요",
+      "description": "CSA-Endpoint 솔루션에 대한 전문 상담을 받아보세요"
+    }
+  },
+  "pentestServices": {
+    "badge": "침투 테스트 서비스",
+    "subtitle": "해커가 악용하기 전에 보안 취약점을 사전에 발견하고 조치하는 전문 침투 테스트 서비스",
+    "features": {
+      "title": "기능",
+      "heading": "전문 Pentest 서비스",
+      "description": "보안 취약점을 종합적으로 식별하고 개선합니다",
+      "assessment": {
+        "title": "취약점 평가",
+        "description": "보안 취약점에 대한 전반적인 점검 및 평가"
+      },
+      "exploitation": {
+        "title": "모의 침투 공격",
+        "description": "실제 공격 시나리오를 기반으로 보안 수준 검증"
+      },
+      "reporting": {
+        "title": "상세 보고서",
+        "description": "취약점 및 개선 방안에 대한 종합 보고서 제공"
+      },
+      "remediation": {
+        "title": "조치 지원",
+        "description": "발견된 취약점에 대한 컨설팅 및 개선 지원"
+      }
+    },
+    "benefits": {
+      "title": "혜택",
+      "heading": "왜 Pentest 서비스를 선택해야 할까요?",
+      "description": "Pentest는 보안 취약점을 사전에 발견하고 대응할 수 있도록 지원합니다",
+      "item1": "실제 공격 발생 이전에 취약점 발견",
+      "item2": "전반적인 보안 상태에 대한 종합 평가",
+      "item3": "구체적인 조치 방안을 포함한 상세 보고서",
+      "item4": "국제 보안 표준 및 규정 준수"
+    },
+    "stats": {
+      "tests": "완료된 Pentest 프로젝트",
+      "vulnerabilities": "발견된 취약점",
+      "success": "성공률"
+    },
+    "cta": {
+      "heading": "Pentest로 사이버 보안을 점검하세요",
+      "description": "귀사에 적합한 Pentest 서비스에 대해 상담해 드립니다"
+    }
+  },
+  "oracleCloud": {
+    "badge": "클라우드 컴퓨팅",
+    "subtitle": "고성능, 강력한 보안, 최적의 비용을 제공하는 Oracle의 선도적인 클라우드 솔루션",
+    "visitWebsite": "웹사이트 방문",
+    "features": {
+      "title": "기능",
+      "heading": "Oracle Cloud 주요 기능",
+      "description": "현대 기업을 위한 종합 클라우드 솔루션",
+      "compute": {
+        "title": "컴퓨트 & 가상 머신",
+        "description": "높은 성능과 유연한 확장성을 갖춘 강력한 가상 서버"
+      },
+      "database": {
+        "title": "데이터베이스 클라우드",
+        "description": "세계 최고 수준의 데이터베이스 관리 시스템을 제공하는 클라우드 플랫폼"
+      },
+      "security": {
+        "title": "강력한 보안",
+        "description": "고급 암호화 및 접근 제어를 포함한 다중 계층 보안"
+      },
+      "network": {
+        "title": "글로벌 네트워크",
+        "description": "낮은 지연 시간과 높은 대역폭을 제공하는 글로벌 네트워크 인프라"
+      }
+    },
+    "benefits": {
+      "title": "혜택",
+      "heading": "왜 Oracle Cloud인가?",
+      "description": "Oracle Cloud는 최상의 성능과 보안을 제공합니다",
+      "item1": "경쟁력 있는 비용 대비 뛰어난 성능",
+      "item2": "첨단 기능을 갖춘 다중 계층 보안",
+      "item3": "다양한 플랫폼 지원 및 손쉬운 통합",
+      "item4": "24/7 전문 기술 지원"
+    },
+    "stats": {
+      "regions": "전 세계 리전",
+      "uptime": "가동 시간",
+      "customers": "글로벌 고객"
+    },
+    "cta": {
+      "heading": "Oracle Cloud로 디지털 전환을 시작하세요",
+      "description": "Oracle Cloud 솔루션에 대해 전문적인 상담을 받아보세요"
+    }
+  },
+  "smartDashboard": {
+    "badge": "지능형 모니터링",
+    "subtitle": "실시간 데이터 분석을 통해 기업 운영을 효율적으로 관리·감시하는 스마트 대시보드 시스템",
+    "visitWebsite": "웹사이트 방문",
+    "features": {
+      "title": "기능",
+      "heading": "Smart Dashboard 주요 기능",
+      "description": "지능형 데이터 모니터링 및 분석 솔루션",
+      "realtime": {
+        "title": "실시간 모니터링",
+        "description": "데이터 및 운영 상태를 실시간으로 감시"
+      },
+      "analytics": {
+        "title": "고급 분석",
+        "description": "AI 및 머신러닝 기반 데이터 분석"
+      },
+      "reporting": {
+        "title": "자동 리포트",
+        "description": "시각적인 차트 기반 자동 보고서 생성"
+      },
+      "visualization": {
+        "title": "데이터 시각화",
+        "description": "다양한 차트를 활용한 직관적인 데이터 표현"
+      }
+    },
+    "benefits": {
+      "title": "혜택",
+      "heading": "왜 Smart Dashboard인가?",
+      "description": "Smart Dashboard는 기업 운영 효율을 극대화합니다",
+      "item1": "기업 전반의 활동을 중앙에서 통합 모니터링",
+      "item2": "실시간 데이터 기반의 신속한 의사결정",
+      "item3": "업무 요구에 맞춘 대시보드 커스터마이징",
+      "item4": "기존 시스템과의 손쉬운 연동"
+    },
+    "stats": {
+      "dashboards": "구축된 대시보드",
+      "dataPoints": "처리된 데이터 포인트",
+      "realtime": "실시간 모니터링"
+    },
+    "cta": {
+      "heading": "Smart Dashboard로 기업을 관리하세요",
+      "description": "Smart Dashboard 데모 및 컨설팅을 받아보세요"
+    },
+    "vietguard": {
+      "badge": "모바일 앱 보안",
+      "subtitle": "모바일 응용 프로그램을 위한 보안 스캔 및 취약점 감지 도구",
+      "deployment": {
+        "badge": "전문 배포 프로세스",
+        "title": "전담 ICS 전문가 지원이 포함된 완전한 솔루션",
+        "description": "A부터 Z까지 ICS 전문가 팀의 전담 지원 제공",
+        "standards": {
+          "heading": "선도적 표준 준수",
+          "subtitle": "국제 및 베트남 규제 요구사항 충족",
+          "items": [
+            {"name": "ISO 27001", "description": "국제 정보보안 표준"},
+            {"name": "PCI-DSS", "description": "결제 카드 산업 데이터 보안 표준"},
+            {"name": "Decree 13", "description": "베트남 사이버보안법"},
+            {"name": "ANTT Law", "description": "베트남 정보보안법"},
+            {"name": "Circular 50/2024", "description": "최신 베트남 규제 요구사항"}
+          ]
+        },
+        "ready": {
+          "title": "응용 프로그램 보호를 시작할 준비가 되셨습니까?",
+          "subtitle": "완전한 앱 보안 여정 시작",
+          "cta1": "지금 체험하기",
+          "cta2": "컨설팅 일정 잡기"
+        },
+        "qualities": {
+          "title": "엔터프라이즈가 Vietguard 배포를 위해 ICS를 선택하는 이유",
+          "items": [
+            {"title": "24/7 보안 보호", "description": "연중무휴 모니터링 및 지원"},
+            {"title": "전담 지원팀", "description": "24/7 한국어 전문가 지원"},
+            {"title": "국제 품질", "description": "글로벌 표준 준수 및 입증된 기록"}
+          ]
+        }
+      }
+    }
   }
 }
