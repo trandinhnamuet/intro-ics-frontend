@@ -854,6 +854,10 @@
           }
         ]
       },
+      "complianceBlock": {
+        "heading": "Compliant with leading standards",
+        "standards": ["ISO 27001", "PCI-DSS", "Decree 13", "Security Law", "Circular 50/2024"]
+      },
       "benefits": {
         "title": "Benefits",
         "heading": "Why Choose Vietguard?",
@@ -867,6 +871,11 @@
         "scanned": "Apps Scanned",
         "vulnerabilities": "Vulnerabilities Found",
         "accuracy": "Accuracy"
+      },
+      "finalCta": {
+        "title": "Ready to protect your applications?",
+        "description": "Join hundreds of businesses trusting Vietguard to secure their digital assets",
+        "bullets": ["24/7 security", "Dedicated support", "International quality"]
       },
       "cta": {
         "heading": "Protect Your Mobile Apps Today",
@@ -884,8 +893,15 @@
         "points": [
           "70% reduction in incident response time",
           "90% automation of detection processes",
-          "95% accuracy in threat detection"
+          "95% accuracy in threat detection",
+          "24/7 AI monitoring"
         ],
+        "floatingStats": [
+          {"label": "Devices protected", "value": "5B+ Devices"},
+          {"label": "Detection time", "value": "< 1s"},
+          {"label": "AI models", "value": "4000+"}
+        ],
+        "aiMonitoring": "AI Monitoring",
         "ctaSubtitle": "Not just detection – immediate action.",
         "cta1": "Get AI SOC Solution Consultation",
         "cta2": "View Workshop Walkthrough Documentation"
@@ -1156,6 +1172,88 @@
             {"title": "Quick Security Assessment", "description": "Analyze your current security posture"},
             {"title": "Detailed Implementation Roadmap", "description": "Custom deployment plan for your enterprise"}
           ]
+        },
+        "traditionalBlock": {
+          "title": "Traditional SOC ≠ Sufficient Protection",
+          "line1": "With 12,300+ attacks/day in Vietnam alone, manual SOC cannot keep pace with modern threat complexity.",
+          "line2": "AI SOC detects and responds in seconds, not days."
+        },
+        "architectureDetails": {
+          "headline": "Open, Cloud-Native & Hyperscale",
+          "description": "Architecture designed for:",
+          "platformLabel": "Platform",
+          "items": [
+            {"title": "Unlimited Storage", "desc": "Store logs indefinitely, query petabyte-scale data in seconds"},
+            {"title": "Real-time Processing", "desc": "Process 50+ billion events/day with < 1s latency"},
+            {"title": "450+ Integrations", "desc": "Connect any data source: Cloud, On-prem, SaaS, Network, Endpoint"},
+            {"title": "Auto-scaling", "desc": "Scale automatically based on demand"}
+          ]
+        },
+        "proofPoint": {
+          "title": "5B devices protected globally - Proven technology",
+          "description": "ICS AI SOC is built on technology protecting Google, Microsoft, Fortune 500 and thousands of enterprises worldwide."
+        },
+        "componentsVisual": {
+          "title": "Seamless integration - Automated operations",
+          "description": "4 components run 24/7 in sync, from data ingestion to auto-response, reducing 90% workload for SOC teams and accelerating response by 95%"
+        },
+        "processSpeeds": {
+          "instant": "Real-time",
+          "fast": "< 1 second",
+          "slow": "< 5 seconds"
+        },
+        "roi": {
+          "badge": "Impact & ROI"
+        },
+        "roiMetrics": [
+          {"metric": "90%", "label": "Operational cost optimization"},
+          {"metric": "70%", "label": "Automated threat detection"},
+          {"metric": "95%", "label": "Faster incident response"},
+          {"metric": "$2.4M", "label": "Lower breach losses"}
+        ],
+        "roiDetails": {
+          "cost": {
+            "title": "Cost Savings",
+            "items": [
+              "Reduce 60-70% vs traditional SOC operations",
+              "No need to hire extra L1 analysts (AI replaces repetitive tasks)",
+              "Cut average data breach impact by $2.4M/year"
+            ]
+          },
+          "performance": {
+            "title": "Superior Performance",
+            "items": [
+              "Respond 95% faster than manual SOC",
+              "Detect APT and insider threats without gaps",
+              "24/7 coverage with tireless AI"
+            ]
+          },
+          "team": {
+            "title": "Team Enablement",
+            "items": [
+              "Free SOC team from L1 repetitive tasks",
+              "Focus on threat hunting & strategy",
+              "Lower burnout and improve job satisfaction"
+            ]
+          }
+        },
+        "resourceCard": {
+          "title": "Gurucul Workshop Walkthrough",
+          "description": "Detailed guide on how AI SOC works in practice - from ingestion to response",
+          "points": ["System architecture", "Live demo", "Concrete use cases", "ROI calculator"],
+          "cta": "Download for free"
+        },
+        "finalCta": {
+          "eyebrow": "Start your transformation",
+          "title": "Ready to elevate your cybersecurity?",
+          "description": "ICS experts will consult for free, assess your posture and propose an AI SOC rollout tailored to you",
+          "benefits": [
+            {"title": "Free consultation", "desc": "2-4 hour workshop with experts"},
+            {"title": "Quick assessment", "desc": "Security posture review"},
+            {"title": "Clear roadmap", "desc": "Step-by-step deployment plan"}
+          ],
+          "primaryCta": "Book a consultation",
+          "secondaryCta": "Watch online demo"
         }
       }
     },

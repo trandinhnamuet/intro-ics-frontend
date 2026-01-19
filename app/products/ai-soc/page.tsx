@@ -86,6 +86,10 @@ export default function AiSocPage() {
   const painPointsData = t('products.aiSoc.painPoints.points', { returnObjects: true }) as Array<{title: string; items: string[]}>
   const solutionData = t('products.aiSoc.solution.pillars', { returnObjects: true }) as Array<{title: string; items: string[]}>
   const processData = t('products.aiSoc.process.steps', { returnObjects: true }) as Array<{title: string; description: string}>
+  const heroPointsData = t('products.aiSoc.hero.points', { returnObjects: true })
+  const heroPoints = Array.isArray(heroPointsData) ? heroPointsData : []
+  const floatingStatsData = t('products.aiSoc.hero.floatingStats', { returnObjects: true })
+  const floatingStats = Array.isArray(floatingStatsData) ? floatingStatsData : []
 
   const challenges = [
     {
@@ -181,12 +185,41 @@ export default function AiSocPage() {
     }
   ]
 
-  const roiMetrics = [
-    { metric: "90%", label: t('products.aiSoc.whyIcs.points.0.title'), icon: TrendingUp },
-    { metric: "70%", label: t('products.aiSoc.whyIcs.points.1.title'), icon: Target },
-    { metric: "95%", label: "Faster incident response", icon: Zap },
-    { metric: "$2.4M", label: t('products.aiSoc.whyIcs.points.2.description'), icon: DollarSign }
+  const roiMetricIcons = [TrendingUp, Target, Zap, DollarSign]
+  const roiMetricsData = t('products.aiSoc.roiMetrics', { returnObjects: true })
+  const roiMetricsArray = Array.isArray(roiMetricsData) && roiMetricsData.length > 0 ? roiMetricsData : [
+    { metric: "90%", label: t('products.aiSoc.whyIcs.points.0.title') },
+    { metric: "70%", label: t('products.aiSoc.whyIcs.points.1.title') },
+    { metric: "95%", label: "Faster incident response" },
+    { metric: "$2.4M", label: t('products.aiSoc.whyIcs.points.2.description') }
   ]
+  const roiMetrics = roiMetricsArray.map((item: any, idx: number) => ({ ...item, icon: roiMetricIcons[idx] || Gauge }))
+
+  const traditionalBlock = t('products.aiSoc.traditionalBlock', { returnObjects: true }) as { title: string; line1: string; line2: string }
+  const architectureDetails = t('products.aiSoc.architectureDetails', { returnObjects: true }) as {
+    headline: string
+    description: string
+    platformLabel: string
+    items: Array<{ title: string; desc: string }>
+  }
+  const proofPoint = t('products.aiSoc.proofPoint', { returnObjects: true }) as { title: string; description: string }
+  const componentsVisual = t('products.aiSoc.componentsVisual', { returnObjects: true }) as { title: string; description: string }
+  const processSpeeds = t('products.aiSoc.processSpeeds', { returnObjects: true }) as { instant: string; fast: string; slow: string }
+  const processSpeedLabels = [processSpeeds.instant, processSpeeds.fast, processSpeeds.fast, processSpeeds.slow]
+  const roiDetails = t('products.aiSoc.roiDetails', { returnObjects: true }) as {
+    cost: { title: string; items: string[] }
+    performance: { title: string; items: string[] }
+    team: { title: string; items: string[] }
+  }
+  const resourceCard = t('products.aiSoc.resourceCard', { returnObjects: true }) as { title: string; description: string; points: string[]; cta: string }
+  const finalCta = t('products.aiSoc.finalCta', { returnObjects: true }) as {
+    eyebrow: string
+    title: string
+    description: string
+    benefits: Array<{ title: string; desc: string }>
+    primaryCta: string
+    secondaryCta: string
+  }
 
 
 
@@ -255,10 +288,10 @@ export default function AiSocPage() {
 
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { value: "70%", label: t('products.aiSoc.hero.points.0') },
-                    { value: "90%", label: t('products.aiSoc.hero.points.1') },
-                    { value: "95%", label: t('products.aiSoc.hero.points.2') },
-                    { value: "24/7", label: "AI Monitoring" }
+                    { value: "70%", label: (heroPoints && heroPoints[0]) || t('products.aiSoc.hero.points.0', '70% reduction') },
+                    { value: "90%", label: (heroPoints && heroPoints[1]) || t('products.aiSoc.hero.points.1', '90% automation') },
+                    { value: "95%", label: (heroPoints && heroPoints[2]) || t('products.aiSoc.hero.points.2', '95% accuracy') },
+                    { value: "24/7", label: (heroPoints && heroPoints[3]) || t('products.aiSoc.hero.aiMonitoring', 'AI Monitoring') }
                   ].map((stat, idx) => (
                     <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">
                       <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
@@ -299,17 +332,20 @@ export default function AiSocPage() {
                   
                   {/* Floating Stats Overlay */}
                   <div className="absolute bottom-6 left-6 right-6 grid grid-cols-3 gap-3">
-                    {[
+                    {(floatingStats && floatingStats.length > 0 ? floatingStats : [
                       { icon: Shield, label: "Protected", value: "5B+ Devices" },
                       { icon: Zap, label: "Detection", value: "< 1 sec" },
                       { icon: Bot, label: "AI Models", value: "4000+" }
-                    ].map((item, idx) => (
-                      <div key={idx} className="bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-lg p-3">
-                        <item.icon className="w-5 h-5 text-cyan-400 mb-1" />
-                        <div className="text-xs text-white/60">{item.label}</div>
-                        <div className="text-sm font-bold text-white">{item.value}</div>
-                      </div>
-                    ))}
+                    ]).map((item, idx) => {
+                      const ItemIcon = [Shield, Zap, Bot][idx] || Shield
+                      return (
+                        <div key={idx} className="bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-lg p-3">
+                          <ItemIcon className="w-5 h-5 text-cyan-400 mb-1" />
+                          <div className="text-xs text-white/60">{item.label}</div>
+                          <div className="text-sm font-bold text-white">{item.value}</div>
+                        </div>
+                      )
+                    })}
                   </div>
                 </Card>
               </div>
@@ -381,15 +417,13 @@ export default function AiSocPage() {
               <div className="absolute inset-0 flex items-center px-12">
                 <div className="max-w-2xl space-y-4">
                   <h3 className="text-3xl font-bold text-white">
-                    SOC truyền thống ≠ Đủ bảo vệ
+                    {traditionalBlock.title}
                   </h3>
                   <p className="text-xl text-white/80">
-                    Với <span className="text-yellow-400 font-bold">12,300+ tấn công/ngày</span> chỉ riêng tại Việt Nam, 
-                    manual SOC không thể theo kịp tốc độ và độ phức tạp của threat landscape hiện đại.
+                    {traditionalBlock.line1}
                   </p>
                   <p className="text-lg text-white/70">
-                    <strong className="text-cyan-400">AI SOC</strong> phát hiện & phản ứng trong <strong>vài giây</strong>, 
-                    không phải vài ngày.
+                    {traditionalBlock.line2}
                   </p>
                 </div>
               </div>
@@ -424,29 +458,27 @@ export default function AiSocPage() {
             <ScrollReveal direction="left">
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">Open, Cloud-Native & Hyperscale</h3>
+                  <h3 className="text-2xl font-bold">{architectureDetails?.headline}</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Kiến trúc mở với khả năng:
+                    {architectureDetails?.description}
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  {[
-                    { icon: Database, title: "Unlimited Storage", desc: "Lưu trữ log không giới hạn thời gian, query trên petabyte data trong giây" },
-                    { icon: Zap, title: "Real-time Processing", desc: "Xử lý 50+ tỷ sự kiện/ngày với latency < 1 giây" },
-                    { icon: GitBranch, title: "450+ Integrations", desc: "Kết nối mọi data source: Cloud, On-prem, SaaS, Network, Endpoint" },
-                    { icon: Cpu, title: "Auto-scaling", desc: "Tự động scale theo nhu cầu, không giới hạn tăng trưởng" }
-                  ].map((item, idx) => (
+                  {(architectureDetails?.items || []).map((item, idx) => {
+                    const Icon = [Database, Zap, GitBranch, Cpu][idx]
+                    return (
                     <div key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 border border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all">
                       <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-6 h-6 text-white" />
+                        {Icon && <Icon className="w-6 h-6 text-white" />}
                       </div>
                       <div>
                         <h4 className="font-bold text-lg mb-1">{item.title}</h4>
                         <p className="text-sm text-muted-foreground">{item.desc}</p>
                       </div>
                     </div>
-                  ))}
+                    )
+                  })}
                 </div>
               </div>
             </ScrollReveal>
@@ -465,7 +497,7 @@ export default function AiSocPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
                     <div className="bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-xl p-4">
-                      <div className="text-xs text-white/60 mb-1">Nền tảng</div>
+                      <div className="text-xs text-white/60 mb-1">{architectureDetails?.platformLabel}</div>
                       <div className="text-lg font-bold text-white">Google Chronicle SIEM + Gurucul UEBA</div>
                     </div>
                   </div>
@@ -483,11 +515,10 @@ export default function AiSocPage() {
               <div className="relative z-10 text-center space-y-4">
                 <Lightbulb className="w-12 h-12 mx-auto text-yellow-300" />
                 <p className="text-2xl font-bold">
-                  5 tỷ thiết bị được bảo vệ toàn cầu - Công nghệ đã được chứng minh
+                  {proofPoint.title}
                 </p>
                 <p className="text-lg text-white/80 max-w-3xl mx-auto">
-                  Nền tảng AI SOC của ICS dựa trên công nghệ bảo vệ Google, Microsoft, các Fortune 500, 
-                  và hàng nghìn doanh nghiệp trên toàn thế giới.
+                  {proofPoint.description}
                 </p>
               </div>
             </Card>
@@ -578,11 +609,10 @@ export default function AiSocPage() {
               <div className="absolute inset-0 flex flex-col justify-end p-12">
                 <div className="space-y-4">
                   <h3 className="text-3xl font-bold text-white">
-                    Tích hợp liền mạch - Vận hành tự động
+                    {componentsVisual.title}
                   </h3>
                   <p className="text-lg text-white/80 max-w-3xl">
-                    4 component hoạt động đồng bộ 24/7, từ data ingestion đến auto-response, 
-                    giảm 90% workload cho SOC team và tăng 95% tốc độ phản ứng
+                    {componentsVisual.description}
                   </p>
                 </div>
               </div>
@@ -649,7 +679,7 @@ export default function AiSocPage() {
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 border border-emerald-300 dark:border-emerald-700">
                               <Zap className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                               <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">
-                                {idx === 0 ? 'Real-time' : idx === 3 ? '< 5 giây' : '< 1 giây'}
+                                {processSpeedLabels[idx] || processSpeeds.fast}
                               </span>
                             </div>
                           </div>
@@ -671,7 +701,7 @@ export default function AiSocPage() {
             <div className="text-center space-y-6 max-w-3xl mx-auto">
               <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 text-green-700 dark:text-green-300">
                 <Gauge className="w-4 h-4" />
-                ROI & Impact
+                {t('products.aiSoc.roi.badge', 'ROI & Impact')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-5xl">
                 {t('products.aiSoc.whyIcs.title')}
@@ -713,68 +743,29 @@ export default function AiSocPage() {
           <ScrollReveal direction="up">
             <Card className="p-12 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 dark:from-green-950/20 dark:via-emerald-950/20 dark:to-teal-950/20 border-2 border-green-200 dark:border-green-800">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
-                    <DollarSign className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold">Tiết kiệm chi phí</h3>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span>Giảm 60-70% chi phí vận hành SOC truyền thống</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span>Không cần thuê thêm L1 Analyst (AI thay thế)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span>Giảm thiệt hại từ data breach trung bình $2.4M/năm</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold">Hiệu suất vượt trội</h3>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                      <span>Phản ứng nhanh hơn 95% so với manual SOC</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                      <span>Phát hiện APT và insider threat không bỏ sót</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                      <span>Coverage 24/7 với AI không ngừng nghỉ</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold">Nâng cao năng lực team</h3>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
-                      <span>Giải phóng SOC team khỏi L1 repetitive tasks</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
-                      <span>Tập trung vào threat hunting & strategy</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
-                      <span>Giảm burnout và tăng job satisfaction</span>
-                    </li>
-                  </ul>
-                </div>
+                {[
+                  { ...roiDetails.cost, icon: DollarSign, gradient: 'from-green-500 to-emerald-500', checkColor: 'text-green-500' },
+                  { ...roiDetails.performance, icon: Zap, gradient: 'from-blue-500 to-cyan-500', checkColor: 'text-blue-500' },
+                  { ...roiDetails.team, icon: Users, gradient: 'from-purple-500 to-pink-500', checkColor: 'text-purple-500' }
+                ].map((section, idx) => {
+                  const IconComponent = section.icon
+                  return (
+                    <div key={`${section.title}-${idx}`} className="space-y-4">
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${section.gradient} flex items-center justify-center`}>
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold">{section.title}</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        {(section.items || []).map((item, itemIdx) => (
+                          <li key={itemIdx} className="flex items-start gap-2">
+                            <CheckCircle className={`w-4 h-4 ${section.checkColor} mt-0.5 flex-shrink-0`} />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
+                })}
               </div>
             </Card>
           </ScrollReveal>
@@ -807,19 +798,14 @@ export default function AiSocPage() {
                 <Rocket className="w-16 h-16 mx-auto text-white" />
                 <div className="space-y-4">
                   <h3 className="text-3xl font-bold text-white">
-                    Gurucul Workshop Walkthrough
+                    {resourceCard.title}
                   </h3>
                   <p className="text-xl text-white/90 max-w-2xl mx-auto">
-                    Tài liệu chi tiết về cách AI SOC hoạt động trong thực tế - từ ingestion đến response
+                    {resourceCard.description}
                   </p>
 
                   <div className="flex flex-wrap justify-center gap-4 pt-4">
-                    {[
-                      "Kiến trúc hệ thống",
-                      "Demo thực tế",
-                      "Use cases cụ thể",
-                      "ROI calculator"
-                    ].map((feature, idx) => (
+                    {(resourceCard.points || []).map((feature, idx) => (
                       <div key={idx} className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                         <CheckCircle className="w-4 h-4 text-cyan-300" />
                         <span className="text-white text-sm font-medium">{feature}</span>
@@ -830,7 +816,7 @@ export default function AiSocPage() {
 
                 <Link href="/lien-he">
                   <Button size="lg" className="bg-white text-blue-600 hover:bg-white/90 font-bold text-lg h-14 px-8 group shadow-xl">
-                    Tải tài liệu miễn phí
+                    {resourceCard.cta}
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -854,43 +840,42 @@ export default function AiSocPage() {
               <div className="relative z-10 space-y-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm">
                   <Sparkles className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm font-semibold text-blue-300">Bắt đầu hành trình chuyển đổi</span>
+                  <span className="text-sm font-semibold text-blue-300">{finalCta.eyebrow}</span>
                 </div>
 
                 <div className="space-y-4">
                   <h2 className="text-5xl p-1 lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-                    Sẵn sàng nâng tầm<br />An ninh mạng?
+                    {finalCta.title}
                   </h2>
                   <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-                    Đội ngũ chuyên gia ICS sẽ tư vấn miễn phí, đánh giá hiện trạng và đề xuất roadmap triển khai AI SOC phù hợp với doanh nghiệp bạn
+                    {finalCta.description}
                   </p>
                 </div>
 
                 {/* Benefits */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  {[
-                    { icon: Rocket, title: "Tư vấn miễn phí", desc: "Workshop 2-4 giờ với experts" },
-                    { icon: Target, title: "Assessment nhanh", desc: "Đánh giá security posture" },
-                    { icon: Award, title: "Roadmap cụ thể", desc: "Lộ trình triển khai chi tiết" }
-                  ].map((item, idx) => (
+                  {(finalCta.benefits || []).map((item, idx) => {
+                    const icons = [Rocket, Target, Award]
+                    const Icon = icons[idx] || Award
+                    return (
                     <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
-                      <item.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                      <Icon className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                       <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
                       <p className="text-sm text-white/60">{item.desc}</p>
                     </div>
-                  ))}
+                  )})}
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <Link href="/lien-he">
                     <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg h-16 px-8 group shadow-lg shadow-blue-500/50">
-                      Đặt lịch tư vấn ngay
+                      {finalCta.primaryCta}
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                   <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white hover:bg-white/20 font-bold text-lg h-16 px-8">
                     <Eye className="w-5 h-5 mr-2" />
-                    Xem Demo trực tuyến
+                    {finalCta.secondaryCta}
                   </Button>
                 </div>
               </div>

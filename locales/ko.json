@@ -843,8 +843,15 @@
         "points": [
           "사고 대응 시간 70% 단축",
           "탐지 프로세스 90% 자동화",
-          "위협 탐지 정확도 95%"
+          "위협 탐지 정확도 95%",
+          "AI 24/7 모니터링"
         ],
+        "floatingStats": [
+          {"label": "보호 장치", "value": "5B+ Devices"},
+          {"label": "탐지 시간", "value": "< 1s"},
+          {"label": "AI 모델", "value": "4000+"}
+        ],
+        "aiMonitoring": "AI Monitoring",
         "ctaSubtitle": "단순한 탐지가 아닌 즉각적인 조치.",
         "cta1": "AI SOC 솔루션 상담 받기",
         "cta2": "워크숍 워크스루 문서 보기"
@@ -1115,6 +1122,88 @@
             {"title": "빠른 보안 평가", "description": "현재 보안 태세 분석"},
             {"title": "상세 구현 로드맵", "description": "귀사 기업을 위한 맞춤형 배포 계획"}
           ]
+        },
+        "traditionalBlock": {
+          "title": "전통적 SOC만으로는 부족",
+          "line1": "베트남에서만 하루 12,300건 이상의 공격. 수동 SOC는 현대 위협의 복잡성을 따라갈 수 없습니다.",
+          "line2": "AI SOC는 며칠이 아닌 몇 초 안에 감지하고 대응합니다."
+        },
+        "architectureDetails": {
+          "headline": "오픈, 클라우드 네이티브, 하이퍼스케일",
+          "description": "다음 역량을 갖춘 아키텍처:",
+          "platformLabel": "플랫폼",
+          "items": [
+            {"title": "무제한 스토리지", "desc": "로그를 무기한 저장, 페타바이트 데이터도 수초 내 쿼리"},
+            {"title": "실시간 처리", "desc": "하루 500억+ 이벤트를 <1초 지연으로 처리"},
+            {"title": "450+ 통합", "desc": "Cloud, 온프렘, SaaS, 네트워크, 엔드포인트 등 모든 데이터 소스 연결"},
+            {"title": "자동 확장", "desc": "수요에 따라 자동으로 스케일"}
+          ]
+        },
+        "proofPoint": {
+          "title": "전 세계 50억 대 장치를 보호한 검증된 기술",
+          "description": "ICS AI SOC는 Google, Microsoft, Fortune 500 등 전 세계 기업을 보호하는 기술을 기반으로 합니다."
+        },
+        "componentsVisual": {
+          "title": "매끄러운 통합 · 자동 운영",
+          "description": "데이터 수집부터 자동 대응까지 4개 컴포넌트가 24/7 동기화되어 SOC 팀 업무량을 90% 줄이고 대응 속도를 95% 높입니다"
+        },
+        "processSpeeds": {
+          "instant": "실시간",
+          "fast": "< 1초",
+          "slow": "< 5초"
+        },
+        "roi": {
+          "badge": "성과 및 ROI"
+        },
+        "roiMetrics": [
+          {"metric": "90%", "label": "운영 비용 최적화"},
+          {"metric": "70%", "label": "위협 탐지 자동화"},
+          {"metric": "95%", "label": "사고 대응 가속"},
+          {"metric": "$2.4M", "label": "침해 피해 감소"}
+        ],
+        "roiDetails": {
+          "cost": {
+            "title": "비용 절감",
+            "items": [
+              "전통적 SOC 대비 60-70% 절감",
+              "L1 분석가 추가 채용 불필요(반복 업무를 AI가 대체)",
+              "연간 평균 데이터 침해 피해를 $2.4M 절감"
+            ]
+          },
+          "performance": {
+            "title": "우수한 성능",
+            "items": [
+              "수동 SOC보다 95% 빠른 대응",
+              "APT와 내부 위협까지 놓치지 않고 탐지",
+              "AI 기반 24/7 커버리지"
+            ]
+          },
+          "team": {
+            "title": "팀 역량 향상",
+            "items": [
+              "SOC 팀을 반복적인 L1 작업에서 해방",
+              "위협 헌팅과 전략에 집중",
+              "번아웃 감소, 만족도 향상"
+            ]
+          }
+        },
+        "resourceCard": {
+          "title": "Gurucul Workshop Walkthrough",
+          "description": "데이터 수집부터 대응까지 AI SOC 실무를 다룬 상세 자료",
+          "points": ["시스템 아키텍처", "라이브 데모", "구체적 유스케이스", "ROI 계산기"],
+          "cta": "무료 다운로드"
+        },
+        "finalCta": {
+          "eyebrow": "변화를 시작하세요",
+          "title": "사이버 보안을 한 단계 높여보세요",
+          "description": "ICS 전문가가 무료 상담과 현황 평가를 제공하고, 맞춤형 AI SOC 로드맵을 제안합니다",
+          "benefits": [
+            {"title": "무료 상담", "desc": "전문가와 2-4시간 워크숍"},
+            {"title": "빠른 진단", "desc": "보안 태세 점검"},
+            {"title": "명확한 로드맵", "desc": "단계별 배포 계획"}
+          ],
+          "primaryCta": "상담 예약",
+          "secondaryCta": "온라인 데모 보기"
         }
       }
     },
@@ -1553,6 +1642,10 @@
       }
     ]
   },
+  "complianceBlock": {
+    "heading": "주요 국제 표준 준수",
+    "standards": ["ISO 27001", "PCI-DSS", "시행령 13", "정보보안법", "통지 50/2024"]
+  },
   "benefits": {
     "title": "혜택",
     "heading": "왜 Vietguard - Mobile App Security인가?",
@@ -1566,6 +1659,11 @@
     "scanned": "스캔된 애플리케이션",
     "vulnerabilities": "탐지된 취약점",
     "accuracy": "탐지 정확도"
+  },
+  "finalCta": {
+    "title": "애플리케이션을 보호할 준비가 되셨나요?",
+    "description": "수백 개 기업이 디지털 자산 보호를 위해 VietGuard를 신뢰합니다",
+    "bullets": ["24/7 보안", "헌신적 지원", "국제 품질"]
   },
   "cta": {
     "heading": "지금 바로 모바일 애플리케이션을 보호하세요",

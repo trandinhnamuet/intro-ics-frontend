@@ -856,6 +856,10 @@
           }
         ]
       },
+      "complianceBlock": {
+        "heading": "符合领先的安全标准",
+        "standards": ["ISO 27001", "PCI-DSS", "第13号法令", "信息安全法", "通告 50/2024"]
+      },
       "benefits": {
         "title": "优势",
         "heading": "为什么选择 Vietguard？",
@@ -870,6 +874,11 @@
         "vulnerabilities": "发现的漏洞",
         "accuracy": "精确度"
       },
+      "finalCta": {
+        "title": "准备好保护您的应用了吗？",
+        "description": "加入数百家信任 VietGuard 的企业，共同保护数字资产",
+        "bullets": ["24/7 安全", "贴心支持", "国际品质"]
+      },
       "cta": {
         "heading": "立即保护您的移动应用",
         "description": "联系我们进行咨询并免费试用 Vietguard"
@@ -878,6 +887,29 @@
     "aiSoc": {
       "badge": "AI 安全运营中心",
       "subtitle": "配备先进 AI 的安全运营中心解决方案，用于自动威胁检测和响应",
+        "hero": {
+          "badge": "强大・智能・自动化",
+          "title": "AI SOC",
+          "titleMain": "用 AI 革新安全运营",
+          "titleSpan": "全新标准",
+          "subtitle": "传统 SOC 已经过时，AI SOC 是新标准。",
+          "description": "ICS 的 AI SOC 方案结合 Google 的全球数据分析平台与 Gurucul 的行为分析技术，帮助企业：",
+          "points": [
+            "将事件响应时间减少 70%",
+            "自动化 90% 的检测流程",
+            "威胁检测准确率 95%",
+            "AI 24/7 监控"
+          ],
+          "floatingStats": [
+            {"label": "受保护设备", "value": "5B+ Devices"},
+            {"label": "检测时间", "value": "< 1s"},
+            {"label": "AI 模型", "value": "4000+"}
+          ],
+          "aiMonitoring": "AI 监控",
+          "ctaSubtitle": "不仅仅是检测，而是立即行动。",
+          "cta1": "获取 AI SOC 咨询",
+          "cta2": "查看 Workshop Walkthrough"
+        },
       "features": {
         "title": "功能",
         "heading": "AI SOC 的主要功能",
@@ -916,6 +948,88 @@
       "cta": {
         "heading": "使用 AI SOC 保护企业",
         "description": "联系我们获得最适合的 AI SOC 解决方案咨询"
+      },
+      "traditionalBlock": {
+        "title": "传统 SOC ≠ 足够的防护",
+        "line1": "仅在越南每天就有 12,300+ 攻击，手工 SOC 无法跟上现代威胁。",
+        "line2": "AI SOC 在数秒内检测和响应，而不是数天。"
+      },
+      "architectureDetails": {
+        "headline": "开放、云原生、超大规模",
+        "description": "架构能力：",
+        "platformLabel": "平台",
+        "items": [
+          {"title": "无限存储", "desc": "日志无限期保存，秒级查询 PB 级数据"},
+          {"title": "实时处理", "desc": "每天处理 500 亿+ 事件，延迟 < 1 秒"},
+          {"title": "450+ 集成", "desc": "连接任何数据源：云、本地、SaaS、网络、端点"},
+          {"title": "自动扩展", "desc": "根据需求自动伸缩"}
+        ]
+      },
+      "proofPoint": {
+        "title": "全球 50 亿设备受保护的验证技术",
+        "description": "ICS AI SOC 基于保护 Google、Microsoft、财富 500 强和数千家企业的技术。"
+      },
+      "componentsVisual": {
+        "title": "无缝集成 · 自动运行",
+        "description": "四大组件 24/7 联动，从数据接入到自动响应，减少 90% SOC 工作量并提升响应速度 95%"
+      },
+      "processSpeeds": {
+        "instant": "实时",
+        "fast": "< 1 秒",
+        "slow": "< 5 秒"
+      },
+      "roi": {
+        "badge": "成效与 ROI"
+      },
+      "roiMetrics": [
+        {"metric": "90%", "label": "优化运营成本"},
+        {"metric": "70%", "label": "检测自动化"},
+        {"metric": "95%", "label": "更快的事件响应"},
+        {"metric": "$2.4M", "label": "减少数据泄露损失"}
+      ],
+      "roiDetails": {
+        "cost": {
+          "title": "成本节省",
+          "items": [
+            "相比传统 SOC 节省 60-70% 运营成本",
+            "无需再招聘 L1 分析师（AI 处理重复工作）",
+            "每年减少约 $2.4M 数据泄露损失"
+          ]
+        },
+        "performance": {
+          "title": "卓越性能",
+          "items": [
+            "比手工 SOC 快 95%",
+            "检测 APT 与内部威胁不遗漏",
+            "AI 24/7 全天候覆盖"
+          ]
+        },
+        "team": {
+          "title": "团队赋能",
+          "items": [
+            "让 SOC 团队摆脱重复 L1 任务",
+            "专注威胁狩猎与战略",
+            "降低倦怠并提升满意度"
+          ]
+        }
+      },
+      "resourceCard": {
+        "title": "Gurucul Workshop Walkthrough",
+        "description": "详解 AI SOC 从接入到响应的实际运作",
+        "points": ["系统架构", "现场演示", "具体用例", "ROI 计算器"],
+        "cta": "免费下载"
+      },
+      "finalCta": {
+        "eyebrow": "开启转型",
+        "title": "准备提升您的网络安全吗？",
+        "description": "ICS 专家提供免费咨询与评估，并定制 AI SOC 部署路线图",
+        "benefits": [
+          {"title": "免费咨询", "desc": "2-4 小时专家工作坊"},
+          {"title": "快速评估", "desc": "安全态势检查"},
+          {"title": "清晰路线图", "desc": "分步部署计划"}
+        ],
+        "primaryCta": "预约咨询",
+        "secondaryCta": "观看在线演示"
       }
     },
     "csaDlp": {

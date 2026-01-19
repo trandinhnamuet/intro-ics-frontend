@@ -769,8 +769,8 @@ export default function VietguardPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10 text-white">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2">Quy trình triển khai chuyên nghiệp</h3>
-                    <p className="text-white/90 text-sm md:text-base">Từ A-Z với sự hỗ trợ tận tình của đội ngũ chuyên gia ICS</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2">{t('products.vietguard.activation.cardTitle')}</h3>
+                    <p className="text-white/90 text-sm md:text-base">{t('products.vietguard.activation.cardDescription')}</p>
                   </div>
                 </Card>
               </ScrollReveal>
@@ -856,9 +856,9 @@ export default function VietguardPage() {
           {/* Compliance Logos */}
           <ScrollReveal direction="up">
             <Card className="p-6 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 border-2 border-orange-200 dark:border-orange-800">
-              <h3 className="text-xl font-bold text-center mb-6">Tuân thủ các tiêu chuẩn hàng đầu</h3>
+              <h3 className="text-xl font-bold text-center mb-6">{t('products.vietguard.complianceBlock.heading')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-5 items-center justify-items-center">
-                {['ISO 27001', 'PCI-DSS', 'Nghị định 13', 'Luật ANTT', 'TT 50/2024'].map((standard, idx) => (
+                {(t('products.vietguard.complianceBlock.standards', { returnObjects: true }) as string[]).map((standard, idx) => (
                   <div key={idx} className="text-center">
                     <div className="w-16 h-16 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center mb-2 shadow-lg">
                       <CheckCircle2 className="w-8 h-8 text-green-600" />
@@ -891,11 +891,11 @@ export default function VietguardPage() {
                 </div>
                 
                 <h2 className="text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
-                  Sẵn sàng bảo vệ<br />ứng dụng của bạn?
+                  {t('products.vietguard.finalCta.title')}
                 </h2>
                 
                 <p className="text-xl text-white/95 mb-8 max-w-3xl mx-auto leading-relaxed">
-                  Tham gia cùng hàng trăm doanh nghiệp đã tin tưởng VietGuard để bảo vệ tài sản số của họ
+                  {t('products.vietguard.finalCta.description')}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
@@ -924,19 +924,19 @@ export default function VietguardPage() {
                     <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                       <Lock className="w-5 h-5" />
                     </div>
-                    <span className="text-base">Bảo mật 24/7</span>
+                    <span className="text-base">{(t('products.vietguard.finalCta.bullets', { returnObjects: true }) as string[])?.[0]}</span>
                   </div>
                   <div className="flex items-center justify-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                       <Users className="w-5 h-5" />
                     </div>
-                    <span className="text-base">Hỗ trợ tận tâm</span>
+                    <span className="text-base">{(t('products.vietguard.finalCta.bullets', { returnObjects: true }) as string[])?.[1]}</span>
                   </div>
                   <div className="flex items-center justify-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                       <Award className="w-5 h-5" />
                     </div>
-                    <span className="text-base">Chất lượng quốc tế</span>
+                    <span className="text-base">{(t('products.vietguard.finalCta.bullets', { returnObjects: true }) as string[])?.[2]}</span>
                   </div>
                 </div>
               </div>

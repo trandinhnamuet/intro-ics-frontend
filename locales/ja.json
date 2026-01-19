@@ -998,6 +998,10 @@
           }
         ]
       },
+      "complianceBlock": {
+        "heading": "主要な国際基準に準拠",
+        "standards": ["ISO 27001", "PCI-DSS", "政令13", "情報安全法", "通達50/2024"]
+      },
       "benefits": {
         "title": "メリット",
         "heading": "Vietguard - モバイルアプリセキュリティを選ぶ理由",
@@ -1011,6 +1015,11 @@
         "scanned": "スキャンされたアプリケーション",
         "vulnerabilities": "検出された脆弱性",
         "accuracy": "精度"
+      },
+      "finalCta": {
+        "title": "アプリケーションを守る準備はできていますか？",
+        "description": "数百の企業がデジタル資産保護のためにVietGuardを信頼しています",
+        "bullets": ["24/7セキュリティ", "献身的なサポート", "国際品質"]
       },
       "cta": {
         "heading": "今日、モバイルアプリケーションを保護してください",
@@ -1058,8 +1067,15 @@
         "points": [
           "インシデント対応時間70%短縮",
           "検出プロセス90%自動化",
-          "脅威検出精度95%"
+          "脅威検出精度95%",
+          "AIによる24/7監視"
         ],
+        "floatingStats": [
+          {"label": "保護対象デバイス", "value": "5B+ Devices"},
+          {"label": "検知時間", "value": "< 1s"},
+          {"label": "AIモデル", "value": "4000+"}
+        ],
+        "aiMonitoring": "AI Monitoring",
         "ctaSubtitle": "単なる検出ではなく即座のアクション。",
         "cta1": "AI SOCソリューション相談を受ける",
         "cta2": "ワークショップウォークスルードキュメントを見る"
@@ -1330,6 +1346,88 @@
             {"title": "クイックセキュリティ評価", "description": "現在のセキュリティ態勢を分析"},
             {"title": "詳細な実装ロードマップ", "description": "貴社企業向けカスタマイズされた展開計画"}
           ]
+        },
+        "traditionalBlock": {
+          "title": "従来型SOCでは不十分",
+          "line1": "ベトナムだけで1日12,300件以上の攻撃。手作業SOCでは複雑な脅威に追いつけません。",
+          "line2": "AI SOCは数日ではなく数秒で検知・対応します。"
+        },
+        "architectureDetails": {
+          "headline": "オープンでクラウドネイティブ、ハイパースケール",
+          "description": "次の能力を備えたアーキテクチャ:",
+          "platformLabel": "プラットフォーム",
+          "items": [
+            {"title": "無制限ストレージ", "desc": "ログを無期限保存し、ペタバイト級データを数秒でクエリ"},
+            {"title": "リアルタイム処理", "desc": "1日500億件以上のイベントを<1秒で処理"},
+            {"title": "450+連携", "desc": "あらゆるデータソース(Cloud/オンプレ/SaaS/Network/Endpoint)と接続"},
+            {"title": "自動スケーリング", "desc": "需要に応じて自動でスケール"}
+          ]
+        },
+        "proofPoint": {
+          "title": "世界50億デバイスを保護する実証済みテクノロジー",
+          "description": "ICSのAI SOCはGoogle、Microsoft、Fortune 500など世界中の企業を守る技術に基づいています。"
+        },
+        "componentsVisual": {
+          "title": "シームレス統合・自動運用",
+          "description": "データ取込から自動レスポンスまで4コンポーネントが24/7連携し、SOCチームの負荷を90%削減し対応速度を95%向上"
+        },
+        "processSpeeds": {
+          "instant": "リアルタイム",
+          "fast": "< 1秒",
+          "slow": "< 5秒"
+        },
+        "roi": {
+          "badge": "効果とROI"
+        },
+        "roiMetrics": [
+          {"metric": "90%", "label": "運用コスト最適化"},
+          {"metric": "70%", "label": "脅威検知の自動化"},
+          {"metric": "95%", "label": "インシデント対応の高速化"},
+          {"metric": "$2.4M", "label": "情報漏えい損失の削減"}
+        ],
+        "roiDetails": {
+          "cost": {
+            "title": "コスト削減",
+            "items": [
+              "従来型SOC比で60-70%の削減",
+              "L1アナリストの追加採用不要（AIが代替）",
+              "平均データ漏えい影響を年間$2.4M削減"
+            ]
+          },
+          "performance": {
+            "title": "高パフォーマンス",
+            "items": [
+              "手作業SOCより95%速く対応",
+              "APTや内部脅威を漏れなく検知",
+              "AIによる24/7カバレッジ"
+            ]
+          },
+          "team": {
+            "title": "チーム強化",
+            "items": [
+              "SOCチームをL1作業から解放",
+              "スレットハンティングと戦略に集中",
+              "バーンアウトを減らし満足度向上"
+            ]
+          }
+        },
+        "resourceCard": {
+          "title": "Gurucul Workshop Walkthrough",
+          "description": "データ取込からレスポンスまで、AI SOCの実運用を解説した資料",
+          "points": ["システムアーキテクチャ", "ライブデモ", "具体的ユースケース", "ROI計算"],
+          "cta": "無料でダウンロード"
+        },
+        "finalCta": {
+          "eyebrow": "変革を始めよう",
+          "title": "サイバーセキュリティを強化しませんか?",
+          "description": "ICSの専門家が無料で相談・現状評価し、最適なAI SOC導入ロードマップを提案します",
+          "benefits": [
+            {"title": "無料相談", "desc": "専門家による2-4時間のワークショップ"},
+            {"title": "クイック診断", "desc": "セキュリティポスチャの確認"},
+            {"title": "明確なロードマップ", "desc": "段階的な導入計画"}
+          ],
+          "primaryCta": "相談を予約",
+          "secondaryCta": "オンラインデモを見る"
         }
       }
     },

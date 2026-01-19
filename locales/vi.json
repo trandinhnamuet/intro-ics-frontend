@@ -812,8 +812,15 @@
         "points": [
           "Giảm 70% thời gian phản ứng sự cố",
           "Tự động hóa 90% quy trình phát hiện",
-          "Độ chính xác 95% trong phát hiện mối đe dọa"
+          "Độ chính xác 95% trong phát hiện mối đe dọa",
+          "Giám sát AI 24/7"
         ],
+        "floatingStats": [
+          {"label": "Thiết bị bảo vệ", "value": "5B+ Devices"},
+          {"label": "Thời gian phát hiện", "value": "< 1s"},
+          {"label": "Mô hình AI", "value": "4000+"}
+        ],
+        "aiMonitoring": "Giám sát AI",
         "ctaSubtitle": "Không chỉ là phát hiện – mà là hành động ngay lập tức.",
         "cta1": "Nhận tư vấn giải pháp AI SOC",
         "cta2": "Xem tài liệu Workshop Walkthrough"
@@ -1045,6 +1052,15 @@
             {"number": "4", "name": "Phản ứng", "description": "Playbook tự động khóa mối đe dọa trong giây lát"}
           ]
         },
+        "roi": {
+          "badge": "Hiệu quả & ROI"
+        },
+        "roiMetrics": [
+          {"metric": "90%", "label": "Tối ưu chi phí vận hành"},
+          {"metric": "70%", "label": "Tự động hóa phát hiện"},
+          {"metric": "95%", "label": "Phản ứng sự cố nhanh hơn"},
+          {"metric": "$2.4M", "label": "Giảm thiệt hại data breach"}
+        ],
         "savings": {
           "title": "Tiết kiệm Chi phí",
           "subtitle": "Giảm đáng kể chi phí hoạt động bảo mật",
@@ -1084,6 +1100,84 @@
             {"title": "Đánh giá Bảo mật Nhanh", "description": "Phân tích tình trạng bảo mật hiện tại của bạn"},
             {"title": "Lộ trình Triển khai Chi tiết", "description": "Kế hoạch triển khai tùy chỉnh cho doanh nghiệp của bạn"}
           ]
+        },
+        "traditionalBlock": {
+          "title": "SOC truyền thống ≠ Đủ bảo vệ",
+          "line1": "Với 12,300+ tấn công/ngày chỉ riêng tại Việt Nam, manual SOC không thể theo kịp tốc độ và độ phức tạp của threat landscape hiện đại.",
+          "line2": "AI SOC phát hiện & phản ứng trong vài giây, không phải vài ngày."
+        },
+        "architectureDetails": {
+          "headline": "Open, Cloud-Native & Hyperscale",
+          "description": "Kiến trúc mở với khả năng:",
+          "platformLabel": "Nền tảng",
+          "items": [
+            {"title": "Unlimited Storage", "desc": "Lưu trữ log không giới hạn thời gian, query trên petabyte data trong giây"},
+            {"title": "Real-time Processing", "desc": "Xử lý 50+ tỷ sự kiện/ngày với latency < 1 giây"},
+            {"title": "450+ Integrations", "desc": "Kết nối mọi data source: Cloud, On-prem, SaaS, Network, Endpoint"},
+            {"title": "Auto-scaling", "desc": "Tự động scale theo nhu cầu, không giới hạn tăng trưởng"}
+          ]
+        },
+        "proofPoint": {
+          "title": "5 tỷ thiết bị được bảo vệ toàn cầu - Công nghệ đã được chứng minh",
+          "description": "Nền tảng AI SOC của ICS dựa trên công nghệ bảo vệ Google, Microsoft, các Fortune 500, và hàng nghìn doanh nghiệp trên toàn thế giới."
+        },
+        "componentsVisual": {
+          "title": "Tích hợp liền mạch - Vận hành tự động",
+          "description": "4 component hoạt động đồng bộ 24/7, từ data ingestion đến auto-response, giảm 90% workload cho SOC team và tăng 95% tốc độ phản ứng"
+        },
+        "processSpeeds": {
+          "instant": "Real-time",
+          "fast": "< 1 giây",
+          "slow": "< 5 giây"
+        },
+        "roiDetails": {
+          "cost": {
+            "title": "Tiết kiệm chi phí",
+            "items": [
+              "Giảm 60-70% chi phí vận hành SOC truyền thống",
+              "Không cần thuê thêm L1 Analyst (AI thay thế)",
+              "Giảm thiệt hại từ data breach trung bình $2.4M/năm"
+            ]
+          },
+          "performance": {
+            "title": "Hiệu suất vượt trội",
+            "items": [
+              "Phản ứng nhanh hơn 95% so với manual SOC",
+              "Phát hiện APT và insider threat không bỏ sót",
+              "Coverage 24/7 với AI không ngừng nghỉ"
+            ]
+          },
+          "team": {
+            "title": "Nâng cao năng lực team",
+            "items": [
+              "Giải phóng SOC team khỏi L1 repetitive tasks",
+              "Tập trung vào threat hunting & strategy",
+              "Giảm burnout và tăng job satisfaction"
+            ]
+          }
+        },
+        "resourceCard": {
+          "title": "Gurucul Workshop Walkthrough",
+          "description": "Tài liệu chi tiết về cách AI SOC hoạt động trong thực tế - từ ingestion đến response",
+          "points": [
+            "Kiến trúc hệ thống",
+            "Demo thực tế",
+            "Use cases cụ thể",
+            "ROI calculator"
+          ],
+          "cta": "Tải tài liệu miễn phí"
+        },
+        "finalCta": {
+          "eyebrow": "Bắt đầu hành trình chuyển đổi",
+          "title": "Sẵn sàng nâng tầm An ninh mạng?",
+          "description": "Đội ngũ chuyên gia ICS sẽ tư vấn miễn phí, đánh giá hiện trạng và đề xuất roadmap triển khai AI SOC phù hợp với doanh nghiệp bạn",
+          "benefits": [
+            {"title": "Tư vấn miễn phí", "desc": "Workshop 2-4 giờ với experts"},
+            {"title": "Assessment nhanh", "desc": "Đánh giá security posture"},
+            {"title": "Roadmap cụ thể", "desc": "Lộ trình triển khai chi tiết"}
+          ],
+          "primaryCta": "Đặt lịch tư vấn ngay",
+          "secondaryCta": "Xem Demo trực tuyến"
         }
       }
     },
@@ -1217,6 +1311,8 @@
         "badge": "Triển khai nhanh chóng",
         "heading": "Kích hoạt giải pháp toàn diện bảo vệ ứng dụng doanh nghiệp",
         "description": "Doanh nghiệp có thể nhanh chóng triển khai VietGuard thông qua mô hình hợp tác linh hoạt và hiệu quả",
+        "cardTitle": "Quy trình triển khai chuyên nghiệp",
+        "cardDescription": "Từ A-Z với sự hỗ trợ tận tình của đội ngũ chuyên gia ICS",
         "items": [
           {
             "title": "Triển khai nhanh chóng",
@@ -1274,6 +1370,16 @@
           }
         ]
       },
+      "complianceBlock": {
+        "heading": "Tuân thủ các tiêu chuẩn hàng đầu",
+        "standards": [
+          "ISO 27001",
+          "PCI-DSS",
+          "Nghị định 13",
+          "Luật ANTT",
+          "TT 50/2024"
+        ]
+      },
       "benefits": {
         "title": "Lợi ích",
         "heading": "Tại sao chọn Vietguard - Mobile App Security?",
@@ -1287,6 +1393,15 @@
         "scanned": "Ứng dụng đã quét",
         "vulnerabilities": "Lỗ hổng phát hiện",
         "accuracy": "Độ chính xác"
+      },
+      "finalCta": {
+        "title": "Sẵn sàng bảo vệ ứng dụng của bạn?",
+        "description": "Tham gia cùng hàng trăm doanh nghiệp đã tin tưởng VietGuard để bảo vệ tài sản số của họ",
+        "bullets": [
+          "Bảo mật 24/7",
+          "Hỗ trợ tận tâm",
+          "Chất lượng quốc tế"
+        ]
       },
       "cta": {
         "heading": "Bảo vệ ứng dụng di động của bạn ngay hôm nay",
@@ -1511,6 +1626,7 @@
         "badge": "Tính năng",
         "title": "4 Tính Năng Mạnh Mẽ",
         "subtitle": "Mỗi tính năng được thiết kế để giải quyết một bài toán cụ thể",
+        "advancedTitle": "Nâng cao",
         "items": [
           {
             "title": "Messaging API & SDK",
@@ -1535,6 +1651,30 @@
             "subtitle": "Dashboard theo thời gian thực",
             "description": "Giám sát mọi metric, lọc nội dung tự động bằng AI",
             "benefits": ["Real-time monitoring", "AI-powered filtering", "User insights", "Custom reports"]
+          }
+        ]
+      },
+      "automation": {
+        "badge": "Công Nghệ Tự Động Hóa",
+        "title": "Tự động hóa tất cả quy trình tương tác",
+        "subtitle": "Không cần can thiệp thủ công. Hệ thống AI của V AI - Agent tự động xử lý những tương tác phức tạp, giải quyết vấn đề nhanh chóng và cải thiện trải nghiệm khách hàng.",
+        "chip": "Công nghệ mới",
+        "items": [
+          {
+            "title": "Xử lý tin nhắn tự động",
+            "description": "Phân loại, ưu tiên và trả lời tin nhắn mà không cần nhân viên"
+          },
+          {
+            "title": "Phân luồng & định tuyến hội thoại thông minh",
+            "description": "Tự động nhận diện nhu cầu, chuyển tiếp đúng kịch bản hoặc bộ phận xử lý phù hợp"
+          },
+          {
+            "title": "Tối ưu hóa quy trình",
+            "description": "Học từ mọi tương tác để cải thiện liên tục độ chính xác"
+          },
+          {
+            "title": "Giảm chi phí nhân sự",
+            "description": "Tự động hóa 70% công việc hỗ trợ khách hàng"
           }
         ]
       },
@@ -1569,6 +1709,9 @@
         "badge": "So sánh",
         "title": "Tự xây dựng vs V AI - Agent",
         "subtitle": "Dữ liệu thực tế từ 50+ doanh nghiệp",
+        "featureColumn": "Tiêu chí",
+        "inHouseColumn": "Tự xây dựng",
+        "productColumn": "V AI - Agent",
         "items": [
           {
             "feature": "Thời gian ra mắt",
@@ -1649,7 +1792,9 @@
             "question": "Có thể tùy chỉnh giao diện chat không?",
             "answer": "Có, hoàn toàn tùy chỉnh được. White-label solution cho phép bạn kiểm soát 100% UI/UX theo ý muốn."
           }
-        ]
+        ],
+        "moreQuestion": "Câu hỏi khác không có trong danh sách?",
+        "contactCta": "Liên hệ với Sales Team"
       },
       "security": {
         "badge": "Bảo mật",
@@ -1679,6 +1824,21 @@
           {
             "title": "99.9% Uptime guarantee",
             "description": "SLA cam kết, hoặc bạn được tiền hoàn lại"
+          }
+        ],
+        "gallery": [
+          {
+            "title": "Giao diện tương tác",
+            "description": "Thiết kế hiện đại, dễ sử dụng"
+          },
+          {
+            "title": "Tự động hóa thông minh",
+            "description": "Công nghệ AI tự động xử lý",
+            "label": "MỚI"
+          },
+          {
+            "title": "Dashboard thông minh",
+            "description": "Phân tích dữ liệu real-time"
           }
         ]
       },
