@@ -1430,8 +1430,258 @@
         "heading": "Manage Business with Smart Dashboard",
         "description": "Contact us for demo and consultation on Smart Dashboard"
       }
-    }
-  },
+    },
+    "chatbot": {
+        "badge": "Smart Communication Platform",
+        "subtitle": "Comprehensive in-app communication platform with AI Chatbot, increase user retention by 40%",
+        "hero": {
+          "badge": "Don't let users abandon your app",
+          "title": "V AI - Agent",
+          "subtitle": "Increase user retention by 40% with powerful Communication Hub",
+          "description": "Integrate Messaging, Calling and AI Bot in just 48 hours. No need to worry about code or infrastructure.",
+          "cta1": "Start free trial",
+          "cta2": "View case study",
+          "features": {
+            "badge1": "Leading solution for enterprises",
+            "badge2": "220K+ Active users",
+            "badge3": "AWS & Google Cloud partners"
+          }
+        },
+        "painPoints": {
+          "badge": "Real problems",
+          "title": "Why building chat yourself is an expensive mistake",
+          "subtitle": "Many companies underestimate the complexity of building real-time messaging",
+          "points": [
+            {
+              "title": "Hidden costs",
+              "description": "10+ engineers, 6+ months, $40,000+ before launch"
+            },
+            {
+              "title": "Infrastructure risks",
+              "description": "Message delays, data loss, crashes during live streams/events"
+            },
+            {
+              "title": "Complex security",
+              "description": "Spam filtering, harmful content, international compliance"
+            }
+          ]
+        },
+        "solution": {
+          "badge": "Solution",
+          "title": "Solution: V AI - Agent",
+          "description": "We handle all technical risks so you can focus 100% on business. No code worries, no infrastructure worries."
+        },
+        "features": {
+          "badge": "Features",
+          "title": "4 Powerful features",
+          "subtitle": "Each feature designed to solve specific business problems",
+          "items": [
+            {
+              "title": "Messaging API & SDK",
+              "subtitle": "1-1 chat, groups, open channels",
+              "description": "Simple integration, full support for real-time chat like iMessage/Zalo",
+              "benefits": ["Thread replies", "Rich media", "Message editing", "Real-time sync"]
+            },
+            {
+              "title": "Voice & Video Call",
+              "subtitle": "HD quality calling",
+              "description": "High-quality voice/video calling with end-to-end security encryption",
+              "benefits": ["HD quality", "Auto adaptation", "End-to-end encryption", "Group calls"]
+            },
+            {
+              "title": "AI Chatbot & Assistant",
+              "subtitle": "24/7 customer service automation",
+              "description": "AI automation, content summarization and multi-language translation",
+              "benefits": ["24/7 automation", "Real-time translation", "Conversation summary", "Smart routing"]
+            },
+            {
+              "title": "Console & BI Analytics",
+              "subtitle": "Real-time dashboard",
+              "description": "Monitor all metrics, auto filter content with AI",
+              "benefits": ["Real-time monitoring", "AI-powered filtering", "User insights", "Custom reports"]
+            }
+          ]
+        },
+        "automation": {
+          "badge": "Automation Technology",
+          "title": "Automate all interaction processes",
+          "subtitle": "No need for manual intervention. V AI - Agent system automatically handles complex interactions, solves problems quickly and improves customer experience.",
+          "chip": "New technology",
+          "items": [
+            {
+              "title": "Automatic message processing",
+              "description": "Classify, prioritize and auto-reply messages without staff intervention"
+            },
+            {
+              "title": "Smart conversation flow and routing",
+              "description": "Automatically detect needs and forward to appropriate scenario or department"
+            },
+            {
+              "title": "Process optimization",
+              "description": "Learn from every interaction to continuously improve accuracy"
+            },
+            {
+              "title": "Reduce labor costs",
+              "description": "Automate 70% of customer support work"
+            }
+          ]
+        },
+        "useCases": {
+          "badge": "Use cases",
+          "title": "Successful industries",
+          "subtitle": "From gaming to healthcare, V AI - Agent proves effective",
+          "items": [
+            {
+              "title": "Gaming & Entertainment",
+              "description": "In-game chat, team formation, item exchange without leaving app",
+              "stat": "220K+ users"
+            },
+            {
+              "title": "Social & Idol",
+              "description": "Fans message celebrities directly through VIP tickets or subscriptions",
+              "stat": "Direct messaging"
+            },
+            {
+              "title": "E-commerce & Retail",
+              "description": "Direct product consultation, increase closing rate 3x",
+              "stat": "+300% conversion"
+            },
+            {
+              "title": "Healthcare & Eldercare",
+              "description": "Remote health monitoring video calls, robot care integration",
+              "stat": "Remote monitoring"
+            }
+          ]
+        },
+        "comparison": {
+          "badge": "Comparison",
+          "title": "Build yourself vs V AI - Agent",
+          "subtitle": "Real data from 50+ companies",
+          "items": [
+            {
+              "feature": "Time to launch",
+              "inHouse": "6 - 9 months",
+              "vAIChat": "1 - 2 weeks"
+            },
+            {
+              "feature": "Initial cost",
+              "inHouse": "> $40,000",
+              "vAIChat": "Pay as you grow"
+            },
+            {
+              "feature": "Reliability",
+              "inHouse": "Depends on IT",
+              "vAIChat": "99.9% (AWS/GCP)"
+            },
+            {
+              "feature": "Maintenance & updates",
+              "inHouse": "Labor intensive",
+              "vAIChat": "Automatic & free"
+            },
+            {
+              "feature": "AI features",
+              "inHouse": "Hard to integrate",
+              "vAIChat": "Built-in & integrated"
+            }
+          ]
+        },
+        "deployment": {
+          "badge": "Deployment",
+          "title": "4 steps to success",
+          "subtitle": "From signup to go-live in just days",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Sign up & get API key",
+              "description": "Access V AI - Agent console and create developer account"
+            },
+            {
+              "number": "02",
+              "title": "Integrate SDK",
+              "description": "Few lines of code to embed chat framework in iOS/Android/Web"
+            },
+            {
+              "number": "03",
+              "title": "Customize UI",
+              "description": "Use UI Kit that matches your brand colors"
+            },
+            {
+              "number": "04",
+              "title": "Go-live",
+              "description": "Start connecting users and track growth"
+            }
+          ]
+        },
+        "faqs": {
+          "badge": "FAQ",
+          "title": "Questions from CTOs/CEOs",
+          "subtitle": "Detailed answers from our engineering team",
+          "items": [
+            {
+              "question": "Does V AI - Agent support data migration from legacy platforms?",
+              "answer": "Yes, we provide tools and technical support for smooth data migration. Migration specialists available 24/7."
+            },
+            {
+              "question": "What if my app has millions of users? Can the system handle it?",
+              "answer": "Built on AWS/GCP auto-scaling infrastructure, proven with millions-user apps and games. You can rest assured about scalability."
+            },
+            {
+              "question": "How is pricing calculated?",
+              "answer": "We offer flexible plans based on MAU (Monthly Active Users) or message volume, optimizing costs for startups and large enterprises."
+            },
+            {
+              "question": "How do you provide technical support?",
+              "answer": "24/7 support via email, chat, and dedicated account managers for enterprise plans. SLA: 30 minutes response for critical issues."
+            },
+            {
+              "question": "Can I customize the chat interface?",
+              "answer": "Fully customizable. White-label solution lets you control 100% of UI/UX as you want."
+            }
+          ]
+        },
+        "security": {
+          "badge": "Security",
+          "title": "Your data is always safe",
+          "subtitle": "Compliance with international security standards, 24/7 monitoring",
+          "items": [
+            {
+              "title": "ISO Certification",
+              "description": "Compliance with ISO 27001, SOC 2 and strict international standards"
+            },
+            {
+              "title": "24/7 monitoring",
+              "description": "Detect and fix issues before users notice"
+            },
+            {
+              "title": "Data sovereignty",
+              "description": "You own 100% of user data and conversation content"
+            },
+            {
+              "title": "White-label solution",
+              "description": "We stay behind the scenes, your brand is shown"
+            },
+            {
+              "title": "Auto-scaling infrastructure",
+              "description": "Based on AWS/GCP, proven with millions of users"
+            },
+            {
+              "title": "99.9% uptime guarantee",
+              "description": "SLA guaranteed, or get refunded"
+            }
+          ]
+        },
+        "cta": {
+          "heading": "Ready to start?",
+          "description": "No credit card required, no long contracts. Just 5 minutes to setup developer account.",
+          "ctaButton": "Sign up for free",
+          "savings": "Save up to 60% on budget",
+          "savingsDesc": "Save up to 40% on management time",
+          "benefits": "You don't just save costs. You get 24/7 support from ICS team with years of experience",
+          "tryButton": "Start trial now",
+          "demoButton": "Schedule demo"
+        }
+      }
+    },
   "sidebar": {
     "aboutICS": "ABOUT ICS",
     "generalIntro": "General Introduction",
@@ -1450,232 +1700,6 @@
       "content": "Message",
       "contentPlaceholder": "Enter your message",
       "submit": "Send Message"
-    },
-    "chatbot": {
-      "badge": "Smart Communication Platform",
-      "subtitle": "Comprehensive in-app communication platform with AI Chatbot, increase user retention by 40%",
-      "hero": {
-        "badge": "Don't let users abandon your app",
-        "title": "V AI - Agent",
-        "subtitle": "Increase user retention by 40% with powerful Communication Hub",
-        "description": "Integrate Messaging, Calling and AI Bot in just 48 hours. No need to worry about code or infrastructure.",
-        "cta1": "Start free trial",
-        "cta2": "View case study",
-        "features": {
-          "badge1": "Leading solution for enterprises",
-          "badge2": "220K+ Active users",
-          "badge3": "AWS & Google Cloud partners"
-        }
-      },
-      "painPoints": {
-        "badge": "Real problems",
-        "title": "Why building chat yourself is an expensive mistake",
-        "subtitle": "Many companies underestimate the complexity of building real-time messaging",
-        "points": [
-          {
-            "title": "Hidden costs",
-            "description": "10+ engineers, 6+ months, $40,000+ before launch"
-          },
-          {
-            "title": "Infrastructure risks",
-            "description": "Message delays, data loss, crashes during live streams/events"
-          },
-          {
-            "title": "Complex security",
-            "description": "Spam filtering, harmful content, international compliance"
-          }
-        ]
-      },
-      "solution": {
-        "badge": "Solution",
-        "title": "Solution: V AI - Agent",
-        "description": "We handle all technical risks so you can focus 100% on business. No code worries, no infrastructure worries."
-      },
-      "features": {
-        "badge": "Features",
-        "title": "4 Powerful features",
-        "subtitle": "Each feature designed to solve specific business problems",
-        "items": [
-          {
-            "title": "Messaging API & SDK",
-            "subtitle": "1-1 chat, groups, open channels",
-            "description": "Simple integration, full support for real-time chat like iMessage/Zalo",
-            "benefits": ["Thread replies", "Rich media", "Message editing", "Real-time sync"]
-          },
-          {
-            "title": "Voice & Video Call",
-            "subtitle": "HD quality calling",
-            "description": "High-quality voice/video calling with end-to-end security encryption",
-            "benefits": ["HD quality", "Auto adaptation", "End-to-end encryption", "Group calls"]
-          },
-          {
-            "title": "AI Chatbot & Assistant",
-            "subtitle": "24/7 customer service automation",
-            "description": "AI automation, content summarization and multi-language translation",
-            "benefits": ["24/7 automation", "Real-time translation", "Conversation summary", "Smart routing"]
-          },
-          {
-            "title": "Console & BI Analytics",
-            "subtitle": "Real-time dashboard",
-            "description": "Monitor all metrics, auto filter content with AI",
-            "benefits": ["Real-time monitoring", "AI-powered filtering", "User insights", "Custom reports"]
-          }
-        ]
-      },
-      "useCases": {
-        "badge": "Use cases",
-        "title": "Successful industries",
-        "subtitle": "From gaming to healthcare, V AI - Agent proves effective",
-        "items": [
-          {
-            "title": "Gaming & Entertainment",
-            "description": "In-game chat, team formation, item exchange without leaving app",
-            "stat": "220K+ users"
-          },
-          {
-            "title": "Social & Idol",
-            "description": "Fans message celebrities directly through VIP tickets or subscriptions",
-            "stat": "Direct messaging"
-          },
-          {
-            "title": "E-commerce & Retail",
-            "description": "Direct product consultation, increase closing rate 3x",
-            "stat": "+300% conversion"
-          },
-          {
-            "title": "Healthcare & Eldercare",
-            "description": "Remote health monitoring video calls, robot care integration",
-            "stat": "Remote monitoring"
-          }
-        ]
-      },
-      "comparison": {
-        "badge": "Comparison",
-        "title": "Build yourself vs V AI - Agent",
-        "subtitle": "Real data from 50+ companies",
-        "items": [
-          {
-            "feature": "Time to launch",
-            "inHouse": "6 - 9 months",
-            "vAIChat": "1 - 2 weeks"
-          },
-          {
-            "feature": "Initial cost",
-            "inHouse": "> $40,000",
-            "vAIChat": "Pay as you grow"
-          },
-          {
-            "feature": "Reliability",
-            "inHouse": "Depends on IT",
-            "vAIChat": "99.9% (AWS/GCP)"
-          },
-          {
-            "feature": "Maintenance & updates",
-            "inHouse": "Labor intensive",
-            "vAIChat": "Automatic & free"
-          },
-          {
-            "feature": "AI features",
-            "inHouse": "Hard to integrate",
-            "vAIChat": "Built-in & integrated"
-          }
-        ]
-      },
-      "deployment": {
-        "badge": "Deployment",
-        "title": "4 steps to success",
-        "subtitle": "From signup to go-live in just days",
-        "steps": [
-          {
-            "number": "01",
-            "title": "Sign up & get API key",
-            "description": "Access V AI - Agent console and create developer account"
-          },
-          {
-            "number": "02",
-            "title": "Integrate SDK",
-            "description": "Few lines of code to embed chat framework in iOS/Android/Web"
-          },
-          {
-            "number": "03",
-            "title": "Customize UI",
-            "description": "Use UI Kit that matches your brand colors"
-          },
-          {
-            "number": "04",
-            "title": "Go-live",
-            "description": "Start connecting users and track growth"
-          }
-        ]
-      },
-      "faqs": {
-        "badge": "FAQ",
-        "title": "Questions from CTOs/CEOs",
-        "subtitle": "Detailed answers from our engineering team",
-        "items": [
-          {
-            "question": "Does V AI - Agent support data migration from legacy platforms?",
-            "answer": "Yes, we provide tools and technical support for smooth data migration. Migration specialists available 24/7."
-          },
-          {
-            "question": "What if my app has millions of users? Can the system handle it?",
-            "answer": "Built on AWS/GCP auto-scaling infrastructure, proven with millions-user apps and games. You can rest assured about scalability."
-          },
-          {
-            "question": "How is pricing calculated?",
-            "answer": "We offer flexible plans based on MAU (Monthly Active Users) or message volume, optimizing costs for startups and large enterprises."
-          },
-          {
-            "question": "How do you provide technical support?",
-            "answer": "24/7 support via email, chat, and dedicated account managers for enterprise plans. SLA: 30 minutes response for critical issues."
-          },
-          {
-            "question": "Can I customize the chat interface?",
-            "answer": "Fully customizable. White-label solution lets you control 100% of UI/UX as you want."
-          }
-        ]
-      },
-      "security": {
-        "badge": "Security",
-        "title": "Your data is always safe",
-        "subtitle": "Compliance with international security standards, 24/7 monitoring",
-        "items": [
-          {
-            "title": "ISO Certification",
-            "description": "Compliance with ISO 27001, SOC 2 and strict international standards"
-          },
-          {
-            "title": "24/7 monitoring",
-            "description": "Detect and fix issues before users notice"
-          },
-          {
-            "title": "Data sovereignty",
-            "description": "You own 100% of user data and conversation content"
-          },
-          {
-            "title": "White-label solution",
-            "description": "We stay behind the scenes, your brand is shown"
-          },
-          {
-            "title": "Auto-scaling infrastructure",
-            "description": "Based on AWS/GCP, proven with millions of users"
-          },
-          {
-            "title": "99.9% uptime guarantee",
-            "description": "SLA guaranteed, or get refunded"
-          }
-        ]
-      },
-      "cta": {
-        "heading": "Ready to start?",
-        "description": "No credit card required, no long contracts. Just 5 minutes to setup developer account.",
-        "ctaButton": "Sign up for free",
-        "savings": "Save up to 60% on budget",
-        "savingsDesc": "Save up to 40% on management time",
-        "benefits": "You don't just save costs. You get 24/7 support from ICS team with years of experience",
-        "tryButton": "Start trial now",
-        "demoButton": "Schedule demo"
-      }
     },
     "vietguard": {
       "badge": "Mobile app security",

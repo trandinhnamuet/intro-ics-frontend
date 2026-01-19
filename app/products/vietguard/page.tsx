@@ -762,7 +762,7 @@ export default function VietguardPage() {
                   <div className="relative w-full h-full">
                     <Image
                       src="https://sonic.com.vn/wp-content/uploads/2024/06/569abb72-6952-4c8e-a915-5e9ed2de7639.png"
-                      alt="Deployment Process"
+                      alt={t('products.vietguard.activation.cardTitle')}
                       fill
                       className="object-cover"
                     />

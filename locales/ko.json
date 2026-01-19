@@ -1298,6 +1298,30 @@
           }
         ]
       },
+      "automation": {
+        "badge": "자동화 기술",
+        "title": "모든 상호작용 프로세스를 자동화합니다",
+        "subtitle": "수동 개입이 필요하지 않습니다. V AI - Agent의 시스템은 복잡한 상호작용을 자동으로 처리하고 문제를 신속하게 해결하며 고객 경험을 향상시킵니다.",
+        "chip": "새로운 기술",
+        "items": [
+          {
+            "title": "메시지 자동 처리",
+            "description": "메시지 분류, 우선순위 지정 및 직원 없이 자동 응답"
+          },
+          {
+            "title": "스마트 대화 흐름 및 라우팅",
+            "description": "필요를 자동으로 감지하고 적절한 시나리오 또는 부서로 전달"
+          },
+          {
+            "title": "프로세스 최적화",
+            "description": "모든 상호작용에서 학습하여 정확도를 지속적으로 개선"
+          },
+          {
+            "title": "인력 비용 절감",
+            "description": "고객 지원 업무의 70%를 자동화"
+          }
+        ]
+      },
       "useCases": {
         "badge": "응용 시나리오",
         "title": "성공한 산업",
@@ -1452,13 +1476,12 @@
         "tryButton": "지금 체험 시작",
         "demoButton": "데모 예약"
       }
-    }
-  },
-  "vietguard": {
-    "badge": "모바일 애플리케이션 보안",
-    "subtitle": "모바일 애플리케이션을 위한 취약점 스캔 및 보안 탐지 도구",
-    "visitWebsite": "웹사이트 방문",
-    "hero": {
+    },
+    "vietguard": {
+      "badge": "모바일 애플리케이션 보안",
+      "subtitle": "모바일 애플리케이션을 위한 취약점 스캔 및 보안 탐지 도구",
+      "visitWebsite": "웹사이트 방문",
+      "hero": {
       "badge": "베트남 표준 모바일 보안, 글로벌 품질",
       "title": "Vietguard",
       "subtitle": "첨단 스캔 및 분석 기술을 적용한 베트남 대표 모바일 애플리케이션 보안 솔루션",
@@ -1579,183 +1602,136 @@
         "title": "보안 표준 준수",
         "description": "국제 보안 표준 및 규제 요구사항 준수 보장"
       }
-    }
-  },
-  "activation": {
-    "badge": "신속한 구축",
-    "heading": "엔터프라이즈 애플리케이션 보호를 위한 통합 솔루션 활성화",
-    "description": "기업은 유연하고 효율적인 협업 모델을 통해 VietGuard를 빠르게 도입할 수 있습니다",
-    "items": [
-      {
-        "title": "신속한 구축",
-        "desc": "소스 코드 접근이나 복잡한 SDK 통합 없이 애플리케이션을 즉시 보호"
-      },
-      {
-        "title": "전문적인 도입 로드맵",
-        "desc": "요구사항 분석, 실사용 데모부터 기업 규모에 맞춘 서비스 패키지 설계까지"
-      },
-      {
-        "title": "CI/CD 통합",
-        "desc": "보안 프로세스 자동화를 통해 운영 부담을 줄이고 출시 속도 향상"
-      },
-      {
-        "title": "전담 지원",
-        "desc": "운영 전 과정에서 지속적인 기술 지원과 파트너십 제공"
-      }
-    ]
-  },
-  "multiPlatform": {
-    "badge": "멀티 플랫폼",
-    "heading": "멀티 플랫폼 애플리케이션 보안 솔루션",
-    "description": "VietGuard는 모든 유형의 모바일 애플리케이션을 위한 능동적인 보호 플랫폼을 제공합니다",
-    "items": [
-      {
-        "title": "다양한 운영체제 지원",
-        "desc": "APK(Android) 및 IPA(iOS) 파일에 대한 통합 분석 및 보호"
-      },
-      {
-        "title": "다양한 암호화 기술",
-        "desc": "HTML5, CSS, JavaScript 기반 애플리케이션에 대한 강력한 보호"
-      },
-      {
-        "title": "다중 계층 방어",
-        "desc": "루팅(Root) 또는 탈옥(Jailbreak)된 기기에서도 안전한 보호"
-      }
-    ]
-  },
-  "whyChoose": {
-    "badge": "차별화된 가치",
-    "heading": "엔터프라이즈 애플리케이션 보안을 위한 Vietguard 선택",
-    "description": "VietGuard는 디지털 자산을 보호하고 경쟁력을 강화하기 위한 현명한 투자입니다",
-    "benefits": [
-      {
-        "title": "비용 최적화",
-        "desc": "취약점을 조기에 발견하여 수정 및 사고 대응 비용을 최대 60% 절감"
-      },
-      {
-        "title": "법규 및 규정 준수 보장",
-        "desc": "시행규칙 50/2024, 사이버 보안법, 시행령 13, ISO 27001, PCI-DSS 완벽 준수"
-      },
-      {
-        "title": "지능형 보안 관리",
-        "desc": "보안 대시보드를 통해 자동 탐지, 방어 및 상세 리포트 제공"
-      }
-    ]
-  },
-  "complianceBlock": {
-    "heading": "주요 국제 표준 준수",
-    "standards": ["ISO 27001", "PCI-DSS", "시행령 13", "정보보안법", "통지 50/2024"]
-  },
-  "benefits": {
-    "title": "혜택",
-    "heading": "왜 Vietguard - Mobile App Security인가?",
-    "description": "Vietguard - Mobile App Security는 모바일 애플리케이션을 위한 차별화된 가치를 제공합니다",
-    "item1": "자동화된 취약점 스캔 및 신속한 탐지",
-    "item2": "보안 이슈에 대한 상세하고 직관적인 리포트",
-    "item3": "멀티 플랫폼 지원: iOS, Android",
-    "item4": "최신 취약점 데이터베이스 지속 업데이트"
-  },
-  "stats": {
-    "scanned": "스캔된 애플리케이션",
-    "vulnerabilities": "탐지된 취약점",
-    "accuracy": "탐지 정확도"
-  },
-  "finalCta": {
-    "title": "애플리케이션을 보호할 준비가 되셨나요?",
-    "description": "수백 개 기업이 디지털 자산 보호를 위해 VietGuard를 신뢰합니다",
-    "bullets": ["24/7 보안", "헌신적 지원", "국제 품질"]
-  },
-  "cta": {
-    "heading": "지금 바로 모바일 애플리케이션을 보호하세요",
-    "description": "Vietguard - Mobile App Security를 무료로 상담하고 체험해 보세요"
-  },
-  "csaDlp": {
-    "badge": "엔드포인트 보안 & DLP",
-    "subtitle": "엔드포인트 보호와 데이터 유출 방지를 결합한 통합 보안 솔루션",
-    "features": {
-      "title": "기능",
-      "heading": "CSA-Endpoint 주요 기능",
-      "description": "엔드포인트와 기업 데이터를 위한 종합 보안 솔루션",
-      "endpoint": {
-        "title": "엔드포인트 보안",
-        "description": "PC, 노트북 및 모바일 디바이스에 대한 통합 보호"
-      },
-      "dlp": {
-        "title": "데이터 유출 방지",
-        "description": "조직 외부로의 민감 데이터 유출 차단"
-      },
-      "monitoring": {
-        "title": "모니터링 및 제어",
-        "description": "데이터 접근 및 사용 활동 감시·제어"
-      },
-      "compliance": {
-        "title": "규정 준수",
-        "description": "데이터 보호 관련 법규 및 규정 준수 보장"
-      }
+    },
+    "activation": {
+      "badge": "신속한 구축",
+      "heading": "엔터프라이즈 애플리케이션 보호를 위한 통합 솔루션 활성화",
+      "description": "기업은 유연하고 효율적인 협업 모델을 통해 VietGuard를 빠르게 도입할 수 있습니다",
+      "cardTitle": "전문적인 구축 프로세스",
+      "cardDescription": "ICS 전문가 팀의 A부터 Z까지 전담 지원",
+      "items": [
+        {
+          "title": "신속한 구축",
+          "desc": "소스 코드 접근이나 복잡한 SDK 통합 없이 애플리케이션을 즉시 보호"
+        },
+        {
+          "title": "전문적인 도입 로드맵",
+          "desc": "요구사항 분석, 실사용 데모부터 기업 규모에 맞춘 서비스 패키지 설계까지"
+        },
+        {
+          "title": "CI/CD 통합",
+          "desc": "보안 프로세스 자동화를 통해 운영 부담을 줄이고 출시 속도 향상"
+        },
+        {
+          "title": "전담 지원",
+          "desc": "운영 전 과정에서 지속적인 기술 지원과 파트너십 제공"
+        }
+      ]
+    },
+    "multiPlatform": {
+      "badge": "다중 플랫폼",
+      "heading": "다중 플랫폼 애플리케이션 보안 솔루션",
+      "description": "VietGuard는 모든 유형의 모바일 애플리케이션을 위한 능동적인 보호 플랫폼을 제공합니다",
+      "items": [
+        {
+          "title": "다양한 운영체제 지원",
+          "desc": "APK(Android) 및 IPA(iOS) 파일에 대한 통합 분석 및 보호"
+        },
+        {
+          "title": "다양한 암호화 기술",
+          "desc": "HTML5, CSS, JavaScript 기반 애플리케이션에 대한 강력한 보호"
+        },
+        {
+          "title": "다중 계층 방어",
+          "desc": "루팅(Root) 또는 탈옥(Jailbreak)된 기기에서도 안전한 보호"
+        }
+      ]
+    },
+    "whyChoose": {
+      "badge": "차별화된 가치",
+      "heading": "엔터프라이즈 애플리케이션 보안을 위한 Vietguard 선택",
+      "description": "VietGuard는 디지털 자산을 보호하고 경쟁력을 강화하기 위한 현명한 투자입니다",
+      "benefits": [
+        {
+          "title": "비용 최적화",
+          "desc": "취약점을 조기에 발견하여 수정 및 사고 대응 비용을 최대 60% 절감"
+        },
+        {
+          "title": "법규 및 규정 준수 보장",
+          "desc": "시행규칙 50/2024, 사이버 보안법, 시행령 13, ISO 27001, PCI-DSS 완벽 준수"
+        },
+        {
+          "title": "지능형 보안 관리",
+          "desc": "보안 대시보드를 통해 자동 탐지, 방어 및 상세 리포트 제공"
+        }
+      ]
+    },
+    "complianceBlock": {
+      "badge": "규제 준수",
+      "heading": "국제 보안 표준 완전 준수",
+      "description": "ISO 27001, PCI-DSS 등 국제 표준 충족",
+      "standards": [
+        "ISO 27001",
+        "PCI-DSS",
+        "Decree 13",
+        "ANTT Law",
+        "Circular 50/2024"
+      ]
     },
     "benefits": {
-      "title": "혜택",
-      "heading": "왜 CSA-Endpoint인가?",
-      "description": "CSA-Endpoint는 기업 데이터를 위한 전방위 보호를 제공합니다",
-      "item1": "민감 데이터 유출 효과적 차단",
-      "item2": "악성코드 및 랜섬웨어로부터 장비 보호",
-      "item3": "데이터 접근 및 사용 통제",
-      "item4": "상세 리포트 및 규정 준수 지원"
+      "badge": "핵심 이점",
+      "heading": "Vietguard의 주요 이점",
+      "description": "모바일 앱 보안을 위한 완벽한 솔루션",
+      "items": [
+        {
+          "title": "위협 탐지",
+          "description": "실시간 보안 위협 탐지 및 경고"
+        },
+        {
+          "title": "취약점 관리",
+          "description": "체계적인 취약점 추적 및 관리"
+        },
+        {
+          "title": "데이터 보호",
+          "description": "사용자 데이터 및 개인정보 보호"
+        },
+        {
+          "title": "지속적 모니터링",
+          "description": "24/7 연속적 보안 모니터링"
+        }
+      ]
     },
     "stats": {
-      "endpoints": "보호된 엔드포인트",
-      "incidents": "차단된 보안 사고",
-      "compliance": "규정 준수"
+      "badge": "신뢰 성과",
+      "heading": "숫자로 보는 Vietguard",
+      "items": [
+        {
+          "value": "500+",
+          "label": "도입 기업"
+        },
+        {
+          "value": "50M+",
+          "label": "보호된 사용자"
+        },
+        {
+          "value": "99.9%",
+          "label": "탐지 정확도"
+        }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "지금 시작하세요",
+      "title": "모바일 앱을 지금 보호하세요",
+      "description": "Vietguard와 함께 모바일 애플리케이션 보안을 강화하세요",
+      "primaryCta": "무료 평가 시작",
+      "secondaryCta": "상담 문의"
     },
     "cta": {
-      "heading": "CSA-Endpoint로 기업 데이터를 보호하세요",
-      "description": "CSA-Endpoint 솔루션에 대한 전문 상담을 받아보세요"
+      "heading": "완전한 모바일 보안 솔루션",
+      "description": "지금 Vietguard의 력을 경험하고 모바일 앱 보안을 업그레이드하세요"
     }
-  },
-  "pentestServices": {
-    "badge": "침투 테스트 서비스",
-    "subtitle": "해커가 악용하기 전에 보안 취약점을 사전에 발견하고 조치하는 전문 침투 테스트 서비스",
-    "features": {
-      "title": "기능",
-      "heading": "전문 Pentest 서비스",
-      "description": "보안 취약점을 종합적으로 식별하고 개선합니다",
-      "assessment": {
-        "title": "취약점 평가",
-        "description": "보안 취약점에 대한 전반적인 점검 및 평가"
-      },
-      "exploitation": {
-        "title": "모의 침투 공격",
-        "description": "실제 공격 시나리오를 기반으로 보안 수준 검증"
-      },
-      "reporting": {
-        "title": "상세 보고서",
-        "description": "취약점 및 개선 방안에 대한 종합 보고서 제공"
-      },
-      "remediation": {
-        "title": "조치 지원",
-        "description": "발견된 취약점에 대한 컨설팅 및 개선 지원"
-      }
     },
-    "benefits": {
-      "title": "혜택",
-      "heading": "왜 Pentest 서비스를 선택해야 할까요?",
-      "description": "Pentest는 보안 취약점을 사전에 발견하고 대응할 수 있도록 지원합니다",
-      "item1": "실제 공격 발생 이전에 취약점 발견",
-      "item2": "전반적인 보안 상태에 대한 종합 평가",
-      "item3": "구체적인 조치 방안을 포함한 상세 보고서",
-      "item4": "국제 보안 표준 및 규정 준수"
-    },
-    "stats": {
-      "tests": "완료된 Pentest 프로젝트",
-      "vulnerabilities": "발견된 취약점",
-      "success": "성공률"
-    },
-    "cta": {
-      "heading": "Pentest로 사이버 보안을 점검하세요",
-      "description": "귀사에 적합한 Pentest 서비스에 대해 상담해 드립니다"
-    }
-  },
-  "oracleCloud": {
+    "oracleCloud": {
     "badge": "클라우드 컴퓨팅",
     "subtitle": "고성능, 강력한 보안, 최적의 비용을 제공하는 Oracle의 선도적인 클라우드 솔루션",
     "visitWebsite": "웹사이트 방문",
@@ -1798,8 +1774,8 @@
       "heading": "Oracle Cloud로 디지털 전환을 시작하세요",
       "description": "Oracle Cloud 솔루션에 대해 전문적인 상담을 받아보세요"
     }
-  },
-  "smartDashboard": {
+    },
+    "smartDashboard": {
     "badge": "지능형 모니터링",
     "subtitle": "실시간 데이터 분석을 통해 기업 운영을 효율적으로 관리·감시하는 스마트 대시보드 시스템",
     "visitWebsite": "웹사이트 방문",
@@ -1841,39 +1817,67 @@
     "cta": {
       "heading": "Smart Dashboard로 기업을 관리하세요",
       "description": "Smart Dashboard 데모 및 컨설팅을 받아보세요"
+    }
     },
-    "vietguard": {
-      "badge": "모바일 앱 보안",
-      "subtitle": "모바일 응용 프로그램을 위한 보안 스캔 및 취약점 감지 도구",
-      "deployment": {
-        "badge": "전문 배포 프로세스",
-        "title": "전담 ICS 전문가 지원이 포함된 완전한 솔루션",
-        "description": "A부터 Z까지 ICS 전문가 팀의 전담 지원 제공",
-        "standards": {
-          "heading": "선도적 표준 준수",
-          "subtitle": "국제 및 베트남 규제 요구사항 충족",
-          "items": [
-            {"name": "ISO 27001", "description": "국제 정보보안 표준"},
-            {"name": "PCI-DSS", "description": "결제 카드 산업 데이터 보안 표준"},
-            {"name": "Decree 13", "description": "베트남 사이버보안법"},
-            {"name": "ANTT Law", "description": "베트남 정보보안법"},
-            {"name": "Circular 50/2024", "description": "최신 베트남 규제 요구사항"}
-          ]
-        },
-        "ready": {
-          "title": "응용 프로그램 보호를 시작할 준비가 되셨습니까?",
-          "subtitle": "완전한 앱 보안 여정 시작",
-          "cta1": "지금 체험하기",
-          "cta2": "컨설팅 일정 잡기"
-        },
-        "qualities": {
-          "title": "엔터프라이즈가 Vietguard 배포를 위해 ICS를 선택하는 이유",
-          "items": [
-            {"title": "24/7 보안 보호", "description": "연중무휴 모니터링 및 지원"},
-            {"title": "전담 지원팀", "description": "24/7 한국어 전문가 지원"},
-            {"title": "국제 품질", "description": "글로벌 표준 준수 및 입증된 기록"}
-          ]
-        }
+    "pentestServices": {
+      "badge": "침투 테스트 서비스",
+    "subtitle": "해커가 악용하기 전에 보안 취약점을 사전에 발견하고 조치하는 전문 침투 테스트 서비스",
+    "features": {
+      "title": "기능",
+      "heading": "전문 Pentest 서비스",
+      "description": "보안 취약점을 종합적으로 식별하고 개선합니다",
+      "assessment": {
+        "title": "취약점 평가",
+        "description": "보안 취약점에 대한 전반적인 점검 및 평가"
+      },
+      "exploitation": {
+        "title": "모의 침투 공격",
+        "description": "실제 공격 시나리오를 기반으로 보안 수준 검증"
+      },
+      "reporting": {
+        "title": "상세 보고서",
+        "description": "취약점 및 개선 방안에 대한 종합 보고서 제공"
+      },
+      "remediation": {
+        "title": "조치 지원",
+        "description": "발견된 취약점에 대한 컨설팅 및 개선 지원"
+      }
+    },
+    "benefits": {
+      "title": "혜택",
+      "heading": "왜 Pentest 서비스를 선택해야 할까요?",
+      "description": "Pentest는 보안 취약점을 사전에 발견하고 대응할 수 있도록 지원합니다",
+      "item1": "실제 공격 발생 이전에 취약점 발견",
+      "item2": "전반적인 보안 상태에 대한 종합 평가",
+      "item3": "구체적인 조치 방안을 포함한 상세 보고서",
+      "item4": "국제 보안 표준 및 규정 준수"
+    },
+    "stats": {
+      "tests": "완료된 Pentest 프로젝트",
+      "vulnerabilities": "발견된 취약점",
+      "success": "성공률"
+    },
+    "cta": {
+      "heading": "Pentest로 사이버 보안을 점검하세요",
+      "description": "귀사에 적합한 Pentest 서비스에 대해 상담해 드립니다"
+    }
+    },
+    "csaDlp": {
+      "badge": "엔드포인트 보안",
+      "subtitle": "엔드포인트 보안 및 데이터 유출 방지 솔루션",
+      "features": {
+        "title": "기능",
+        "heading": "CSA-엔드포인트 주요 기능",
+        "description": "엔드포인트 보안을 위한 통합 솔루션"
+      },
+      "benefits": {
+        "title": "혜택",
+        "heading": "왜 CSA-엔드포인트인가?",
+        "description": "엔드포인트 보안과 데이터 보호를 동시에 달성합니다"
+      },
+      "cta": {
+        "heading": "엔드포인트 보안을 강화하세요",
+        "description": "CSA-엔드포인트 솔루션에 대해 상담하세요"
       }
     }
   }

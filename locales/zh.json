@@ -799,6 +799,8 @@
         "badge": "快速部署",
         "heading": "为企业应用保护激活综合解决方案",
         "description": "企业可以通过灵活高效的合作模式快速部署 Vietguard",
+        "cardTitle": "专业部署流程",
+        "cardDescription": "ICS 专家团队提供 A-Z 全程专业支持",
         "items": [
           {
             "title": "快速部署",
@@ -1330,6 +1332,30 @@
           }
         ]
       },
+      "automation": {
+        "badge": "自动化技术",
+        "title": "自动化所有交互过程",
+        "subtitle": "无需手动干预。V AI - Agent的系统自动处理复杂的交互，快速解决问题，改善客户体验。",
+        "chip": "新技术",
+        "items": [
+          {
+            "title": "消息自动处理",
+            "description": "分类、优先级排列和自动应答消息，无需员工干预"
+          },
+          {
+            "title": "智能对话流和路由",
+            "description": "自动识别需求，转发到合适的场景或部门"
+          },
+          {
+            "title": "流程优化",
+            "description": "从每次交互中学习，持续提高准确性"
+          },
+          {
+            "title": "降低人力成本",
+            "description": "实现客户支持工作70%的自动化"
+          }
+        ]
+      },
       "useCases": {
         "badge": "应用场景",
         "title": "成功的行业",
@@ -1773,35 +1799,218 @@
     "vietguard": {
       "badge": "移动应用安全",
       "subtitle": "为移动应用扫描和检测安全漏洞的工具",
-      "deployment": {
-        "badge": "专业部署流程",
-        "title": "完整解决方案 - ICS专家全程支持",
-        "description": "从A到Z 全程获得ICS专家团队的专业支持",
-        "standards": {
-          "heading": "符合领先标准",
-          "subtitle": "满足国际和越南监管要求",
-          "items": [
-            {"name": "ISO 27001", "description": "国际信息安全标准"},
-            {"name": "PCI-DSS", "description": "支付卡行业数据安全标准"},
-            {"name": "Decree 13", "description": "越南网络安全法"},
-            {"name": "ANTT Law", "description": "越南信息安全法"},
-            {"name": "Circular 50/2024", "description": "最新越南监管要求"}
-          ]
-        },
-        "ready": {
-          "title": "准备好保护您的应用了吗？",
-          "subtitle": "开始您完整应用安全之旅",
-          "cta1": "立即体验",
-          "cta2": "安排咨询"
-        },
-        "qualities": {
-          "title": "为什么企业选择ICS进行Vietguard部署",
-          "items": [
-            {"title": "24/7安全保护", "description": "全天候监控和支持"},
-            {"title": "专业支持团队", "description": "24/7越南语专家支持"},
-            {"title": "国际质量", "description": "全球标准合规和经过验证的跟踪记录"}
-          ]
+      "visitWebsite": "访问网站",
+      "hero": {
+        "badge": "越南标准移动安全，全球质量",
+        "title": "Vietguard",
+        "subtitle": "越南领先的移动应用安全解决方案，采用先进的扫描和分析技术",
+        "accessWebsite": "立即访问",
+        "contactAdvice": "联系咨询",
+        "experienceNow": "立即体验",
+        "scheduleConsultation": "安排咨询",
+        "stats": {
+          "customers": "信任客户",
+          "usersProtected": "受保护的用户",
+          "accuracy": "检测精度"
         }
+      },
+      "trust": {
+        "badge": "综合解决方案",
+        "heading": "为什么客户信任 ICS 的 Vietguard 解决方案？",
+        "description": "客户选择 Vietguard 是因为先进技术与来自顶级专家团队的可信度的结合",
+        "points": [
+          {
+            "title": "先进技术",
+            "desc": "越南移动应用安全扫描和分析技术的先驱"
+          },
+          {
+            "title": "经验丰富的专家",
+            "desc": "拥有广泛经验和国际认证的熟练安全专家团队"
+          },
+          {
+            "title": "全球质量",
+            "desc": "满足严格的安全标准，保护 10 亿多用户"
+          },
+          {
+            "title": "战略合作伙伴",
+            "desc": "受到越南主要企业和机构的信任"
+          }
+        ]
+      },
+      "applications": {
+        "heading": "Vietguard 防护常见攻击的应用案例",
+        "description": "Vietguard 为当今最常见的安全威胁建立强大防线"
+      },
+      "features": {
+        "title": "功能",
+        "heading": "Vietguard - Mobile App Security 核心功能",
+        "description": "保护移动应用的完整解决方案",
+        "topFeatures": [
+          {
+            "title": "攻击面管理",
+            "description": "管理和监控应用程序攻击面，早期发现潜在弱点"
+          },
+          {
+            "title": "漏洞管理",
+            "description": "全面的漏洞管理、优先级划分和关键风险修复"
+          },
+          {
+            "title": "安全审计项目管理",
+            "description": "管理安全审计项目，评估应用程序源代码的详细安全问题"
+          },
+          {
+            "title": "漏洞赏金计划",
+            "description": "奖励漏洞报告计划，鼓励社区发现和报告安全漏洞"
+          },
+          {
+            "title": "漏洞扫描",
+            "description": "自动扫描以检测应用程序和基础设施中的安全漏洞"
+          },
+          {
+            "title": "数据泄露检测",
+            "description": "检测和防止敏感数据泄露到组织外部"
+          },
+          {
+            "title": "密码和密钥管理",
+            "description": "使用企业级加密的安全密码和密钥管理"
+          },
+          {
+            "title": "信任中心",
+            "description": "信任中心提供安全和合规状态的概览"
+          }
+        ],
+        "bottomFeatures": [
+          {
+            "title": "端点安全",
+            "description": "保护端点免受恶意软件、勒索软件和各种威胁"
+          },
+          {
+            "title": "威胁情报",
+            "description": "收集和分析新兴安全威胁信息"
+          },
+          {
+            "title": "WhiteHub 安全社区",
+            "description": "安全专家分享知识和经验的社区"
+          },
+          {
+            "title": "漏洞研究",
+            "description": "对安全漏洞和攻击方法的深入研究"
+          },
+          {
+            "title": "自动化工具",
+            "description": "自动化安全流程，最小化手动工作"
+          },
+          {
+            "title": "数据存储库",
+            "description": "存储和分析大规模安全数据以进行威胁模式检测"
+          }
+        ],
+        "scanning": {
+          "title": "自动漏洞扫描",
+          "description": "自动扫描和检测移动应用中的安全漏洞"
+        },
+        "vulnerability": {
+          "title": "漏洞检测",
+          "description": "检测和提醒严重的安全漏洞"
+        },
+        "protection": {
+          "title": "全面保护",
+          "description": "保护应用免受威胁和攻击"
+        },
+        "compliance": {
+          "title": "合规标准",
+          "description": "确保符合国际安全标准"
+        }
+      },
+      "activation": {
+        "badge": "快速部署",
+        "heading": "激活企业应用保护的完整解决方案",
+        "description": "企业可以通过灵活高效的合作模式快速部署 Vietguard",
+        "cardTitle": "专业部署流程",
+        "cardDescription": "从 A 到 Z 获得 ICS 专家团队的专业支持",
+        "items": [
+          {
+            "title": "快速部署",
+            "desc": "在没有源代码访问或复杂 SDK 集成的情况下直接保护应用"
+          },
+          {
+            "title": "专业路线图",
+            "desc": "从需求分析、现场演示到根据企业规模构建服务包"
+          },
+          {
+            "title": "CI/CD 集成",
+            "desc": "自动化安全流程，减轻负担并加快上市时间"
+          },
+          {
+            "title": "专业支持",
+            "desc": "承诺在运营期间陪伴和提供持续的技术支持"
+          }
+        ]
+      },
+      "multiPlatform": {
+        "badge": "多平台",
+        "heading": "多平台应用安全解决方案",
+        "description": "Vietguard 为当今所有类型的移动应用提供主动保护平台",
+        "items": [
+          {
+            "title": "多操作系统支持",
+            "desc": "全面分析和保护 APK (Android) 和 IPA (iOS) 文件"
+          },
+          {
+            "title": "多样化的加密技术",
+            "desc": "HTML5、CSS 和 JavaScript 应用程序的强大保护"
+          },
+          {
+            "title": "多层防御",
+            "desc": "即使在已 Root 或越狱的设备上也能安全保护"
+          }
+        ]
+      },
+      "whyChoose": {
+        "badge": "卓越优势",
+        "heading": "为企业应用安全选择 Vietguard",
+        "description": "Vietguard 是保护数字资产和增强竞争优势的智能投资",
+        "benefits": [
+          {
+            "title": "成本优化",
+            "desc": "早期漏洞检测有助于减少高达 60% 的修复和事件恢复成本"
+          },
+          {
+            "title": "确保法律合规",
+            "desc": "完全满足《通知 50/2024》、网络安全法、法令 13、ISO 27001、PCI-DSS"
+          },
+          {
+            "title": "智能管理",
+            "desc": "自动安全仪表板检测、防御和报告详细的安全状态"
+          }
+        ]
+      },
+      "complianceBlock": {
+        "heading": "符合领先的安全标准",
+        "standards": ["ISO 27001", "PCI-DSS", "第13号法令", "信息安全法", "通告 50/2024"]
+      },
+      "benefits": {
+        "title": "优势",
+        "heading": "为什么选择 Vietguard - Mobile App Security？",
+        "description": "Vietguard - Mobile App Security 为移动应用提供卓越优势",
+        "item1": "自动快速扫描和漏洞检测",
+        "item2": "详细易懂的安全问题报告",
+        "item3": "多平台支持：iOS、Android",
+        "item4": "不断更新的最新漏洞数据库"
+      },
+      "stats": {
+        "scanned": "已扫描的应用",
+        "vulnerabilities": "检测到的漏洞",
+        "accuracy": "检测精度"
+      },
+      "finalCta": {
+        "title": "准备好保护您的应用了吗？",
+        "description": "数百家企业信任 Vietguard 保护他们的数字资产",
+        "bullets": ["24/7 安全防护", "专业支持", "国际质量"]
+      },
+      "cta": {
+        "heading": "立即保护您的移动应用",
+        "description": "免费咨询和体验 Vietguard - Mobile App Security"
       }
     }
   }
