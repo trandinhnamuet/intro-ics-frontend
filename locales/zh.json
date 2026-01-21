@@ -1700,6 +1700,16 @@
         ],
         "cta": "下载SOC运营指南"
       },
+      "roi": {"badge": "ROI & Impact"},
+      "roiMetrics": [{"metric": "90%", "label": "降低 SOC 团队工作量"}, {"metric": "70%", "label": "自动化检测"}, {"metric": "95%", "label": "更快的事件响应"}, {"metric": "$2.4M", "label": "减少数据泄露损失"}],
+      "traditionalBlock": {"title": "传统 SOC ≠ 充分保护", "line1": "仅在越南每天就有 12,300+ 攻击，手工 SOC 无法跟上现代威胁的复杂性。", "line2": "AI SOC 在数秒内检测和响应，而不是数天。"},
+      "architectureDetails": {"headline": "开放、云原生、超大规模", "description": "架构能力：", "platformLabel": "平台", "items": [{"title": "无限存储", "desc": "日志无限期保存，秒级查询 PB 级数据"}, {"title": "实时处理", "desc": "每天处理 500 亿+ 事件，延迟 < 1 秒"}, {"title": "450+ 集成", "desc": "连接任何数据源：云、本地、SaaS、网络、端点"}, {"title": "自动扩展", "desc": "根据需求自动伸缩"}]},
+      "proofPoint": {"title": "全球 50 亿设备受保护的验证技术", "description": "ICS AI SOC 平台基于保护 Google、Microsoft、财富 500 强和全球数千家企业的技术。"},
+      "componentsVisual": {"title": "AI SOC 四大基石", "description": "各组件发挥关键作用，协同运作构建完整安全生态", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 具有无限存储和分析能力的超大规模 SIEM 平台", "points": ["日志无限期保存，无时间限制", "秒级查询 PB 级数据", "AI 关联分析减少 70% 误报", "450+ 数据源集成完毕"]}, {"number": "02", "title": "UEBA 平台", "description": "Gurucul UEBA - 4000+ ML 模型分析用户及系统行为", "points": ["检测：账户被盗、内部威胁、横向移动、权限提升", "无签名检测技术"]}, {"number": "03", "title": "AI SOC 分析师", "description": "智能 AI 代理 - 代替 L1 分析师 90% 的工作，24/7 无中断运行", "points": ["自动分类、调查、告警关联", "自动生成完整事件报告并解释", "建议具体的修复行动", "从反馈学习并持续改进"]}, {"number": "04", "title": "SOAR 自动化", "description": "编排与响应 - 从隔离到恢复的自动化剧本", "points": ["1000+ 预构建剧本覆盖各类场景", "自动隔离端点、封禁 IP、撤销令牌", "集成 EDR、防火墙、IAM、云安全", "将 MTTR 从小时级降至分钟级"]}]},
+      "processSpeeds": {"instant": "实时", "fast": "< 1 秒", "slow": "< 5 秒"},
+      "roiDetails": {"cost": {"title": "成本节省", "items": ["相比传统 SOC 节省 60-70% 运营成本", "无需再招聘 L1 分析师（AI 处理重复工作）", "每年减少约 $2.4M 数据泄露损失"]}, "performance": {"title": "卓越性能", "items": ["比手工 SOC 快 95%", "检测 APT 与内部威胁不遗漏", "AI 24/7 全天候覆盖"]}, "team": {"title": "团队赋能", "items": ["让 SOC 团队摆脱重复 L1 任务", "专注威胁狩猎与战略", "降低倦怠并提升满意度"]}},
+      "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "详解 AI SOC 从接入到响应的实际运作", "points": ["系统架构", "现场演示", "具体用例", "ROI 计算器"], "cta": "免费下载"},
+      "finalCta": {"eyebrow": "开启转型", "title": "准备提升您的网络安全吗？", "description": "ICS 专家提供免费咨询与评估，并定制 AI SOC 部署路线图", "benefits": [{"title": "免费咨询", "desc": "2-4 小时专家工作坊"}, {"title": "快速评估", "desc": "安全态势检查"}, {"title": "清晰路线图", "desc": "分步部署计划"}], "primaryCta": "预约咨询", "secondaryCta": "观看在线演示"},
       "traditionalVsAI": {
         "badge": "传统SOC vs AI SOC",
         "title": "为什么传统SOC ≠ 充分保护",

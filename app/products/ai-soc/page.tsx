@@ -83,12 +83,33 @@ export default function AiSocPage() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const painPointsData = t('products.aiSoc.painPoints.points', { returnObjects: true }) as Array<{title: string; items: string[]}>
-  const solutionData = t('products.aiSoc.solution.pillars', { returnObjects: true }) as Array<{title: string; items: string[]}>
-  const processData = t('products.aiSoc.process.steps', { returnObjects: true }) as Array<{title: string; description: string}>
-  const heroPointsData = t('products.aiSoc.hero.points', { returnObjects: true })
+  const painPointsData = (() => {
+    const data = t('products.aiSoc.painPoints.points', { returnObjects: true }) as any
+    return Array.isArray(data) && data.length > 0 ? data : []
+  })()
+  
+  const solutionData = (() => {
+    const data = t('products.aiSoc.solution.pillars', { returnObjects: true }) as any
+    return Array.isArray(data) && data.length > 0 ? data : [
+      { title: 'Dữ liệu khổng lồ', items: ['Phân tích 50 tỷ tệp/ngày', 'Bảo vệ 5 tỷ thiết bị', 'Lưu trữ không giới hạn'] },
+      { title: 'Phân tích hành vi', items: ['Machine Learning', 'Phát hiện bất thường', 'Không dựa chữ ký'] },
+      { title: 'Tự động hóa', items: ['Playbook tự động', 'Giảm MTTR 70%'] }
+    ]
+  })()
+  
+  const processData = (() => {
+    const data = t('products.aiSoc.process.steps', { returnObjects: true }) as any
+    return Array.isArray(data) && data.length > 0 ? data : [
+      { title: 'Ingestion – Thu thập', description: 'Cloud, Endpoint, Network, IAM, SaaS' },
+      { title: 'Detection – Phát hiện', description: 'AI/ML phát hiện mối đe dọa' },
+      { title: 'Analysis – Phân tích', description: 'Phân tích ngữ cảnh bỏ false positive' },
+      { title: 'Response – Phản ứng', description: 'Playbook tự động khóa mối đe dọa' }
+    ]
+  })()
+  
+  const heroPointsData = t('products.aiSoc.hero.points', { returnObjects: true }) as any
   const heroPoints = Array.isArray(heroPointsData) ? heroPointsData : []
-  const floatingStatsData = t('products.aiSoc.hero.floatingStats', { returnObjects: true })
+  const floatingStatsData = t('products.aiSoc.hero.floatingStats', { returnObjects: true }) as any
   const floatingStats = Array.isArray(floatingStatsData) ? floatingStatsData : []
 
   const challenges = [
@@ -188,38 +209,96 @@ export default function AiSocPage() {
   const roiMetricIcons = [TrendingUp, Target, Zap, DollarSign]
   const roiMetricsData = t('products.aiSoc.roiMetrics', { returnObjects: true })
   const roiMetricsArray = Array.isArray(roiMetricsData) && roiMetricsData.length > 0 ? roiMetricsData : [
-    { metric: "90%", label: t('products.aiSoc.whyIcs.points.0.title') },
-    { metric: "70%", label: t('products.aiSoc.whyIcs.points.1.title') },
-    { metric: "95%", label: "Faster incident response" },
-    { metric: "$2.4M", label: t('products.aiSoc.whyIcs.points.2.description') }
+    { metric: "90%", label: "Giảm workload cho SOC team" },
+    { metric: "70%", label: "Tự động hóa phát hiện" },
+    { metric: "95%", label: "Phản ứng sự cố nhanh hơn" },
+    { metric: "$2.4M", label: "Giảm thiệt hại data breach" }
   ]
   const roiMetrics = roiMetricsArray.map((item: any, idx: number) => ({ ...item, icon: roiMetricIcons[idx] || Gauge }))
 
-  const traditionalBlock = t('products.aiSoc.traditionalBlock', { returnObjects: true }) as { title: string; line1: string; line2: string }
-  const architectureDetails = t('products.aiSoc.architectureDetails', { returnObjects: true }) as {
-    headline: string
-    description: string
-    platformLabel: string
-    items: Array<{ title: string; desc: string }>
-  }
-  const proofPoint = t('products.aiSoc.proofPoint', { returnObjects: true }) as { title: string; description: string }
-  const componentsVisual = t('products.aiSoc.componentsVisual', { returnObjects: true }) as { title: string; description: string }
-  const processSpeeds = t('products.aiSoc.processSpeeds', { returnObjects: true }) as { instant: string; fast: string; slow: string }
-  const processSpeedLabels = [processSpeeds.instant, processSpeeds.fast, processSpeeds.fast, processSpeeds.slow]
-  const roiDetails = t('products.aiSoc.roiDetails', { returnObjects: true }) as {
-    cost: { title: string; items: string[] }
-    performance: { title: string; items: string[] }
-    team: { title: string; items: string[] }
-  }
-  const resourceCard = t('products.aiSoc.resourceCard', { returnObjects: true }) as { title: string; description: string; points: string[]; cta: string }
-  const finalCta = t('products.aiSoc.finalCta', { returnObjects: true }) as {
-    eyebrow: string
-    title: string
-    description: string
-    benefits: Array<{ title: string; desc: string }>
-    primaryCta: string
-    secondaryCta: string
-  }
+  const traditionalBlock = (() => {
+    const data = t('products.aiSoc.traditionalBlock', { returnObjects: true }) as any
+    return typeof data === 'object' && data !== null && 'title' in data ? data : { 
+      title: 'SOC truyền thống ≠ Đủ bảo vệ',
+      line1: 'Với 12,300+ tấn công/ngày...',
+      line2: 'AI SOC phát hiện & phản ứng trong vài giây...'
+    }
+  })()
+  
+  const architectureDetails = (() => {
+    const data = t('products.aiSoc.architectureDetails', { returnObjects: true }) as any
+    return typeof data === 'object' && data !== null && 'headline' in data ? data : {
+      headline: 'Open, Cloud-Native & Hyperscale',
+      description: 'Kiến trúc mở với khả năng:',
+      platformLabel: 'Nền tảng',
+      items: [
+        { title: 'Unlimited Storage', desc: 'Lưu trữ log không giới hạn' },
+        { title: 'Real-time Processing', desc: 'Xử lý 50+ tỷ sự kiện/ngày' },
+        { title: '450+ Integrations', desc: 'Kết nối mọi data source' },
+        { title: 'Auto-scaling', desc: 'Tự động scale theo nhu cầu' }
+      ]
+    }
+  })()
+  
+  const proofPoint = (() => {
+    const data = t('products.aiSoc.proofPoint', { returnObjects: true }) as any
+    return typeof data === 'object' && data !== null && 'title' in data ? data : {
+      title: '5 tỷ thiết bị được bảo vệ',
+      description: 'Công nghệ đã được chứng minh...'
+    }
+  })()
+  
+  const componentsVisual = (() => {
+    const data = t('products.aiSoc.componentsVisual', { returnObjects: true }) as any
+    return typeof data === 'object' && data !== null && 'title' in data ? data : {
+      title: 'Tích hợp liền mạch',
+      description: '4 component hoạt động đồng bộ 24/7'
+    }
+  })()
+  
+  const processSpeeds = (() => {
+    const data = t('products.aiSoc.processSpeeds', { returnObjects: true }) as any
+    return typeof data === 'object' && data !== null && 'instant' in data ? data : {
+      instant: 'Real-time',
+      fast: '< 1 giây',
+      slow: '< 5 giây'
+    }
+  })()
+  
+  const roiDetails = (() => {
+    const data = t('products.aiSoc.roiDetails', { returnObjects: true }) as any
+    return typeof data === 'object' && data !== null && 'cost' in data ? data : {
+      cost: { title: 'Tiết kiệm chi phí', items: ['Giảm 60-70% chi phí...'] },
+      performance: { title: 'Hiệu suất vượt trội', items: ['Phản ứng nhanh hơn 95%...'] },
+      team: { title: 'Nâng cao năng lực team', items: ['Giải phóng SOC team...'] }
+    }
+  })()
+  
+  const resourceCard = (() => {
+    const data = t('products.aiSoc.resourceCard', { returnObjects: true }) as any
+    return typeof data === 'object' && data !== null && 'title' in data ? data : {
+      title: 'Gurucul Workshop Walkthrough',
+      description: 'Tài liệu chi tiết về cách AI SOC hoạt động',
+      points: ['Kiến trúc hệ thống', 'Demo thực tế', 'Use cases', 'ROI calculator'],
+      cta: 'Tải tài liệu miễn phí'
+    }
+  })()
+  
+  const finalCta = (() => {
+    const data = t('products.aiSoc.finalCta', { returnObjects: true }) as any
+    return typeof data === 'object' && data !== null && 'title' in data ? data : {
+      eyebrow: 'Bắt đầu hành trình chuyển đổi',
+      title: 'Sẵn sàng nâng tầm An ninh mạng?',
+      description: 'Đội ngũ chuyên gia...',
+      benefits: [
+        { title: 'Tư vấn miễn phí', desc: 'Workshop 2-4 giờ' },
+        { title: 'Assessment nhanh', desc: 'Đánh giá security posture' },
+        { title: 'Roadmap cụ thể', desc: 'Lộ trình triển khai' }
+      ],
+      primaryCta: 'Đặt lịch tư vấn',
+      secondaryCta: 'Xem Demo'
+    }
+  })()
 
 
 
@@ -465,7 +544,7 @@ export default function AiSocPage() {
                 </div>
 
                 <div className="space-y-4">
-                  {(architectureDetails?.items || []).map((item, idx) => {
+                  {(architectureDetails?.items || []).map((item: any, idx: number) => {
                     const Icon = [Database, Zap, GitBranch, Cpu][idx]
                     return (
                     <div key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 border border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all">
@@ -529,99 +608,87 @@ export default function AiSocPage() {
       {/* Core Components Section */}
       <Section spacing="md" background="default">
         <div className="container-responsive space-y-16">
+          {/* Visual Showcase */}
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
               <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/30 border border-purple-300 dark:border-purple-700 text-purple-700 dark:text-purple-300">
                 <Cpu className="w-4 h-4" />
                 {t('products.aiSoc.features.badge')}
               </Badge>
-              <AnimatedHeading as="h2" gradient centered className="text-4xl p-1 lg:text-5xl">
-                {t('products.aiSoc.features.title')}
-              </AnimatedHeading>
-              <p className="text-xl text-muted-foreground">
-                {t('products.aiSoc.features.subtitle')}
+              <h2 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                {componentsVisual.title}
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                {componentsVisual.description}
               </p>
             </div>
           </ScrollReveal>
 
-          {/* Interactive Component Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {coreComponents.map((component, idx) => {
-              const IconComponent = component.icon
-              const isHovered = hoveredFeature === idx
-              return (
-                <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
-                  <Card
-                    className="p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden cursor-pointer border-2"
-                    onMouseEnter={() => setHoveredFeature(idx)}
-                    onMouseLeave={() => setHoveredFeature(null)}
-                  >
-                    {/* Animated Background */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${component.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                    
-                    {/* Glow Effect */}
-                    <div className={`absolute -inset-1 bg-gradient-to-r ${component.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
-
-                    <div className="relative z-10 space-y-6">
-                      {/* Header */}
-                      <div className="flex items-start justify-between">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${component.gradient} flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                          <IconComponent className="w-8 h-8 text-white" />
-                        </div>
-                        <div className={`text-6xl font-black opacity-10 group-hover:opacity-20 transition-opacity ${isHovered ? 'scale-110' : ''} transition-transform duration-300`}>
-                          {(idx + 1).toString().padStart(2, '0')}
-                        </div>
-                      </div>
-
-                      {/* Title & Description */}
-                      <div className="space-y-3">
-                        <h3 className="text-2xl font-bold">{component.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{component.description}</p>
-                      </div>
-
-                      {/* Features List */}
-                      <div className="space-y-2 pt-2">
-                        {component.features.map((feature, featureIdx) => (
-                          <div key={featureIdx} className="flex items-start gap-3 text-sm">
-                            <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${component.gradient} mt-2 flex-shrink-0`} />
-                            <span className="text-muted-foreground">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </Card>
-                </ScrollReveal>
-              )
-            })}
-          </div>
-
-          {/* Visual Showcase */}
           <ScrollReveal direction="up">
-            <div className="relative overflow-hidden rounded-3xl border-2 border-purple-500/20">
-              <Image
-                src="/AI SOC/anh4.jpeg"
-                alt="AI SOC Core Components"
-                width={1200}
-                height={500}
-                className="w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-12">
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-bold text-white">
-                    {componentsVisual.title}
-                  </h3>
-                  <p className="text-lg text-white/80 max-w-3xl">
-                    {componentsVisual.description}
-                  </p>
+            <div className="space-y-12">
+
+              {/* Component Cards Grid */}
+              {componentsVisual.items && Array.isArray(componentsVisual.items) && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {componentsVisual.items.map((item: any, idx: number) => {
+                    const colorMap = [
+                      { bg: 'from-blue-500 to-cyan-500', gradient: 'from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20', border: 'border-blue-200 dark:border-blue-800', number: 'text-blue-100 dark:text-blue-900' },
+                      { bg: 'from-purple-500 to-pink-500', gradient: 'from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20', border: 'border-purple-200 dark:border-purple-800', number: 'text-purple-100 dark:text-purple-900' },
+                      { bg: 'from-teal-500 to-emerald-500', gradient: 'from-teal-50 to-emerald-50 dark:from-teal-950/20 dark:to-emerald-950/20', border: 'border-teal-200 dark:border-teal-800', number: 'text-teal-100 dark:text-teal-900' },
+                      { bg: 'from-orange-500 to-red-500', gradient: 'from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20', border: 'border-orange-200 dark:border-orange-800', number: 'text-orange-100 dark:text-orange-900' }
+                    ]
+                    const colors = colorMap[idx] || colorMap[0]
+                    const IconComponents = [Database, Brain, Bot, Zap]
+                    const Icon = IconComponents[idx]
+
+                    return (
+                      <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
+                        <Card className={`p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden border-2 ${colors.border} bg-gradient-to-br ${colors.gradient}`}>
+                          {/* Animated Background */}
+                          <div className={`absolute inset-0 bg-gradient-to-br ${colors.bg} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                          
+                          {/* Glow Effect */}
+                          <div className={`absolute -inset-1 bg-gradient-to-r ${colors.bg} rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
+
+                          <div className="relative z-10 space-y-6">
+                            {/* Header */}
+                            <div className="flex items-start justify-between">
+                              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.bg} flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                                <Icon className="w-8 h-8 text-white" />
+                              </div>
+                              <div className={`text-6xl font-black opacity-20 group-hover:opacity-30 transition-opacity ${colors.number}`}>
+                                {item.number}
+                              </div>
+                            </div>
+
+                            {/* Title & Description */}
+                            <div className="space-y-3">
+                              <h4 className="text-2xl font-bold">{item.title}</h4>
+                              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                            </div>
+
+                            {/* Points List */}
+                            {item.points && Array.isArray(item.points) && (
+                              <div className="space-y-2 pt-2">
+                                {item.points.map((point: string, pointIdx: number) => (
+                                  <div key={pointIdx} className="flex items-start gap-3 text-sm">
+                                    <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${colors.bg} mt-2 flex-shrink-0`} />
+                                    <span className="text-muted-foreground">{point}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </Card>
+                      </ScrollReveal>
+                    )
+                  })}
                 </div>
-              </div>
+              )}
             </div>
           </ScrollReveal>
         </div>
       </Section>
-
-      {/* Process Workflow Section */}
       <Section spacing="md" background="muted">
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
@@ -679,7 +746,7 @@ export default function AiSocPage() {
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 border border-emerald-300 dark:border-emerald-700">
                               <Zap className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                               <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">
-                                {processSpeedLabels[idx] || processSpeeds.fast}
+                                {idx === 0 ? processSpeeds.instant : idx === 3 ? processSpeeds.slow : processSpeeds.fast}
                               </span>
                             </div>
                           </div>
@@ -756,7 +823,7 @@ export default function AiSocPage() {
                       </div>
                       <h3 className="text-xl font-bold">{section.title}</h3>
                       <ul className="space-y-2 text-sm text-muted-foreground">
-                        {(section.items || []).map((item, itemIdx) => (
+                        {(section.items || []).map((item: any, itemIdx: number) => (
                           <li key={itemIdx} className="flex items-start gap-2">
                             <CheckCircle className={`w-4 h-4 ${section.checkColor} mt-0.5 flex-shrink-0`} />
                             <span>{item}</span>
@@ -805,7 +872,7 @@ export default function AiSocPage() {
                   </p>
 
                   <div className="flex flex-wrap justify-center gap-4 pt-4">
-                    {(resourceCard.points || []).map((feature, idx) => (
+                    {(resourceCard.points || []).map((feature: any, idx: number) => (
                       <div key={idx} className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                         <CheckCircle className="w-4 h-4 text-cyan-300" />
                         <span className="text-white text-sm font-medium">{feature}</span>
@@ -854,7 +921,7 @@ export default function AiSocPage() {
 
                 {/* Benefits */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  {(finalCta.benefits || []).map((item, idx) => {
+                  {(finalCta.benefits || []).map((item: any, idx: number) => {
                     const icons = [Rocket, Target, Award]
                     const Icon = icons[idx] || Award
                     return (

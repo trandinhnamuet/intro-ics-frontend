@@ -1255,6 +1255,16 @@
         ],
         "cta": "SOC運用ガイドダウンロード"
       },
+      "roi": {"badge": "ROI & Impact"},
+      "roiMetrics": [{"metric": "90%", "label": "SOCチーム業務削減"}, {"metric": "70%", "label": "検出自動化"}, {"metric": "95%", "label": "インシデント対応高速化"}, {"metric": "$2.4M", "label": "データ侵害損失削減"}],
+      "traditionalBlock": {"title": "従来型SOC ≠ 十分な保護", "line1": "ベトナムだけでも1日に12,300件以上の攻撃があり、手動SOCは現代的な脅威の複雑性に対応できません。", "line2": "AI SOCは数日ではなく数秒で検出・対応します。"},
+      "architectureDetails": {"headline": "オープン、クラウドネイティブ、ハイパースケール", "description": "アーキテクチャ機能：", "platformLabel": "プラットフォーム", "items": [{"title": "無制限ストレージ", "desc": "ログを無期限に保存、ペタバイト規模を数秒でクエリ"}, {"title": "リアルタイム処理", "desc": "1日500億以上のイベントを1秒未満の遅延で処理"}, {"title": "450+統合", "desc": "すべてのデータソース接続：クラウド、オンプレ、SaaS、ネットワーク、エンドポイント"}, {"title": "自動スケーリング", "desc": "需要に応じて自動スケール、無制限成長"}]},
+      "proofPoint": {"title": "グローバル50億デバイス保護・実証済み技術", "description": "ICS AI SOCプラットフォームは、Google、Microsoft、Fortune 500、および世界中の数千企業を保護する技術をベースにしています。"},
+      "componentsVisual": {"title": "AI SOCの4つの柱", "description": "各コンポーネントが重要な役割を果たし、連携して包括的なセキュリティエコシステムを構築", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 無制限のストレージと分析機能を備えたハイパースケールSIEMプラットフォーム", "points": ["ログを時間制限なく無期限に保存", "ペタバイト規模を数秒でクエリ", "AI相関で誤検知70%削減", "450+データソース統合済み"]}, {"number": "02", "title": "UEBAプラットフォーム", "description": "Gurucul UEBA - 4000+のMLモデルでユーザー・システム動作を分析", "points": ["検出：アカウント侵害、内部脅威、横展開、権限昇格", "署名フリー検出技術"]}, {"number": "03", "title": "AI SOC分析官", "description": "エージェンティックAI - L1分析官の90%の作業を代替、24/7無休運用", "points": ["自動トリアージ、調査、アラート相関", "完全なインシデント報告書を自動生成・説明", "具体的な改善アクションを提案", "フィードバックから学習し継続改善"]}, {"number": "04", "title": "SOAR自動化", "description": "オーケストレーション・対応 - 隔離から復旧まで自動対応プレイブック", "points": ["1000+のあらゆるシナリオ向けプレイブック", "エンドポイント自動隔離、IP遮断、トークン無効化", "EDR、ファイアウォール、IAM、クラウドセキュリティ統合", "MTTRを数時間から数分に短縮"]}]},
+      "processSpeeds": {"instant": "リアルタイム", "fast": "< 1秒", "slow": "< 5秒"},
+      "roiDetails": {"cost": {"title": "コスト削減", "items": ["従来型SOC運用コストの60-70%削減", "L1アナリスト採用不要（AI が繰り返しタスク処理）", "年平均データ侵害損失 $2.4M削減"]}, "performance": {"title": "優れた性能", "items": ["手動SOCより95%高速な対応", "APT・内部脅威検出漏れなし", "24/7止まらないAIカバレッジ"]}, "team": {"title": "チーム強化", "items": ["SOCチームをL1繰り返しタスク から解放", "脅威ハンティング・戦略に集中", "バーンアウト減少と満足度向上"]}},
+      "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "AI SOC取得から対応まで実践的に解説", "points": ["システムアーキテクチャ", "ライブデモ", "具体的なユースケース", "ROI計算機"], "cta": "無料ダウンロード"},
+      "finalCta": {"eyebrow": "変革の始まり", "title": "サイバーセキュリティを次のレベルへ準備は？", "description": "ICSセキュリティ専門家が無料相談・評価を行い、カスタマイズされたAI SOC実装ロードマップを提案します", "benefits": [{"title": "無料相談", "desc": "専門家との2-4時間ワークショップ"}, {"title": "迅速な評価", "desc": "セキュリティ態勢の評価"}, {"title": "明確なロードマップ", "desc": "詳細な実装計画"}], "primaryCta": "相談予約", "secondaryCta": "オンラインデモを見る"},
       "traditionalVsAI": {
         "badge": "従来型SOC対AI SOC",
         "title": "従来型SOC ≠ 十分な保護である理由",

@@ -30,31 +30,31 @@ export default function AiSocConsultingPage() {
   const features = [
     {
       icon: Brain,
-      title: "AI Phân tích Hành vi (UEBA)",
-      description: "Sử dụng machine learning để phát hiện các hành vi bất thường của người dùng và thực thể trong hệ thống"
+      title: t('aiSoc.feature1Title'),
+      description: t('aiSoc.feature1Desc')
     },
     {
       icon: AlertTriangle,
-      title: "Phát hiện Mối đe dọa Tiên tiến",
-      description: "Tự động nhận diện và cảnh báo các mối đe dọa APT, zero-day attacks và ransomware"
+      title: t('aiSoc.feature2Title'),
+      description: t('aiSoc.feature2Desc')
     },
     {
       icon: Activity,
-      title: "Giám sát Thời gian Thực",
-      description: "Theo dõi liên tục 24/7 với dashboard tập trung, cảnh báo tức thì khi phát hiện sự cố"
+      title: t('aiSoc.feature3Title'),
+      description: t('aiSoc.feature3Desc')
     },
     {
       icon: Eye,
-      title: "Tự động hóa Phản ứng",
-      description: "SOAR tự động xử lý các sự cố theo playbook được định nghĩa trước, giảm thời gian phản ứng"
+      title: t('aiSoc.feature4Title'),
+      description: t('aiSoc.feature4Desc')
     }
   ]
 
   const benefits = [
-    "Giảm 80% thời gian phản ứng với sự cố an ninh mạng",
-    "Phát hiện mối đe dọa với độ chính xác 99.5%",
-    "Giảm tải 70% công việc cho đội ngũ SOC",
-    "Tuân thủ các chuẩn bảo mật quốc tế"
+    t('aiSoc.benefit1'),
+    t('aiSoc.benefit2'),
+    t('aiSoc.benefit3'),
+    t('aiSoc.benefit4')
   ]
 
   return (
@@ -134,7 +134,7 @@ export default function AiSocConsultingPage() {
                 {t('aiSoc.features')}
               </AnimatedHeading>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Tái định nghĩa an ninh mạng – Từ phản ứng bị động đến phòng thủ tiên đoán
+                {t('aiSoc.featureSubtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -168,7 +168,7 @@ export default function AiSocConsultingPage() {
                   {t('aiSoc.why')}
                 </AnimatedHeading>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Giải pháp AI SOC mang lại hiệu quả vượt trội so với SOC truyền thống
+                  {t('aiSoc.whySubtitle')}
                 </p>
                 
                 <div className="space-y-4">
