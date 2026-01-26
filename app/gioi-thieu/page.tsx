@@ -12,6 +12,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { AnimatedHeading } from "@/components/ui/animated-heading"
 import { Section } from "@/components/ui/section"
 import { Shield, Target, Zap, Users, Award, TrendingUp, Play, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export default function GioiThieuPage() {
   const { t } = useTranslation()
@@ -90,14 +91,11 @@ export default function GioiThieuPage() {
               </p>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={300}>
-              <div className="flex gap-4">
+              <Link href="/lien-he">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold">
-                  {t('common.learnMore')}
+                  {t('about.cta.schedule')}
                 </Button>
-                <Button size="lg" className="bg-primary/90 text-white border-2 border-white hover:bg-primary font-semibold">
-                  {t('common.contactUs')}
-                </Button>
-              </div>
+              </Link>
             </ScrollReveal>
           </div>
         </div>
@@ -465,12 +463,11 @@ export default function GioiThieuPage() {
                   {t('about.cta.subtitle')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="text-lg px-8 bg-white text-primary hover:bg-white/90 font-semibold">
-                    {t('about.cta.schedule')}
-                  </Button>
-                  <Button size="lg" className="text-lg px-8 bg-white/20 text-white border-2 border-white hover:bg-white/30 font-semibold backdrop-blur-sm">
-                    {t('about.cta.download')}
-                  </Button>
+                  <Link href="/lien-he">
+                    <Button size="lg" className="text-lg px-8 bg-white text-primary hover:bg-white/90 font-semibold">
+                      {t('about.cta.schedule')}
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Card>

@@ -154,28 +154,33 @@ export default function Page() {
             </ScrollReveal>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 auto-rows-max">
-              {featuredSolutions.map((solution, idx) => (
-                <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                  <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 h-full flex flex-col">
-                    <div className="relative h-48 overflow-hidden">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient}`} />
-                      <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                        <solution.icon className="w-16 h-16 mb-3 drop-shadow-lg" />
-                        <h3 className="text-lg font-bold text-center">{solution.title}</h3>
+              {featuredSolutions.map((solution, idx) => {
+                const solutionLinks = ['/products/csa-dlp', '/nha-may-thong-minh', '/toa-nha-thong-minh']
+                return (
+                  <ScrollReveal key={idx} direction="up" delay={idx * 100}>
+                    <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 h-full flex flex-col">
+                      <div className="relative h-48 overflow-hidden">
+                        <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient}`} />
+                        <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
+                          <solution.icon className="w-16 h-16 mb-3 drop-shadow-lg" />
+                          <h3 className="text-lg font-bold text-center">{solution.title}</h3>
+                        </div>
                       </div>
-                    </div>
-                    <div className="p-6 bg-background flex flex-col flex-grow">
-                      <p className="text-foreground/70 mb-4 leading-relaxed flex-grow">
-                        {solution.description}
-                      </p>
-                      <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:text-primary mt-auto">
-                        {t('common.learnMore')}
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                      </Button>
-                    </div>
-                  </Card>
-                </ScrollReveal>
-              ))}
+                      <div className="p-6 bg-background flex flex-col flex-grow">
+                        <p className="text-foreground/70 mb-4 leading-relaxed flex-grow">
+                          {solution.description}
+                        </p>
+                        <Link href={solutionLinks[idx]}>
+                          <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:text-primary mt-auto">
+                            {t('common.learnMore')}
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                          </Button>
+                        </Link>
+                      </div>
+                    </Card>
+                  </ScrollReveal>
+                )
+              })}
             </div>
           </div>
         </Section>

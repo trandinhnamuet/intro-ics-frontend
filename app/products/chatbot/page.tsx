@@ -120,22 +120,31 @@ export default function ChatbotPage() {
                   <ScrollReveal direction="up" delay={200}>
                     <Button
                       size="lg"
-                      className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold text-lg px-8 py-7 rounded-xl shadow-xl"
-                    >
-                      <MessageCircle className="w-5 h-5 mr-2" />
-                      {hero.cta1}
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </ScrollReveal>
-
-                  <ScrollReveal direction="up" delay={250}>
-                    <Button
-                      size="lg"
                       variant="outline"
                       className="border-2 border-cyan-500/50 hover:bg-cyan-500/10 text-foreground font-bold text-lg px-8 py-7 rounded-xl"
+                      onClick={() => {
+                        const featuresSection = document.getElementById('features-section');
+                        if (featuresSection) {
+                          featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                      }}
                     >
                       <BarChart3 className="w-5 h-5 mr-2" />
                       {hero.cta2}
+                    </Button>
+                  </ScrollReveal>
+
+                  <ScrollReveal direction="up" delay="250">
+                    <Button
+                      size="lg"
+                      className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold text-lg px-8 py-7 rounded-xl shadow-xl"
+                      asChild
+                    >
+                      <Link href="https://console.stg.vyin.chat/login?brand=vgent" target="_blank">
+                        <MessageCircle className="w-5 h-5 mr-2" />
+                        {hero.cta1}
+                        <ArrowRight className="w-5 h-5 ml-2" />
+                      </Link>
                     </Button>
                   </ScrollReveal>
                 </div>
@@ -230,7 +239,7 @@ export default function ChatbotPage() {
       </Section>
 
       {/* Section 3: Deep Dive Solutions */}
-      <Section background="gradient" spacing="md">
+      <Section background="gradient" spacing="md" data-section="features" id="features-section">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -707,7 +716,7 @@ export default function ChatbotPage() {
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold text-lg px-8 py-7"
                 asChild
               >
-                <Link href="/lien-he">
+                <Link href="https://console.stg.vyin.chat/login?brand=vgent" target="_blank">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   {cta.tryButton}
                   <ArrowRight className="w-5 h-5 ml-2" />

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useTranslation } from 'react-i18next'
+import Link from 'next/link'
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Sidebar } from "@/components/sidebar"
@@ -177,14 +178,25 @@ export default function RecruitmentPage() {
             {t('recruitment.hero.subtitle')}
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 shadow-lg">
+            <Button 
+              size="lg" 
+              className="bg-white text-purple-600 hover:bg-gray-100 shadow-lg"
+              onClick={() => {
+                const element = document.getElementById('job-listings-section')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+              }}
+            >
               <Briefcase className="mr-2 h-5 w-5" />
               {t('recruitment.hero.viewPositions')}
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/15 text-white backdrop-blur border border-white/30 hover:bg-white/25 hover:border-white/50">
-              <Heart className="mr-2 h-5 w-5" />
-              {t('common.learnMore')}
-            </Button>
+            <Link href="/gioi-thieu">
+              <Button size="lg" variant="outline" className="bg-white/15 text-white backdrop-blur border border-white/30 hover:bg-white/25 hover:border-white/50">
+                <Heart className="mr-2 h-5 w-5" />
+                {t('common.learnMore')}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -390,7 +402,7 @@ export default function RecruitmentPage() {
               </Dialog>
 
               {/* Job Listings Tabs */}
-              <Card className="shadow-lg">
+              <Card className="shadow-lg" id="job-listings-section">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-2">
                     <Briefcase className="w-6 h-6 text-purple-600" />

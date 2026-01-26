@@ -85,14 +85,7 @@ export default function AiSocConsultingPage() {
                   {t('aiSoc.intro')}
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
-                    className="bg-white text-indigo-600 hover:bg-white/90 font-semibold text-lg"
-                  >
-                    {t('common.learnMore')}
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
+                <Link href="/lien-he">
                   <Button 
                     size="lg" 
                     variant="outline" 
@@ -100,7 +93,7 @@ export default function AiSocConsultingPage() {
                   >
                     {t('common.contactUs')}
                   </Button>
-                </div>
+                </Link>
               </div>
             </ScrollReveal>
             
@@ -233,14 +226,7 @@ export default function AiSocConsultingPage() {
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                   Liên hệ với chúng tôi để được tư vấn giải pháp AI SOC phù hợp nhất
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    size="lg" 
-                    className="text-lg px-8 bg-white text-indigo-600 hover:bg-white/90 font-semibold"
-                  >
-                    {t('common.learnMore')}
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
+                <Link href="/lien-he">
                   <Button 
                     size="lg" 
                     className="text-lg px-8 bg-white/20 text-white border-2 border-white hover:bg-white/30 font-semibold backdrop-blur-sm"
@@ -248,7 +234,7 @@ export default function AiSocConsultingPage() {
                     {t('common.contactUs')}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
-                </div>
+                </Link>
               </div>
             </Card>
           </ScrollReveal>

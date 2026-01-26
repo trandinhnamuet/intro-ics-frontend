@@ -170,8 +170,13 @@ export default function PartnerPage() {
               </h1>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={200}>
-              <p className="text-xl text-white/90 max-w-2xl">
+              <p className="text-xl text-white/90 max-w-2xl mb-4">
                 {t('partners.subtitle')}
+              </p>
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={300}>
+              <p className="text-lg text-white/80 max-w-2xl">
+                {t('partners.description')}
               </p>
             </ScrollReveal>
           </div>

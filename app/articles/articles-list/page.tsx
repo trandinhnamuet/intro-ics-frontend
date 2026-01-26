@@ -126,7 +126,7 @@ function ArticlesListContent() {
     article.excerpt?.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
-  const categories = ['all', 'security', 'cloud', 'ai', 'iot']
+  const categories = ['all']
 
   return (
     <>

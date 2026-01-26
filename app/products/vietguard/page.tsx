@@ -323,9 +323,12 @@ export default function VietguardPage() {
                   size="lg" 
                   variant="outline" 
                   className="bg-transparent border-3 border-white text-white hover:bg-white/10 font-semibold text-lg px-8 py-5 rounded-xl backdrop-blur-sm"
+                  asChild
                 >
-                  {t('products.vietguard.hero.contactAdvice')}
-                  <ArrowRight className="w-6 h-6 ml-3" />
+                  <Link href="/lien-he">
+                    {t('products.vietguard.hero.contactAdvice')}
+                    <ArrowRight className="w-6 h-6 ml-3" />
+                  </Link>
                 </Button>
               </div>
             </ScrollReveal>
@@ -912,9 +915,12 @@ export default function VietguardPage() {
                   <Button 
                     size="lg" 
                     className="text-lg px-10 py-6 bg-white/10 text-white border-3 border-white hover:bg-white/20 font-bold rounded-2xl backdrop-blur-md hover:scale-105 transition-transform"
+                    asChild
                   >
-                    {t('products.vietguard.hero.scheduleConsultation')}
-                    <ArrowRight className="w-5 h-5 ml-3" />
+                    <Link href="/lien-he">
+                      {t('products.vietguard.hero.scheduleConsultation')}
+                      <ArrowRight className="w-5 h-5 ml-3" />
+                    </Link>
                   </Button>
                 </div>
 
