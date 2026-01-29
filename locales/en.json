@@ -1089,6 +1089,84 @@
       "processSpeeds": {"instant": "Real-time", "fast": "< 1 second", "slow": "< 5 seconds"},
       "roiDetails": {"cost": {"title": "Cost Savings", "items": ["Reduce 60-70% of traditional SOC operational costs", "No need to hire L1 Analysts (AI handles repetitive work)", "Reduce average data breach losses by $2.4M/year"]}, "performance": {"title": "Superior Performance", "items": ["95% faster response than manual SOC", "Detect APT and insider threats without missing", "24/7 AI coverage that never stops"]}, "team": {"title": "Empower Your Team", "items": ["Free SOC team from L1 repetitive tasks", "Focus on threat hunting & strategy", "Reduce burnout and increase job satisfaction"]}},
       "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "Detailed guide on how AI SOC works in practice - from ingestion to response", "points": ["System architecture", "Live demo", "Specific use cases", "ROI calculator"], "cta": "Download free"},
+      "gartnerRecognition": {
+        "badge": "Recognized by Gartner",
+        "title": "Gurucul - Leader in Magic Quadrant 2025",
+        "subtitle": "ICS's AI SOC platform is built on Gurucul Next-Gen SIEM, ranked as a Leader by Gartner for innovation and superior behavioral analytics",
+        "quote": "Gurucul exceeds the market in innovation with exclusive focus on SIEM, flexible roadmap, and rapid innovation pace",
+        "source": "Gartner Magic Quadrant for Security Information and Event Management, 2025",
+        "strengths": [
+          {
+            "title": "AI/ML-based Behavioral Analytics",
+            "description": "4000+ ML models analyze user and system behavior, detecting insider threats and sophisticated attacks that traditional rules miss"
+          },
+          {
+            "title": "Advanced Data Management",
+            "description": "Data Optimizer enables filtering, routing, and optimization, reducing storage costs and increasing efficiency in multicloud environments"
+          },
+          {
+            "title": "Rapid Innovation",
+            "description": "Exclusive focus on SIEM allows Gurucul to continuously deliver new features and adapt quickly to market changes"
+          },
+          {
+            "title": "Identity Threat Detection (ITDR)",
+            "description": "Deep UEBA integration with identity-based detections, identifying account takeovers, privilege escalation, and lateral movement"
+          }
+        ],
+        "comparison": {
+          "title": "Gurucul excels vs competitors",
+          "items": [
+            {
+              "criteria": "UEBA & Identity-based Detection",
+              "gurucul": "Excellent - Deep AI/ML integration",
+              "competitors": "Good - Ecosystem dependent"
+            },
+            {
+              "criteria": "Innovation Speed",
+              "gurucul": "Excellent - Exclusive SIEM focus",
+              "competitors": "Average - Slowed by mergers/acquisitions"
+            },
+            {
+              "criteria": "Multicloud Data Management",
+              "gurucul": "Excellent - Advanced Data Optimizer",
+              "competitors": "Good - Federated search"
+            },
+            {
+              "criteria": "Behavioral Analytics",
+              "gurucul": "Excellent - 4000+ ML models",
+              "competitors": "Average - Basic UEBA"
+            }
+          ]
+        },
+        "stats": [
+          {
+            "value": "Leader",
+            "label": "Gartner Magic Quadrant 2025"
+          },
+          {
+            "value": "4000+",
+            "label": "Behavioral ML Models"
+          },
+          {
+            "value": "Top 3",
+            "label": "In Next-Gen SIEM segment"
+          },
+          {
+            "value": "Enterprise",
+            "label": "Large Enterprise Ready"
+          }
+        ],
+        "whyICS": {
+          "title": "Why choose ICS to deploy Gurucul?",
+          "description": "ICS is Gurucul's strategic partner in Vietnam, delivering world-class AI SOC solutions with localized support",
+          "points": [
+            "Gurucul-certified expert team",
+            "24/7 support in Vietnamese",
+            "Customized for Vietnamese enterprises",
+            "Technology training and transfer"
+          ]
+        }
+      },
       "finalCta": {"eyebrow": "Begin your transformation journey", "title": "Ready to elevate your cybersecurity?", "description": "ICS security experts will provide free consultation, assess your current state, and recommend a customized AI SOC implementation roadmap", "benefits": [{"title": "Free Consultation", "desc": "2-4 hour workshop with experts"}, {"title": "Quick Assessment", "desc": "Evaluate your security posture"}, {"title": "Clear Roadmap", "desc": "Detailed implementation plan"}], "primaryCta": "Schedule consultation", "secondaryCta": "Watch online demo"},
       "traditionalVsAI": {
         "badge": "Traditional SOC vs AI SOC",

@@ -1132,6 +1132,84 @@
         ],
         "cta": "Tải tài liệu miễn phí"
       },
+      "gartnerRecognition": {
+        "badge": "Được công nhận bởi Gartner",
+        "title": "Gurucul - Leader trong Magic Quadrant 2025",
+        "subtitle": "Nền tảng AI SOC của ICS được xây dựng trên Gurucul Next-Gen SIEM, được Gartner xếp hạng Leader nhờ khả năng đổi mới và phân tích hành vi vượt trội",
+        "quote": "Gurucul vượt trội so với thị trường về khả năng đổi mới nhờ tập trung độc quyền vào SIEM, lộ trình phát triển linh hoạt và tốc độ đổi mới nhanh chóng",
+        "source": "Gartner Magic Quadrant for Security Information and Event Management, 2025",
+        "strengths": [
+          {
+            "title": "Phân tích hành vi dựa trên AI/ML",
+            "description": "4000+ ML models phân tích hành vi người dùng và hệ thống, phát hiện insider threats và tấn công tinh vi mà quy tắc truyền thống bỏ lỡ"
+          },
+          {
+            "title": "Quản lý dữ liệu nâng cao",
+            "description": "Data Optimizer cho phép lọc, định tuyến và tối ưu hóa dữ liệu, giảm chi phí lưu trữ và tăng hiệu quả trong môi trường multicloud"
+          },
+          {
+            "title": "Đổi mới nhanh chóng",
+            "description": "Tập trung độc quyền vào SIEM giúp Gurucul liên tục cung cấp tính năng mới và thích ứng nhanh với thay đổi thị trường"
+          },
+          {
+            "title": "Identity Threat Detection (ITDR)",
+            "description": "Tích hợp sâu UEBA với detections dựa trên danh tính, phát hiện chiếm quyền tài khoản, privilege escalation và lateral movement"
+          }
+        ],
+        "comparison": {
+          "title": "Gurucul vượt trội so với đối thủ",
+          "items": [
+            {
+              "criteria": "UEBA & Identity-based Detection",
+              "gurucul": "Vượt trội - Tích hợp sâu với AI/ML",
+              "competitors": "Tốt - Phụ thuộc ecosystem"
+            },
+            {
+              "criteria": "Tốc độ đổi mới",
+              "gurucul": "Vượt trội - Tập trung SIEM độc quyền",
+              "competitors": "Trung bình - Chậm do merger/acquisitions"
+            },
+            {
+              "criteria": "Quản lý dữ liệu Multicloud",
+              "gurucul": "Vượt trội - Data Optimizer tiên tiến",
+              "competitors": "Tốt - Federated search"
+            },
+            {
+              "criteria": "Behavioral Analytics",
+              "gurucul": "Vượt trội - 4000+ ML models",
+              "competitors": "Trung bình - UEBA cơ bản"
+            }
+          ]
+        },
+        "stats": [
+          {
+            "value": "Leader",
+            "label": "Gartner Magic Quadrant 2025"
+          },
+          {
+            "value": "4000+",
+            "label": "ML Models phân tích hành vi"
+          },
+          {
+            "value": "Top 3",
+            "label": "Trong phân khúc Next-Gen SIEM"
+          },
+          {
+            "value": "Enterprise",
+            "label": "Phù hợp doanh nghiệp lớn"
+          }
+        ],
+        "whyICS": {
+          "title": "Tại sao chọn ICS triển khai Gurucul?",
+          "description": "ICS là đối tác chiến lược của Gurucul tại Việt Nam, mang đến giải pháp AI SOC đẳng cấp thế giới với hỗ trợ địa phương hóa",
+          "points": [
+            "Đội ngũ chuyên gia được Gurucul chứng nhận",
+            "Hỗ trợ 24/7 bằng tiếng Việt",
+            "Tùy chỉnh theo đặc thù doanh nghiệp Việt",
+            "Đào tạo và chuyển giao công nghệ"
+          ]
+        }
+      },
       "finalCta": {
         "eyebrow": "Bắt đầu hành trình chuyển đổi",
         "title": "Sẵn sàng nâng tầm An ninh mạng?",

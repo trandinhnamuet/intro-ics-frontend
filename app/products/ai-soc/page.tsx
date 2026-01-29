@@ -839,12 +839,145 @@ export default function AiSocPage() {
         </div>
       </Section>
 
+      {/* Gurucul/Gartner Recognition Section */}
+      <Section spacing="md" background="muted">
+        <div className="container-responsive space-y-16">
+          <ScrollReveal direction="up">
+            <div className="text-center space-y-6 max-w-4xl mx-auto">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/30 border border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300">
+                <Award className="w-4 h-4" />
+                {t('products.aiSoc.gartnerRecognition.badge')}
+              </Badge>
+              <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl">
+                {t('products.aiSoc.gartnerRecognition.title')}
+              </AnimatedHeading>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                {t('products.aiSoc.gartnerRecognition.subtitle')}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Gartner Quote */}
+          <ScrollReveal direction="up">
+            <Card className="relative overflow-hidden p-8 lg:p-12 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 border-2 border-blue-200 dark:border-blue-800">
+              <div className="absolute top-4 left-4 text-8xl text-blue-200 dark:text-blue-800 opacity-30">"</div>
+              <div className="relative z-10 space-y-6">
+                <p className="text-2xl font-semibold text-center leading-relaxed">
+                  {t('products.aiSoc.gartnerRecognition.quote')}
+                </p>
+                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                  <Award className="w-4 h-4" />
+                  <span className="font-medium">{t('products.aiSoc.gartnerRecognition.source')}</span>
+                </div>
+              </div>
+            </Card>
+          </ScrollReveal>
+
+          {/* Strengths Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(t('products.aiSoc.gartnerRecognition.strengths', { returnObjects: true }) as any[]).map((strength: any, idx: number) => {
+              const icons = [Brain, Database, Rocket, Shield]
+              const Icon = icons[idx] || Shield
+              return (
+                <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'}>
+                  <Card className="h-full p-6 hover:shadow-xl transition-all hover:scale-105 border-2 border-transparent hover:border-blue-500/20">
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-7 h-7 text-white" />
+                      </div>
+                      <div className="flex-1 space-y-2">
+                        <h3 className="text-xl font-bold">{strength.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{strength.description}</p>
+                      </div>
+                    </div>
+                  </Card>
+                </ScrollReveal>
+              )
+            })}
+          </div>
+
+          {/* Comparison Table */}
+          <ScrollReveal direction="up">
+            <Card className="p-8 overflow-hidden">
+              <h3 className="text-2xl font-bold mb-6 text-center">
+                {t('products.aiSoc.gartnerRecognition.comparison.title')}
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b-2 border-blue-200 dark:border-blue-800">
+                      <th className="text-left p-4 font-bold">Tiêu chí</th>
+                      <th className="text-left p-4 font-bold text-blue-600 dark:text-blue-400">Gurucul</th>
+                      <th className="text-left p-4 font-bold text-muted-foreground">Đối thủ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {(t('products.aiSoc.gartnerRecognition.comparison.items', { returnObjects: true }) as any[]).map((item: any, idx: number) => (
+                      <tr key={idx} className="border-b border-border hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors">
+                        <td className="p-4 font-medium">{item.criteria}</td>
+                        <td className="p-4">
+                          <div className="flex items-center gap-2">
+                            <CheckCircle className="w-5 h-5 text-green-500" />
+                            <span className="text-blue-600 dark:text-blue-400 font-semibold">{item.gurucul}</span>
+                          </div>
+                        </td>
+                        <td className="p-4 text-muted-foreground">{item.competitors}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Card>
+          </ScrollReveal>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {(t('products.aiSoc.gartnerRecognition.stats', { returnObjects: true }) as any[]).map((stat: any, idx: number) => (
+              <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
+                <Card className="p-6 text-center hover:shadow-xl transition-all hover:scale-105 bg-gradient-to-br from-blue-500 to-cyan-500 text-white border-none">
+                  <div className="space-y-2">
+                    <div className="text-4xl font-black">{stat.value}</div>
+                    <div className="text-sm font-medium opacity-90">{stat.label}</div>
+                  </div>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Why ICS */}
+          <ScrollReveal direction="up">
+            <Card className="p-8 lg:p-12 bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 border-none text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse animation-delay-2000" />
+              </div>
+              <div className="relative z-10 space-y-6">
+                <h3 className="text-3xl font-bold text-center">
+                  {(t('products.aiSoc.gartnerRecognition.whyICS', { returnObjects: true }) as any).title}
+                </h3>
+                <p className="text-xl text-center text-white/90 max-w-3xl mx-auto">
+                  {(t('products.aiSoc.gartnerRecognition.whyICS', { returnObjects: true }) as any).description}
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                  {((t('products.aiSoc.gartnerRecognition.whyICS', { returnObjects: true }) as any).points || []).map((point: string, idx: number) => (
+                    <div key={idx} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                      <CheckCircle className="w-6 h-6 text-cyan-300 flex-shrink-0" />
+                      <span className="font-medium">{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          </ScrollReveal>
+        </div>
+      </Section>
+
       {/* Resources & Documents Section */}
       <Section spacing="md" background="gradient">
         <div className="container-responsive space-y-12">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 border border-white/30 text-white backdrop-blur-sm">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 text-green-700 dark:text-green-300">
                 <FileText className="w-4 h-4" />
                 {t('products.aiSoc.resources.badge')}
               </Badge>
@@ -881,12 +1014,12 @@ export default function AiSocPage() {
                   </div>
                 </div>
 
-                <Link href="/lien-he">
+                <a href="/AI SOC/Gurucul Workshop Walkthrough.pdf" download="Gurucul_Workshop_Walkthrough.pdf">
                   <Button size="lg" className="bg-white text-blue-600 hover:bg-white/90 font-bold text-lg h-14 px-8 group shadow-xl">
                     {resourceCard.cta}
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                </Link>
+                </a>
               </div>
             </Card>
           </ScrollReveal>

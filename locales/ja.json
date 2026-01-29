@@ -1265,6 +1265,84 @@
       "processSpeeds": {"instant": "リアルタイム", "fast": "< 1秒", "slow": "< 5秒"},
       "roiDetails": {"cost": {"title": "コスト削減", "items": ["従来型SOC運用コストの60-70%削減", "L1アナリスト採用不要（AI が繰り返しタスク処理）", "年平均データ侵害損失 $2.4M削減"]}, "performance": {"title": "優れた性能", "items": ["手動SOCより95%高速な対応", "APT・内部脅威検出漏れなし", "24/7止まらないAIカバレッジ"]}, "team": {"title": "チーム強化", "items": ["SOCチームをL1繰り返しタスク から解放", "脅威ハンティング・戦略に集中", "バーンアウト減少と満足度向上"]}},
       "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "AI SOC取得から対応まで実践的に解説", "points": ["システムアーキテクチャ", "ライブデモ", "具体的なユースケース", "ROI計算機"], "cta": "無料ダウンロード"},
+      "gartnerRecognition": {
+        "badge": "Gartner認定",
+        "title": "Gurucul - Magic Quadrant 2025 Leader",
+        "subtitle": "ICS AI SOCプラットフォームは、革新性と優れた行動分析でGartnerからLeaderランク付けされたGurucul Next-Gen SIEMを基盤としています",
+        "quote": "Guruculは、SIEMへの独占的フォーカス、柔軟なロードマップ、急速な革新ペースで市場を上回る革新を実現",
+        "source": "Gartner Magic Quadrant for Security Information and Event Management, 2025",
+        "strengths": [
+          {
+            "title": "AI/ML ベースの行動分析",
+            "description": "4000以上のMLモデルでユーザーとシステムの行動を分析し、従来のルールでは見逃す内部脅威や高度な攻撃を検出"
+          },
+          {
+            "title": "高度なデータ管理",
+            "description": "Data Optimizerがフィルタリング、ルーティング、最適化を可能にし、マルチクラウド環境でストレージコスト削減と効率向上を実現"
+          },
+          {
+            "title": "急速な革新",
+            "description": "SIEMへの独占的フォーカスにより、Guruculは継続的に新機能を提供し、市場変化に迅速に適応"
+          },
+          {
+            "title": "ID脅威検出 (ITDR)",
+            "description": "UEBAとの深い統合により、アカウント乗っ取り、特権昇格、横方向移動を検出するIDベース検出"
+          }
+        ],
+        "comparison": {
+          "title": "Guruculの競合優位性",
+          "items": [
+            {
+              "criteria": "UEBA & IDベース検出",
+              "gurucul": "優秀 - 深いAI/ML統合",
+              "competitors": "良好 - エコシステム依存"
+            },
+            {
+              "criteria": "革新速度",
+              "gurucul": "優秀 - SIEM独占フォーカス",
+              "competitors": "平均 - 合併/買収により減速"
+            },
+            {
+              "criteria": "マルチクラウドデータ管理",
+              "gurucul": "優秀 - 高度なData Optimizer",
+              "competitors": "良好 - フェデレーション検索"
+            },
+            {
+              "criteria": "行動分析",
+              "gurucul": "優秀 - 4000+ MLモデル",
+              "competitors": "平均 - 基本的UEBA"
+            }
+          ]
+        },
+        "stats": [
+          {
+            "value": "Leader",
+            "label": "Gartner Magic Quadrant 2025"
+          },
+          {
+            "value": "4000+",
+            "label": "行動分析MLモデル"
+          },
+          {
+            "value": "Top 3",
+            "label": "次世代SIEM分野"
+          },
+          {
+            "value": "Enterprise",
+            "label": "大企業対応"
+          }
+        ],
+        "whyICS": {
+          "title": "なぜICSでGuruculを導入？",
+          "description": "ICSはベトナムにおけるGuruculの戦略パートナーとして、ローカライズされたサポートで世界クラスのAI SOCソリューションを提供",
+          "points": [
+            "Gurucul認定専門家チーム",
+            "ベトナム語24/7サポート",
+            "ベトナム企業向けカスタマイズ",
+            "技術トレーニング・移転"
+          ]
+        }
+      },
       "finalCta": {"eyebrow": "変革の始まり", "title": "サイバーセキュリティを次のレベルへ準備は？", "description": "ICSセキュリティ専門家が無料相談・評価を行い、カスタマイズされたAI SOC実装ロードマップを提案します", "benefits": [{"title": "無料相談", "desc": "専門家との2-4時間ワークショップ"}, {"title": "迅速な評価", "desc": "セキュリティ態勢の評価"}, {"title": "明確なロードマップ", "desc": "詳細な実装計画"}], "primaryCta": "相談予約", "secondaryCta": "オンラインデモを見る"},
       "traditionalVsAI": {
         "badge": "従来型SOC対AI SOC",

@@ -1710,6 +1710,84 @@
       "processSpeeds": {"instant": "实时", "fast": "< 1 秒", "slow": "< 5 秒"},
       "roiDetails": {"cost": {"title": "成本节省", "items": ["相比传统 SOC 节省 60-70% 运营成本", "无需再招聘 L1 分析师（AI 处理重复工作）", "每年减少约 $2.4M 数据泄露损失"]}, "performance": {"title": "卓越性能", "items": ["比手工 SOC 快 95%", "检测 APT 与内部威胁不遗漏", "AI 24/7 全天候覆盖"]}, "team": {"title": "团队赋能", "items": ["让 SOC 团队摆脱重复 L1 任务", "专注威胁狩猎与战略", "降低倦怠并提升满意度"]}},
       "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "详解 AI SOC 从接入到响应的实际运作", "points": ["系统架构", "现场演示", "具体用例", "ROI 计算器"], "cta": "免费下载"},
+      "gartnerRecognition": {
+        "badge": "Gartner 认可",
+        "title": "Gurucul - Magic Quadrant 2025 领导者",
+        "subtitle": "ICS 的 AI SOC 平台基于 Gurucul Next-Gen SIEM 构建，因创新和卓越的行为分析被 Gartner 评为领导者",
+        "quote": "Gurucul 凭借对 SIEM 的独家专注、灵活的路线图和快速的创新步伐，在创新方面超越市场",
+        "source": "Gartner Magic Quadrant for Security Information and Event Management, 2025",
+        "strengths": [
+          {
+            "title": "基于 AI/ML 的行为分析",
+            "description": "4000+ ML 模型分析用户和系统行为，检测传统规则遗漏的内部威胁和复杂攻击"
+          },
+          {
+            "title": "高级数据管理",
+            "description": "Data Optimizer 实现过滤、路由和优化，降低存储成本，提高多云环境效率"
+          },
+          {
+            "title": "快速创新",
+            "description": "对 SIEM 的独家专注使 Gurucul 能够持续提供新功能并快速适应市场变化"
+          },
+          {
+            "title": "身份威胁检测 (ITDR)",
+            "description": "与 UEBA 深度集成，基于身份的检测识别账户接管、权限提升和横向移动"
+          }
+        ],
+        "comparison": {
+          "title": "Gurucul 的竞争优势",
+          "items": [
+            {
+              "criteria": "UEBA & 基于身份的检测",
+              "gurucul": "卓越 - 深度 AI/ML 集成",
+              "competitors": "良好 - 依赖生态系统"
+            },
+            {
+              "criteria": "创新速度",
+              "gurucul": "卓越 - SIEM 独家专注",
+              "competitors": "平均 - 因合并/收购放缓"
+            },
+            {
+              "criteria": "多云数据管理",
+              "gurucul": "卓越 - 高级 Data Optimizer",
+              "competitors": "良好 - 联合搜索"
+            },
+            {
+              "criteria": "行为分析",
+              "gurucul": "卓越 - 4000+ ML 模型",
+              "competitors": "平均 - 基本 UEBA"
+            }
+          ]
+        },
+        "stats": [
+          {
+            "value": "Leader",
+            "label": "Gartner Magic Quadrant 2025"
+          },
+          {
+            "value": "4000+",
+            "label": "行为分析 ML 模型"
+          },
+          {
+            "value": "Top 3",
+            "label": "下一代 SIEM 领域"
+          },
+          {
+            "value": "Enterprise",
+            "label": "大型企业就绪"
+          }
+        ],
+        "whyICS": {
+          "title": "为什么选择 ICS 部署 Gurucul？",
+          "description": "ICS 是 Gurucul 在越南的战略合作伙伴，提供世界级 AI SOC 解决方案和本地化支持",
+          "points": [
+            "Gurucul 认证专家团队",
+            "24/7 越南语支持",
+            "为越南企业定制",
+            "技术培训和转移"
+          ]
+        }
+      },
       "finalCta": {"eyebrow": "开启转型", "title": "准备提升您的网络安全吗？", "description": "ICS 专家提供免费咨询与评估，并定制 AI SOC 部署路线图", "benefits": [{"title": "免费咨询", "desc": "2-4 小时专家工作坊"}, {"title": "快速评估", "desc": "安全态势检查"}, {"title": "清晰路线图", "desc": "分步部署计划"}], "primaryCta": "预约咨询", "secondaryCta": "观看在线演示"},
       "traditionalVsAI": {
         "badge": "传统SOC vs AI SOC",
