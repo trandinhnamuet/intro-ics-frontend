@@ -1091,9 +1091,9 @@
           {
             "title": "アラート過負荷",
             "items": [
-              "システムは毎日数百万のアラートを生成します",
-              "ベトナムだけでも: 1日12,300+のサイバー攻撃",
-              "従来のSOCは高精度で手動処理できません"
+              "1日1万〜1.1万件のアラート、ほとんどが誤検知",
+              "ベトナムだけでも: 1日1,512+のサイバー攻撃",
+              "67%のアラートが処理不能で無視される"
             ]
           },
           {
@@ -1101,22 +1101,23 @@
             "items": [
               "毎年83+ APTキャンペーンが以下をターゲットにします:",
               "銀行・金融、エネルギー・通信、政府・大企業",
-              "ハッカーはもはや素早く攻撃せず、数週間/数ヶ月隠れます"
+              "2025年: 552,000件の攻撃、52.3%の組織が被害"
             ]
           },
           {
             "title": "SOC人材危機",
             "items": [
-              "上級SOCアナリストの深刻な不足",
-              "24/7 SOC維持コスト膨大",
-              "燃え尽き症候群-エラー-遅い対応"
+              "52%のSOCチームが過労状態",
+              "24/7 SOC維持コスト膨大: 年間350万ドル",
+              "57%の時間がデータ管理不備で無駄に"
             ]
           },
           {
             "title": "許容できない対応時間",
             "items": [
-              "従来のSOC: 数日から数週間",
-              "AI SOC: 数秒から数分"
+              "従来のSOC: 数日から数週間(平均277時間)",
+              "AI SOC: 数秒から数分",
+              "30%のセキュリティアラートが完全に見逃される"
             ]
           }
         ],
@@ -1163,6 +1164,7 @@
         "badge": "画期的な技術",
         "title": "主要機能",
         "subtitle": "指先にある高度な技術",
+        "learnMoreCta": "詳細を見る",
         "items": [
           {
             "icon": "Target",
@@ -1227,6 +1229,32 @@
         "badge": "ICSを選ぶ理由",
         "title": "なぜICSを選ぶのか？",
         "subtitle": "企業とパートナーシップを結ぶサイバーセキュリティ専門家",
+        "benefits": [
+          {
+            "title": "データを希望の場所に保持",
+            "metric": "100%",
+            "label": "データ民主主義",
+            "description": "Guruculのセキュリティ分析プラットフォームは、データの完全な制御、コスト削減、ロックインを回避するためのアーキテクチャの自由度を提供する100%のデータ民主主義を実現します。"
+          },
+          {
+            "title": "より少ないコストでより多くのセキュリティ",
+            "metric": "40%",
+            "label": "データコスト削減",
+            "description": "Guruculのサイバーセキュリティ分析プラットフォームには、標準で取り込みコストを40%削減し、パイプライン調整後は最大87%削減するネイティブDPMが含まれています。"
+          },
+          {
+            "title": "リアルタイムで脅威に適応",
+            "metric": "70%",
+            "label": "誤検知減少",
+            "description": "Guruculのサイバーセキュリティ分析プラットフォームは、検索対象のみを検出する静的ルールではなく、行動分析を検出の基盤として使用することで誤検知を70%削減します。AIで強化された重大度別に優先順位付けされたリスクに関する完全なコンテキストを取得します。"
+          },
+          {
+            "title": "ノイズではなく実際のリスクに焦点",
+            "metric": "83%",
+            "label": "MTTR削減",
+            "description": "GuruculのAI駆動型セキュリティ分析プラットフォームは、レベル1の単調なトリアージを自動化し、平均応答時間を短縮し、アナリストの燃え尽き症候群を軽減します。"
+          }
+        ],
         "points": [
           {
             "icon": "DollarSign",
@@ -1258,10 +1286,10 @@
       },
       "roi": {"badge": "ROI & Impact"},
       "roiMetrics": [{"metric": "90%", "label": "SOCチーム業務削減"}, {"metric": "70%", "label": "検出自動化"}, {"metric": "95%", "label": "インシデント対応高速化"}, {"metric": "$2.4M", "label": "データ侵害損失削減"}],
-      "traditionalBlock": {"title": "従来型SOC ≠ 十分な保護", "line1": "ベトナムだけでも1日に12,300件以上の攻撃があり、手動SOCは現代的な脅威の複雑性に対応できません。", "line2": "AI SOCは数日ではなく数秒で検出・対応します。"},
+      "traditionalBlock": {"title": "従来型SOC ≠ 十分な保護", "line1": "ベトナムだけでも1日に1,512件以上の攻撃があり、手動SOCは現代的な脅威の複雑性に対応できません。", "line2": "AI SOCは数日ではなく数秒で検出・対応します。"},
       "architectureDetails": {"headline": "オープン、クラウドネイティブ、ハイパースケール", "description": "アーキテクチャ機能：", "platformLabel": "プラットフォーム", "items": [{"title": "無制限ストレージ", "desc": "ログを無期限に保存、ペタバイト規模を数秒でクエリ"}, {"title": "リアルタイム処理", "desc": "1日500億以上のイベントを1秒未満の遅延で処理"}, {"title": "450+統合", "desc": "すべてのデータソース接続：クラウド、オンプレ、SaaS、ネットワーク、エンドポイント"}, {"title": "自動スケーリング", "desc": "需要に応じて自動スケール、無制限成長"}]},
       "proofPoint": {"title": "グローバル50億デバイス保護・実証済み技術", "description": "ICS AI SOCプラットフォームは、Google、Microsoft、Fortune 500、および世界中の数千企業を保護する技術をベースにしています。"},
-      "componentsVisual": {"title": "AI SOCの4つの柱", "description": "各コンポーネントが重要な役割を果たし、連携して包括的なセキュリティエコシステムを構築", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 無制限のストレージと分析機能を備えたハイパースケールSIEMプラットフォーム", "points": ["ログを時間制限なく無期限に保存", "ペタバイト規模を数秒でクエリ", "AI相関で誤検知70%削減", "450+データソース統合済み"]}, {"number": "02", "title": "UEBAプラットフォーム", "description": "Gurucul UEBA - 4000+のMLモデルでユーザー・システム動作を分析", "points": ["検出：アカウント侵害、内部脅威、横展開、権限昇格", "署名フリー検出技術"]}, {"number": "03", "title": "AI SOC分析官", "description": "エージェンティックAI - L1分析官の90%の作業を代替、24/7無休運用", "points": ["自動トリアージ、調査、アラート相関", "完全なインシデント報告書を自動生成・説明", "具体的な改善アクションを提案", "フィードバックから学習し継続改善"]}, {"number": "04", "title": "SOAR自動化", "description": "オーケストレーション・対応 - 隔離から復旧まで自動対応プレイブック", "points": ["1000+のあらゆるシナリオ向けプレイブック", "エンドポイント自動隔離、IP遮断、トークン無効化", "EDR、ファイアウォール、IAM、クラウドセキュリティ統合", "MTTRを数時間から数分に短縮"]}]},
+      "componentsVisual": {"title": "AI SOCの4つの柱", "description": "各コンポーネントが重要な役割を果たし、連携して包括的なセキュリティエコシステムを構築", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 無制限のストレージと分析機能を備えたハイパースケールSIEMプラットフォーム", "points": ["ログを時間制限なく無期限に保存", "ペタバイト規模を数秒でクエリ", "AI相関で誤検知70%削減", "450+データソース統合済み"], "learnMoreUrl": "https://gurucul.com/products/next-gen-siem/"}, {"number": "02", "title": "UEBAプラットフォーム", "description": "Gurucul UEBA - 4000+のMLモデルでユーザー・システム動作を分析", "points": ["検出：アカウント侵害、内部脅威、横展開、権限昇格", "署名フリー検出技術"], "learnMoreUrl": "https://gurucul.com/products/user-and-entity-behavior-analytics-ueba/"}, {"number": "03", "title": "AI SOC分析官", "description": "エージェンティックAI - L1分析官の90%の作業を代替、24/7無休運用", "points": ["自動トリアージ、調査、アラート相関", "完全なインシデント報告書を自動生成・説明", "具体的な改善アクションを提案", "フィードバックから学習し継続改善"], "learnMoreUrl": "https://gurucul.com/products/ai-soc-analyst/"}, {"number": "04", "title": "SOAR自動化", "description": "オーケストレーション・対応 - 隔離から復旧まで自動対応プレイブック", "points": ["1000+のあらゆるシナリオ向けプレイブック", "エンドポイント自動隔離、IP遮断、トークン無効化", "EDR、ファイアウォール、IAM、クラウドセキュリティ統合", "MTTRを数時間から数分に短縮"], "learnMoreUrl": "https://gurucul.com/products/security-orchestration-automation-and-response-soar/"}]},
       "processSpeeds": {"instant": "リアルタイム", "fast": "< 1秒", "slow": "< 5秒"},
       "roiDetails": {"cost": {"title": "コスト削減", "items": ["従来型SOC運用コストの60-70%削減", "L1アナリスト採用不要（AI が繰り返しタスク処理）", "年平均データ侵害損失 $2.4M削減"]}, "performance": {"title": "優れた性能", "items": ["手動SOCより95%高速な対応", "APT・内部脅威検出漏れなし", "24/7止まらないAIカバレッジ"]}, "team": {"title": "チーム強化", "items": ["SOCチームをL1繰り返しタスク から解放", "脅威ハンティング・戦略に集中", "バーンアウト減少と満足度向上"]}},
       "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "AI SOC取得から対応まで実践的に解説", "points": ["システムアーキテクチャ", "ライブデモ", "具体的なユースケース", "ROI計算機"], "cta": "無料ダウンロード"},
@@ -1269,6 +1297,29 @@
         "badge": "Gartner認定",
         "title": "Gurucul - Magic Quadrant 2025 Leader",
         "subtitle": "ICS AI SOCプラットフォームは、革新性と優れた行動分析でGartnerからLeaderランク付けされたGurucul Next-Gen SIEMを基盤としています",
+        "gartnerImage": {
+          "title": "Guruculは競合他社を超える",
+          "description": "GuruculはMagic Quadrant 2025でLeaderとしてランク付けされました。優れた革新能力と高度なAI/ML行動分析により。",
+          "stats": [
+            {
+              "value": "リーダー",
+              "label": "Gartner Magic Quadrant 2025"
+            },
+            {
+              "value": "4000+",
+              "label": "ML行動分析モデル"
+            },
+            {
+              "value": "Top 3",
+              "label": "次世代SIEMセグメント"
+            },
+            {
+              "value": "50億+",
+              "label": "保護されたデバイス"
+            }
+          ],
+          "reportCta": "Gartnerのランキングレポートの詳細"
+        },
         "quote": "Guruculは、SIEMへの独占的フォーカス、柔軟なロードマップ、急速な革新ペースで市場を上回る革新を実現",
         "source": "Gartner Magic Quadrant for Security Information and Event Management, 2025",
         "strengths": [
@@ -1347,7 +1398,7 @@
       "traditionalVsAI": {
         "badge": "従来型SOC対AI SOC",
         "title": "従来型SOC ≠ 十分な保護である理由",
-        "subtitle": "ベトナムで1日12,300+件以上の攻撃。手動SOCは対応できない。AI SOCは数秒で対応。",
+        "subtitle": "ベトナムで1日1,512+件以上の攻撃。手動SOCは対応できない。AI SOCは数秒で対応。",
         "comparison": {
           "title": "従来型手動SOC対AI駆動SOC",
           "traditional": "従来型SOC",
@@ -1440,7 +1491,7 @@
         },
         "traditionalBlock": {
           "title": "従来型SOCでは不十分",
-          "line1": "ベトナムだけで1日12,300件以上の攻撃。手作業SOCでは複雑な脅威に追いつけません。",
+          "line1": "ベトナムだけで1日1,512件以上の攻撃。手作業SOCでは複雑な脅威に追いつけません。",
           "line2": "AI SOCは数日ではなく数秒で検知・対応します。"
         },
         "architectureDetails": {

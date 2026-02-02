@@ -848,9 +848,9 @@
           {
             "title": "Quá tải cảnh báo",
             "items": [
-              "Hệ thống phát sinh hàng triệu alert mỗi ngày",
-              "Riêng tại Việt Nam: 12.300+ cuộc tấn công mạng/ngày",
-              "SOC truyền thống không thể xử lý thủ công với độ chính xác cao"
+              "10.000–11.000 cảnh báo mỗi ngày, phần lớn là false positives",
+              "1.512+ cuộc tấn công mạng/ngày tại Việt Nam",
+              "67% cảnh báo bị bỏ qua vì không xử lý kịp"
             ]
           },
           {
@@ -858,22 +858,23 @@
             "items": [
               "83+ chiến dịch APT mỗi năm nhắm vào:",
               "Ngân hàng – Tài chính, Năng lượng – Viễn thông, Cơ quan nhà nước – Doanh nghiệp lớn",
-              "Hacker không còn \"đánh nhanh rút gọn\" mà ẩn mình nhiều tuần/tháng"
+              "Năm 2025: 552.000 cuộc tấn công với 52,3% tổ chức bị tổn hại"
             ]
           },
           {
             "title": "Khủng hoảng nhân sự SOC",
             "items": [
-              "Thiếu trầm trọng SOC Analyst cấp cao",
-              "Chi phí duy trì SOC 24/7 cực lớn",
-              "Burnout – sai sót – phản ứng chậm"
+              "52% đội SOC quá tải công việc (overworked)",
+              "Chi phí duy trì SOC 24/7 cực lớn: 3.5M USD/năm",
+              "57% thời gian lãng phí do quản lý dữ liệu kém"
             ]
           },
           {
             "title": "Thời gian phản ứng không chấp nhận được",
             "items": [
-              "SOC truyền thống: vài ngày → vài tuần",
-              "AI SOC: vài giây → vài phút"
+              "SOC truyền thống: vài ngày → vài tuần (277 giờ TB)",
+              "AI SOC: vài giây → vài phút",
+              "30% cảnh báo an ninh bị bỏ lỡ hoàn toàn"
             ]
           }
         ],
@@ -920,6 +921,7 @@
         "badge": "Công nghệ đột phá",
         "title": "Tính năng nổi bật",
         "subtitle": "Công nghệ đột phá trong tầm tay bạn",
+        "learnMoreCta": "Tìm hiểu thêm",
         "items": [
           {
             "icon": "Target",
@@ -984,6 +986,32 @@
         "badge": "Lý do chọn ICS",
         "title": "Tại sao chọn ICS?",
         "subtitle": "Chuyên gia an ninh mạng đồng hành cùng doanh nghiệp Việt",
+        "benefits": [
+          {
+            "title": "Giữ dữ liệu nơi bạn muốn",
+            "metric": "100%",
+            "label": "QUYỀN DỰ LIỆU",
+            "description": "Nền tảng phân tích bảo mật của Gurucul cung cấp 100% quyền kiểm soát dữ liệu, tiết kiệm chi phí và tự do kiến trúc để tránh bị khóa chặt với nhà cung cấp."
+          },
+          {
+            "title": "Chi ít hơn để bảo vệ nhiều hơn",
+            "metric": "40%",
+            "label": "GIẢM CHI PHÍ DỮ LIỆU",
+            "description": "Nền tảng phân tích bảo mật mạng của Gurucul bao gồm DPM tích hợp sẵn giảm 40% chi phí ingestion ngay từ đầu và lên đến 87% sau khi điều chỉnh pipeline."
+          },
+          {
+            "title": "Thích ứng với mối đe dọa theo thời gian thực",
+            "metric": "70%",
+            "label": "GIẢM SỰ CẢNH BÁO GIẢ",
+            "description": "Nền tảng phân tích bảo mật mạng của Gurucul giảm 70% false positive bằng cách sử dụng phân tích hành vi làm xương sống cho việc phát hiện, thay vì quy tắc tĩnh chỉ phát hiện những gì bạn tìm kiếm. Nhận được bối cảnh đầy đủ về rủi ro, ưu tiên theo mức độ nghiêm trọng và được làm giàu bởi AI."
+          },
+          {
+            "title": "Tập trung vào rủi ro thực, không phải tiếng ồn",
+            "metric": "83%",
+            "label": "GIẢM MTTR",
+            "description": "Nền tảng phân tích bảo mật điều khiển bởi AI của Gurucul tự động hóa công việc tầm thường cấp độ 1, tăng tốc thời gian phản hồi trung bình và giảm sự kiệt sức của nhà phân tích."
+          }
+        ],
         "points": [
           {
             "icon": "DollarSign",
@@ -1024,7 +1052,7 @@
       ],
       "traditionalBlock": {
         "title": "SOC truyền thống ≠ Đủ bảo vệ",
-        "line1": "Với 12,300+ tấn công/ngày chỉ riêng tại Việt Nam, manual SOC không thể theo kịp tốc độ và độ phức tạp của threat landscape hiện đại.",
+        "line1": "Với 1,512+ tấn công/ngày chỉ riêng tại Việt Nam trong năm 2025, manual SOC không thể theo kịp tốc độ và độ phức tạp của threat landscape hiện đại.",
         "line2": "AI SOC phát hiện & phản ứng trong vài giây, không phải vài ngày."
       },
       "architectureDetails": {
@@ -1055,7 +1083,8 @@
               "Truy vấn siêu nhanh trên petabyte dữ liệu",
               "Giảm 70% false positive nhờ AI correlation",
               "Tích hợp 450+ data source ready"
-            ]
+            ],
+            "learnMoreUrl": "https://gurucul.com/products/next-gen-siem/"
           },
           {
             "number": "02",
@@ -1064,7 +1093,8 @@
             "points": [
               "Phát hiện: Tài khoản bị chiếm quyền, Nội gián, Lateral Movement, Privilege Escalation",
               "Không phụ thuộc chữ ký (signature-less)"
-            ]
+            ],
+            "learnMoreUrl": "https://gurucul.com/products/user-and-entity-behavior-analytics-ueba/"
           },
           {
             "number": "03",
@@ -1075,7 +1105,8 @@
               "Tạo incident report đầy đủ và giải thích",
               "Đề xuất remediation action cụ thể",
               "Học từ feedback và cải thiện liên tục"
-            ]
+            ],
+            "learnMoreUrl": "https://gurucul.com/products/ai-soc-analyst/"
           },
           {
             "number": "04",
@@ -1086,7 +1117,8 @@
               "Tự động isolate endpoint, block IP, revoke token",
               "Tích hợp EDR, Firewall, IAM, Cloud Security",
               "Giảm MTTR từ giờ xuống con phút"
-            ]
+            ],
+            "learnMoreUrl": "https://gurucul.com/products/security-orchestration-automation-and-response-soar/"
           }
         ]
       },
@@ -1136,6 +1168,29 @@
         "badge": "Được công nhận bởi Gartner",
         "title": "Gurucul - Leader trong Magic Quadrant 2025",
         "subtitle": "Nền tảng AI SOC của ICS được xây dựng trên Gurucul Next-Gen SIEM, được Gartner xếp hạng Leader nhờ khả năng đổi mới và phân tích hành vi vượt trội",
+        "gartnerImage": {
+          "title": "Gurucul vượt trội so với đối thủ",
+          "description": "Gurucul được Gartner xếp hạng Leader trong Magic Quadrant 2025 nhờ khả năng đổi mới vượt trội và phân tích hành vi AI/ML tiên tiến.",
+          "stats": [
+            {
+              "value": "Leader",
+              "label": "Gartner Magic Quadrant 2025"
+            },
+            {
+              "value": "4000+",
+              "label": "ML Models phân tích hành vi"
+            },
+            {
+              "value": "Top 3",
+              "label": "Trong phân khúc Next-Gen SIEM"
+            },
+            {
+              "value": "5B+",
+              "label": "Thiết bị được bảo vệ"
+            }
+          ],
+          "reportCta": "Tìm hiểu thêm báo cáo xếp hạng của Gartner"
+        },
         "quote": "Gurucul vượt trội so với thị trường về khả năng đổi mới nhờ tập trung độc quyền vào SIEM, lộ trình phát triển linh hoạt và tốc độ đổi mới nhanh chóng",
         "source": "Gartner Magic Quadrant for Security Information and Event Management, 2025",
         "strengths": [
@@ -1181,24 +1236,6 @@
             }
           ]
         },
-        "stats": [
-          {
-            "value": "Leader",
-            "label": "Gartner Magic Quadrant 2025"
-          },
-          {
-            "value": "4000+",
-            "label": "ML Models phân tích hành vi"
-          },
-          {
-            "value": "Top 3",
-            "label": "Trong phân khúc Next-Gen SIEM"
-          },
-          {
-            "value": "Enterprise",
-            "label": "Phù hợp doanh nghiệp lớn"
-          }
-        ],
         "whyICS": {
           "title": "Tại sao chọn ICS triển khai Gurucul?",
           "description": "ICS là đối tác chiến lược của Gurucul tại Việt Nam, mang đến giải pháp AI SOC đẳng cấp thế giới với hỗ trợ địa phương hóa",
@@ -1225,7 +1262,7 @@
       "traditionalVsAI": {
         "badge": "SOC Truyền thống vs AI SOC",
         "title": "Tại sao SOC truyền thống không đủ để bảo vệ",
-        "subtitle": "12.300+ cuộc tấn công/ngày tại Việt Nam. SOC thủ công không theo kịp. AI SOC phản ứng trong giây lát.",
+        "subtitle": "1.512+ cuộc tấn công/ngày tại Việt Nam. SOC thủ công không theo kịp. AI SOC phản ứng trong giây lát.",
         "comparison": {
           "title": "SOC thủ công truyền thống so với AI-Powered SOC",
           "traditional": "SOC Truyền thống",
@@ -1327,7 +1364,7 @@
         },
         "traditionalBlock": {
           "title": "SOC truyền thống ≠ Đủ bảo vệ",
-          "line1": "Với 12,300+ tấn công/ngày chỉ riêng tại Việt Nam, manual SOC không thể theo kịp tốc độ và độ phức tạp của threat landscape hiện đại.",
+          "line1": "Với 1,512+ tấn công/ngày chỉ riêng tại Việt Nam, manual SOC không thể theo kịp tốc độ và độ phức tạp của threat landscape hiện đại.",
           "line2": "AI SOC phát hiện & phản ứng trong vài giây, không phải vài ngày."
         },
         "architectureDetails": {

@@ -41,7 +41,8 @@ import {
   GitBranch,
   Workflow,
   Bot,
-  Gauge
+  Gauge,
+  ExternalLink
 } from 'lucide-react'
 
 interface OrbConfig {
@@ -59,6 +60,7 @@ export default function AiSocPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isClient, setIsClient] = useState(false)
   const [orbs, setOrbs] = useState<OrbConfig[]>([])
+  const [expandedRoiCard, setExpandedRoiCard] = useState<number | null>(null)
 
   useEffect(() => {
     setIsClient(true)
@@ -117,7 +119,7 @@ export default function AiSocPage() {
       icon: AlertTriangle,
       title: painPointsData?.[0]?.title || t('products.aiSoc.painPoints.points.0.title'),
       description: painPointsData?.[0]?.items?.[0] || t('products.aiSoc.painPoints.points.0.items.0'),
-      stat: "12,300+",
+      stat: "1,512+",
       statLabel: painPointsData?.[0]?.items?.[1] || t('products.aiSoc.painPoints.points.0.items.1')
     },
     {
@@ -220,7 +222,7 @@ export default function AiSocPage() {
     const data = t('products.aiSoc.traditionalBlock', { returnObjects: true }) as any
     return typeof data === 'object' && data !== null && 'title' in data ? data : { 
       title: 'SOC truyền thống ≠ Đủ bảo vệ',
-      line1: 'Với 12,300+ tấn công/ngày...',
+      line1: 'Với 1,512+ tấn công/ngày...',
       line2: 'AI SOC phát hiện & phản ứng trong vài giây...'
     }
   })()
@@ -388,9 +390,6 @@ export default function AiSocPage() {
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white hover:bg-white/20 font-bold text-lg h-14">
-                    {t('products.aiSoc.hero.cta2')}
-                  </Button>
                 </div>
               </div>
             </ScrollReveal>
@@ -434,7 +433,7 @@ export default function AiSocPage() {
       </section>
 
       {/* Why AI SOC Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
@@ -456,7 +455,7 @@ export default function AiSocPage() {
               const IconComponent = challenge.icon
               return (
                 <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
-                  <Card className="p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden border-2">
+                  <Card className="p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden border-2 h-full flex flex-col">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
                     
                     <div className="relative space-y-6">
@@ -511,8 +510,164 @@ export default function AiSocPage() {
         </div>
       </Section>
 
+      {/* Gurucul/Gartner Recognition Section */}
+      <Section spacing="sm" background="muted">
+        <div className="container-responsive space-y-16">
+          <ScrollReveal direction="up">
+            <div className="text-center space-y-6 max-w-4xl mx-auto">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/30 border border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300">
+                <Award className="w-4 h-4" />
+                {t('products.aiSoc.gartnerRecognition.badge')}
+              </Badge>
+              <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl">
+                {t('products.aiSoc.gartnerRecognition.title')}
+              </AnimatedHeading>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                {t('products.aiSoc.gartnerRecognition.subtitle')}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Gartner Magic Quadrant Image & Content */}
+          <ScrollReveal direction="up">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Content */}
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-bold">
+                    {t('products.aiSoc.gartnerRecognition.gartnerImage.title')}
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {t('products.aiSoc.gartnerRecognition.gartnerImage.description')}
+                  </p>
+                </div>
+
+                {/* Key Stats */}
+                <div className="grid grid-cols-2 gap-4">
+                  {(t('products.aiSoc.gartnerRecognition.gartnerImage.stats', { returnObjects: true }) as any[]).map((stat: any, idx: number) => (
+                    <div key={idx} className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4">
+                      <div className="text-2xl font-black text-blue-600 dark:text-blue-400">{stat.value}</div>
+                      <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right Image */}
+              <div className="space-y-6">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl blur-2xl opacity-20 animate-pulse" />
+                  <Card className="relative overflow-hidden border-2 border-amber-500/20 rounded-2xl shadow-2xl">
+                    <Image
+                      src="/AI SOC/Anh_gartner.png"
+                      alt="Gartner Magic Quadrant 2025 - Gurucul Leader"
+                      width={500}
+                      height={560}
+                      className="w-full h-auto"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-slate-900/90 backdrop-blur-md border border-white/10 rounded-lg p-3">
+                        <div className="text-xs text-white/60">Vị trí</div>
+                        <div className="text-sm font-bold text-white">Leader 2025</div>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+                
+                {/* Gartner Report Link Button */}
+                <a 
+                  href="https://www.gartner.com/doc/reprints?id=1-2M3P612D&ct=251014&st=sb" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button size="lg" className="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold group">
+                    {t('products.aiSoc.gartnerRecognition.gartnerImage.reportCta')}
+                    <ExternalLink className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Gartner Quote */}
+          <ScrollReveal direction="up">
+            <Card className="relative overflow-hidden p-8 lg:p-12 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 border-2 border-blue-200 dark:border-blue-800">
+              <div className="absolute top-4 left-4 text-8xl text-blue-200 dark:text-blue-800 opacity-30">"</div>
+              <div className="relative z-10 space-y-6">
+                <p className="text-2xl font-semibold text-center leading-relaxed">
+                  {t('products.aiSoc.gartnerRecognition.quote')}
+                </p>
+                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                  <Award className="w-4 h-4" />
+                  <span className="font-medium">{t('products.aiSoc.gartnerRecognition.source')}</span>
+                </div>
+              </div>
+            </Card>
+          </ScrollReveal>
+
+          {/* Strengths Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(t('products.aiSoc.gartnerRecognition.strengths', { returnObjects: true }) as any[]).map((strength: any, idx: number) => {
+              const icons = [Brain, Database, Rocket, Shield]
+              const Icon = icons[idx] || Shield
+              return (
+                <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'}>
+                  <Card className="h-full p-6 hover:shadow-xl transition-all hover:scale-105 border-2 border-transparent hover:border-blue-500/20">
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-7 h-7 text-white" />
+                      </div>
+                      <div className="flex-1 space-y-2">
+                        <h3 className="text-xl font-bold">{strength.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{strength.description}</p>
+                      </div>
+                    </div>
+                  </Card>
+                </ScrollReveal>
+              )
+            })}
+          </div>
+
+          {/* Comparison Table */}
+          <ScrollReveal direction="up">
+            <Card className="p-8 overflow-hidden">
+              <h3 className="text-2xl font-bold mb-6 text-center">
+                {t('products.aiSoc.gartnerRecognition.comparison.title')}
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b-2 border-blue-200 dark:border-blue-800">
+                      <th className="text-left p-4 font-bold">Tiêu chí</th>
+                      <th className="text-left p-4 font-bold text-blue-600 dark:text-blue-400">Gurucul</th>
+                      <th className="text-left p-4 font-bold text-muted-foreground">Đối thủ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {(t('products.aiSoc.gartnerRecognition.comparison.items', { returnObjects: true }) as any[]).map((item: any, idx: number) => (
+                      <tr key={idx} className="border-b border-border hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors">
+                        <td className="p-4 font-medium">{item.criteria}</td>
+                        <td className="p-4">
+                          <div className="flex items-center gap-2">
+                            <CheckCircle className="w-5 h-5 text-green-500" />
+                            <span className="text-blue-600 dark:text-blue-400 font-semibold">{item.gurucul}</span>
+                          </div>
+                        </td>
+                        <td className="p-4 text-muted-foreground">{item.competitors}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Card>
+          </ScrollReveal>
+        </div>
+      </Section>
+
       {/* Architecture Section */}
-      <Section spacing="md" background="muted">
+      <Section spacing="sm" background="muted">
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
@@ -606,7 +761,7 @@ export default function AiSocPage() {
       </Section>
 
       {/* Core Components Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive space-y-16">
           {/* Visual Showcase */}
           <ScrollReveal direction="up">
@@ -643,7 +798,7 @@ export default function AiSocPage() {
 
                     return (
                       <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
-                        <Card className={`p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden border-2 ${colors.border} bg-gradient-to-br ${colors.gradient}`}>
+                        <Card className={`p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden border-2 ${colors.border} bg-gradient-to-br ${colors.gradient} h-full flex flex-col`}>
                           {/* Animated Background */}
                           <div className={`absolute inset-0 bg-gradient-to-br ${colors.bg} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                           
@@ -656,7 +811,7 @@ export default function AiSocPage() {
                               <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.bg} flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                                 <Icon className="w-8 h-8 text-white" />
                               </div>
-                              <div className={`text-6xl font-black opacity-20 group-hover:opacity-30 transition-opacity ${colors.number}`}>
+                              <div className="text-6xl font-black opacity-40 group-hover:opacity-50 transition-opacity text-slate-400 dark:text-slate-600">
                                 {item.number}
                               </div>
                             </div>
@@ -678,6 +833,27 @@ export default function AiSocPage() {
                                 ))}
                               </div>
                             )}
+
+                            {/* Learn More Button */}
+                            {item.learnMoreUrl && (
+                              <div className="pt-4 mt-auto">
+                                <a 
+                                  href={item.learnMoreUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="block"
+                                >
+                                  <Button 
+                                    variant="outline" 
+                                    size="sm" 
+                                    className={`w-full border-2 hover:bg-gradient-to-r ${colors.bg} hover:text-white hover:border-transparent transition-all group`}
+                                  >
+                                    {t('products.aiSoc.features.learnMoreCta')}
+                                    <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                  </Button>
+                                </a>
+                              </div>
+                            )}
                           </div>
                         </Card>
                       </ScrollReveal>
@@ -689,7 +865,7 @@ export default function AiSocPage() {
           </ScrollReveal>
         </div>
       </Section>
-      <Section spacing="md" background="muted">
+      <Section spacing="sm" background="muted">
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
@@ -762,7 +938,7 @@ export default function AiSocPage() {
       </Section>
 
       {/* ROI & Benefits Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
@@ -779,26 +955,49 @@ export default function AiSocPage() {
             </div>
           </ScrollReveal>
 
-          {/* ROI Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {roiMetrics.map((roi, idx) => {
-              const IconComponent = roi.icon
+          {/* ROI Metrics - New Expandable Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(t('products.aiSoc.whyIcs.benefits', { returnObjects: true }) as any[]).map((benefit: any, idx: number) => {
+              const isExpanded = expandedRoiCard === idx
+              const gradients = [
+                { bg: 'from-purple-500 to-pink-500', border: 'border-purple-200 dark:border-purple-800', text: 'text-purple-600 dark:text-purple-400' },
+                { bg: 'from-cyan-500 to-blue-500', border: 'border-cyan-200 dark:border-cyan-800', text: 'text-cyan-600 dark:text-cyan-400' },
+                { bg: 'from-teal-500 to-emerald-500', border: 'border-teal-200 dark:border-teal-800', text: 'text-teal-600 dark:text-teal-400' },
+                { bg: 'from-amber-500 to-orange-500', border: 'border-amber-200 dark:border-amber-800', text: 'text-amber-600 dark:text-amber-400' }
+              ]
+              const gradient = gradients[idx] || gradients[0]
+
               return (
-                <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                  <Card className="p-6 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden border-2 border-green-500/20">
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 group-hover:from-green-500/10 group-hover:to-emerald-500/10 transition-colors" />
-                    
-                    <div className="relative z-10 space-y-4">
-                      <div className="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                        <IconComponent className="w-7 h-7 text-white" />
+                <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
+                  <Card 
+                    className={`p-6 cursor-pointer hover:shadow-2xl transition-all duration-300 border-2 ${gradient.border} ${isExpanded ? 'ring-2 ring-offset-2 ring-opacity-50' : ''}`}
+                    onClick={() => setExpandedRoiCard(isExpanded ? null : idx)}
+                  >
+                    <div className="space-y-4">
+                      {/* Header */}
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+                          <div className={`text-4xl font-black ${gradient.text}`}>
+                            {benefit.metric}
+                          </div>
+                          <div className="text-sm text-muted-foreground mt-1">
+                            {benefit.label}
+                          </div>
+                        </div>
+                        <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${gradient.bg} flex items-center justify-center flex-shrink-0`}>
+                          <ChevronRight className={`w-5 h-5 text-white transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
+                        </div>
                       </div>
 
-                      <div className="space-y-2">
-                        <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-400">
-                          {roi.metric}
+                      {/* Expandable Content */}
+                      {isExpanded && (
+                        <div className="pt-4 border-t space-y-3 animate-in slide-in-from-top-2 duration-300">
+                          <p className="text-muted-foreground leading-relaxed">
+                            {benefit.description}
+                          </p>
                         </div>
-                        <p className="text-sm text-muted-foreground font-medium leading-snug">{roi.label}</p>
-                      </div>
+                      )}
                     </div>
                   </Card>
                 </ScrollReveal>
@@ -839,141 +1038,8 @@ export default function AiSocPage() {
         </div>
       </Section>
 
-      {/* Gurucul/Gartner Recognition Section */}
-      <Section spacing="md" background="muted">
-        <div className="container-responsive space-y-16">
-          <ScrollReveal direction="up">
-            <div className="text-center space-y-6 max-w-4xl mx-auto">
-              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/30 border border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300">
-                <Award className="w-4 h-4" />
-                {t('products.aiSoc.gartnerRecognition.badge')}
-              </Badge>
-              <AnimatedHeading as="h2" gradient centered className="text-4xl lg:text-5xl">
-                {t('products.aiSoc.gartnerRecognition.title')}
-              </AnimatedHeading>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                {t('products.aiSoc.gartnerRecognition.subtitle')}
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Gartner Quote */}
-          <ScrollReveal direction="up">
-            <Card className="relative overflow-hidden p-8 lg:p-12 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 border-2 border-blue-200 dark:border-blue-800">
-              <div className="absolute top-4 left-4 text-8xl text-blue-200 dark:text-blue-800 opacity-30">"</div>
-              <div className="relative z-10 space-y-6">
-                <p className="text-2xl font-semibold text-center leading-relaxed">
-                  {t('products.aiSoc.gartnerRecognition.quote')}
-                </p>
-                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                  <Award className="w-4 h-4" />
-                  <span className="font-medium">{t('products.aiSoc.gartnerRecognition.source')}</span>
-                </div>
-              </div>
-            </Card>
-          </ScrollReveal>
-
-          {/* Strengths Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {(t('products.aiSoc.gartnerRecognition.strengths', { returnObjects: true }) as any[]).map((strength: any, idx: number) => {
-              const icons = [Brain, Database, Rocket, Shield]
-              const Icon = icons[idx] || Shield
-              return (
-                <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'}>
-                  <Card className="h-full p-6 hover:shadow-xl transition-all hover:scale-105 border-2 border-transparent hover:border-blue-500/20">
-                    <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-7 h-7 text-white" />
-                      </div>
-                      <div className="flex-1 space-y-2">
-                        <h3 className="text-xl font-bold">{strength.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{strength.description}</p>
-                      </div>
-                    </div>
-                  </Card>
-                </ScrollReveal>
-              )
-            })}
-          </div>
-
-          {/* Comparison Table */}
-          <ScrollReveal direction="up">
-            <Card className="p-8 overflow-hidden">
-              <h3 className="text-2xl font-bold mb-6 text-center">
-                {t('products.aiSoc.gartnerRecognition.comparison.title')}
-              </h3>
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b-2 border-blue-200 dark:border-blue-800">
-                      <th className="text-left p-4 font-bold">Tiêu chí</th>
-                      <th className="text-left p-4 font-bold text-blue-600 dark:text-blue-400">Gurucul</th>
-                      <th className="text-left p-4 font-bold text-muted-foreground">Đối thủ</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {(t('products.aiSoc.gartnerRecognition.comparison.items', { returnObjects: true }) as any[]).map((item: any, idx: number) => (
-                      <tr key={idx} className="border-b border-border hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors">
-                        <td className="p-4 font-medium">{item.criteria}</td>
-                        <td className="p-4">
-                          <div className="flex items-center gap-2">
-                            <CheckCircle className="w-5 h-5 text-green-500" />
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold">{item.gurucul}</span>
-                          </div>
-                        </td>
-                        <td className="p-4 text-muted-foreground">{item.competitors}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </Card>
-          </ScrollReveal>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {(t('products.aiSoc.gartnerRecognition.stats', { returnObjects: true }) as any[]).map((stat: any, idx: number) => (
-              <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
-                <Card className="p-6 text-center hover:shadow-xl transition-all hover:scale-105 bg-gradient-to-br from-blue-500 to-cyan-500 text-white border-none">
-                  <div className="space-y-2">
-                    <div className="text-4xl font-black">{stat.value}</div>
-                    <div className="text-sm font-medium opacity-90">{stat.label}</div>
-                  </div>
-                </Card>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Why ICS */}
-          <ScrollReveal direction="up">
-            <Card className="p-8 lg:p-12 bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 border-none text-white relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse animation-delay-2000" />
-              </div>
-              <div className="relative z-10 space-y-6">
-                <h3 className="text-3xl font-bold text-center">
-                  {(t('products.aiSoc.gartnerRecognition.whyICS', { returnObjects: true }) as any).title}
-                </h3>
-                <p className="text-xl text-center text-white/90 max-w-3xl mx-auto">
-                  {(t('products.aiSoc.gartnerRecognition.whyICS', { returnObjects: true }) as any).description}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                  {((t('products.aiSoc.gartnerRecognition.whyICS', { returnObjects: true }) as any).points || []).map((point: string, idx: number) => (
-                    <div key={idx} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                      <CheckCircle className="w-6 h-6 text-cyan-300 flex-shrink-0" />
-                      <span className="font-medium">{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Card>
-          </ScrollReveal>
-        </div>
-      </Section>
-
       {/* Resources & Documents Section */}
-      <Section spacing="md" background="gradient">
+      <Section spacing="sm" background="gradient">
         <div className="container-responsive space-y-12">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
@@ -1027,7 +1093,7 @@ export default function AiSocPage() {
       </Section>
 
       {/* Final CTA */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 p-16 lg:p-20 text-center border-2 border-white/10">

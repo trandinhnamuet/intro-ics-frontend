@@ -123,7 +123,7 @@ export default function ToaNhaThongMinhPage() {
       </div>
 
       {/* Features Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -161,7 +161,7 @@ export default function ToaNhaThongMinhPage() {
       </Section>
 
       {/* Benefits Section */}
-      <Section spacing="md" background="muted">
+      <Section spacing="sm" background="muted">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
@@ -222,7 +222,7 @@ export default function ToaNhaThongMinhPage() {
       </Section>
 
       {/* CTA Section */}
-      <Section spacing="md" background="gradient">
+      <Section spacing="sm" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <Card className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 p-12 lg:p-20 text-center border-none">

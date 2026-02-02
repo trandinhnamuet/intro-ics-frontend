@@ -186,7 +186,7 @@ function ArticlesListContent() {
         </div>
       </div>
 
-      <Section spacing="md" container={false}>
+      <Section spacing="sm" container={false}>
         <div className="container-responsive">
           {/* Featured Article */}
           {featuredArticle && (

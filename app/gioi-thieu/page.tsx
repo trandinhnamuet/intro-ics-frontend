@@ -102,7 +102,7 @@ export default function GioiThieuPage() {
       </div>
 
       {/* Video Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading 
@@ -140,7 +140,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Company Description */}
-      <Section spacing="md" background="muted">
+      <Section spacing="sm" background="muted">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
@@ -197,7 +197,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Core Values */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
@@ -227,7 +227,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Timeline */}
-      <Section spacing="md" background="muted">
+      <Section spacing="sm" background="muted">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
@@ -276,7 +276,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Team Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
@@ -360,7 +360,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* Solutions Preview */}
-      <Section spacing="md" background="gradient">
+      <Section spacing="sm" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <AnimatedHeading as="h2" centered className="p-3 mb-4 text-white">
@@ -447,7 +447,7 @@ export default function GioiThieuPage() {
       </Section>
 
       {/* CTA Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <Card className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-secondary p-12 lg:p-20 text-center">

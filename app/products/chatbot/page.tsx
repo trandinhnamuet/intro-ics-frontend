@@ -168,7 +168,7 @@ export default function ChatbotPage() {
       </div>
 
       {/* Section 2: Pain Points */}
-      <Section background="muted" spacing="md">
+      <Section background="muted" spacing="sm">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -239,7 +239,7 @@ export default function ChatbotPage() {
       </Section>
 
       {/* Section 3: Deep Dive Solutions */}
-      <Section background="gradient" spacing="md" data-section="features" id="features-section">
+      <Section background="gradient" spacing="sm" data-section="features" id="features-section">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -306,7 +306,7 @@ export default function ChatbotPage() {
       </Section>
 
       {/* Section 3.5: Featured - Automation Technology */}
-      <Section background="gradient" spacing="md">
+      <Section background="gradient" spacing="sm">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -367,7 +367,7 @@ export default function ChatbotPage() {
       </Section>
 
       {/* Section 4: Comparison Table */}
-      <Section background="default" spacing="md">
+      <Section background="default" spacing="sm">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -419,7 +419,7 @@ export default function ChatbotPage() {
       </Section>
 
       {/* Section 5: Use Cases */}
-      <Section background="gradient" spacing="md">
+      <Section background="gradient" spacing="sm">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -485,7 +485,7 @@ export default function ChatbotPage() {
       </Section>
 
       {/* Section 6: Security & Infrastructure */}
-      <Section background="muted" spacing="md">
+      <Section background="muted" spacing="sm">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -570,7 +570,7 @@ export default function ChatbotPage() {
       </Section>
 
       {/* Section 7: Deployment Steps */}
-      <Section background="default" spacing="md">
+      <Section background="default" spacing="sm">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -633,7 +633,7 @@ export default function ChatbotPage() {
       </Section>
 
       {/* Section 8: FAQs */}
-      <Section background="muted" spacing="md">
+      <Section background="muted" spacing="sm">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -698,7 +698,7 @@ export default function ChatbotPage() {
       </Section>
 
       {/* Final CTA Section */}
-      <Section background="gradient" spacing="md">
+      <Section background="gradient" spacing="sm">
         <div className="container-responsive text-center">
           <ScrollReveal direction="up">
             <h2 className="text-5xl font-bold mb-6 leading-tight">

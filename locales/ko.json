@@ -865,9 +865,9 @@
           {
             "title": "경보 과부하",
             "items": [
-              "시스템은 매일 수백만 개의 경보를 생성합니다",
-              "베트남만 해도: 하루 12,300+ 사이버 공격",
-              "전통적인 SOC는 높은 정확도로 수동 처리할 수 없습니다"
+              "하루에 10,000~11,000개의 경보, 대부분 오탐",
+              "베트남만 해도: 하루 1,512+ 사이버 공격",
+              "67%의 경보가 처리 불가로 무시됨"
             ]
           },
           {
@@ -875,22 +875,23 @@
             "items": [
               "매년 83+ APT 캠페인이 다음을 표적으로 합니다:",
               "은행-금융, 에너지-통신, 정부-대기업",
-              "해커들은 더 이상 빠르게 공격하지 않고 몇 주/몇 달 동안 숨습니다"
+              "2025년: 552,000건의 공격으로 52.3% 조직이 피해"
             ]
           },
           {
             "title": "SOC 인력 위기",
             "items": [
-              "고급 SOC 분석가의 심각한 부족",
-              "24/7 SOC 유지 비용 막대",
-              "번아웃-오류-느린 대응"
+              "52%의 SOC 팀이 과도한 업무 부담",
+              "24/7 SOC 유지 비용 막대: 연간 $3.5M USD",
+              "57%의 시간이 데이터 관리 부실로 낙비"
             ]
           },
           {
             "title": "받아들일 수 없는 대응 시간",
             "items": [
-              "전통적인 SOC: 며칠에서 몇 주",
-              "AI SOC: 몇 초에서 몇 분"
+              "전통적인 SOC: 며칠에서 몇 주(평균 277시간)",
+              "AI SOC: 몇 초에서 몇 분",
+              "30%의 보안 경보가 완전히 누락"
             ]
           }
         ],
@@ -937,6 +938,7 @@
         "badge": "획기적인 기술",
         "title": "주요 기능",
         "subtitle": "손끝에 있는 고급 기술",
+        "learnMoreCta": "자세히 알아보기",
         "items": [
           {
             "icon": "Target",
@@ -1001,6 +1003,32 @@
         "badge": "ICS를 선택하는 이유",
         "title": "왜 ICS를 선택하나요?",
         "subtitle": "기업과 파트너십을 맺는 사이버 보안 전문가",
+        "benefits": [
+          {
+            "title": "원하는 곳에 데이터 보관",
+            "metric": "100%",
+            "label": "데이터 민주주의",
+            "description": "Gurucul의 보안 분석 플랫폼은 데이터에 대한 완전한 제어, 비용 절감 및 벤더 종속을 피하기 위한 아키텍처 자유를 위해 100% 데이터 민주주의를 제공합니다."
+          },
+          {
+            "title": "더 적은 비용으로 더 많은 보안",
+            "metric": "40%",
+            "label": "데이터 비용 감소",
+            "description": "Gurucul의 사이버 보안 분석 플랫펼은 기본적으로 수집 비용을 40% 감소시키고 파이프라인 미세 조정 후 최대 87%까지 감소시키는 네이티브 DPM을 포함합니다."
+          },
+          {
+            "title": "실시간으로 위협에 적응",
+            "metric": "70%",
+            "label": "오탐 감소",
+            "description": "Gurucul의 사이버 보안 분석 플랫폼은 찾고 있는 것만 탐지하는 정적 규칙이 아닌 행동 분석을 탐지의 기반으로 사용하여 오탐을 70% 감소시킵니다. AI로 강화된 심각도별로 우선순위가 지정된 위험에 대한 완전한 컨텍스트를 얻습니다."
+          },
+          {
+            "title": "노이즈가 아닌 실제 위험에 집중",
+            "metric": "83%",
+            "label": "MTTR 감소",
+            "description": "Gurucul의 AI 기반 보안 분석 플랫펼은 단조로운 레벨 1 분류를 자동화하여 평균 응답 시간을 단축하고 분석가의 번아웃을 줄입니다."
+          }
+        ],
         "points": [
           {
             "icon": "DollarSign",
@@ -1032,10 +1060,10 @@
       },
       "roi": {"badge": "ROI & Impact"},
       "roiMetrics": [{"metric": "90%", "label": "SOC 팀 업무량 감소"}, {"metric": "70%", "label": "탐지 자동화"}, {"metric": "95%", "label": "더 빠른 사고 대응"}, {"metric": "$2.4M", "label": "데이터 유출 손실 감소"}],
-      "traditionalBlock": {"title": "전통적 SOC ≠ 충분한 보호", "line1": "베트남에서만 하루에 12,300+건의 공격이 발생하며, 수동 SOC는 현대적 위협의 복잡성을 따라갈 수 없습니다.", "line2": "AI SOC는 며칠이 아닌 초 단위로 탐지하고 대응합니다."},
+      "traditionalBlock": {"title": "전통적 SOC ≠ 충분한 보호", "line1": "베트남에서만 하루에 1,512+건의 공격이 발생하며, 수동 SOC는 현대적 위협의 복잡성을 따라갈 수 없습니다.", "line2": "AI SOC는 며칠이 아닌 초 단위로 탐지하고 대응합니다."},
       "architectureDetails": {"headline": "개방형, 클라우드 네이티브 및 초대규모", "description": "아키텍처 기능:", "platformLabel": "플랫폼", "items": [{"title": "무제한 스토리지", "desc": "로그를 무기한 저장, 페타바이트를 초 단위로 쿼리"}, {"title": "실시간 처리", "desc": "50억+ 이벤트/일을 1초 미만의 지연으로 처리"}, {"title": "450+ 통합", "desc": "모든 데이터 소스 연결: 클라우드, 온프레미스, SaaS, 네트워크, 엔드포인트"}, {"title": "자동 확장", "desc": "필요에 따라 자동 확장, 무제한 성장"}]},
       "proofPoint": {"title": "전 세계 50억 대의 기기 보호 - 입증된 기술", "description": "ICS AI SOC 플랫폼은 Google, Microsoft, Fortune 500 및 전 세계 수천 개 기업을 보호하는 기술을 기반으로 합니다."},
-      "componentsVisual": {"title": "AI SOC의 4대 기둥", "description": "각 구성요소는 중요한 역할을 담당하며 함께 작동하여 포괄적인 보안 에코시스템을 구축", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 무제한 스토리지와 분석 기능을 갖춘 하이퍼스케일 SIEM 플랫폼", "points": ["로그를 시간 제한 없이 무기한 저장", "페타바이트 규모를 초 단위로 쿼리", "AI 상관분석으로 오탐 70% 감소", "450+ 데이터 소스 통합 완료"]}, {"number": "02", "title": "UEBA 플랫폼", "description": "Gurucul UEBA - 4000+개의 ML 모델이 사용자 및 시스템 행동 분석", "points": ["탐지: 계정 침해, 내부 위협, 횡적 이동, 권한 상승", "서명 없는 탐지 기술"]}, {"number": "03", "title": "AI SOC 분석관", "description": "에이전틱 AI - L1 분석가 업무의 90% 대체, 24/7 무중단 운영", "points": ["자동 분류, 조사, 경고 상관분석", "완전한 사건 보고서 자동 생성 및 설명", "구체적인 개선 조치 제안", "피드백으로부터 학습하며 지속 개선"]}, {"number": "04", "title": "SOAR 자동화", "description": "오케스트레이션 & 대응 - 격리에서 복구까지 자동화 플레이북", "points": ["1000+개의 모든 시나리오용 사전 구축 플레이북", "엔드포인트 자동 격리, IP 차단, 토큰 해제", "EDR, 방화벽, IAM, 클라우드 보안 통합", "MTTR을 시간에서 분 단위로 단축"]}]},
+      "componentsVisual": {"title": "AI SOC의 4대 기둥", "description": "각 구성요소는 중요한 역할을 담당하며 함께 작동하여 포괄적인 보안 에코시스템을 구축", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 무제한 스토리지와 분석 기능을 갖춘 하이퍼스케일 SIEM 플랫폼", "points": ["로그를 시간 제한 없이 무기한 저장", "페타바이트 규모를 초 단위로 쿼리", "AI 상관분석으로 오탐 70% 감소", "450+ 데이터 소스 통합 완료"], "learnMoreUrl": "https://gurucul.com/products/next-gen-siem/"}, {"number": "02", "title": "UEBA 플랫폼", "description": "Gurucul UEBA - 4000+개의 ML 모델이 사용자 및 시스템 행동 분석", "points": ["탐지: 계정 침해, 내부 위협, 횡적 이동, 권한 상승", "서명 없는 탐지 기술"], "learnMoreUrl": "https://gurucul.com/products/user-and-entity-behavior-analytics-ueba/"}, {"number": "03", "title": "AI SOC 분석관", "description": "에이전틱 AI - L1 분석가 업무의 90% 대체, 24/7 무중단 운영", "points": ["자동 분류, 조사, 경고 상관분석", "완전한 사건 보고서 자동 생성 및 설명", "구체적인 개선 조치 제안", "피드백으로부터 학습하며 지속 개선"], "learnMoreUrl": "https://gurucul.com/products/ai-soc-analyst/"}, {"number": "04", "title": "SOAR 자동화", "description": "오케스트레이션 & 대응 - 격리에서 복구까지 자동화 플레이북", "points": ["1000+개의 모든 시나리오용 사전 구축 플레이북", "엔드포인트 자동 격리, IP 차단, 토큰 해제", "EDR, 방화벽, IAM, 클라우드 보안 통합", "MTTR을 시간에서 분 단위로 단축"], "learnMoreUrl": "https://gurucul.com/products/security-orchestration-automation-and-response-soar/"}]},
       "processSpeeds": {"instant": "실시간", "fast": "< 1초", "slow": "< 5초"},
       "roiDetails": {"cost": {"title": "비용 절감", "items": ["전통적 SOC 운영 비용의 60-70% 절감", "L1 분석가를 고용할 필요 없음 (AI가 반복 작업 처리)", "연간 평균 데이터 유출 손실 $2.4M 감소"]}, "performance": {"title": "뛰어난 성능", "items": ["수동 SOC보다 95% 더 빠른 대응", "APT 및 내부자 위협 탐지 누락 없음", "24/7 멈추지 않는 AI 커버리지"]}, "team": {"title": "팀 역량 강화", "items": ["SOC 팀을 L1 반복 작업에서 해방", "위협 사냥 및 전략에 집중", "번아웃 감소 및 직무 만족도 향상"]}},
       "resourceCard": {"title": "Gurucul 워크숍 워크스루", "description": "AI SOC가 실제로 어떻게 작동하는지에 대한 상세 가이드 - 수집에서 대응까지", "points": ["시스템 아키텍처", "라이브 데모", "구체적의 사용 사례", "ROI 계산기"], "cta": "무료 다운로드"},
@@ -1043,6 +1071,29 @@
         "badge": "Gartner 인증",
         "title": "Gurucul - Magic Quadrant 2025 Leader",
         "subtitle": "ICS의 AI SOC 플랫폼은 혁신성과 뛰어난 행동 분석으로 Gartner로부터 Leader로 선정된 Gurucul Next-Gen SIEM을 기반으로 합니다",
+        "gartnerImage": {
+          "title": "Gurucul 경쟁사 능가",
+          "description": "Gurucul은 2025년 Magic Quadrant에서 Leader로 평가되었습니다. 뛰어난 혁신 능력과 고급 AI/ML 행동 분석으로.",
+          "stats": [
+            {
+              "value": "리더",
+              "label": "Gartner Magic Quadrant 2025"
+            },
+            {
+              "value": "4000+",
+              "label": "ML 행동 분석 모델"
+            },
+            {
+              "value": "상위 3",
+              "label": "차세대 SIEM 부문"
+            },
+            {
+              "value": "50억+",
+              "label": "보호된 디바이스"
+            }
+          ],
+          "reportCta": "Gartner 순위 보고서에 대해 자세히 알아보기"
+        },
         "quote": "Gurucul은 SIEM에 대한 독점적 집중, 유연한 로드맵, 빠른 혁신 속도로 시장을 초월하는 혁신을 실현",
         "source": "Gartner Magic Quadrant for Security Information and Event Management, 2025",
         "strengths": [
@@ -1121,7 +1172,7 @@
       "traditionalVsAI": {
         "badge": "전통적 SOC vs AI SOC",
         "title": "전통적 SOC ≠ 충분한 보호인 이유",
-        "subtitle": "베트남에서 하루에 12,300+건의 공격. 수동 SOC는 따라갈 수 없음. AI SOC는 초 단위로 대응.",
+        "subtitle": "베트남에서 하루에 1,512+건의 공격. 수동 SOC는 따라갈 수 없음. AI SOC는 초 단위로 대응.",
         "comparison": {
           "title": "전통적 수동 SOC vs AI 기반 SOC",
           "traditional": "전통적 SOC",
@@ -1214,7 +1265,7 @@
         },
         "traditionalBlock": {
           "title": "전통적 SOC만으로는 부족",
-          "line1": "베트남에서만 하루 12,300건 이상의 공격. 수동 SOC는 현대 위협의 복잡성을 따라갈 수 없습니다.",
+          "line1": "베트남에서만 하루 1,512건 이상의 공격. 수동 SOC는 현대 위협의 복잡성을 따라갈 수 없습니다.",
           "line2": "AI SOC는 며칠이 아닌 몇 초 안에 감지하고 대응합니다."
         },
         "architectureDetails": {

@@ -915,9 +915,9 @@
           {
             "title": "Alert Overload",
             "items": [
-              "Systems generate millions of alerts daily",
-              "Vietnam alone: 12,300+ cyber attacks/day",
-              "Traditional SOC cannot handle manual processing with high accuracy"
+              "10,000–11,000 alerts per day, mostly false positives",
+              "1,512+ cyber attacks/day in Vietnam",
+              "67% of alerts ignored due to inability to process in time"
             ]
           },
           {
@@ -925,22 +925,23 @@
             "items": [
               "83+ APT campaigns annually targeting:",
               "Banking – Finance, Energy – Telecommunications, Government – Large enterprises",
-              "Hackers no longer strike fast; they hide for weeks/months"
+              "Year 2025: 552,000 attacks with 52.3% of organizations affected"
             ]
           },
           {
             "title": "SOC Staffing Crisis",
             "items": [
-              "Critical shortage of senior SOC analysts",
-              "Massive cost to maintain 24/7 SOC",
-              "Burnout – errors – slow response"
+              "52% of SOC teams are overworked",
+              "Massive cost to maintain 24/7 SOC: $3.5M USD/year",
+              "57% of time wasted due to poor data management"
             ]
           },
           {
             "title": "Unacceptable Response Time",
             "items": [
-              "Traditional SOC: days to weeks",
-              "AI SOC: seconds to minutes"
+              "Traditional SOC: days to weeks (277 hours avg)",
+              "AI SOC: seconds to minutes",
+              "30% of security alerts completely missed"
             ]
           }
         ],
@@ -987,6 +988,7 @@
         "badge": "Breakthrough Technology",
         "title": "Key Features",
         "subtitle": "Advanced technology at your fingertips",
+        "learnMoreCta": "Learn More",
         "items": [
           {
             "icon": "Target",
@@ -1051,6 +1053,32 @@
         "badge": "Why Choose ICS",
         "title": "Why Choose ICS?",
         "subtitle": "Cybersecurity experts partnering with enterprises",
+        "benefits": [
+          {
+            "title": "Keep data where you want",
+            "metric": "100%",
+            "label": "DATA DEMOCRACY",
+            "description": "Gurucul's security analytics platform offers 100% data democracy for complete control over your data, cost savings and architectural freedom to avoid lock-in."
+          },
+          {
+            "title": "Spend less to secure more",
+            "metric": "40%",
+            "label": "DATA COST REDUCTION",
+            "description": "Gurucul's cyber security analytics platform includes a native DPM that reduces ingestion costs by 40% out of the box and up to 87% after fine tuning pipelines."
+          },
+          {
+            "title": "Adapt to threats in real time",
+            "metric": "70%",
+            "label": "LESS FALSE POSITIVES",
+            "description": "Gurucul's cyber security analytics platform reduces false positives by 70% using behavioral analytics as the backbone for detection, not static rules that only detect what you are looking for. Get complete context about risk, prioritized by severity and enriched with AI."
+          },
+          {
+            "title": "Focus on real risks, not noise",
+            "metric": "83%",
+            "label": "LESS MTTR",
+            "description": "Gurucul's AI driven security analytics platform automates mundane level 1 triage, accelerating mean time to respond and reduces analyst burnout."
+          }
+        ],
         "points": [
           {
             "icon": "DollarSign",
@@ -1082,10 +1110,10 @@
       },
       "roi": {"badge": "ROI & Impact"},
       "roiMetrics": [{"metric": "90%", "label": "Reduce SOC team workload"}, {"metric": "70%", "label": "Automate detection"}, {"metric": "95%", "label": "Faster incident response"}, {"metric": "$2.4M", "label": "Reduce data breach losses"}],
-      "traditionalBlock": {"title": "Traditional SOC ≠ Sufficient Protection", "line1": "With 12,300+ attacks/day in Vietnam alone, manual SOC cannot keep pace with modern threat complexity.", "line2": "AI SOC detects & responds in seconds, not days."},
+      "traditionalBlock": {"title": "Traditional SOC ≠ Sufficient Protection", "line1": "With 1,512+ attacks/day in Vietnam alone in 2025, manual SOC cannot keep pace with modern threat complexity.", "line2": "AI SOC detects & responds in seconds, not days."},
       "architectureDetails": {"headline": "Open, Cloud-Native & Hyperscale", "description": "Architecture capabilities:", "platformLabel": "Platform", "items": [{"title": "Unlimited Storage", "desc": "Store logs indefinitely, query petabytes in seconds"}, {"title": "Real-time Processing", "desc": "Process 50+ billion events/day with <1 second latency"}, {"title": "450+ Integrations", "desc": "Connect any data source: Cloud, On-prem, SaaS, Network, Endpoint"}, {"title": "Auto-scaling", "desc": "Automatically scale based on demand, unlimited growth"}]},
       "proofPoint": {"title": "5 billion devices protected globally - Proven Technology", "description": "ICS AI SOC platform based on technology protecting Google, Microsoft, Fortune 500, and thousands of enterprises worldwide."},
-      "componentsVisual": {"title": "4 Pillars of AI SOC", "description": "Each component plays a critical role, working together to create a comprehensive security ecosystem", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - Hyperscale SIEM platform with unlimited storage and analysis capabilities", "points": ["Store logs indefinitely without time limits", "Query petabytes in seconds with lightning speed", "Reduce 70% false positives with AI correlation", "Integrate 450+ data sources ready"]}, {"number": "02", "title": "UEBA Platform", "description": "Gurucul UEBA - 4000+ ML models analyze user & system behavior", "points": ["Detect: Account compromise, Insider threat, Lateral Movement, Privilege Escalation", "Signature-less detection technology"]}, {"number": "03", "title": "AI SOC Analyst", "description": "Agentic AI - Replace 90% of L1 Analyst work, operates 24/7 without breaks", "points": ["Auto triage, investigate, and correlate alerts", "Generate complete incident reports with explanations", "Suggest specific remediation actions", "Learn from feedback and improve continuously"]}, {"number": "04", "title": "SOAR Automation", "description": "Orchestration & Response - Auto-response playbooks from containment to recovery", "points": ["1000+ pre-built playbooks for any scenario", "Auto isolate endpoints, block IPs, revoke tokens", "Integrate with EDR, Firewall, IAM, Cloud Security", "Reduce MTTR from hours to minutes"]}]},
+      "componentsVisual": {"title": "4 Pillars of AI SOC", "description": "Each component plays a critical role, working together to create a comprehensive security ecosystem", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - Hyperscale SIEM platform with unlimited storage and analysis capabilities", "points": ["Store logs indefinitely without time limits", "Query petabytes in seconds with lightning speed", "Reduce 70% false positives with AI correlation", "Integrate 450+ data sources ready"], "learnMoreUrl": "https://gurucul.com/products/next-gen-siem/"}, {"number": "02", "title": "UEBA Platform", "description": "Gurucul UEBA - 4000+ ML models analyze user & system behavior", "points": ["Detect: Account compromise, Insider threat, Lateral Movement, Privilege Escalation", "Signature-less detection technology"], "learnMoreUrl": "https://gurucul.com/products/user-and-entity-behavior-analytics-ueba/"}, {"number": "03", "title": "AI SOC Analyst", "description": "Agentic AI - Replace 90% of L1 Analyst work, operates 24/7 without breaks", "points": ["Auto triage, investigate, and correlate alerts", "Generate complete incident reports with explanations", "Suggest specific remediation actions", "Learn from feedback and improve continuously"], "learnMoreUrl": "https://gurucul.com/products/ai-soc-analyst/"}, {"number": "04", "title": "SOAR Automation", "description": "Orchestration & Response - Auto-response playbooks from containment to recovery", "points": ["1000+ pre-built playbooks for any scenario", "Auto isolate endpoints, block IPs, revoke tokens", "Integrate with EDR, Firewall, IAM, Cloud Security", "Reduce MTTR from hours to minutes"], "learnMoreUrl": "https://gurucul.com/products/security-orchestration-automation-and-response-soar/"}]},
       "processSpeeds": {"instant": "Real-time", "fast": "< 1 second", "slow": "< 5 seconds"},
       "roiDetails": {"cost": {"title": "Cost Savings", "items": ["Reduce 60-70% of traditional SOC operational costs", "No need to hire L1 Analysts (AI handles repetitive work)", "Reduce average data breach losses by $2.4M/year"]}, "performance": {"title": "Superior Performance", "items": ["95% faster response than manual SOC", "Detect APT and insider threats without missing", "24/7 AI coverage that never stops"]}, "team": {"title": "Empower Your Team", "items": ["Free SOC team from L1 repetitive tasks", "Focus on threat hunting & strategy", "Reduce burnout and increase job satisfaction"]}},
       "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "Detailed guide on how AI SOC works in practice - from ingestion to response", "points": ["System architecture", "Live demo", "Specific use cases", "ROI calculator"], "cta": "Download free"},
@@ -1093,6 +1121,29 @@
         "badge": "Recognized by Gartner",
         "title": "Gurucul - Leader in Magic Quadrant 2025",
         "subtitle": "ICS's AI SOC platform is built on Gurucul Next-Gen SIEM, ranked as a Leader by Gartner for innovation and superior behavioral analytics",
+        "gartnerImage": {
+          "title": "Gurucul Exceeds vs Competitors",
+          "description": "Gurucul is ranked as a Leader by Gartner in the Magic Quadrant 2025 for superior innovation capability and advanced AI/ML behavioral analytics.",
+          "stats": [
+            {
+              "value": "Leader",
+              "label": "Gartner Magic Quadrant 2025"
+            },
+            {
+              "value": "4000+",
+              "label": "Behavioral ML Models"
+            },
+            {
+              "value": "Top 3",
+              "label": "In Next-Gen SIEM segment"
+            },
+            {
+              "value": "5B+",
+              "label": "Protected Devices"
+            }
+          ],
+          "reportCta": "Learn more about Gartner's ranking report"
+        },
         "quote": "Gurucul exceeds the market in innovation with exclusive focus on SIEM, flexible roadmap, and rapid innovation pace",
         "source": "Gartner Magic Quadrant for Security Information and Event Management, 2025",
         "strengths": [
@@ -1171,7 +1222,7 @@
       "traditionalVsAI": {
         "badge": "Traditional SOC vs AI SOC",
         "title": "Why Traditional SOC ≠ Sufficient Protection",
-        "subtitle": "12,300+ attacks/day in Vietnam. Manual SOC cannot keep up. AI SOC responds in seconds.",
+        "subtitle": "1,512+ attacks/day in Vietnam. Manual SOC cannot keep up. AI SOC responds in seconds.",
         "comparison": {
           "title": "Traditional Manual SOC vs AI-Powered SOC",
           "traditional": "Traditional SOC",
@@ -1264,7 +1315,7 @@
         },
         "traditionalBlock": {
           "title": "Traditional SOC ≠ Sufficient Protection",
-          "line1": "With 12,300+ attacks/day in Vietnam alone, manual SOC cannot keep pace with modern threat complexity.",
+          "line1": "With 1,512+ attacks/day in Vietnam alone, manual SOC cannot keep pace with modern threat complexity.",
           "line2": "AI SOC detects and responds in seconds, not days."
         },
         "architectureDetails": {

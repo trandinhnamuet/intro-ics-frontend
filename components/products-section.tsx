@@ -78,7 +78,7 @@ export function ProductsSection() {
   const displayedProducts = showAll ? products : products.slice(0, 3)
 
   return (
-    <Section background="gradient" spacing="md">
+    <Section background="gradient" spacing="sm">
       <AnimatedHeading underline>
         {t('home.products.title')}
       </AnimatedHeading>

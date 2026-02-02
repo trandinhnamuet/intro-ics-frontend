@@ -954,7 +954,7 @@
       },
       "traditionalBlock": {
         "title": "传统 SOC ≠ 足够的防护",
-        "line1": "仅在越南每天就有 12,300+ 攻击，手工 SOC 无法跟上现代威胁。",
+        "line1": "仅在越南每天就有 1,512+ 攻击，手工 SOC 无法跟上现代威胁。",
         "line2": "AI SOC 在数秒内检测和响应，而不是数天。"
       },
       "architectureDetails": {
@@ -1536,9 +1536,9 @@
           {
             "title": "警报过载",
             "items": [
-              "系统每天生成数百万警报",
-              "仅越南：12,300+次网络攻击/天",
-              "传统SOC无法高精度手动处理"
+              "每天有10,000–11,000条警报，大多数是误报",
+              "仅越南：每天1,512+次网络攻击",
+              "67%的警报因无法及时处理而被忽视"
             ]
           },
           {
@@ -1546,22 +1546,23 @@
             "items": [
               "每年83+个APT活动针对：",
               "银行-金融、能源-电信、政府-大型企业",
-              "黑客不再快速打击；他们潜伏数周/月"
+              "2025年：552,000次攻击，52.3%的组织受影响"
             ]
           },
           {
             "title": "SOC人员危机",
             "items": [
-              "严重缺乏高级SOC分析师",
-              "维护24/7 SOC的巨大成本",
-              "倦怠-错误-响应缓慢"
+              "52%的SOC团队过度工作",
+              "24/7 SOC维护成本巨大：每年350万美元",
+              "57%的时间因数据管理不善而浪费"
             ]
           },
           {
             "title": "不可接受的响应时间",
             "items": [
-              "传统SOC：几天到几周",
-              "AI SOC：几秒到几分钟"
+              "传统SOC：数天到数周（平均277小时）",
+              "AI SOC：数秒到数分",
+              "30%的安全警报被完全遗漏"
             ]
           }
         ],
@@ -1608,6 +1609,7 @@
         "badge": "突破性技术",
         "title": "关键功能",
         "subtitle": "先进技术触手可及",
+        "learnMoreCta": "了解更多",
         "items": [
           {
             "icon": "Target",
@@ -1672,6 +1674,32 @@
         "badge": "选择ICS的理由",
         "title": "为什么选择ICS？",
         "subtitle": "与企业合作的网络安全专家",
+        "benefits": [
+          {
+            "title": "在您想要的地方保存数据",
+            "metric": "100%",
+            "label": "数据民主",
+            "description": "Gurucul的安全分析平台提供100%的数据民主，完全控制您的数据，节省成本，并提供架构自由以避免供应商锁定。"
+          },
+          {
+            "title": "花更少的钱实现更多安全",
+            "metric": "40%",
+            "label": "数据成本降低",
+            "description": "Gurucul的网络安全分析平台包含原生DPM，可立即将接入成本降低40%，微调管道后最高可降低87%。"
+          },
+          {
+            "title": "实时适应威胁",
+            "metric": "70%",
+            "label": "误报减少",
+            "description": "Gurucul的网络安全分析平台使用行为分析作为检测的骨干，而不是只检测您正在寻找的静态规则，将误报减少了70%。获取关于风险的完整上下文，按严重程度优先排序，并通过AI增强。"
+          },
+          {
+            "title": "专注于真实风险，而非噪音",
+            "metric": "83%",
+            "label": "MTTR减少",
+            "description": "Gurucul的AI驱动安全分析平台自动化了普通的1级分类，加快了平均响应时间，减少了分析师的疲惫。"
+          }
+        ],
         "points": [
           {
             "icon": "DollarSign",
@@ -1703,10 +1731,10 @@
       },
       "roi": {"badge": "ROI & Impact"},
       "roiMetrics": [{"metric": "90%", "label": "降低 SOC 团队工作量"}, {"metric": "70%", "label": "自动化检测"}, {"metric": "95%", "label": "更快的事件响应"}, {"metric": "$2.4M", "label": "减少数据泄露损失"}],
-      "traditionalBlock": {"title": "传统 SOC ≠ 充分保护", "line1": "仅在越南每天就有 12,300+ 攻击，手工 SOC 无法跟上现代威胁的复杂性。", "line2": "AI SOC 在数秒内检测和响应，而不是数天。"},
+      "traditionalBlock": {"title": "传统 SOC ≠ 充分保护", "line1": "仅在越南每天就有 1,512+ 攻击，手工 SOC 无法跟上现代威胁的复杂性。", "line2": "AI SOC 在数秒内检测和响应，而不是数天。"},
       "architectureDetails": {"headline": "开放、云原生、超大规模", "description": "架构能力：", "platformLabel": "平台", "items": [{"title": "无限存储", "desc": "日志无限期保存，秒级查询 PB 级数据"}, {"title": "实时处理", "desc": "每天处理 500 亿+ 事件，延迟 < 1 秒"}, {"title": "450+ 集成", "desc": "连接任何数据源：云、本地、SaaS、网络、端点"}, {"title": "自动扩展", "desc": "根据需求自动伸缩"}]},
       "proofPoint": {"title": "全球 50 亿设备受保护的验证技术", "description": "ICS AI SOC 平台基于保护 Google、Microsoft、财富 500 强和全球数千家企业的技术。"},
-      "componentsVisual": {"title": "AI SOC 四大基石", "description": "各组件发挥关键作用，协同运作构建完整安全生态", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 具有无限存储和分析能力的超大规模 SIEM 平台", "points": ["日志无限期保存，无时间限制", "秒级查询 PB 级数据", "AI 关联分析减少 70% 误报", "450+ 数据源集成完毕"]}, {"number": "02", "title": "UEBA 平台", "description": "Gurucul UEBA - 4000+ ML 模型分析用户及系统行为", "points": ["检测：账户被盗、内部威胁、横向移动、权限提升", "无签名检测技术"]}, {"number": "03", "title": "AI SOC 分析师", "description": "智能 AI 代理 - 代替 L1 分析师 90% 的工作，24/7 无中断运行", "points": ["自动分类、调查、告警关联", "自动生成完整事件报告并解释", "建议具体的修复行动", "从反馈学习并持续改进"]}, {"number": "04", "title": "SOAR 自动化", "description": "编排与响应 - 从隔离到恢复的自动化剧本", "points": ["1000+ 预构建剧本覆盖各类场景", "自动隔离端点、封禁 IP、撤销令牌", "集成 EDR、防火墙、IAM、云安全", "将 MTTR 从小时级降至分钟级"]}]},
+      "componentsVisual": {"title": "AI SOC 四大基石", "description": "各组件发挥关键作用，协同运作构建完整安全生态", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 具有无限存储和分析能力的超大规模 SIEM 平台", "points": ["日志无限期保存，无时间限制", "秒级查询 PB 级数据", "AI 关联分析减少 70% 误报", "450+ 数据源集成完毕"], "learnMoreUrl": "https://gurucul.com/products/next-gen-siem/"}, {"number": "02", "title": "UEBA 平台", "description": "Gurucul UEBA - 4000+ ML 模型分析用户及系统行为", "points": ["检测：账户被盗、内部威胁、横向移动、权限提升", "无签名检测技术"], "learnMoreUrl": "https://gurucul.com/products/user-and-entity-behavior-analytics-ueba/"}, {"number": "03", "title": "AI SOC 分析师", "description": "智能 AI 代理 - 代替 L1 分析师 90% 的工作，24/7 无中断运行", "points": ["自动分类、调查、告警关联", "自动生成完整事件报告并解释", "建议具体的修复行动", "从反馈学习并持续改进"], "learnMoreUrl": "https://gurucul.com/products/ai-soc-analyst/"}, {"number": "04", "title": "SOAR 自动化", "description": "编排与响应 - 从隔离到恢复的自动化剧本", "points": ["1000+ 预构建剧本覆盖各类场景", "自动隔离端点、封禁 IP、撤销令牌", "集成 EDR、防火墙、IAM、云安全", "将 MTTR 从小时级降至分钟级"], "learnMoreUrl": "https://gurucul.com/products/security-orchestration-automation-and-response-soar/"}]},
       "processSpeeds": {"instant": "实时", "fast": "< 1 秒", "slow": "< 5 秒"},
       "roiDetails": {"cost": {"title": "成本节省", "items": ["相比传统 SOC 节省 60-70% 运营成本", "无需再招聘 L1 分析师（AI 处理重复工作）", "每年减少约 $2.4M 数据泄露损失"]}, "performance": {"title": "卓越性能", "items": ["比手工 SOC 快 95%", "检测 APT 与内部威胁不遗漏", "AI 24/7 全天候覆盖"]}, "team": {"title": "团队赋能", "items": ["让 SOC 团队摆脱重复 L1 任务", "专注威胁狩猎与战略", "降低倦怠并提升满意度"]}},
       "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "详解 AI SOC 从接入到响应的实际运作", "points": ["系统架构", "现场演示", "具体用例", "ROI 计算器"], "cta": "免费下载"},
@@ -1714,6 +1742,29 @@
         "badge": "Gartner 认可",
         "title": "Gurucul - Magic Quadrant 2025 领导者",
         "subtitle": "ICS 的 AI SOC 平台基于 Gurucul Next-Gen SIEM 构建，因创新和卓越的行为分析被 Gartner 评为领导者",
+        "gartnerImage": {
+          "title": "Gurucul 超越竞争对手",
+          "description": "Gurucul 在 2025 年 Magic Quadrant 中被评为领导者。凭借卓越的创新能力和先进的 AI/ML 行为分析。",
+          "stats": [
+            {
+              "value": "领导者",
+              "label": "Gartner Magic Quadrant 2025"
+            },
+            {
+              "value": "4000+",
+              "label": "ML 行为分析模型"
+            },
+            {
+              "value": "前 3 名",
+              "label": "在下一代 SIEM 领域"
+            },
+            {
+              "value": "50 亿+",
+              "label": "受保护的设备"
+            }
+          ],
+          "reportCta": "了解更多Gartner排名报告"
+        },
         "quote": "Gurucul 凭借对 SIEM 的独家专注、灵活的路线图和快速的创新步伐，在创新方面超越市场",
         "source": "Gartner Magic Quadrant for Security Information and Event Management, 2025",
         "strengths": [
@@ -1792,7 +1843,7 @@
       "traditionalVsAI": {
         "badge": "传统SOC vs AI SOC",
         "title": "为什么传统SOC ≠ 充分保护",
-        "subtitle": "越南每天12,300+次攻击。手动SOC跟不上。AI SOC在几秒内做出响应。",
+        "subtitle": "越南每天1,512+次攻击。手动SOC跟不上。AI SOC在几秒内做出响应。",
         "comparison": {
           "title": "传统手动SOC vs AI驱动的SOC",
           "traditional": "传统SOC",

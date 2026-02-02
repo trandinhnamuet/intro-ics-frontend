@@ -362,7 +362,7 @@ export default function VietguardPage() {
       </div>
 
       {/* Shield Interactive Section - Why Trust VietGuard */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-10">
@@ -721,7 +721,7 @@ export default function VietguardPage() {
       </Section>
 
       {/* Activation & Deployment Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-8">
@@ -782,7 +782,7 @@ export default function VietguardPage() {
       </Section>
 
       {/* Multi-Platform Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-10">
@@ -818,7 +818,7 @@ export default function VietguardPage() {
       </Section>
 
       {/* Why Choose VietGuard Section */}
-      <Section spacing="md" background="default">
+      <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-10">
@@ -876,7 +876,7 @@ export default function VietguardPage() {
       </Section>
 
       {/* Final CTA Section */}
-      <Section spacing="md" background="gradient">
+      <Section spacing="sm" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <Card className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 p-10 lg:p-16 text-center border-none">
