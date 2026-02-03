@@ -988,28 +988,28 @@
         "subtitle": "Chuyên gia an ninh mạng đồng hành cùng doanh nghiệp Việt",
         "benefits": [
           {
-            "title": "Giữ dữ liệu nơi bạn muốn",
+            "title": "Lưu dữ liệu nơi bạn muốn",
             "metric": "100%",
-            "label": "QUYỀN DỰ LIỆU",
-            "description": "Nền tảng phân tích bảo mật của Gurucul cung cấp 100% quyền kiểm soát dữ liệu, tiết kiệm chi phí và tự do kiến trúc để tránh bị khóa chặt với nhà cung cấp."
+            "label": "DÂN CHỦ HÓA DỰ LIỆU",
+            "description": "Thoát khỏi sự phụ thuộc vào nhà cung cấp, tự chủ kiểm soát dữ liệu của bạn và tăng cường khả năng hiển thị dữ liệu. Chọn kiến ​​trúc kho dữ liệu (data lake) phù hợp với nhu cầu phát triển của bạn. Thu thập và tìm kiếm dữ liệu từ bất kỳ dữ liệu nào, bất kể vị trí."
           },
           {
-            "title": "Chi ít hơn để bảo vệ nhiều hơn",
+            "title": "Chi phí thấp nhưng bảo mật hơn",
             "metric": "40%",
             "label": "GIẢM CHI PHÍ DỮ LIỆU",
-            "description": "Nền tảng phân tích bảo mật mạng của Gurucul bao gồm DPM tích hợp sẵn giảm 40% chi phí ingestion ngay từ đầu và lên đến 87% sau khi điều chỉnh pipeline."
+            "description": "Có khả năng phân tích dữ liệu quan trọng mà không làm tăng chi phí với các đường dẫn dữ liệu thông minh (data pipeline), được xây dựng để tối ưu hóa chi phí và thúc đẩy phân tích bảo mật nâng cao."
           },
           {
-            "title": "Thích ứng với mối đe dọa theo thời gian thực",
+            "title": "Thích ứng với các mối đe dọa theo thời gian thực",
             "metric": "70%",
-            "label": "GIẢM SỰ CẢNH BÁO GIẢ",
-            "description": "Nền tảng phân tích bảo mật mạng của Gurucul giảm 70% false positive bằng cách sử dụng phân tích hành vi làm xương sống cho việc phát hiện, thay vì quy tắc tĩnh chỉ phát hiện những gì bạn tìm kiếm. Nhận được bối cảnh đầy đủ về rủi ro, ưu tiên theo mức độ nghiêm trọng và được làm giàu bởi AI."
+            "label": "GIẢM CẢNH BÁO GIẢ",
+            "description": "Giảm tỷ lệ cảnh báo sai lên đến 70% với phân tích dựa trên hành vi tiên tiến và phát hiện chủ động bằng trí tuệ nhân tạo (AI) liên tục thích ứng với các mối đe dọa mới và chưa biết từ bên ngoài, trong nội bộ và dựa trên danh tính (identity-based threats)."
           },
           {
-            "title": "Tập trung vào rủi ro thực, không phải tiếng ồn",
+            "title": "Tập trung vào các mối đe dọa, không bị xao nhãng",
             "metric": "83%",
-            "label": "GIẢM MTTR",
-            "description": "Nền tảng phân tích bảo mật điều khiển bởi AI của Gurucul tự động hóa công việc tầm thường cấp độ 1, tăng tốc thời gian phản hồi trung bình và giảm sự kiệt sức của nhà phân tích."
+            "label": "GIẢM THỜI GIAN MEAN TIME TO RESPONSE (MTTR)",
+            "description": "Giảm thời gian điều tra lên đến 58% bằng cách trang bị cho các nhóm một đội ngũ AI Agent nội bộ và một chuyên viên AI SOC Analyst hoạt động tự động, 24/7/365, để phân loại cảnh báo dựa trên dữ liệu ngữ cảnh và sau đó chuyển tiếp các mối đe dọa."
           }
         ],
         "points": [
