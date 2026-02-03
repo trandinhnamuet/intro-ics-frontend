@@ -33,7 +33,7 @@ const products = [
     nameKey: "csaDlp",
     descriptionKey: "csaDlpDesc",
     image: "https://www.cisco.com/content/dam/cisco-cdc/site/images/photography/homepage/2025/cisco-unified-edge-hardware-768x576.jpg",
-    link: "/products/csa-dlp",
+    link: "https://csa.icss.com.vn/",
     icon: Shield,
     color: "from-purple-500 to-pink-500",
   },

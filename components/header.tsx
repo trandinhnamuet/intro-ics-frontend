@@ -236,7 +236,7 @@ export function Header() {
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.aiSoc')}</div>
                     </Link>
                     <Link
-                      href="https://landing-csa.vercel.app/"
+                      href="https://csa.icss.com.vn/"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">CSA-Endpoint</div>
@@ -455,7 +455,7 @@ export function Header() {
                       <div className="font-medium">AI SOC</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.aiSoc')}</div>
                     </Link>
-                    <Link href="https://landing-csa.vercel.app/" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="https://csa.icss.com.vn/" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       <div className="font-medium">CSA-Endpoint</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.csaDlp')}</div>
                     </Link>

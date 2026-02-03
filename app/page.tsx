@@ -155,7 +155,7 @@ export default function Page() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 auto-rows-max">
               {featuredSolutions.map((solution, idx) => {
-                const solutionLinks = ['/products/csa-dlp', '/nha-may-thong-minh', '/toa-nha-thong-minh']
+                const solutionLinks = ['https://csa.icss.com.vn/', '/nha-may-thong-minh', '/toa-nha-thong-minh']
                 return (
                   <ScrollReveal key={idx} direction="up" delay={idx * 100}>
                     <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 h-full flex flex-col">

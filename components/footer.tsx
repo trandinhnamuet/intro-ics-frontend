@@ -79,7 +79,7 @@ export function Footer() {
                 { href: "/products/chatbot", label: "V AI - Agent", external: false },
                 { href: "/products/vietguard", label: "VietGuard", external: false },
                 { href: "/products/ai-soc", label: "AI SOC", external: false },
-                { href: "https://landing-csa.vercel.app/", label: "CSA-Endpoint", external: true },
+                { href: "https://csa.icss.com.vn/", label: "CSA-Endpoint", external: true },
                 { href: "/products/pentest-services", label: "Pentest Services", external: false },
                 { href: "https://oraclecloud.vn/", label: "Oracle Cloud", external: true },
                 { href: "https://smartdashboard.vn/", label: "Smart Dashboard", external: true },
