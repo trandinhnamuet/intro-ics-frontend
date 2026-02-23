@@ -642,3 +642,20 @@
 .animation-delay-1000 {
   animation-delay: 1000ms;
 }
+
+/* ── Security Alert Ticker animations ──────────────────────── */
+@keyframes sec-countdown {
+  from { width: 0% }
+  to   { width: 100% }
+}
+@keyframes sec-scan {
+  from { transform: translateY(-100%) }
+  to   { transform: translateY(2000%) }
+}
+
+.sec-alert-countdown {
+  animation: sec-countdown 5s linear forwards;
+}
+.sec-alert-scan {
+  animation: sec-scan 4s linear infinite;
+}

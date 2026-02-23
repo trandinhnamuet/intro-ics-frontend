@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTranslation } from 'react-i18next'
 import { cn } from "@/lib/utils"
+import { SecurityAlertTicker } from "@/components/security-alert-ticker"
 
 const slides = [
   {
@@ -151,6 +152,9 @@ export function HeroSlider() {
           </div>
         </div>
       ))}
+
+      {/* Security Alert Ticker - right side */}
+      <SecurityAlertTicker />
 
       {/* Navigation Buttons */}
       <button
