@@ -165,7 +165,7 @@ export function SecurityAlertTicker() {
 
   return (
     <div
-      className="absolute right-6 lg:right-12 xl:right-20 top-1/2 -translate-y-1/2 z-30 w-[340px] lg:w-[380px] xl:w-[420px] hidden lg:block"
+      className="absolute right-3 md:right-6 lg:right-12 xl:right-20 top-1/2 -translate-y-1/2 z-30 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[380px] xl:w-[420px]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -191,7 +191,7 @@ export function SecurityAlertTicker() {
         </div>
 
         {/* Content */}
-        <div className="relative p-5">
+        <div className="relative p-3 sm:p-4 lg:p-5">
           {/* Header */}
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
@@ -199,21 +199,24 @@ export function SecurityAlertTicker() {
                 <div className={cn("w-2.5 h-2.5 rounded-full animate-ping absolute", sev.pulse, "opacity-75")} />
                 <div className={cn("w-2.5 h-2.5 rounded-full", sev.pulse)} />
               </div>
-              <span className="text-white/60 text-xs font-mono uppercase tracking-widest">Cảnh báo bảo mật</span>
+              <span className="text-white/60 text-[10px] sm:text-xs font-mono uppercase tracking-widest">Cảnh báo bảo mật</span>
+              {current === 0 && (
+                <span className="ml-1 px-1.5 py-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-[8px] sm:text-[9px] font-bold rounded animate-pulse uppercase">NEW</span>
+              )}
             </div>
-            <div className={cn("flex items-center gap-1.5 px-2.5 py-1 rounded-full text-white text-xs font-bold", sev.badge)}>
+            <div className={cn("flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-white text-[10px] sm:text-xs font-bold", sev.badge)}>
               {sev.icon}
-              {sev.label}
+              <span className="hidden sm:inline">{sev.label}</span>
             </div>
           </div>
 
           {/* Date + Source */}
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-white/50 text-xs font-mono">{formatAlertDate(alert.alert_date)}</span>
+            <span className="text-white/50 text-[10px] sm:text-xs font-mono">{formatAlertDate(alert.alert_date)}</span>
             {alert.source && (
               <>
                 <span className="text-white/20">|</span>
-                <span className="text-white/50 text-xs truncate">{alert.source}</span>
+                <span className="text-white/50 text-[10px] sm:text-xs truncate">{alert.source}</span>
               </>
             )}
           </div>
@@ -230,22 +233,22 @@ export function SecurityAlertTicker() {
             )}
           >
             {/* Title */}
-            <h3 className="text-white font-bold text-sm leading-snug mb-3 line-clamp-2">
+            <h3 className="text-white font-bold text-xs sm:text-sm leading-snug mb-2 sm:mb-3 line-clamp-2">
               {alert.title}
             </h3>
 
             {/* Summary */}
-            <p className="text-white/75 text-xs leading-relaxed line-clamp-4 mb-3">
+            <p className="text-white/75 text-[10px] sm:text-xs leading-relaxed line-clamp-3 sm:line-clamp-4 mb-2 sm:mb-3">
               {alert.summary}
             </p>
 
             {/* CVE chips */}
             {alert.cve_ids && (
-              <div className="flex flex-wrap gap-1.5 mb-3">
+              <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-2 sm:mb-3">
                 {alert.cve_ids.split(",").map((cve) => (
                   <span
                     key={cve.trim()}
-                    className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-white/10 text-white/80 border border-white/15"
+                    className="px-1.5 sm:px-2 py-0.5 rounded text-[9px] sm:text-[10px] font-mono font-semibold bg-white/10 text-white/80 border border-white/15"
                   >
                     {cve.trim()}
                   </span>
@@ -255,15 +258,15 @@ export function SecurityAlertTicker() {
 
             {/* Affected systems */}
             {alert.affected_systems && (
-              <div className="flex items-start gap-2 p-2 rounded-lg bg-white/5 border border-white/10 mb-3">
-                <span className="text-white/40 text-[10px] font-medium shrink-0 mt-0.5">Ảnh hưởng:</span>
-                <span className="text-white/65 text-[10px] leading-relaxed">{alert.affected_systems}</span>
+              <div className="flex items-start gap-1.5 sm:gap-2 p-1.5 sm:p-2 rounded-lg bg-white/5 border border-white/10 mb-2 sm:mb-3">
+                <span className="text-white/40 text-[9px] sm:text-[10px] font-medium shrink-0 mt-0.5">Ảnh hưởng:</span>
+                <span className="text-white/65 text-[9px] sm:text-[10px] leading-relaxed">{alert.affected_systems}</span>
               </div>
             )}
 
             {/* Recommendation pill */}
             {alert.recommendation && (
-              <div className={cn("px-3 py-2 rounded-lg text-[10px] text-white/90 font-medium bg-gradient-to-r opacity-90", sev.color)}>
+              <div className={cn("px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg text-[9px] sm:text-[10px] text-white/90 font-medium bg-gradient-to-r opacity-90", sev.color)}>
                 ⚡ {alert.recommendation}
               </div>
             )}
@@ -271,39 +274,39 @@ export function SecurityAlertTicker() {
 
           {/* Controls */}
           {alerts.length > 1 && (
-            <div className="flex items-center justify-between mt-4 pt-3 border-t border-white/10">
+            <div className="flex items-center justify-between mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-white/10">
               {/* Dots */}
-              <div className="flex gap-1.5">
+              <div className="flex gap-1 sm:gap-1.5">
                 {alerts.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => goTo(i, i > current ? "next" : "prev")}
                     className={cn(
                       "transition-all duration-300 rounded-full",
-                      i === current ? "w-5 h-2 bg-white" : "w-2 h-2 bg-white/30 hover:bg-white/60"
+                      i === current ? "w-4 sm:w-5 h-1.5 sm:h-2 bg-white" : "w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white/30 hover:bg-white/60"
                     )}
                   />
                 ))}
               </div>
 
               {/* Arrows */}
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-0.5 sm:gap-1">
                 <button
                   onClick={prev}
-                  className="p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                  className="p-1 sm:p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                 >
-                  <ChevronLeft className="w-3 h-3 text-white" />
+                  <ChevronLeft className="w-2.5 sm:w-3 h-2.5 sm:h-3 text-white" />
                 </button>
                 <button
                   onClick={next}
-                  className="p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                  className="p-1 sm:p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                 >
-                  <ChevronRight className="w-3 h-3 text-white" />
+                  <ChevronRight className="w-2.5 sm:w-3 h-2.5 sm:h-3 text-white" />
                 </button>
               </div>
 
               {/* Counter */}
-              <span className="text-white/40 text-xs font-mono">{current + 1}/{alerts.length}</span>
+              <span className="text-white/40 text-[10px] sm:text-xs font-mono">{current + 1}/{alerts.length}</span>
             </div>
           )}
         </div>

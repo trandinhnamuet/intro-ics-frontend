@@ -156,6 +156,7 @@ export default function Page() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 auto-rows-max">
               {featuredSolutions.map((solution, idx) => {
                 const solutionLinks = ['https://csa.icss.com.vn/', '/nha-may-thong-minh', '/toa-nha-thong-minh']
+                const isExternal = solutionLinks[idx].startsWith('http')
                 return (
                   <ScrollReveal key={idx} direction="up" delay={idx * 100}>
                     <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 h-full flex flex-col">
@@ -170,7 +171,11 @@ export default function Page() {
                         <p className="text-foreground/70 mb-4 leading-relaxed flex-grow">
                           {solution.description}
                         </p>
-                        <Link href={solutionLinks[idx]}>
+                        <Link 
+                          href={solutionLinks[idx]}
+                          target={isExternal ? '_blank' : undefined}
+                          rel={isExternal ? 'noopener noreferrer' : undefined}
+                        >
                           <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:text-primary mt-auto">
                             {t('common.learnMore')}
                             <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />

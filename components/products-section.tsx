@@ -167,7 +167,11 @@ export function ProductsSection() {
                       `hover:${product.color}`
                     )}
                   >
-                    <Link href={product.link}>
+                    <Link 
+                      href={product.link}
+                      target={product.link.startsWith('http') ? '_blank' : undefined}
+                      rel={product.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    >
                       <span className="flex items-center justify-center gap-2">
                         {t('home.products.explore')}
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
