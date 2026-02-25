@@ -2062,6 +2062,24 @@
           "description": "确保符合国际安全标准"
         }
       },
+      "beforeAfter": {
+        "badge": "使用前后对比",
+        "heading": "使用 VietGuard 的显著差异",
+        "description": "可视化展示从易受攻击应用到全面保护应用的转变",
+        "beforeLabel": "使用 VietGuard 前",
+        "afterLabel": "使用 VietGuard 后",
+        "protectedLabel": "已保护",
+        "before1": "应用容易被逆向工程和代码分析",
+        "before2": "敏感数据未加密，容易被窃取",
+        "after1": "源代码被混淆，防止逆向工程",
+        "after2": "敏感数据安全加密",
+        "benefit1Title": "保护前的风险",
+        "benefit1Desc": "应用容易受到攻击，源代码暴露，数据不安全",
+        "benefit2Title": "保护后的安全",
+        "benefit2Desc": "应用得到全面保护，难以攻击且数据安全得到保证",
+        "benefit3Title": "卓越效果",
+        "benefit3Desc": "增强安全性，降低风险，提升品牌信誉"
+      },
       "activation": {
         "badge": "快速部署",
         "heading": "激活企业应用保护的完整解决方案",

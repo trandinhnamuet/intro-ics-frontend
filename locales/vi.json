@@ -1568,6 +1568,24 @@
           "description": "Đảm bảo tuân thủ các tiêu chuẩn bảo mật quốc tế"
         }
       },
+      "beforeAfter": {
+        "badge": "So sánh trước & sau",
+        "heading": "Sự khác biệt rõ rệt khi sử dụng VietGuard",
+        "description": "Xem trực quan sự chuyển đổi từ ứng dụng dễ bị tấn công sang ứng dụng được bảo vệ toàn diện",
+        "beforeLabel": "Trước khi sử dụng VietGuard",
+        "afterLabel": "Sau khi sử dụng VietGuard",
+        "protectedLabel": "Được bảo vệ",
+        "before1": "Ứng dụng dễ bị dò ngược và phân tích mã nguồn",
+        "before2": "Dữ liệu nhạy cảm không được mã hóa, dễ bị đánh cắp",
+        "after1": "Mã nguồn được làm rối, bảo vệ khỏi dò ngược",
+        "after2": "Dữ liệu nhạy cảm được mã hóa an toàn",
+        "benefit1Title": "Rủi ro trước khi bảo vệ",
+        "benefit1Desc": "Ứng dụng dễ bị tấn công, mã nguồn lộ, dữ liệu không an toàn",
+        "benefit2Title": "An toàn sau khi bảo vệ",
+        "benefit2Desc": "Ứng dụng được bảo vệ toàn diện, khó bị tấn công và đảm bảo an toàn dữ liệu",
+        "benefit3Title": "Hiệu quả vượt trội",
+        "benefit3Desc": "Tăng cường bảo mật, giảm rủi ro, nâng cao uy tín thương hiệu"
+      },
       "activation": {
         "badge": "Triển khai nhanh chóng",
         "heading": "Kích hoạt giải pháp toàn diện bảo vệ ứng dụng doanh nghiệp",

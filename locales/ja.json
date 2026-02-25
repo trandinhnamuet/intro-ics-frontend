@@ -938,6 +938,24 @@
           "description": "国際的なセキュリティ基準への準拠を確保"
         }
       },
+      "beforeAfter": {
+        "badge": "導入前後の比較",
+        "heading": "VietGuard使用時の明確な違い",
+        "description": "脆弱なアプリから完全に保護されたアプリへの視覚的な変換を確認",
+        "beforeLabel": "VietGuard使用前",
+        "afterLabel": "VietGuard使用後",
+        "protectedLabel": "保護されている",
+        "before1": "アプリはリバースエンジニアリングとコード分析に脆弱",
+        "before2": "機密データは暗号化されておらず、簡単に盗まれる",
+        "after1": "ソースコードが難読化され、リバースエンジニアリングから保護",
+        "after2": "機密データが安全に暗号化",
+        "benefit1Title": "保護前のリスク",
+        "benefit1Desc": "アプリは攻撃に脆弱、ソースコードが露出、データが安全でない",
+        "benefit2Title": "保護後の安全性",
+        "benefit2Desc": "アプリは完全に保護され、攻撃が困難でデータセキュリティが保証",
+        "benefit3Title": "優れた効果",
+        "benefit3Desc": "セキュリティ強化、リスク削減、ブランド信頼性向上"
+      },
       "activation": {
         "badge": "迅速な展開",
         "heading": "エンタープライズアプリケーション保護の総合的なソリューションを活性化",

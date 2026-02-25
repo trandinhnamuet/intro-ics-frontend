@@ -794,6 +794,24 @@
           "description": "Ensure compliance with international security standards"
         }
       },
+      "beforeAfter": {
+        "badge": "Before & After Comparison",
+        "heading": "The Clear Difference When Using VietGuard",
+        "description": "See the visual transformation from vulnerable app to fully protected app",
+        "beforeLabel": "Before Using VietGuard",
+        "afterLabel": "After Using VietGuard",
+        "protectedLabel": "Protected",
+        "before1": "App vulnerable to reverse engineering and code analysis",
+        "before2": "Sensitive data unencrypted, easily stolen",
+        "after1": "Source code obfuscated, protected from reverse engineering",
+        "after2": "Sensitive data securely encrypted",
+        "benefit1Title": "Risks Before Protection",
+        "benefit1Desc": "App vulnerable to attacks, source code exposed, data insecure",
+        "benefit2Title": "Security After Protection",
+        "benefit2Desc": "App fully protected, difficult to attack and data security guaranteed",
+        "benefit3Title": "Outstanding Effectiveness",
+        "benefit3Desc": "Enhanced security, reduced risks, improved brand credibility"
+      },
       "activation": {
         "badge": "Quick Deployment",
         "heading": "Activate Comprehensive Solution for Enterprise App Protection",

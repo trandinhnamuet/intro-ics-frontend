@@ -720,6 +720,153 @@ export default function VietguardPage() {
         </div>
       </Section>
 
+      {/* Before & After Comparison Section */}
+      <Section spacing="sm" background="muted">
+        <div className="container-responsive">
+          <ScrollReveal direction="up">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 px-5 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 inline-flex items-center">
+                <Shield className="w-4 h-4 mr-2" />
+                {t('products.vietguard.beforeAfter.badge')}
+              </Badge>
+              <AnimatedHeading as="h2" gradient className="p-2 mt-3 mb-3 text-2xl lg:text-3xl">
+                {t('products.vietguard.beforeAfter.heading')}
+              </AnimatedHeading>
+              <p className="text-base text-muted-foreground mb-4 leading-relaxed max-w-3xl mx-auto">
+                {t('products.vietguard.beforeAfter.description')}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Before Images */}
+            <ScrollReveal direction="left">
+              <div className="space-y-6">
+                <div className="text-center mb-4">
+                  <Badge variant="destructive" className="px-4 py-2 text-sm font-bold">
+                    <AlertTriangle className="w-4 h-4 mr-2" />
+                    {t('products.vietguard.beforeAfter.beforeLabel')}
+                  </Badge>
+                </div>
+                
+                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-red-200 dark:border-red-800">
+                  <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
+                    <Image
+                      src="/vietguard/before1.png"
+                      alt="Before VietGuard 1"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-900/90 to-transparent p-4">
+                    <p className="text-white font-semibold text-sm">
+                      {t('products.vietguard.beforeAfter.before1')}
+                    </p>
+                  </div>
+                </Card>
+
+                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-red-200 dark:border-red-800">
+                  <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
+                    <Image
+                      src="/vietguard/before2.png"
+                      alt="Before VietGuard 2"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-900/90 to-transparent p-4">
+                    <p className="text-white font-semibold text-sm">
+                      {t('products.vietguard.beforeAfter.before2')}
+                    </p>
+                  </div>
+                </Card>
+              </div>
+            </ScrollReveal>
+
+            {/* After Images */}
+            <ScrollReveal direction="right">
+              <div className="space-y-6">
+                <div className="text-center mb-4">
+                  <Badge className="px-4 py-2 text-sm font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0">
+                    <ShieldCheck className="w-4 h-4 mr-2" />
+                    {t('products.vietguard.beforeAfter.afterLabel')}
+                  </Badge>
+                </div>
+                
+                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-green-200 dark:border-green-800">
+                  <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
+                    <Image
+                      src="/vietguard/after1.png"
+                      alt="After VietGuard 1"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-900/90 to-transparent p-4">
+                    <p className="text-white font-semibold text-sm">
+                      {t('products.vietguard.beforeAfter.after1')}
+                    </p>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                    <Check className="w-3 h-3" />
+                    {t('products.vietguard.beforeAfter.protectedLabel')}
+                  </div>
+                </Card>
+
+                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-green-200 dark:border-green-800">
+                  <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
+                    <Image
+                      src="/vietguard/after2.png"
+                      alt="After VietGuard 2"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-900/90 to-transparent p-4">
+                    <p className="text-white font-semibold text-sm">
+                      {t('products.vietguard.beforeAfter.after2')}
+                    </p>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                    <Check className="w-3 h-3" />
+                    {t('products.vietguard.beforeAfter.protectedLabel')}
+                  </div>
+                </Card>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* Key Benefits */}
+          <ScrollReveal direction="up" delay={200}>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="p-6 text-center border-2 border-primary/20 hover:border-primary/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-bold mb-2">{t('products.vietguard.beforeAfter.benefit1Title')}</h3>
+                <p className="text-sm text-muted-foreground">{t('products.vietguard.beforeAfter.benefit1Desc')}</p>
+              </Card>
+
+              <Card className="p-6 text-center border-2 border-green-500/50 bg-gradient-to-br from-green-50/50 to-emerald-50/50 dark:from-green-950/20 dark:to-emerald-950/20">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
+                  <ShieldCheck className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-bold mb-2">{t('products.vietguard.beforeAfter.benefit2Title')}</h3>
+                <p className="text-sm text-muted-foreground">{t('products.vietguard.beforeAfter.benefit2Desc')}</p>
+              </Card>
+
+              <Card className="p-6 text-center border-2 border-primary/20 hover:border-primary/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-bold mb-2">{t('products.vietguard.beforeAfter.benefit3Title')}</h3>
+                <p className="text-sm text-muted-foreground">{t('products.vietguard.beforeAfter.benefit3Desc')}</p>
+              </Card>
+            </div>
+          </ScrollReveal>
+        </div>
+      </Section>
+
       {/* Activation & Deployment Section */}
       <Section spacing="sm" background="default">
         <div className="container-responsive">
