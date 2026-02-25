@@ -429,7 +429,7 @@
 
 /* Container Responsive */
 .container-responsive {
-  @apply w-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32;
+  @apply w-full px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12;
 }
 
 /* Section Spacing */

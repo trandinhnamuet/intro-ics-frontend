@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
@@ -32,14 +32,61 @@ import {
   Award,
   ChevronRight,
   CheckCircle,
+  Expand,
+  X,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+
+// Component để tự động phát video khi scroll tới
+function AutoplayVideo({ src, className, alt }: { src: string; className?: string; alt: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {
+              // Autoplay blocked, fallback to manual play
+            })
+          } else {
+            video.pause()
+          }
+        })
+      },
+      { threshold: 0.25 } // Phát khi 25% video hiển thị trên màn hình
+    )
+
+    observer.observe(video)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      className={className}
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      aria-label={alt}
+    />
+  )
+}
 
 export default function ChatbotPage() {
   const { t } = useTranslation()
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
   const [hoveredUseCase, setHoveredUseCase] = useState<number | null>(null)
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null)
+  const [expandedVideo, setExpandedVideo] = useState<string | null>(null)
   const deploymentRef = useRef<HTMLDivElement>(null)
   const hero = t('products.chatbot.hero', { returnObjects: true }) as any
   const painPoints = t('products.chatbot.painPoints.points', { returnObjects: true }) as Array<{ title: string; description: string }>
@@ -134,7 +181,7 @@ export default function ChatbotPage() {
                     </Button>
                   </ScrollReveal>
 
-                  <ScrollReveal direction="up" delay="250">
+                  <ScrollReveal direction="up" delay={250}>
                     <Button
                       size="lg"
                       className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold text-lg px-8 py-7 rounded-xl shadow-xl"
@@ -208,17 +255,20 @@ export default function ChatbotPage() {
             </div>
 
             <ScrollReveal direction="up">
-              <Card className="relative h-[540px] w-full overflow-hidden border-2 border-red-200 dark:border-red-800 rounded-2xl shadow-xl">
-                <Image
-                  src="/chatbot/giaodienboxchat.png"
-                  alt={hero.title}
-                  fill
-                  sizes="(min-width: 1024px) 800px, 100vw"
-                  className="object-cover"
-                  priority
+              <div className="relative w-full overflow-hidden rounded-2xl shadow-xl group cursor-pointer" onClick={() => setExpandedVideo('/chatbot/Video_chatbot1.mp4')}>
+                <div className="relative w-full h-[400px] sm:h-[400px] lg:h-[370px]">
+                  <AutoplayVideo
+                  src="/chatbot/Video_chatbot1.mp4"
+                  alt={t('products.chatbot.painPoints.title')}
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-red-900/40 via-red-900/20 to-transparent" />
-              </Card>
+                </div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-black/90 p-3 rounded-full">
+                    <Expand className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                  </div>
+                </div>
+              </div>
             </ScrollReveal>
           </div>
 
@@ -325,23 +375,22 @@ export default function ChatbotPage() {
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left: Image */}
-            <ScrollReveal direction="left">
-              <Card className="relative h-96 lg:h-[480px] overflow-hidden border-3 border-green-400 dark:border-green-600 rounded-3xl shadow-2xl">
-                <Image
-                  src="/chatbot/anh3.png"
-                  alt={automation.title}
-                  fill
-                  className="object-contain"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                <div className="absolute top-6 right-6 px-6 py-3 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-full font-bold shadow-lg">
-                  <span className="flex items-center gap-2">
-                    <Zap className="w-5 h-5" />
-                    {automation.chip}
-                  </span>
+            {/* Left: Video */}
+            <ScrollReveal direction="up">
+              <div className="relative w-full overflow-hidden rounded-2xl shadow-xl group cursor-pointer" onClick={() => setExpandedVideo('/chatbot/Video_chatbot2.mp4')}>
+                <div className="relative w-full h-[400px] sm:h-[400px] lg:h-[360px]">
+                  <AutoplayVideo
+                    src="/chatbot/Video_chatbot2.mp4"
+                    alt={automation.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
-              </Card>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-black/90 p-3 rounded-full">
+                    <Expand className="w-8 h-8 text-green-600 dark:text-green-400" />
+                  </div>
+                </div>
+              </div>
             </ScrollReveal>
 
             {/* Right: Content */}
@@ -540,7 +589,7 @@ export default function ChatbotPage() {
             </ScrollReveal>
           </div>
 
-          {/* Image Showcase */}
+          {/* Video & Image Showcase */}
           <ScrollReveal direction="up" delay={200}>
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               {(security.gallery || []).map((item, idx) => (
@@ -548,12 +597,26 @@ export default function ChatbotPage() {
                   key={idx}
                   className="relative h-64 overflow-hidden border-2 border-blue-200/50 dark:border-blue-800/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group"
                 >
-                  <Image
-                    src={idx === 0 ? '/chatbot/anh2.png' : idx === 1 ? '/chatbot/anh3.png' : '/chatbot/thongke.png'}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                  {idx === 0 ? (
+                    <AutoplayVideo
+                      src="/chatbot/Video_chatbot1.mp4"
+                      alt={item.title}
+                      className="absolute inset-0 w-full h-full object-contain bg-gradient-to-br from-blue-50/50 to-cyan-50/50 dark:from-blue-950/20 dark:to-cyan-950/20"
+                    />
+                  ) : idx === 1 ? (
+                    <AutoplayVideo
+                      src="/chatbot/Video_chatbot2.mp4"
+                      alt={item.title}
+                      className="absolute inset-0 w-full h-full object-contain bg-gradient-to-br from-blue-50/50 to-cyan-50/50 dark:from-blue-950/20 dark:to-cyan-950/20"
+                    />
+                  ) : (
+                    <Image
+                      src="/chatbot/thongke.png"
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     {item.label && (
@@ -740,6 +803,30 @@ export default function ChatbotPage() {
       </Section>
 
       <Footer />
+
+      {/* Video Fullscreen Modal */}
+      {expandedVideo && (
+        <div 
+          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-4"
+          onClick={() => setExpandedVideo(null)}
+        >
+          <button
+            className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+            onClick={() => setExpandedVideo(null)}
+          >
+            <X className="w-8 h-8 text-white" />
+          </button>
+          <div className="relative w-full max-w-6xl aspect-video" onClick={(e) => e.stopPropagation()}>
+            <video
+              src={expandedVideo}
+              controls
+              autoPlay
+              loop
+              className="w-full h-full object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </>
   )
 }
