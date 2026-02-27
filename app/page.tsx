@@ -94,7 +94,23 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main className="pt-16 md:pt-20">
+        <section className="bg-[#1214d8] text-white shadow-lg">
+          <div className="container-responsive px-4 py-3 flex flex-col md:flex-row items-center gap-3 md:gap-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/20 text-sm font-semibold whitespace-nowrap">
+              <span className="w-2 h-2 rounded-full bg-teal-300 animate-pulse" aria-hidden="true" />
+              Thông tư 77/2025
+            </span>
+            <p className="text-sm md:text-base text-white/90 text-center md:text-left flex-1">
+              THÔNG TƯ 77/2025/TT-NHNN – An toàn bảo mật không còn là lựa chọn, mà là bắt buộc.
+            </p>
+            <Link href="/articles/thong-tu-772025tt-nhnn-an-toan-bao-mat-khong-con-la-lua-chon-ma-la-bat-buoc" className="w-full md:w-auto">
+              <Button className="w-full md:w-auto bg-white text-[#1214d8] hover:bg-white/90 font-semibold shadow-md">
+                Tìm hiểu thêm
+              </Button>
+            </Link>
+          </div>
+        </section>
         <HeroSlider />
 
         {/* Featured Stats Section */}
