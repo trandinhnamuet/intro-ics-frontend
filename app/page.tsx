@@ -102,7 +102,7 @@ export default function Page() {
               Thông tư 77/2025
             </span>
             <p className="text-sm md:text-base text-white/90 text-center md:text-left flex-1">
-              THÔNG TƯ 77/2025/TT-NHNN – An toàn bảo mật không còn là lựa chọn, mà là bắt buộc.
+              🚨 THÔNG TƯ 77/2025/TT-NHNN – <span className="font-bold text-red-500">AN TOÀN VÀ BẢO MẬT</span> CHO VIỆC CUNG CẤP DỊCH VỤ TRỰC TUYẾN TRONG NGÀNH NGÂN HÀNG.
             </p>
             <Link href="/articles/thong-tu-772025tt-nhnn-an-toan-bao-mat-khong-con-la-lua-chon-ma-la-bat-buoc" className="w-full md:w-auto">
               <Button className="w-full md:w-auto bg-white text-[#1214d8] hover:bg-white/90 font-semibold shadow-md">
