@@ -123,7 +123,7 @@ export default function Page() {
                 }
               `}</style>
             </div>
-            <Link href="/articles/thong-tu-772025tt-nhnn-an-toan-bao-mat-khong-con-la-lua-chon-ma-la-bat-buoc" className="w-full md:w-auto">
+            <Link href="articles/thong-tu-772025tt-nhnn-an-toan-va-bao-mat-cho-viec-cung-cap-dich-vu-truc-tuyen-trong-nganh-ngan-hang" className="w-full md:w-auto">
               <Button className="w-full md:w-auto bg-white text-[#1214d8] hover:bg-white/90 font-semibold shadow-md">
                 Tìm hiểu thêm
               </Button>
