@@ -11,7 +11,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin", "vietnamese"] })
 
 export const metadata: Metadata = {
-  title: "ICS - Công ty An Ninh Mạng Quốc Tế",
+  title: "Công ty Cổ phần An ninh mạng Quốc tế - ICS",
   description: "Giải pháp an ninh mạng toàn diện cho doanh nghiệp",
   generator: "ICS",
   icons: {

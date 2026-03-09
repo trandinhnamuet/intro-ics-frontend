@@ -657,7 +657,27 @@
   "smartFactory": {
     "title": "智能工厂解决方案",
     "subtitle": "制造自动化和工业安全",
-    "badge": "智能工厂"
+    "badge": "智能工厂",
+    "feature1": {
+      "title": "1. 实时生产活动监控",
+      "desc": "Smart Dashboard从机器、生产线和IoT传感器收集并显示数据，集中在一个运营屏幕上。",
+      "benefit": "管理者可以即时监控机器状态、产量和KPI绩效，从而快速做出决策。"
+    },
+    "feature2": {
+      "title": "2. 故障检测与早期预警",
+      "desc": "系统自动检测异常，并在设备故障、过载或生产线停止风险时发出警报。",
+      "benefit": "帮助更快定位故障位置，在智能工厂模型中将处理时间减少高达90%。"
+    },
+    "feature3": {
+      "title": "3. 生产与能源效率优化",
+      "desc": "仪表板汇总生产KPI数据、能源消耗、温度和环境等信息。",
+      "benefit": "企业可以分析趋势并优化运营，降低成本，提高生产率。"
+    },
+    "feature4": {
+      "title": "4. 为领导层提供战略决策支持",
+      "desc": "来自多个系统（ERP、IoT、SCADA、生产设备等）的数据被集成并可视化。",
+      "benefit": "领导层对工厂运营有全面了解，能够更快速、更准确地做出决策。"
+    }
   },
   "esg": {
     "title": "ESG 解决方案",
@@ -953,7 +973,7 @@
         "description": "联系我们获得最适合的 AI SOC 解决方案咨询"
       },
       "traditionalBlock": {
-        "title": "传统 SOC ≠ 足够的防护",
+        "title": "传统SOC vs AI SOC",
         "line1": "仅在越南每天就有 1,512+ 攻击，手工 SOC 无法跟上现代威胁。",
         "line2": "AI SOC 在数秒内检测和响应，而不是数天。"
       },
@@ -1731,7 +1751,7 @@
       },
       "roi": {"badge": "ROI & Impact"},
       "roiMetrics": [{"metric": "90%", "label": "降低 SOC 团队工作量"}, {"metric": "70%", "label": "自动化检测"}, {"metric": "95%", "label": "更快的事件响应"}, {"metric": "$2.4M", "label": "减少数据泄露损失"}],
-      "traditionalBlock": {"title": "传统 SOC ≠ 充分保护", "line1": "仅在越南每天就有 1,512+ 攻击，手工 SOC 无法跟上现代威胁的复杂性。", "line2": "AI SOC 在数秒内检测和响应，而不是数天。"},
+      "traditionalBlock": {"title": "传统SOC vs AI SOC", "line1": "仅在越南每天就有 1,512+ 攻击，手工 SOC 无法跟上现代威胁的复杂性。", "line2": "AI SOC 在数秒内检测和响应，而不是数天。"},
       "architectureDetails": {"headline": "开放、云原生、超大规模", "description": "架构能力：", "platformLabel": "平台", "items": [{"title": "无限存储", "desc": "日志无限期保存，秒级查询 PB 级数据"}, {"title": "实时处理", "desc": "每天处理 500 亿+ 事件，延迟 < 1 秒"}, {"title": "450+ 集成", "desc": "连接任何数据源：云、本地、SaaS、网络、端点"}, {"title": "自动扩展", "desc": "根据需求自动伸缩"}]},
       "proofPoint": {"title": "全球 50 亿设备受保护的验证技术", "description": "ICS AI SOC 平台基于保护 Google、Microsoft、财富 500 强和全球数千家企业的技术。"},
       "componentsVisual": {"title": "AI SOC 四大基石", "description": "各组件发挥关键作用，协同运作构建完整安全生态", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 具有无限存储和分析能力的超大规模 SIEM 平台", "points": ["日志无限期保存，无时间限制", "秒级查询 PB 级数据", "AI 关联分析减少 70% 误报", "450+ 数据源集成完毕"], "learnMoreUrl": "https://gurucul.com/products/next-gen-siem/"}, {"number": "02", "title": "UEBA 平台", "description": "Gurucul UEBA - 4000+ ML 模型分析用户及系统行为", "points": ["检测：账户被盗、内部威胁、横向移动、权限提升", "无签名检测技术"], "learnMoreUrl": "https://gurucul.com/products/user-and-entity-behavior-analytics-ueba/"}, {"number": "03", "title": "AI SOC 分析师", "description": "智能 AI 代理 - 代替 L1 分析师 90% 的工作，24/7 无中断运行", "points": ["自动分类、调查、告警关联", "自动生成完整事件报告并解释", "建议具体的修复行动", "从反馈学习并持续改进"], "learnMoreUrl": "https://gurucul.com/products/ai-soc-analyst/"}, {"number": "04", "title": "SOAR 自动化", "description": "编排与响应 - 从隔离到恢复的自动化剧本", "points": ["1000+ 预构建剧本覆盖各类场景", "自动隔离端点、封禁 IP、撤销令牌", "集成 EDR、防火墙、IAM、云安全", "将 MTTR 从小时级降至分钟级"], "learnMoreUrl": "https://gurucul.com/products/security-orchestration-automation-and-response-soar/"}]},

@@ -37,7 +37,7 @@ export function Footer() {
               </div>
               <div>
                 <h3 className="text-xl font-bold">{t('footer.companyName')}</h3>
-                <p className="text-sm text-secondary-foreground/60">Cybersecurity Solutions</p>
+                <p className="text-sm text-secondary-foreground/60">International Cyber Security</p>
               </div>
             </div>
             {/* Social Links */}
