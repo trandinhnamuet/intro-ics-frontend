@@ -39,7 +39,7 @@ export function FloatingActionButton() {
     {
       icon: MessageCircle,
       label: 'Zalo',
-      href: 'https://zalo.me/0707806860',
+      href: 'https://zalo.me/1993095583245735763',
       color: 'from-blue-500 to-cyan-500'
     },
     {

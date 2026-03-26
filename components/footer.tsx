@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Mail, Phone, Youtube, MapPin, Send, ArrowRight } from "lucide-react"
+import { Facebook, Mail, MessageCircle, Phone, Youtube, MapPin, Send, ArrowRight } from "lucide-react"
 import { useTranslation } from 'react-i18next'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -45,6 +45,7 @@ export function Footer() {
               {[
                 { href: "https://www.facebook.com/profile.php?id=61575247001986", icon: Facebook, label: "Facebook", color: "hover:bg-blue-600" },
                 { href: "https://www.youtube.com/channel/UCpOn4kxyTtzmUldsDZoxLHg", icon: Youtube, label: "YouTube", color: "hover:bg-red-600" },
+                { href: "https://zalo.me/1993095583245735763", icon: MessageCircle, label: "Zalo", color: "hover:bg-cyan-600" },
                 { href: "mailto:info@icss.com.vn", icon: Mail, label: "Email", color: "hover:bg-green-600" },
                 { href: "tel:0931487231", icon: Phone, label: "Phone", color: "hover:bg-purple-600" },
               ].map((social) => {
