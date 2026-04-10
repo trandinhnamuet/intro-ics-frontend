@@ -42,7 +42,9 @@ import {
   Workflow,
   Bot,
   Gauge,
-  ExternalLink
+  ExternalLink,
+  Check,
+  Minus
 } from 'lucide-react'
 
 interface OrbConfig {
@@ -302,6 +304,111 @@ export default function AiSocPage() {
     }
   })()
 
+  type ComparisonScore = 'yes' | 'partial' | 'no'
+
+  const platformComparisonData = t('products.aiSoc.platformComparison', { returnObjects: true }) as any
+  const platformComparison = (() => {
+    const fallback = {
+      badge: 'So sánh nền tảng',
+      headingLine1: 'MINH BẠCH TỐI ĐA',
+      headingLine2: 'RÕ RÀNG VÀ HIỆU QUẢ.',
+      description: 'REVEAL giúp đội ngũ an ninh có được độ rõ ràng và sự tập trung để vận hành ở hiệu suất cao nhất và chuyển đổi SecOps.',
+      tag: 'Gurucul vs Thị trường',
+      tableTitle: 'So sánh nền tảng',
+      tableTag: 'Năng lực cốt lõi',
+      imageAlt: 'Trung tâm điều hành SOC',
+      columns: {
+        feature: 'Tính năng',
+        gurucul: 'Gurucul NGSIEM',
+        other: 'NGSIEM khác',
+        traditional: 'SIEM truyền thống'
+      },
+      status: {
+        yes: 'Có',
+        partial: 'Một phần',
+        no: 'Không'
+      },
+      pillars: [
+        {
+          title: 'Khả năng hiển thị',
+          description: 'Hội tụ nhiều công cụ rời rạc vào một trải nghiệm nền tảng thống nhất giúp đội SOC có bức tranh rõ ràng về toàn bộ hệ thống.',
+          pillar: 'Trụ cột 01'
+        },
+        {
+          title: 'Tập trung',
+          description: 'Machine Learning và tự động hóa loại bỏ nhiễu từ cảnh báo bất thường và false positive để tập trung vào các mối đe dọa quan trọng.',
+          pillar: 'Trụ cột 02'
+        },
+        {
+          title: 'Góc nhìn chiến lược',
+          description: 'Khi đội ngũ ngừng bị động, họ có thể ưu tiên, lập kế hoạch và phản ứng chính xác hơn trong điều tra và săn tìm mối đe dọa.',
+          pillar: 'Trụ cột 03'
+        },
+        {
+          title: 'Sự chủ động',
+          description: 'Từ sự tự tin và khả năng kiểm soát, SOC có thể điều hành chủ động, nhìn xa hơn và thúc đẩy đổi mới bảo mật liên tục.',
+          pillar: 'Trụ cột 04'
+        }
+      ],
+      rows: [
+        { feature: 'Cloud, Data Lake and Deployment Agnostic', gurucul: 'yes', other: 'partial', traditional: 'no' },
+        { feature: 'Cost Reduction with Native Data Pipeline Management', gurucul: 'yes', other: 'partial', traditional: 'no' },
+        { feature: 'AI Agent Driven Visibility and Automated Data Ingestion', gurucul: 'yes', other: 'partial', traditional: 'no' },
+        { feature: 'Fully Customizable AI/ML Analytics', gurucul: 'yes', other: 'yes', traditional: 'partial' },
+        { feature: 'High-fidelity Detections with ML Model Chaining', gurucul: 'yes', other: 'partial', traditional: 'no' },
+        { feature: 'Dynamic Risk Prioritized Alerting & Case Management', gurucul: 'yes', other: 'partial', traditional: 'no' },
+        { feature: 'Universal Federated Search', gurucul: 'yes', other: 'partial', traditional: 'partial' },
+        { feature: 'Agentic AI-driven Alert Triage & Investigations', gurucul: 'yes', other: 'partial', traditional: 'no' },
+        { feature: 'Native Virtual Analyst AI Assistant', gurucul: 'yes', other: 'no', traditional: 'no' },
+        { feature: 'Automated Response with AI Agent Generated Playbooks', gurucul: 'yes', other: 'partial', traditional: 'no' },
+        { feature: 'Seamless Interoperability & Orchestration', gurucul: 'yes', other: 'yes', traditional: 'partial' },
+        { feature: 'Migration In As Little As 4 Weeks', gurucul: 'yes', other: 'partial', traditional: 'no' }
+      ]
+    }
+
+    return typeof platformComparisonData === 'object' && platformComparisonData !== null && 'rows' in platformComparisonData
+      ? platformComparisonData
+      : fallback
+  })()
+
+  const clarityPillars = Array.isArray(platformComparison.pillars) ? platformComparison.pillars : []
+  const comparisonPlatformRows: Array<{
+    feature: string
+    gurucul: ComparisonScore
+    other: ComparisonScore
+    traditional: ComparisonScore
+  }> = Array.isArray(platformComparison.rows) ? platformComparison.rows : []
+
+  const renderComparisonCell = (score: ComparisonScore) => {
+    const statusConfig = {
+      yes: {
+        label: platformComparison?.status?.yes || 'Có',
+        icon: Check,
+        className: 'text-emerald-300 bg-emerald-500/15 border-emerald-400/30'
+      },
+      partial: {
+        label: platformComparison?.status?.partial || 'Một phần',
+        icon: Minus,
+        className: 'text-amber-300 bg-amber-500/15 border-amber-400/30'
+      },
+      no: {
+        label: platformComparison?.status?.no || 'Không',
+        icon: Minus,
+        className: 'text-rose-300 bg-rose-500/15 border-rose-400/30'
+      }
+    } as const
+
+    const status = statusConfig[score]
+    const StatusIcon = status.icon
+
+    return (
+      <span className={`inline-flex items-center justify-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${status.className}`}>
+        <StatusIcon className="h-3.5 w-3.5" />
+        {status.label}
+      </span>
+    )
+  }
+
 
 
   return (
@@ -429,6 +536,95 @@ export default function AiSocPage() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-gradient-to-br from-fuchsia-950 via-purple-900 to-indigo-950 py-20 lg:py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,255,255,0.16),transparent_35%),radial-gradient(circle_at_90%_10%,rgba(56,189,248,0.2),transparent_35%),radial-gradient(circle_at_50%_100%,rgba(147,51,234,0.28),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+
+        <div className="relative container-responsive space-y-12">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
+            <div className="space-y-6 lg:col-span-7">
+              <Badge className="inline-flex items-center gap-2 border border-fuchsia-300/30 bg-white/10 px-4 py-2 text-fuchsia-100 backdrop-blur-sm">
+                <Sparkles className="h-4 w-4" />
+                {platformComparison.badge}
+              </Badge>
+              <h2 className="text-4xl font-black leading-tight tracking-tight text-white lg:text-6xl">
+                {platformComparison.headingLine1}
+                <br />
+                {platformComparison.headingLine2}
+              </h2>
+              <p className="max-w-2xl text-lg leading-relaxed text-fuchsia-100/90 lg:text-xl">
+                {platformComparison.description}
+              </p>
+            </div>
+
+            <div className="lg:col-span-5">
+              <Card className="overflow-hidden border border-white/20 bg-white/5 shadow-2xl shadow-black/30 backdrop-blur-sm">
+                <Image
+                  src="/AI SOC/anh4.jpeg"
+                  alt={platformComparison.imageAlt}
+                  width={900}
+                  height={620}
+                  className="h-full w-full object-cover"
+                />
+              </Card>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {clarityPillars.map((item, idx) => {
+              const Icon = [Eye, Target, Map, Shield][idx] || Eye
+              return (
+                <Card
+                  key={item.title}
+                  className="border border-white/15 bg-white/10 p-6 text-white backdrop-blur-md transition-transform duration-300 hover:-translate-y-1"
+                >
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full border border-fuchsia-200/40 bg-fuchsia-300/30">
+                    <Icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="mb-3 text-2xl font-bold">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-fuchsia-100/90">{item.description}</p>
+                  <div className="mt-4 text-xs font-medium uppercase tracking-wider text-fuchsia-200/80">{item.pillar || `Pillar 0${idx + 1}`}</div>
+                </Card>
+              )
+            })}
+          </div>
+
+          <Card className="border border-white/20 bg-slate-950/45 p-5 text-white shadow-2xl shadow-black/40 backdrop-blur-md lg:p-8">
+            <div className="mb-6 flex items-center justify-between gap-4">
+              <h3 className="text-2xl font-bold lg:text-3xl">{platformComparison.tableTitle}</h3>
+              <span className="rounded-full border border-fuchsia-300/40 bg-fuchsia-300/20 px-3 py-1 text-xs font-semibold text-fuchsia-100">
+                {platformComparison.tableTag}
+              </span>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="min-w-full border-separate border-spacing-y-2 text-left">
+                <thead>
+                  <tr>
+                    <th className="rounded-l-lg bg-white/10 px-4 py-3 text-sm font-semibold text-fuchsia-100">{platformComparison?.columns?.feature || 'Feature'}</th>
+                    <th className="bg-emerald-500/20 px-4 py-3 text-sm font-semibold text-emerald-200">{platformComparison?.columns?.gurucul || 'Gurucul NGSIEM'}</th>
+                    <th className="bg-amber-500/20 px-4 py-3 text-sm font-semibold text-amber-200">{platformComparison?.columns?.other || 'Other NGSIEM'}</th>
+                    <th className="rounded-r-lg bg-rose-500/20 px-4 py-3 text-sm font-semibold text-rose-200">{platformComparison?.columns?.traditional || 'Traditional SIEM'}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonPlatformRows.map((row) => (
+                    <tr key={row.feature}>
+                      <td className="rounded-l-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-fuchsia-50">
+                        {row.feature}
+                      </td>
+                      <td className="border border-white/10 bg-white/5 px-4 py-3">{renderComparisonCell(row.gurucul)}</td>
+                      <td className="border border-white/10 bg-white/5 px-4 py-3">{renderComparisonCell(row.other)}</td>
+                      <td className="rounded-r-lg border border-white/10 bg-white/5 px-4 py-3">{renderComparisonCell(row.traditional)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Card>
         </div>
       </section>
 

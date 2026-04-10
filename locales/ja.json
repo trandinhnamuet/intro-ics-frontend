@@ -1311,6 +1311,63 @@
       "processSpeeds": {"instant": "リアルタイム", "fast": "< 1秒", "slow": "< 5秒"},
       "roiDetails": {"cost": {"title": "コスト削減", "items": ["従来型SOC運用コストの60-70%削減", "L1アナリスト採用不要（AI が繰り返しタスク処理）", "年平均データ侵害損失 $2.4M削減"]}, "performance": {"title": "優れた性能", "items": ["手動SOCより95%高速な対応", "APT・内部脅威検出漏れなし", "24/7止まらないAIカバレッジ"]}, "team": {"title": "チーム強化", "items": ["SOCチームをL1繰り返しタスク から解放", "脅威ハンティング・戦略に集中", "バーンアウト減少と満足度向上"]}},
       "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "AI SOC取得から対応まで実践的に解説", "points": ["システムアーキテクチャ", "ライブデモ", "具体的なユースケース", "ROI計算機"], "cta": "無料ダウンロード"},
+      "platformComparison": {
+        "badge": "プラットフォーム比較",
+        "headingLine1": "究極の可視化",
+        "headingLine2": "明確に、そして実行可能に。",
+        "description": "REVEAL はセキュリティチームに明確な可視性と集中力を提供し、SecOps を受動的な運用から能動的な防御へと変革します。",
+        "tag": "REVEAL Platform",
+        "tableTitle": "プラットフォーム比較",
+        "tableTag": "Gurucul vs 市場",
+        "imageAlt": "最新SOCコマンドセンター",
+        "columns": {
+          "feature": "機能",
+          "gurucul": "Gurucul NGSIEM",
+          "other": "他の NGSIEM",
+          "traditional": "従来型 SIEM"
+        },
+        "status": {
+          "yes": "対応",
+          "partial": "一部対応",
+          "no": "非対応"
+        },
+        "pillars": [
+          {
+            "title": "可視性",
+            "description": "分散していたツールとシステムを統合し、複雑な環境でもクリアな全体像を提供します。",
+            "pillar": "PILLAR 01"
+          },
+          {
+            "title": "集中",
+            "description": "機械学習と自動化によりノイズや誤検知を削減し、本当に重要な脅威に集中できます。",
+            "pillar": "PILLAR 02"
+          },
+          {
+            "title": "戦略的視点",
+            "description": "受け身の対応から脱却し、優先順位付け・計画・対応の精度を高め、調査を高速化します。",
+            "pillar": "PILLAR 03"
+          },
+          {
+            "title": "先手対応力",
+            "description": "自信と統制に基づく意思決定により、SOC は将来を見据えた継続的な改善を実現します。",
+            "pillar": "PILLAR 04"
+          }
+        ],
+        "rows": [
+          {"feature": "クラウド・データレイク・導入方式に依存しない", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "ネイティブデータパイプライン管理によるコスト削減", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "AIエージェント主導の可視化と自動データ取り込み", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "高度にカスタマイズ可能な AI/ML 分析", "gurucul": "yes", "other": "yes", "traditional": "partial"},
+          {"feature": "MLモデル連鎖による高精度検知", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "動的リスク優先アラートとケース管理", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "ユニバーサル連合検索", "gurucul": "yes", "other": "partial", "traditional": "partial"},
+          {"feature": "Agentic AI によるアラートトリアージと調査", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "ネイティブ仮想アナリスト AI アシスタント", "gurucul": "yes", "other": "no", "traditional": "no"},
+          {"feature": "AIエージェント生成プレイブックによる自動対応", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "シームレスな相互運用性とオーケストレーション", "gurucul": "yes", "other": "yes", "traditional": "partial"},
+          {"feature": "最短4週間で移行可能", "gurucul": "yes", "other": "partial", "traditional": "no"}
+        ]
+      },
       "gartnerRecognition": {
         "badge": "Gartner認定",
         "title": "Gurucul - Magic Quadrant 2025 Leader",

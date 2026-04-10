@@ -1135,6 +1135,63 @@
       "processSpeeds": {"instant": "Real-time", "fast": "< 1 second", "slow": "< 5 seconds"},
       "roiDetails": {"cost": {"title": "Cost Savings", "items": ["Reduce 60-70% of traditional SOC operational costs", "No need to hire L1 Analysts (AI handles repetitive work)", "Reduce average data breach losses by $2.4M/year"]}, "performance": {"title": "Superior Performance", "items": ["95% faster response than manual SOC", "Detect APT and insider threats without missing", "24/7 AI coverage that never stops"]}, "team": {"title": "Empower Your Team", "items": ["Free SOC team from L1 repetitive tasks", "Focus on threat hunting & strategy", "Reduce burnout and increase job satisfaction"]}},
       "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "Detailed guide on how AI SOC works in practice - from ingestion to response", "points": ["System architecture", "Live demo", "Specific use cases", "ROI calculator"], "cta": "Download free"},
+      "platformComparison": {
+        "badge": "Comparing Platforms",
+        "headingLine1": "ULTIMATE CLARITY",
+        "headingLine2": "DEFINED AND DELIVERED.",
+        "description": "REVEAL gives security teams the clarity and focus they need to perform at their peak and transform SecOps from reactive operations to proactive defense.",
+        "tag": "REVEAL Platform",
+        "tableTitle": "Comparing Platforms",
+        "tableTag": "Gurucul vs Market",
+        "imageAlt": "Modern SOC command center",
+        "columns": {
+          "feature": "Feature",
+          "gurucul": "Gurucul NGSIEM",
+          "other": "Other NGSIEM",
+          "traditional": "Traditional SIEM"
+        },
+        "status": {
+          "yes": "Yes",
+          "partial": "Partial",
+          "no": "No"
+        },
+        "pillars": [
+          {
+            "title": "Visibility",
+            "description": "By integrating once-disparate tools and systems into a converged platform experience, REVEAL gives security teams a crystal-clear picture of even the most complex environments.",
+            "pillar": "PILLAR 01"
+          },
+          {
+            "title": "Focus",
+            "description": "Machine learning and automation cut out noise from anomalous alerts and false positives, so teams can focus on what truly matters.",
+            "pillar": "PILLAR 02"
+          },
+          {
+            "title": "Perspective",
+            "description": "When teams stop reacting, they can start prioritizing, planning, and responding. Hunting and investigations become faster and more accurate.",
+            "pillar": "PILLAR 03"
+          },
+          {
+            "title": "Presence of Mind",
+            "description": "With confidence and control, SOC teams gain the awareness to lead forward and drive sustained security innovation.",
+            "pillar": "PILLAR 04"
+          }
+        ],
+        "rows": [
+          {"feature": "Cloud, Data Lake and Deployment Agnostic", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Cost Reduction with Native Data Pipeline Management", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "AI Agent Driven Visibility and Automated Data Ingestion", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Fully Customizable AI/ML Analytics", "gurucul": "yes", "other": "yes", "traditional": "partial"},
+          {"feature": "High-fidelity Detections with ML Model Chaining", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Dynamic Risk Prioritized Alerting & Case Management", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Universal Federated Search", "gurucul": "yes", "other": "partial", "traditional": "partial"},
+          {"feature": "Agentic AI-driven Alert Triage & Investigations", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Native Virtual Analyst AI Assistant", "gurucul": "yes", "other": "no", "traditional": "no"},
+          {"feature": "Automated Response with AI Agent Generated Playbooks", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Seamless Interoperability & Orchestration", "gurucul": "yes", "other": "yes", "traditional": "partial"},
+          {"feature": "Migration In As Little As 4 Weeks", "gurucul": "yes", "other": "partial", "traditional": "no"}
+        ]
+      },
       "gartnerRecognition": {
         "badge": "Recognized by Gartner",
         "title": "Gurucul - Leader in Magic Quadrant 2025",
