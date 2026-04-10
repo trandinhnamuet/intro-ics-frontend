@@ -655,7 +655,27 @@
   "smartFactory": {
     "title": "Smart Factory Solutions",
     "subtitle": "Manufacturing automation and industrial security",
-    "badge": "Smart Factory"
+    "badge": "Smart Factory",
+    "feature1": {
+      "title": "1. Real-time Production Activity Monitoring",
+      "desc": "Smart Dashboard collects and displays data from machines, production lines, and IoT sensors on a centralized operational screen.",
+      "benefit": "Managers can instantly monitor machine status, output, and KPI performance, enabling quick and accurate decision-making."
+    },
+    "feature2": {
+      "title": "2. Incident Detection and Early Warning",
+      "desc": "The system automatically detects anomalies and alerts for equipment failures, overloads, or risks of production line stoppage.",
+      "benefit": "Helps identify incident locations faster and reduces handling time by up to 90% in smart factory models."
+    },
+    "feature3": {
+      "title": "3. Production and Energy Efficiency Optimization",
+      "desc": "The dashboard aggregates production KPI data, energy consumption, temperature, environment, and more.",
+      "benefit": "Enterprises can analyze trends and optimize operations, reducing costs and improving productivity."
+    },
+    "feature4": {
+      "title": "4. Strategic Decision Support for Leadership",
+      "desc": "Data from multiple systems (ERP, IoT, SCADA, production equipment...) is integrated and visualized.",
+      "benefit": "Leadership gains a comprehensive view of factory operations, enabling faster and more accurate decisions."
+    }
   },
   "esg": {
     "title": "ESG Solutions",
@@ -1128,7 +1148,7 @@
       },
       "roi": {"badge": "ROI & Impact"},
       "roiMetrics": [{"metric": "90%", "label": "Reduce SOC team workload"}, {"metric": "70%", "label": "Automate detection"}, {"metric": "95%", "label": "Faster incident response"}, {"metric": "$2.4M", "label": "Reduce data breach losses"}],
-      "traditionalBlock": {"title": "Traditional SOC ≠ Sufficient Protection", "line1": "With 1,512+ attacks/day in Vietnam alone in 2025, manual SOC cannot keep pace with modern threat complexity.", "line2": "AI SOC detects & responds in seconds, not days."},
+      "traditionalBlock": {"title": "Traditional SOC vs AI SOC", "line1": "With 1,512+ attacks/day in Vietnam alone in 2025, manual SOC cannot keep pace with modern threat complexity.", "line2": "AI SOC detects & responds in seconds, not days."},
       "architectureDetails": {"headline": "Open, Cloud-Native & Hyperscale", "description": "Architecture capabilities:", "platformLabel": "Platform", "items": [{"title": "Unlimited Storage", "desc": "Store logs indefinitely, query petabytes in seconds"}, {"title": "Real-time Processing", "desc": "Process 50+ billion events/day with <1 second latency"}, {"title": "450+ Integrations", "desc": "Connect any data source: Cloud, On-prem, SaaS, Network, Endpoint"}, {"title": "Auto-scaling", "desc": "Automatically scale based on demand, unlimited growth"}]},
       "proofPoint": {"title": "5 billion devices protected globally - Proven Technology", "description": "ICS AI SOC platform based on technology protecting Google, Microsoft, Fortune 500, and thousands of enterprises worldwide."},
       "componentsVisual": {"title": "4 Pillars of AI SOC", "description": "Each component plays a critical role, working together to create a comprehensive security ecosystem", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - Hyperscale SIEM platform with unlimited storage and analysis capabilities", "points": ["Store logs indefinitely without time limits", "Query petabytes in seconds with lightning speed", "Reduce 70% false positives with AI correlation", "Integrate 450+ data sources ready"], "learnMoreUrl": "https://gurucul.com/products/next-gen-siem/"}, {"number": "02", "title": "UEBA Platform", "description": "Gurucul UEBA - 4000+ ML models analyze user & system behavior", "points": ["Detect: Account compromise, Insider threat, Lateral Movement, Privilege Escalation", "Signature-less detection technology"], "learnMoreUrl": "https://gurucul.com/products/user-and-entity-behavior-analytics-ueba/"}, {"number": "03", "title": "AI SOC Analyst", "description": "Agentic AI - Replace 90% of L1 Analyst work, operates 24/7 without breaks", "points": ["Auto triage, investigate, and correlate alerts", "Generate complete incident reports with explanations", "Suggest specific remediation actions", "Learn from feedback and improve continuously"], "learnMoreUrl": "https://gurucul.com/products/ai-soc-analyst/"}, {"number": "04", "title": "SOAR Automation", "description": "Orchestration & Response - Auto-response playbooks from containment to recovery", "points": ["1000+ pre-built playbooks for any scenario", "Auto isolate endpoints, block IPs, revoke tokens", "Integrate with EDR, Firewall, IAM, Cloud Security", "Reduce MTTR from hours to minutes"], "learnMoreUrl": "https://gurucul.com/products/security-orchestration-automation-and-response-soar/"}]},
@@ -1389,7 +1409,7 @@
           ]
         },
         "traditionalBlock": {
-          "title": "Traditional SOC ≠ Sufficient Protection",
+          "title": "Traditional SOC vs AI SOC",
           "line1": "With 1,512+ attacks/day in Vietnam alone, manual SOC cannot keep pace with modern threat complexity.",
           "line2": "AI SOC detects and responds in seconds, not days."
         },

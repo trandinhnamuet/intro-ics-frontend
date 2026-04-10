@@ -693,24 +693,24 @@
     "featuresHeading": "핵심 기능 및 차별화된 가치",
     "featuresDesc": "스마트 팩토리 솔루션은 견고한 기술 기반 위에 설계되었습니다.",
     "feature1": {
-      "title": "1. 지능형 에너지 관리 시스템(EMS)",
-      "desc": "AI를 활용해 사용 패턴과 환경 조건을 분석하고 설비 운영을 최적화합니다.",
-      "benefit": "월 전력 비용 30~40% 절감 효과"
+      "title": "1. 실시간 생산 활동 모니터링",
+      "desc": "스마트 대시보드는 기계, 생산 라인 및 IoT 센서에서 데이터를 수집하여 중앙화된 운영 화면에 표시합니다.",
+      "benefit": "관리자는 기계 상태, 생산량, KPI 성과를 즉시 모니터링하여 신속한 의사결정이 가능합니다."
     },
     "feature2": {
-      "title": "2. 통합 보안 및 출입 통제",
-      "desc": "AI CCTV와 얼굴 인식, 카드, 모바일 기반 출입 관리 통합",
-      "benefit": "24/7 지능형 산업 보안 환경 제공"
+      "title": "2. 사고 감지 및 조기 경보",
+      "desc": "시스템은 이상을 자동으로 감지하고 장비 고장, 과부하 또는 생산 라인 중단 위험 시 경보를 발령합니다.",
+      "benefit": "스마트 공장 모델에서 사고 위치를 더 빠르게 파악하고 처리 시간을 최대 90% 단축합니다."
     },
     "feature3": {
-      "title": "3. 설비 자동화",
-      "desc": "모바일 앱을 통한 작업 환경 개인화",
-      "benefit": "작업 효율 및 근무 만족도 향상"
+      "title": "3. 생산 및 에너지 효율 최적화",
+      "desc": "대시보드는 생산 KPI 데이터, 에너지 소비량, 온도, 환경 등을 집계합니다.",
+      "benefit": "기업은 트렌드를 분석하고 운영을 최적화하여 비용을 절감하고 생산성을 향상시킬 수 있습니다."
     },
     "feature4": {
-      "title": "4. 중앙 공장 관리 플랫폼(MES)",
-      "desc": "모든 하위 시스템을 단일 대시보드에서 관리",
-      "benefit": "신속하고 정확한 의사결정 지원"
+      "title": "4. 리더십을 위한 전략적 의사결정 지원",
+      "desc": "여러 시스템(ERP, IoT, SCADA, 생산 장비 등)의 데이터가 통합되고 시각화됩니다.",
+      "benefit": "리더십은 공장 운영에 대한 포괄적인 시각을 갖고 더 빠르고 정확한 의사결정을 할 수 있습니다."
     },
     "feature5": {
       "title": "5. 데이터 분석 및 리포팅",
@@ -1060,7 +1060,7 @@
       },
       "roi": {"badge": "ROI & Impact"},
       "roiMetrics": [{"metric": "90%", "label": "SOC 팀 업무량 감소"}, {"metric": "70%", "label": "탐지 자동화"}, {"metric": "95%", "label": "더 빠른 사고 대응"}, {"metric": "$2.4M", "label": "데이터 유출 손실 감소"}],
-      "traditionalBlock": {"title": "전통적 SOC ≠ 충분한 보호", "line1": "베트남에서만 하루에 1,512+건의 공격이 발생하며, 수동 SOC는 현대적 위협의 복잡성을 따라갈 수 없습니다.", "line2": "AI SOC는 며칠이 아닌 초 단위로 탐지하고 대응합니다."},
+      "traditionalBlock": {"title": "전통적 SOC vs AI SOC", "line1": "베트남에서만 하루에 1,512+건의 공격이 발생하며, 수동 SOC는 현대적 위협의 복잡성을 따라갈 수 없습니다.", "line2": "AI SOC는 며칠이 아닌 초 단위로 탐지하고 대응합니다."},
       "architectureDetails": {"headline": "개방형, 클라우드 네이티브 및 초대규모", "description": "아키텍처 기능:", "platformLabel": "플랫폼", "items": [{"title": "무제한 스토리지", "desc": "로그를 무기한 저장, 페타바이트를 초 단위로 쿼리"}, {"title": "실시간 처리", "desc": "50억+ 이벤트/일을 1초 미만의 지연으로 처리"}, {"title": "450+ 통합", "desc": "모든 데이터 소스 연결: 클라우드, 온프레미스, SaaS, 네트워크, 엔드포인트"}, {"title": "자동 확장", "desc": "필요에 따라 자동 확장, 무제한 성장"}]},
       "proofPoint": {"title": "전 세계 50억 대의 기기 보호 - 입증된 기술", "description": "ICS AI SOC 플랫폼은 Google, Microsoft, Fortune 500 및 전 세계 수천 개 기업을 보호하는 기술을 기반으로 합니다."},
       "componentsVisual": {"title": "AI SOC의 4대 기둥", "description": "각 구성요소는 중요한 역할을 담당하며 함께 작동하여 포괄적인 보안 에코시스템을 구축", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 무제한 스토리지와 분석 기능을 갖춘 하이퍼스케일 SIEM 플랫폼", "points": ["로그를 시간 제한 없이 무기한 저장", "페타바이트 규모를 초 단위로 쿼리", "AI 상관분석으로 오탐 70% 감소", "450+ 데이터 소스 통합 완료"], "learnMoreUrl": "https://gurucul.com/products/next-gen-siem/"}, {"number": "02", "title": "UEBA 플랫폼", "description": "Gurucul UEBA - 4000+개의 ML 모델이 사용자 및 시스템 행동 분석", "points": ["탐지: 계정 침해, 내부 위협, 횡적 이동, 권한 상승", "서명 없는 탐지 기술"], "learnMoreUrl": "https://gurucul.com/products/user-and-entity-behavior-analytics-ueba/"}, {"number": "03", "title": "AI SOC 분석관", "description": "에이전틱 AI - L1 분석가 업무의 90% 대체, 24/7 무중단 운영", "points": ["자동 분류, 조사, 경고 상관분석", "완전한 사건 보고서 자동 생성 및 설명", "구체적인 개선 조치 제안", "피드백으로부터 학습하며 지속 개선"], "learnMoreUrl": "https://gurucul.com/products/ai-soc-analyst/"}, {"number": "04", "title": "SOAR 자동화", "description": "오케스트레이션 & 대응 - 격리에서 복구까지 자동화 플레이북", "points": ["1000+개의 모든 시나리오용 사전 구축 플레이북", "엔드포인트 자동 격리, IP 차단, 토큰 해제", "EDR, 방화벽, IAM, 클라우드 보안 통합", "MTTR을 시간에서 분 단위로 단축"], "learnMoreUrl": "https://gurucul.com/products/security-orchestration-automation-and-response-soar/"}]},
@@ -1321,7 +1321,7 @@
           ]
         },
         "traditionalBlock": {
-          "title": "전통적 SOC만으로는 부족",
+          "title": "전통적 SOC vs AI SOC",
           "line1": "베트남에서만 하루 1,512건 이상의 공격. 수동 SOC는 현대 위협의 복잡성을 따라갈 수 없습니다.",
           "line2": "AI SOC는 며칠이 아닌 몇 초 안에 감지하고 대응합니다."
         },

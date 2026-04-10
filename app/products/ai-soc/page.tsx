@@ -223,7 +223,7 @@ export default function AiSocPage() {
   const traditionalBlock = (() => {
     const data = t('products.aiSoc.traditionalBlock', { returnObjects: true }) as any
     return typeof data === 'object' && data !== null && 'title' in data ? data : { 
-      title: 'SOC truyền thống ≠ Đủ bảo vệ',
+      title: 'SOC truyền thống với AI SOC',
       line1: 'Với 1,512+ tấn công/ngày...',
       line2: 'AI SOC phát hiện & phản ứng trong vài giây...'
     }

@@ -693,24 +693,24 @@
     "featuresHeading": "主要機能と優れたメリット",
     "featuresDesc": "スマートファクトリーソリューションは堅固な技術基盤上に設計されています。",
     "feature1": {
-      "title": "1. インテリジェントエネルギー管理システム(EMS)",
-      "desc": "AIを活用して使用パターンと環境条件を分析し、設備運用を最適化します。",
-      "benefit": "月の電気代を30~40%削減できます。"
+      "title": "1. リアルタイム生産活動モニタリング",
+      "desc": "スマートダッシュボードは、機械、生産ライン、IoTセンサーからデータを収集し、一元化された運用画面に表示します。",
+      "benefit": "管理者は機械の状態、生産量、KPIパフォーマンスをリアルタイムで監視し、迅速な意思決定が可能になります。"
     },
     "feature2": {
-      "title": "2. 統合セキュリティと出入管理",
-      "desc": "AIカメラと顔認識、カード、モバイルベースの出入管理を統合",
-      "benefit": "24/7のインテリジェントな産業セキュリティ環境を提供"
+      "title": "2. インシデント検出と早期警告",
+      "desc": "システムは異常を自動検出し、設備障害、過負荷、または生産ライン停止のリスクがある場合に警告を発します。",
+      "benefit": "スマート工場モデルでインシデントの場所をより速く特定し、対応時間を最大90%短縮します。"
     },
     "feature3": {
-      "title": "3. ユーティリティ自動化",
-      "desc": "モバイルアプリを通じた職場環境の個人化",
-      "benefit": "作業効率と職場満足度の向上"
+      "title": "3. 生産・エネルギー効率の最適化",
+      "desc": "ダッシュボードは生産KPIデータ、エネルギー消費量、温度、環境などを集約します。",
+      "benefit": "企業はトレンドを分析し、運用を最適化することでコストを削減し、生産性を向上させることができます。"
     },
     "feature4": {
-      "title": "4. 統合工場管理プラットフォーム(MES)",
-      "desc": "すべてのサブシステムを単一ダッシュボードで管理",
-      "benefit": "迅速かつ正確な意思決定をサポート"
+      "title": "4. リーダーシップへの戦略的意思決定支援",
+      "desc": "複数のシステム（ERP、IoT、SCADA、生産設備など）からのデータが統合・可視化されます。",
+      "benefit": "リーダーシップは工場運営の全体的な視点を持ち、より迅速かつ正確な意思決定が可能になります。"
     },
     "feature5": {
       "title": "5. データ分析とレポーティング",
@@ -1304,7 +1304,7 @@
       },
       "roi": {"badge": "ROI & Impact"},
       "roiMetrics": [{"metric": "90%", "label": "SOCチーム業務削減"}, {"metric": "70%", "label": "検出自動化"}, {"metric": "95%", "label": "インシデント対応高速化"}, {"metric": "$2.4M", "label": "データ侵害損失削減"}],
-      "traditionalBlock": {"title": "従来型SOC ≠ 十分な保護", "line1": "ベトナムだけでも1日に1,512件以上の攻撃があり、手動SOCは現代的な脅威の複雑性に対応できません。", "line2": "AI SOCは数日ではなく数秒で検出・対応します。"},
+      "traditionalBlock": {"title": "従来型SOC vs AI SOC", "line1": "ベトナムだけでも1日に1,512件以上の攻撃があり、手動SOCは現代的な脅威の複雑性に対応できません。", "line2": "AI SOCは数日ではなく数秒で検出・対応します。"},
       "architectureDetails": {"headline": "オープン、クラウドネイティブ、ハイパースケール", "description": "アーキテクチャ機能：", "platformLabel": "プラットフォーム", "items": [{"title": "無制限ストレージ", "desc": "ログを無期限に保存、ペタバイト規模を数秒でクエリ"}, {"title": "リアルタイム処理", "desc": "1日500億以上のイベントを1秒未満の遅延で処理"}, {"title": "450+統合", "desc": "すべてのデータソース接続：クラウド、オンプレ、SaaS、ネットワーク、エンドポイント"}, {"title": "自動スケーリング", "desc": "需要に応じて自動スケール、無制限成長"}]},
       "proofPoint": {"title": "グローバル50億デバイス保護・実証済み技術", "description": "ICS AI SOCプラットフォームは、Google、Microsoft、Fortune 500、および世界中の数千企業を保護する技術をベースにしています。"},
       "componentsVisual": {"title": "AI SOCの4つの柱", "description": "各コンポーネントが重要な役割を果たし、連携して包括的なセキュリティエコシステムを構築", "items": [{"number": "01", "title": "Next-Gen SIEM", "description": "Google Chronicle - 無制限のストレージと分析機能を備えたハイパースケールSIEMプラットフォーム", "points": ["ログを時間制限なく無期限に保存", "ペタバイト規模を数秒でクエリ", "AI相関で誤検知70%削減", "450+データソース統合済み"], "learnMoreUrl": "https://gurucul.com/products/next-gen-siem/"}, {"number": "02", "title": "UEBAプラットフォーム", "description": "Gurucul UEBA - 4000+のMLモデルでユーザー・システム動作を分析", "points": ["検出：アカウント侵害、内部脅威、横展開、権限昇格", "署名フリー検出技術"], "learnMoreUrl": "https://gurucul.com/products/user-and-entity-behavior-analytics-ueba/"}, {"number": "03", "title": "AI SOC分析官", "description": "エージェンティックAI - L1分析官の90%の作業を代替、24/7無休運用", "points": ["自動トリアージ、調査、アラート相関", "完全なインシデント報告書を自動生成・説明", "具体的な改善アクションを提案", "フィードバックから学習し継続改善"], "learnMoreUrl": "https://gurucul.com/products/ai-soc-analyst/"}, {"number": "04", "title": "SOAR自動化", "description": "オーケストレーション・対応 - 隔離から復旧まで自動対応プレイブック", "points": ["1000+のあらゆるシナリオ向けプレイブック", "エンドポイント自動隔離、IP遮断、トークン無効化", "EDR、ファイアウォール、IAM、クラウドセキュリティ統合", "MTTRを数時間から数分に短縮"], "learnMoreUrl": "https://gurucul.com/products/security-orchestration-automation-and-response-soar/"}]},
@@ -1565,7 +1565,7 @@
           ]
         },
         "traditionalBlock": {
-          "title": "従来型SOCでは不十分",
+          "title": "従来型SOC vs AI SOC",
           "line1": "ベトナムだけで1日1,512件以上の攻撃。手作業SOCでは複雑な脅威に追いつけません。",
           "line2": "AI SOCは数日ではなく数秒で検知・対応します。"
         },

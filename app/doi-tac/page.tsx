@@ -311,8 +311,8 @@ export default function PartnerPage() {
         </div>
       </Section>
 
-      {/* Testimonials Carousel */}
-      <Section spacing="sm" background="default">
+      {/* Testimonials Carousel - temporarily hidden */}
+      {false && <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="mb-4">
@@ -399,9 +399,7 @@ export default function PartnerPage() {
             </div>
           </ScrollReveal>
         </div>
-      </Section>
-
-      {/* CTA Section */}
+      </Section>}
       <Section spacing="sm" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">

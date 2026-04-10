@@ -693,24 +693,24 @@
     "featuresHeading": "Các Tính năng Cốt lõi và Lợi ích Vượt trội",
     "featuresDesc": "Giải pháp Smart Factory được xây dựng trên các trụ cột công nghệ vững chắc, mỗi trụ cột đều mang lại những giá trị kinh tế và trải nghiệm rõ rệt.",
     "feature1": {
-      "title": "1. Hệ thống Quản lý Năng lượng Thông minh (EMS)",
-      "desc": "Hệ thống sử dụng các thuật toán AI để phân tích thói quen sử dụng, điều kiện thời tiết và sự hiện diện của con người. Từ đó, nó tự động tối ưu hóa hoạt động của hệ thống điều hòa và chiếu sáng.",
-      "benefit": "Giúp tiết kiệm từ 30-40% chi phí điện năng hàng tháng, một con số khổng lồ đối với các nhà máy quy mô lớn."
+      "title": "1. Giám sát hoạt động sản xuất theo thời gian thực",
+      "desc": "Smart Dashboard giúp thu thập và hiển thị dữ liệu từ máy móc, dây chuyền sản xuất, cảm biến IoT trên một màn hình điều hành tập trung.",
+      "benefit": "Nhà quản lý có thể theo dõi tình trạng máy, sản lượng, hiệu suất (KPI) ngay lập tức và đưa ra quyết định nhanh chóng."
     },
     "feature2": {
-      "title": "2. An ninh Tích hợp và Kiểm soát ra vào Thông minh",
-      "desc": "Chúng tôi hợp nhất hệ thống camera giám sát AI, kiểm soát cửa ra vào bằng nhận diện khuôn mặt, thẻ từ hoặc ứng dụng điện thoại.",
-      "benefit": "Mang lại một môi trường an toàn tuyệt đối và an ninh thông minh 24/7."
+      "title": "2. Phát hiện sự cố và cảnh báo sớm",
+      "desc": "Hệ thống tự động phát hiện bất thường và cảnh báo khi có lỗi thiết bị, quá tải, hoặc nguy cơ dừng dây chuyền.",
+      "benefit": "Giúp xác định vị trí sự cố nhanh hơn và giảm thời gian xử lý tới 90% trong các mô hình nhà máy thông minh."
     },
     "feature3": {
-      "title": "3. Tự động hóa Tiện ích (Điều hòa, Chiếu sáng, Rèm cửa)",
-      "desc": "Người dùng có thể cá nhân hóa không gian làm việc của mình chỉ bằng một vài thao tác trên ứng dụng di động.",
-      "benefit": "Mang lại sự tiện nghi và thoải mái tối đa, trực tiếp nâng cao trải nghiệm và hiệu suất làm việc."
+      "title": "3. Tối ưu hiệu suất sản xuất và năng lượng",
+      "desc": "Dashboard tổng hợp dữ liệu KPI sản xuất, tiêu thụ năng lượng, nhiệt độ, môi trường…",
+      "benefit": "Doanh nghiệp có thể phân tích xu hướng và tối ưu vận hành, giảm chi phí và nâng cao năng suất."
     },
     "feature4": {
-      "title": "4. Nền tảng Quản lý Nhà máy Tập trung (MES)",
-      "desc": "Toàn bộ thông tin từ các hệ thống con đều được hiển thị trực quan trên một dashboard duy nhất.",
-      "benefit": "Giúp quản lý nhà máy hiệu quả hơn bao giờ hết, ra quyết định nhanh chóng và chính xác hơn."
+      "title": "4. Hỗ trợ ra quyết định chiến lược cho lãnh đạo",
+      "desc": "Dữ liệu từ nhiều hệ thống (ERP, IoT, SCADA, thiết bị sản xuất…) được tích hợp và trực quan hóa.",
+      "benefit": "Lãnh đạo có góc nhìn tổng thể về hoạt động nhà máy, giúp ra quyết định nhanh và chính xác hơn."
     },
     "feature5": {
       "title": "5. Phân tích Dữ liệu và Báo cáo Thông minh",
@@ -1051,7 +1051,7 @@
         {"metric": "$2.4M", "label": "Giảm thiệt hại data breach"}
       ],
       "traditionalBlock": {
-        "title": "SOC truyền thống ≠ Đủ bảo vệ",
+        "title": "SOC truyền thống với AI SOC",
         "line1": "Với 1,512+ tấn công/ngày chỉ riêng tại Việt Nam trong năm 2025, manual SOC không thể theo kịp tốc độ và độ phức tạp của threat landscape hiện đại.",
         "line2": "AI SOC phát hiện & phản ứng trong vài giây, không phải vài ngày."
       },
@@ -1420,7 +1420,7 @@
           ]
         },
         "traditionalBlock": {
-          "title": "SOC truyền thống ≠ Đủ bảo vệ",
+          "title": "SOC truyền thống với AI SOC",
           "line1": "Với 1,512+ tấn công/ngày chỉ riêng tại Việt Nam, manual SOC không thể theo kịp tốc độ và độ phức tạp của threat landscape hiện đại.",
           "line2": "AI SOC phát hiện & phản ứng trong vài giây, không phải vài ngày."
         },

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Sidebar } from "@/components/sidebar"
-import { Phone, Mail, Globe, MapPin, Building2 } from "lucide-react"
+import { Phone, Mail, Globe, MapPin, Building2, MessageCircle } from "lucide-react"
 
 export default function ContactPage() {
   const { t } = useTranslation()
@@ -93,6 +93,22 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Zalo */}
+              <div className="bg-cyan-50 rounded-lg p-4 flex gap-3">
+                <MessageCircle className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-semibold text-gray-800 text-sm">Zalo</p>
+                  <a
+                    href="https://zalo.me/1993095583245735763"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-[#0984c7] transition-colors"
+                  >
+                    <b>ICS Security</b>
+                  </a>
+                </div>
+              </div>
+
               {/* Email */}
               <div className="bg-purple-50 rounded-lg p-4 flex gap-3">
                 <Mail className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
@@ -102,7 +118,7 @@ export default function ContactPage() {
                     href="mailto:info@icss.com.vn"
                     className="text-gray-700 hover:text-[#0984c7] transition-colors break-all"
                   >
-                    info@icss.com.vn
+                    <b>info@icss.com.vn</b>
                   </a>
                 </div>
               </div>
@@ -118,7 +134,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="text-gray-700 hover:text-[#0984c7] transition-colors"
                   >
-                    www.icss.com.vn
+                    <b>www.icss.com.vn</b>
                   </a>
                 </div>
               </div>
