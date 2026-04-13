@@ -13,11 +13,11 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { AnimatedHeading } from '@/components/ui/animated-heading'
 import { Section } from '@/components/ui/section'
 import {
-  Shield, 
-  Check, 
-  ArrowRight, 
-  Star, 
-  Zap, 
+  Shield,
+  Check,
+  ArrowRight,
+  Star,
+  Zap,
   Lock,
   Smartphone,
   Search,
@@ -61,7 +61,7 @@ interface ConnectorLayout {
 }
 
 export default function VietguardPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -71,6 +71,92 @@ export default function VietguardPage() {
   const [topAnchors, setTopAnchors] = useState<ConnectorAnchor[]>([])
   const [bottomAnchors, setBottomAnchors] = useState<ConnectorAnchor[]>([])
   const [connectorLayout, setConnectorLayout] = useState<ConnectorLayout | null>(null)
+
+  const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+  const highlightText = (text: string, keywords: string[], className?: string) => {
+    if (!text || keywords.length === 0) return text
+
+    const escaped = keywords.map(escapeRegExp).sort((a, b) => b.length - a.length)
+    const splitRegex = new RegExp(`(${escaped.join('|')})`, 'iu')
+    const matchRegex = new RegExp(`^(${escaped.join('|')})$`, 'iu')
+    const highlightClassName = className ?? 'text-red-500 dark:text-red-400 [-webkit-text-fill-color:currentColor]'
+
+    return text.split(splitRegex).map((part, index) =>
+      matchRegex.test(part) ? (
+        <span key={`${part}-${index}`} className={highlightClassName}>
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    )
+  }
+
+  const locale = (i18n.language || 'vi').split(/[-_]/)[0]
+  const highlightKeywords: Record<string, Record<string, string[]>> = {
+    heroTitle: {
+      vi: ['vietguard'],
+      en: ['vietguard'],
+      ja: ['vietguard'],
+      ko: ['vietguard'],
+      zh: ['vietguard']
+    },
+    trustHeading: {
+      vi: ['tin tưởng', 'vietguard'],
+      en: ['trust', 'vietguard'],
+      ja: ['信頼', 'vietguard'],
+      ko: ['신뢰', 'vietguard'],
+      zh: ['信任', 'vietguard']
+    },
+    applicationsHeading: {
+      vi: ['vietguard', 'bảo vệ', 'cuộc tấn công'],
+      en: ['vietguard', 'protection', 'attacks'],
+      ja: ['vietguard', '保護', '攻撃'],
+      ko: ['vietguard', '공격'],
+      zh: ['vietguard', '防护', '攻击']
+    },
+    beforeAfterHeading: {
+      vi: ['khác biệt', 'vietguard'],
+      en: ['difference', 'vietguard'],
+      ja: ['違い', 'vietguard'],
+      ko: ['차이', 'vietguard'],
+      zh: ['差异', 'vietguard']
+    },
+    activationHeading: {
+      vi: ['kích hoạt', 'bảo vệ ứng dụng'],
+      en: ['activate', 'app protection'],
+      ja: ['活性化', 'アプリケーション保護'],
+      ko: ['활성화', '애플리케이션 보호'],
+      zh: ['激活', '应用保护']
+    },
+    multiPlatformHeading: {
+      vi: ['đa nền tảng'],
+      en: ['multi-platform'],
+      ja: ['マルチプラットフォーム'],
+      ko: ['다중 플랫폼'],
+      zh: ['多平台']
+    },
+    whyChooseHeading: {
+      vi: ['vietguard'],
+      en: ['vietguard'],
+      ja: ['vietguard'],
+      ko: ['vietguard'],
+      zh: ['vietguard']
+    },
+    finalCtaTitle: {
+      vi: ['bảo vệ ứng dụng'],
+      en: ['protect your applications'],
+      ja: ['アプリケーションを守る'],
+      ko: ['보호'],
+      zh: ['保护您的应用']
+    }
+  }
+
+  const highlightByKey = (text: string, key: keyof typeof highlightKeywords, className?: string) => {
+    const keywords = highlightKeywords[key]?.[locale] ?? highlightKeywords[key]?.vi ?? []
+    return highlightText(text, keywords, className)
+  }
 
   useEffect(() => {
     const updatePositions = () => {
@@ -244,6 +330,7 @@ export default function VietguardPage() {
   ]
 
   const [particles, setParticles] = useState<Array<{ left: number; top: number; delay: number; duration: number }> | null>(null)
+  const [stats, setStats] = useState({ customers: 0, users: 0, accuracy: 0 })
 
   useEffect(() => {
     setParticles(
@@ -256,27 +343,68 @@ export default function VietguardPage() {
     )
   }, [])
 
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const targets = { customers: 100, users: 1, accuracy: 99.9 }
+    const durationMs = 1400
+    const cycleMs = 5000
+
+    if (prefersReducedMotion) {
+      setStats(targets)
+      return
+    }
+
+    let rafId: number | null = null
+    let startTime = 0
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp
+      const progress = Math.min(1, (timestamp - startTime) / durationMs)
+      const eased = 1 - Math.pow(1 - progress, 3)
+
+      setStats({
+        customers: Math.round(targets.customers * eased),
+        users: Number((targets.users * eased).toFixed(1)),
+        accuracy: Number((targets.accuracy * eased).toFixed(1))
+      })
+
+      if (progress < 1) {
+        rafId = requestAnimationFrame(animate)
+      }
+    }
+
+    const startCycle = () => {
+      startTime = 0
+      if (rafId) cancelAnimationFrame(rafId)
+      rafId = requestAnimationFrame(animate)
+    }
+
+    startCycle()
+    const intervalId = window.setInterval(startCycle, cycleMs)
+
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId)
+      window.clearInterval(intervalId)
+    }
+  }, [])
+
   return (
     <>
       <Header />
-      
+
       {/* Hero Section with Video Background */}
       <div className="relative h-[85vh] overflow-hidden mt-20">
-        {/* Video Background */}
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/vietguard/Video.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/90 via-emerald-800/85 to-teal-900/90" />
-        
+        {/* Spline 3D Background */}
+        <iframe
+          src='https://my.spline.design/techinspired3dassets01protection-n1ngkFF9aIFvOvm6SCa2g2H3/'
+          frameBorder='0'
+          className="absolute inset-0 w-full h-full"
+          style={{ border: 'none' }}
+        />
+
+        {/* Hide Spline Logo */}
+        <div className="absolute bottom-0 right-0 w-40 h-16" style={{ backgroundColor: '#13141f' }} />
+
         {/* Animated particles */}
         <div className="absolute inset-0 overflow-hidden">
           {particles && particles.map((particle, i) => (
@@ -292,25 +420,29 @@ export default function VietguardPage() {
             />
           ))}
         </div>
-        
+
         <div className="relative container-responsive h-full flex items-center">
           <div className="max-w-4xl">
             <ScrollReveal direction="up" delay={100}>
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                {t('products.vietguard.hero.title')}
+                {highlightByKey(
+                  t('products.vietguard.hero.title'),
+                  'heroTitle',
+                  'text-red-500 dark:text-red-400 [-webkit-text-fill-color:currentColor] inline-block text-6xl lg:text-8xl'
+                )}
               </h1>
             </ScrollReveal>
-            
+
             <ScrollReveal direction="up" delay={200}>
               <p className="text-xl lg:text-2xl text-white/95 mb-8 leading-relaxed max-w-3xl">
                 {t('products.vietguard.hero.subtitle')}
               </p>
             </ScrollReveal>
-            
+
             <ScrollReveal direction="up" delay={300}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-white text-green-600 hover:bg-white/90 font-semibold text-lg px-8 py-5 rounded-xl shadow-2xl"
                   asChild
                 >
@@ -319,9 +451,9 @@ export default function VietguardPage() {
                     <ExternalLink className="w-6 h-6 ml-3" />
                   </Link>
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
+                <Button
+                  size="lg"
+                  variant="outline"
                   className="bg-transparent border-3 border-white text-white hover:bg-white/10 font-semibold text-lg px-8 py-5 rounded-xl backdrop-blur-sm"
                   asChild
                 >
@@ -337,15 +469,21 @@ export default function VietguardPage() {
             <ScrollReveal direction="up" delay={400}>
               <div className="grid grid-cols-3 gap-6 mt-10 max-w-2xl">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-white mb-1">100+</div>
+                  <div className="text-4xl font-bold text-white mb-1 tabular-nums">
+                    {stats.customers}{stats.customers >= 100 ? '+' : ''}
+                  </div>
                   <div className="text-white/80 text-xs">{t('products.vietguard.hero.stats.customers')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-white mb-1">1B+</div>
+                  <div className="text-4xl font-bold text-white mb-1 tabular-nums">
+                    {stats.users.toFixed(1).replace(/\.0$/, '')}B+
+                  </div>
                   <div className="text-white/80 text-xs">{t('products.vietguard.hero.stats.usersProtected')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-white mb-1">99.9%</div>
+                  <div className="text-4xl font-bold text-white mb-1 tabular-nums">
+                    {stats.accuracy.toFixed(1)}%
+                  </div>
                   <div className="text-white/80 text-xs">{t('products.vietguard.hero.stats.accuracy')}</div>
                 </div>
               </div>
@@ -371,7 +509,7 @@ export default function VietguardPage() {
                 {t('products.vietguard.trust.badge')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="p-2 mb-4 text-3xl lg:text-4xl">
-                {t('products.vietguard.trust.heading')}
+                {highlightByKey(t('products.vietguard.trust.heading'), 'trustHeading')}
               </AnimatedHeading>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 {t('products.vietguard.trust.description')}
@@ -385,10 +523,10 @@ export default function VietguardPage() {
               <ScrollReveal key={idx} direction="up" delay={idx * 100}>
                 <Card className="p-6 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group border-2 hover:border-green-500 h-full">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    {idx === 0 && <Zap className="w-7 h-7 text-white" />}
-                    {idx === 1 && <Users className="w-7 h-7 text-white" />}
-                    {idx === 2 && <Award className="w-7 h-7 text-white" />}
-                    {idx === 3 && <Globe className="w-7 h-7 text-white" />}
+                    {idx === 0 && <Image src="/vietguard/0.gif" alt="Advanced Technology" width={280} height={280} className="object-contain" />}
+                    {idx === 1 && <Image src="/vietguard/1.gif" alt="Advanced Technology" width={280} height={280} className="object-contain" />}
+                    {idx === 2 && <Image src="/vietguard/2.gif" alt="Advanced Technology" width={280} height={280} className="object-contain" />}
+                    {idx === 3 && <Image src="/vietguard/3.gif" alt="Advanced Technology" width={280} height={280} className="object-contain" />}
                   </div>
                   <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                   <p className="text-muted-foreground text-sm">{item.desc}</p>
@@ -402,7 +540,7 @@ export default function VietguardPage() {
             <ScrollReveal direction="up">
               <div className="text-center mb-8">
                 <h3 className="text-2xl lg:text-3xl font-bold mb-3">
-                  {t('products.vietguard.applications.heading')}
+                  {highlightByKey(t('products.vietguard.applications.heading'), 'applicationsHeading')}
                 </h3>
                 <p className="text-base text-muted-foreground">
                   {t('products.vietguard.applications.description')}
@@ -422,121 +560,121 @@ export default function VietguardPage() {
                   preserveAspectRatio="none"
                 >
                   <defs>
-                  {/* Define gradients for lines */}
-                  <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="rgb(34, 197, 94)" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="rgb(34, 197, 94)" stopOpacity="0.3" />
-                  </linearGradient>
-                  <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="rgb(59, 130, 246)" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="rgb(59, 130, 246)" stopOpacity="0.3" />
-                  </linearGradient>
-                  <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="rgb(168, 85, 247)" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="rgb(168, 85, 247)" stopOpacity="0.3" />
-                  </linearGradient>
-                  <linearGradient id="cyanGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" stopColor="rgb(6, 182, 212)" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="rgb(6, 182, 212)" stopOpacity="0.3" />
-                  </linearGradient>
-                  <linearGradient id="emeraldGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" stopColor="rgb(16, 185, 129)" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="rgb(16, 185, 129)" stopOpacity="0.3" />
-                  </linearGradient>
-                  <linearGradient id="orangeGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" stopColor="rgb(249, 115, 22)" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="rgb(249, 115, 22)" stopOpacity="0.3" />
-                  </linearGradient>
-                  <linearGradient id="pinkGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" stopColor="rgb(236, 72, 153)" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="rgb(236, 72, 153)" stopOpacity="0.3" />
-                  </linearGradient>
-                  <linearGradient id="indigoGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" stopColor="rgb(99, 102, 241)" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="rgb(99, 102, 241)" stopOpacity="0.3" />
-                  </linearGradient>
-                  <linearGradient id="tealGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" stopColor="rgb(20, 184, 166)" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="rgb(20, 184, 166)" stopOpacity="0.3" />
-                  </linearGradient>
-                  
-                  {/* Filters for glow effects */}
-                  <filter id="glow">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                </defs>
-                
-                {/* Polylines from top features to center - dynamic alignment */}
-                {topAnchors.map((anchor, idx) => {
-                  const feature = topFeatures[idx]
-                  if (!feature) return null
+                    {/* Define gradients for lines */}
+                    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="rgb(34, 197, 94)" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="rgb(34, 197, 94)" stopOpacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="rgb(59, 130, 246)" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="rgb(59, 130, 246)" stopOpacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="rgb(168, 85, 247)" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="rgb(168, 85, 247)" stopOpacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="cyanGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                      <stop offset="0%" stopColor="rgb(6, 182, 212)" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="rgb(6, 182, 212)" stopOpacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="emeraldGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                      <stop offset="0%" stopColor="rgb(16, 185, 129)" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="rgb(16, 185, 129)" stopOpacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="orangeGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                      <stop offset="0%" stopColor="rgb(249, 115, 22)" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="rgb(249, 115, 22)" stopOpacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="pinkGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                      <stop offset="0%" stopColor="rgb(236, 72, 153)" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="rgb(236, 72, 153)" stopOpacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="indigoGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                      <stop offset="0%" stopColor="rgb(99, 102, 241)" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="rgb(99, 102, 241)" stopOpacity="0.3" />
+                    </linearGradient>
+                    <linearGradient id="tealGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                      <stop offset="0%" stopColor="rgb(20, 184, 166)" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="rgb(20, 184, 166)" stopOpacity="0.3" />
+                    </linearGradient>
 
-                  const colorGradient = feature.color === 'green' ? 'greenGradient' :
-                                        feature.color === 'blue' ? 'blueGradient' :
-                                        'purpleGradient'
+                    {/* Filters for glow effects */}
+                    <filter id="glow">
+                      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                      <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
 
-                  const entryY = connectorLayout.shieldTop + 50
-                  const baselineY = connectorLayout.shieldTop - 20
-                  const turnY = Math.min(entryY - 10, Math.max(anchor.y + 30, baselineY))
-                  const points = `${anchor.x},${anchor.y} ${anchor.x},${turnY} ${connectorLayout.centerX},${turnY} ${connectorLayout.centerX},${entryY}`
+                  {/* Polylines from top features to center - dynamic alignment */}
+                  {topAnchors.map((anchor, idx) => {
+                    const feature = topFeatures[idx]
+                    if (!feature) return null
 
-                  return (
-                    <g key={feature.id}>
-                      <polyline
-                        points={points}
-                        stroke={`url(#${colorGradient})`}
-                        strokeWidth="3"
-                        fill="none"
-                        strokeDasharray="8,4"
-                        className="animate-dash"
-                        filter="url(#glow)"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </g>
-                  )
-                })}
+                    const colorGradient = feature.color === 'green' ? 'greenGradient' :
+                      feature.color === 'blue' ? 'blueGradient' :
+                        'purpleGradient'
 
-                {/* Polylines from center to bottom features - dynamic alignment */}
-                {bottomAnchors.map((anchor, idx) => {
-                  const feature = bottomFeatures[idx]
-                  if (!feature) return null
+                    const entryY = connectorLayout.shieldTop + 50
+                    const baselineY = connectorLayout.shieldTop - 20
+                    const turnY = Math.min(entryY - 10, Math.max(anchor.y + 30, baselineY))
+                    const points = `${anchor.x},${anchor.y} ${anchor.x},${turnY} ${connectorLayout.centerX},${turnY} ${connectorLayout.centerX},${entryY}`
 
-                  const colorGradient = feature.color === 'cyan' ? 'cyanGradient' :
-                                        feature.color === 'emerald' ? 'emeraldGradient' :
-                                        feature.color === 'orange' ? 'orangeGradient' :
-                                        feature.color === 'pink' ? 'pinkGradient' :
-                                        feature.color === 'indigo' ? 'indigoGradient' :
-                                        'tealGradient'
+                    return (
+                      <g key={feature.id}>
+                        <polyline
+                          points={points}
+                          stroke={`url(#${colorGradient})`}
+                          strokeWidth="3"
+                          fill="none"
+                          strokeDasharray="8,4"
+                          className="animate-dash"
+                          filter="url(#glow)"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </g>
+                    )
+                  })}
 
-                  const entryY = connectorLayout.shieldBottom - 50
-                  const baselineY = connectorLayout.shieldBottom + 20
-                  const turnY = Math.max(entryY + 20, Math.min(baselineY, anchor.y - 30))
-                  const points = `${connectorLayout.centerX},${entryY} ${connectorLayout.centerX},${turnY} ${anchor.x},${turnY} ${anchor.x},${anchor.y}`
+                  {/* Polylines from center to bottom features - dynamic alignment */}
+                  {bottomAnchors.map((anchor, idx) => {
+                    const feature = bottomFeatures[idx]
+                    if (!feature) return null
 
-                  return (
-                    <g key={feature.id}>
-                      <polyline
-                        points={points}
-                        stroke={`url(#${colorGradient})`}
-                        strokeWidth="3"
-                        fill="none"
-                        strokeDasharray="8,4"
-                        className="animate-dash"
-                        filter="url(#glow)"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </g>
-                  )
-                })}
-                
-                {/* Central shield glow circles - removed for cleaner look */}
-              </svg>
+                    const colorGradient = feature.color === 'cyan' ? 'cyanGradient' :
+                      feature.color === 'emerald' ? 'emeraldGradient' :
+                        feature.color === 'orange' ? 'orangeGradient' :
+                          feature.color === 'pink' ? 'pinkGradient' :
+                            feature.color === 'indigo' ? 'indigoGradient' :
+                              'tealGradient'
+
+                    const entryY = connectorLayout.shieldBottom - 50
+                    const baselineY = connectorLayout.shieldBottom + 20
+                    const turnY = Math.max(entryY + 20, Math.min(baselineY, anchor.y - 30))
+                    const points = `${connectorLayout.centerX},${entryY} ${connectorLayout.centerX},${turnY} ${anchor.x},${turnY} ${anchor.x},${anchor.y}`
+
+                    return (
+                      <g key={feature.id}>
+                        <polyline
+                          points={points}
+                          stroke={`url(#${colorGradient})`}
+                          strokeWidth="3"
+                          fill="none"
+                          strokeDasharray="8,4"
+                          className="animate-dash"
+                          filter="url(#glow)"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </g>
+                    )
+                  })}
+
+                  {/* Central shield glow circles - removed for cleaner look */}
+                </svg>
               )}
 
               {/* Top Row Features */}
@@ -545,15 +683,15 @@ export default function VietguardPage() {
                   const Icon = feature.icon
                   const isHovered = hoveredFeature === feature.id
                   const colorClass = feature.color === 'green' ? 'border-green-500/30 hover:border-green-500 shadow-green-500/20' :
-                                     feature.color === 'blue' ? 'border-blue-500/30 hover:border-blue-500 shadow-blue-500/20' :
-                                     'border-purple-500/30 hover:border-purple-500 shadow-purple-500/20'
+                    feature.color === 'blue' ? 'border-blue-500/30 hover:border-blue-500 shadow-blue-500/20' :
+                      'border-purple-500/30 hover:border-purple-500 shadow-purple-500/20'
                   const bgClass = feature.color === 'green' ? 'from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30' :
-                                  feature.color === 'blue' ? 'from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30' :
-                                  'from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30'
+                    feature.color === 'blue' ? 'from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30' :
+                      'from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30'
                   const iconBgClass = feature.color === 'green' ? 'bg-gradient-to-br from-green-500 to-emerald-600' :
-                                      feature.color === 'blue' ? 'bg-gradient-to-br from-blue-500 to-cyan-600' :
-                                      'bg-gradient-to-br from-purple-500 to-pink-600'
-                  
+                    feature.color === 'blue' ? 'bg-gradient-to-br from-blue-500 to-cyan-600' :
+                      'bg-gradient-to-br from-purple-500 to-pink-600'
+
                   return (
                     <div
                       key={feature.id}
@@ -562,17 +700,17 @@ export default function VietguardPage() {
                         topCardRefs.current[idx] = el
                       }}
                     >
-                      <Card 
+                      <Card
                         className={`p-4 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-105 border-2 ${colorClass} bg-gradient-to-br ${bgClass} relative overflow-hidden cursor-pointer h-full backdrop-blur-sm flex flex-col items-center justify-center text-center`}
                         onMouseEnter={() => setHoveredFeature(feature.id)}
                         onMouseLeave={() => setHoveredFeature(null)}
                       >
                         {/* Animated background effect */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        
+
                         {/* Shine effect */}
                         <div className="absolute -inset-full top-0 block h-full w-1/2 transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-0 group-hover:opacity-30 group-hover:animate-shine" />
-                        
+
                         <div className="relative z-10 text-center">
                           <div className={`w-10 h-10 rounded-xl ${iconBgClass} flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                             <Icon className="w-5 h-5 text-white" />
@@ -580,7 +718,7 @@ export default function VietguardPage() {
                           <h5 className="font-bold text-[10px] leading-tight">{feature.title}</h5>
                         </div>
                       </Card>
-                      
+
                       {/* Enhanced Tooltip */}
                       {isHovered && (
                         <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 z-[9999] w-72 animate-fade-in-up">
@@ -611,10 +749,10 @@ export default function VietguardPage() {
                 <div className="absolute w-[140px] h-[140px] md:w-[240px] md:h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-green-500/20 animate-pulse-slow" />
                 <div className="absolute w-[120px] h-[120px] md:w-[210px] md:h-[210px] lg:w-[250px] lg:h-[250px] rounded-full border-2 border-emerald-500/30 animate-pulse-slow" style={{ animationDelay: '1s' }} />
                 <div className="absolute w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] rounded-full border-2 border-teal-500/40 animate-pulse-slow" style={{ animationDelay: '2s' }} />
-                
+
                 {/* Gradient background */}
                 <div className="absolute w-[240px] h-[160px] md:w-[360px] md:h-[220px] lg:w-[420px] lg:h-[260px] rounded-3xl bg-gradient-to-br from-green-500/10 via-emerald-500/10 to-teal-500/10 blur-3xl" />
-                
+
                 {/* Main shield container */}
                 <div className="relative w-[220px] h-[140px] md:w-[320px] md:h-[200px] lg:w-[380px] lg:h-[230px] overflow-visible group">
                   {/* Shield image */}
@@ -627,12 +765,12 @@ export default function VietguardPage() {
                       priority
                     />
                   </div>
-                  
+
                   {/* Floating particles around shield - REMOVED */}
                 </div>
-                
+
                 {/* Shield label */}
-                
+
               </div>
 
               {/* Bottom Row Features */}
@@ -664,7 +802,7 @@ export default function VietguardPage() {
                     'indigo': 'bg-gradient-to-br from-indigo-500 to-violet-600',
                     'teal': 'bg-gradient-to-br from-teal-500 to-cyan-600'
                   }
-                  
+
                   return (
                     <div
                       key={feature.id}
@@ -673,17 +811,17 @@ export default function VietguardPage() {
                         bottomCardRefs.current[idx] = el
                       }}
                     >
-                      <Card 
+                      <Card
                         className={`p-4 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-105 border-2 ${colorMap[feature.color]} bg-gradient-to-br ${bgMap[feature.color]} relative overflow-hidden cursor-pointer h-full backdrop-blur-sm flex flex-col items-center justify-center text-center`}
                         onMouseEnter={() => setHoveredFeature(feature.id)}
                         onMouseLeave={() => setHoveredFeature(null)}
                       >
                         {/* Animated background effect */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        
+
                         {/* Shine effect */}
                         <div className="absolute -inset-full top-0 block h-full w-1/2 transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-0 group-hover:opacity-30 group-hover:animate-shine" />
-                        
+
                         <div className="relative z-10 text-center">
                           <div className={`w-12 h-12 rounded-xl ${iconBgMap[feature.color]} flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                             <Icon className="w-6 h-6 text-white" />
@@ -691,7 +829,7 @@ export default function VietguardPage() {
                           <h5 className="font-bold text-[11px] leading-tight">{feature.title}</h5>
                         </div>
                       </Card>
-                      
+
                       {/* Enhanced Tooltip */}
                       {isHovered && (
                         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-6 z-[9999] w-72 animate-fade-in-down">
@@ -730,7 +868,7 @@ export default function VietguardPage() {
                 {t('products.vietguard.beforeAfter.badge')}
               </Badge>
               <AnimatedHeading as="h2" gradient className="p-2 mt-3 mb-3 text-2xl lg:text-3xl">
-                {t('products.vietguard.beforeAfter.heading')}
+                {highlightByKey(t('products.vietguard.beforeAfter.heading'), 'beforeAfterHeading')}
               </AnimatedHeading>
               <p className="text-base text-muted-foreground mb-4 leading-relaxed max-w-3xl mx-auto">
                 {t('products.vietguard.beforeAfter.description')}
@@ -748,7 +886,7 @@ export default function VietguardPage() {
                     {t('products.vietguard.beforeAfter.beforeLabel')}
                   </Badge>
                 </div>
-                
+
                 <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-red-200 dark:border-red-800">
                   <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
                     <Image
@@ -792,7 +930,7 @@ export default function VietguardPage() {
                     {t('products.vietguard.beforeAfter.afterLabel')}
                   </Badge>
                 </div>
-                
+
                 <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-green-200 dark:border-green-800">
                   <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
                     <Image
@@ -876,55 +1014,59 @@ export default function VietguardPage() {
                 <Zap className="w-4 h-4 mr-2" />
                 {t('products.vietguard.activation.badge')}
               </Badge>
-              <AnimatedHeading as="h2" gradient className="p-2 mt-3 mb-3 text-2xl lg:text-3xl">
-                {t('products.vietguard.activation.heading')}
+              <AnimatedHeading as="h2" gradient className="p-2 mt-3 mb-3 text-2xl lg:text-3xl" style={{ color: '#2596be' }}>
+                {highlightByKey(t('products.vietguard.activation.heading'), 'activationHeading')}
               </AnimatedHeading>
-              <p className="text-base text-muted-foreground mb-4 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-base mb-4 leading-relaxed max-w-3xl mx-auto" style={{ color: '#2596be', WebkitTextFillColor: '#2596be' }}>
                 {t('products.vietguard.activation.description')}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <ScrollReveal direction="left">
-                <div>
-                  <div className="space-y-6">
-                    {(t('products.vietguard.activation.items', { returnObjects: true }) as any[]).map((item: any, idx: number) => (
-                      <div key={idx} className="flex items-start gap-4 group">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                          {idx === 0 && <Zap className="w-6 h-6 text-white" />}
-                          {idx === 1 && <TrendingUp className="w-6 h-6 text-white" />}
-                          {idx === 2 && <Layers className="w-6 h-6 text-white" />}
-                          {idx === 3 && <Users className="w-6 h-6 text-white" />}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                          <p className="text-muted-foreground">{item.desc}</p>
-                        </div>
+            <ScrollReveal direction="left">
+              <div>
+                <div className="space-y-6">
+                  {(t('products.vietguard.activation.items', { returnObjects: true }) as any[]).map((item: any, idx: number) => (
+                    <div key={idx} className="flex items-start gap-4 group">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                        {idx === 0 && <Zap className="w-6 h-6 text-white" />}
+                        {idx === 1 && <TrendingUp className="w-6 h-6 text-white" />}
+                        {idx === 2 && <Layers className="w-6 h-6 text-white" />}
+                        {idx === 3 && <Users className="w-6 h-6 text-white" />}
                       </div>
-                    ))}
-                  </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                        <p className="text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </ScrollReveal>
+              </div>
+            </ScrollReveal>
 
-              <ScrollReveal direction="right">
-                <Card className="relative overflow-hidden border-2 border-blue-200 dark:border-blue-800 h-64 md:h-96 lg:h-[520px] w-full">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://sonic.com.vn/wp-content/uploads/2024/06/569abb72-6952-4c8e-a915-5e9ed2de7639.png"
-                      alt={t('products.vietguard.activation.cardTitle')}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10 text-white">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2">{t('products.vietguard.activation.cardTitle')}</h3>
-                    <p className="text-white/90 text-sm md:text-base">{t('products.vietguard.activation.cardDescription')}</p>
-                  </div>
-                </Card>
-              </ScrollReveal>
-            </div>
+            <ScrollReveal direction="right">
+              <Card className="relative overflow-hidden border-2 border-blue-200 dark:border-blue-800 h-80 md:h-[450px] lg:h-[600px] w-full">
+                <iframe
+                  src='https://my.spline.design/perisoft3dphonesoftwaredevelopment-Jjr8XspPecalqlEDgKPJrIoE/'
+                  frameBorder='0'
+                  className="w-full h-full"
+                  style={{ border: 'none' }}
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10 text-white z-20">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: '#0a1214' }}>{t('products.vietguard.activation.cardTitle')}</h3>
+                  <p className="text-[#0a1214] text-sm md:text-base">
+                    {t('products.vietguard.activation.cardDescription')}
+                  </p>
+                </div>
+                {/* Hide Spline Logo */}
+                <div
+                  className="absolute bottom-0 right-0 w-400 h-25 bg-white z-10"
+                  style={{ backgroundColor: '#f3f3f3' }}
+                />
+              </Card>
+            </ScrollReveal>
+          </div>
         </div>
       </Section>
 
@@ -938,7 +1080,7 @@ export default function VietguardPage() {
                 {t('products.vietguard.multiPlatform.badge')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="mb-4 p-2 text-3xl lg:text-4xl">
-                {t('products.vietguard.multiPlatform.heading')}
+                {highlightByKey(t('products.vietguard.multiPlatform.heading'), 'multiPlatformHeading')}
               </AnimatedHeading>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 {t('products.vietguard.multiPlatform.description')}
@@ -974,7 +1116,7 @@ export default function VietguardPage() {
                 {t('products.vietguard.whyChoose.badge')}
               </Badge>
               <AnimatedHeading as="h2" gradient centered className="p-2 mb-4 text-3xl lg:text-3xl">
-                {t('products.vietguard.whyChoose.heading')}
+                {highlightByKey(t('products.vietguard.whyChoose.heading'), 'whyChooseHeading')}
               </AnimatedHeading>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 {t('products.vietguard.whyChoose.description')}
@@ -1039,18 +1181,18 @@ export default function VietguardPage() {
                 <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mx-auto mb-6 animate-bounce-slow">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
-                
+
                 <h2 className="text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
-                  {t('products.vietguard.finalCta.title')}
+                  {highlightByKey(t('products.vietguard.finalCta.title'), 'finalCtaTitle')}
                 </h2>
-                
+
                 <p className="text-xl text-white/95 mb-8 max-w-3xl mx-auto leading-relaxed">
                   {t('products.vietguard.finalCta.description')}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="text-lg px-10 py-6 bg-white text-green-600 hover:bg-white/90 font-bold rounded-2xl shadow-2xl hover:scale-105 transition-transform"
                     asChild
                   >
@@ -1059,8 +1201,8 @@ export default function VietguardPage() {
                       <ExternalLink className="w-5 h-5 ml-3" />
                     </Link>
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="text-lg px-10 py-6 bg-white/10 text-white border-3 border-white hover:bg-white/20 font-bold rounded-2xl backdrop-blur-md hover:scale-105 transition-transform"
                     asChild
                   >
@@ -1097,7 +1239,7 @@ export default function VietguardPage() {
           </ScrollReveal>
         </div>
       </Section>
-      
+
       <Footer />
     </>
   )
