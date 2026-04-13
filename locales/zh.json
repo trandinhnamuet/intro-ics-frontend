@@ -1758,6 +1758,63 @@
       "processSpeeds": {"instant": "实时", "fast": "< 1 秒", "slow": "< 5 秒"},
       "roiDetails": {"cost": {"title": "成本节省", "items": ["相比传统 SOC 节省 60-70% 运营成本", "无需再招聘 L1 分析师（AI 处理重复工作）", "每年减少约 $2.4M 数据泄露损失"]}, "performance": {"title": "卓越性能", "items": ["比手工 SOC 快 95%", "检测 APT 与内部威胁不遗漏", "AI 24/7 全天候覆盖"]}, "team": {"title": "团队赋能", "items": ["让 SOC 团队摆脱重复 L1 任务", "专注威胁狩猎与战略", "降低倦怠并提升满意度"]}},
       "resourceCard": {"title": "Gurucul Workshop Walkthrough", "description": "详解 AI SOC 从接入到响应的实际运作", "points": ["系统架构", "现场演示", "具体用例", "ROI 计算器"], "cta": "免费下载"},
+      "platformComparison": {
+        "badge": "平台对比",
+        "headingLine1": "终极清晰洞察",
+        "headingLine2": "定义并落地交付。",
+        "description": "REVEAL 为安全团队提供高效运营所需的清晰度与专注力，帮助 SecOps 从被动响应转向主动防御。",
+        "tag": "REVEAL Platform",
+        "tableTitle": "平台对比",
+        "tableTag": "Gurucul vs 市场",
+        "imageAlt": "现代 SOC 指挥中心",
+        "columns": {
+          "feature": "功能",
+          "gurucul": "Gurucul NGSIEM",
+          "other": "其他 NGSIEM",
+          "traditional": "传统 SIEM"
+        },
+        "status": {
+          "yes": "支持",
+          "partial": "部分支持",
+          "no": "不支持"
+        },
+        "pillars": [
+          {
+            "title": "可视性",
+            "description": "将原本分散的工具与系统整合为统一平台体验，即便在最复杂环境下也能获得清晰全景视图。",
+            "pillar": "PILLAR 01"
+          },
+          {
+            "title": "专注",
+            "description": "机器学习与自动化显著降低异常告警与误报噪音，让团队专注真正关键的威胁。",
+            "pillar": "PILLAR 02"
+          },
+          {
+            "title": "战略视角",
+            "description": "当团队不再疲于被动响应，就能更好地做优先级、规划和处置，威胁狩猎与调查更快更准。",
+            "pillar": "PILLAR 03"
+          },
+          {
+            "title": "主动掌控",
+            "description": "在更高信心与控制力基础上，SOC 可前瞻布局并持续推动安全创新。",
+            "pillar": "PILLAR 04"
+          }
+        ],
+        "rows": [
+          {"feature": "云、数据湖与部署方式无关", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "原生数据管道管理带来成本优化", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "AI Agent 驱动可视化与自动数据接入", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "可完全自定义的 AI/ML 分析", "gurucul": "yes", "other": "yes", "traditional": "partial"},
+          {"feature": "基于 ML 模型链的高保真检测", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "动态风险优先告警与案件管理", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "通用联合搜索", "gurucul": "yes", "other": "partial", "traditional": "partial"},
+          {"feature": "Agentic AI 驱动告警分诊与调查", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "原生虚拟分析师 AI 助手", "gurucul": "yes", "other": "no", "traditional": "no"},
+          {"feature": "AI Agent 生成剧本驱动自动响应", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "无缝互操作与编排能力", "gurucul": "yes", "other": "yes", "traditional": "partial"},
+          {"feature": "最快 4 周完成迁移", "gurucul": "yes", "other": "partial", "traditional": "no"}
+        ]
+      },
       "gartnerRecognition": {
         "badge": "Gartner 认可",
         "title": "Gurucul - Magic Quadrant 2025 领导者",

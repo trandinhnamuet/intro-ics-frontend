@@ -1164,6 +1164,63 @@
         ],
         "cta": "Tải tài liệu miễn phí"
       },
+      "platformComparison": {
+        "badge": "So sánh nền tảng",
+        "headingLine1": "MINH BẠCH TỐI ĐA",
+        "headingLine2": "RÕ RÀNG VÀ HIỆU QUẢ.",
+        "description": "REVEAL mang lại cho đội ngũ an ninh độ rõ ràng và tập trung cần thiết để vận hành ở hiệu suất cao nhất và chuyển đổi SecOps từ phản ứng bị động sang chủ động.",
+        "tag": "REVEAL Platform",
+        "tableTitle": "So sánh nền tảng",
+        "tableTag": "Gurucul vs Thị trường",
+        "imageAlt": "Trung tâm điều hành SOC hiện đại",
+        "columns": {
+          "feature": "Tính năng",
+          "gurucul": "Gurucul NGSIEM",
+          "other": "NGSIEM khác",
+          "traditional": "SIEM truyền thống"
+        },
+        "status": {
+          "yes": "Có",
+          "partial": "Một phần",
+          "no": "Không"
+        },
+        "pillars": [
+          {
+            "title": "Khả năng hiển thị",
+            "description": "Hội tụ các công cụ từng rời rạc vào một trải nghiệm nền tảng thống nhất, giúp đội ngũ an ninh có bức tranh rõ ràng ngay cả với môi trường phức tạp nhất.",
+            "pillar": "TRỤ CỘT 01"
+          },
+          {
+            "title": "Tập trung",
+            "description": "Machine Learning và tự động hóa cắt giảm nhiễu từ các cảnh báo bất thường và false positive, để bạn tập trung vào những gì thực sự cần xử lý.",
+            "pillar": "TRỤ CỘT 02"
+          },
+          {
+            "title": "Góc nhìn chiến lược",
+            "description": "Khi đội ngũ ngừng phản ứng bị động, họ có thể ưu tiên, lập kế hoạch và ứng phó tốt hơn. Quá trình hunting và điều tra trở nên nhanh và chính xác hơn.",
+            "pillar": "TRỤ CỘT 03"
+          },
+          {
+            "title": "Sự chủ động",
+            "description": "Từ sự tự tin và kiểm soát mới, đội SOC có thể dẫn dắt chiến lược bảo mật, nhìn xa hơn và thúc đẩy đổi mới liên tục.",
+            "pillar": "TRỤ CỘT 04"
+          }
+        ],
+        "rows": [
+          {"feature": "Không phụ thuộc Cloud, Data Lake và mô hình triển khai", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Giảm chi phí với quản lý data pipeline gốc", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Khả năng hiển thị do AI Agent dẫn dắt và nạp dữ liệu tự động", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Phân tích AI/ML tùy biến toàn diện", "gurucul": "yes", "other": "yes", "traditional": "partial"},
+          {"feature": "Phát hiện độ chính xác cao bằng chuỗi mô hình ML", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Cảnh báo ưu tiên theo rủi ro động và quản lý case", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Tìm kiếm liên hợp toàn cục", "gurucul": "yes", "other": "partial", "traditional": "partial"},
+          {"feature": "Phân loại cảnh báo và điều tra do Agentic AI dẫn dắt", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Trợ lý AI Virtual Analyst gốc nền tảng", "gurucul": "yes", "other": "no", "traditional": "no"},
+          {"feature": "Phản ứng tự động với playbook do AI Agent tạo", "gurucul": "yes", "other": "partial", "traditional": "no"},
+          {"feature": "Khả năng liên thông và điều phối mượt mà", "gurucul": "yes", "other": "yes", "traditional": "partial"},
+          {"feature": "Di trú hệ thống chỉ trong khoảng 4 tuần", "gurucul": "yes", "other": "partial", "traditional": "no"}
+        ]
+      },
       "gartnerRecognition": {
         "badge": "Được công nhận bởi Gartner",
         "title": "Gurucul - Leader trong Magic Quadrant 2025",
