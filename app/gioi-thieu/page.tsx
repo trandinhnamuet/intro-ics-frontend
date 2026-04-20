@@ -41,8 +41,6 @@ export default function GioiThieuPage() {
 
   const advisors = [
     { name: "PGS.TS Trần Anh Dũng", role: "Cố vấn", image: "/anhdung.jpg" },
-    { name: "PGS.TS Trần Anh Dũng", role: "Cố vấn", image: "/anhdung.jpg" },
-    { name: "PGS.TS Trần Anh Dũng", role: "Cố vấn", image: "/anhdung.jpg" },
   ]
 
   const visibleTeam = team.slice(currentIndex, currentIndex + 4)
