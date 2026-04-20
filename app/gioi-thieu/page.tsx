@@ -17,6 +17,7 @@ import Link from "next/link"
 export default function GioiThieuPage() {
   const { t } = useTranslation()
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [advisoryIndex, setAdvisoryIndex] = useState(0)
 
   const timeline = [
     { year: "3/2020", title: "Thành lập công ty", description: "ICS được thành lập với tầm nhìn cung cấp giải pháp an ninh mạng hàng đầu" },
@@ -38,9 +39,19 @@ export default function GioiThieuPage() {
     { name: "Nguyễn Đức Dương", role: "CLO", image: "/duong.jpg" },
   ]
 
+  const advisors = [
+    { name: "PGS.TS Trần Anh Dũng", role: "Cố vấn", image: "/anhdung.jpg" },
+    { name: "PGS.TS Trần Anh Dũng", role: "Cố vấn", image: "/anhdung.jpg" },
+    { name: "PGS.TS Trần Anh Dũng", role: "Cố vấn", image: "/anhdung.jpg" },
+  ]
+
   const visibleTeam = team.slice(currentIndex, currentIndex + 4)
   const canGoPrev = currentIndex > 0
   const canGoNext = currentIndex + 4 < team.length
+
+  const visibleAdvisors = advisors.slice(advisoryIndex, advisoryIndex + 4)
+  const canGoPrevAdvisors = advisoryIndex > 0
+  const canGoNextAdvisors = advisoryIndex + 4 < advisors.length
 
   const handlePrev = () => {
     if (canGoPrev) {
@@ -51,6 +62,18 @@ export default function GioiThieuPage() {
   const handleNext = () => {
     if (canGoNext) {
       setCurrentIndex(currentIndex + 1)
+    }
+  }
+
+  const handlePrevAdvisors = () => {
+    if (canGoPrevAdvisors) {
+      setAdvisoryIndex(advisoryIndex - 1)
+    }
+  }
+
+  const handleNextAdvisors = () => {
+    if (canGoNextAdvisors) {
+      setAdvisoryIndex(advisoryIndex + 1)
     }
   }
 
@@ -352,6 +375,90 @@ export default function GioiThieuPage() {
                       : 'bg-gray-300 dark:bg-gray-600 hover:bg-primary/50'
                   }`}
                   aria-label={`Go to page ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Advisory Team Section */}
+      <Section spacing="sm" background="default">
+        <div className="container-responsive">
+          <ScrollReveal direction="up">
+            <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
+              {t('about.advisory.heading')}
+            </AnimatedHeading>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={100}>
+            <p className="text-center text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
+              {t('about.advisory.subtitle')}
+            </p>
+          </ScrollReveal>
+          
+          <div className="relative">
+            {/* Navigation Buttons */}
+            <button
+              onClick={handlePrevAdvisors}
+              disabled={!canGoPrevAdvisors}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 -translate-x-4 lg:-translate-x-12 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center transition-all duration-300 ${
+                canGoPrevAdvisors 
+                  ? 'hover:bg-primary hover:text-white cursor-pointer' 
+                  : 'opacity-30 cursor-not-allowed'
+              }`}
+              aria-label="Previous advisory members"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={handleNextAdvisors}
+              disabled={!canGoNextAdvisors}
+              className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 translate-x-4 lg:translate-x-12 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center transition-all duration-300 ${
+                canGoNextAdvisors 
+                  ? 'hover:bg-primary hover:text-white cursor-pointer' 
+                  : 'opacity-30 cursor-not-allowed'
+              }`}
+              aria-label="Next advisory members"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Advisory Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-max transition-all duration-500">
+              {visibleAdvisors.map((member, index) => (
+                <ScrollReveal key={`${advisoryIndex}-${index}`} direction="up" delay={index * 100}>
+                  <Card className="overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col">
+                    <div className="relative h-80">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                        <p className="text-white/90 text-sm">{member.role}</p>
+                      </div>
+                    </div>
+                  </Card>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            {/* Pagination Dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              {Array.from({ length: advisors.length - 3 }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setAdvisoryIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    advisoryIndex === index 
+                      ? 'bg-primary w-8' 
+                      : 'bg-gray-300 dark:bg-gray-600 hover:bg-primary/50'
+                  }`}
+                  aria-label={`Go to advisory page ${index + 1}`}
                 />
               ))}
             </div>
