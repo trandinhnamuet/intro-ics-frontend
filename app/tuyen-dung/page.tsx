@@ -361,8 +361,8 @@ export default function RecruitmentPage() {
                             <Mail className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                             <div>
                               <div className="font-semibold">{t('recruitment.emailLabel')}:</div>
-                              <a href="mailto:CV@icss.com.vn" className="text-blue-600 hover:underline">
-                                CV@icss.com.vn
+                              <a href="mailto:info@icss.com.vn" className="text-blue-600 hover:underline">
+                                info@icss.com.vn
                               </a>
                               <div className="text-sm text-gray-600 mt-1">
                                 {t('recruitment.subject')}: <span className="font-mono bg-white px-2 py-1 rounded">ICS - {t(selectedJob.titleKey)} - {t('recruitment.yourName')}</span>
@@ -393,7 +393,7 @@ export default function RecruitmentPage() {
                   <div className="flex gap-2 mt-4">
                     <Button
                       className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600"
-                      onClick={() => window.location.href = `mailto:CV@icss.com.vn?subject=ICS - ${t(selectedJob.titleKey)} - ${t('recruitment.yourName')}`}
+                      onClick={() => window.location.href = `mailto:info@icss.com.vn?subject=ICS - ${t(selectedJob.titleKey)} - ${t('recruitment.yourName')}`}
                     >
                       <Mail className="mr-2 w-4 h-4" />
                       {t('recruitment.applyNow')}
@@ -489,7 +489,7 @@ export default function RecruitmentPage() {
                                 </Button>
                                 <Button
                                   variant="outline"
-                                  onClick={() => window.location.href = `mailto:CV@icss.com.vn?subject=ICS - ${t(job.titleKey)} - ${t('recruitment.yourName')}`}
+                                  onClick={() => window.location.href = `mailto:info@icss.com.vn?subject=ICS - ${t(job.titleKey)} - ${t('recruitment.yourName')}`}
                                 >
                                   <Mail className="w-4 h-4" />
                                 </Button>
@@ -515,7 +515,7 @@ export default function RecruitmentPage() {
                     <Button
                       size="lg"
                       className="bg-white text-blue-600 hover:bg-gray-100"
-                      onClick={() => window.location.href = 'mailto:CV@icss.com.vn'}
+                      onClick={() => window.location.href = 'mailto:info@icss.com.vn'}
                     >
                       <Mail className="mr-2 h-5 w-5" />
                       {t('recruitment.sendCVNow')}
