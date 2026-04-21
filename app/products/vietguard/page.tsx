@@ -863,7 +863,7 @@ export default function VietguardPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-12">
-              <Badge className="mb-4 px-5 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 inline-flex items-center">
+              <Badge className="mb-4 px-5 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 inline-flex items-center">
                 <Shield className="w-4 h-4 mr-2" />
                 {t('products.vietguard.beforeAfter.badge')}
               </Badge>
@@ -881,13 +881,13 @@ export default function VietguardPage() {
             <ScrollReveal direction="left">
               <div className="space-y-6">
                 <div className="text-center mb-4">
-                  <Badge variant="destructive" className="px-4 py-2 text-sm font-bold">
+                  <Badge className="px-4 py-2 text-sm font-bold bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0">
                     <AlertTriangle className="w-4 h-4 mr-2" />
                     {t('products.vietguard.beforeAfter.beforeLabel')}
                   </Badge>
                 </div>
 
-                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-red-200 dark:border-red-800">
+                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-blue-200 dark:border-blue-800">
                   <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
                     <Image
                       src="/vietguard/before1.png"
@@ -896,14 +896,14 @@ export default function VietguardPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-900/90 to-transparent p-4">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/90 to-transparent p-4">
                     <p className="text-white font-semibold text-sm">
                       {t('products.vietguard.beforeAfter.before1')}
                     </p>
                   </div>
                 </Card>
 
-                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-red-200 dark:border-red-800">
+                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-blue-200 dark:border-blue-800">
                   <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
                     <Image
                       src="/vietguard/before2.png"
@@ -912,7 +912,7 @@ export default function VietguardPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-900/90 to-transparent p-4">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/90 to-transparent p-4">
                     <p className="text-white font-semibold text-sm">
                       {t('products.vietguard.beforeAfter.before2')}
                     </p>
@@ -925,13 +925,13 @@ export default function VietguardPage() {
             <ScrollReveal direction="right">
               <div className="space-y-6">
                 <div className="text-center mb-4">
-                  <Badge className="px-4 py-2 text-sm font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0">
+                  <Badge className="px-4 py-2 text-sm font-bold bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0">
                     <ShieldCheck className="w-4 h-4 mr-2" />
                     {t('products.vietguard.beforeAfter.afterLabel')}
                   </Badge>
                 </div>
 
-                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-green-200 dark:border-green-800">
+                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-blue-200 dark:border-blue-800">
                   <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
                     <Image
                       src="/vietguard/after1.png"
@@ -940,18 +940,18 @@ export default function VietguardPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-900/90 to-transparent p-4">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/90 to-transparent p-4">
                     <p className="text-white font-semibold text-sm">
                       {t('products.vietguard.beforeAfter.after1')}
                     </p>
                   </div>
-                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                  <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                     <Check className="w-3 h-3" />
                     {t('products.vietguard.beforeAfter.protectedLabel')}
                   </div>
                 </Card>
 
-                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-green-200 dark:border-green-800">
+                <Card className="relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-blue-200 dark:border-blue-800">
                   <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
                     <Image
                       src="/vietguard/after2.png"
@@ -960,12 +960,12 @@ export default function VietguardPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-900/90 to-transparent p-4">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/90 to-transparent p-4">
                     <p className="text-white font-semibold text-sm">
                       {t('products.vietguard.beforeAfter.after2')}
                     </p>
                   </div>
-                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                  <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                     <Check className="w-3 h-3" />
                     {t('products.vietguard.beforeAfter.protectedLabel')}
                   </div>
@@ -978,15 +978,15 @@ export default function VietguardPage() {
           <ScrollReveal direction="up" delay={200}>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="p-6 text-center border-2 border-primary/20 hover:border-primary/50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">
                   <AlertTriangle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-bold mb-2">{t('products.vietguard.beforeAfter.benefit1Title')}</h3>
                 <p className="text-sm text-muted-foreground">{t('products.vietguard.beforeAfter.benefit1Desc')}</p>
               </Card>
 
-              <Card className="p-6 text-center border-2 border-green-500/50 bg-gradient-to-br from-green-50/50 to-emerald-50/50 dark:from-green-950/20 dark:to-emerald-950/20">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
+              <Card className="p-6 text-center border-2 border-blue-500/50 bg-gradient-to-br from-blue-50/50 to-cyan-50/50 dark:from-blue-950/20 dark:to-cyan-950/20">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">
                   <ShieldCheck className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-bold mb-2">{t('products.vietguard.beforeAfter.benefit2Title')}</h3>
@@ -1075,7 +1075,7 @@ export default function VietguardPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-10">
-              <Badge className="mb-4 px-5 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0">
+              <Badge className="mb-4 px-5 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0">
                 <Smartphone className="w-4 h-4 mr-2" />
                 {t('products.vietguard.multiPlatform.badge')}
               </Badge>
@@ -1091,8 +1091,8 @@ export default function VietguardPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {(t('products.vietguard.multiPlatform.items', { returnObjects: true }) as any[]).map((item: any, idx: number) => (
               <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                <Card className="p-6 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group border-2 hover:border-purple-500 h-full">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${idx === 0 ? 'bg-gradient-to-br from-green-500 to-emerald-500' : idx === 1 ? 'bg-gradient-to-br from-blue-500 to-cyan-500' : 'bg-gradient-to-br from-purple-500 to-pink-500'}`}>
+                <Card className="p-6 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group border-2 hover:border-blue-500 h-full">
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${idx === 0 ? 'bg-gradient-to-br from-blue-500 to-cyan-500' : idx === 1 ? 'bg-gradient-to-br from-blue-600 to-sky-500' : 'bg-gradient-to-br from-cyan-500 to-blue-600'}`}>
                     {idx === 0 && <Smartphone className="w-7 h-7 text-white" />}
                     {idx === 1 && <Code className="w-7 h-7 text-white" />}
                     {idx === 2 && <ShieldCheck className="w-7 h-7 text-white" />}
@@ -1111,7 +1111,7 @@ export default function VietguardPage() {
         <div className="container-responsive">
           <ScrollReveal direction="up">
             <div className="text-center mb-10">
-              <Badge className="mb-4 px-5 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white border-0">
+              <Badge className="mb-4 px-5 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0">
                 <Award className="w-4 h-4 mr-2" />
                 {t('products.vietguard.whyChoose.badge')}
               </Badge>
@@ -1127,9 +1127,9 @@ export default function VietguardPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
             {(t('products.vietguard.whyChoose.benefits', { returnObjects: true }) as any[]).map((item: any, idx: number) => (
               <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                <Card className="p-6 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group border-2 hover:border-orange-500 h-full relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-transparent rounded-bl-full" />
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform relative z-10 ${idx === 0 ? 'bg-gradient-to-br from-blue-500 to-cyan-500' : idx === 1 ? 'bg-gradient-to-br from-green-500 to-emerald-500' : 'bg-gradient-to-br from-purple-500 to-pink-500'}`}>
+                <Card className="p-6 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group border-2 hover:border-blue-500 h-full relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full" />
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform relative z-10 ${idx === 0 ? 'bg-gradient-to-br from-blue-500 to-cyan-500' : idx === 1 ? 'bg-gradient-to-br from-blue-600 to-sky-500' : 'bg-gradient-to-br from-cyan-500 to-blue-600'}`}>
                     {idx === 0 && <TrendingUp className="w-7 h-7 text-white" />}
                     {idx === 1 && <FileCheck className="w-7 h-7 text-white" />}
                     {idx === 2 && <Eye className="w-7 h-7 text-white" />}
@@ -1137,7 +1137,7 @@ export default function VietguardPage() {
                   <h3 className="text-xl font-bold mb-3 relative z-10">{item.title}</h3>
                   <p className="text-muted-foreground text-base leading-relaxed mb-4 relative z-10">{item.desc}</p>
                   <div className="pt-4 border-t border-border relative z-10">
-                    <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">{item.stat}</div>
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{item.stat}</div>
                     <div className="text-sm text-muted-foreground">{item.label}</div>
                   </div>
                 </Card>
@@ -1147,13 +1147,13 @@ export default function VietguardPage() {
 
           {/* Compliance Logos */}
           <ScrollReveal direction="up">
-            <Card className="p-6 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 border-2 border-orange-200 dark:border-orange-800">
+            <Card className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 border-2 border-blue-200 dark:border-blue-800">
               <h3 className="text-xl font-bold text-center mb-6">{t('products.vietguard.complianceBlock.heading')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-5 items-center justify-items-center">
                 {(t('products.vietguard.complianceBlock.standards', { returnObjects: true }) as string[]).map((standard, idx) => (
                   <div key={idx} className="text-center">
                     <div className="w-16 h-16 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center mb-2 shadow-lg">
-                      <CheckCircle2 className="w-8 h-8 text-green-600" />
+                      <CheckCircle2 className="w-8 h-8 text-blue-600" />
                     </div>
                     <div className="text-sm font-semibold">{standard}</div>
                   </div>
@@ -1168,7 +1168,7 @@ export default function VietguardPage() {
       <Section spacing="sm" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <Card className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 p-10 lg:p-16 text-center border-none">
+            <Card className="relative overflow-hidden bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-500 p-10 lg:p-16 text-center border-none">
               {/* Animated Background */}
               <div className="absolute inset-0 opacity-20">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
@@ -1193,7 +1193,7 @@ export default function VietguardPage() {
                 <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
                   <Button
                     size="lg"
-                    className="text-lg px-10 py-6 bg-white text-green-600 hover:bg-white/90 font-bold rounded-2xl shadow-2xl hover:scale-105 transition-transform"
+                    className="text-lg px-10 py-6 bg-white text-blue-600 hover:bg-white/90 font-bold rounded-2xl shadow-2xl hover:scale-105 transition-transform"
                     asChild
                   >
                     <Link href="http://vietguardscan.icss.com.vn/" target="_blank">

@@ -44,11 +44,11 @@ const jobIcons = {
 }
 
 const jobColors = {
-  "marketing-staff": "bg-gradient-to-br from-purple-500 to-pink-500",
-  "sales-staff": "bg-gradient-to-br from-green-500 to-emerald-500",
+  "marketing-staff": "bg-gradient-to-br from-blue-600 to-cyan-500",
+  "sales-staff": "bg-gradient-to-br from-blue-600 to-cyan-500",
   "security-engineer": "bg-gradient-to-br from-blue-600 to-cyan-500",
-  "marketing-director": "bg-gradient-to-br from-orange-500 to-red-500",
-  "sales-director": "bg-gradient-to-br from-indigo-600 to-purple-600"
+  "marketing-director": "bg-gradient-to-br from-blue-600 to-cyan-500",
+  "sales-director": "bg-gradient-to-br from-blue-600 to-cyan-500"
 }
 
 interface JobListing {
@@ -151,7 +151,7 @@ export default function RecruitmentPage() {
   const [selectedJob, setSelectedJob] = useState(jobListings[0])
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const SelectedIcon = jobIcons[selectedJob.id as keyof typeof jobIcons] || Briefcase
-  const selectedColor = jobColors[selectedJob.id as keyof typeof jobColors] || "bg-gradient-to-br from-purple-500 to-pink-500"
+  const selectedColor = jobColors[selectedJob.id as keyof typeof jobColors] || "bg-gradient-to-br from-blue-600 to-cyan-500"
 
   return (
     <>
@@ -161,7 +161,7 @@ export default function RecruitmentPage() {
       <div
         className="relative overflow-hidden text-white text-center py-32 w-full mt-24"
         style={{
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+          background: "linear-gradient(135deg, #0984c7 0%, #055f8f 100%)"
         }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
@@ -180,7 +180,7 @@ export default function RecruitmentPage() {
           <div className="flex gap-4 justify-center flex-wrap">
             <Button 
               size="lg" 
-              className="bg-white text-purple-600 hover:bg-gray-100 shadow-lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 shadow-lg"
               onClick={() => {
                 const element = document.getElementById('job-listings-section')
                 if (element) {
@@ -201,7 +201,12 @@ export default function RecruitmentPage() {
         </div>
       </div>
 
-      <main className="min-h-screen bg-gray-50">
+      <main
+        className="min-h-screen bg-white"
+        style={{
+          backgroundImage: "radial-gradient(circle at 10% 10%, rgba(9,132,199,0.08), transparent 32%), radial-gradient(circle at 90% 20%, rgba(9,132,199,0.06), transparent 34%)"
+        }}
+      >
         <div className="w-full px-6 lg:px-16 py-12">
           <div className="flex gap-8">
             {/* Sidebar */}
@@ -211,10 +216,10 @@ export default function RecruitmentPage() {
             <div className="flex-1 space-y-8">
 
               {/* Why Join ICS Section */}
-              <Card className="border-t-4 border-t-purple-500 shadow-lg">
+              <Card className="border-t-4 border-t-blue-500 shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-2">
-                    <Star className="w-6 h-6 text-yellow-500" />
+                    <Star className="w-6 h-6 text-blue-500" />
                     {t('recruitment.whyJoin')}
                   </CardTitle>
                 </CardHeader>
@@ -227,15 +232,15 @@ export default function RecruitmentPage() {
                       <h3 className="font-bold text-lg mb-2">{t('recruitment.benefit1Title')}</h3>
                       <p className="text-sm text-gray-600">{t('recruitment.benefit1Desc')}</p>
                     </div>
-                    <div className="flex flex-col items-center text-center p-6 rounded-lg bg-gradient-to-br from-purple-50 to-pink-50">
-                      <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mb-4">
+                    <div className="flex flex-col items-center text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50">
+                      <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
                         <TrendingUp className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="font-bold text-lg mb-2">{t('recruitment.benefit2Title')}</h3>
                       <p className="text-sm text-gray-600">{t('recruitment.benefit2Desc')}</p>
                     </div>
-                    <div className="flex flex-col items-center text-center p-6 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50">
-                      <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                    <div className="flex flex-col items-center text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50">
+                      <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
                         <Heart className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="font-bold text-lg mb-2">{t('recruitment.benefit3Title')}</h3>
@@ -247,7 +252,7 @@ export default function RecruitmentPage() {
 
               {/* Global Job Detail Dialog */}
               <Dialog open={isDialogOpen} onOpenChange={(open) => setIsDialogOpen(open)}>
-                <DialogContent className="max-w-4xl h-[90vh] flex flex-col overflow-hidden">
+                <DialogContent className="w-[96vw] max-w-[96vw] h-[92vh] lg:w-[66vw] lg:max-w-[66vw] lg:h-[72vh] flex flex-col overflow-hidden">
                   <DialogHeader>
                     <div className="flex items-start gap-4 mb-4">
                       <div className={`w-16 h-16 ${selectedColor} rounded-xl flex items-center justify-center flex-shrink-0`}>
@@ -266,29 +271,29 @@ export default function RecruitmentPage() {
 
                   <ScrollArea className="flex-1 min-h-0 pr-4">
                     <div className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-4 p-4 bg-gray-50 rounded-lg">
+                      <div className="grid md:grid-cols-2 gap-4 p-4 bg-blue-50 rounded-lg">
                         <div className="flex items-center gap-2">
-                          <MapPin className="w-5 h-5 text-purple-500" />
+                          <MapPin className="w-5 h-5 text-blue-500" />
                           <div>
                             <div className="text-xs text-gray-500">{t('recruitment.location')}</div>
                             <div className="font-semibold text-sm">{t(selectedJob.locationKey)}</div>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
-                          <DollarSign className="w-5 h-5 text-green-500" />
+                          <DollarSign className="w-5 h-5 text-blue-500" />
                           <div>
                             <div className="text-xs text-gray-500">{t('recruitment.salary')}</div>
-                            <div className="font-semibold text-sm text-green-600">{t(selectedJob.salaryKey)}</div>
+                            <div className="font-semibold text-sm text-blue-600">{t(selectedJob.salaryKey)}</div>
                           </div>
                         </div>
                       </div>
 
                       <div>
                         <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
-                          <Target className="w-5 h-5 text-purple-600" />
+                          <Target className="w-5 h-5 text-blue-600" />
                           {t('recruitment.mission')}
                         </h3>
-                        <p className="text-gray-700 leading-relaxed bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                        <p className="text-gray-700 leading-relaxed bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                           {t(selectedJob.missionKey)}
                         </p>
                       </div>
@@ -314,13 +319,13 @@ export default function RecruitmentPage() {
 
                       <div>
                         <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
-                          <Award className="w-5 h-5 text-orange-600" />
+                          <Award className="w-5 h-5 text-blue-600" />
                           {t('recruitment.requirements')}
                         </h3>
                         <ul className="space-y-2">
                           {selectedJob.requirementsKeys.map((key, index) => (
                             <li key={index} className="flex items-start gap-2">
-                              <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                              <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
                               <span className="text-gray-700">{t(key)}</span>
                             </li>
                           ))}
@@ -331,13 +336,13 @@ export default function RecruitmentPage() {
 
                       <div>
                         <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
-                          <Heart className="w-5 h-5 text-red-600" />
+                          <Heart className="w-5 h-5 text-blue-600" />
                           {t('recruitment.benefits')}
                         </h3>
                         <ul className="space-y-2">
                           {selectedJob.benefitsKeys.map((key, index) => (
                             <li key={index} className="flex items-start gap-2">
-                              <Star className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                              <Star className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
                               <span className="text-gray-700">{t(key)}</span>
                             </li>
                           ))}
@@ -346,17 +351,17 @@ export default function RecruitmentPage() {
 
                       <Separator />
 
-                      <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg border-2 border-purple-200">
+                      <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg border-2 border-blue-200">
                         <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-                          <Mail className="w-5 h-5 text-purple-600" />
+                          <Mail className="w-5 h-5 text-blue-600" />
                           {t('recruitment.applicationMethod')}
                         </h3>
                         <div className="space-y-3">
                           <div className="flex items-start gap-3">
-                            <Mail className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                            <Mail className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                             <div>
                               <div className="font-semibold">{t('recruitment.emailLabel')}:</div>
-                              <a href="mailto:CV@icss.com.vn" className="text-purple-600 hover:underline">
+                              <a href="mailto:CV@icss.com.vn" className="text-blue-600 hover:underline">
                                 CV@icss.com.vn
                               </a>
                               <div className="text-sm text-gray-600 mt-1">
@@ -365,15 +370,15 @@ export default function RecruitmentPage() {
                             </div>
                           </div>
                           <div className="flex items-start gap-3">
-                            <Phone className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                            <Phone className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                             <div>
                               <div className="font-semibold">{t('recruitment.directContact')}:</div>
-                              <a href="tel:0972363821" className="text-green-600 hover:underline">
+                              <a href="tel:0972363821" className="text-blue-600 hover:underline">
                                 {t('recruitment.contactPerson')} - 0972.363.821
                               </a>
                             </div>
                           </div>
-                          <div className="mt-4 p-4 bg-white rounded border border-purple-200">
+                          <div className="mt-4 p-4 bg-white rounded border border-blue-200">
                             <p className="text-sm text-gray-700 font-semibold mb-2">📋 {t('recruitment.portfolioLabel')}:</p>
                             <ul className="text-sm text-gray-600 space-y-1 ml-4">
                               <li>• {t('recruitment.portfolioItem1')}</li>
@@ -387,7 +392,7 @@ export default function RecruitmentPage() {
 
                   <div className="flex gap-2 mt-4">
                     <Button
-                      className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600"
                       onClick={() => window.location.href = `mailto:CV@icss.com.vn?subject=ICS - ${t(selectedJob.titleKey)} - ${t('recruitment.yourName')}`}
                     >
                       <Mail className="mr-2 w-4 h-4" />
@@ -405,7 +410,7 @@ export default function RecruitmentPage() {
               <Card className="shadow-lg" id="job-listings-section">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-2">
-                    <Briefcase className="w-6 h-6 text-purple-600" />
+                    <Briefcase className="w-6 h-6 text-blue-600" />
                     {t('recruitment.jobsTitle')}
                   </CardTitle>
                   <CardDescription>
@@ -426,7 +431,7 @@ export default function RecruitmentPage() {
                         {jobListings
                           .filter(job => tabValue === "all" || job.category === tabValue)
                           .map((job) => (
-                            <Card key={job.id} className="hover:shadow-xl transition-all duration-300 border-l-4 hover:border-l-purple-500 cursor-pointer group">
+                            <Card key={job.id} className="hover:shadow-xl transition-all duration-300 border-l-4 hover:border-l-blue-500 cursor-pointer group">
                               <CardHeader>
                                 <div className="flex items-start justify-between">
                                   <div className="flex gap-4">
@@ -437,7 +442,7 @@ export default function RecruitmentPage() {
                                       })()}
                                     </div>
                                     <div>
-                                      <CardTitle className="text-xl mb-2 group-hover:text-purple-600 transition-colors">
+                                      <CardTitle className="text-xl mb-2 group-hover:text-blue-600 transition-colors">
                                         {t(job.titleKey)}
                                       </CardTitle>
                                       <CardDescription className="flex flex-wrap gap-2 mb-3">
@@ -462,12 +467,12 @@ export default function RecruitmentPage() {
                               <CardContent>
                                 <div className="grid md:grid-cols-2 gap-4 text-sm">
                                   <div className="flex items-center gap-2 text-gray-600">
-                                    <MapPin className="w-4 h-4 text-purple-500" />
+                                    <MapPin className="w-4 h-4 text-blue-500" />
                                     <span>{t(job.locationKey)}</span>
                                   </div>
                                   <div className="flex items-center gap-2 text-gray-600">
-                                    <DollarSign className="w-4 h-4 text-green-500" />
-                                    <span className="font-semibold text-green-600">{t(job.salaryKey)}</span>
+                                    <DollarSign className="w-4 h-4 text-blue-500" />
+                                    <span className="font-semibold text-blue-600">{t(job.salaryKey)}</span>
                                   </div>
                                 </div>
                               </CardContent>
@@ -498,7 +503,7 @@ export default function RecruitmentPage() {
               </Card>
 
               {/* CTA Section */}
-              <Card className="bg-gradient-to-br from-purple-600 to-pink-600 text-white border-0 shadow-xl">
+              <Card className="bg-gradient-to-br from-blue-600 to-cyan-500 text-white border-0 shadow-xl">
                 <CardHeader>
                   <CardTitle className="text-3xl text-white">{t('recruitment.ctaTitle')}</CardTitle>
                   <CardDescription className="text-white/90 text-lg">
@@ -509,7 +514,7 @@ export default function RecruitmentPage() {
                   <div className="flex flex-col md:flex-row gap-4">
                     <Button
                       size="lg"
-                      className="bg-white text-purple-600 hover:bg-gray-100"
+                      className="bg-white text-blue-600 hover:bg-gray-100"
                       onClick={() => window.location.href = 'mailto:CV@icss.com.vn'}
                     >
                       <Mail className="mr-2 h-5 w-5" />

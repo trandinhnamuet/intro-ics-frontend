@@ -102,14 +102,6 @@ export function HeroSlider() {
                 "max-w-2xl space-y-6",
                 index === currentSlide && "animate-fade-in-up"
               )}>
-                {/* Tag */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30">
-                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-sm font-medium text-white">
-                    {t('home.hero.featured')}
-                  </span>
-                </div>
-
                 {/* Title */}
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
                   {t('home.hero.title')}

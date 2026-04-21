@@ -192,21 +192,21 @@ export default function AiSocPage() {
       title: processData?.[1]?.title || t('products.aiSoc.process.steps.1.title'),
       description: processData?.[1]?.description || t('products.aiSoc.process.steps.1.description'),
       icon: Brain,
-      color: "purple"
+      color: "blue"
     },
     {
       number: "03",
       title: processData?.[2]?.title || t('products.aiSoc.process.steps.2.title'),
       description: processData?.[2]?.description || t('products.aiSoc.process.steps.2.description'),
       icon: Search,
-      color: "emerald"
+      color: "blue"
     },
     {
       number: "04",
       title: processData?.[3]?.title || t('products.aiSoc.process.steps.3.title'),
       description: processData?.[3]?.description || t('products.aiSoc.process.steps.3.description'),
       icon: Zap,
-      color: "orange"
+      color: "blue"
     }
   ]
 
@@ -633,7 +633,7 @@ export default function AiSocPage() {
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 text-red-700 dark:text-red-300">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300">
                 <AlertTriangle className="w-4 h-4" />
                 {t('products.aiSoc.painPoints.badge')}
               </Badge>
@@ -652,15 +652,15 @@ export default function AiSocPage() {
               return (
                 <ScrollReveal key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
                   <Card className="p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden border-2 h-full flex flex-col">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
                     
                     <div className="relative space-y-6">
                       <div className="flex items-start justify-between">
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center shadow-lg shadow-red-500/30">
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
                           <IconComponent className="w-8 h-8 text-white" />
                         </div>
                         <div className="text-right">
-                          <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
+                          <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">
                             {challenge.stat}
                           </div>
                           <div className="text-sm text-muted-foreground">{challenge.statLabel}</div>
@@ -679,7 +679,7 @@ export default function AiSocPage() {
           </div>
 
           <ScrollReveal direction="up" delay={400}>
-            <div className="relative overflow-hidden rounded-3xl border-2 border-red-500/20">
+            <div className="relative overflow-hidden rounded-3xl border-2 border-blue-500/20">
               <Image
                 src="/AI SOC/anh2.jpg"
                 alt="Traditional SOC vs AI SOC"
@@ -687,7 +687,7 @@ export default function AiSocPage() {
                 height={400}
                 className="w-full h-64 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-red-950/90 via-orange-950/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-cyan-950/80 to-transparent" />
               <div className="absolute inset-0 flex items-center px-12">
                 <div className="max-w-2xl space-y-4">
                   <h3 className="text-3xl font-bold text-white">
@@ -752,8 +752,8 @@ export default function AiSocPage() {
               {/* Right Image */}
               <div className="space-y-6">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl blur-2xl opacity-20 animate-pulse" />
-                  <Card className="relative overflow-hidden border-2 border-amber-500/20 rounded-2xl shadow-2xl">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur-2xl opacity-20 animate-pulse" />
+                  <Card className="relative overflow-hidden border-2 border-blue-500/20 rounded-2xl shadow-2xl">
                     <Image
                       src="/AI SOC/Anh_gartner.png"
                       alt="Gartner Magic Quadrant 2025 - Gurucul Leader"
@@ -778,7 +778,7 @@ export default function AiSocPage() {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <Button size="lg" className="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold group">
+                  <Button size="lg" className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold group">
                     {t('products.aiSoc.gartnerRecognition.gartnerImage.reportCta')}
                     <ExternalLink className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -962,11 +962,11 @@ export default function AiSocPage() {
           {/* Visual Showcase */}
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/30 border border-purple-300 dark:border-purple-700 text-purple-700 dark:text-purple-300">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300">
                 <Cpu className="w-4 h-4" />
                 {t('products.aiSoc.features.badge')}
               </Badge>
-              <h2 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+              <h2 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
                 {componentsVisual.title}
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -984,9 +984,9 @@ export default function AiSocPage() {
                   {componentsVisual.items.map((item: any, idx: number) => {
                     const colorMap = [
                       { bg: 'from-blue-500 to-cyan-500', gradient: 'from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20', border: 'border-blue-200 dark:border-blue-800', number: 'text-blue-100 dark:text-blue-900' },
-                      { bg: 'from-purple-500 to-pink-500', gradient: 'from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20', border: 'border-purple-200 dark:border-purple-800', number: 'text-purple-100 dark:text-purple-900' },
-                      { bg: 'from-teal-500 to-emerald-500', gradient: 'from-teal-50 to-emerald-50 dark:from-teal-950/20 dark:to-emerald-950/20', border: 'border-teal-200 dark:border-teal-800', number: 'text-teal-100 dark:text-teal-900' },
-                      { bg: 'from-orange-500 to-red-500', gradient: 'from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20', border: 'border-orange-200 dark:border-orange-800', number: 'text-orange-100 dark:text-orange-900' }
+                      { bg: 'from-blue-600 to-sky-500', gradient: 'from-blue-50 to-sky-50 dark:from-blue-950/20 dark:to-sky-950/20', border: 'border-blue-200 dark:border-blue-800', number: 'text-blue-100 dark:text-blue-900' },
+                      { bg: 'from-cyan-500 to-blue-500', gradient: 'from-cyan-50 to-blue-50 dark:from-cyan-950/20 dark:to-blue-950/20', border: 'border-cyan-200 dark:border-cyan-800', number: 'text-cyan-100 dark:text-cyan-900' },
+                      { bg: 'from-sky-500 to-blue-600', gradient: 'from-sky-50 to-blue-50 dark:from-sky-950/20 dark:to-blue-950/20', border: 'border-sky-200 dark:border-sky-800', number: 'text-sky-100 dark:text-sky-900' }
                     ]
                     const colors = colorMap[idx] || colorMap[0]
                     const IconComponents = [Database, Brain, Bot, Zap]
@@ -1065,7 +1065,7 @@ export default function AiSocPage() {
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300">
                 <Workflow className="w-4 h-4" />
                 {t('products.aiSoc.process.badge')}
               </Badge>
@@ -1081,16 +1081,16 @@ export default function AiSocPage() {
           {/* Process Steps Flow */}
           <div className="relative">
             {/* Connection Line */}
-            <div className="absolute left-8 top-12 bottom-12 w-1 bg-gradient-to-b from-emerald-500 via-teal-500 to-cyan-500 hidden lg:block" />
+            <div className="absolute left-8 top-12 bottom-12 w-1 bg-gradient-to-b from-blue-500 via-cyan-500 to-sky-500 hidden lg:block" />
 
             <div className="space-y-8">
               {processSteps.map((step, idx) => {
                 const IconComponent = step.icon
                 const colorMap = {
                   blue: { bg: 'from-blue-500 to-cyan-500', border: 'border-blue-500/30', text: 'text-blue-600 dark:text-blue-400' },
-                  purple: { bg: 'from-purple-500 to-pink-500', border: 'border-purple-500/30', text: 'text-purple-600 dark:text-purple-400' },
-                  emerald: { bg: 'from-emerald-500 to-teal-500', border: 'border-emerald-500/30', text: 'text-emerald-600 dark:text-emerald-400' },
-                  orange: { bg: 'from-orange-500 to-red-500', border: 'border-orange-500/30', text: 'text-orange-600 dark:text-orange-400' }
+                  purple: { bg: 'from-blue-600 to-sky-500', border: 'border-blue-500/30', text: 'text-blue-600 dark:text-blue-400' },
+                  emerald: { bg: 'from-cyan-500 to-blue-500', border: 'border-cyan-500/30', text: 'text-cyan-600 dark:text-cyan-400' },
+                  orange: { bg: 'from-sky-500 to-blue-600', border: 'border-sky-500/30', text: 'text-sky-600 dark:text-sky-400' }
                 }
                 const colorClasses = colorMap[step.color as keyof typeof colorMap] || colorMap.blue
 
@@ -1115,9 +1115,9 @@ export default function AiSocPage() {
                             <p className="text-lg text-muted-foreground leading-relaxed">{step.description}</p>
                             
                             {/* Time Badge */}
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 border border-emerald-300 dark:border-emerald-700">
-                              <Zap className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                              <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 border border-blue-300 dark:border-blue-700">
+                              <Zap className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                              <span className="text-sm font-semibold text-blue-700 dark:text-blue-300">
                                 {idx === 0 ? processSpeeds.instant : idx === 3 ? processSpeeds.slow : processSpeeds.fast}
                               </span>
                             </div>
@@ -1138,7 +1138,7 @@ export default function AiSocPage() {
         <div className="container-responsive space-y-16">
           <ScrollReveal direction="up">
             <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 text-green-700 dark:text-green-300">
+              <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300">
                 <Gauge className="w-4 h-4" />
                 {t('products.aiSoc.roi.badge', 'ROI & Impact')}
               </Badge>
@@ -1156,10 +1156,10 @@ export default function AiSocPage() {
             {(t('products.aiSoc.whyIcs.benefits', { returnObjects: true }) as any[]).map((benefit: any, idx: number) => {
               const isExpanded = expandedRoiCard === idx
               const gradients = [
-                { bg: 'from-purple-500 to-pink-500', border: 'border-purple-200 dark:border-purple-800', text: 'text-purple-600 dark:text-purple-400' },
+                { bg: 'from-blue-500 to-cyan-500', border: 'border-blue-200 dark:border-blue-800', text: 'text-blue-600 dark:text-blue-400' },
                 { bg: 'from-cyan-500 to-blue-500', border: 'border-cyan-200 dark:border-cyan-800', text: 'text-cyan-600 dark:text-cyan-400' },
-                { bg: 'from-teal-500 to-emerald-500', border: 'border-teal-200 dark:border-teal-800', text: 'text-teal-600 dark:text-teal-400' },
-                { bg: 'from-amber-500 to-orange-500', border: 'border-amber-200 dark:border-amber-800', text: 'text-amber-600 dark:text-amber-400' }
+                { bg: 'from-sky-500 to-blue-600', border: 'border-sky-200 dark:border-sky-800', text: 'text-sky-600 dark:text-sky-400' },
+                { bg: 'from-blue-600 to-indigo-500', border: 'border-blue-200 dark:border-blue-800', text: 'text-blue-600 dark:text-blue-400' }
               ]
               const gradient = gradients[idx] || gradients[0]
 
@@ -1203,12 +1203,12 @@ export default function AiSocPage() {
 
           {/* Detailed Benefits */}
           <ScrollReveal direction="up">
-            <Card className="p-12 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 dark:from-green-950/20 dark:via-emerald-950/20 dark:to-teal-950/20 border-2 border-green-200 dark:border-green-800">
+            <Card className="p-12 bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50 dark:from-blue-950/20 dark:via-cyan-950/20 dark:to-sky-950/20 border-2 border-blue-200 dark:border-blue-800">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {[
-                  { ...roiDetails.cost, icon: DollarSign, gradient: 'from-green-500 to-emerald-500', checkColor: 'text-green-500' },
-                  { ...roiDetails.performance, icon: Zap, gradient: 'from-blue-500 to-cyan-500', checkColor: 'text-blue-500' },
-                  { ...roiDetails.team, icon: Users, gradient: 'from-purple-500 to-pink-500', checkColor: 'text-purple-500' }
+                  { ...roiDetails.cost, icon: DollarSign, gradient: 'from-blue-500 to-cyan-500', checkColor: 'text-blue-500' },
+                  { ...roiDetails.performance, icon: Zap, gradient: 'from-cyan-500 to-blue-500', checkColor: 'text-cyan-500' },
+                  { ...roiDetails.team, icon: Users, gradient: 'from-sky-500 to-blue-600', checkColor: 'text-sky-500' }
                 ].map((section, idx) => {
                   const IconComponent = section.icon
                   return (
@@ -1292,21 +1292,21 @@ export default function AiSocPage() {
       <Section spacing="sm" background="default">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 p-16 lg:p-20 text-center border-2 border-white/10">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-950 p-16 lg:p-20 text-center border-2 border-white/10">
               {/* Background Effects */}
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl animate-pulse animation-delay-2000" />
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl animate-pulse animation-delay-2000" />
               </div>
 
               <div className="relative z-10 space-y-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm">
                   <Sparkles className="w-4 h-4 text-blue-400" />
                   <span className="text-sm font-semibold text-blue-300">{finalCta.eyebrow}</span>
                 </div>
 
                 <div className="space-y-4">
-                  <h2 className="text-5xl p-1 lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                  <h2 className="text-5xl p-1 lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
                     {finalCta.title}
                   </h2>
                   <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
@@ -1330,7 +1330,7 @@ export default function AiSocPage() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <Link href="/lien-he">
-                    <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg h-16 px-8 group shadow-lg shadow-blue-500/50">
+                    <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold text-lg h-16 px-8 group shadow-lg shadow-blue-500/50">
                       {finalCta.primaryCta}
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>

@@ -20,9 +20,9 @@ import { useTranslation } from 'react-i18next'
 export default function Page() {
   const { t } = useTranslation()
   const featuredStats = [
-    { icon: Building2, value: "50+", label: t('home.stats.enterpriseClients'), color: "from-purple-500 to-pink-500" },
-    { icon: Shield, value: "24/7", label: t('home.stats.cybersecuritySupport'), color: "from-orange-500 to-red-500" },
-    { icon: Award, value: "99.9%", label: t('home.stats.uptimeGuarantee'), color: "from-green-500 to-emerald-500" },
+    { icon: Building2, value: "50+", label: t('home.stats.enterpriseClients'), color: "from-blue-500 to-cyan-500" },
+    { icon: Shield, value: "24/7", label: t('home.stats.cybersecuritySupport'), color: "from-blue-500 to-cyan-500" },
+    { icon: Award, value: "99.9%", label: t('home.stats.uptimeGuarantee'), color: "from-blue-500 to-cyan-500" },
     { icon: TrendingUp, value: "4+", label: t('home.stats.yearsExperience'), color: "from-blue-500 to-cyan-500" },
   ]
 
@@ -80,14 +80,14 @@ export default function Page() {
       title: t('home.featuredSolutions.smartFactoryTitle'),
       description: t('home.featuredSolutions.smartFactoryDesc'),
       image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format&fit=crop",
-      gradient: "from-purple-600 to-pink-500"
+      gradient: "from-blue-600 to-cyan-500"
     },
     {
       icon: Building2,
       title: t('home.featuredSolutions.smartBuildingTitle'),
       description: t('home.featuredSolutions.smartBuildingDesc'),
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop",
-      gradient: "from-orange-600 to-red-500"
+      gradient: "from-blue-600 to-cyan-500"
     },
   ]
 
