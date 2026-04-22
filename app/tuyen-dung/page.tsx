@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { ChangeEvent, FormEvent, useState } from "react"
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 import { Header } from "@/components/header"
@@ -25,7 +25,8 @@ import {
   Heart,
   Star,
   CheckCircle2,
-  ArrowRight
+  ArrowRight,
+  FileText
 } from "lucide-react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -34,6 +35,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { recruitmentService } from "@/services/recruitment.service"
+import { useToast } from "@/hooks/use-toast"
 
 const jobIcons = {
   "marketing-staff": Megaphone,
@@ -67,24 +72,20 @@ interface JobListing {
   category: string
 }
 
+interface ApplicationFormState {
+  fullName: string
+  dateOfBirth: string
+  phoneNumber: string
+  email: string
+  position: string
+  experienceYears: string
+  profileLink: string
+  cvFile: File | null
+}
+
 export default function RecruitmentPage() {
   const { t } = useTranslation()
-
-  const buildGmailComposeUrl = (subject: string, to = "info@icss.com.vn") => {
-    const params = new URLSearchParams({
-      view: "cm",
-      fs: "1",
-      to,
-      su: subject,
-    })
-
-    return `https://mail.google.com/mail/?${params.toString()}`
-  }
-
-  const buildJobGmailUrl = (title: string) => {
-    const subject = `ICS - ${title} - ${t('recruitment.yourName')}`
-    return buildGmailComposeUrl(subject)
-  }
+  const { toast } = useToast()
   
   const jobListings: JobListing[] = [
     {
@@ -166,8 +167,138 @@ export default function RecruitmentPage() {
 
   const [selectedJob, setSelectedJob] = useState(jobListings[0])
   const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const [isApplyDialogOpen, setIsApplyDialogOpen] = useState(false)
+  const [isSubmittingApplication, setIsSubmittingApplication] = useState(false)
+  const [applicationForm, setApplicationForm] = useState<ApplicationFormState>({
+    fullName: "",
+    dateOfBirth: "",
+    phoneNumber: "",
+    email: "",
+    position: "",
+    experienceYears: "",
+    profileLink: "",
+    cvFile: null,
+  })
   const SelectedIcon = jobIcons[selectedJob.id as keyof typeof jobIcons] || Briefcase
   const selectedColor = jobColors[selectedJob.id as keyof typeof jobColors] || "bg-gradient-to-br from-blue-600 to-cyan-500"
+
+  const openApplyDialog = (job?: JobListing) => {
+    const selectedPosition = job ? t(job.titleKey) : ""
+    setApplicationForm((prev) => ({
+      ...prev,
+      position: selectedPosition || prev.position,
+    }))
+    setIsApplyDialogOpen(true)
+  }
+
+  const updateApplicationField = (field: keyof ApplicationFormState, value: string | File | null) => {
+    setApplicationForm((prev) => ({
+      ...prev,
+      [field]: value,
+    }))
+  }
+
+  const handleCvChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0] || null
+
+    if (!file) {
+      updateApplicationField('cvFile', null)
+      return
+    }
+
+    if (file.type !== 'application/pdf') {
+      toast({
+        title: 'File không hợp lệ',
+        description: 'Vui lòng tải lên CV định dạng PDF.',
+        variant: 'destructive',
+      })
+      event.target.value = ''
+      updateApplicationField('cvFile', null)
+      return
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      toast({
+        title: 'File quá lớn',
+        description: 'Dung lượng CV tối đa là 5MB.',
+        variant: 'destructive',
+      })
+      event.target.value = ''
+      updateApplicationField('cvFile', null)
+      return
+    }
+
+    updateApplicationField('cvFile', file)
+  }
+
+  const handleApplicationSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    const requiredFields: Array<keyof ApplicationFormState> = [
+      'fullName',
+      'dateOfBirth',
+      'phoneNumber',
+      'email',
+      'position',
+      'experienceYears',
+    ]
+
+    const hasMissingRequiredField = requiredFields.some((field) => {
+      const value = applicationForm[field]
+      return typeof value !== 'string' || !value.trim()
+    })
+
+    if (hasMissingRequiredField || !applicationForm.cvFile) {
+      toast({
+        title: 'Thiếu thông tin',
+        description: 'Vui lòng điền đầy đủ các trường bắt buộc và tải CV PDF.',
+        variant: 'destructive',
+      })
+      return
+    }
+
+    setIsSubmittingApplication(true)
+    try {
+      await recruitmentService.submitApplication(
+        {
+          fullName: applicationForm.fullName.trim(),
+          dateOfBirth: applicationForm.dateOfBirth,
+          phoneNumber: applicationForm.phoneNumber.trim(),
+          email: applicationForm.email.trim(),
+          position: applicationForm.position.trim(),
+          experienceYears: applicationForm.experienceYears.trim(),
+          profileLink: applicationForm.profileLink.trim() || undefined,
+        },
+        applicationForm.cvFile,
+      )
+
+      toast({
+        title: 'Nộp đơn thành công',
+        description: 'Hồ sơ của bạn đã được gửi đến cv@icss.com.vn.',
+      })
+
+      setApplicationForm({
+        fullName: "",
+        dateOfBirth: "",
+        phoneNumber: "",
+        email: "",
+        position: "",
+        experienceYears: "",
+        profileLink: "",
+        cvFile: null,
+      })
+      setIsApplyDialogOpen(false)
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Không thể gửi hồ sơ lúc này.'
+      toast({
+        title: 'Nộp đơn thất bại',
+        description: message,
+        variant: 'destructive',
+      })
+    } finally {
+      setIsSubmittingApplication(false)
+    }
+  }
 
   return (
     <>
@@ -374,20 +505,11 @@ export default function RecruitmentPage() {
                         </h3>
                         <div className="space-y-3">
                           <div className="flex items-start gap-3">
-                            <Mail className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                            <FileText className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                             <div>
-                              <div className="font-semibold">{t('recruitment.emailLabel')}:</div>
-                              <a
-                                href={buildJobGmailUrl(t(selectedJob.titleKey))}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-600 hover:underline"
-                              >
-                                info@icss.com.vn
-                              </a>
-                              <div className="text-sm text-gray-600 mt-1">
-                                {t('recruitment.subject')}: <span className="font-mono bg-white px-2 py-1 rounded">ICS - {t(selectedJob.titleKey)} - {t('recruitment.yourName')}</span>
-                              </div>
+                              <div className="font-semibold">Nộp hồ sơ trực tiếp:</div>
+                              <div className="text-gray-700">Nhấn Ứng tuyển ngay để mở form nộp CV cho vị trí này.</div>
+                              <div className="text-sm text-gray-600 mt-1">Hồ sơ sẽ được gửi đến: cv@icss.com.vn</div>
                             </div>
                           </div>
                           <div className="flex items-start gap-3">
@@ -414,18 +536,151 @@ export default function RecruitmentPage() {
                   <div className="flex gap-2 mt-4">
                     <Button
                       className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600"
-                      asChild
+                      onClick={() => openApplyDialog(selectedJob)}
                     >
-                      <a href={buildJobGmailUrl(t(selectedJob.titleKey))} target="_blank" rel="noopener noreferrer">
-                        <Mail className="mr-2 w-4 h-4" />
+                      <>
+                        <FileText className="mr-2 w-4 h-4" />
                         {t('recruitment.applyNow')}
                         <ArrowRight className="ml-2 w-4 h-4" />
-                      </a>
+                      </>
                     </Button>
                     <Button variant="outline" onClick={() => setIsDialogOpen(false)}>
                       {t('common.close')}
                     </Button>
                   </div>
+                </DialogContent>
+              </Dialog>
+
+              <Dialog open={isApplyDialogOpen} onOpenChange={setIsApplyDialogOpen}>
+                <DialogContent className="w-[96vw] max-w-[96vw] lg:max-w-2xl max-h-[92vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle>Ứng tuyển vị trí</DialogTitle>
+                    <DialogDescription>
+                      Điền đầy đủ thông tin bên dưới để gửi hồ sơ đến cv@icss.com.vn
+                    </DialogDescription>
+                  </DialogHeader>
+
+                  <form className="space-y-4" onSubmit={handleApplicationSubmit}>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="fullName">Họ và tên *</Label>
+                        <Input
+                          id="fullName"
+                          value={applicationForm.fullName}
+                          onChange={(event) => updateApplicationField('fullName', event.target.value)}
+                          placeholder="Nhập họ và tên"
+                          required
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="dateOfBirth">Ngày sinh *</Label>
+                        <Input
+                          id="dateOfBirth"
+                          type="date"
+                          value={applicationForm.dateOfBirth}
+                          onChange={(event) => updateApplicationField('dateOfBirth', event.target.value)}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="phoneNumber">Số điện thoại *</Label>
+                        <Input
+                          id="phoneNumber"
+                          type="tel"
+                          value={applicationForm.phoneNumber}
+                          onChange={(event) => updateApplicationField('phoneNumber', event.target.value)}
+                          placeholder="Nhập số điện thoại"
+                          required
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="email">Email cá nhân *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={applicationForm.email}
+                          onChange={(event) => updateApplicationField('email', event.target.value)}
+                          placeholder="example@email.com"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="position">Vị trí ứng tuyển *</Label>
+                        <Input
+                          id="position"
+                          value={applicationForm.position}
+                          onChange={(event) => updateApplicationField('position', event.target.value)}
+                          placeholder="Nhập vị trí ứng tuyển"
+                          required
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="experienceYears">Số năm kinh nghiệm Công nghệ/B2B *</Label>
+                        <Input
+                          id="experienceYears"
+                          type="number"
+                          min="0"
+                          step="0.5"
+                          value={applicationForm.experienceYears}
+                          onChange={(event) => updateApplicationField('experienceYears', event.target.value)}
+                          placeholder="Ví dụ: 2"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="profileLink">Link LinkedIn/Portfolio (không bắt buộc)</Label>
+                      <Input
+                        id="profileLink"
+                        type="url"
+                        value={applicationForm.profileLink}
+                        onChange={(event) => updateApplicationField('profileLink', event.target.value)}
+                        placeholder="https://linkedin.com/in/..."
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="cvFile">Tải lên CV của bạn (PDF) *</Label>
+                      <Input
+                        id="cvFile"
+                        type="file"
+                        accept="application/pdf"
+                        onChange={handleCvChange}
+                        required
+                      />
+                      {applicationForm.cvFile && (
+                        <p className="text-sm text-gray-600">Đã chọn: {applicationForm.cvFile.name}</p>
+                      )}
+                    </div>
+
+                    <div className="flex flex-col-reverse sm:flex-row gap-2 sm:justify-end pt-2">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => setIsApplyDialogOpen(false)}
+                        disabled={isSubmittingApplication}
+                      >
+                        Hủy
+                      </Button>
+                      <Button
+                        type="submit"
+                        className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600"
+                        disabled={isSubmittingApplication}
+                      >
+                        {isSubmittingApplication ? 'Đang nộp...' : 'Nộp đơn'}
+                      </Button>
+                    </div>
+                  </form>
                 </DialogContent>
               </Dialog>
 
@@ -512,16 +767,10 @@ export default function RecruitmentPage() {
                                 </Button>
                                 <Button
                                   variant="outline"
-                                  asChild
+                                  onClick={() => openApplyDialog(job)}
+                                  aria-label={`${t('recruitment.applyNow')} ${t(job.titleKey)}`}
                                 >
-                                  <a
-                                    href={buildJobGmailUrl(t(job.titleKey))}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={`${t('recruitment.applyNow')} ${t(job.titleKey)}`}
-                                  >
-                                    <Mail className="w-4 h-4" />
-                                  </a>
+                                  <FileText className="w-4 h-4" />
                                 </Button>
                               </CardFooter>
                             </Card>
@@ -545,13 +794,13 @@ export default function RecruitmentPage() {
                     <Button
                       size="lg"
                       className="bg-white text-blue-600 hover:bg-gray-100"
-                      asChild
+                      onClick={() => openApplyDialog()}
                     >
-                      <a href={buildGmailComposeUrl(`ICS - ${t('recruitment.sendCVNow')}`)} target="_blank" rel="noopener noreferrer">
-                        <Mail className="mr-2 h-5 w-5" />
+                      <>
+                        <FileText className="mr-2 h-5 w-5" />
                         {t('recruitment.sendCVNow')}
                         <ArrowRight className="ml-2 h-5 w-5" />
-                      </a>
+                      </>
                     </Button>
                     <Button
                       size="lg"
