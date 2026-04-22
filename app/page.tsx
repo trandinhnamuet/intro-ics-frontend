@@ -168,6 +168,8 @@ export default function Page() {
           </div>
         </Section>
 
+        <NewsSection />
+
         <ProductsSection />
 
         {/* Featured Solutions Section */}
@@ -322,8 +324,6 @@ export default function Page() {
           </div>
         </Section>
 
-        <NewsSection />
-        
         {/* CTA Section */}
         <Section spacing="sm" background="default">
           <div className="container-responsive">
