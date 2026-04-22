@@ -70,9 +70,20 @@ interface JobListing {
 export default function RecruitmentPage() {
   const { t } = useTranslation()
 
-  const buildJobMailto = (title: string) => {
+  const buildGmailComposeUrl = (subject: string, to = "info@icss.com.vn") => {
+    const params = new URLSearchParams({
+      view: "cm",
+      fs: "1",
+      to,
+      su: subject,
+    })
+
+    return `https://mail.google.com/mail/?${params.toString()}`
+  }
+
+  const buildJobGmailUrl = (title: string) => {
     const subject = `ICS - ${title} - ${t('recruitment.yourName')}`
-    return `mailto:info@icss.com.vn?subject=${encodeURIComponent(subject)}`
+    return buildGmailComposeUrl(subject)
   }
   
   const jobListings: JobListing[] = [
@@ -366,7 +377,12 @@ export default function RecruitmentPage() {
                             <Mail className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                             <div>
                               <div className="font-semibold">{t('recruitment.emailLabel')}:</div>
-                              <a href="mailto:info@icss.com.vn" className="text-blue-600 hover:underline">
+                              <a
+                                href={buildJobGmailUrl(t(selectedJob.titleKey))}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:underline"
+                              >
                                 info@icss.com.vn
                               </a>
                               <div className="text-sm text-gray-600 mt-1">
@@ -400,7 +416,7 @@ export default function RecruitmentPage() {
                       className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600"
                       asChild
                     >
-                      <a href={buildJobMailto(t(selectedJob.titleKey))}>
+                      <a href={buildJobGmailUrl(t(selectedJob.titleKey))} target="_blank" rel="noopener noreferrer">
                         <Mail className="mr-2 w-4 h-4" />
                         {t('recruitment.applyNow')}
                         <ArrowRight className="ml-2 w-4 h-4" />
@@ -498,7 +514,12 @@ export default function RecruitmentPage() {
                                   variant="outline"
                                   asChild
                                 >
-                                  <a href={buildJobMailto(t(job.titleKey))} aria-label={`${t('recruitment.applyNow')} ${t(job.titleKey)}`}>
+                                  <a
+                                    href={buildJobGmailUrl(t(job.titleKey))}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`${t('recruitment.applyNow')} ${t(job.titleKey)}`}
+                                  >
                                     <Mail className="w-4 h-4" />
                                   </a>
                                 </Button>
@@ -524,11 +545,13 @@ export default function RecruitmentPage() {
                     <Button
                       size="lg"
                       className="bg-white text-blue-600 hover:bg-gray-100"
-                      onClick={() => window.location.href = 'mailto:info@icss.com.vn'}
+                      asChild
                     >
-                      <Mail className="mr-2 h-5 w-5" />
-                      {t('recruitment.sendCVNow')}
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                      <a href={buildGmailComposeUrl(`ICS - ${t('recruitment.sendCVNow')}`)} target="_blank" rel="noopener noreferrer">
+                        <Mail className="mr-2 h-5 w-5" />
+                        {t('recruitment.sendCVNow')}
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </a>
                     </Button>
                     <Button
                       size="lg"
