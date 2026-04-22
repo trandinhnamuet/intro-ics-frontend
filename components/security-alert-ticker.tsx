@@ -122,7 +122,7 @@ export function SecurityAlertTicker() {
     const load = async () => {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3007"}/api/security-alerts/latest?count=3`
+          `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3006"}/api/security-alerts/latest?count=3`
         )
         if (res.ok) {
           const data: SecurityAlert[] = await res.json()

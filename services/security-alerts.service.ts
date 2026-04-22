@@ -44,7 +44,7 @@ export interface UpdateSecurityAlertDto {
   alert_date?: string
 }
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3007'
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3006'
 
 class SecurityAlertsService {
   private async fetchApi(endpoint: string, options: RequestInit = {}) {

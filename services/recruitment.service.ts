@@ -8,7 +8,7 @@ interface RecruitmentApplicationPayload {
   profileLink?: string
 }
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3007'
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3006'
 
 class RecruitmentService {
   async submitApplication(
