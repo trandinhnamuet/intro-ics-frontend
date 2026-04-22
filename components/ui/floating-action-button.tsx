@@ -53,7 +53,7 @@ export function FloatingActionButton() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-3 pointer-events-none">
       {/* Action Buttons */}
       <div className={cn(
         "flex flex-col gap-3 transition-all duration-300",
@@ -65,7 +65,7 @@ export function FloatingActionButton() {
             href={action.href}
             target={action.href.startsWith('http') ? '_blank' : undefined}
             rel={action.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-            className="group flex items-center gap-3"
+            className="group flex items-center gap-3 pointer-events-auto"
           >
             <span className="bg-white/95 backdrop-blur-sm shadow-lg px-4 py-2 rounded-full text-sm font-semibold text-gray-800 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
               {action.label}
@@ -83,7 +83,7 @@ export function FloatingActionButton() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-xl"
+        className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-xl pointer-events-auto"
         aria-label="Scroll to top"
       >
         <ChevronUp className="w-6 h-6" />
@@ -93,7 +93,7 @@ export function FloatingActionButton() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-red-500 shadow-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-2xl",
+          "w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-red-500 shadow-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-2xl pointer-events-auto",
           isOpen && "rotate-45"
         )}
         aria-label="Contact options"

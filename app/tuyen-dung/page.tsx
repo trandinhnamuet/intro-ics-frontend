@@ -69,6 +69,11 @@ interface JobListing {
 
 export default function RecruitmentPage() {
   const { t } = useTranslation()
+
+  const buildJobMailto = (title: string) => {
+    const subject = `ICS - ${title} - ${t('recruitment.yourName')}`
+    return `mailto:info@icss.com.vn?subject=${encodeURIComponent(subject)}`
+  }
   
   const jobListings: JobListing[] = [
     {
@@ -393,11 +398,13 @@ export default function RecruitmentPage() {
                   <div className="flex gap-2 mt-4">
                     <Button
                       className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600"
-                      onClick={() => window.location.href = `mailto:info@icss.com.vn?subject=ICS - ${t(selectedJob.titleKey)} - ${t('recruitment.yourName')}`}
+                      asChild
                     >
-                      <Mail className="mr-2 w-4 h-4" />
-                      {t('recruitment.applyNow')}
-                      <ArrowRight className="ml-2 w-4 h-4" />
+                      <a href={buildJobMailto(t(selectedJob.titleKey))}>
+                        <Mail className="mr-2 w-4 h-4" />
+                        {t('recruitment.applyNow')}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </a>
                     </Button>
                     <Button variant="outline" onClick={() => setIsDialogOpen(false)}>
                       {t('common.close')}
@@ -489,9 +496,11 @@ export default function RecruitmentPage() {
                                 </Button>
                                 <Button
                                   variant="outline"
-                                  onClick={() => window.location.href = `mailto:info@icss.com.vn?subject=ICS - ${t(job.titleKey)} - ${t('recruitment.yourName')}`}
+                                  asChild
                                 >
-                                  <Mail className="w-4 h-4" />
+                                  <a href={buildJobMailto(t(job.titleKey))} aria-label={`${t('recruitment.applyNow')} ${t(job.titleKey)}`}>
+                                    <Mail className="w-4 h-4" />
+                                  </a>
                                 </Button>
                               </CardFooter>
                             </Card>
