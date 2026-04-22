@@ -179,6 +179,9 @@ export default function RecruitmentPage() {
     profileLink: "",
     cvFile: null,
   })
+
+  const positionOptions = jobListings.map((job) => t(job.titleKey))
+
   const SelectedIcon = jobIcons[selectedJob.id as keyof typeof jobIcons] || Briefcase
   const selectedColor = jobColors[selectedJob.id as keyof typeof jobColors] || "bg-gradient-to-br from-blue-600 to-cyan-500"
 
@@ -186,7 +189,7 @@ export default function RecruitmentPage() {
     const selectedPosition = job ? t(job.titleKey) : ""
     setApplicationForm((prev) => ({
       ...prev,
-      position: selectedPosition || prev.position,
+      position: selectedPosition,
     }))
     setIsApplyDialogOpen(true)
   }
@@ -614,13 +617,23 @@ export default function RecruitmentPage() {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="position">Vị trí ứng tuyển *</Label>
-                        <Input
+                        <select
                           id="position"
+                          name="position"
                           value={applicationForm.position}
                           onChange={(event) => updateApplicationField('position', event.target.value)}
-                          placeholder="Nhập vị trí ứng tuyển"
+                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           required
-                        />
+                        >
+                          <option value="" disabled>
+                            Chọn vị trí ứng tuyển
+                          </option>
+                          {positionOptions.map((position) => (
+                            <option key={position} value={position}>
+                              {position}
+                            </option>
+                          ))}
+                        </select>
                       </div>
 
                       <div className="space-y-2">
