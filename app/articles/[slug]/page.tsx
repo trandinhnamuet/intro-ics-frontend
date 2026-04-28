@@ -16,6 +16,9 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { cn } from '@/lib/utils'
+import 'react-quill/dist/quill.snow.css'
+import '@/styles/quill-custom.css'
+import '@/styles/quill-viewer.css'
 
 export default function ArticleDetailPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -240,24 +243,12 @@ export default function ArticleDetailPage() {
 
             {/* Article Body */}
             <ScrollReveal direction="up">
-              <div
-                className="prose prose-lg max-w-none
-                  prose-headings:font-bold prose-headings:tracking-tight
-                  prose-h1:text-4xl prose-h1:mb-6 prose-h1:mt-12
-                  prose-h2:text-3xl prose-h2:mb-4 prose-h2:mt-10 prose-h2:pb-2 prose-h2:border-b prose-h2:border-border
-                  prose-h3:text-2xl prose-h3:mb-3 prose-h3:mt-8
-                  prose-p:text-base prose-p:leading-relaxed prose-p:mb-6
-                  prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                  prose-strong:font-bold prose-strong:text-foreground
-                  prose-ul:my-6 prose-ol:my-6
-                  prose-li:mb-2
-                  prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8
-                  prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-muted/30 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
-                  prose-code:bg-muted prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
-                  prose-pre:bg-muted prose-pre:border prose-pre:border-border
-                  dark:prose-invert"
-                dangerouslySetInnerHTML={{ __html: article.content }}
-              />
+              <div className="ql-snow">
+                <div
+                  className="ql-editor article-content text-foreground"
+                  dangerouslySetInnerHTML={{ __html: article.content }}
+                />
+              </div>
             </ScrollReveal>
           </article>
 
