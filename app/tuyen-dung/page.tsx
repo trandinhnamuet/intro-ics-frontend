@@ -43,7 +43,13 @@ import { useToast } from "@/hooks/use-toast"
 const jobIcons = {
   "marketing-staff": Megaphone,
   "sales-staff": TrendingUp,
-  "security-engineer": Shield,
+  "junior-data-engineer": Code,
+  "junior-data-governance": FileText,
+  "soc-analyst-tier-1": Shield,
+  "soc-analyst-tier-2": Shield,
+  "siem-engineer": Shield,
+  "pentester-presales": Shield,
+  "junior-data-modeler": Code,
   "marketing-director": Target,
   "sales-director": Users
 }
@@ -51,7 +57,13 @@ const jobIcons = {
 const jobColors = {
   "marketing-staff": "bg-gradient-to-br from-blue-600 to-cyan-500",
   "sales-staff": "bg-gradient-to-br from-blue-600 to-cyan-500",
-  "security-engineer": "bg-gradient-to-br from-blue-600 to-cyan-500",
+  "junior-data-engineer": "bg-gradient-to-br from-blue-600 to-cyan-500",
+  "junior-data-governance": "bg-gradient-to-br from-blue-600 to-cyan-500",
+  "soc-analyst-tier-1": "bg-gradient-to-br from-blue-600 to-cyan-500",
+  "soc-analyst-tier-2": "bg-gradient-to-br from-blue-600 to-cyan-500",
+  "siem-engineer": "bg-gradient-to-br from-blue-600 to-cyan-500",
+  "pentester-presales": "bg-gradient-to-br from-blue-600 to-cyan-500",
+  "junior-data-modeler": "bg-gradient-to-br from-blue-600 to-cyan-500",
   "marketing-director": "bg-gradient-to-br from-blue-600 to-cyan-500",
   "sales-director": "bg-gradient-to-br from-blue-600 to-cyan-500"
 }
@@ -119,18 +131,108 @@ export default function RecruitmentPage() {
       category: "sales"
     },
     {
-      id: "security-engineer",
-      titleKey: "recruitment.jobs.securityEngineer.title",
-      departmentKey: "recruitment.jobs.securityEngineer.department",
-      typeKey: "recruitment.jobs.securityEngineer.type",
-      levelKey: "recruitment.jobs.securityEngineer.level",
-      salaryKey: "recruitment.jobs.securityEngineer.salary",
-      locationKey: "recruitment.jobs.securityEngineer.location",
-      descriptionKey: "recruitment.jobs.securityEngineer.description",
-      missionKey: "recruitment.jobs.securityEngineer.mission",
-      responsibilitiesKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.securityEngineer.responsibilities.${i}`),
-      requirementsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.securityEngineer.requirements.${i}`),
-      benefitsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.securityEngineer.benefits.${i}`),
+      id: "junior-data-engineer",
+      titleKey: "recruitment.jobs.juniorDataEngineer.title",
+      departmentKey: "recruitment.jobs.juniorDataEngineer.department",
+      typeKey: "recruitment.jobs.juniorDataEngineer.type",
+      levelKey: "recruitment.jobs.juniorDataEngineer.level",
+      salaryKey: "recruitment.jobs.juniorDataEngineer.salary",
+      locationKey: "recruitment.jobs.juniorDataEngineer.location",
+      descriptionKey: "recruitment.jobs.juniorDataEngineer.description",
+      missionKey: "recruitment.jobs.juniorDataEngineer.mission",
+      responsibilitiesKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.juniorDataEngineer.responsibilities.${i}`),
+      requirementsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.juniorDataEngineer.requirements.${i}`),
+      benefitsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.juniorDataEngineer.benefits.${i}`),
+      category: "tech"
+    },
+    {
+      id: "junior-data-governance",
+      titleKey: "recruitment.jobs.juniorDataGovernance.title",
+      departmentKey: "recruitment.jobs.juniorDataGovernance.department",
+      typeKey: "recruitment.jobs.juniorDataGovernance.type",
+      levelKey: "recruitment.jobs.juniorDataGovernance.level",
+      salaryKey: "recruitment.jobs.juniorDataGovernance.salary",
+      locationKey: "recruitment.jobs.juniorDataGovernance.location",
+      descriptionKey: "recruitment.jobs.juniorDataGovernance.description",
+      missionKey: "recruitment.jobs.juniorDataGovernance.mission",
+      responsibilitiesKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.juniorDataGovernance.responsibilities.${i}`),
+      requirementsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.juniorDataGovernance.requirements.${i}`),
+      benefitsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.juniorDataGovernance.benefits.${i}`),
+      category: "tech"
+    },
+    {
+      id: "soc-analyst-tier-1",
+      titleKey: "recruitment.jobs.socAnalystTier1.title",
+      departmentKey: "recruitment.jobs.socAnalystTier1.department",
+      typeKey: "recruitment.jobs.socAnalystTier1.type",
+      levelKey: "recruitment.jobs.socAnalystTier1.level",
+      salaryKey: "recruitment.jobs.socAnalystTier1.salary",
+      locationKey: "recruitment.jobs.socAnalystTier1.location",
+      descriptionKey: "recruitment.jobs.socAnalystTier1.description",
+      missionKey: "recruitment.jobs.socAnalystTier1.mission",
+      responsibilitiesKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.socAnalystTier1.responsibilities.${i}`),
+      requirementsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.socAnalystTier1.requirements.${i}`),
+      benefitsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.socAnalystTier1.benefits.${i}`),
+      category: "tech"
+    },
+    {
+      id: "soc-analyst-tier-2",
+      titleKey: "recruitment.jobs.socAnalystTier2.title",
+      departmentKey: "recruitment.jobs.socAnalystTier2.department",
+      typeKey: "recruitment.jobs.socAnalystTier2.type",
+      levelKey: "recruitment.jobs.socAnalystTier2.level",
+      salaryKey: "recruitment.jobs.socAnalystTier2.salary",
+      locationKey: "recruitment.jobs.socAnalystTier2.location",
+      descriptionKey: "recruitment.jobs.socAnalystTier2.description",
+      missionKey: "recruitment.jobs.socAnalystTier2.mission",
+      responsibilitiesKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.socAnalystTier2.responsibilities.${i}`),
+      requirementsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.socAnalystTier2.requirements.${i}`),
+      benefitsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.socAnalystTier2.benefits.${i}`),
+      category: "tech"
+    },
+    {
+      id: "siem-engineer",
+      titleKey: "recruitment.jobs.siemEngineer.title",
+      departmentKey: "recruitment.jobs.siemEngineer.department",
+      typeKey: "recruitment.jobs.siemEngineer.type",
+      levelKey: "recruitment.jobs.siemEngineer.level",
+      salaryKey: "recruitment.jobs.siemEngineer.salary",
+      locationKey: "recruitment.jobs.siemEngineer.location",
+      descriptionKey: "recruitment.jobs.siemEngineer.description",
+      missionKey: "recruitment.jobs.siemEngineer.mission",
+      responsibilitiesKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.siemEngineer.responsibilities.${i}`),
+      requirementsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.siemEngineer.requirements.${i}`),
+      benefitsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.siemEngineer.benefits.${i}`),
+      category: "tech"
+    },
+    {
+      id: "pentester-presales",
+      titleKey: "recruitment.jobs.pentesterPresales.title",
+      departmentKey: "recruitment.jobs.pentesterPresales.department",
+      typeKey: "recruitment.jobs.pentesterPresales.type",
+      levelKey: "recruitment.jobs.pentesterPresales.level",
+      salaryKey: "recruitment.jobs.pentesterPresales.salary",
+      locationKey: "recruitment.jobs.pentesterPresales.location",
+      descriptionKey: "recruitment.jobs.pentesterPresales.description",
+      missionKey: "recruitment.jobs.pentesterPresales.mission",
+      responsibilitiesKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.pentesterPresales.responsibilities.${i}`),
+      requirementsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.pentesterPresales.requirements.${i}`),
+      benefitsKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.pentesterPresales.benefits.${i}`),
+      category: "tech"
+    },
+    {
+      id: "junior-data-modeler",
+      titleKey: "recruitment.jobs.juniorDataModeler.title",
+      departmentKey: "recruitment.jobs.juniorDataModeler.department",
+      typeKey: "recruitment.jobs.juniorDataModeler.type",
+      levelKey: "recruitment.jobs.juniorDataModeler.level",
+      salaryKey: "recruitment.jobs.juniorDataModeler.salary",
+      locationKey: "recruitment.jobs.juniorDataModeler.location",
+      descriptionKey: "recruitment.jobs.juniorDataModeler.description",
+      missionKey: "recruitment.jobs.juniorDataModeler.mission",
+      responsibilitiesKeys: Array(7).fill(0).map((_, i) => `recruitment.jobs.juniorDataModeler.responsibilities.${i}`),
+      requirementsKeys: Array(6).fill(0).map((_, i) => `recruitment.jobs.juniorDataModeler.requirements.${i}`),
+      benefitsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.juniorDataModeler.benefits.${i}`),
       category: "tech"
     },
     {
@@ -714,7 +816,7 @@ export default function RecruitmentPage() {
                       <TabsTrigger value="all">{t('common.all')} ({jobListings.length})</TabsTrigger>
                       <TabsTrigger value="marketing">{t('recruitment.marketing')} (2)</TabsTrigger>
                       <TabsTrigger value="sales">{t('recruitment.sales')} (2)</TabsTrigger>
-                      <TabsTrigger value="tech">{t('recruitment.tech')} (1)</TabsTrigger>
+                      <TabsTrigger value="tech">{t('recruitment.tech')} (7)</TabsTrigger>
                     </TabsList>
 
                     {["all", "marketing", "sales", "tech"].map((tabValue) => (

@@ -549,35 +549,211 @@
           "Trang bị đầy đủ thiết bị, phụ cấp điện thoại"
         ]
       },
-      "securityEngineer": {
-        "title": "Kỹ sư Bảo mật (Security Engineer)",
-        "department": "Kỹ thuật",
+      "juniorDataEngineer": {
+        "title": "Junior Data Engineer",
+        "department": "Dữ liệu",
         "type": "Toàn thời gian",
-        "level": "Chuyên gia",
+        "level": "Junior",
         "salary": "Thỏa thuận theo năng lực",
         "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
-        "description": "Vận hành AI SOC và đảm bảo an toàn cho các hệ thống di động trọng yếu",
-        "mission": "Tham gia đội ngũ nòng cốt, vận hành hệ thống AI SOC hiện đại và bảo vệ các nền tảng di động trọng yếu.",
+        "description": "Xây dựng và vận hành pipeline dữ liệu cho data warehouse, data lake/lakehouse.",
+        "mission": "Đảm bảo dữ liệu từ nhiều nguồn được tích hợp sạch, chuẩn và sẵn sàng khai thác.",
         "responsibilities": [
-          "Giám sát và phân tích sự kiện an toàn thông tin trên AI SOC",
-          "Sử dụng AI để phát hiện cuộc tấn công tinh vi (APT)",
-          "Penetration Testing cho ứng dụng iOS & Android",
-          "Đánh giá lỗ hổng theo OWASP Mobile Top 10",
-          "Triển khai và quản trị các thiết bị bảo mật (Firewall, IDS/IPS, WAF, SIEM)"
+          "Xây dựng, vận hành và giám sát các pipeline dữ liệu tích hợp vào data warehouse, data lake/lakehouse.",
+          "Triển khai quy trình ETL/ELT để trích xuất, biến đổi và chuẩn hóa dữ liệu từ nhiều nguồn (cơ sở dữ liệu, API, file, ứng dụng...).",
+          "Viết và tối ưu các câu lệnh SQL để xử lý, kiểm tra và đối soát dữ liệu.",
+          "Kiểm tra chất lượng dữ liệu, theo dõi log, job dữ liệu và phối hợp xử lý lỗi kỹ thuật.",
+          "Xây dựng tài liệu kỹ thuật (mapping dữ liệu, luồng dữ liệu, hướng dẫn vận hành)."
         ],
         "requirements": [
-          "Tối thiểu 2-3 năm kinh nghiệm An toàn thông tin",
-          "Nắm vững giao thức mạng (TCP/IP), hệ điều hành (Linux, Windows)",
-          "Thành thạo Burp Suite, MobSF, Frida, Wireshark, Nessus, SIEM/SOAR",
-          "Ưu tiên có chứng chỉ: Security+, CEH, OSCP",
-          "Có tư duy phân tích mã độc là lợi thế lớn"
+          "Tốt nghiệp đại học/cao đẳng chuyên ngành CNTT, Khoa học dữ liệu hoặc liên quan.",
+          "Sử dụng tốt SQL và có khả năng lập trình cơ bản (Python, Java hoặc Scala).",
+          "Kiến thức cơ bản về cơ sở dữ liệu quan hệ, mô hình dữ liệu, ETL/ELT và các định dạng dữ liệu (CSV, JSON, XML...).",
+          "Ưu tiên ứng viên có 0-2 năm kinh nghiệm hoặc có đồ án liên quan đến Data Warehouse, Data Lake, Spark, Kafka, Docker."
         ],
         "benefits": [
-          "Mức lương xứng đáng với năng lực (2-3 năm kinh nghiệm)",
-          "Làm việc với chuyên gia đầu ngành",
-          "Tạo điều kiện thi chứng chỉ quốc tế (OSCP, CISSP)",
-          "Lộ trình thăng tiến lên Senior/Lead",
-          "Hoạt động ngoại khóa: Cầu lông, bóng đá hàng tuần"
+          "Đào tạo bài bản về nền tảng dữ liệu, tích hợp dữ liệu và các công cụ triển khai hiện đại.",
+          "Lộ trình phát triển sự nghiệp rõ ràng lên Senior Data Engineer hoặc chuyên gia về Data Platform/Governance.",
+          "Tham gia các dự án dữ liệu thực tế cùng đội ngũ chuyên gia giàu kinh nghiệm.",
+          "Chế độ lương thưởng và phúc lợi cạnh tranh."
+        ]
+      },
+      "juniorDataGovernance": {
+        "title": "Junior Data Governance",
+        "department": "Dữ liệu",
+        "type": "Toàn thời gian",
+        "level": "Junior",
+        "salary": "Thỏa thuận theo năng lực",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Hỗ trợ quản trị dữ liệu, metadata và chất lượng dữ liệu.",
+        "mission": "Chuẩn hóa và duy trì hệ thống tài liệu, quy chuẩn dữ liệu cho tổ chức.",
+        "responsibilities": [
+          "Hỗ trợ xây dựng và quản lý các tài liệu quản trị dữ liệu: data dictionary, business glossary, danh mục dữ liệu, quy tắc đặt tên và phân loại dữ liệu.",
+          "Phối hợp với các bên để chuẩn hóa định nghĩa dữ liệu và theo dõi chất lượng dữ liệu, phân quyền truy cập.",
+          "Quản lý thông tin về data owner, data steward, nguồn gốc và luồng dữ liệu.",
+          "Hỗ trợ cấu hình và vận hành các chức năng: data catalog, metadata management, lineage.",
+          "Chuẩn bị báo cáo tình trạng thực hiện và xây dựng tài liệu đào tạo nội bộ."
+        ],
+        "requirements": [
+          "Tốt nghiệp đại học/cao đẳng chuyên ngành CNTT, Hệ thống thông tin, Quản trị kinh doanh hoặc liên quan.",
+          "Hiểu biết cơ bản về vòng đời dữ liệu, quản trị dữ liệu, chất lượng dữ liệu và metadata.",
+          "Sử dụng tốt Excel; biết SQL cơ bản là một lợi thế lớn.",
+          "Cẩn thận, có tư duy logic, tính kỷ luật và khả năng làm việc với tài liệu, biểu mẫu."
+        ],
+        "benefits": [
+          "Đào tạo chuyên sâu về Data Governance Framework, Data Quality Management và các công cụ hỗ trợ.",
+          "Lộ trình thăng tiến rõ ràng lên Data Governance Specialist, Data Steward hoặc Manager.",
+          "Môi trường làm việc chuyên nghiệp, bài bản, cơ hội học hỏi nhanh từ các chuyên gia.",
+          "Lương thưởng và phúc lợi cạnh tranh."
+        ]
+      },
+      "socAnalystTier1": {
+        "title": "SOC Analyst Tier 1",
+        "department": "SOC",
+        "type": "Toàn thời gian",
+        "level": "Tier 1",
+        "salary": "Thỏa thuận theo năng lực",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Giám sát cảnh báo an ninh và xử lý sự cố theo runbook.",
+        "mission": "Đảm bảo luồng cảnh báo SOC được triage nhanh và escalated đúng quy trình.",
+        "responsibilities": [
+          "Giám sát liên tục các cảnh báo an ninh từ các hệ thống SIEM, EDR, Firewall, IDS/IPS.",
+          "Tiếp nhận, phân loại (triage) và xác minh tính hợp lệ của cảnh báo dựa trên log và IOC.",
+          "Xử lý các trường hợp đơn giản theo runbook/playbook và tạo ticket theo dõi sự cố.",
+          "Escalate kịp thời các sự cố nghiêm trọng lên Tier 2 hoặc các cấp cao hơn.",
+          "Tham gia ca trực SOC (có thể bao gồm trực ngoài giờ, cuối tuần hoặc 24/7)."
+        ],
+        "requirements": [
+          "Tốt nghiệp đại học/cao đẳng chuyên ngành An toàn thông tin, CNTT hoặc liên quan.",
+          "Kiến thức cơ bản về TCP/IP, mạng máy tính, mã độc, phishing và các loại tấn công phổ biến.",
+          "Có khả năng đọc và phân tích log ở mức cơ bản.",
+          "Cẩn thận, kỷ luật, chịu được áp lực ca trực và có khả năng đọc hiểu tiếng Anh kỹ thuật."
+        ],
+        "benefits": [
+          "Đào tạo thực chiến về vận hành SOC, phân tích log và phản ứng sự cố.",
+          "Làm việc với các công nghệ bảo mật hiện đại (Splunk, Sentinel, CrowdStrike...).",
+          "Lộ trình phát triển rõ ràng lên Tier 2, Threat Hunter hoặc Detection Engineer.",
+          "Phụ cấp ca trực và chế độ phúc lợi cạnh tranh."
+        ]
+      },
+      "socAnalystTier2": {
+        "title": "SOC Analyst Tier 2",
+        "department": "SOC",
+        "type": "Toàn thời gian",
+        "level": "Tier 2",
+        "salary": "Thỏa thuận theo năng lực",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Điều tra chuyên sâu và xử lý các sự cố an ninh phức tạp.",
+        "mission": "Nâng chất lượng phân tích, điều tra và phản ứng sự cố trong SOC.",
+        "responsibilities": [
+          "Điều tra chuyên sâu các cảnh báo được escalate từ Tier 1 để xác định bản chất sự kiện (True/False Positive).",
+          "Phân tích log và bằng chứng kỹ thuật từ nhiều nguồn nhằm xác định nguyên nhân gốc rễ và phạm vi ảnh hưởng.",
+          "Thực hiện điều tra các tình huống phức tạp: Ransomware, Phishing, Lateral Movement, Account Compromise.",
+          "Đề xuất và phối hợp triển khai các biện pháp ứng phó: cô lập endpoint, chặn IP/domain, vô hiệu hóa tài khoản.",
+          "Xây dựng báo cáo kỹ thuật và đóng góp tối ưu các correlation rule, use case phát hiện."
+        ],
+        "requirements": [
+          "Tốt nghiệp chuyên ngành An toàn thông tin, CNTT hoặc liên quan.",
+          "Có 1-3 năm kinh nghiệm trong SOC, Blue Team hoặc xử lý sự cố thực tế.",
+          "Kiến thức tốt về phân tích log, hành vi tiến trình và kỹ thuật tấn công theo MITRE ATT&CK.",
+          "Sử dụng tốt các công cụ: Wireshark, Sysmon, SIEM, EDR, Threat Intel sources."
+        ],
+        "benefits": [
+          "Tham gia trực tiếp vào các hoạt động điều tra và xử lý sự cố an ninh mạng quy mô thực tế.",
+          "Đào tạo nâng cao về Incident Handling và kỹ thuật Blue Team chuyên sâu.",
+          "Cơ hội thăng tiến lên Senior SOC Analyst, Threat Hunter hoặc SOC Lead.",
+          "Chế độ lương thưởng và phụ cấp ca trực hấp dẫn."
+        ]
+      },
+      "siemEngineer": {
+        "title": "SIEM Engineer / SOC Platform Engineer",
+        "department": "SOC Platform",
+        "type": "Toàn thời gian",
+        "level": "Chuyên viên",
+        "salary": "Thỏa thuận theo năng lực",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Xây dựng và vận hành nền tảng SIEM, pipeline thu thập log.",
+        "mission": "Đảm bảo hệ thống SIEM hoạt động ổn định, tối ưu và sẵn sàng cho SOC.",
+        "responsibilities": [
+          "Triển khai, cấu hình và vận hành các nền tảng SIEM (Splunk, Sentinel, QRadar, ELK...).",
+          "Thiết kế cơ chế thu thập log từ đa nguồn và xây dựng parser, normalization rule, dashboard giám sát.",
+          "Hỗ trợ xây dựng và tinh chỉnh correlation rule, detection use case theo yêu cầu của đội Analyst.",
+          "Theo dõi hiệu năng, dung lượng và xử lý các lỗi kỹ thuật trong pipeline dữ liệu.",
+          "Xây dựng tài liệu kiến trúc hệ thống và hướng dẫn vận hành chuẩn."
+        ],
+        "requirements": [
+          "Kiến thức tốt về Linux/Windows, TCP/IP, log management, API và kiến trúc SIEM.",
+          "Kinh nghiệm thực hành với ít nhất một nền tảng SIEM/SOC.",
+          "Khả năng viết script tự động hóa (Python, PowerShell, Bash) và viết query tìm kiếm dữ liệu.",
+          "Tư duy hệ thống tốt, khả năng xử lý sự cố độc lập và đọc hiểu tiếng Anh chuyên ngành."
+        ],
+        "benefits": [
+          "Tiếp cận công nghệ hiện đại về SIEM, SOAR, XDR và Automation.",
+          "Đào tạo chuyên sâu về tích hợp log, tối ưu hiệu năng và tự động hóa bảo mật.",
+          "Lộ trình phát triển lên Detection Engineer hoặc Security Platform Architect.",
+          "Môi trường chuyên nghiệp, tham gia xây dựng nền tảng SOC quy mô lớn."
+        ]
+      },
+      "pentesterPresales": {
+        "title": "Pentester Kiêm Presales",
+        "department": "An toàn thông tin",
+        "type": "Toàn thời gian",
+        "level": "Chuyên viên",
+        "salary": "Thỏa thuận theo năng lực",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Tư vấn presales và thực hiện kiểm thử xâm nhập cho khách hàng.",
+        "mission": "Kết nối nhu cầu khách hàng với dịch vụ pentest chất lượng cao của ICS.",
+        "responsibilities": [
+          "Presales: Khảo sát hệ thống, tư vấn mô hình Pentest phù hợp, xác định phạm vi (scope), effort và xây dựng proposal/báo giá.",
+          "Delivery: Trực tiếp thực hiện kiểm thử xâm nhập (Web, API, hạ tầng) để tìm kiếm và xác minh lỗ hổng.",
+          "Reporting: Soạn thảo báo cáo kỹ thuật, trình bày kết quả và tư vấn khắc phục cho khách hàng.",
+          "Cập nhật kỹ thuật tấn công mới và đóng góp cải tiến checklist, template Pentest của công ty."
+        ],
+        "requirements": [
+          "Tốt nghiệp đại học chuyên ngành ATTT, CNTT hoặc liên quan.",
+          "Kinh nghiệm thực tế về Pentest Web, API, hiểu biết OWASP Top 10 và các công cụ (Burp Suite, Nmap, Metasploit...).",
+          "Kỹ năng giao tiếp, đặt câu hỏi làm rõ nhu cầu khách hàng và trình bày đề xuất kỹ thuật ngắn gọn.",
+          "Ưu tiên ứng viên có chứng chỉ: OSCP, CEH, eJPT, PNPT hoặc tương đương."
+        ],
+        "benefits": [
+          "Tham gia các dự án Pentest thực tế cho nhiều loại hình khách hàng doanh nghiệp.",
+          "Lộ trình phát triển đa dạng: Senior Pentester, Security Consultant hoặc Presales/Pentest Lead.",
+          "Được đào tạo và cập nhật liên tục các công nghệ, kỹ thuật tấn công/phòng thủ mới nhất.",
+          "Môi trường làm việc linh hoạt, chế độ lương thưởng theo năng lực và kết quả công việc."
+        ]
+      },
+      "juniorDataModeler": {
+        "title": "Junior Data Modeler",
+        "department": "Dữ liệu",
+        "type": "Toàn thời gian",
+        "level": "Junior",
+        "salary": "Thỏa thuận theo năng lực",
+        "location": "TT3-5 Khu đô thị mới Đại Kim, Hà Nội",
+        "description": "Thiết kế mô hình dữ liệu và chuẩn hóa cấu trúc dữ liệu.",
+        "mission": "Xây dựng mô hình dữ liệu nhất quán phục vụ DWH/lakehouse và phân tích.",
+        "responsibilities": [
+          "Tham gia phân tích yêu cầu dữ liệu từ các hệ thống nghiệp vụ, báo cáo và nhu cầu khai thác của khách hàng.",
+          "Hỗ trợ thiết kế và xây dựng mô hình dữ liệu ở các mức: khái niệm, logic và vật lý.",
+          "Chuẩn hóa cấu trúc dữ liệu, định nghĩa thực thể, thuộc tính, khóa và mối quan hệ giữa các thực thể.",
+          "Xây dựng mô hình dữ liệu cho hệ thống giao dịch, data warehouse, data mart và data lake/lakehouse.",
+          "Phối hợp với đội ngũ kỹ thuật và nghiệp vụ để làm rõ quy tắc nghiệp vụ, bảo đảm mô hình có thể triển khai thực tế.",
+          "Hỗ trợ xây dựng, cập nhật tài liệu kỹ thuật: data dictionary, business glossary, mapping dữ liệu và chuẩn đặt tên.",
+          "Rà soát tính đầy đủ, nhất quán của mô hình dữ liệu giữa hệ thống nguồn và đích."
+        ],
+        "requirements": [
+          "Tốt nghiệp đại học/cao đẳng chuyên ngành CNTT, Hệ thống thông tin, Khoa học dữ liệu, Toán tin hoặc liên quan.",
+          "Kiến thức cơ bản về cơ sở dữ liệu quan hệ, phân tích hệ thống và quy trình xử lý dữ liệu.",
+          "Hiểu các khái niệm: entity, attribute, khóa chính/khóa ngoại, normalization và dimensional modeling cơ bản.",
+          "Sử dụng được SQL để đọc hiểu và kiểm tra dữ liệu.",
+          "Tư duy logic tốt, cẩn thận và có khả năng phân tích cấu trúc dữ liệu.",
+          "Điểm cộng cho ứng viên có 0-2 năm kinh nghiệm hoặc hiểu biết về star/snowflake schema, master data, metadata và data governance."
+        ],
+        "benefits": [
+          "Được đào tạo bài bản về mô hình dữ liệu, chuẩn hóa dữ liệu và mô hình hóa cho DWH/lakehouse.",
+          "Tham gia các dự án thực tế về xây dựng nền tảng dữ liệu và quản trị dữ liệu cho doanh nghiệp.",
+          "Cơ hội làm việc cùng đội ngũ chuyên gia về Data Architecture, Engineering và Analytics.",
+          "Lộ trình phát triển nghề nghiệp rõ ràng từ Junior lên Data Modeler, Senior và Data Architect.",
+          "Môi trường chuyên nghiệp với chế độ lương thưởng và phúc lợi cạnh tranh."
         ]
       },
       "marketingDirector": {
