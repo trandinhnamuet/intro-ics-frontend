@@ -11,6 +11,7 @@ import {
   MapPin,
   DollarSign,
   Clock,
+  Calendar,
   Users,
   TrendingUp,
   Shield,
@@ -100,36 +101,6 @@ export default function RecruitmentPage() {
   const { toast } = useToast()
   
   const jobListings: JobListing[] = [
-    {
-      id: "marketing-staff",
-      titleKey: "recruitment.jobs.marketingStaff.title",
-      departmentKey: "recruitment.jobs.marketingStaff.department",
-      typeKey: "recruitment.jobs.marketingStaff.type",
-      levelKey: "recruitment.jobs.marketingStaff.level",
-      salaryKey: "recruitment.jobs.marketingStaff.salary",
-      locationKey: "recruitment.jobs.marketingStaff.location",
-      descriptionKey: "recruitment.jobs.marketingStaff.description",
-      missionKey: "recruitment.jobs.marketingStaff.mission",
-      responsibilitiesKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.marketingStaff.responsibilities.${i}`),
-      requirementsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.marketingStaff.requirements.${i}`),
-      benefitsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.marketingStaff.benefits.${i}`),
-      category: "marketing"
-    },
-    {
-      id: "sales-staff",
-      titleKey: "recruitment.jobs.salesStaff.title",
-      departmentKey: "recruitment.jobs.salesStaff.department",
-      typeKey: "recruitment.jobs.salesStaff.type",
-      levelKey: "recruitment.jobs.salesStaff.level",
-      salaryKey: "recruitment.jobs.salesStaff.salary",
-      locationKey: "recruitment.jobs.salesStaff.location",
-      descriptionKey: "recruitment.jobs.salesStaff.description",
-      missionKey: "recruitment.jobs.salesStaff.mission",
-      responsibilitiesKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.salesStaff.responsibilities.${i}`),
-      requirementsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.salesStaff.requirements.${i}`),
-      benefitsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.salesStaff.benefits.${i}`),
-      category: "sales"
-    },
     {
       id: "junior-data-engineer",
       titleKey: "recruitment.jobs.juniorDataEngineer.title",
@@ -234,6 +205,36 @@ export default function RecruitmentPage() {
       requirementsKeys: Array(6).fill(0).map((_, i) => `recruitment.jobs.juniorDataModeler.requirements.${i}`),
       benefitsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.juniorDataModeler.benefits.${i}`),
       category: "tech"
+    },
+    {
+      id: "sales-staff",
+      titleKey: "recruitment.jobs.salesStaff.title",
+      departmentKey: "recruitment.jobs.salesStaff.department",
+      typeKey: "recruitment.jobs.salesStaff.type",
+      levelKey: "recruitment.jobs.salesStaff.level",
+      salaryKey: "recruitment.jobs.salesStaff.salary",
+      locationKey: "recruitment.jobs.salesStaff.location",
+      descriptionKey: "recruitment.jobs.salesStaff.description",
+      missionKey: "recruitment.jobs.salesStaff.mission",
+      responsibilitiesKeys: Array(4).fill(0).map((_, i) => `recruitment.jobs.salesStaff.responsibilities.${i}`),
+      requirementsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.salesStaff.requirements.${i}`),
+      benefitsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.salesStaff.benefits.${i}`),
+      category: "sales"
+    },
+    {
+      id: "marketing-staff",
+      titleKey: "recruitment.jobs.marketingStaff.title",
+      departmentKey: "recruitment.jobs.marketingStaff.department",
+      typeKey: "recruitment.jobs.marketingStaff.type",
+      levelKey: "recruitment.jobs.marketingStaff.level",
+      salaryKey: "recruitment.jobs.marketingStaff.salary",
+      locationKey: "recruitment.jobs.marketingStaff.location",
+      descriptionKey: "recruitment.jobs.marketingStaff.description",
+      missionKey: "recruitment.jobs.marketingStaff.mission",
+      responsibilitiesKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.marketingStaff.responsibilities.${i}`),
+      requirementsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.marketingStaff.requirements.${i}`),
+      benefitsKeys: Array(5).fill(0).map((_, i) => `recruitment.jobs.marketingStaff.benefits.${i}`),
+      category: "marketing"
     },
     {
       id: "marketing-director",
@@ -523,7 +524,7 @@ export default function RecruitmentPage() {
 
                   <ScrollArea className="flex-1 min-h-0 pr-4">
                     <div className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-4 p-4 bg-blue-50 rounded-lg">
+                      <div className="grid md:grid-cols-3 gap-4 p-4 bg-blue-50 rounded-lg">
                         <div className="flex items-center gap-2">
                           <MapPin className="w-5 h-5 text-blue-500" />
                           <div>
@@ -536,6 +537,13 @@ export default function RecruitmentPage() {
                           <div>
                             <div className="text-xs text-gray-500">{t('recruitment.salary')}</div>
                             <div className="font-semibold text-sm text-blue-600">{t(selectedJob.salaryKey)}</div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-5 h-5 text-blue-500" />
+                          <div>
+                            <div className="text-xs text-gray-500">{t('recruitment.deadlineLabel')}</div>
+                            <div className="font-semibold text-sm">{t('recruitment.deadlineValue')}</div>
                           </div>
                         </div>
                       </div>
@@ -858,7 +866,7 @@ export default function RecruitmentPage() {
                                 </div>
                               </CardHeader>
                               <CardContent>
-                                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                                <div className="grid md:grid-cols-3 gap-4 text-sm">
                                   <div className="flex items-center gap-2 text-gray-600">
                                     <MapPin className="w-4 h-4 text-blue-500" />
                                     <span>{t(job.locationKey)}</span>
@@ -866,6 +874,10 @@ export default function RecruitmentPage() {
                                   <div className="flex items-center gap-2 text-gray-600">
                                     <DollarSign className="w-4 h-4 text-blue-500" />
                                     <span className="font-semibold text-blue-600">{t(job.salaryKey)}</span>
+                                  </div>
+                                  <div className="flex items-center gap-2 text-gray-600">
+                                    <Calendar className="w-4 h-4 text-blue-500" />
+                                    <span>{t('recruitment.deadlineLabel')}: {t('recruitment.deadlineValue')}</span>
                                   </div>
                                 </div>
                               </CardContent>

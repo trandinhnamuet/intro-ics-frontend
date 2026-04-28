@@ -12,8 +12,7 @@ import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { AnimatedHeading } from "@/components/ui/animated-heading"
 import { Section } from "@/components/ui/section"
-import { Shield, Zap, Award, TrendingUp, ArrowRight, CheckCircle2, Star, Users, Building2, Factory, Sparkles } from "lucide-react"
-import Image from "next/image"
+import { Shield, Zap, Award, TrendingUp, ArrowRight, CheckCircle2, Star, Users, Building2 } from "lucide-react"
 import Link from "next/link"
 import { useTranslation } from 'react-i18next'
 
@@ -64,30 +63,6 @@ export default function Page() {
       icon: TrendingUp,
       title: t('home.whyChooseUs.sustainable'),
       description: t('home.whyChooseUs.sustainableDesc')
-    },
-  ]
-
-  const featuredSolutions = [
-    {
-      icon: Shield,
-      title: t('home.featuredSolutions.csaTitle'),
-      description: t('home.featuredSolutions.csaDesc'),
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop",
-      gradient: "from-blue-600 to-cyan-500"
-    },
-    {
-      icon: Factory,
-      title: t('home.featuredSolutions.smartFactoryTitle'),
-      description: t('home.featuredSolutions.smartFactoryDesc'),
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format&fit=crop",
-      gradient: "from-blue-600 to-cyan-500"
-    },
-    {
-      icon: Building2,
-      title: t('home.featuredSolutions.smartBuildingTitle'),
-      description: t('home.featuredSolutions.smartBuildingDesc'),
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop",
-      gradient: "from-blue-600 to-cyan-500"
     },
   ]
 
@@ -171,61 +146,6 @@ export default function Page() {
         <NewsSection />
 
         <ProductsSection />
-
-        {/* Featured Solutions Section */}
-        <Section spacing="sm" background="muted">
-          <div className="container-responsive">
-            <ScrollReveal direction="up">
-              <div className="text-center mb-12">
-                <Badge className="mb-4 px-4 py-2 bg-primary text-white border-none shadow-lg">
-                  <Sparkles className="w-4 h-4 mr-2" />
-                  {t('home.featuredSolutions.title')}
-                </Badge>
-                <AnimatedHeading as="h2" gradient centered className="p-3 mb-4">
-                  {t('home.featuredSolutions.heading')}
-                </AnimatedHeading>
-                <p className="text-foreground/70 text-lg max-w-3xl mx-auto font-medium">
-                  {t('home.featuredSolutions.description')}
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 auto-rows-max">
-              {featuredSolutions.map((solution, idx) => {
-                const solutionLinks = ['https://csa.icss.com.vn/', '/nha-may-thong-minh', '/toa-nha-thong-minh']
-                const isExternal = solutionLinks[idx].startsWith('http')
-                return (
-                  <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                    <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 h-full flex flex-col">
-                      <div className="relative h-48 overflow-hidden">
-                        <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient}`} />
-                        <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                          <solution.icon className="w-16 h-16 mb-3 drop-shadow-lg" />
-                          <h3 className="text-lg font-bold text-center">{solution.title}</h3>
-                        </div>
-                      </div>
-                      <div className="p-6 bg-background flex flex-col flex-grow">
-                        <p className="text-foreground/70 mb-4 leading-relaxed flex-grow">
-                          {solution.description}
-                        </p>
-                        <Link 
-                          href={solutionLinks[idx]}
-                          target={isExternal ? '_blank' : undefined}
-                          rel={isExternal ? 'noopener noreferrer' : undefined}
-                        >
-                          <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:text-primary mt-auto">
-                            {t('common.learnMore')}
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                          </Button>
-                        </Link>
-                      </div>
-                    </Card>
-                  </ScrollReveal>
-                )
-              })}
-            </div>
-          </div>
-        </Section>
 
         {/* Why Choose Us Section */}
         <Section spacing="sm" background="default">

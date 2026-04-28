@@ -463,6 +463,8 @@
     "benefit3Desc": "Gen Z 중심의 활기찬 환경, 소통이 원활한 리더십, 다양한 스포츠 활동",
     "location": "근무지",
     "salary": "급여",
+    "deadlineLabel": "지원 마감",
+    "deadlineValue": "31/5/2026",
     "mission": "미션",
     "responsibilities": "주요 업무",
     "requirements": "자격 요건",
@@ -547,6 +549,213 @@
           "경영진 직접 교육 및 멘토링",
           "명확한 커리어 성장 경로",
           "업무 장비 및 통신비 지원"
+        ]
+      },
+      "juniorDataEngineer": {
+        "title": "주니어 데이터 엔지니어",
+        "department": "데이터",
+        "type": "정규직",
+        "level": "주니어",
+        "salary": "경력에 따라 협의",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "데이터 웨어하우스와 데이터 레이크/레이크하우스용 데이터 파이프라인을 구축 및 운영.",
+        "mission": "여러 소스의 데이터를 정제·통합하여 분석에 바로 사용할 수 있도록 보장.",
+        "responsibilities": [
+          "데이터 웨어하우스, 데이터 레이크/레이크하우스용 파이프라인 구축·운영·모니터링",
+          "여러 소스(DB, API, 파일, 애플리케이션 등)에서 ETL/ELT 수행 및 데이터 추출/변환/표준화",
+          "SQL 작성 및 최적화로 데이터 처리/검증/대사",
+          "데이터 품질 점검, 로그/작업 모니터링 및 기술 이슈 대응 협업",
+          "기술 문서(데이터 매핑, 데이터 흐름, 운영 가이드) 작성"
+        ],
+        "requirements": [
+          "IT, 데이터사이언스 등 관련 전공 대졸/전문대 졸업",
+          "SQL 활용 능력 및 기본 프로그래밍(Python/Java/Scala)",
+          "관계형 DB, 데이터 모델링, ETL/ELT, 데이터 포맷(CSV/JSON/XML 등) 기초 지식",
+          "우대: 0-2년 경력 또는 Data Warehouse/Data Lake/Spark/Kafka/Docker 관련 프로젝트 경험"
+        ],
+        "benefits": [
+          "데이터 플랫폼, 통합, 최신 배포 도구에 대한 체계적 교육",
+          "Senior Data Engineer 또는 Data Platform/Governance 전문가로의 성장 경로",
+          "경험 많은 전문가와 실전 프로젝트 참여",
+          "경쟁력 있는 급여 및 복지"
+        ]
+      },
+      "juniorDataGovernance": {
+        "title": "주니어 데이터 거버넌스",
+        "department": "데이터",
+        "type": "정규직",
+        "level": "주니어",
+        "salary": "경력에 따라 협의",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "데이터 거버넌스, 메타데이터, 데이터 품질 지원.",
+        "mission": "조직의 데이터 문서와 표준을 정립·유지.",
+        "responsibilities": [
+          "데이터 사전, 비즈니스 글로서리, 데이터 카탈로그, 네이밍 규칙, 분류 문서 작성/관리 지원",
+          "관계자와 협업하여 데이터 정의 표준화, 품질 추적, 접근 권한 관리",
+          "데이터 오너/스튜어드, 데이터 계보 및 흐름 정보 관리",
+          "데이터 카탈로그, 메타데이터 관리, 라인리지 기능 설정·운영 지원",
+          "진행 현황 보고 및 내부 교육 자료 준비"
+        ],
+        "requirements": [
+          "IT/정보시스템/경영 등 관련 전공 대졸/전문대 졸업",
+          "데이터 라이프사이클, 거버넌스, 품질, 메타데이터 기초 이해",
+          "Excel 활용 능력, SQL 기초는 큰 장점",
+          "꼼꼼하고 논리적이며 문서 작업에 강함"
+        ],
+        "benefits": [
+          "Data Governance Framework, Data Quality Management 및 지원 도구에 대한 심화 교육",
+          "Data Governance Specialist, Data Steward, Manager로의 성장 경로",
+          "전문적이고 체계적인 환경에서 빠르게 성장",
+          "경쟁력 있는 급여와 복지"
+        ]
+      },
+      "socAnalystTier1": {
+        "title": "SOC 분석가 Tier 1",
+        "department": "SOC",
+        "type": "정규직",
+        "level": "Tier 1",
+        "salary": "경력에 따라 협의",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "보안 경보 모니터링 및 런북 기반 사고 대응.",
+        "mission": "SOC 경보를 빠르게 분류하고 적절히 에스컬레이션.",
+        "responsibilities": [
+          "SIEM/EDR/Firewall/IDS/IPS의 보안 경보 상시 모니터링",
+          "로그 및 IOC 기반 경보 수신, 분류(Triage) 및 검증",
+          "런북/플레이북에 따른 단순 건 처리 및 티켓 생성",
+          "중요 사고를 Tier 2 이상으로 신속히 에스컬레이션",
+          "SOC 교대 근무 참여(야간/주말/24/7 포함 가능)"
+        ],
+        "requirements": [
+          "정보보안/IT 등 관련 전공",
+          "TCP/IP, 네트워크, 악성코드, 피싱 등 기본 지식",
+          "기본적인 로그 읽기/분석 능력",
+          "꼼꼼하고 규율이 있으며 교대 근무 압박 대응, 기술 영어 독해"
+        ],
+        "benefits": [
+          "SOC 운영, 로그 분석, 사고 대응 실무 교육",
+          "Splunk, Sentinel, CrowdStrike 등 최신 보안 기술 경험",
+          "Tier 2, Threat Hunter, Detection Engineer로 성장",
+          "교대 수당 및 경쟁력 있는 복지"
+        ]
+      },
+      "socAnalystTier2": {
+        "title": "SOC 분석가 Tier 2",
+        "department": "SOC",
+        "type": "정규직",
+        "level": "Tier 2",
+        "salary": "경력에 따라 협의",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "심층 조사와 복잡한 보안 사고 대응.",
+        "mission": "SOC 분석, 조사 및 대응 품질을 향상.",
+        "responsibilities": [
+          "Tier 1에서 에스컬레이션된 경보를 조사해 True/False Positive 판단",
+          "다양한 소스의 로그와 증거를 분석해 원인과 영향 범위 파악",
+          "랜섬웨어, 피싱, 횡적 이동, 계정 탈취 등 복잡한 시나리오 대응",
+          "엔드포인트 격리, IP/도메인 차단, 계정 비활성화 등 대응 조치 제안·조율",
+          "기술 보고서를 작성하고 상관 규칙/탐지 유스케이스 최적화에 기여"
+        ],
+        "requirements": [
+          "정보보안/IT 등 관련 전공",
+          "SOC, 블루팀 또는 실제 사고 대응 경험 1-3년",
+          "로그 분석, 프로세스 행위, MITRE ATT&CK 기법에 대한 지식",
+          "Wireshark, Sysmon, SIEM, EDR, 위협 인텔 소스 사용 경험"
+        ],
+        "benefits": [
+          "실제 사이버 보안 사고 조사와 대응에 직접 참여",
+          "Incident Handling 및 고급 블루팀 교육",
+          "Senior SOC Analyst, Threat Hunter, SOC Lead로 성장",
+          "경쟁력 있는 급여와 교대 수당"
+        ]
+      },
+      "siemEngineer": {
+        "title": "SIEM 엔지니어 / SOC 플랫폼 엔지니어",
+        "department": "SOC 플랫폼",
+        "type": "정규직",
+        "level": "전문가",
+        "salary": "경력에 따라 협의",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "SIEM 플랫폼과 로그 수집 파이프라인을 구축·운영.",
+        "mission": "SIEM 시스템의 안정성과 최적화를 보장하여 SOC 운영을 지원.",
+        "responsibilities": [
+          "SIEM 플랫폼(Splunk, Sentinel, QRadar, ELK 등) 구축·설정·운영",
+          "다중 소스 로그 수집 설계 및 파서/정규화 규칙/모니터링 대시보드 구축",
+          "분석가 팀과 협업해 상관 규칙 및 탐지 유스케이스 최적화 지원",
+          "성능/용량 모니터링 및 데이터 파이프라인 기술 이슈 대응",
+          "시스템 아키텍처 문서와 표준 운영 가이드 작성"
+        ],
+        "requirements": [
+          "Linux/Windows, TCP/IP, 로그 관리, API 및 SIEM 아키텍처에 대한 지식",
+          "최소 1개 이상의 SIEM/SOC 플랫폼 실무 경험",
+          "자동화 스크립트(Python/PowerShell/Bash) 및 검색 쿼리 작성 능력",
+          "시스템 사고력, 독립적 문제 해결, 기술 영어 독해"
+        ],
+        "benefits": [
+          "SIEM, SOAR, XDR 및 자동화 등 최신 기술 경험",
+          "로그 통합, 성능 최적화, 보안 자동화 심화 교육",
+          "Detection Engineer 또는 Security Platform Architect로 성장",
+          "대규모 SOC 플랫폼 구축에 참여하는 전문 환경"
+        ]
+      },
+      "pentesterPresales": {
+        "title": "펜테스터 겸 프리세일즈",
+        "department": "정보보안",
+        "type": "정규직",
+        "level": "전문가",
+        "salary": "경력에 따라 협의",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "고객 대상 프리세일즈 컨설팅 및 침투 테스트 수행.",
+        "mission": "고객 요구와 ICS의 고품질 펜테스트 서비스를 연결.",
+        "responsibilities": [
+          "프리세일즈: 시스템 조사, 적합한 펜테스트 모델 제안, 범위/공수 산정 및 제안서/견적 작성",
+          "딜리버리: Web, API, 인프라 침투 테스트 수행 및 취약점 검증",
+          "보고: 기술 보고서 작성, 결과 설명 및 개선 방안 제시",
+          "최신 공격 기법 업데이트 및 펜테스트 체크리스트/템플릿 개선"
+        ],
+        "requirements": [
+          "정보보안/IT 관련 전공",
+          "Web/API 펜테스트 경험 및 OWASP Top 10, Burp Suite/Nmap/Metasploit 등 도구 이해",
+          "고객 요구를 명확히 하고 기술 제안을 제시할 수 있는 커뮤니케이션 능력",
+          "우대: OSCP, CEH, eJPT, PNPT 등 자격증"
+        ],
+        "benefits": [
+          "다양한 기업 고객 대상의 실전 펜테스트 프로젝트 참여",
+          "Senior Pentester, Security Consultant 또는 Presales/Pentest Lead로 성장",
+          "최신 공격/방어 기술 지속 학습",
+          "유연한 환경과 성과 기반 보상"
+        ]
+      },
+      "juniorDataModeler": {
+        "title": "주니어 데이터 모델러",
+        "department": "데이터",
+        "type": "정규직",
+        "level": "주니어",
+        "salary": "경력에 따라 협의",
+        "location": "하노이 다이낌 신도시 TT3-5",
+        "description": "데이터 모델을 설계하고 데이터 구조를 표준화.",
+        "mission": "DWH/레이크하우스 및 분석을 위한 일관된 데이터 모델 구축.",
+        "responsibilities": [
+          "업무 시스템, 보고서, 고객 요구로부터 데이터 요구사항 분석 참여",
+          "개념/논리/물리 수준의 데이터 모델 설계 지원",
+          "엔터티, 속성, 키 및 관계 정의로 데이터 구조 표준화",
+          "트랜잭션 시스템, 데이터 웨어하우스, 데이터 마트, 데이터 레이크/레이크하우스 모델 구축",
+          "기술/업무 팀과 협업하여 업무 규칙을 명확히 하고 모델의 실현 가능성 확보",
+          "데이터 사전, 비즈니스 글로서리, 데이터 매핑, 네이밍 규칙 등 기술 문서 작성/업데이트 지원",
+          "소스와 대상 시스템 간 모델의 완전성과 일관성 검토"
+        ],
+        "requirements": [
+          "IT, 정보시스템, 데이터사이언스, 응용수학 등 관련 전공",
+          "관계형 DB, 시스템 분석, 데이터 처리 프로세스의 기초 지식",
+          "엔터티/속성/기본키/외래키/정규화/기본 차원 모델링 이해",
+          "SQL을 사용해 데이터 읽기 및 검증 가능",
+          "논리적 사고, 꼼꼼함, 데이터 구조 분석 능력",
+          "우대: 0-2년 경력 또는 스타/스노우플레이크 스키마, 마스터 데이터, 메타데이터, 데이터 거버넌스 이해"
+        ],
+        "benefits": [
+          "데이터 모델링, 표준화, DWH/레이크하우스 모델링 체계적 교육",
+          "데이터 플랫폼 및 거버넌스 실전 프로젝트 참여",
+          "데이터 아키텍처/엔지니어링/분석 전문가와 협업",
+          "주니어에서 데이터 모델러, 시니어, 데이터 아키텍트로 성장 경로",
+          "전문적인 환경과 경쟁력 있는 보상"
         ]
       },
       "securityEngineer": {

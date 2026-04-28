@@ -472,6 +472,8 @@
     "benefit3Desc": "充满活力的 Z 代环境、心理老板、多样化的体育活动",
     "location": "地点",
     "salary": "薪资",
+    "deadlineLabel": "截止日期",
+    "deadlineValue": "31/5/2026",
     "mission": "您的使命",
     "responsibilities": "工作描述",
     "requirements": "候选人要求",
@@ -556,6 +558,213 @@
           "由有经验的董事会成员培训",
           "清晰的发展路径",
           "完整的设备配置、手机津贴"
+        ]
+      },
+      "juniorDataEngineer": {
+        "title": "初级数据工程师",
+        "department": "数据",
+        "type": "全职",
+        "level": "初级",
+        "salary": "根据能力协商",
+        "location": "河内大金新城市区 TT3-5",
+        "description": "构建并运维数据仓库及数据湖/湖仓的数据管道。",
+        "mission": "确保来自多源的数据被清洗集成并可用于分析。",
+        "responsibilities": [
+          "构建、运维并监控数据仓库、数据湖/湖仓的数据管道。",
+          "实施ETL/ELT，从多个来源（数据库、API、文件、应用等）抽取、转换并标准化数据。",
+          "编写并优化SQL以处理、校验和对账数据。",
+          "检查数据质量，监控日志/任务并协同处理技术问题。",
+          "编写技术文档（数据映射、数据流、操作指南）。"
+        ],
+        "requirements": [
+          "IT、数据科学等相关专业大专/本科。",
+          "良好的SQL与基础编程能力（Python/Java/Scala）。",
+          "具备关系型数据库、数据建模、ETL/ELT及数据格式（CSV/JSON/XML等）基础。",
+          "优先：0-2年经验或相关项目（Data Warehouse/Data Lake/Spark/Kafka/Docker）。"
+        ],
+        "benefits": [
+          "系统培训数据平台、数据集成及现代化部署工具。",
+          "清晰的成长路径至高级数据工程师或数据平台/治理专家。",
+          "参与实际数据项目，与资深专家共事。",
+          "有竞争力的薪酬与福利。"
+        ]
+      },
+      "juniorDataGovernance": {
+        "title": "初级数据治理",
+        "department": "数据",
+        "type": "全职",
+        "level": "初级",
+        "salary": "根据能力协商",
+        "location": "河内大金新城市区 TT3-5",
+        "description": "支持数据治理、元数据与数据质量。",
+        "mission": "规范并维护组织的数据文档与标准。",
+        "responsibilities": [
+          "支持构建与管理数据治理文档：数据字典、业务术语表、数据目录、命名规则与分类。",
+          "与相关方协作标准化数据定义，跟踪数据质量与访问权限。",
+          "管理数据负责人、数据管理员、数据血缘与数据流信息。",
+          "协助配置与运行数据目录、元数据管理、血缘分析功能。",
+          "准备进度报告与内部培训资料。"
+        ],
+        "requirements": [
+          "IT、信息系统、工商管理等相关专业大专/本科。",
+          "了解数据生命周期、数据治理、数据质量与元数据基础。",
+          "熟练使用Excel；具备基础SQL者优先。",
+          "细致严谨、逻辑清晰，擅长文档与模板工作。"
+        ],
+        "benefits": [
+          "深度培训Data Governance Framework、Data Quality Management及工具。",
+          "清晰晋升路径至数据治理专家、数据管理员或管理岗。",
+          "专业、体系化的环境，快速成长。",
+          "有竞争力的薪酬与福利。"
+        ]
+      },
+      "socAnalystTier1": {
+        "title": "SOC 分析师（Tier 1）",
+        "department": "SOC",
+        "type": "全职",
+        "level": "Tier 1",
+        "salary": "根据能力协商",
+        "location": "河内大金新城市区 TT3-5",
+        "description": "监控安全告警并按Runbook处理事件。",
+        "mission": "确保SOC告警快速分级并正确升级。",
+        "responsibilities": [
+          "持续监控SIEM、EDR、Firewall、IDS/IPS的安全告警。",
+          "基于日志和IOC接收、分级（Triage）并验证告警。",
+          "按Runbook/Playbook处理简单事件并创建工单。",
+          "及时将重大事件升级至Tier 2或更高层级。",
+          "参与SOC值班（可能包含夜间、周末或24/7）。"
+        ],
+        "requirements": [
+          "信息安全/IT等相关专业。",
+          "具备TCP/IP、网络、恶意软件、钓鱼等基础知识。",
+          "能进行基本的日志阅读与分析。",
+          "细心守纪，能承受轮班压力，具备技术英语阅读能力。"
+        ],
+        "benefits": [
+          "SOC运营、日志分析、事件响应的实战培训。",
+          "使用Splunk、Sentinel、CrowdStrike等先进技术。",
+          "成长路径至Tier 2、Threat Hunter或Detection Engineer。",
+          "轮班补贴与有竞争力的福利。"
+        ]
+      },
+      "socAnalystTier2": {
+        "title": "SOC 分析师（Tier 2）",
+        "department": "SOC",
+        "type": "全职",
+        "level": "Tier 2",
+        "salary": "根据能力协商",
+        "location": "河内大金新城市区 TT3-5",
+        "description": "深度调查并处理复杂安全事件。",
+        "mission": "提升SOC分析、调查与响应质量。",
+        "responsibilities": [
+          "调查Tier 1升级的告警，判断True/False Positive。",
+          "分析多源日志与证据，确定根因和影响范围。",
+          "处理复杂场景：勒索软件、钓鱼、横向移动、账号失陷。",
+          "提出并协调响应措施：隔离终端、封禁IP/域名、禁用账号。",
+          "撰写技术报告并优化关联规则和检测用例。"
+        ],
+        "requirements": [
+          "信息安全/IT等相关专业。",
+          "1-3年SOC/蓝队/事件处理经验。",
+          "熟悉日志分析、进程行为、MITRE ATT&CK技术。",
+          "熟练使用Wireshark、Sysmon、SIEM、EDR、威胁情报等。"
+        ],
+        "benefits": [
+          "直接参与真实安全事件调查与处理。",
+          "Incident Handling与蓝队高级培训。",
+          "成长为高级SOC分析师、Threat Hunter或SOC Lead。",
+          "竞争力薪酬与轮班补贴。"
+        ]
+      },
+      "siemEngineer": {
+        "title": "SIEM 工程师 / SOC 平台工程师",
+        "department": "SOC 平台",
+        "type": "全职",
+        "level": "专员",
+        "salary": "根据能力协商",
+        "location": "河内大金新城市区 TT3-5",
+        "description": "构建并运维SIEM平台与日志采集管道。",
+        "mission": "确保SIEM稳定运行与优化，支撑SOC。",
+        "responsibilities": [
+          "部署、配置并运维SIEM平台（Splunk、Sentinel、QRadar、ELK等）。",
+          "设计多源日志采集，编写解析器、规范化规则与监控看板。",
+          "协助分析团队优化关联规则和检测用例。",
+          "监控性能与容量，处理数据管道技术问题。",
+          "编写系统架构文档与标准运维指南。"
+        ],
+        "requirements": [
+          "熟悉Linux/Windows、TCP/IP、日志管理、API及SIEM架构。",
+          "至少有一种SIEM/SOC平台实践经验。",
+          "能编写自动化脚本（Python/PowerShell/Bash）与查询语句。",
+          "系统化思维、独立排障能力与技术英语阅读能力。"
+        ],
+        "benefits": [
+          "接触SIEM、SOAR、XDR与自动化等现代技术。",
+          "深度培训日志集成、性能优化与安全自动化。",
+          "成长为Detection Engineer或Security Platform Architect。",
+          "专业环境，参与大规模SOC平台建设。"
+        ]
+      },
+      "pentesterPresales": {
+        "title": "渗透测试工程师兼售前",
+        "department": "信息安全",
+        "type": "全职",
+        "level": "专员",
+        "salary": "根据能力协商",
+        "location": "河内大金新城市区 TT3-5",
+        "description": "为客户提供售前咨询并执行渗透测试。",
+        "mission": "连接客户需求与ICS高质量的渗透测试服务。",
+        "responsibilities": [
+          "售前：调研系统，建议合适的渗透测试模型，定义范围与工作量，编写方案/报价。",
+          "交付：实施Web、API、基础设施渗透测试，发现并验证漏洞。",
+          "报告：撰写技术报告，汇报结果并给出修复建议。",
+          "更新攻击技术并优化公司渗透测试清单/模板。"
+        ],
+        "requirements": [
+          "信息安全/IT等相关专业。",
+          "具备Web/API渗透测试经验，熟悉OWASP Top 10及工具（Burp Suite、Nmap、Metasploit等）。",
+          "良好沟通能力，能明确客户需求并呈现技术方案。",
+          "优先：OSCP、CEH、eJPT、PNPT等证书。"
+        ],
+        "benefits": [
+          "参与多类型企业客户的真实渗透测试项目。",
+          "成长路径：高级渗透测试、安全咨询或售前/测试负责人。",
+          "持续学习最新攻防技术。",
+          "灵活的工作环境与绩效导向薪酬。"
+        ]
+      },
+      "juniorDataModeler": {
+        "title": "初级数据建模师",
+        "department": "数据",
+        "type": "全职",
+        "level": "初级",
+        "salary": "根据能力协商",
+        "location": "河内大金新城市区 TT3-5",
+        "description": "设计数据模型并标准化数据结构。",
+        "mission": "构建适用于DWH/湖仓与分析的一致数据模型。",
+        "responsibilities": [
+          "参与业务系统、报表与客户需求的数据需求分析。",
+          "协助设计概念、逻辑与物理层数据模型。",
+          "标准化数据结构，定义实体、属性、主键与关系。",
+          "构建交易系统、数据仓库、数据集市以及数据湖/湖仓模型。",
+          "与技术和业务团队协作，明确业务规则并确保模型可落地。",
+          "协助编写/更新技术文档：数据字典、业务术语表、数据映射与命名规范。",
+          "审核源系统与目标系统之间数据模型的完整性与一致性。"
+        ],
+        "requirements": [
+          "IT、信息系统、数据科学、应用数学等相关专业。",
+          "具备关系型数据库、系统分析和数据处理流程基础。",
+          "理解实体、属性、主键/外键、规范化与基础维度建模。",
+          "能使用SQL进行数据理解与校验。",
+          "逻辑思维强、细致严谨，具备数据结构分析能力。",
+          "加分：0-2年经验或了解星型/雪花模型、主数据、元数据、数据治理。"
+        ],
+        "benefits": [
+          "系统培训数据建模、标准化与DWH/湖仓建模。",
+          "参与数据平台与治理的实际项目。",
+          "与数据架构、工程与分析专家协作。",
+          "清晰成长路径：初级 -> 数据建模师 -> 高级 -> 数据架构师。",
+          "专业环境与有竞争力的薪酬福利。"
         ]
       },
       "securityEngineer": {

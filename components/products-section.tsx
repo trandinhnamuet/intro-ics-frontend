@@ -14,12 +14,12 @@ import { cn } from "@/lib/utils"
 
 const products = [
   {
-    nameKey: "chatbot",
-    descriptionKey: "chatbotDesc", 
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
-    link: "/products/chatbot",
-    icon: MessageCircle,
-    color: "from-blue-600 to-cyan-500",
+    nameKey: "vietguard",
+    descriptionKey: "vietguardDesc",
+    image: "/vietguard.webp",
+    link: "/products/vietguard",
+    icon: Shield,
+    color: "from-green-500 to-emerald-500",
   },
   {
     nameKey: "aiSoc",
@@ -36,14 +36,6 @@ const products = [
     link: "https://csa.icss.com.vn/",
     icon: Shield,
     color: "from-purple-500 to-pink-500",
-  },
-  {
-    nameKey: "vietguard",
-    descriptionKey: "vietguardDesc",
-    image: "/vietguard.webp",
-    link: "/products/vietguard",
-    icon: Shield,
-    color: "from-green-500 to-emerald-500",
   },
   {
     nameKey: "pentestServices", 
@@ -68,6 +60,14 @@ const products = [
     link: "/products/smart-dashboard",
     icon: BarChart3,
     color: "from-indigo-500 to-blue-500",
+  },
+  {
+    nameKey: "chatbot",
+    descriptionKey: "chatbotDesc", 
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
+    link: "/products/chatbot",
+    icon: MessageCircle,
+    color: "from-blue-600 to-cyan-500",
   },
 ]
 

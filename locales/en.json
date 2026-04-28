@@ -470,6 +470,8 @@
     "benefit3Desc": "Dynamic Gen-Z environment, psychological boss, diverse sports activities",
     "location": "Location",
     "salary": "Salary",
+    "deadlineLabel": "Application deadline",
+    "deadlineValue": "31/5/2026",
     "mission": "Your Mission",
     "responsibilities": "Job Description",
     "requirements": "Candidate Requirements",
@@ -554,6 +556,213 @@
           "Training by experienced Board of Directors",
           "Clear development path",
           "Complete equipment provision, phone allowance"
+        ]
+      },
+      "juniorDataEngineer": {
+        "title": "Junior Data Engineer",
+        "department": "Data",
+        "type": "Full-time",
+        "level": "Junior",
+        "salary": "Negotiable based on competence",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Build and operate data pipelines for data warehouse and data lake/lakehouse.",
+        "mission": "Ensure data from multiple sources is cleanly integrated and ready for analytics.",
+        "responsibilities": [
+          "Build, operate, and monitor data pipelines feeding the data warehouse, data lake/lakehouse.",
+          "Implement ETL/ELT processes to extract, transform, and standardize data from multiple sources (databases, APIs, files, applications...).",
+          "Write and optimize SQL queries to process, validate, and reconcile data.",
+          "Check data quality, monitor logs/jobs, and coordinate fixes for technical issues.",
+          "Create technical documentation (data mapping, data flow, operating guides)."
+        ],
+        "requirements": [
+          "Bachelor/college degree in IT, Data Science, or related fields.",
+          "Good SQL skills and basic programming (Python, Java, or Scala).",
+          "Basic knowledge of relational databases, data modeling, ETL/ELT, and data formats (CSV, JSON, XML...).",
+          "Preferred: 0-2 years experience or projects related to Data Warehouse, Data Lake, Spark, Kafka, Docker."
+        ],
+        "benefits": [
+          "Structured training on data platforms, integration, and modern deployment tools.",
+          "Clear growth path to Senior Data Engineer or Data Platform/Governance specialist.",
+          "Hands-on data projects with experienced experts.",
+          "Competitive compensation and benefits."
+        ]
+      },
+      "juniorDataGovernance": {
+        "title": "Junior Data Governance",
+        "department": "Data",
+        "type": "Full-time",
+        "level": "Junior",
+        "salary": "Negotiable based on competence",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Support data governance, metadata, and data quality.",
+        "mission": "Standardize and maintain data documentation and standards for the organization.",
+        "responsibilities": [
+          "Support building and managing data governance documentation: data dictionary, business glossary, data catalog, naming rules, and data classification.",
+          "Coordinate with stakeholders to standardize data definitions, track data quality, and manage access rights.",
+          "Manage information on data owners, data stewards, data lineage and flows.",
+          "Assist in configuring and operating data catalog, metadata management, and lineage functions.",
+          "Prepare status reports and internal training materials."
+        ],
+        "requirements": [
+          "Bachelor/college degree in IT, Information Systems, Business Administration, or related fields.",
+          "Basic understanding of data lifecycle, data governance, data quality, and metadata.",
+          "Proficient in Excel; basic SQL is a strong plus.",
+          "Careful, logical, disciplined, and comfortable working with documents and templates."
+        ],
+        "benefits": [
+          "In-depth training on Data Governance Frameworks, Data Quality Management, and supporting tools.",
+          "Clear growth path to Data Governance Specialist, Data Steward, or Manager.",
+          "Professional, structured environment with fast learning from experts.",
+          "Competitive salary and benefits."
+        ]
+      },
+      "socAnalystTier1": {
+        "title": "SOC Analyst Tier 1",
+        "department": "SOC",
+        "type": "Full-time",
+        "level": "Tier 1",
+        "salary": "Negotiable based on competence",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Monitor security alerts and handle incidents based on runbooks.",
+        "mission": "Ensure SOC alerts are triaged quickly and escalated correctly.",
+        "responsibilities": [
+          "Continuously monitor security alerts from SIEM, EDR, Firewall, IDS/IPS.",
+          "Receive, triage, and validate alerts based on logs and IOCs.",
+          "Handle simple cases using runbooks/playbooks and create incident tickets.",
+          "Promptly escalate critical incidents to Tier 2 or higher.",
+          "Participate in SOC shifts (may include after-hours, weekends, or 24/7)."
+        ],
+        "requirements": [
+          "Bachelor/college degree in Information Security, IT, or related fields.",
+          "Basic knowledge of TCP/IP, networking, malware, phishing, and common attack types.",
+          "Ability to read and analyze logs at a basic level.",
+          "Careful, disciplined, able to handle shift pressure, and able to read technical English."
+        ],
+        "benefits": [
+          "Hands-on training in SOC operations, log analysis, and incident response.",
+          "Work with modern security technologies (Splunk, Sentinel, CrowdStrike...).",
+          "Clear growth path to Tier 2, Threat Hunter, or Detection Engineer.",
+          "Shift allowances and competitive benefits."
+        ]
+      },
+      "socAnalystTier2": {
+        "title": "SOC Analyst Tier 2",
+        "department": "SOC",
+        "type": "Full-time",
+        "level": "Tier 2",
+        "salary": "Negotiable based on competence",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Deep investigation and handling of complex security incidents.",
+        "mission": "Improve analysis, investigation, and incident response quality in SOC.",
+        "responsibilities": [
+          "Investigate alerts escalated from Tier 1 to determine true/false positives.",
+          "Analyze logs and technical evidence to determine root cause and scope.",
+          "Handle complex scenarios: ransomware, phishing, lateral movement, account compromise.",
+          "Propose and coordinate response actions: isolate endpoints, block IPs/domains, disable accounts.",
+          "Build technical reports and contribute to tuning correlation rules and detection use cases."
+        ],
+        "requirements": [
+          "Degree in Information Security, IT, or related fields.",
+          "1-3 years experience in SOC, Blue Team, or real incident handling.",
+          "Strong knowledge of log analysis, process behavior, and MITRE ATT&CK techniques.",
+          "Proficient with tools: Wireshark, Sysmon, SIEM, EDR, Threat Intel sources."
+        ],
+        "benefits": [
+          "Direct involvement in real-world cybersecurity investigations.",
+          "Advanced training in Incident Handling and Blue Team techniques.",
+          "Growth to Senior SOC Analyst, Threat Hunter, or SOC Lead.",
+          "Competitive salary and shift allowances."
+        ]
+      },
+      "siemEngineer": {
+        "title": "SIEM Engineer / SOC Platform Engineer",
+        "department": "SOC Platform",
+        "type": "Full-time",
+        "level": "Specialist",
+        "salary": "Negotiable based on competence",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Build and operate the SIEM platform and log collection pipelines.",
+        "mission": "Ensure the SIEM system is stable, optimized, and ready for SOC operations.",
+        "responsibilities": [
+          "Deploy, configure, and operate SIEM platforms (Splunk, Sentinel, QRadar, ELK...).",
+          "Design log collection from multiple sources and build parsers, normalization rules, and monitoring dashboards.",
+          "Support building and tuning correlation rules and detection use cases with the analyst team.",
+          "Monitor performance, capacity, and resolve technical issues in data pipelines.",
+          "Create system architecture documentation and standard operating guides."
+        ],
+        "requirements": [
+          "Strong knowledge of Linux/Windows, TCP/IP, log management, APIs, and SIEM architecture.",
+          "Hands-on experience with at least one SIEM/SOC platform.",
+          "Ability to write automation scripts (Python, PowerShell, Bash) and search queries.",
+          "Strong system thinking, independent troubleshooting, and technical English reading."
+        ],
+        "benefits": [
+          "Exposure to modern SIEM, SOAR, XDR, and automation technologies.",
+          "Advanced training in log integration, performance optimization, and security automation.",
+          "Career path to Detection Engineer or Security Platform Architect.",
+          "Professional environment building large-scale SOC platforms."
+        ]
+      },
+      "pentesterPresales": {
+        "title": "Pentester & Presales",
+        "department": "Information Security",
+        "type": "Full-time",
+        "level": "Specialist",
+        "salary": "Negotiable based on competence",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Presales consulting and penetration testing for customers.",
+        "mission": "Connect customer needs with high-quality pentest services from ICS.",
+        "responsibilities": [
+          "Presales: survey systems, advise suitable pentest model, define scope/effort, and build proposals/quotes.",
+          "Delivery: perform penetration testing (Web, API, infrastructure) to find and validate vulnerabilities.",
+          "Reporting: write technical reports, present findings, and advise remediation.",
+          "Update attack techniques and improve company pentest checklists/templates."
+        ],
+        "requirements": [
+          "Degree in Information Security, IT, or related fields.",
+          "Hands-on experience in Web/API pentest; knowledge of OWASP Top 10 and tools (Burp Suite, Nmap, Metasploit...).",
+          "Communication skills to clarify customer needs and present technical proposals.",
+          "Preferred certifications: OSCP, CEH, eJPT, PNPT, or equivalent."
+        ],
+        "benefits": [
+          "Work on real pentest projects for a wide range of enterprise customers.",
+          "Career path to Senior Pentester, Security Consultant, or Presales/Pentest Lead.",
+          "Continuous training on new attack/defense techniques.",
+          "Flexible environment with performance-based compensation."
+        ]
+      },
+      "juniorDataModeler": {
+        "title": "Junior Data Modeler",
+        "department": "Data",
+        "type": "Full-time",
+        "level": "Junior",
+        "salary": "Negotiable based on competence",
+        "location": "TT3-5 New Urban Area of Dai Kim, Hanoi",
+        "description": "Design data models and standardize data structures.",
+        "mission": "Build consistent data models for DWH/lakehouse and analytics.",
+        "responsibilities": [
+          "Participate in data requirement analysis from business systems, reports, and customer needs.",
+          "Support designing data models at conceptual, logical, and physical levels.",
+          "Standardize data structures, define entities, attributes, keys, and relationships.",
+          "Build data models for transaction systems, data warehouse, data mart, and data lake/lakehouse.",
+          "Collaborate with technical and business teams to clarify business rules and ensure feasible models.",
+          "Support creating/updating technical docs: data dictionary, business glossary, data mapping, naming standards.",
+          "Review completeness and consistency of data models between source and target systems."
+        ],
+        "requirements": [
+          "Bachelor/college degree in IT, Information Systems, Data Science, Applied Math, or related fields.",
+          "Basic knowledge of relational databases, system analysis, and data processing workflows.",
+          "Understand entity, attribute, primary/foreign keys, normalization, and basic dimensional modeling.",
+          "Able to use SQL to read and validate data.",
+          "Good logical thinking, careful, and strong data structure analysis.",
+          "Plus: 0-2 years experience or knowledge of star/snowflake schema, master data, metadata, and data governance."
+        ],
+        "benefits": [
+          "Structured training in data modeling, standardization, and DWH/lakehouse modeling.",
+          "Join real projects for data platforms and governance.",
+          "Work with experts in Data Architecture, Engineering, and Analytics.",
+          "Clear career path from Junior to Data Modeler, Senior, and Data Architect.",
+          "Professional environment with competitive compensation and benefits."
         ]
       },
       "securityEngineer": {
