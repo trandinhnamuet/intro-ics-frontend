@@ -70,7 +70,7 @@ export default function ContactPage() {
 
           {/* Contact Info Card */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 flex items-center gap-4">
+            <div className="bg-gradient-to-r from-blue-500 to-cyan-600 p-6 flex items-center gap-4">
               <div className="bg-white/20 p-3 rounded-lg">
                 <Phone className="w-8 h-8 text-white" />
               </div>
@@ -80,8 +80,8 @@ export default function ContactPage() {
             </div>
             <div className="p-6 space-y-4">
               {/* Phone */}
-              <div className="bg-orange-50 rounded-lg p-4 flex gap-3">
-                <Phone className="w-5 h-5 text-orange-600 flex-shrink-0 mt-1" />
+              <div className="bg-blue-50 rounded-lg p-4 flex gap-3">
+                <Phone className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-800 text-sm">{t('contact.phone')}</p>
                   <a 
@@ -94,8 +94,8 @@ export default function ContactPage() {
               </div>
 
               {/* Zalo */}
-              <div className="bg-cyan-50 rounded-lg p-4 flex gap-3">
-                <MessageCircle className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-1" />
+              <div className="bg-sky-50 rounded-lg p-4 flex gap-3">
+                <MessageCircle className="w-5 h-5 text-sky-600 flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-800 text-sm">Zalo</p>
                   <a
@@ -110,8 +110,8 @@ export default function ContactPage() {
               </div>
 
               {/* Email */}
-              <div className="bg-purple-50 rounded-lg p-4 flex gap-3">
-                <Mail className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+              <div className="bg-cyan-50 rounded-lg p-4 flex gap-3">
+                <Mail className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-800 text-sm">{t('contact.email')}</p>
                   <a 
@@ -143,13 +143,13 @@ export default function ContactPage() {
 
           {/* Map Card */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="bg-gradient-to-r from-red-500 to-red-600 p-6 flex items-center gap-4">
+            <div className="bg-gradient-to-r from-blue-500 to-cyan-600 p-6 flex items-center gap-4">
               <div className="bg-white/20 p-3 rounded-lg">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
               <div>
                 <h3 className="text-white font-bold text-lg">{t('contact.location')}</h3>
-                <p className="text-red-100 text-sm">{t('contact.locationSubtitle')}</p>
+                <p className="text-blue-100 text-sm">{t('contact.locationSubtitle')}</p>
               </div>
             </div>
             <div className="p-0 h-64">

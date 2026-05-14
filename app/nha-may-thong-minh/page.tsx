@@ -67,7 +67,7 @@ export default function NhaMayThongMinhPage() {
       <Header />
       
       <div className="relative h-[600px] overflow-hidden mt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-orange-600 to-red-600" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-500" />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-300" />
@@ -141,13 +141,13 @@ export default function NhaMayThongMinhPage() {
             {features.map((feature, idx) => (
               <ScrollReveal key={idx} direction="up" delay={idx * 100}>
                 <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mb-6 shrink-0">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-6 shrink-0">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-4 flex-grow">{feature.description}</p>
                   <div className="pt-4 border-t mt-auto">
-                    <p className="text-sm font-semibold text-orange-600 mb-2">Lợi ích:</p>
+                    <p className="text-sm font-semibold text-blue-600 mb-2">Lợi ích:</p>
                     <p className="text-sm text-muted-foreground">{feature.benefit}</p>
                   </div>
                 </Card>
@@ -176,7 +176,7 @@ export default function NhaMayThongMinhPage() {
                 <div className="space-y-4">
                   {benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center shrink-0 mt-1">
                         <Check className="w-4 h-4 text-white" />
                       </div>
                       <p className="text-foreground">{benefit}</p>
@@ -187,28 +187,28 @@ export default function NhaMayThongMinhPage() {
             </ScrollReveal>
             
             <ScrollReveal direction="right">
-              <Card className="p-8 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20 border-2 border-amber-200 dark:border-amber-800">
+              <Card className="p-8 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 border-2 border-blue-200 dark:border-blue-800">
                 <div className="space-y-6">
                   <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
                     <div>
                       <div className="text-sm text-muted-foreground">Năng suất tăng</div>
-                      <div className="text-3xl font-bold text-amber-600">+35%</div>
+                      <div className="text-3xl font-bold text-blue-600">+35%</div>
                     </div>
-                    <TrendingUp className="w-12 h-12 text-amber-500" />
+                    <TrendingUp className="w-12 h-12 text-blue-500" />
                   </div>
                   <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
                     <div>
                       <div className="text-sm text-muted-foreground">Giảm downtime</div>
-                      <div className="text-3xl font-bold text-green-600">-50%</div>
+                      <div className="text-3xl font-bold text-blue-600">-50%</div>
                     </div>
-                    <Cog className="w-12 h-12 text-green-500" />
+                    <Cog className="w-12 h-12 text-blue-500" />
                   </div>
                   <div className="flex items-center justify-between p-4 bg-white dark:bg-background rounded-lg">
                     <div>
                       <div className="text-sm text-muted-foreground">An toàn lao động</div>
-                      <div className="text-3xl font-bold text-orange-600">99.9%</div>
+                      <div className="text-3xl font-bold text-blue-600">99.9%</div>
                     </div>
-                    <ShieldCheck className="w-12 h-12 text-orange-500" />
+                    <ShieldCheck className="w-12 h-12 text-blue-500" />
                   </div>
                 </div>
               </Card>
@@ -220,7 +220,7 @@ export default function NhaMayThongMinhPage() {
       <Section spacing="sm" background="gradient">
         <div className="container-responsive">
           <ScrollReveal direction="up">
-            <Card className="relative overflow-hidden bg-gradient-to-br from-amber-600 via-orange-600 to-red-600 p-12 lg:p-20 text-center border-none">
+            <Card className="relative overflow-hidden bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-500 p-12 lg:p-20 text-center border-none">
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
                 <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-300" />

@@ -44,7 +44,7 @@ export function Sidebar() {
       </Card>
 
       {/* Recruitment Section */}
-      <div className="bg-[#ff6b35] text-white px-3 py-2 text-sm font-semibold rounded">
+      <div className="bg-[#0984c7] text-white px-3 py-2 text-sm font-semibold rounded">
         {t('sidebar.newsRecruitment')}
       </div>
 

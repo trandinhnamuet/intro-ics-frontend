@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import Script from "next/script"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -53,6 +54,15 @@ export default function RootLayout({
           </I18nProvider>
           <Toaster />
         </ThemeProvider>
+        <Script id="gim-bot-config" strategy="beforeInteractive">
+          {`window.__gim = window.__gim || {};
+window.__gim.licenseId = "596954416960026500";`}
+        </Script>
+        <Script
+          id="gim-bot-sdk"
+          src="https://botsdk.gamania.chat/index.umd.js"
+          strategy="afterInteractive"
+        />
         <Analytics />
       </body>
     </html>

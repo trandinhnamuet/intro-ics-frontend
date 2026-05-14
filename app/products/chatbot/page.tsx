@@ -94,7 +94,7 @@ export default function ChatbotPage() {
   const useCasesMeta = t('products.chatbot.useCases', { returnObjects: true }) as any
   const useCases = t('products.chatbot.useCases.items', { returnObjects: true }) as Array<{ title: string; description: string; stat: string }>
   const useCaseIcons = [Heart, ShoppingBag, Stethoscope, Target]
-  const useCaseColors = ['from-pink-500 to-red-500', 'from-amber-500 to-orange-500', 'from-blue-500 to-cyan-500', 'from-emerald-500 to-green-600']
+  const useCaseColors = ['from-blue-500 to-cyan-500', 'from-blue-600 to-sky-500', 'from-blue-500 to-indigo-500', 'from-cyan-500 to-blue-600']
   const useCasesWithMeta = (useCases || []).map((item, idx) => ({
     ...item,
     icon: useCaseIcons[idx % useCaseIcons.length],
@@ -238,9 +238,9 @@ export default function ChatbotPage() {
                 const IconComponent = [AlertCircle, TrendingUp, ShieldCheck][idx]
                 return (
                   <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                    <Card className="p-6 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-200/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                    <Card className="p-6 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-200/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
                           {IconComponent && <IconComponent className="w-6 h-6 text-white" />}
                         </div>
                         <div>
@@ -275,7 +275,7 @@ export default function ChatbotPage() {
           <ScrollReveal direction="up" delay={300}>
             <Card className="mt-12 p-8 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 border-2 border-blue-200/50 dark:border-blue-800/50">
               <div className="flex items-start gap-4">
-                <Check className="w-8 h-8 text-green-500 shrink-0 mt-1" />
+                <Check className="w-8 h-8 text-blue-500 shrink-0 mt-1" />
                 <div>
                   <h3 className="text-2xl font-bold mb-2">{solution.title}</h3>
                   <p className="text-lg text-foreground/90">
@@ -387,7 +387,7 @@ export default function ChatbotPage() {
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-black/90 p-3 rounded-full">
-                    <Expand className="w-8 h-8 text-green-600 dark:text-green-400" />
+                    <Expand className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                   </div>
                 </div>
               </div>
@@ -399,7 +399,7 @@ export default function ChatbotPage() {
                 <div className="space-y-4 pt-4">
                   {(automation.items || []).map((item: any, idx: number) => (
                     <div key={idx} className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center flex-shrink-0 mt-1">
                         <Check className="w-6 h-6 text-white" />
                       </div>
                       <div>

@@ -6,11 +6,11 @@
 ## API Base URL
 Các service sử dụng biến môi trường `NEXT_PUBLIC_API_URL` để cấu hình base URL của API.
 
-Mặc định: `http://localhost:3007`
+Mặc định: `http://localhost:3006`
 
 Thêm vào file `.env.local`:
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3007
+NEXT_PUBLIC_API_URL=http://localhost:3006
 ```
 
 ## Articles Service
@@ -266,7 +266,7 @@ Lấy URL đầy đủ để hiển thị một ảnh.
 **Example:**
 ```typescript
 const imageUrl = imagesService.getImageUrl('my-image.jpg')
-// Returns: 'http://localhost:3007/api/images/my-image.jpg'
+// Returns: 'http://localhost:3006/api/images/my-image.jpg'
 ```
 
 #### getImageInfo(id)

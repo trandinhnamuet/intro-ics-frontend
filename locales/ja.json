@@ -391,6 +391,10 @@
       "heading": "リーダーシップ",
       "subtitle": "ICSを導くコアタレント"
     },
+    "advisory": {
+      "heading": "アドバイザリーチーム",
+      "subtitle": "ICSを支える専門家"
+    },
     "solutions": {
       "heading": "当社のソリューション",
       "subtitle": "トップレベルのセキュリティ製品・ソリューション",
@@ -459,6 +463,8 @@
     "benefit3Desc": "ジェネレーションZ中心の活気あふれた環境、心理的上司、多様なスポーツ活動",
     "location": "勤務地",
     "salary": "給与",
+    "deadlineLabel": "応募締切",
+    "deadlineValue": "31/5/2026",
     "mission": "ミッション",
     "responsibilities": "職務記述",
     "requirements": "応募要件",
@@ -543,6 +549,213 @@
           "経営陣による直接教育とメンタリング",
           "明確なキャリア成長経路",
           "業務機器と通信費のサポート"
+        ]
+      },
+      "juniorDataEngineer": {
+        "title": "ジュニアデータエンジニア",
+        "department": "データ",
+        "type": "フルタイム",
+        "level": "ジュニア",
+        "salary": "経験・能力により相談",
+        "location": "ハノイ ダイキム新都市 TT3-5",
+        "description": "DWHおよびData Lake/Lakehouse向けのデータパイプラインを構築・運用します。",
+        "mission": "複数ソースのデータをクリーンに統合し、分析に使える状態にします。",
+        "responsibilities": [
+          "DWH、Data Lake/Lakehouse向けのデータパイプラインを構築・運用・監視",
+          "複数ソース（DB、API、ファイル、アプリ等）からのETL/ELTを実装し、抽出・変換・標準化",
+          "SQLを作成・最適化し、処理・検証・突合を実施",
+          "データ品質の確認、ログ/ジョブ監視、技術的な不具合対応の調整",
+          "技術ドキュメント（データマッピング、データフロー、運用手順）作成"
+        ],
+        "requirements": [
+          "IT、データサイエンス等関連分野の大学/短大卒",
+          "SQLと基本的なプログラミング（Python/Java/Scala）のスキル",
+          "RDB、データモデリング、ETL/ELT、データ形式（CSV/JSON/XML等）の基礎知識",
+          "優遇: 0-2年経験またはData Warehouse/Data Lake/Spark/Kafka/Docker関連のプロジェクト経験"
+        ],
+        "benefits": [
+          "データ基盤、統合、最新ツールに関する体系的な研修",
+          "Senior Data EngineerやData Platform/Governance専門家への明確な成長パス",
+          "経験豊富な専門家と実案件に参加",
+          "競争力のある給与・福利厚生"
+        ]
+      },
+      "juniorDataGovernance": {
+        "title": "ジュニア データガバナンス",
+        "department": "データ",
+        "type": "フルタイム",
+        "level": "ジュニア",
+        "salary": "経験・能力により相談",
+        "location": "ハノイ ダイキム新都市 TT3-5",
+        "description": "データガバナンス、メタデータ、データ品質の支援。",
+        "mission": "組織のデータ文書と基準を標準化・維持する。",
+        "responsibilities": [
+          "データ辞書、ビジネスグロッサリ、データカタログ、命名規則、分類などの文書作成・管理支援",
+          "関係者と連携して定義を標準化し、品質・アクセス権を追跡",
+          "データオーナー/スチュワード、データリネージ/フロー情報の管理",
+          "データカタログ、メタデータ管理、リネージ機能の設定・運用支援",
+          "進捗レポートや社内教育資料の作成"
+        ],
+        "requirements": [
+          "IT、情報システム、経営など関連分野の大学/短大卒",
+          "データライフサイクル、ガバナンス、品質、メタデータの基礎理解",
+          "Excelを使いこなせること（SQL基礎があれば大きな強み）",
+          "慎重で論理的、規律があり、文書作業に強い"
+        ],
+        "benefits": [
+          "Data Governance FrameworkやData Quality Managementの専門研修",
+          "Data Governance Specialist/Data Steward/Managerへの明確な成長パス",
+          "専門的で体系的な環境で学習速度を加速",
+          "競争力ある給与と福利厚生"
+        ]
+      },
+      "socAnalystTier1": {
+        "title": "SOCアナリスト Tier 1",
+        "department": "SOC",
+        "type": "フルタイム",
+        "level": "Tier 1",
+        "salary": "経験・能力により相談",
+        "location": "ハノイ ダイキム新都市 TT3-5",
+        "description": "セキュリティアラート監視とRunbookに基づくインシデント対応。",
+        "mission": "SOCアラートの迅速なトリアージと正しいエスカレーションを実施。",
+        "responsibilities": [
+          "SIEM/EDR/Firewall/IDS/IPSのアラートを継続監視",
+          "ログやIOCに基づきアラートを受領・トリアージ・検証",
+          "Runbook/Playbookに従って簡易対応し、チケット作成",
+          "重大インシデントをTier 2以上へ迅速にエスカレーション",
+          "SOCシフト勤務（夜間・週末・24/7を含む場合あり）"
+        ],
+        "requirements": [
+          "情報セキュリティ/IT等関連分野の大学/短大卒",
+          "TCP/IP、ネットワーク、マルウェア、フィッシングなどの基礎知識",
+          "基本的なログ読解・分析能力",
+          "慎重で規律があり、シフト勤務に対応、技術英語読解が可能"
+        ],
+        "benefits": [
+          "SOC運用・ログ分析・インシデント対応の実践研修",
+          "Splunk、Sentinel、CrowdStrike等の最新技術に触れられる",
+          "Tier 2、Threat Hunter、Detection Engineerへの成長パス",
+          "シフト手当と競争力ある福利厚生"
+        ]
+      },
+      "socAnalystTier2": {
+        "title": "SOCアナリスト Tier 2",
+        "department": "SOC",
+        "type": "フルタイム",
+        "level": "Tier 2",
+        "salary": "経験・能力により相談",
+        "location": "ハノイ ダイキム新都市 TT3-5",
+        "description": "高度な調査と複雑なインシデント対応。",
+        "mission": "SOCの分析・調査・対応品質を向上。",
+        "responsibilities": [
+          "Tier 1からのエスカレーションを調査しTrue/False Positiveを判定",
+          "複数ソースのログ・証拠を分析し原因と影響範囲を特定",
+          "ランサムウェア、フィッシング、横展開、アカウント侵害などの対応",
+          "エンドポイント隔離、IP/ドメイン遮断、アカウント無効化等の対応を提案・調整",
+          "技術レポート作成、相関ルール/検知ユースケース最適化に貢献"
+        ],
+        "requirements": [
+          "情報セキュリティ/IT等の学位",
+          "SOC/Blue Team/実インシデント対応の経験1-3年",
+          "ログ分析、プロセス挙動、MITRE ATT&CKの理解",
+          "Wireshark、Sysmon、SIEM、EDR、Threat Intelの利用経験"
+        ],
+        "benefits": [
+          "実案件の調査・対応に直接関与",
+          "Incident HandlingとBlue Teamの高度研修",
+          "Senior SOC Analyst/Threat Hunter/SOC Leadへの成長",
+          "競争力ある給与とシフト手当"
+        ]
+      },
+      "siemEngineer": {
+        "title": "SIEMエンジニア / SOCプラットフォームエンジニア",
+        "department": "SOCプラットフォーム",
+        "type": "フルタイム",
+        "level": "スペシャリスト",
+        "salary": "経験・能力により相談",
+        "location": "ハノイ ダイキム新都市 TT3-5",
+        "description": "SIEM基盤とログ収集パイプラインの構築・運用。",
+        "mission": "SIEMの安定稼働と最適化を担い、SOC運用を支える。",
+        "responsibilities": [
+          "SIEM（Splunk/Sentinel/QRadar/ELK等）の導入・設定・運用",
+          "多ソースのログ収集設計、パーサー/正規化ルール/監視ダッシュボード作成",
+          "アナリストチームと連携した相関ルール/検知ユースケースの調整",
+          "パフォーマンス・容量監視とパイプライン障害の対応",
+          "システムアーキテクチャ文書と運用ガイド作成"
+        ],
+        "requirements": [
+          "Linux/Windows、TCP/IP、ログ管理、API、SIEMアーキテクチャの知識",
+          "少なくとも1つのSIEM/SOCプラットフォームの実務経験",
+          "自動化スクリプト（Python/PowerShell/Bash）と検索クエリ作成",
+          "システム思考、独立した問題解決力、技術英語読解"
+        ],
+        "benefits": [
+          "SIEM/SOAR/XDR/Automationの最新技術に触れられる",
+          "ログ統合・性能最適化・セキュリティ自動化の高度研修",
+          "Detection EngineerやSecurity Platform Architectへの成長パス",
+          "大規模SOC基盤構築に携われる専門環境"
+        ]
+      },
+      "pentesterPresales": {
+        "title": "ペネトレーター 兼 プリセールス",
+        "department": "情報セキュリティ",
+        "type": "フルタイム",
+        "level": "スペシャリスト",
+        "salary": "経験・能力により相談",
+        "location": "ハノイ ダイキム新都市 TT3-5",
+        "description": "プリセールス支援とペネトレーションテストの実施。",
+        "mission": "顧客ニーズとICSの高品質なペンテストサービスを結ぶ。",
+        "responsibilities": [
+          "プリセールス: システム調査、最適なPentestモデル提案、スコープ/工数算定、提案書・見積作成",
+          "デリバリー: Web/API/インフラのペンテストを実施し脆弱性を検証",
+          "レポーティング: 技術レポート作成、結果説明、改善提案",
+          "最新攻撃手法の更新とチェックリスト/テンプレート改善"
+        ],
+        "requirements": [
+          "情報セキュリティ/IT関連の学位",
+          "Web/APIペンテスト経験、OWASP Top 10とツール（Burp Suite、Nmap、Metasploit等）の理解",
+          "顧客要件の確認と技術提案を行うコミュニケーション力",
+          "OSCP/CEH/eJPT/PNPTなどの資格保有者優遇"
+        ],
+        "benefits": [
+          "多様な企業向けの実ペンテスト案件に参加",
+          "Senior Pentester/セキュリティコンサル/プリセールスリードへの成長",
+          "最新攻撃・防御技術の継続的な研修",
+          "柔軟な環境と成果に応じた報酬"
+        ]
+      },
+      "juniorDataModeler": {
+        "title": "ジュニア データモデラー",
+        "department": "データ",
+        "type": "フルタイム",
+        "level": "ジュニア",
+        "salary": "経験・能力により相談",
+        "location": "ハノイ ダイキム新都市 TT3-5",
+        "description": "データモデル設計と構造標準化。",
+        "mission": "DWH/Lakehouseと分析向けに一貫したデータモデルを構築。",
+        "responsibilities": [
+          "業務システム、レポート、顧客ニーズからのデータ要件分析に参加",
+          "概念/論理/物理レベルのデータモデル設計支援",
+          "エンティティ、属性、キー、関係を定義し構造を標準化",
+          "トランザクション/DWH/Data Mart/Data Lake/Lakehouseのモデル構築",
+          "技術・業務チームと連携し業務ルールを明確化、実装可能性を確保",
+          "データ辞書、グロッサリ、データマッピング、命名規則などのドキュメント作成/更新支援",
+          "ソース/ターゲット間のモデルの完全性と整合性を確認"
+        ],
+        "requirements": [
+          "IT、情報システム、データサイエンス、応用数学等の学位",
+          "RDB、システム分析、データ処理フローの基礎知識",
+          "エンティティ/属性/主キー/外部キー/正規化/基本的ディメンショナルモデリングの理解",
+          "SQLを用いたデータ読解・検証が可能",
+          "論理的思考と慎重さ、データ構造分析力",
+          "優遇: 0-2年経験またはスター/スノーフレーク、マスターデータ、メタデータ、データガバナンスの知識"
+        ],
+        "benefits": [
+          "DWH/Lakehouse向けデータモデリングの体系的研修",
+          "データ基盤/ガバナンスの実案件に参加",
+          "Data Architecture/Engineering/Analyticsの専門家と協働",
+          "JuniorからData Modeler、Senior、Data Architectへの成長パス",
+          "競争力ある給与と福利厚生"
         ]
       },
       "securityEngineer": {
