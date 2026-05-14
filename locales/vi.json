@@ -50,6 +50,10 @@
     },
     "partners": {
       "intro": "Đồng hành cùng những thương hiệu hàng đầu thế giới",
+      "strategicPartner": "Đối tác chiến lược",
+      "rarcenter": "Trung tâm Nghiên cứu, ứng dụng dữ liệu dân cư và căn cước công dân",
+      "rarcenterShort": "RAR Center",
+      "visitWebsite": "Truy cập website",
       "gurucul": "Giải pháp UEBA và SIEM thế hệ mới",
       "hyperg": "Giải pháp an ninh mạng ứng dụng AI và Cloud",
       "oracle": "Hệ quản trị cơ sở dữ liệu hàng đầu"
@@ -246,6 +250,9 @@
     "description": "ICS tự hào hợp tác với những đối tác công nghệ và kinh doanh hàng đầu thế giới. Chúng tôi tin rằng sự kết hợp giữa công nghệ tiên tiến và kinh nghiệm thực tế sẽ tạo ra những giải pháp an ninh mạng tốt nhất cho khách hàng. Cùng nhau, chúng tôi đang xây dựng một hệ sinh thái an toàn và bền vững cho doanh nghiệp Việt Nam và khu vực.",
     "badge": "Đối tác",
     "intro": "Đồng hành cùng những thương hiệu hàng đầu thế giới",
+    "strategicPartners": "Đối tác Chiến lược",
+    "strategicPartnersSubtitle": "Hợp tác chiến lược toàn diện, triển khai các giải pháp trọng điểm",
+    "rarcenterDesc": "Trung tâm Nghiên cứu, ứng dụng dữ liệu dân cư và căn cước công dân (RAR Center) - Đối tác chiến lược hàng đầu trong nghiên cứu, ứng dụng và khai thác dữ liệu dân cư.",
     "carousel": {
       "scienceMinistry": "Bộ Khoa học và Công nghệ",
       "environmentMinistry": "Bộ Tài nguyên Môi trường",

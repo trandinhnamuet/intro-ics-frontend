@@ -49,6 +49,11 @@
       "badge": "Featured Achievements"
     },
     "partners": {
+      "intro": "Partnering with world-leading brands",
+      "strategicPartner": "Strategic Partner",
+      "rarcenter": "Research and Application Center for Population Data and Citizen Identification",
+      "rarcenterShort": "RAR Center",
+      "visitWebsite": "Visit Website",
       "gurucul": "UEBA and next-generation SIEM solutions",
       "hyperg": "AI and Cloud-based cybersecurity solutions",
       "oracle": "Leading database management systems"
@@ -245,6 +250,9 @@
     "description": "ICS is proud to partner with leading technology and business partners worldwide. We believe that the combination of advanced technology and practical experience creates the best cybersecurity solutions for our customers. Together, we are building a safe and sustainable ecosystem for businesses in Vietnam and the region.",
     "badge": "Partners",
     "intro": "Partnering with world-leading brands",
+    "strategicPartners": "Strategic Partners",
+    "strategicPartnersSubtitle": "Comprehensive strategic cooperation, deploying critical solutions",
+    "rarcenterDesc": "Research and Application Center for Population Data and Citizen Identification (RAR Center) - Leading strategic partner in research, application and utilization of population data.",
     "carousel": {
       "scienceMinistry": "Ministry of Science and Technology",
       "environmentMinistry": "Ministry of Natural Resources and Environment",

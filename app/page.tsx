@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { AnimatedHeading } from "@/components/ui/animated-heading"
 import { Section } from "@/components/ui/section"
-import { Shield, Zap, Award, TrendingUp, ArrowRight, CheckCircle2, Star, Users, Building2, Factory, Sparkles } from "lucide-react"
+import { Shield, Zap, Award, TrendingUp, ArrowRight, CheckCircle2, Star, Users, Building2, Factory, Sparkles, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useTranslation } from 'react-i18next'
@@ -276,12 +276,55 @@ export default function Page() {
                   <Award className="w-4 h-4 mr-2" />
                   {t('partners.badge')}
                 </Badge>
-                <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-4">
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 py-2 px-1 leading-normal overflow-visible">
                   {t('partners.title')}
                 </h2>
-                <p className="text-lg text-gray-700 dark:text-white/90 max-w-3xl mx-auto font-medium">
+                <p className="text-lg text-gray-700 dark:text-white/90 max-w-3xl mx-auto font-medium py-1 leading-relaxed overflow-visible">
                   {t('home.partners.intro')}
                 </p>
+              </div>
+            </ScrollReveal>
+
+            {/* Strategic Partner Card */}
+            <ScrollReveal direction="up" delay={100}>
+              <div className="mb-12 max-w-5xl mx-auto">
+                <div className="relative group overflow-hidden rounded-3xl p-[2px] bg-gradient-to-r from-primary via-accent to-secondary hover:shadow-2xl transition-all duration-500">
+                  <div className="relative bg-background rounded-[22px] p-8 lg:p-12 overflow-hidden flex flex-col lg:flex-row items-center gap-8 lg:gap-12 z-10">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 group-hover:bg-primary/10 transition-all duration-500" />
+                    
+                    {/* Logo Section */}
+                    <Link 
+                      href="https://rarcenter.vn/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-full lg:w-5/12 h-56 lg:h-64 bg-white rounded-2xl p-6 flex items-center justify-center shadow-md relative overflow-hidden group/logo flex-shrink-0 border border-border/50 block"
+                    >
+                      <img
+                        src="/RAR.jpg"
+                        alt={t('home.partners.rarcenterShort')}
+                        className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover/logo:scale-105 drop-shadow-sm"
+                      />
+                    </Link>
+
+                    {/* Content Section */}
+                    <div className="flex-1 text-left flex flex-col justify-center h-full py-4">
+                      <div>
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm font-semibold mb-4 shadow-sm">
+                          <Sparkles className="w-4 h-4 text-red-500 animate-pulse" />
+                          {t('home.partners.strategicPartner')}
+                        </div>
+                        <Link href="https://rarcenter.vn/" target="_blank" rel="noopener noreferrer" className="block hover:underline">
+                          <h3 className="text-2xl lg:text-3xl font-extrabold text-foreground mb-3 tracking-tight group-hover:text-primary transition-colors duration-300">
+                            {t('home.partners.rarcenterShort')}
+                          </h3>
+                        </Link>
+                        <p className="text-base lg:text-lg text-muted-foreground font-medium leading-relaxed mb-0">
+                          {t('home.partners.rarcenter')}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
 
