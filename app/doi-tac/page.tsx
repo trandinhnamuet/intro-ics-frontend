@@ -205,18 +205,13 @@ export default function PartnerPage() {
                   <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 group-hover:bg-primary/10 transition-all duration-500" />
                   
                   {/* Logo Section */}
-                  <Link 
-                    href="https://rarcenter.vn/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-full lg:w-5/12 h-56 lg:h-64 bg-white rounded-2xl p-6 flex items-center justify-center shadow-md relative overflow-hidden group/logo flex-shrink-0 border border-border/50 block"
-                  >
+                  <div className="w-full lg:w-5/12 h-56 lg:h-64 bg-white rounded-2xl p-6 flex items-center justify-center shadow-md relative overflow-hidden group/logo flex-shrink-0 border border-border/50 block">
                     <img
                       src="/RAR.jpg"
                       alt={t('home.partners.rarcenterShort')}
                       className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover/logo:scale-105 drop-shadow-sm"
                     />
-                  </Link>
+                  </div>
 
                   {/* Content Section */}
                   <div className="flex-1 text-left flex flex-col justify-center h-full py-4">
@@ -225,11 +220,9 @@ export default function PartnerPage() {
                         <Sparkles className="w-4 h-4 text-red-500 animate-pulse" />
                         {t('home.partners.strategicPartner')}
                       </div>
-                      <Link href="https://rarcenter.vn/" target="_blank" rel="noopener noreferrer" className="block hover:underline">
-                        <h3 className="text-2xl lg:text-3xl font-extrabold text-foreground mb-4 tracking-tight group-hover:text-primary transition-colors duration-300">
-                          {t('home.partners.rarcenterShort')}
-                        </h3>
-                      </Link>
+                      <h3 className="text-2xl lg:text-3xl font-extrabold text-foreground mb-4 tracking-tight group-hover:text-primary transition-colors duration-300">
+                        {t('home.partners.rarcenterShort')}
+                      </h3>
                       <p className="text-base lg:text-lg text-muted-foreground font-medium leading-relaxed mb-0">
                         {t('partners.rarcenterDesc')}
                       </p>
