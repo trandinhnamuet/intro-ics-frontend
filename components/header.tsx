@@ -76,7 +76,7 @@ export function Header() {
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       isScrolled 
         ? "bg-background/80 backdrop-blur-lg shadow-md" 
-        : "bg-background/60 backdrop-blur-sm",
+        : "bg-background/80 backdrop-blur-sm",
       isVisible ? 'translate-y-0' : '-translate-y-full'
     )}>
       <div className="container-responsive">
@@ -491,7 +491,7 @@ export function Header() {
 
               {/* Mobile Search */}
               <div className="px-4 pt-3 pb-2 space-y-2">
-                <div className="flex items-center gap-2 bg-muted/50 rounded-lg px-3 py-2">
+                <div className="flex items-center gap-2 bg-muted rounded-lg px-3 py-2">
                   <SearchIcon className="h-4 w-4 text-muted-foreground" />
                   <Input
                     type="text"
@@ -499,7 +499,7 @@ export function Header() {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    className="border-0 focus-visible:ring-0 bg-transparent"
+                    className="border-0 focus-visible:ring-0 bg-transparent shadow-none"
                   />
                   {searchTerm && (
                     <Button size="sm" onClick={handleSearch} className="h-8 rounded-lg">

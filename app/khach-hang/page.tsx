@@ -29,7 +29,7 @@ export default function KhachHangPage() {
 
       {/* Breadcrumb */}
       <div className="bg-muted/20 py-3">
-        <div className="w-full px-16 lg:px-32">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-32">
           <div className="flex gap-2 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-primary">{t('common.home')}</Link>
             <span>›</span>
@@ -42,10 +42,10 @@ export default function KhachHangPage() {
 
       {/* Main Content with Sidebar */}
       <main className="min-h-screen">
-        <div className="w-full px-16 lg:px-32 py-12">
-          <div className="flex gap-8">
-            <Sidebar />
-            <div className="flex-1">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-32 py-12">
+          <div className="flex flex-col lg:flex-row gap-8">
+            <Sidebar classname="order-last lg:order-first w-full lg:w-[300px] block" />
+            <div className="flex-1 w-full lg:w-auto">
               {/* Customer Description */}
               <section className="py-6">
                 <div className="prose prose-sm max-w-none mb-12">
@@ -55,7 +55,7 @@ export default function KhachHangPage() {
                 </div>
 
                 {/* Three Columns Section - Staggered Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-max">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-max">
                   {/* Finance - Offset down */}
                   <div className="group text-center md:mt-12">
                     <div className="relative w-full h-[200px] mb-4 rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-white transition-transform duration-300 hover:scale-105">

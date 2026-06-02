@@ -505,7 +505,7 @@ export default function RecruitmentPage() {
 
               {/* Global Job Detail Dialog */}
               <Dialog open={isDialogOpen} onOpenChange={(open) => setIsDialogOpen(open)}>
-                <DialogContent className="w-[96vw] max-w-[96vw] h-[92vh] lg:w-[66vw] lg:max-w-[66vw] lg:h-[72vh] flex flex-col overflow-hidden">
+                <DialogContent className="w-[96vw] max-w-[96vw] h-[92vh] lg:w-[66vw] lg:max-w-[66vw] lg:h-[72vh] flex flex-col overflow-hidden" style={{ zIndex: 3000000000 }}>
                   <DialogHeader>
                     <div className="flex items-start gap-4 mb-4">
                       <div className={`w-16 h-16 ${selectedColor} rounded-xl flex items-center justify-center flex-shrink-0`}>
@@ -832,7 +832,7 @@ export default function RecruitmentPage() {
                         {jobListings
                           .filter(job => tabValue === "all" || job.category === tabValue)
                           .map((job) => (
-                            <Card key={job.id} className="hover:shadow-xl transition-all duration-300 border-l-4 hover:border-l-blue-500 cursor-pointer group">
+                            <Card key={job.id} className="transition-all duration-300 border hover:border-blue-500 cursor-pointer group shadow-none">
                               <CardHeader>
                                 <div className="flex items-start justify-between">
                                   <div className="flex gap-4">
