@@ -505,7 +505,7 @@ export default function RecruitmentPage() {
 
               {/* Global Job Detail Dialog */}
               <Dialog open={isDialogOpen} onOpenChange={(open) => setIsDialogOpen(open)}>
-                <DialogContent className="w-[96vw] max-w-[96vw] h-[92vh] lg:w-[66vw] lg:max-w-[66vw] lg:h-[72vh] flex flex-col overflow-hidden" style={{ zIndex: 3000000000 }}>
+                <DialogContent className="w-[96vw] max-w-[96vw] h-[92vh] lg:w-[66vw] lg:max-w-[66vw] lg:h-[72vh] flex flex-col overflow-hidden transition-all" style={{ zIndex: isApplyDialogOpen ? 0 : 3000000000 }}>
                   <DialogHeader>
                     <div className="flex items-start gap-4 mb-4">
                       <div className={`w-16 h-16 ${selectedColor} rounded-xl flex items-center justify-center flex-shrink-0`}>
@@ -665,7 +665,7 @@ export default function RecruitmentPage() {
               </Dialog>
 
               <Dialog open={isApplyDialogOpen} onOpenChange={setIsApplyDialogOpen}>
-                <DialogContent className="w-[96vw] max-w-[96vw] lg:max-w-2xl max-h-[92vh] overflow-y-auto">
+                <DialogContent className="w-[96vw] max-w-[96vw] lg:max-w-2xl max-h-[92vh] overflow-y-auto" style={{ zIndex: 4000000000 }}>
                   <DialogHeader>
                     <DialogTitle>Ứng tuyển vị trí</DialogTitle>
                     <DialogDescription>
