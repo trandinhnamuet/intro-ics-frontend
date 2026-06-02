@@ -4,12 +4,17 @@ import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useTranslation } from "react-i18next"
+import { cn } from "@/lib/utils"
 
-export function Sidebar() {
+interface SidebarProps {
+  classname?: string
+}
+
+export function Sidebar(props: SidebarProps) {
   const { t } = useTranslation()
   
   return (
-    <aside className="w-[300px] flex-shrink-0 space-y-5 sticky top-24 h-fit">
+    <aside className={cn("hidden lg:block w-[300px] flex-shrink-0 space-y-5 sticky top-24 h-fit", props.classname)}>
       {/* Navigation Links */}
       <Card className="overflow-hidden border-none shadow-md">
         <div className="bg-[#0984c7] text-white px-4 py-3 text-center font-semibold text-sm">

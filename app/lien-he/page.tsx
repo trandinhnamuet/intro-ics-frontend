@@ -30,18 +30,18 @@ export default function ContactPage() {
       </div>
 
       <main className="min-h-screen pt-0">
-        <div className="w-full px-16 lg:px-32 py-6">
-          <div className="flex gap-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-32 py-6">
+          <div className="flex flex-col lg:flex-row gap-8">
             {/* Sidebar */}
-            <Sidebar />
+            <Sidebar classname="order-last lg:order-first w-full lg:w-[300px] block" />
             
             {/* Main Content */}
-            <div className="flex-1">
+            <div className="flex-1 w-full lg:w-auto">
               {/* Three Column Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 auto-rows-max">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12 auto-rows-max">
           {/* Company Info Card */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 flex items-center gap-4">
+            <div className="bg-linear-to-r from-blue-500 to-blue-600 p-6 flex items-center gap-4">
               <div className="bg-white/20 p-3 rounded-lg">
                 <Building2 className="w-8 h-8 text-white" />
               </div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
             </div>
             <div className="p-6">
               <div className="bg-green-50 rounded-lg p-4 flex gap-3">
-                <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-green-600 shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-800">{t('contact.hanoiOffice')}</p>
                   <a 
@@ -70,7 +70,7 @@ export default function ContactPage() {
 
           {/* Contact Info Card */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="bg-gradient-to-r from-blue-500 to-cyan-600 p-6 flex items-center gap-4">
+            <div className="bg-linear-to-r from-blue-500 to-cyan-600 p-6 flex items-center gap-4">
               <div className="bg-white/20 p-3 rounded-lg">
                 <Phone className="w-8 h-8 text-white" />
               </div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
             <div className="p-6 space-y-4">
               {/* Phone */}
               <div className="bg-blue-50 rounded-lg p-4 flex gap-3">
-                <Phone className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                <Phone className="w-5 h-5 text-blue-600 shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-800 text-sm">{t('contact.phone')}</p>
                   <a 
@@ -95,7 +95,7 @@ export default function ContactPage() {
 
               {/* Zalo */}
               <div className="bg-sky-50 rounded-lg p-4 flex gap-3">
-                <MessageCircle className="w-5 h-5 text-sky-600 flex-shrink-0 mt-1" />
+                <MessageCircle className="w-5 h-5 text-sky-600 shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-800 text-sm">Zalo</p>
                   <a
@@ -111,7 +111,7 @@ export default function ContactPage() {
 
               {/* Email */}
               <div className="bg-cyan-50 rounded-lg p-4 flex gap-3">
-                <Mail className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-1" />
+                <Mail className="w-5 h-5 text-cyan-600 shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-800 text-sm">{t('contact.email')}</p>
                   <a 
@@ -125,7 +125,7 @@ export default function ContactPage() {
 
               {/* Website */}
               <div className="bg-blue-50 rounded-lg p-4 flex gap-3">
-                <Globe className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                <Globe className="w-5 h-5 text-blue-600 shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-800 text-sm">{t('contact.website')}</p>
                   <a 
@@ -143,7 +143,7 @@ export default function ContactPage() {
 
           {/* Map Card */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="bg-gradient-to-r from-blue-500 to-cyan-600 p-6 flex items-center gap-4">
+            <div className="bg-linear-to-r from-blue-500 to-cyan-600 p-6 flex items-center gap-4">
               <div className="bg-white/20 p-3 rounded-lg">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
