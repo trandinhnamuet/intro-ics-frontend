@@ -115,10 +115,10 @@ export default function ContactPage() {
                 <div>
                   <p className="font-semibold text-gray-800 text-sm">{t('contact.email')}</p>
                   <a 
-                    href="mailto:info@icss.com.vn"
+                    href="mailto:contact@ics.vn"
                     className="text-gray-700 hover:text-[#0984c7] transition-colors break-all"
                   >
-                    <b>info@icss.com.vn</b>
+                    <b>contact@ics.vn</b>
                   </a>
                 </div>
               </div>
@@ -129,12 +129,12 @@ export default function ContactPage() {
                 <div>
                   <p className="font-semibold text-gray-800 text-sm">{t('contact.website')}</p>
                   <a 
-                    href="https://www.icss.com.vn"
+                    href="https://ics.vn"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-700 hover:text-[#0984c7] transition-colors"
                   >
-                    <b>www.icss.com.vn</b>
+                    <b>www.ics.vn</b>
                   </a>
                 </div>
               </div>
