@@ -45,7 +45,7 @@ export function FloatingActionButton() {
     {
       icon: Mail,
       label: 'Email',
-      href: 'mailto:info@icss.com.vn',
+      href: 'mailto:contact@ics.vn',
       color: 'from-purple-500 to-pink-500'
     }
   ]
