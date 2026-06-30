@@ -6,6 +6,7 @@ import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
+import { getCategoryMeta } from '@/lib/article-categories'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
@@ -152,7 +153,9 @@ export default function ArticleDetailPage() {
 
           <ScrollReveal direction="up" delay={100}>
             <div className="flex flex-wrap gap-3 mb-6">
-              <Badge variant="secondary" className="px-4 py-1">Tin tức</Badge>
+              <Badge className={`px-4 py-1 ${getCategoryMeta(article.category).badgeClassName}`}>
+                {getCategoryMeta(article.category).label}
+              </Badge>
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
