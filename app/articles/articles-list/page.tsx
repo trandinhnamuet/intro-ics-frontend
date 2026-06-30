@@ -22,6 +22,7 @@ import { AnimatedHeading } from '@/components/ui/animated-heading'
 import { Section } from '@/components/ui/section'
 import { ArticleListSkeleton } from '@/components/ui/loading-skeleton'
 import { cn } from '@/lib/utils'
+import { CATEGORY_FILTERS, getCategoryMeta } from '@/lib/article-categories'
 
 function ArticlesListContent() {
   const { t } = useTranslation()
@@ -44,8 +45,11 @@ function ArticlesListContent() {
 
   useEffect(() => {
     fetchArticles()
+  }, [page, selectedCategory, searchQuery])
+
+  useEffect(() => {
     fetchFeaturedArticle()
-  }, [page])
+  }, [])
 
   useEffect(() => {
     if (urlSearchQuery) {
@@ -53,12 +57,6 @@ function ArticlesListContent() {
       setSearchQuery(urlSearchQuery)
     }
   }, [urlSearchQuery])
-
-  useEffect(() => {
-    if (previewId) {
-      openPreview(previewId)
-    }
-  }, [previewId])
 
   const fetchFeaturedArticle = async () => {
     try {
@@ -87,7 +85,8 @@ function ArticlesListContent() {
   const fetchArticles = async () => {
     try {
       setIsLoading(true)
-      const data = await articlesService.getAllArticles(page, 12, 'published')
+      const categoryParam = selectedCategory === 'all' ? undefined : selectedCategory
+      const data = await articlesService.getAllArticles(page, 12, 'published', categoryParam, searchQuery || undefined)
       setArticles(data.data)
       setTotalItems(data.total)
       setTotalPages(Math.ceil(data.total / data.limit))
@@ -112,6 +111,7 @@ function ArticlesListContent() {
   }
 
   const handleSearch = () => {
+    setPage(1)
     setSearchQuery(searchTerm)
   }
 
@@ -120,13 +120,6 @@ function ArticlesListContent() {
       handleSearch()
     }
   }
-
-  const filteredArticles = articles.filter(article =>
-    article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    article.excerpt?.toLowerCase().includes(searchQuery.toLowerCase())
-  )
-
-  const categories = ['all']
 
   return (
     <>
@@ -189,7 +182,7 @@ function ArticlesListContent() {
       <Section spacing="sm" container={false}>
         <div className="container-responsive">
           {/* Featured Article */}
-          {featuredArticle && (
+          {featuredArticle && selectedCategory === 'all' && !searchQuery && (
             <ScrollReveal direction="up">
               <div className="mb-16">
                 <div className="flex items-center gap-2 mb-6">
@@ -254,17 +247,17 @@ function ArticlesListContent() {
           {/* Category Filters */}
           <ScrollReveal direction="up">
             <div className="flex flex-wrap gap-3 mb-12 justify-center">
-              {categories.map((cat) => (
+              {CATEGORY_FILTERS.map((cat) => (
                 <Button
-                  key={cat}
-                  variant={selectedCategory === cat ? "default" : "outline"}
-                  onClick={() => setSelectedCategory(cat)}
+                  key={cat.key}
+                  variant={selectedCategory === cat.key ? "default" : "outline"}
+                  onClick={() => { setPage(1); setSelectedCategory(cat.key) }}
                   className={cn(
                     "rounded-full px-6 transition-all",
-                    selectedCategory === cat && "bg-gradient-to-r from-primary to-accent"
+                    selectedCategory === cat.key && "bg-gradient-to-r from-primary to-accent"
                   )}
                 >
-                  {cat === 'all' ? 'Tất cả' : cat.charAt(0).toUpperCase() + cat.slice(1)}
+                  {cat.label}
                 </Button>
               ))}
             </div>
@@ -275,7 +268,7 @@ function ArticlesListContent() {
             <ScrollReveal direction="up">
               <div className="mb-8 p-4 bg-muted/30 rounded-lg border border-border">
                 <p className="text-sm">
-                  Tìm thấy <span className="font-bold text-primary">{filteredArticles.length}</span> kết quả cho 
+                  Tìm thấy <span className="font-bold text-primary">{totalItems}</span> kết quả cho
                   <span className="font-semibold"> "{searchQuery}"</span>
                 </p>
               </div>
@@ -285,7 +278,7 @@ function ArticlesListContent() {
           {/* Articles Grid */}
           {isLoading ? (
             <ArticleListSkeleton />
-          ) : filteredArticles.length === 0 ? (
+          ) : articles.length === 0 ? (
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-muted flex items-center justify-center">
                 <Search className="w-12 h-12 text-muted-foreground" />
@@ -303,7 +296,7 @@ function ArticlesListContent() {
           ) : (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-max">
-                {filteredArticles.map((article, index) => (
+                {articles.map((article, index) => (
                   <ScrollReveal key={article.id} direction="up" delay={index * 50}>
                     <Link href={`/articles/${article.slug}`}>
                       <Card className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col hover:-translate-y-2">
@@ -320,8 +313,8 @@ function ArticlesListContent() {
                             
                             {/* Category Badge */}
                             <div className="absolute top-4 left-4">
-                              <Badge className="bg-white/90 text-foreground backdrop-blur-sm hover:bg-white">
-                                Tin tức
+                              <Badge className={getCategoryMeta(article.category).badgeClassName}>
+                                {getCategoryMeta(article.category).label}
                               </Badge>
                             </div>
                           </div>
