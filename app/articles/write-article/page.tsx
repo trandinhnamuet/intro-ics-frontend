@@ -16,6 +16,7 @@ import '@/lib/react-quill-polyfill' // Import polyfill trước
 import 'react-quill/dist/quill.snow.css'
 import '@/styles/quill-custom.css'
 import { articlesService, type Article, type CreateArticleDto, type UpdateArticleDto } from '@/services/articles.service'
+import { ARTICLE_CATEGORIES, DEFAULT_ARTICLE_CATEGORY } from '@/lib/article-categories'
 import { imagesService } from '@/services/images.service'
 import { SidebarLayout } from '@/components/sidebar-layout'
 
@@ -33,12 +34,14 @@ interface ArticleForm {
   content: string
   thumbnail_url: string
   status: string
+  category: string
 }
 
 function WriteArticleContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const { toast } = useToast()
+  const { t } = useTranslation()
   const [isLoading, setIsLoading] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
   const [useHtml, setUseHtml] = useState(false)
@@ -49,7 +52,8 @@ function WriteArticleContent() {
     excerpt: '',
     content: '',
     thumbnail_url: '',
-    status: 'draft'
+    status: 'draft',
+    category: DEFAULT_ARTICLE_CATEGORY,
   })
   const [uploading, setUploading] = useState(false)
   const [originalContent, setOriginalContent] = useState('')
@@ -118,6 +122,7 @@ function WriteArticleContent() {
           content: article.content,
           thumbnail_url: article.thumbnail_url,
           status: article.status,
+          category: article.category,
         }
         await articlesService.updateArticle(articleId, updateData)
       } else {
@@ -128,6 +133,7 @@ function WriteArticleContent() {
           thumbnail_url: article.thumbnail_url,
           author_id: 1, // Temporary author ID
           status: article.status,
+          category: article.category,
         }
         await articlesService.createArticle(createData)
       }
@@ -372,6 +378,25 @@ function WriteArticleContent() {
                   ? 'Nhập mã HTML trực tiếp cho nội dung bài viết.'
                   : 'Sử dụng thanh công cụ để định dạng văn bản, thêm ảnh, liên kết...'}
               </p>
+            </div>
+
+            <div>
+              <Label htmlFor="category">Danh mục</Label>
+              <Select
+                value={article.category}
+                onValueChange={(value) => handleInputChange('category', value)}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {ARTICLE_CATEGORIES.map((c) => (
+                    <SelectItem key={c.key} value={c.key}>
+                      {c.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             <div>
