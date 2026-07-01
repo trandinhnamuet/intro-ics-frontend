@@ -58,7 +58,7 @@ export function Header() {
 
   const handleSearch = () => {
     if (searchTerm.trim()) {
-      router.push(`/articles/articles-list?search=${encodeURIComponent(searchTerm.trim())}`)
+      router.push(`/tin-tuc/news?search=${encodeURIComponent(searchTerm.trim())}`)
       setShowSearch(false)
       setSearchTerm('')
       setMobileMenuOpen(false)
@@ -162,28 +162,28 @@ export function Header() {
                 <div className="absolute top-full left-0 pt-2 min-w-[250px]">
                   <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
                     <Link 
-                      href="/toa-nha-thong-minh" 
+                      href="/giai-phap/toa-nha-thong-minh" 
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.smartBuilding')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.smartBuildingDesc')}</div>
                     </Link>
                     <Link 
-                      href="/nha-may-thong-minh" 
+                      href="/giai-phap/nha-may-thong-minh" 
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.smartFactory')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.smartFactoryDesc')}</div>
                     </Link>
                     <Link 
-                      href="/giai-phap-esg" 
+                      href="/giai-phap/giai-phap-esg" 
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.esgSolution')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.esgDesc')}</div>
                     </Link>
                     <Link 
-                      href="/ai-soc" 
+                      href="/giai-phap/ai-soc" 
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.aiSoc')}</div>
@@ -215,21 +215,21 @@ export function Header() {
                 <div className="absolute top-full left-0 pt-2 min-w-[240px]">
                   <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl shadow-xl py-1 animate-fade-in-down">
                     <Link
-                      href="/products/chatbot"
+                      href="/san-pham/v-ai-agent"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">V AI - Agent</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.chatbot')}</div>
                     </Link>
                     <Link
-                      href="/products/vietguard"
+                      href="/san-pham/vietguard"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">{t('header.vietguard')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.vietguard')}</div>
                     </Link>
                     <Link
-                      href="/products/ai-soc"
+                      href="/san-pham/ai-soc"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">AI SOC</div>
@@ -245,7 +245,7 @@ export function Header() {
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.csaDlp')}</div>
                     </Link>
                     <Link
-                      href="/products/pentest-services"
+                      href="/san-pham/pentest-services"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
                     >
                       <div className="font-medium">Pentest Services</div>
@@ -275,7 +275,7 @@ export function Header() {
             </div>
 
             <Link 
-              href="/articles/articles-list" 
+              href="/tin-tuc/news" 
               className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
             >
               {t('header.news')}
@@ -411,19 +411,19 @@ export function Header() {
                 </button>
                 {activeDropdown === "consulting" && (
                   <div className="pl-4 space-y-1 animate-fade-in">
-                    <Link href="/toa-nha-thong-minh" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/giai-phap/toa-nha-thong-minh" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       <div className="font-medium">{t('header.smartBuilding')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.smartBuildingDesc')}</div>
                     </Link>
-                    <Link href="/nha-may-thong-minh" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/giai-phap/nha-may-thong-minh" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       <div className="font-medium">{t('header.smartFactory')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.smartFactoryDesc')}</div>
                     </Link>
-                    <Link href="/giai-phap-esg" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/giai-phap/giai-phap-esg" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       <div className="font-medium">{t('header.esgSolution')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.esgDesc')}</div>
                     </Link>
-                    <Link href="/ai-soc" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/giai-phap/ai-soc" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       <div className="font-medium">{t('header.aiSoc')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.aiSocDesc')}</div>
                     </Link>
@@ -445,15 +445,15 @@ export function Header() {
                 </button>
                 {activeDropdown === "products" && (
                   <div className="pl-4 space-y-1 animate-fade-in">
-                    <Link href="/products/chatbot" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/san-pham/v-ai-agent" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       <div className="font-medium">V AI - Agent</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.chatbot')}</div>
                     </Link>
-                    <Link href="/products/vietguard" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/san-pham/vietguard" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       <div className="font-medium">{t('header.vietguard')}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.vietguard')}</div>
                     </Link>
-                    <Link href="/products/ai-soc" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/san-pham/ai-soc" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       <div className="font-medium">AI SOC</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.aiSoc')}</div>
                     </Link>
@@ -461,7 +461,7 @@ export function Header() {
                       <div className="font-medium">CSA-Endpoint</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.csaDlp')}</div>
                     </Link>
-                    <Link href="/products/pentest-services" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/san-pham/pentest-services" className="block px-4 py-2 hover:bg-primary/10 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                       <div className="font-medium">Pentest Services</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.pentest')}</div>
                     </Link>
@@ -477,7 +477,7 @@ export function Header() {
                 )}
               </div>
 
-              <Link href="/articles/articles-list" className="block px-4 py-3 hover:bg-primary/10 rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/tin-tuc/news" className="block px-4 py-3 hover:bg-primary/10 rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
                 {t('header.news')}
               </Link>
 

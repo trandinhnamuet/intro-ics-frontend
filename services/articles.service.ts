@@ -7,6 +7,7 @@ interface Article {
   thumbnail_url: string
   author_id: number
   status: string
+  category: string
   created_at: string
   updated_at: string
 }
@@ -25,6 +26,7 @@ interface CreateArticleDto {
   thumbnail_url?: string
   author_id: number
   status?: string
+  category?: string
 }
 
 interface UpdateArticleDto {
@@ -33,6 +35,7 @@ interface UpdateArticleDto {
   content?: string
   thumbnail_url?: string
   status?: string
+  category?: string
 }
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3006'
@@ -55,7 +58,13 @@ class ArticlesService {
     return response.json()
   }
 
-  async getAllArticles(page: number = 1, limit: number = 10, status?: string): Promise<ArticlesResponse> {
+  async getAllArticles(
+    page: number = 1,
+    limit: number = 10,
+    status?: string,
+    category?: string,
+    search?: string,
+  ): Promise<ArticlesResponse> {
     const params = new URLSearchParams({
       page: page.toString(),
       limit: limit.toString(),
@@ -63,6 +72,15 @@ class ArticlesService {
 
     if (status) {
       params.append('status', status)
+    }
+
+    if (category && category !== 'all') {
+      params.append('category', category)
+    }
+
+    const term = search?.trim()
+    if (term) {
+      params.append('search', term)
     }
 
     return this.fetchApi(`?${params.toString()}`)

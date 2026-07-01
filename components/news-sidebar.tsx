@@ -33,7 +33,7 @@ function NewsSideBar({ className = "" }: NewsSideBarProps) {
   }, [])
 
   const handleArticleClick = (slug: string) => {
-    router.push(`/articles/${slug}`)
+    router.push(`/tin-tuc/${slug}`)
   }
 
   if (isLoading) {

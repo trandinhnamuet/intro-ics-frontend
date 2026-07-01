@@ -47,6 +47,7 @@ import { useToast } from '@/hooks/use-toast'
 import { Edit, Trash2, Eye, Plus, ArrowLeft, ShieldAlert, FileText, AlertTriangle, CheckCircle, XCircle, Info, Zap } from 'lucide-react'
 import { format } from 'date-fns'
 import { articlesService, type Article, type ArticlesResponse } from '@/services/articles.service'
+import { CATEGORY_FILTERS, getCategoryMeta } from '@/lib/article-categories'
 import { securityAlertsService, type SecurityAlert, type CreateSecurityAlertDto } from '@/services/security-alerts.service'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -63,6 +64,9 @@ export default function ArticlesManagementPage() {
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
   const [password, setPassword] = useState('')
+  const [categoryFilter, setCategoryFilter] = useState<string>('all')
+  const [articleSearchTerm, setArticleSearchTerm] = useState('')
+  const [articleSearchQuery, setArticleSearchQuery] = useState('')
 
   // Security alerts state
   const [alerts, setAlerts] = useState<SecurityAlert[]>([])
@@ -127,7 +131,7 @@ export default function ArticlesManagementPage() {
 
   useEffect(() => {
     fetchArticles()
-  }, [page])
+  }, [page, categoryFilter, articleSearchQuery])
 
   useEffect(() => {
     if (activeTab === 'alerts') fetchAlerts()
@@ -136,7 +140,8 @@ export default function ArticlesManagementPage() {
   const fetchArticles = async () => {
     try {
       setIsLoading(true)
-      const data = await articlesService.getAllArticles(page, 12)
+      const categoryParam = categoryFilter === 'all' ? undefined : categoryFilter
+      const data = await articlesService.getAllArticles(page, 12, undefined, categoryParam, articleSearchQuery || undefined)
       setArticles(data.data)
       setTotalPages(Math.ceil(data.total / data.limit))
     } catch (error) {
@@ -308,7 +313,7 @@ export default function ArticlesManagementPage() {
               />
               {activeTab === 'articles' ? (
                 <Button
-                  onClick={() => { if (checkPassword('create')) router.push('/articles/write-article') }}
+                  onClick={() => { if (checkPassword('create')) router.push('/tin-tuc/viet-bai-moi') }}
                   className="flex items-center gap-2 bg-[#0984c7] hover:bg-[#00A8E8] text-white"
                 >
                   <Plus className="h-4 w-4" />
@@ -356,7 +361,33 @@ export default function ArticlesManagementPage() {
           {activeTab === 'articles' && (
             <Card>
               <CardHeader>
-                <CardTitle>Danh sách bài viết</CardTitle>
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                  <CardTitle>Danh sách bài viết</CardTitle>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Select
+                      value={categoryFilter}
+                      onValueChange={(v) => { setPage(1); setCategoryFilter(v) }}
+                    >
+                      <SelectTrigger className="w-full sm:w-44">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {CATEGORY_FILTERS.map((c) => (
+                          <SelectItem key={c.key} value={c.key}>{c.label}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <Input
+                      placeholder="Tìm theo tiêu đề, tóm tắt..."
+                      value={articleSearchTerm}
+                      onChange={(e) => setArticleSearchTerm(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') { setPage(1); setArticleSearchQuery(articleSearchTerm) }
+                      }}
+                      className="w-full sm:w-64"
+                    />
+                  </div>
+                </div>
               </CardHeader>
               <CardContent>
                 {isLoading ? (
@@ -367,7 +398,7 @@ export default function ArticlesManagementPage() {
                   <div className="text-center py-8">
                     <div className="text-muted-foreground mb-4">Chưa có bài viết nào</div>
                     <Button
-                      onClick={() => { if (checkPassword('create')) router.push('/articles/write-article') }}
+                      onClick={() => { if (checkPassword('create')) router.push('/tin-tuc/viet-bai-moi') }}
                       variant="outline"
                       className="border-[#0984c7] text-[#0984c7] hover:bg-[#0984c7] hover:text-white"
                     >
@@ -381,6 +412,7 @@ export default function ArticlesManagementPage() {
                         <TableHeader>
                           <TableRow>
                             <TableHead>Tiêu đề</TableHead>
+                            <TableHead>Danh mục</TableHead>
                             <TableHead className="hidden md:table-cell">Tóm tắt</TableHead>
                             <TableHead>Trạng thái</TableHead>
                             <TableHead className="hidden lg:table-cell">Ngày tạo</TableHead>
@@ -391,6 +423,11 @@ export default function ArticlesManagementPage() {
                           {articles.map((article) => (
                             <TableRow key={article.id}>
                               <TableCell className="font-medium max-w-[200px] truncate">{article.title}</TableCell>
+                              <TableCell>
+                                <Badge className={`${getCategoryMeta(article.category).badgeClassName} text-xs`}>
+                                  {getCategoryMeta(article.category).label}
+                                </Badge>
+                              </TableCell>
                               <TableCell className="hidden md:table-cell max-w-[200px] truncate text-muted-foreground">
                                 {article.excerpt || 'Không có tóm tắt'}
                               </TableCell>
@@ -404,10 +441,10 @@ export default function ArticlesManagementPage() {
                               </TableCell>
                               <TableCell>
                                 <div className="flex items-center gap-1">
-                                  <Button variant="outline" size="sm" onClick={() => router.push(`/articles/${article.slug}`)} className="h-7 w-7 p-0" title="Xem">
+                                  <Button variant="outline" size="sm" onClick={() => router.push(`/tin-tuc/${article.slug}`)} className="h-7 w-7 p-0" title="Xem">
                                     <Eye className="h-3 w-3" />
                                   </Button>
-                                  <Button variant="outline" size="sm" onClick={() => { if (checkPassword('edit')) router.push(`/articles/write-article?id=${article.id}`) }} className="h-7 w-7 p-0" title="Sửa">
+                                  <Button variant="outline" size="sm" onClick={() => { if (checkPassword('edit')) router.push(`/tin-tuc/viet-bai-moi?id=${article.id}`) }} className="h-7 w-7 p-0" title="Sửa">
                                     <Edit className="h-3 w-3" />
                                   </Button>
                                   <AlertDialog>

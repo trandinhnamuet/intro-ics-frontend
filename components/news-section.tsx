@@ -63,7 +63,7 @@ export function NewsSection() {
             </p>
           </div>
           <div className="flex justify-center py-12 md:py-16">
-            <div className="text-muted-foreground">Đang tải tin tức...</div>
+            <div className="text-muted-foreground">Đang tải News...</div>
           </div>
         </div>
       </section>
@@ -104,7 +104,7 @@ export function NewsSection() {
             {/* Invisible spacer matching left nav button width */}
             <div className="flex-shrink-0 w-10 md:w-12" />
             <div className="flex-1 px-3 md:px-6">
-            <Link href={`/articles/${featuredArticle.slug}`} className="block group">
+            <Link href={`/tin-tuc/${featuredArticle.slug}`} className="block group">
               <Card className="relative overflow-hidden bg-background border-border shadow-xl rounded-2xl transition-all duration-500 hover:shadow-2xl hover:md:-translate-y-1">
                 <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[320px] md:min-h-[400px]">
                   {/* Featured Image */}
@@ -209,13 +209,13 @@ export function NewsSection() {
                           </div>
                           <div className="pt-4 md:pt-6 pb-4 md:pb-6 px-4 md:px-6 flex flex-col flex-grow">
                             <CardTitle className="text-lg sm:text-xl md:text-lg lg:text-xl mb-2 md:mb-3 group-hover:text-primary transition-colors line-clamp-2 min-h-[3.5rem] font-bold">
-                              <Link href={`/articles/${article.slug}`}>{article.title}</Link>
+                              <Link href={`/tin-tuc/${article.slug}`}>{article.title}</Link>
                             </CardTitle>
                             <CardDescription className="text-sm md:text-base leading-relaxed line-clamp-3 mb-3 md:mb-4 flex-grow">
                               {article.excerpt || 'Không có mô tả'}
                             </CardDescription>
                             <Link
-                              href={`/articles/${article.slug}`}
+                              href={`/tin-tuc/${article.slug}`}
                               className="text-primary font-medium hover:underline inline-flex items-center gap-1 mt-auto text-sm md:text-base"
                             >
                               {t('home.news.readMore')}
@@ -242,7 +242,7 @@ export function NewsSection() {
 
         <div className="flex justify-center mt-8 md:mt-12">
           <Button asChild className="rounded-full px-8 sm:px-12 md:px-15 py-6 md:py-8 text-base md:text-lg font-semibold bg-[#268aff] text-white hover:bg-[#1677ff] transition-colors shadow-md">
-            <Link href="/articles/articles-list">{t('home.news.viewAll')}</Link>
+            <Link href="/tin-tuc/news">{t('home.news.viewAll')}</Link>
           </Button>
         </div>
       </div>
