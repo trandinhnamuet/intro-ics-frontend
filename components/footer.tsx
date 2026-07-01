@@ -179,7 +179,7 @@ export function Footer() {
             <div className="flex flex-wrap gap-6 text-sm">
               {[
                 { href: "/gioi-thieu", label: t('footer.aboutIcs') },
-                { href: "/articles/articles-list", label: t('footer.news') },
+                { href: "/news", label: t('footer.news') },
                 { href: "/lien-he", label: t('footer.contact') },
                 { href: "/tuyen-dung", label: t('footer.recruitment') },
               ].map((link) => (

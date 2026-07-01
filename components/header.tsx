@@ -58,7 +58,7 @@ export function Header() {
 
   const handleSearch = () => {
     if (searchTerm.trim()) {
-      router.push(`/articles/articles-list?search=${encodeURIComponent(searchTerm.trim())}`)
+      router.push(`/news?search=${encodeURIComponent(searchTerm.trim())}`)
       setShowSearch(false)
       setSearchTerm('')
       setMobileMenuOpen(false)
@@ -275,7 +275,7 @@ export function Header() {
             </div>
 
             <Link 
-              href="/articles/articles-list" 
+              href="/news" 
               className="px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium hover:bg-primary/10 hover:text-primary"
             >
               {t('header.news')}
@@ -477,7 +477,7 @@ export function Header() {
                 )}
               </div>
 
-              <Link href="/articles/articles-list" className="block px-4 py-3 hover:bg-primary/10 rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/news" className="block px-4 py-3 hover:bg-primary/10 rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
                 {t('header.news')}
               </Link>
 

@@ -63,7 +63,7 @@ export function NewsSection() {
             </p>
           </div>
           <div className="flex justify-center py-12 md:py-16">
-            <div className="text-muted-foreground">Đang tải tin tức...</div>
+            <div className="text-muted-foreground">Đang tải News...</div>
           </div>
         </div>
       </section>
@@ -242,7 +242,7 @@ export function NewsSection() {
 
         <div className="flex justify-center mt-8 md:mt-12">
           <Button asChild className="rounded-full px-8 sm:px-12 md:px-15 py-6 md:py-8 text-base md:text-lg font-semibold bg-[#268aff] text-white hover:bg-[#1677ff] transition-colors shadow-md">
-            <Link href="/articles/articles-list">{t('home.news.viewAll')}</Link>
+            <Link href="/news">{t('home.news.viewAll')}</Link>
           </Button>
         </div>
       </div>

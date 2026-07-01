@@ -122,7 +122,7 @@ export default function ArticleDetailPage() {
             </div>
             <h2 className="text-3xl font-bold mb-4">Không tìm thấy bài viết</h2>
             <p className="text-muted-foreground mb-8">Bài viết bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.</p>
-            <Button onClick={() => router.push('/articles/articles-list')} size="lg">
+            <Button onClick={() => router.push('/news')} size="lg">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Quay lại danh sách
             </Button>
@@ -200,7 +200,7 @@ export default function ArticleDetailPage() {
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div className="flex items-center gap-2">
                     <Share2 className="w-5 h-5 text-primary" />
-                    <span className="font-semibold">Chia sẻ bài viết:</span>
+                    <span className="font-semibold">Blog bài viết:</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Button
@@ -307,9 +307,9 @@ export default function ArticleDetailPage() {
                   <Button 
                     className="w-full mt-6" 
                     variant="outline"
-                    onClick={() => router.push('/articles/articles-list')}
+                    onClick={() => router.push('/news')}
                   >
-                    Xem tất cả tin tức
+                    Xem All tin tức
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Card>
