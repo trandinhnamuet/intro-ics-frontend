@@ -236,7 +236,7 @@ export function Header() {
                       <div className="text-xs text-muted-foreground mt-0.5">{t('header.menu.productDescriptions.aiSoc')}</div>
                     </Link>
                     <Link
-                      href="https://csa.icss.com.vn/"
+                      href="https://landing-csa.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block px-3 py-2 hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-lg mx-1 text-sm"
