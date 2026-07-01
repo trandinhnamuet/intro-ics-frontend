@@ -1,42 +1,124 @@
-/* Custom styles for Quill editor */
+/* Custom styles for Quill editor — colors bound to site design tokens
+   (app/globals.css). Tokens flip automatically when the `.dark` class is
+   on <html> (next-themes attribute="class"), so no prefers-color-scheme
+   media query is needed. */
+
+/* ---------- Layout ---------- */
 .ql-container {
   font-size: 16px;
   font-family: inherit;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .ql-editor {
   min-height: 200px;
   max-height: 500px;
   overflow-y: auto;
-}
-
-.ql-editor.ql-blank::before {
-  font-style: normal;
-  color: #9ca3af;
-}
-
-/* Custom toolbar styling */
-.ql-toolbar {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  background-color: #f9fafb;
-}
-
-.ql-container {
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
-
-/* Better focus state */
-.ql-container.ql-snow {
-  border-color: #e5e7eb;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .ql-editor:focus {
   outline: none;
 }
 
-/* Improve readability */
+/* ---------- Toolbar ---------- */
+.ql-toolbar.ql-snow {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: var(--muted);
+  border-color: var(--border);
+}
+
+.ql-container.ql-snow {
+  border-color: var(--border);
+}
+
+/* Toolbar icons */
+.ql-snow .ql-stroke {
+  stroke: var(--foreground);
+}
+
+.ql-snow .ql-fill,
+.ql-snow .ql-stroke.ql-fill {
+  fill: var(--foreground);
+}
+
+.ql-snow .ql-picker,
+.ql-snow .ql-picker-label {
+  color: var(--foreground);
+}
+
+/* Hover / active state → primary accent */
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow .ql-toolbar button:hover .ql-stroke,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,
+.ql-snow .ql-picker-label.ql-active .ql-stroke {
+  stroke: var(--primary);
+}
+
+.ql-snow.ql-toolbar button:hover .ql-fill,
+.ql-snow .ql-toolbar button:hover .ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-fill,
+.ql-snow .ql-toolbar button.ql-active .ql-fill {
+  fill: var(--primary);
+}
+
+.ql-snow.ql-toolbar button:hover,
+.ql-snow .ql-toolbar button:hover,
+.ql-snow.ql-toolbar button.ql-active,
+.ql-snow .ql-picker-label:hover,
+.ql-snow .ql-picker-item:hover,
+.ql-snow .ql-picker-item.ql-selected {
+  color: var(--primary);
+}
+
+/* ---------- Dropdown menus (heading / color pickers) ---------- */
+.ql-snow .ql-picker-options {
+  background-color: var(--popover);
+  border-color: var(--border) !important;
+  color: var(--popover-foreground);
+}
+
+.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  border-color: var(--border);
+  color: var(--primary);
+}
+
+/* ---------- Link/video tooltip popup ---------- */
+.ql-snow .ql-tooltip {
+  background-color: var(--popover);
+  border-color: var(--border);
+  color: var(--popover-foreground);
+  box-shadow: var(--shadow-md);
+}
+
+.ql-snow .ql-tooltip::before,
+.ql-snow .ql-tooltip a.ql-action,
+.ql-snow .ql-tooltip a.ql-remove {
+  color: var(--popover-foreground);
+}
+
+.ql-snow .ql-tooltip input[type="text"] {
+  background-color: var(--background);
+  border-color: var(--input);
+  color: var(--foreground);
+}
+
+.ql-snow .ql-tooltip a.ql-preview {
+  color: var(--primary);
+}
+
+/* ---------- Placeholder ---------- */
+.ql-editor.ql-blank::before {
+  font-style: normal;
+  color: var(--muted-foreground);
+}
+
+/* ---------- Content readability ---------- */
 .ql-editor p {
   margin-bottom: 1em;
 }
@@ -53,22 +135,23 @@
 }
 
 .ql-editor blockquote {
-  border-left: 4px solid #e5e7eb;
+  border-left: 4px solid var(--border);
   padding-left: 1em;
   margin-left: 0;
   margin-right: 0;
 }
 
 .ql-editor code {
-  background-color: #f3f4f6;
+  background-color: var(--muted);
+  color: var(--foreground);
   padding: 0.2em 0.4em;
   border-radius: 0.25rem;
   font-size: 0.875em;
 }
 
 .ql-editor pre {
-  background-color: #1f2937;
-  color: #f3f4f6;
+  background-color: var(--muted);
+  color: var(--foreground);
   padding: 1em;
   border-radius: 0.5rem;
   overflow-x: auto;
@@ -79,37 +162,4 @@
   height: auto;
   border-radius: 0.5rem;
   margin: 1em 0;
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .ql-toolbar {
-    background-color: #1f2937;
-    border-color: #374151;
-  }
-
-  .ql-container.ql-snow {
-    border-color: #374151;
-  }
-
-  .ql-editor {
-    background-color: #111827;
-    color: #f3f4f6;
-  }
-
-  .ql-editor.ql-blank::before {
-    color: #6b7280;
-  }
-
-  .ql-stroke {
-    stroke: #9ca3af;
-  }
-
-  .ql-fill {
-    fill: #9ca3af;
-  }
-
-  .ql-picker-label {
-    color: #9ca3af;
-  }
 }

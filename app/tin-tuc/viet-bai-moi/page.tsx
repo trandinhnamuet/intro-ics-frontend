@@ -12,10 +12,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { useToast } from '@/hooks/use-toast'
 import { ArrowLeft, Upload } from 'lucide-react'
-import '@/lib/react-quill-polyfill' // Import polyfill trước
+import '@/lib/react-quill-polyfill'; // Import polyfill trước
 import 'react-quill/dist/quill.snow.css'
 import '@/styles/quill-custom.css'
-import { articlesService, type Article, type CreateArticleDto, type UpdateArticleDto } from '@/services/articles.service'
+import { articlesService, type CreateArticleDto, type UpdateArticleDto } from '@/services/articles.service'
 import { ARTICLE_CATEGORIES, DEFAULT_ARTICLE_CATEGORY } from '@/lib/article-categories'
 import { imagesService } from '@/services/images.service'
 import { SidebarLayout } from '@/components/sidebar-layout'
@@ -230,7 +230,7 @@ function WriteArticleContent() {
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <Label htmlFor="title">Tiêu đề *</Label>
+              <Label htmlFor="title" className='pb-2'>Tiêu đề<span className='text-red-600'>*</span></Label>
               <Input
                 id="title"
                 type="text"
@@ -242,7 +242,7 @@ function WriteArticleContent() {
             </div>
 
             <div>
-              <Label htmlFor="excerpt">Tóm tắt</Label>
+              <Label htmlFor="excerpt" className='pb-2'>Tóm tắt</Label>
               <Textarea
                 id="excerpt"
                 value={article.excerpt}
@@ -253,7 +253,7 @@ function WriteArticleContent() {
             </div>
 
             <div>
-              <Label htmlFor="thumbnail_url">Ảnh thumbnail</Label>
+              <Label htmlFor="thumbnail_url" className='pb-2'>Ảnh thumbnail</Label>
               <div className="flex items-center gap-2 mb-2">
                 <Input
                   id="thumbnail_url"
@@ -264,7 +264,7 @@ function WriteArticleContent() {
                   className="flex-1"
                 />
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 w-fit">
                 <input
                   type="file"
                   accept="image/jpeg,image/png,image/gif,image/webp"
@@ -278,7 +278,7 @@ function WriteArticleContent() {
                   onClick={() => document.getElementById('upload-thumbnail')?.click()}
                   disabled={uploading}
                   variant="outline"
-                  className="w-full"
+                  className="w-full bg-accent text-accent-foreground hover:opacity-80 duration-500"
                 >
                   <Upload className="h-4 w-4 mr-2" />
                   {uploading ? 'Đang tải lên...' : 'Upload ảnh từ máy'}
@@ -296,6 +296,25 @@ function WriteArticleContent() {
                   />
                 </div>
               )}
+            </div>
+
+            <div>
+              <Label htmlFor="category" className='pb-2'>Danh mục</Label>
+              <Select
+                value={article.category}
+                onValueChange={(value) => handleInputChange('category', value)}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {ARTICLE_CATEGORIES.map((c) => (
+                    <SelectItem key={c.key} value={c.key}>
+                      {c.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             {/* Toggle button for editor mode */}
@@ -332,7 +351,7 @@ function WriteArticleContent() {
             </div>
 
             <div>
-              <Label htmlFor="content">Nội dung *</Label>
+              <Label htmlFor="content" className='pb-2'>Nội dung<span className='text-red-600'>*</span></Label>
               <div className="mt-2">
                 {useHtml ? (
                   <Textarea
@@ -381,26 +400,7 @@ function WriteArticleContent() {
             </div>
 
             <div>
-              <Label htmlFor="category">Danh mục</Label>
-              <Select
-                value={article.category}
-                onValueChange={(value) => handleInputChange('category', value)}
-              >
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {ARTICLE_CATEGORIES.map((c) => (
-                    <SelectItem key={c.key} value={c.key}>
-                      {c.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div>
-              <Label htmlFor="status">Trạng thái</Label>
+              <Label htmlFor="status" className='pb-2'>Trạng thái</Label>
               <Select
                 value={article.status}
                 onValueChange={(value) => handleInputChange('status', value)}
@@ -417,7 +417,7 @@ function WriteArticleContent() {
             </div>
 
             <div>
-              <Label htmlFor="password">Mật khẩu *</Label>
+              <Label htmlFor="password" className='pb-2'>Mật khẩu<span className='text-red-600'>*</span></Label>
               <Input
                 id="password"
                 type="password"
