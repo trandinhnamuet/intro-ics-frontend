@@ -149,60 +149,49 @@ export function CategoryArticlesView({ category }: { category: ArticleCategoryKe
         </div>
 
         <div className="relative container-responsive h-full flex flex-col justify-center">
-          <ScrollReveal direction="down">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-6 w-fit">
-              <TrendingUp className="w-4 h-4 text-white" />
-              <span className="text-sm font-medium text-white">News & Insights</span>
-            </div>
-          </ScrollReveal>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-6 w-fit">
+            <TrendingUp className="w-4 h-4 text-white" />
+            <span className="text-sm font-medium text-white">News & Insights</span>
+          </div>
 
-          <ScrollReveal direction="up" delay={100}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-3xl">
-              Khám Phá Thế Giới An Ninh Mạng
-            </h1>
-          </ScrollReveal>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-3xl">
+            Khám Phá Thế Giới An Ninh Mạng
+          </h1>
 
-          <ScrollReveal direction="up" delay={200}>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl">
-              Cập nhật tin tức, xu hướng và giải pháp công nghệ mới nhất từ các chuyên gia hàng đầu
-            </p>
-          </ScrollReveal>
+          <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl">
+            Cập nhật tin tức, xu hướng và giải pháp công nghệ mới nhất từ các chuyên gia hàng đầu
+          </p>
 
           {/* Search Bar */}
-          <ScrollReveal direction="up" delay={300}>
-            <div className="flex gap-3 max-w-2xl">
-              <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                <Input
-                  type="text"
-                  placeholder="Tìm kiếm bài viết..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  className="pl-12 h-14 bg-white/95 backdrop-blur-sm border-white/20 rounded-full text-base"
-                />
-              </div>
-              <Button
-                onClick={handleSearch}
-                size="lg"
-                className="h-14 px-8 rounded-full bg-secondary hover:bg-secondary/90 text-white font-semibold"
-              >
-                <Search className="h-5 w-5 mr-2" />
-                Tìm
-              </Button>
+          <div className="flex gap-2 max-w-md">
+            <div className="relative flex-1">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Tìm kiếm bài viết..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyPress={handleKeyPress}
+                className="pl-10 h-11 bg-white/95 backdrop-blur-sm border-0 rounded-full text-sm shadow-sm focus-visible:ring-2 focus-visible:ring-white/70"
+              />
             </div>
-          </ScrollReveal>
+            <Button
+              onClick={handleSearch}
+              aria-label="Tìm kiếm"
+              className="h-11 px-5 rounded-full bg-secondary hover:bg-secondary/90 text-white text-sm font-medium shadow-sm"
+            >
+              <Search className="h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </div>
 
       <Section spacing="sm" container={false}>
         <div className="container-responsive">
           {/* Category Tabs */}
-          <ScrollReveal direction="up">
-            <div className="pt-8">
-              <CategoryTabs />
-            </div>
-          </ScrollReveal>
+          <div className="pt-8">
+            <CategoryTabs />
+          </div>
 
           {/* Featured Article */}
           {featuredArticle && !searchQuery && (
