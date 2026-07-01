@@ -12,6 +12,16 @@ const nextConfig = {
   // Order matters: specific /articles/* rules must precede the generic /articles/:slug.
   async redirects() {
     return [
+      // CSA-DLP page is served by an external landing site. Force redirect so the
+      // internal /san-pham/csa-dlp content is never shown to users.
+      { source: '/san-pham/csa-dlp', destination: 'https://landing-csa.vercel.app', permanent: false },
+      { source: '/san-pham/csa-dlp/:path*', destination: 'https://landing-csa.vercel.app', permanent: false },
+      // internal /san-pham/oracle-cloud content is never shown to users.
+      { source: '/san-pham/oracle-cloud', destination: 'https://oraclecloud.vn/', permanent: false },
+      { source: '/san-pham/oracle-cloud/:path*', destination: 'https://oraclecloud.vn/', permanent: false },
+      // internal /san-pham/smart-dashboard content is never shown to users.
+      { source: '/san-pham/smart-dashboard', destination: 'https://smartdashboard.vn/', permanent: false },
+      { source: '/san-pham/smart-dashboard/:path*', destination: 'https://smartdashboard.vn/', permanent: false },
       // Solutions -> /giai-phap/*
       { source: '/toa-nha-thong-minh', destination: '/giai-phap/toa-nha-thong-minh', permanent: true },
       { source: '/nha-may-thong-minh', destination: '/giai-phap/nha-may-thong-minh', permanent: true },

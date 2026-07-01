@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useLayoutEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
@@ -59,6 +59,12 @@ export default function CsaDlpPage() {
     t('products.csaDlp.benefits.item3'),
     t('products.csaDlp.benefits.item4')
   ]
+
+  // Server-side redirect is configured in next.config.mjs so this content is never
+  // shown. This is a client-side fallback that replaces the current tab (no new tab).
+  useLayoutEffect(() => {
+    window.location.replace('https://landing-csa.vercel.app/')
+  }, [])
 
   return (
     <>
