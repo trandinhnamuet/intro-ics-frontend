@@ -172,13 +172,13 @@ export function CategoryArticlesView({ category }: { category: ArticleCategoryKe
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyPress={handleKeyPress}
-                className="pl-10 h-11 bg-white/95 backdrop-blur-sm border-0 rounded-full text-sm shadow-sm focus-visible:ring-2 focus-visible:ring-white/70"
+                className="px-5 h-11 bg-white/95 backdrop-blur-sm border-0 rounded-full text-sm shadow-sm focus-visible:ring-2 focus-visible:ring-white/70"
               />
             </div>
             <Button
               onClick={handleSearch}
               aria-label="Tìm kiếm"
-              className="h-11 px-5 rounded-full bg-secondary hover:bg-secondary/90 text-white text-sm font-medium shadow-sm"
+              className="h-11 px-5 rounded-full bg-secondary hover:bg-secondary/90 text-white text-sm font-medium shadow-sm aspect-square"
             >
               <Search className="h-4 w-4" />
             </Button>
