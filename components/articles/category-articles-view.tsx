@@ -205,7 +205,7 @@ export function CategoryArticlesView({ category }: { category: ArticleCategoryKe
                   <Card className="group overflow-hidden border-none shadow-xl hover:shadow-2xl transition-all duration-500">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                       {/* Image */}
-                      <div className="relative h-[400px] lg:h-[500px] overflow-hidden bg-muted">
+                      <div className="relative aspect-video overflow-hidden bg-muted">
                         <Image
                           src={featuredArticle.thumbnail_url || '/images/placeholder.jpg'}
                           alt={featuredArticle.title}
@@ -295,7 +295,7 @@ export function CategoryArticlesView({ category }: { category: ArticleCategoryKe
                       <Card className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col hover:-translate-y-2">
                         {/* Image */}
                         {article.thumbnail_url && (
-                          <div className="relative h-56 overflow-hidden bg-muted">
+                          <div className="relative aspect-video overflow-hidden bg-muted">
                             <Image
                               src={article.thumbnail_url}
                               alt={article.title}
