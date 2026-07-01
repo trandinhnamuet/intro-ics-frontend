@@ -25,12 +25,14 @@ const nextConfig = {
       { source: '/products/pentest-services', destination: '/san-pham/pentest-services', permanent: true },
       { source: '/products/oracle-cloud', destination: '/san-pham/oracle-cloud', permanent: true },
       { source: '/products/smart-dashboard', destination: '/san-pham/smart-dashboard', permanent: true },
-      // Retired category pages -> unified news listing
-      { source: '/blog', destination: '/tin-tuc/danh-muc', permanent: true },
-      { source: '/news', destination: '/tin-tuc/danh-muc', permanent: true },
-      { source: '/documents', destination: '/tin-tuc/danh-muc', permanent: true },
+      // Legacy top-level category pages -> nested category routes
+      { source: '/blog', destination: '/tin-tuc/blog', permanent: true },
+      { source: '/news', destination: '/tin-tuc/news', permanent: true },
+      { source: '/documents', destination: '/tin-tuc/documents', permanent: true },
+      // Retired unified listing -> default news category
+      { source: '/tin-tuc/danh-muc', destination: '/tin-tuc/news', permanent: true },
       // News admin + listing (specific rules BEFORE the generic slug rule)
-      { source: '/articles/articles-list', destination: '/tin-tuc/danh-muc', permanent: true },
+      { source: '/articles/articles-list', destination: '/tin-tuc/news', permanent: true },
       { source: '/articles/articles-management', destination: '/tin-tuc/quan-ly-bai-viet', permanent: true },
       { source: '/articles/write-article', destination: '/tin-tuc/viet-bai-moi', permanent: true },
       // Article detail (generic) -> /tin-tuc/:slug

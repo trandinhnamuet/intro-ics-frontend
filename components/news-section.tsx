@@ -242,7 +242,7 @@ export function NewsSection() {
 
         <div className="flex justify-center mt-8 md:mt-12">
           <Button asChild className="rounded-full px-8 sm:px-12 md:px-15 py-6 md:py-8 text-base md:text-lg font-semibold bg-[#268aff] text-white hover:bg-[#1677ff] transition-colors shadow-md">
-            <Link href="/tin-tuc/danh-muc">{t('home.news.viewAll')}</Link>
+            <Link href="/tin-tuc/news">{t('home.news.viewAll')}</Link>
           </Button>
         </div>
       </div>

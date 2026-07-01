@@ -122,7 +122,7 @@ export default function ArticleDetailPage() {
             </div>
             <h2 className="text-3xl font-bold mb-4">Không tìm thấy bài viết</h2>
             <p className="text-muted-foreground mb-8">Bài viết bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.</p>
-            <Button onClick={() => router.push('/tin-tuc/danh-muc')} size="lg">
+            <Button onClick={() => router.push('/tin-tuc/news')} size="lg">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Quay lại danh sách
             </Button>
@@ -307,7 +307,7 @@ export default function ArticleDetailPage() {
                   <Button 
                     className="w-full mt-6" 
                     variant="outline"
-                    onClick={() => router.push('/tin-tuc/danh-muc')}
+                    onClick={() => router.push('/tin-tuc/news')}
                   >
                     Xem All tin tức
                     <ArrowRight className="w-4 h-4 ml-2" />

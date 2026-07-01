@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import React from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
@@ -21,24 +21,18 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { Section } from '@/components/ui/section'
 import { ArticleListSkeleton } from '@/components/ui/loading-skeleton'
 import { cn } from '@/lib/utils'
-import { CATEGORY_NAV, getCategoryMeta, DEFAULT_ARTICLE_CATEGORY, type ArticleCategoryKey } from '@/lib/article-categories'
+import { CATEGORY_NAV, getCategoryMeta, type ArticleCategoryKey } from '@/lib/article-categories'
 
-function CategoryTabs({
-  selected,
-  onSelect,
-}: {
-  selected: string
-  onSelect: (key: ArticleCategoryKey) => void
-}) {
+function CategoryTabs() {
+  const pathname = usePathname()
   return (
     <div className="flex flex-wrap gap-8 mb-12 justify-center border-b border-border">
       {CATEGORY_NAV.map((cat) => {
-        const active = selected === cat.key
+        const active = pathname === cat.route
         return (
-          <button
+          <Link
             key={cat.key}
-            type="button"
-            onClick={() => onSelect(cat.key as ArticleCategoryKey)}
+            href={cat.route}
             className={cn(
               'px-1 pb-3 -mb-px text-sm font-medium uppercase tracking-wide border-b-2 transition-colors',
               active
@@ -47,18 +41,14 @@ function CategoryTabs({
             )}
           >
             {cat.label}
-          </button>
+          </Link>
         )
       })}
     </div>
   )
 }
 
-export function CategoryArticlesView({
-  defaultCategory = DEFAULT_ARTICLE_CATEGORY,
-}: {
-  defaultCategory?: ArticleCategoryKey
-} = {}) {
+export function CategoryArticlesView({ category }: { category: ArticleCategoryKey }) {
   const { t } = useTranslation()
   const searchParams = useSearchParams()
   const { toast } = useToast()
@@ -71,18 +61,17 @@ export function CategoryArticlesView({
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null)
   const [featuredArticle, setFeaturedArticle] = useState<Article | null>(null)
-  const [selectedCategory, setSelectedCategory] = useState<ArticleCategoryKey>(defaultCategory)
 
   const previewId = searchParams.get('preview')
   const urlSearchQuery = searchParams.get('search')
 
   useEffect(() => {
     fetchArticles()
-  }, [page, searchQuery, selectedCategory])
+  }, [page, searchQuery])
 
   useEffect(() => {
     fetchFeaturedArticle()
-  }, [selectedCategory])
+  }, [])
 
   useEffect(() => {
     if (urlSearchQuery) {
@@ -99,7 +88,7 @@ export function CategoryArticlesView({
 
   const fetchFeaturedArticle = async () => {
     try {
-      const result = await articlesService.getAllArticles(1, 1, 'published', selectedCategory)
+      const result = await articlesService.getAllArticles(1, 1, 'published', category)
       if (result.data.length > 0) {
         setFeaturedArticle(result.data[0])
       } else {
@@ -110,15 +99,10 @@ export function CategoryArticlesView({
     }
   }
 
-  const handleSelectCategory = (key: ArticleCategoryKey) => {
-    setPage(1)
-    setSelectedCategory(key)
-  }
-
   const fetchArticles = async () => {
     try {
       setIsLoading(true)
-      const data = await articlesService.getAllArticles(page, 12, 'published', selectedCategory, searchQuery || undefined)
+      const data = await articlesService.getAllArticles(page, 12, 'published', category, searchQuery || undefined)
       setArticles(data.data)
       setTotalItems(data.total)
       setTotalPages(Math.ceil(data.total / data.limit))
@@ -216,7 +200,7 @@ export function CategoryArticlesView({
           {/* Category Tabs */}
           <ScrollReveal direction="up">
             <div className="pt-8">
-              <CategoryTabs selected={selectedCategory} onSelect={handleSelectCategory} />
+              <CategoryTabs />
             </div>
           </ScrollReveal>
 
