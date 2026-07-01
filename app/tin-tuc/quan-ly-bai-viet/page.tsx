@@ -313,7 +313,7 @@ export default function ArticlesManagementPage() {
               />
               {activeTab === 'articles' ? (
                 <Button
-                  onClick={() => { if (checkPassword('create')) router.push('/articles/write-article') }}
+                  onClick={() => { if (checkPassword('create')) router.push('/tin-tuc/viet-bai-moi') }}
                   className="flex items-center gap-2 bg-[#0984c7] hover:bg-[#00A8E8] text-white"
                 >
                   <Plus className="h-4 w-4" />
@@ -398,7 +398,7 @@ export default function ArticlesManagementPage() {
                   <div className="text-center py-8">
                     <div className="text-muted-foreground mb-4">Chưa có bài viết nào</div>
                     <Button
-                      onClick={() => { if (checkPassword('create')) router.push('/articles/write-article') }}
+                      onClick={() => { if (checkPassword('create')) router.push('/tin-tuc/viet-bai-moi') }}
                       variant="outline"
                       className="border-[#0984c7] text-[#0984c7] hover:bg-[#0984c7] hover:text-white"
                     >
@@ -441,10 +441,10 @@ export default function ArticlesManagementPage() {
                               </TableCell>
                               <TableCell>
                                 <div className="flex items-center gap-1">
-                                  <Button variant="outline" size="sm" onClick={() => router.push(`/articles/${article.slug}`)} className="h-7 w-7 p-0" title="Xem">
+                                  <Button variant="outline" size="sm" onClick={() => router.push(`/tin-tuc/${article.slug}`)} className="h-7 w-7 p-0" title="Xem">
                                     <Eye className="h-3 w-3" />
                                   </Button>
-                                  <Button variant="outline" size="sm" onClick={() => { if (checkPassword('edit')) router.push(`/articles/write-article?id=${article.id}`) }} className="h-7 w-7 p-0" title="Sửa">
+                                  <Button variant="outline" size="sm" onClick={() => { if (checkPassword('edit')) router.push(`/tin-tuc/viet-bai-moi?id=${article.id}`) }} className="h-7 w-7 p-0" title="Sửa">
                                     <Edit className="h-3 w-3" />
                                   </Button>
                                   <AlertDialog>

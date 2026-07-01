@@ -122,7 +122,7 @@ export default function ArticleDetailPage() {
             </div>
             <h2 className="text-3xl font-bold mb-4">Không tìm thấy bài viết</h2>
             <p className="text-muted-foreground mb-8">Bài viết bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.</p>
-            <Button onClick={() => router.push('/news')} size="lg">
+            <Button onClick={() => router.push('/tin-tuc/danh-muc')} size="lg">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Quay lại danh sách
             </Button>
@@ -268,7 +268,7 @@ export default function ArticleDetailPage() {
                     {trendingArticles.map((trending, index) => (
                       <Link 
                         key={trending.id} 
-                        href={`/articles/${trending.slug}`}
+                        href={`/tin-tuc/${trending.slug}`}
                         className="group block"
                       >
                         <div className="flex gap-4">
@@ -307,7 +307,7 @@ export default function ArticleDetailPage() {
                   <Button 
                     className="w-full mt-6" 
                     variant="outline"
-                    onClick={() => router.push('/news')}
+                    onClick={() => router.push('/tin-tuc/danh-muc')}
                   >
                     Xem All tin tức
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -365,7 +365,7 @@ export default function ArticleDetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-max">
               {relatedArticles.map((related, index) => (
                 <ScrollReveal key={related.id} direction="up" delay={index * 100}>
-                  <Link href={`/articles/${related.slug}`}>
+                  <Link href={`/tin-tuc/${related.slug}`}>
                     <Card className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col hover:-translate-y-2">
                       {related.thumbnail_url && (
                         <div className="relative h-48 overflow-hidden bg-muted">

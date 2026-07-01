@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import React from 'react'
-import { useSearchParams, usePathname } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
@@ -21,18 +21,24 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { Section } from '@/components/ui/section'
 import { ArticleListSkeleton } from '@/components/ui/loading-skeleton'
 import { cn } from '@/lib/utils'
-import { CATEGORY_NAV, getCategoryMeta, type ArticleCategoryKey } from '@/lib/article-categories'
+import { CATEGORY_NAV, getCategoryMeta, DEFAULT_ARTICLE_CATEGORY, type ArticleCategoryKey } from '@/lib/article-categories'
 
-function CategoryTabs() {
-  const pathname = usePathname()
+function CategoryTabs({
+  selected,
+  onSelect,
+}: {
+  selected: string
+  onSelect: (key: ArticleCategoryKey) => void
+}) {
   return (
     <div className="flex flex-wrap gap-8 mb-12 justify-center border-b border-border">
       {CATEGORY_NAV.map((cat) => {
-        const active = pathname === cat.route
+        const active = selected === cat.key
         return (
-          <Link
+          <button
             key={cat.key}
-            href={cat.route}
+            type="button"
+            onClick={() => onSelect(cat.key as ArticleCategoryKey)}
             className={cn(
               'px-1 pb-3 -mb-px text-sm font-medium uppercase tracking-wide border-b-2 transition-colors',
               active
@@ -41,14 +47,18 @@ function CategoryTabs() {
             )}
           >
             {cat.label}
-          </Link>
+          </button>
         )
       })}
     </div>
   )
 }
 
-export function CategoryArticlesView({ category }: { category: ArticleCategoryKey }) {
+export function CategoryArticlesView({
+  defaultCategory = DEFAULT_ARTICLE_CATEGORY,
+}: {
+  defaultCategory?: ArticleCategoryKey
+} = {}) {
   const { t } = useTranslation()
   const searchParams = useSearchParams()
   const { toast } = useToast()
@@ -61,17 +71,18 @@ export function CategoryArticlesView({ category }: { category: ArticleCategoryKe
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null)
   const [featuredArticle, setFeaturedArticle] = useState<Article | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState<ArticleCategoryKey>(defaultCategory)
 
   const previewId = searchParams.get('preview')
   const urlSearchQuery = searchParams.get('search')
 
   useEffect(() => {
     fetchArticles()
-  }, [page, searchQuery])
+  }, [page, searchQuery, selectedCategory])
 
   useEffect(() => {
     fetchFeaturedArticle()
-  }, [])
+  }, [selectedCategory])
 
   useEffect(() => {
     if (urlSearchQuery) {
@@ -88,19 +99,26 @@ export function CategoryArticlesView({ category }: { category: ArticleCategoryKe
 
   const fetchFeaturedArticle = async () => {
     try {
-      const result = await articlesService.getAllArticles(1, 1, 'published', category)
+      const result = await articlesService.getAllArticles(1, 1, 'published', selectedCategory)
       if (result.data.length > 0) {
         setFeaturedArticle(result.data[0])
+      } else {
+        setFeaturedArticle(null)
       }
     } catch (error) {
       console.error('Failed to fetch featured article:', error)
     }
   }
 
+  const handleSelectCategory = (key: ArticleCategoryKey) => {
+    setPage(1)
+    setSelectedCategory(key)
+  }
+
   const fetchArticles = async () => {
     try {
       setIsLoading(true)
-      const data = await articlesService.getAllArticles(page, 12, 'published', category, searchQuery || undefined)
+      const data = await articlesService.getAllArticles(page, 12, 'published', selectedCategory, searchQuery || undefined)
       setArticles(data.data)
       setTotalItems(data.total)
       setTotalPages(Math.ceil(data.total / data.limit))
@@ -198,7 +216,7 @@ export function CategoryArticlesView({ category }: { category: ArticleCategoryKe
           {/* Category Tabs */}
           <ScrollReveal direction="up">
             <div className="pt-8">
-              <CategoryTabs />
+              <CategoryTabs selected={selectedCategory} onSelect={handleSelectCategory} />
             </div>
           </ScrollReveal>
 
@@ -210,7 +228,7 @@ export function CategoryArticlesView({ category }: { category: ArticleCategoryKe
                   <TrendingUp className="w-5 h-5 text-primary" />
                   <h2 className="text-2xl font-bold">Bài viết nổi bật</h2>
                 </div>
-                <Link href={`/articles/${featuredArticle.slug}`}>
+                <Link href={`/tin-tuc/${featuredArticle.slug}`}>
                   <Card className="group overflow-hidden border-none shadow-xl hover:shadow-2xl transition-all duration-500">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                       {/* Image */}
@@ -300,7 +318,7 @@ export function CategoryArticlesView({ category }: { category: ArticleCategoryKe
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-max">
                 {articles.map((article, index) => (
                   <ScrollReveal key={article.id} direction="up" delay={index * 50}>
-                    <Link href={`/articles/${article.slug}`}>
+                    <Link href={`/tin-tuc/${article.slug}`}>
                       <Card className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col hover:-translate-y-2">
                         {/* Image */}
                         {article.thumbnail_url && (

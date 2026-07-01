@@ -142,7 +142,7 @@ function WriteArticleContent() {
         title: 'Thành công',
         description: isEditing ? 'Cập nhật bài viết thành công' : 'Tạo bài viết thành công',
       })
-      router.push('/articles/articles-management')
+      router.push('/tin-tuc/quan-ly-bai-viet')
     } catch (error) {
       toast({
         title: 'Lỗi',
@@ -442,7 +442,7 @@ function WriteArticleContent() {
               <Button
                 type="button"
                 variant="outline"
-                onClick={() => router.push('/articles/articles-management')}
+                onClick={() => router.push('/tin-tuc/quan-ly-bai-viet')}
               >
                 Hủy
               </Button>

@@ -77,11 +77,11 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { href: "/products/chatbot", label: "V AI - Agent", external: false },
-                { href: "/products/vietguard", label: "VietGuard", external: false },
-                { href: "/products/ai-soc", label: "AI SOC", external: false },
+                { href: "/san-pham/v-ai-agent", label: "V AI - Agent", external: false },
+                { href: "/san-pham/vietguard", label: "VietGuard", external: false },
+                { href: "/san-pham/ai-soc", label: "AI SOC", external: false },
                 { href: "https://csa.icss.com.vn/", label: "CSA-Endpoint", external: true },
-                { href: "/products/pentest-services", label: "Pentest Services", external: false },
+                { href: "/san-pham/pentest-services", label: "Pentest Services", external: false },
                 { href: "https://oraclecloud.vn/", label: "Oracle Cloud", external: true },
                 { href: "https://smartdashboard.vn/", label: "Smart Dashboard", external: true },
               ].map((link) => (
@@ -107,10 +107,10 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { href: "/toa-nha-thong-minh", label: t('footer.smartBuilding') },
-                { href: "/nha-may-thong-minh", label: t('footer.smartFactory') },
+                { href: "/giai-phap/toa-nha-thong-minh", label: t('footer.smartBuilding') },
+                { href: "/giai-phap/nha-may-thong-minh", label: t('footer.smartFactory') },
                 { href: "/esg", label: t('footer.esgSolution') },
-                { href: "/ai-soc", label: t('footer.aiSocSolution') },
+                { href: "/giai-phap/ai-soc", label: t('footer.aiSocSolution') },
               ].map((link) => (
                 <li key={link.href}>
                   <Link 
@@ -179,7 +179,7 @@ export function Footer() {
             <div className="flex flex-wrap gap-6 text-sm">
               {[
                 { href: "/gioi-thieu", label: t('footer.aboutIcs') },
-                { href: "/news", label: t('footer.news') },
+                { href: "/tin-tuc/danh-muc", label: t('footer.news') },
                 { href: "/lien-he", label: t('footer.contact') },
                 { href: "/tuyen-dung", label: t('footer.recruitment') },
               ].map((link) => (
