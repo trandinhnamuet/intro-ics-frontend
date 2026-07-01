@@ -107,7 +107,7 @@ export function Sidebar(props: SidebarProps) {
         ) : (
           <form className="space-y-3" onSubmit={handleSubmit}>
             <div>
-              <label className="block text-sm font-medium mb-1">{t('sidebar.form.fullName')} *</label>
+              <label className="block text-sm font-medium mb-1">{t('sidebar.form.fullName')} <span className='text-red-600'>*</span></label>
               <input
                 type="text"
                 required
@@ -118,7 +118,7 @@ export function Sidebar(props: SidebarProps) {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1">{t('sidebar.form.email')} *</label>
+              <label className="block text-sm font-medium mb-1">{t('sidebar.form.email')} <span className='text-red-600'>*</span></label>
               <input
                 type="email"
                 required
@@ -129,7 +129,7 @@ export function Sidebar(props: SidebarProps) {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1">{t('sidebar.form.phone')} *</label>
+              <label className="block text-sm font-medium mb-1">{t('sidebar.form.phone')} <span className='text-red-600'>*</span></label>
               <input
                 type="tel"
                 required

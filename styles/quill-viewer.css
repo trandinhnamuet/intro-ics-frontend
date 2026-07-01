@@ -4,17 +4,9 @@
   min-height: auto;
   max-height: none;
   overflow: visible;
-  /* Prevent dark mode media query from overriding site theme */
+  /* Inherit page theme instead of the editor's own background */
   background-color: transparent !important;
   color: inherit !important;
-}
-
-/* Override the dark mode media query from quill-custom.css for article viewer */
-@media (prefers-color-scheme: dark) {
-  .article-content.ql-editor {
-    background-color: transparent !important;
-    color: inherit !important;
-  }
 }
 
 .article-content.ql-editor ol,
