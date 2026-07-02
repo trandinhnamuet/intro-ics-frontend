@@ -48,7 +48,7 @@ function CategoryTabs() {
   )
 }
 
-export function CategoryArticlesView({ category }: { category: ArticleCategoryKey }) {
+export function CategoryArticlesView({ category }: { category: ArticleCategoryKey | 'all' }) {
   const { t } = useTranslation()
   const searchParams = useSearchParams()
   const { toast } = useToast()

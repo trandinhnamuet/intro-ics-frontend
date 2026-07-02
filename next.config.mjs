@@ -38,7 +38,7 @@ const nextConfig = {
       // Legacy top-level category pages -> nested category routes
       { source: '/blog', destination: '/tin-tuc/blog', permanent: true },
       { source: '/news', destination: '/tin-tuc/news', permanent: true },
-      { source: '/documents', destination: '/tin-tuc/documents', permanent: true },
+      { source: '/documents', destination: '/tin-tuc/case-study', permanent: true },
       // Retired unified listing -> default news category
       { source: '/tin-tuc/danh-muc', destination: '/tin-tuc/news', permanent: true },
       // News admin + listing (specific rules BEFORE the generic slug rule)

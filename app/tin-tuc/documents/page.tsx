@@ -1,23 +1,6 @@
-'use client'
+import { redirect } from 'next/navigation'
 
-import { Suspense } from 'react'
-import { CategoryArticlesView } from '@/components/articles/category-articles-view'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
-import { ArticleListSkeleton } from '@/components/ui/loading-skeleton'
-
+// The "Documents" category was replaced by "Case Study". Keep the old URL working.
 export default function TinTucDocumentsPage() {
-  return (
-    <Suspense fallback={
-      <>
-        <Header />
-        <div className="min-h-screen pt-32 pb-20">
-          <ArticleListSkeleton />
-        </div>
-        <Footer />
-      </>
-    }>
-      <CategoryArticlesView category="document" />
-    </Suspense>
-  )
+  redirect('/tin-tuc/case-study')
 }

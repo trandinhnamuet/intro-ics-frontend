@@ -6,7 +6,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ArticleListSkeleton } from '@/components/ui/loading-skeleton'
 
-export default function TinTucNewsPage() {
+export default function TinTucCaseStudyPage() {
   return (
     <Suspense fallback={
       <>
@@ -17,7 +17,7 @@ export default function TinTucNewsPage() {
         <Footer />
       </>
     }>
-      <CategoryArticlesView category="all" />
+      <CategoryArticlesView category="case_study" />
     </Suspense>
   )
 }
