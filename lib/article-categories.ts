@@ -13,10 +13,10 @@ export const DEFAULT_ARTICLE_CATEGORY: ArticleCategoryKey = 'blog'
 // "All articles" landing route (header "Tin tức" + legacy redirects point here).
 export const DEFAULT_NEWS_ROUTE = '/tin-tuc/news'
 
-// Category tabs on the /tin-tuc/* pages. Order: All → Blog → Case Study.
-// "All" has no category key so it lists every article.
+// Category tabs on the /tin-tuc/* pages. Order: News → Blog → Case Study.
+// The "News" tab has no category key so it lists every article.
 export const CATEGORY_NAV = [
-  { key: 'all', label: 'All', route: DEFAULT_NEWS_ROUTE },
+  { key: 'all', label: 'News', route: DEFAULT_NEWS_ROUTE },
   ...ARTICLE_CATEGORIES.map(({ key, label, route }) => ({ key, label, route })),
 ] as const
 
