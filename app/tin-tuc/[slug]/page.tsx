@@ -194,9 +194,19 @@ export default function ArticleDetailPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Article Content - 2/3 */}
           <article className="lg:col-span-2">
+            {/* Article Body */}
+            <ScrollReveal direction="up">
+              <div className="ql-snow">
+                <div
+                  className="ql-editor article-content text-foreground"
+                  dangerouslySetInnerHTML={{ __html: article.content }}
+                />
+              </div>
+            </ScrollReveal>
+
             {/* Share Buttons */}
             <ScrollReveal direction="up">
-              <Card className="p-6 mb-8 bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">
+              <Card className="p-6 mt-8 bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div className="flex items-center gap-2">
                     <Share2 className="w-5 h-5 text-primary" />
@@ -243,16 +253,6 @@ export default function ArticleDetailPage() {
                 </div>
               </Card>
             </ScrollReveal>
-
-            {/* Article Body */}
-            <ScrollReveal direction="up">
-              <div className="ql-snow">
-                <div
-                  className="ql-editor article-content text-foreground"
-                  dangerouslySetInnerHTML={{ __html: article.content }}
-                />
-              </div>
-            </ScrollReveal>
           </article>
 
           {/* Trending Articles Sidebar - 1/3 */}
@@ -271,23 +271,33 @@ export default function ArticleDetailPage() {
                         href={`/tin-tuc/${trending.slug}`}
                         className="group block"
                       >
-                        <div className="flex gap-4">
-                          {/* Number Badge */}
-                          <div className="flex-shrink-0">
-                            <div className={cn(
-                              "w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg",
-                              index === 0 && "bg-gradient-to-br from-red-500 to-orange-500 text-white",
-                              index === 1 && "bg-gradient-to-br from-orange-500 to-yellow-500 text-white",
-                              index === 2 && "bg-gradient-to-br from-yellow-500 to-green-500 text-white",
-                              index > 2 && "bg-muted text-muted-foreground"
-                            )}>
-                              {index + 1}
-                            </div>
+                        <div className="flex gap-3">
+                          {/* Thumbnail */}
+                          <div className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-muted">
+                            {trending.thumbnail_url ? (
+                              <Image
+                                src={trending.thumbnail_url}
+                                alt={trending.title}
+                                width={64}
+                                height={64}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                              />
+                            ) : (
+                              <div className={cn(
+                                "w-full h-full flex items-center justify-center text-white text-xs font-bold",
+                                index === 0 && "bg-gradient-to-br from-red-500 to-orange-500",
+                                index === 1 && "bg-gradient-to-br from-orange-500 to-yellow-500",
+                                index === 2 && "bg-gradient-to-br from-yellow-500 to-green-500",
+                                index > 2 && "bg-gradient-to-br from-primary to-accent"
+                              )}>
+                                {index + 1}
+                              </div>
+                            )}
                           </div>
 
                           {/* Content */}
                           <div className="flex-1 min-w-0">
-                            <h4 className="font-semibold text-sm line-clamp-2 group-hover:text-primary transition-colors mb-2">
+                            <h4 className="font-semibold text-sm line-clamp-2 group-hover:text-primary transition-colors mb-1">
                               {trending.title}
                             </h4>
                             <div className="flex items-center gap-2 text-xs text-muted-foreground">
